@@ -1,0 +1,364 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="viewporter-shot-test_8c" kind="file" language="C++">
+    <compoundname>viewporter-shot-test.c</compoundname>
+    <includes local="yes">config.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">sys/mman.h</includes>
+    <includes refid="weston-test-client-helper_8h" local="yes">weston-test-client-helper.h</includes>
+    <includes refid="weston-test-fixture-compositor_8h" local="yes">weston-test-fixture-compositor.h</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>stdbool.h</label>
+      </node>
+      <node id="26">
+        <label>viewporter-client-protocol.h</label>
+      </node>
+      <node id="18">
+        <label>libweston/libweston.h</label>
+        <link refid="libweston_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>weston-test-fixture-compositor.h</label>
+        <link refid="weston-test-fixture-compositor_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>assert.h</label>
+      </node>
+      <node id="25">
+        <label>weston-screenshooter-client-protocol.h</label>
+      </node>
+      <node id="24">
+        <label>weston-test-client-protocol.h</label>
+      </node>
+      <node id="9">
+        <label>stdint.h</label>
+      </node>
+      <node id="14">
+        <label>stdlib.h</label>
+      </node>
+      <node id="5">
+        <label>sys/mman.h</label>
+      </node>
+      <node id="20">
+        <label>wayland-server.h</label>
+      </node>
+      <node id="19">
+        <label>xkbcommon/xkbcommon.h</label>
+      </node>
+      <node id="16">
+        <label>shared/helpers.h</label>
+      </node>
+      <node id="23">
+        <label>weston-testsuite-data.h</label>
+        <link refid="weston-testsuite-data_8h"/>
+      </node>
+      <node id="12">
+        <label>wayland-client-protocol.h</label>
+      </node>
+      <node id="4">
+        <label>string.h</label>
+      </node>
+      <node id="22">
+        <label>libweston/zalloc.h</label>
+        <link refid="zalloc_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>time.h</label>
+      </node>
+      <node id="21">
+        <label>libweston/matrix.h</label>
+        <link refid="matrix_8h"/>
+      </node>
+      <node id="11">
+        <label>pixman.h</label>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/tests/viewporter-shot-test.c</label>
+        <link refid="viewporter-shot-test_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>wayland-util.h</label>
+      </node>
+      <node id="13">
+        <label>weston-test-runner.h</label>
+        <link refid="weston-test-runner_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+      <node id="6">
+        <label>weston-test-client-helper.h</label>
+        <link refid="weston-test-client-helper_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structsetup__args" prot="public">setup_args</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="viewporter-shot-test_8c_1aabfb997aab1717c1f56f38b8a2ca6c3d" prot="public" static="yes" mutable="no">
+        <type>const struct <ref refid="structsetup__args" kindref="compound">setup_args</ref></type>
+        <definition>const struct setup_args my_setup_args[]</definition>
+        <argsstring>[]</argsstring>
+        <name>my_setup_args</name>
+        <initializer>= {
+	{
+		.renderer = <ref refid="group__testharness_1gga3f584343987d08b8aa9abf1e9c371a90a7c4539f6251acc274b33a085a1c520d7" kindref="member">RENDERER_PIXMAN</ref>,
+		.meta.name = &quot;pixman&quot;
+	},
+	{
+		.renderer = <ref refid="group__testharness_1gga3f584343987d08b8aa9abf1e9c371a90ae5e927b4a68fbbf849f68aed0de9e34a" kindref="member">RENDERER_GL</ref>,
+		.meta.name = &quot;GL&quot;
+	},
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/viewporter-shot-test.c" line="1" column="0" bodyfile="/home/lzm/Wayland/weston/tests/viewporter-shot-test.c" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="viewporter-shot-test_8c_1ae622300b946206b8452fb1fe0b5ece05" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></type>
+        <definition>static enum test_result_code fixture_setup</definition>
+        <argsstring>(struct weston_test_harness *harness, const struct setup_args *arg)</argsstring>
+        <name>fixture_setup</name>
+        <param>
+          <type>struct <ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref> *</type>
+          <declname>harness</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structsetup__args" kindref="compound">setup_args</ref> *</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/viewporter-shot-test.c" line="1" column="0" bodyfile="/home/lzm/Wayland/weston/tests/viewporter-shot-test.c" bodystart="53" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="viewporter-shot-test_8c_1a87369f50a65ebd39e3f69d096b0dbc78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DECLARE_FIXTURE_SETUP_WITH_ARG</definition>
+        <argsstring>(fixture_setup, my_setup_args, meta)</argsstring>
+        <name>DECLARE_FIXTURE_SETUP_WITH_ARG</name>
+        <param>
+          <type><ref refid="yuv-buffer-test_8c_1a94e9ff74226ccd29a26846ccb66d481f" kindref="member">fixture_setup</ref></type>
+        </param>
+        <param>
+          <type><ref refid="viewporter-shot-test_8c_1aabfb997aab1717c1f56f38b8a2ca6c3d" kindref="member">my_setup_args</ref></type>
+        </param>
+        <param>
+          <type>meta</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/viewporter-shot-test.c" line="64" column="1" declfile="/home/lzm/Wayland/weston/tests/viewporter-shot-test.c" declline="64" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="viewporter-shot-test_8c_1a978c9f401bf6eebb89624323f53a75c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(viewport_upscale_solid)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>viewport_upscale_solid</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/viewporter-shot-test.c" line="67" column="1" bodyfile="/home/lzm/Wayland/weston/tests/viewporter-shot-test.c" bodystart="67" bodyend="100"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2014,<sp/>2016,<sp/>2020<sp/>Collabora,<sp/>Ltd.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2020<sp/>Zodiac<sp/>Inflight<sp/>Innovations</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>(including<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>next<sp/>paragraph)<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>NONINFRINGEMENT.<sp/><sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/mman.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="weston-test-client-helper_8h" kindref="compound">weston-test-client-helper.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="weston-test-fixture-compositor_8h" kindref="compound">weston-test-fixture-compositor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsetup__args" kindref="compound">setup_args</ref><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfixture__metadata" kindref="compound">fixture_metadata</ref><sp/><ref refid="structsetup__args_1a90e5b9a62a0b9b494f1068c6127f27eb" kindref="member">meta</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1ga3f584343987d08b8aa9abf1e9c371a90" kindref="member">renderer_type</ref><sp/><ref refid="structsetup__args_1a0fd5bb4903719c36beb60f057c9fab96" kindref="member">renderer</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsetup__args" kindref="compound">setup_args</ref><sp/><ref refid="viewporter-shot-test_8c_1aabfb997aab1717c1f56f38b8a2ca6c3d" kindref="member">my_setup_args</ref>[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="structsetup__args_1a0fd5bb4903719c36beb60f057c9fab96" kindref="member">renderer</ref><sp/>=<sp/><ref refid="group__testharness_1gga3f584343987d08b8aa9abf1e9c371a90a7c4539f6251acc274b33a085a1c520d7" kindref="member">RENDERER_PIXMAN</ref>,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.meta.name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;pixman&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.renderer<sp/>=<sp/><ref refid="group__testharness_1gga3f584343987d08b8aa9abf1e9c371a90ae5e927b4a68fbbf849f68aed0de9e34a" kindref="member">RENDERER_GL</ref>,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.meta.name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;GL&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><ref refid="viewporter-shot-test_8c_1ae622300b946206b8452fb1fe0b5ece05" kindref="member">fixture_setup</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref><sp/>*harness,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structsetup__args" kindref="compound">setup_args</ref><sp/>*arg)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structcompositor__setup" kindref="compound">compositor_setup</ref><sp/>setup;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__testharness_1ga6d93ba47ec578b140fa2cbd3efa1218c" kindref="member">compositor_setup_defaults</ref>(&amp;setup);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setup.renderer<sp/>=<sp/>arg-&gt;<ref refid="structsetup__args_1a0fd5bb4903719c36beb60f057c9fab96" kindref="member">renderer</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setup.shell<sp/>=<sp/><ref refid="group__testharness_1gga0ad980f813d1f7469e9b9ff20f73fce9a788b50d23ce49ed189c3f49fc6030d85" kindref="member">SHELL_TEST_DESKTOP</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1gacd7b26a0f0f337781013b40d229cf262" kindref="member">weston_test_harness_execute_as_client</ref>(harness,<sp/>&amp;setup);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><ref refid="viewporter-shot-test_8c_1a87369f50a65ebd39e3f69d096b0dbc78" kindref="member">DECLARE_FIXTURE_SETUP_WITH_ARG</ref>(<ref refid="viewporter-shot-test_8c_1ae622300b946206b8452fb1fe0b5ece05" kindref="member">fixture_setup</ref>,<sp/><ref refid="viewporter-shot-test_8c_1aabfb997aab1717c1f56f38b8a2ca6c3d" kindref="member">my_setup_args</ref>,<sp/>meta);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><ref refid="viewporter-shot-test_8c_1a978c9f401bf6eebb89624323f53a75c6" kindref="member">TEST</ref>(viewport_upscale_solid)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclient" kindref="compound">client</ref><sp/>*<ref refid="structclient" kindref="compound">client</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wp_viewport<sp/>*viewport;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pixman_color_t<sp/>color;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width<sp/>=<sp/>256;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height<sp/>=<sp/>100;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>match;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8c_1a6c2ea066953a045e2e4e887361ef1dd1" kindref="member">color_rgb888</ref>(&amp;color,<sp/>255,<sp/>128,<sp/>0);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structclient" kindref="compound">client</ref><sp/>=<sp/><ref refid="weston-test-client-helper_8c_1af73e5cb173ce63199265176e2b0e90dd" kindref="member">create_client</ref>();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1ab08863485e285fef208584804ca7480a" kindref="member">surface</ref><sp/>=<sp/><ref refid="weston-test-client-helper_8c_1a48b9e7f0e76b1c88869a2f8666d8026e" kindref="member">create_test_surface</ref>(<ref refid="structclient" kindref="compound">client</ref>);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>viewport<sp/>=<sp/><ref refid="weston-test-client-helper_8c_1a81901fe0b38e9590e62ce88680fcc0ee" kindref="member">client_create_viewport</ref>(<ref refid="structclient" kindref="compound">client</ref>);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1ab08863485e285fef208584804ca7480a" kindref="member">surface</ref>-&gt;<ref refid="structsurface_1a6380eb64761a852c50514a0ad1b8a37c" kindref="member">buffer</ref><sp/>=<sp/><ref refid="weston-test-client-helper_8c_1a1eecc92b5b5e115112d67cbc7f538e8d" kindref="member">create_shm_buffer_a8r8g8b8</ref>(<ref refid="structclient" kindref="compound">client</ref>,<sp/>2,<sp/>2);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8c_1a19461415389d3c87d20bf1151e460f41" kindref="member">fill_image_with_color</ref>(<ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1ab08863485e285fef208584804ca7480a" kindref="member">surface</ref>-&gt;<ref refid="structsurface_1a6380eb64761a852c50514a0ad1b8a37c" kindref="member">buffer</ref>-&gt;<ref refid="structbuffer_1a6f57d8719ac323d52c3b1fd816dedf76" kindref="member">image</ref>,<sp/>&amp;color);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Needs<sp/>output<sp/>scale<sp/>!=<sp/>buffer<sp/>scale<sp/>to<sp/>hit<sp/>bilinear<sp/>filter.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_surface_set_buffer_scale(<ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1ab08863485e285fef208584804ca7480a" kindref="member">surface</ref>-&gt;<ref refid="structsurface_1a4910a1070e78b84c00c8ab27a508b4da" kindref="member">wl_surface</ref>,<sp/>2);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wp_viewport_set_destination(viewport,<sp/>width,<sp/>height);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1ab08863485e285fef208584804ca7480a" kindref="member">surface</ref>-&gt;<ref refid="structsurface_1ad441498d73778f515b36e669b478b04f" kindref="member">width</ref><sp/>=<sp/>width;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1ab08863485e285fef208584804ca7480a" kindref="member">surface</ref>-&gt;<ref refid="structsurface_1a973cb10ddcf4f6f6def6a745fc8ca880" kindref="member">height</ref><sp/>=<sp/>height;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8c_1a37328a264739e2481da21489c1964335" kindref="member">move_client</ref>(<ref refid="structclient" kindref="compound">client</ref>,<sp/>19,<sp/>19);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>match<sp/>=<sp/><ref refid="weston-test-client-helper_8c_1ac924fe13101f7a8c258314a16bb8dc41" kindref="member">verify_screen_content</ref>(<ref refid="structclient" kindref="compound">client</ref>,<sp/></highlight><highlight class="stringliteral">&quot;viewport_upscale_solid&quot;</highlight><highlight class="normal">,<sp/>0,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL,<sp/>0);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(match);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wp_viewport_destroy(viewport);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8c_1a9d6289c37c3b56c85f4cc40a7cf71513" kindref="member">client_destroy</ref>(<ref refid="structclient" kindref="compound">client</ref>);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/tests/viewporter-shot-test.c"/>
+  </compounddef>
+</doxygen>

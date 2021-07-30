@@ -1,0 +1,9 @@
+prefix=/home/lzm/Wayland/weston/builddir
+srcdir=/home/lzm/Wayland/weston
+
+Name: libweston API
+Description: Header files for libweston compositors development
+Version: 9.0.90
+Requires.private: wayland-server >=  1.18.0, pixman-1 >=  0.25.2, xkbcommon >=  0.3.0
+Libs: -L${prefix}/libweston -lweston-10
+Cflags: -I${prefix}/libweston -I${srcdir}/libweston -I${prefix}/. -I${srcdir}/. -I${prefix}/include -I${srcdir}/include

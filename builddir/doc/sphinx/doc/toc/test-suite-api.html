@@ -1,0 +1,921 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Reference manual &mdash; weston 9.0.90 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Weston kiosk-shell" href="kiosk-shell.html" />
+    <link rel="prev" title="Weston test suite" href="test-suite.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> weston
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="running-weston.html">Running Weston</a></li>
+<li class="toctree-l1"><a class="reference internal" href="libweston.html">Libweston</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="test-suite.html">Weston test suite</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="test-suite.html#test-execution">Test execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test-suite.html#types-of-tests">Types of tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="test-suite.html#drm-backend-tests">DRM-backend tests</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="test-suite.html#writing-tests">Writing tests</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Reference manual</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#test-harness-api">Test harness API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#test-harness-internals">Test harness Internals</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kiosk-shell.html">Weston kiosk-shell</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">weston</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="test-suite.html">Weston test suite</a> &raquo;</li>
+        
+      <li>Reference manual</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/toc/test-suite-api.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="reference-manual">
+<h1>Reference manual<a class="headerlink" href="#reference-manual" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="test-harness-api">
+<h2>Test harness API<a class="headerlink" href="#test-harness-api" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv413renderer_type">
+<span id="_CPPv313renderer_type"></span><span id="_CPPv213renderer_type"></span><span class="target" id="group__testharness_1ga3f584343987d08b8aa9abf1e9c371a90"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">renderer_type</span></span></span><a class="headerlink" href="#_CPPv413renderer_type" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Weston renderer type. </p>
+<p><dl class="simple">
+<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="#structcompositor__setup"><span class="std std-ref">compositor_setup</span></a> </p>
+</dd>
+</dl>
+</p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13renderer_type13RENDERER_NOOPE">
+<span id="_CPPv3N13renderer_type13RENDERER_NOOPE"></span><span id="_CPPv2N13renderer_type13RENDERER_NOOPE"></span><span class="target" id="group__testharness_1gga3f584343987d08b8aa9abf1e9c371a90aaf94b7875b1ffa9fc28e99db995f19d1"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RENDERER_NOOP</span></span></span><a class="headerlink" href="#_CPPv4N13renderer_type13RENDERER_NOOPE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Dummy renderer that does nothing. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13renderer_type15RENDERER_PIXMANE">
+<span id="_CPPv3N13renderer_type15RENDERER_PIXMANE"></span><span id="_CPPv2N13renderer_type15RENDERER_PIXMANE"></span><span class="target" id="group__testharness_1gga3f584343987d08b8aa9abf1e9c371a90a7c4539f6251acc274b33a085a1c520d7"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RENDERER_PIXMAN</span></span></span><a class="headerlink" href="#_CPPv4N13renderer_type15RENDERER_PIXMANE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Pixman-renderer. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13renderer_type11RENDERER_GLE">
+<span id="_CPPv3N13renderer_type11RENDERER_GLE"></span><span id="_CPPv2N13renderer_type11RENDERER_GLE"></span><span class="target" id="group__testharness_1gga3f584343987d08b8aa9abf1e9c371a90ae5e927b4a68fbbf849f68aed0de9e34a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RENDERER_GL</span></span></span><a class="headerlink" href="#_CPPv4N13renderer_type11RENDERER_GLE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>GL-renderer. </p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv410shell_type">
+<span id="_CPPv310shell_type"></span><span id="_CPPv210shell_type"></span><span class="target" id="group__testharness_1ga0ad980f813d1f7469e9b9ff20f73fce9"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">shell_type</span></span></span><a class="headerlink" href="#_CPPv410shell_type" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Weston shell plugin. </p>
+<p><dl class="simple">
+<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="#structcompositor__setup"><span class="std std-ref">compositor_setup</span></a> </p>
+</dd>
+</dl>
+</p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N10shell_type18SHELL_TEST_DESKTOPE">
+<span id="_CPPv3N10shell_type18SHELL_TEST_DESKTOPE"></span><span id="_CPPv2N10shell_type18SHELL_TEST_DESKTOPE"></span><span class="target" id="group__testharness_1gga0ad980f813d1f7469e9b9ff20f73fce9a788b50d23ce49ed189c3f49fc6030d85"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SHELL_TEST_DESKTOP</span></span></span><a class="headerlink" href="#_CPPv4N10shell_type18SHELL_TEST_DESKTOPE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Desktop test-shell with predictable window placement and no helper clients. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N10shell_type13SHELL_DESKTOPE">
+<span id="_CPPv3N10shell_type13SHELL_DESKTOPE"></span><span id="_CPPv2N10shell_type13SHELL_DESKTOPE"></span><span class="target" id="group__testharness_1gga0ad980f813d1f7469e9b9ff20f73fce9aaaca4c884866e17214dc71e0638b47bf"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SHELL_DESKTOP</span></span></span><a class="headerlink" href="#_CPPv4N10shell_type13SHELL_DESKTOPE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The full desktop shell. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N10shell_type9SHELL_IVIE">
+<span id="_CPPv3N10shell_type9SHELL_IVIE"></span><span id="_CPPv2N10shell_type9SHELL_IVIE"></span><span class="target" id="group__testharness_1gga0ad980f813d1f7469e9b9ff20f73fce9a6cdbedc13f80e112abaedcaa86adb0b7"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SHELL_IVI</span></span></span><a class="headerlink" href="#_CPPv4N10shell_type9SHELL_IVIE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The ivi-shell. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N10shell_type16SHELL_FULLSCREENE">
+<span id="_CPPv3N10shell_type16SHELL_FULLSCREENE"></span><span id="_CPPv2N10shell_type16SHELL_FULLSCREENE"></span><span class="target" id="group__testharness_1gga0ad980f813d1f7469e9b9ff20f73fce9a04ec11b3eb9a976e678b87e61064afc9"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SHELL_FULLSCREEN</span></span></span><a class="headerlink" href="#_CPPv4N10shell_type16SHELL_FULLSCREENE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The fullscreen-shell. </p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv416test_result_code">
+<span id="_CPPv316test_result_code"></span><span id="_CPPv216test_result_code"></span><span class="target" id="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">test_result_code</span></span></span><a class="headerlink" href="#_CPPv416test_result_code" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Standard return codes. </p>
+<p>Both Autotools and Meson use these codes as test program exit codes to denote the test result for the whole process. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N16test_result_code9RESULT_OKE">
+<span id="_CPPv3N16test_result_code9RESULT_OKE"></span><span id="_CPPv2N16test_result_code9RESULT_OKE"></span><span class="target" id="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a818c541216b4ca0e29b7885495a46ad2"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RESULT_OK</span></span></span><a class="headerlink" href="#_CPPv4N16test_result_code9RESULT_OKE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N16test_result_code11RESULT_SKIPE">
+<span id="_CPPv3N16test_result_code11RESULT_SKIPE"></span><span id="_CPPv2N16test_result_code11RESULT_SKIPE"></span><span class="target" id="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a4afc80cf43bd4cdf7cbcbfefcb5bf5ae"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RESULT_SKIP</span></span></span><a class="headerlink" href="#_CPPv4N16test_result_code11RESULT_SKIPE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N16test_result_code11RESULT_FAILE">
+<span id="_CPPv3N16test_result_code11RESULT_FAILE"></span><span id="_CPPv2N16test_result_code11RESULT_FAILE"></span><span class="target" id="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103adbaa15b6c3bcc0196b4b314fac50e36c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RESULT_FAIL</span></span></span><a class="headerlink" href="#_CPPv4N16test_result_code11RESULT_FAILE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N16test_result_code17RESULT_HARD_ERRORE">
+<span id="_CPPv3N16test_result_code17RESULT_HARD_ERRORE"></span><span id="_CPPv2N16test_result_code17RESULT_HARD_ERRORE"></span><span class="target" id="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a1a9437b5f7317085e7fc0358a47d32f3"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RESULT_HARD_ERROR</span></span></span><a class="headerlink" href="#_CPPv4N16test_result_code17RESULT_HARD_ERRORE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv413get_test_namev">
+<span id="_CPPv313get_test_namev"></span><span id="_CPPv213get_test_namev"></span><span id="get_test_name__void"></span><span class="target" id="group__testharness_1gae81a0b16dc498f48d248e7fb7d819660"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_test_name</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv413get_test_namev" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the test name string with counter. </p>
+<p>
+This is only usable from code paths inside <a class="reference internal" href="#group__testharness_1ga45feb1f37ce559e49baf8655d769ef85"><span class="std std-ref">TEST()</span></a>, <a class="reference internal" href="#group__testharness_1gaac6645411da307a1046bcaa84d46583f"><span class="std std-ref">TEST_P()</span></a>, <a class="reference internal" href="#group__testharness_1ga889ae2ce5ee27319a760457a33a2da1a"><span class="std std-ref">PLUGIN_TEST()</span></a> etc. defined functions. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The test name with fixture number <code class="docutils literal notranslate"><span class="pre">-f%d</span></code> added. For an array driven test, e.g. defined with <a class="reference internal" href="#group__testharness_1gaac6645411da307a1046bcaa84d46583f"><span class="std std-ref">TEST_P()</span></a>, the name has also a <code class="docutils literal notranslate"><span class="pre">-e%d</span></code> suffix to indicate the array element number.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv422get_test_fixture_indexv">
+<span id="_CPPv322get_test_fixture_indexv"></span><span id="_CPPv222get_test_fixture_indexv"></span><span id="get_test_fixture_index__void"></span><span class="target" id="group__testharness_1gaa0dd40f331a900d10af1cbad1d4372aa"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_test_fixture_index</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422get_test_fixture_indexv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the current fixture index. </p>
+<p>Returns the current fixture index which can be used directly as an index into the array passed as an argument to <a class="reference internal" href="#group__testharness_1ga274def1a210d74f64d216796dbec4b2b"><span class="std std-ref">DECLARE_FIXTURE_SETUP_WITH_ARG()</span></a>.</p>
+<p>This is only usable from code paths inside <a class="reference internal" href="#group__testharness_1ga45feb1f37ce559e49baf8655d769ef85"><span class="std std-ref">TEST()</span></a>, <a class="reference internal" href="#group__testharness_1gaac6645411da307a1046bcaa84d46583f"><span class="std std-ref">TEST_P()</span></a>, <a class="reference internal" href="#group__testharness_1ga889ae2ce5ee27319a760457a33a2da1a"><span class="std std-ref">PLUGIN_TEST()</span></a> etc. defined functions. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv47testlogPKcz">
+<span id="_CPPv37testlogPKcz"></span><span id="_CPPv27testlogPKcz"></span><span id="testlog__cCP.z"></span><span class="target" id="group__testharness_1gaa1538dfd4262a1feafd60cd1f09d9878"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">testlog</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">fmt</span></span>, <span class="p"><span class="pre">...</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv47testlogPKcz" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Print into test log. </p>
+<p>This is exactly like printf() except the output goes to the test log, which is at stderr.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>fmt</strong> – printf format string </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv437weston_test_harness_execute_as_clientP19weston_test_harnessPK16compositor_setup">
+<span id="_CPPv337weston_test_harness_execute_as_clientP19weston_test_harnessPK16compositor_setup"></span><span id="_CPPv237weston_test_harness_execute_as_clientP19weston_test_harnessPK16compositor_setup"></span><span id="weston_test_harness_execute_as_client__weston_test_harnessP.compositor_setupCP"></span><span class="target" id="group__testharness_1gacd7b26a0f0f337781013b40d229cf262"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv416test_result_code" title="test_result_code"><span class="n"><span class="pre">test_result_code</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_test_harness_execute_as_client</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">weston_test_harness</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">harness</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv416compositor_setup" title="compositor_setup"><span class="n"><span class="pre">compositor_setup</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">setup</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv437weston_test_harness_execute_as_clientP19weston_test_harnessPK16compositor_setup" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Execute all tests as client tests. </p>
+<p>
+Initializes the compositor with the given setup and executes the compositor. The compositor creates a new thread where all tests in the test program are serially executed. Once the thread finishes, the compositor returns from its event loop and cleans up.</p>
+<p>Returns RESULT_SKIP if the requested compositor features, e.g. GL-renderer, are not built.</p>
+<p><dl class="simple">
+<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="#group__testharness_1gadc7eda648944f75a48748e6456a0e735"><span class="std std-ref">DECLARE_FIXTURE_SETUP()</span></a>, <a class="reference internal" href="#group__testharness_1ga274def1a210d74f64d216796dbec4b2b"><span class="std std-ref">DECLARE_FIXTURE_SETUP_WITH_ARG()</span></a> </p>
+</dd>
+</dl>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>harness</strong> – The test harness context. </p></li>
+<li><p><strong>setup</strong> – The compositor configuration.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv437weston_test_harness_execute_as_pluginP19weston_test_harnessPK16compositor_setup">
+<span id="_CPPv337weston_test_harness_execute_as_pluginP19weston_test_harnessPK16compositor_setup"></span><span id="_CPPv237weston_test_harness_execute_as_pluginP19weston_test_harnessPK16compositor_setup"></span><span id="weston_test_harness_execute_as_plugin__weston_test_harnessP.compositor_setupCP"></span><span class="target" id="group__testharness_1gabc3f5a45b58ee07331059eb120f7b2bb"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv416test_result_code" title="test_result_code"><span class="n"><span class="pre">test_result_code</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_test_harness_execute_as_plugin</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">weston_test_harness</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">harness</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv416compositor_setup" title="compositor_setup"><span class="n"><span class="pre">compositor_setup</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">setup</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv437weston_test_harness_execute_as_pluginP19weston_test_harnessPK16compositor_setup" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Execute all tests as plugin tests. </p>
+<p>
+Initializes the compositor with the given setup and executes the compositor. The compositor executes all tests in the test program serially from an idle handler, then returns from its event loop and cleans up.</p>
+<p>Returns RESULT_SKIP if the requested compositor features, e.g. GL-renderer, are not built.</p>
+<p><dl class="simple">
+<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="#group__testharness_1gadc7eda648944f75a48748e6456a0e735"><span class="std std-ref">DECLARE_FIXTURE_SETUP()</span></a>, <a class="reference internal" href="#group__testharness_1ga274def1a210d74f64d216796dbec4b2b"><span class="std std-ref">DECLARE_FIXTURE_SETUP_WITH_ARG()</span></a> </p>
+</dd>
+</dl>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>harness</strong> – The test harness context. </p></li>
+<li><p><strong>setup</strong> – The compositor configuration.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv438weston_test_harness_execute_standaloneP19weston_test_harness">
+<span id="_CPPv338weston_test_harness_execute_standaloneP19weston_test_harness"></span><span id="_CPPv238weston_test_harness_execute_standaloneP19weston_test_harness"></span><span id="weston_test_harness_execute_standalone__weston_test_harnessP"></span><span class="target" id="group__testharness_1ga9f98c3e898eb09ad2bd86343199ff619"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv416test_result_code" title="test_result_code"><span class="n"><span class="pre">test_result_code</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_test_harness_execute_standalone</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">weston_test_harness</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">harness</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv438weston_test_harness_execute_standaloneP19weston_test_harness" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Execute all tests as standalone tests. </p>
+<p>
+Executes all tests in the test program serially without any further setup, particularly without any compositor instance created.</p>
+<p><dl class="simple">
+<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="#group__testharness_1gadc7eda648944f75a48748e6456a0e735"><span class="std std-ref">DECLARE_FIXTURE_SETUP()</span></a>, <a class="reference internal" href="#group__testharness_1ga274def1a210d74f64d216796dbec4b2b"><span class="std std-ref">DECLARE_FIXTURE_SETUP_WITH_ARG()</span></a> </p>
+</dd>
+</dl>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>harness</strong> – The test harness context.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv424fixture_setup_array_get_v">
+<span id="_CPPv324fixture_setup_array_get_v"></span><span id="_CPPv224fixture_setup_array_get_v"></span><span id="fixture_setup_array_get___void"></span><span class="target" id="group__testharness_1ga02d7b07ce89636ff14598286827d279d"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv419fixture_setup_array" title="fixture_setup_array"><span class="n"><span class="pre">fixture_setup_array</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">fixture_setup_array_get_</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv424fixture_setup_array_get_v" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Fixture data array getter method. </p>
+<p><a class="reference internal" href="#group__testharness_1ga274def1a210d74f64d216796dbec4b2b"><span class="std std-ref">DECLARE_FIXTURE_SETUP_WITH_ARG()</span></a> overrides this in test programs. The default implementation has no data and makes the tests run once. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv418fixture_setup_run_P19weston_test_harnessPKv">
+<span id="_CPPv318fixture_setup_run_P19weston_test_harnessPKv"></span><span id="_CPPv218fixture_setup_run_P19weston_test_harnessPKv"></span><span id="fixture_setup_run___weston_test_harnessP.voidCP"></span><span class="target" id="group__testharness_1ga46577b43cb4378b2289ebfb91f5c6010"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv416test_result_code" title="test_result_code"><span class="n"><span class="pre">test_result_code</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fixture_setup_run_</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">weston_test_harness</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">harness</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">arg_</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418fixture_setup_run_P19weston_test_harnessPKv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Fixture setup function. </p>
+<p><a class="reference internal" href="#group__testharness_1gadc7eda648944f75a48748e6456a0e735"><span class="std std-ref">DECLARE_FIXTURE_SETUP()</span></a> and <a class="reference internal" href="#group__testharness_1ga274def1a210d74f64d216796dbec4b2b"><span class="std std-ref">DECLARE_FIXTURE_SETUP_WITH_ARG()</span></a> override this in test programs. The default implementation just calls <a class="reference internal" href="#group__testharness_1ga9f98c3e898eb09ad2bd86343199ff619"><span class="std std-ref">weston_test_harness_execute_standalone()</span></a>. </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.compositor_setup_defaults">
+<span class="target" id="group__testharness_1ga6d93ba47ec578b140fa2cbd3efa1218c"></span><span class="sig-name descname"><span class="n"><span class="pre">compositor_setup_defaults</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">s</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.compositor_setup_defaults" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Initialize compositor setup to defaults. </p>
+<p>
+The defaults are:<ul class="simple">
+<li><p>backend: headless</p></li>
+<li><p>renderer: noop</p></li>
+<li><p>shell: desktop shell</p></li>
+<li><p>xwayland: no</p></li>
+<li><p>width: 320</p></li>
+<li><p>height: 240</p></li>
+<li><p>scale: 1</p></li>
+<li><p>transform: WL_OUTPUT_TRANSFORM_NORMAL</p></li>
+<li><p>config_file: none</p></li>
+<li><p>extra_module: none</p></li>
+<li><p>logging_scopes: compositor defaults</p></li>
+<li><p>testset_name: the test name from meson.build </p></li>
+</ul>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> – The variable to initialize.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.TEST">
+<span class="target" id="group__testharness_1ga45feb1f37ce559e49baf8655d769ef85"></span><span class="sig-name descname"><span class="n"><span class="pre">TEST</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.TEST" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Add a test with no parameters. </p>
+<p>This defines one test as a new function. Use this macro in place of the function signature and put the function body after this.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – Name for the test, must be a valid function name. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.TEST_P">
+<span class="target" id="group__testharness_1gaac6645411da307a1046bcaa84d46583f"></span><span class="sig-name descname"><span class="n"><span class="pre">TEST_P</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">name</span></span>, <span class="n"><span class="pre">data_array</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.TEST_P" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Add an array driven test with a parameter. </p>
+<p>This defines an array of tests as a new function. Use this macro in place of the function signature and put the function body after this. The function will be executed once for each element in <code class="docutils literal notranslate"><span class="pre">data_array</span></code>, passing the element as the argument <code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">*data</span></code> to the function.</p>
+<p>This macro is not usable if fixture setup is using <a class="reference internal" href="#group__testharness_1gabc3f5a45b58ee07331059eb120f7b2bb"><span class="std std-ref">weston_test_harness_execute_as_plugin()</span></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – Name for the test, must be a valid function name. </p></li>
+<li><p><strong>data_array</strong> – A static const array of any type. The length will be recorded automatically. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PLUGIN_TEST">
+<span class="target" id="group__testharness_1ga889ae2ce5ee27319a760457a33a2da1a"></span><span class="sig-name descname"><span class="n"><span class="pre">PLUGIN_TEST</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PLUGIN_TEST" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Add a test with <a class="reference internal" href="libweston/compositor.html#structweston__compositor"><span class="std std-ref">weston_compositor</span></a> argument. </p>
+<p>This defines one test as a new function. Use this macro in place of the function signature and put the function body after this. The function will have one argument <code class="docutils literal notranslate"><span class="pre">struct</span> <a class="reference internal" href="libweston/compositor.html#structweston__compositor"><span class="std std-ref"><span class="pre">weston_compositor</span></span></a> <span class="pre">*compositor</span></code>.</p>
+<p>This macro is only usable if fixture setup is using <a class="reference internal" href="#group__testharness_1gabc3f5a45b58ee07331059eb120f7b2bb"><span class="std std-ref">weston_test_harness_execute_as_plugin()</span></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – Name for the test, must be a valid function name. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.DECLARE_FIXTURE_SETUP">
+<span class="target" id="group__testharness_1gadc7eda648944f75a48748e6456a0e735"></span><span class="sig-name descname"><span class="n"><span class="pre">DECLARE_FIXTURE_SETUP</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">func_</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.DECLARE_FIXTURE_SETUP" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Register a fixture setup function. </p>
+<p>This registers the given (preferably static) function to be used for setting up any fixtures you might need. The function must have the signature:</p>
+<p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">enum</span> <span class="n">test_result_code</span> <span class="n">func_</span><span class="p">(</span><span class="n">struct</span> <span class="n">weston_test_harness</span> <span class="o">*</span><span class="n">harness</span><span class="p">)</span>
+</pre></div>
+</div>
+</p>
+<p>The function must call one of <a class="reference internal" href="#group__testharness_1ga9f98c3e898eb09ad2bd86343199ff619"><span class="std std-ref">weston_test_harness_execute_standalone()</span></a>, <a class="reference internal" href="#group__testharness_1gabc3f5a45b58ee07331059eb120f7b2bb"><span class="std std-ref">weston_test_harness_execute_as_plugin()</span></a> or <a class="reference internal" href="#group__testharness_1gacd7b26a0f0f337781013b40d229cf262"><span class="std std-ref">weston_test_harness_execute_as_client()</span></a> passing in the <code class="docutils literal notranslate"><span class="pre">harness</span></code> argument, and return the return value from that call. The function can also return a test_result_code on its own if it does not want to run the tests, e.g. RESULT_SKIP or RESULT_HARD_ERROR.</p>
+<p>The function will be called once to run all tests.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>func_</strong> – The function to be used as fixture setup. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.DECLARE_FIXTURE_SETUP_WITH_ARG">
+<span class="target" id="group__testharness_1ga274def1a210d74f64d216796dbec4b2b"></span><span class="sig-name descname"><span class="n"><span class="pre">DECLARE_FIXTURE_SETUP_WITH_ARG</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">func_</span></span>, <span class="n"><span class="pre">array_</span></span>, <span class="n"><span class="pre">meta_</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.DECLARE_FIXTURE_SETUP_WITH_ARG" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Register a fixture setup function with a data array. </p>
+<p>This registers the given (preferably static) function to be used for setting up any fixtures you might need. The function must have the signature:</p>
+<p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">enum</span> <span class="n">test_result_code</span> <span class="n">func_</span><span class="p">(</span><span class="n">struct</span> <span class="n">weston_test_harness</span> <span class="o">*</span><span class="n">harness</span><span class="p">,</span> <span class="n">typeof</span><span class="p">(</span><span class="n">array_</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">*</span><span class="n">arg</span><span class="p">)</span>
+</pre></div>
+</div>
+</p>
+<p>The function must call one of <a class="reference internal" href="#group__testharness_1ga9f98c3e898eb09ad2bd86343199ff619"><span class="std std-ref">weston_test_harness_execute_standalone()</span></a>, <a class="reference internal" href="#group__testharness_1gabc3f5a45b58ee07331059eb120f7b2bb"><span class="std std-ref">weston_test_harness_execute_as_plugin()</span></a> or <a class="reference internal" href="#group__testharness_1gacd7b26a0f0f337781013b40d229cf262"><span class="std std-ref">weston_test_harness_execute_as_client()</span></a> passing in the <code class="docutils literal notranslate"><span class="pre">harness</span></code> argument, and return the return value from that call. The function can also return a test_result_code on its own if it does not want to run the tests, e.g. RESULT_SKIP or RESULT_HARD_ERROR.</p>
+<p>The function will be called once with each element of the array pointed to by <code class="docutils literal notranslate"><span class="pre">arg</span></code>, so that all tests would be repeated for each element in turn.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>func_</strong> – The function to be used as fixture setup. </p></li>
+<li><p><strong>array_</strong> – A static const array of arbitrary type. </p></li>
+<li><p><strong>meta_</strong> – Name of the field with type struct <a class="reference internal" href="#structfixture__metadata"><span class="std std-ref">fixture_metadata</span></a>. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv423weston_testsuite_quirks">
+<span id="_CPPv323weston_testsuite_quirks"></span><span id="_CPPv223weston_testsuite_quirks"></span><span id="weston_testsuite_quirks"></span><span class="target" id="structweston__testsuite__quirks"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_testsuite_quirks</span></span></span><a class="headerlink" href="#_CPPv423weston_testsuite_quirks" title="Permalink to this definition">¶</a><br /></dt>
+<dd><em>#include &lt;libweston.h&gt;</em><p>Weston test suite quirks. </p>
+<p>There are some things that need a specific behavior when we run Weston in the test suite. Tests can use this struct to select for certain behaviors.</p>
+<p><dl class="simple">
+<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="#structcompositor__setup"><span class="std std-ref">compositor_setup</span></a> </p>
+</dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N23weston_testsuite_quirks20gl_force_full_uploadE">
+<span id="_CPPv3N23weston_testsuite_quirks20gl_force_full_uploadE"></span><span id="_CPPv2N23weston_testsuite_quirks20gl_force_full_uploadE"></span><span id="weston_testsuite_quirks::gl_force_full_upload__b"></span><span class="target" id="structweston__testsuite__quirks_1abd9e19201aea3d99f24f3a33bc1028bf"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gl_force_full_upload</span></span></span><a class="headerlink" href="#_CPPv4N23weston_testsuite_quirks20gl_force_full_uploadE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Force GL-renderer to do a full upload of wl_shm buffers. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N23weston_testsuite_quirks33gl_force_full_redraw_of_shadow_fbE">
+<span id="_CPPv3N23weston_testsuite_quirks33gl_force_full_redraw_of_shadow_fbE"></span><span id="_CPPv2N23weston_testsuite_quirks33gl_force_full_redraw_of_shadow_fbE"></span><span id="weston_testsuite_quirks::gl_force_full_redraw_of_shadow_fb__b"></span><span class="target" id="structweston__testsuite__quirks_1abb3769af372946baa999893d45bba17f"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gl_force_full_redraw_of_shadow_fb</span></span></span><a class="headerlink" href="#_CPPv4N23weston_testsuite_quirks33gl_force_full_redraw_of_shadow_fbE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Ensure GL shadow fb is used, and always repaint it fully. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N23weston_testsuite_quirks21required_capabilitiesE">
+<span id="_CPPv3N23weston_testsuite_quirks21required_capabilitiesE"></span><span id="_CPPv2N23weston_testsuite_quirks21required_capabilitiesE"></span><span id="weston_testsuite_quirks::required_capabilities__uint32_t"></span><span class="target" id="structweston__testsuite__quirks_1a147daf91afc2c3ac1bc23e61528e4d65"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">required_capabilities</span></span></span><a class="headerlink" href="#_CPPv4N23weston_testsuite_quirks21required_capabilitiesE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Required enum weston_capability bit mask, otherwise skip run. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv421weston_testsuite_data">
+<span id="_CPPv321weston_testsuite_data"></span><span id="_CPPv221weston_testsuite_data"></span><span id="weston_testsuite_data"></span><span class="target" id="structweston__testsuite__data"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_testsuite_data</span></span></span><a class="headerlink" href="#_CPPv421weston_testsuite_data" title="Permalink to this definition">¶</a><br /></dt>
+<dd><em>#include &lt;libweston.h&gt;</em><p>Weston test suite data that is given to compositor. </p>
+<p>It contains two members:</p>
+<p><ol class="loweralpha simple">
+<li><p>The struct <a class="reference internal" href="#structweston__testsuite__quirks"><span class="std std-ref">weston_testsuite_quirks</span></a>, which can be used by the tests to change certain behavior of Weston when running these tests.</p></li>
+<li><p>The void *test_private_data member which can be used by the testsuite of projects that uses libweston in order to give arbitrary test data to the compositor. Its type should be defined by the testsuite of the project.</p></li>
+</ol>
+</p>
+<p><dl class="simple">
+<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="#structcompositor__setup"><span class="std std-ref">compositor_setup</span></a> </p>
+</dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N21weston_testsuite_data11test_quirksE">
+<span id="_CPPv3N21weston_testsuite_data11test_quirksE"></span><span id="_CPPv2N21weston_testsuite_data11test_quirksE"></span><span id="weston_testsuite_data::test_quirks__weston_testsuite_quirks"></span><span class="target" id="structweston__testsuite__data_1a066dac74ee89927f8cd00628c892bc87"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv423weston_testsuite_quirks" title="weston_testsuite_quirks"><span class="n"><span class="pre">weston_testsuite_quirks</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">test_quirks</span></span></span><a class="headerlink" href="#_CPPv4N21weston_testsuite_data11test_quirksE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N21weston_testsuite_data17test_private_dataE">
+<span id="_CPPv3N21weston_testsuite_data17test_private_dataE"></span><span id="_CPPv2N21weston_testsuite_data17test_private_dataE"></span><span id="weston_testsuite_data::test_private_data__voidP"></span><span class="target" id="structweston__testsuite__data_1a3e98fc4477e2625ad566232842b54621"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">test_private_data</span></span></span><a class="headerlink" href="#_CPPv4N21weston_testsuite_data17test_private_dataE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv416compositor_setup">
+<span id="_CPPv316compositor_setup"></span><span id="_CPPv216compositor_setup"></span><span id="compositor_setup"></span><span class="target" id="structcompositor__setup"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compositor_setup</span></span></span><a class="headerlink" href="#_CPPv416compositor_setup" title="Permalink to this definition">¶</a><br /></dt>
+<dd><em>#include &lt;weston-test-fixture-compositor.h&gt;</em><p>Weston compositor configuration. </p>
+<p>This structure determines the Weston compositor command line arguments. You should always use <a class="reference internal" href="#group__testharness_1ga6d93ba47ec578b140fa2cbd3efa1218c"><span class="std std-ref">compositor_setup_defaults()</span></a> to initialize this, then override any members you need with assignments. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N16compositor_setup11test_quirksE">
+<span id="_CPPv3N16compositor_setup11test_quirksE"></span><span id="_CPPv2N16compositor_setup11test_quirksE"></span><span id="compositor_setup::test_quirks__weston_testsuite_quirks"></span><span class="target" id="structcompositor__setup_1a50e75b92ffbe804e6ec0238a8a7deab1"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv423weston_testsuite_quirks" title="weston_testsuite_quirks"><span class="n"><span class="pre">weston_testsuite_quirks</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">test_quirks</span></span></span><a class="headerlink" href="#_CPPv4N16compositor_setup11test_quirksE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The test suite quirks. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N16compositor_setup7backendE">
+<span id="_CPPv3N16compositor_setup7backendE"></span><span id="_CPPv2N16compositor_setup7backendE"></span><span id="compositor_setup::backend__weston_compositor_backend"></span><span class="target" id="structcompositor__setup_1a99405a1c668b098b35b25e3cf4ed00ae"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="n"><span class="pre">weston_compositor_backend</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">backend</span></span></span><a class="headerlink" href="#_CPPv4N16compositor_setup7backendE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The backend to use. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N16compositor_setup8rendererE">
+<span id="_CPPv3N16compositor_setup8rendererE"></span><span id="_CPPv2N16compositor_setup8rendererE"></span><span id="compositor_setup::renderer__renderer_type"></span><span class="target" id="structcompositor__setup_1a855aeaf92213cff9e81bab8cb5967b69"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv413renderer_type" title="renderer_type"><span class="n"><span class="pre">renderer_type</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">renderer</span></span></span><a class="headerlink" href="#_CPPv4N16compositor_setup8rendererE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The renderer to use. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N16compositor_setup5shellE">
+<span id="_CPPv3N16compositor_setup5shellE"></span><span id="_CPPv2N16compositor_setup5shellE"></span><span id="compositor_setup::shell__shell_type"></span><span class="target" id="structcompositor__setup_1a7282cf883c117307ebf4c55e93c65e5c"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv410shell_type" title="shell_type"><span class="n"><span class="pre">shell_type</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">shell</span></span></span><a class="headerlink" href="#_CPPv4N16compositor_setup5shellE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The shell plugin to use. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N16compositor_setup8xwaylandE">
+<span id="_CPPv3N16compositor_setup8xwaylandE"></span><span id="_CPPv2N16compositor_setup8xwaylandE"></span><span id="compositor_setup::xwayland__b"></span><span class="target" id="structcompositor__setup_1a79cf704d3b38b6ca931ad2d1c5625fa4"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">xwayland</span></span></span><a class="headerlink" href="#_CPPv4N16compositor_setup8xwaylandE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Whether to enable xwayland support. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N16compositor_setup5widthE">
+<span id="_CPPv3N16compositor_setup5widthE"></span><span id="_CPPv2N16compositor_setup5widthE"></span><span id="compositor_setup::width__unsigned"></span><span class="target" id="structcompositor__setup_1ab14c97eec951652f83b36509cffc86b0"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">width</span></span></span><a class="headerlink" href="#_CPPv4N16compositor_setup5widthE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Default output width. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N16compositor_setup6heightE">
+<span id="_CPPv3N16compositor_setup6heightE"></span><span id="_CPPv2N16compositor_setup6heightE"></span><span id="compositor_setup::height__unsigned"></span><span class="target" id="structcompositor__setup_1a0835352687ae40d5c1e2a6784654cd02"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">height</span></span></span><a class="headerlink" href="#_CPPv4N16compositor_setup6heightE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Default output height. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N16compositor_setup5scaleE">
+<span id="_CPPv3N16compositor_setup5scaleE"></span><span id="_CPPv2N16compositor_setup5scaleE"></span><span id="compositor_setup::scale__i"></span><span class="target" id="structcompositor__setup_1ad510bce7ff6acb50c2868f7546ae2493"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">scale</span></span></span><a class="headerlink" href="#_CPPv4N16compositor_setup5scaleE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Default output scale. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N16compositor_setup9transformE">
+<span id="_CPPv3N16compositor_setup9transformE"></span><span id="_CPPv2N16compositor_setup9transformE"></span><span id="compositor_setup::transform__wl_output_transform"></span><span class="target" id="structcompositor__setup_1ac816447cb027d27b4e07ca34aad1cb48"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="n"><span class="pre">wl_output_transform</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">transform</span></span></span><a class="headerlink" href="#_CPPv4N16compositor_setup9transformE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Default output transform, one of WL_OUTPUT_TRANSFORM_*. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N16compositor_setup11config_fileE">
+<span id="_CPPv3N16compositor_setup11config_fileE"></span><span id="_CPPv2N16compositor_setup11config_fileE"></span><span id="compositor_setup::config_file__cP"></span><span class="target" id="structcompositor__setup_1a8eb719167d6b363a540f28b5e41ce97b"></span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">config_file</span></span></span><a class="headerlink" href="#_CPPv4N16compositor_setup11config_fileE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The absolute path to <code class="docutils literal notranslate"><span class="pre">weston.ini</span></code> to use, or NULL for <code class="docutils literal notranslate"><span class="pre">no-config</span></code> . </p>
+<p>To properly fill this entry use weston_ini_setup() </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N16compositor_setup12extra_moduleE">
+<span id="_CPPv3N16compositor_setup12extra_moduleE"></span><span id="_CPPv2N16compositor_setup12extra_moduleE"></span><span id="compositor_setup::extra_module__cCP"></span><span class="target" id="structcompositor__setup_1ac2ca15a1b025c2a0a8bc1ad7e7e7be0f"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">extra_module</span></span></span><a class="headerlink" href="#_CPPv4N16compositor_setup12extra_moduleE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Full path to an extra plugin to load, or NULL for none. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N16compositor_setup14logging_scopesE">
+<span id="_CPPv3N16compositor_setup14logging_scopesE"></span><span id="_CPPv2N16compositor_setup14logging_scopesE"></span><span id="compositor_setup::logging_scopes__cCP"></span><span class="target" id="structcompositor__setup_1a0f2c8280f5923305d4f679a86c8f0821"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">logging_scopes</span></span></span><a class="headerlink" href="#_CPPv4N16compositor_setup14logging_scopesE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Debug scopes for the compositor log, or NULL for compositor defaults. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N16compositor_setup12testset_nameE">
+<span id="_CPPv3N16compositor_setup12testset_nameE"></span><span id="_CPPv2N16compositor_setup12testset_nameE"></span><span id="compositor_setup::testset_name__cCP"></span><span class="target" id="structcompositor__setup_1a7a9d5a5b95a6b47ea192895485caf499"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">testset_name</span></span></span><a class="headerlink" href="#_CPPv4N16compositor_setup12testset_nameE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The name of this test program, used as a unique identifier. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv416fixture_metadata">
+<span id="_CPPv316fixture_metadata"></span><span id="_CPPv216fixture_metadata"></span><span id="fixture_metadata"></span><span class="target" id="structfixture__metadata"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fixture_metadata</span></span></span><a class="headerlink" href="#_CPPv416fixture_metadata" title="Permalink to this definition">¶</a><br /></dt>
+<dd><em>#include &lt;weston-test-runner.h&gt;</em><p>Metadata for fixture setup array elements. </p>
+<p>Every type used as a fixture setup array’s elements needs one member of this type, initialized.</p>
+<p><dl class="simple">
+<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="#group__testharness_1ga274def1a210d74f64d216796dbec4b2b"><span class="std std-ref">DECLARE_FIXTURE_SETUP_WITH_ARG()</span></a> </p>
+</dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N16fixture_metadata4nameE">
+<span id="_CPPv3N16fixture_metadata4nameE"></span><span id="_CPPv2N16fixture_metadata4nameE"></span><span id="fixture_metadata::name__cCP"></span><span class="target" id="structfixture__metadata_1aaf01a2c28621f0b45e4d8bc669469279"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">name</span></span></span><a class="headerlink" href="#_CPPv4N16fixture_metadata4nameE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Human friendly name of the fixture setup. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="test-harness-internals">
+<h2>Test harness Internals<a class="headerlink" href="#test-harness-internals" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv49test_type">
+<span id="_CPPv39test_type"></span><span id="_CPPv29test_type"></span><span class="target" id="group__testharness__private_1gaac4452a7487c189982bfeaca04a1326f"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">test_type</span></span></span><a class="headerlink" href="#_CPPv49test_type" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Weston test types. </p>
+<p><dl class="simple">
+<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="#group__testharness_1ga9f98c3e898eb09ad2bd86343199ff619"><span class="std std-ref">weston_test_harness_execute_standalone</span></a> <a class="reference internal" href="#group__testharness_1gabc3f5a45b58ee07331059eb120f7b2bb"><span class="std std-ref">weston_test_harness_execute_as_plugin</span></a> <a class="reference internal" href="#group__testharness_1gacd7b26a0f0f337781013b40d229cf262"><span class="std std-ref">weston_test_harness_execute_as_client</span></a> </p>
+</dd>
+</dl>
+</p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N9test_type20TEST_TYPE_STANDALONEE">
+<span id="_CPPv3N9test_type20TEST_TYPE_STANDALONEE"></span><span id="_CPPv2N9test_type20TEST_TYPE_STANDALONEE"></span><span class="target" id="group__testharness__private_1ggaac4452a7487c189982bfeaca04a1326fafa838cea02f9c1b9df0c3cc3dbd1dc85"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TEST_TYPE_STANDALONE</span></span></span><a class="headerlink" href="#_CPPv4N9test_type20TEST_TYPE_STANDALONEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N9test_type16TEST_TYPE_PLUGINE">
+<span id="_CPPv3N9test_type16TEST_TYPE_PLUGINE"></span><span id="_CPPv2N9test_type16TEST_TYPE_PLUGINE"></span><span class="target" id="group__testharness__private_1ggaac4452a7487c189982bfeaca04a1326fa3120f83ea36457050043776ca058fda2"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TEST_TYPE_PLUGIN</span></span></span><a class="headerlink" href="#_CPPv4N9test_type16TEST_TYPE_PLUGINE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N9test_type16TEST_TYPE_CLIENTE">
+<span id="_CPPv3N9test_type16TEST_TYPE_CLIENTE"></span><span id="_CPPv2N9test_type16TEST_TYPE_CLIENTE"></span><span class="target" id="group__testharness__private_1ggaac4452a7487c189982bfeaca04a1326fa29e6ee8780af534f3ec9f60fa1c24763"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TEST_TYPE_CLIENT</span></span></span><a class="headerlink" href="#_CPPv4N9test_type16TEST_TYPE_CLIENTE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv426compositor_setup_defaults_P16compositor_setupPKc">
+<span id="_CPPv326compositor_setup_defaults_P16compositor_setupPKc"></span><span id="_CPPv226compositor_setup_defaults_P16compositor_setupPKc"></span><span id="compositor_setup_defaults___compositor_setupP.cCP"></span><span class="target" id="group__testharness__private_1ga9c3679c70b98a4b2e87d18f7cceaf4a8"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compositor_setup_defaults_</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv416compositor_setup" title="compositor_setup"><span class="n"><span class="pre">compositor_setup</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">setup</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">testset_name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv426compositor_setup_defaults_P16compositor_setupPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Initialize part of compositor setup. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>setup</strong> – The variable to initialize. </p></li>
+<li><p><strong>testset_name</strong> – Value for testset_name member. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv418execute_compositorPK16compositor_setupP18wet_testsuite_data">
+<span id="_CPPv318execute_compositorPK16compositor_setupP18wet_testsuite_data"></span><span id="_CPPv218execute_compositorPK16compositor_setupP18wet_testsuite_data"></span><span id="execute_compositor__compositor_setupCP.wet_testsuite_dataP"></span><span class="target" id="group__testharness__private_1gad9955329c6b705ef5be29d881347b5b1"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">execute_compositor</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv416compositor_setup" title="compositor_setup"><span class="n"><span class="pre">compositor_setup</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">setup</span></span>, <span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv418wet_testsuite_data" title="wet_testsuite_data"><span class="n"><span class="pre">wet_testsuite_data</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418execute_compositorPK16compositor_setupP18wet_testsuite_data" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Execute compositor. </p>
+<p>Manufactures the compositor command line and calls wet_main().</p>
+<p>Returns RESULT_SKIP if the given setup contains features that were disabled in the build, e.g. GL-renderer or DRM-backend. </p>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv417weston_test_entry">
+<span id="_CPPv317weston_test_entry"></span><span id="_CPPv217weston_test_entry"></span><span id="weston_test_entry"></span><span class="target" id="structweston__test__entry"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_test_entry</span></span></span><a class="headerlink" href="#_CPPv417weston_test_entry" title="Permalink to this definition">¶</a><br /></dt>
+<dd><em>#include &lt;weston-test-runner.h&gt;</em><p>Test program entry. </p>
+<p>Each invocation of <a class="reference internal" href="#group__testharness_1ga45feb1f37ce559e49baf8655d769ef85"><span class="std std-ref">TEST()</span></a>, <a class="reference internal" href="#group__testharness_1gaac6645411da307a1046bcaa84d46583f"><span class="std std-ref">TEST_P()</span></a>, or <a class="reference internal" href="#group__testharness_1ga889ae2ce5ee27319a760457a33a2da1a"><span class="std std-ref">PLUGIN_TEST()</span></a> will create one more <a class="reference internal" href="#structweston__test__entry"><span class="std std-ref">weston_test_entry</span></a> in a custom named section in the final binary. Iterating through the section then allows to iterate through all the defined tests. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_test_entry4nameE">
+<span id="_CPPv3N17weston_test_entry4nameE"></span><span id="_CPPv2N17weston_test_entry4nameE"></span><span id="weston_test_entry::name__cCP"></span><span class="target" id="structweston__test__entry_1aa2d340947469ae6e1e1d21154ada010c"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">name</span></span></span><a class="headerlink" href="#_CPPv4N17weston_test_entry4nameE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_test_entry3runE">
+<span id="_CPPv3N17weston_test_entry3runE"></span><span id="_CPPv2N17weston_test_entry3runE"></span><span class="target" id="structweston__test__entry_1aabba374e8d72ab10531d89ec9fb04bf6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">run</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N17weston_test_entry3runE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_test_entry10table_dataE">
+<span id="_CPPv3N17weston_test_entry10table_dataE"></span><span id="_CPPv2N17weston_test_entry10table_dataE"></span><span id="weston_test_entry::table_data__voidCP"></span><span class="target" id="structweston__test__entry_1a77d2fd516c11498f754123e36e40ff00"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">table_data</span></span></span><a class="headerlink" href="#_CPPv4N17weston_test_entry10table_dataE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_test_entry12element_sizeE">
+<span id="_CPPv3N17weston_test_entry12element_sizeE"></span><span id="_CPPv2N17weston_test_entry12element_sizeE"></span><span id="weston_test_entry::element_size__s"></span><span class="target" id="structweston__test__entry_1a029f6a581698ea375429be890e46cdf8"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">element_size</span></span></span><a class="headerlink" href="#_CPPv4N17weston_test_entry12element_sizeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_test_entry10n_elementsE">
+<span id="_CPPv3N17weston_test_entry10n_elementsE"></span><span id="_CPPv2N17weston_test_entry10n_elementsE"></span><span id="weston_test_entry::n_elements__i"></span><span class="target" id="structweston__test__entry_1a12a79b4e5483c31ac942f7e2ad15cf28"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">n_elements</span></span></span><a class="headerlink" href="#_CPPv4N17weston_test_entry10n_elementsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv419fixture_setup_array">
+<span id="_CPPv319fixture_setup_array"></span><span id="_CPPv219fixture_setup_array"></span><span id="fixture_setup_array"></span><span class="target" id="structfixture__setup__array"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fixture_setup_array</span></span></span><a class="headerlink" href="#_CPPv419fixture_setup_array" title="Permalink to this definition">¶</a><br /></dt>
+<dd><em>#include &lt;weston-test-runner.h&gt;</em><p>Fixture setup array record. </p>
+<p>Helper to store the attributes of the data array passed in to <a class="reference internal" href="#group__testharness_1ga274def1a210d74f64d216796dbec4b2b"><span class="std std-ref">DECLARE_FIXTURE_SETUP_WITH_ARG()</span></a>. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19fixture_setup_array5arrayE">
+<span id="_CPPv3N19fixture_setup_array5arrayE"></span><span id="_CPPv2N19fixture_setup_array5arrayE"></span><span id="fixture_setup_array::array__voidCP"></span><span class="target" id="structfixture__setup__array_1aee35175bb680c0a47025cf2502a96f7c"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">array</span></span></span><a class="headerlink" href="#_CPPv4N19fixture_setup_array5arrayE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19fixture_setup_array12element_sizeE">
+<span id="_CPPv3N19fixture_setup_array12element_sizeE"></span><span id="_CPPv2N19fixture_setup_array12element_sizeE"></span><span id="fixture_setup_array::element_size__s"></span><span class="target" id="structfixture__setup__array_1ac6e0ba03a3efb7fb349bdaae25cbafa0"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">element_size</span></span></span><a class="headerlink" href="#_CPPv4N19fixture_setup_array12element_sizeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19fixture_setup_array10n_elementsE">
+<span id="_CPPv3N19fixture_setup_array10n_elementsE"></span><span id="_CPPv2N19fixture_setup_array10n_elementsE"></span><span id="fixture_setup_array::n_elements__i"></span><span class="target" id="structfixture__setup__array_1a6951fe80c14c9cd286965c3745d4d366"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">n_elements</span></span></span><a class="headerlink" href="#_CPPv4N19fixture_setup_array10n_elementsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19fixture_setup_array11meta_offsetE">
+<span id="_CPPv3N19fixture_setup_array11meta_offsetE"></span><span id="_CPPv2N19fixture_setup_array11meta_offsetE"></span><span id="fixture_setup_array::meta_offset__s"></span><span class="target" id="structfixture__setup__array_1a2606a50c547b715f247fd6fa1888c208"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">meta_offset</span></span></span><a class="headerlink" href="#_CPPv4N19fixture_setup_array11meta_offsetE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv418wet_testsuite_data">
+<span id="_CPPv318wet_testsuite_data"></span><span id="_CPPv218wet_testsuite_data"></span><span id="wet_testsuite_data"></span><span class="target" id="structwet__testsuite__data"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">wet_testsuite_data</span></span></span><a class="headerlink" href="#_CPPv418wet_testsuite_data" title="Permalink to this definition">¶</a><br /></dt>
+<dd><em>#include &lt;weston-testsuite-data.h&gt;</em><p>Test harness specific data for running tests. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18wet_testsuite_data3runE">
+<span id="_CPPv3N18wet_testsuite_data3runE"></span><span id="_CPPv2N18wet_testsuite_data3runE"></span><span class="target" id="structwet__testsuite__data_1aa778aef8c2990ddf1367f24d5af3b23b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">run</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv418wet_testsuite_data" title="wet_testsuite_data"><span class="n"><span class="pre">wet_testsuite_data</span></span></a><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N18wet_testsuite_data3runE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18wet_testsuite_data5testsE">
+<span id="_CPPv3N18wet_testsuite_data5testsE"></span><span id="_CPPv2N18wet_testsuite_data5testsE"></span><span id="wet_testsuite_data::tests__weston_test_entryCP"></span><span class="target" id="structwet__testsuite__data_1a029a517bc21ee17737e87cf5e6d94aa0"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv417weston_test_entry" title="weston_test_entry"><span class="n"><span class="pre">weston_test_entry</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">tests</span></span></span><a class="headerlink" href="#_CPPv4N18wet_testsuite_data5testsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18wet_testsuite_data11tests_countE">
+<span id="_CPPv3N18wet_testsuite_data11tests_countE"></span><span id="_CPPv2N18wet_testsuite_data11tests_countE"></span><span id="wet_testsuite_data::tests_count__unsigned"></span><span class="target" id="structwet__testsuite__data_1a4b4c9647bf38610bc13bd09a24d6d80c"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">tests_count</span></span></span><a class="headerlink" href="#_CPPv4N18wet_testsuite_data11tests_countE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18wet_testsuite_data10case_indexE">
+<span id="_CPPv3N18wet_testsuite_data10case_indexE"></span><span id="_CPPv2N18wet_testsuite_data10case_indexE"></span><span id="wet_testsuite_data::case_index__i"></span><span class="target" id="structwet__testsuite__data_1aab2f9cb5578501e4e4d001f786584a4c"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">case_index</span></span></span><a class="headerlink" href="#_CPPv4N18wet_testsuite_data10case_indexE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18wet_testsuite_data4typeE">
+<span id="_CPPv3N18wet_testsuite_data4typeE"></span><span id="_CPPv2N18wet_testsuite_data4typeE"></span><span id="wet_testsuite_data::type__test_type"></span><span class="target" id="structwet__testsuite__data_1a9058a6cc8cca95a80c3c4417aa2707db"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv49test_type" title="test_type"><span class="n"><span class="pre">test_type</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">type</span></span></span><a class="headerlink" href="#_CPPv4N18wet_testsuite_data4typeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18wet_testsuite_data10compositorE">
+<span id="_CPPv3N18wet_testsuite_data10compositorE"></span><span id="_CPPv2N18wet_testsuite_data10compositorE"></span><span id="wet_testsuite_data::compositor__weston_compositorP"></span><span class="target" id="structwet__testsuite__data_1a51825d253002fb20aa5f45d8baa4661a"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="libweston/compositor.html#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">compositor</span></span></span><a class="headerlink" href="#_CPPv4N18wet_testsuite_data10compositorE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18wet_testsuite_data17thread_event_pipeE">
+<span id="_CPPv3N18wet_testsuite_data17thread_event_pipeE"></span><span id="_CPPv2N18wet_testsuite_data17thread_event_pipeE"></span><span id="wet_testsuite_data::thread_event_pipe__i"></span><span class="target" id="structwet__testsuite__data_1ad35c2293edf76a9e5e63e8bb005122ae"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">thread_event_pipe</span></span></span><a class="headerlink" href="#_CPPv4N18wet_testsuite_data17thread_event_pipeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18wet_testsuite_data17fixture_iterationE">
+<span id="_CPPv3N18wet_testsuite_data17fixture_iterationE"></span><span id="_CPPv2N18wet_testsuite_data17fixture_iterationE"></span><span id="wet_testsuite_data::fixture_iteration__i"></span><span class="target" id="structwet__testsuite__data_1a73c16d413050a5d633e8b1d6866f6b95"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fixture_iteration</span></span></span><a class="headerlink" href="#_CPPv4N18wet_testsuite_data17fixture_iterationE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18wet_testsuite_data12fixture_nameE">
+<span id="_CPPv3N18wet_testsuite_data12fixture_nameE"></span><span id="_CPPv2N18wet_testsuite_data12fixture_nameE"></span><span id="wet_testsuite_data::fixture_name__cCP"></span><span class="target" id="structwet__testsuite__data_1a22b5ac1fc15302e5f27ba4fdbd99449f"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">fixture_name</span></span></span><a class="headerlink" href="#_CPPv4N18wet_testsuite_data12fixture_nameE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18wet_testsuite_data7counterE">
+<span id="_CPPv3N18wet_testsuite_data7counterE"></span><span id="_CPPv2N18wet_testsuite_data7counterE"></span><span id="wet_testsuite_data::counter__unsigned"></span><span class="target" id="structwet__testsuite__data_1a3bf92117893e3145dfa182e76ddd6c0f"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">counter</span></span></span><a class="headerlink" href="#_CPPv4N18wet_testsuite_data7counterE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18wet_testsuite_data6passedE">
+<span id="_CPPv3N18wet_testsuite_data6passedE"></span><span id="_CPPv2N18wet_testsuite_data6passedE"></span><span id="wet_testsuite_data::passed__unsigned"></span><span class="target" id="structwet__testsuite__data_1a9c820aa6adadc2fb909cb17df263aa53"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">passed</span></span></span><a class="headerlink" href="#_CPPv4N18wet_testsuite_data6passedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18wet_testsuite_data7skippedE">
+<span id="_CPPv3N18wet_testsuite_data7skippedE"></span><span id="_CPPv2N18wet_testsuite_data7skippedE"></span><span id="wet_testsuite_data::skipped__unsigned"></span><span class="target" id="structwet__testsuite__data_1ad4d0227ba15118e44ebfdf4562c46987"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">skipped</span></span></span><a class="headerlink" href="#_CPPv4N18wet_testsuite_data7skippedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18wet_testsuite_data6failedE">
+<span id="_CPPv3N18wet_testsuite_data6failedE"></span><span id="_CPPv2N18wet_testsuite_data6failedE"></span><span id="wet_testsuite_data::failed__unsigned"></span><span class="target" id="structwet__testsuite__data_1a33b872ae5e946dc2b3c94745db4b05c0"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">failed</span></span></span><a class="headerlink" href="#_CPPv4N18wet_testsuite_data6failedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18wet_testsuite_data5totalE">
+<span id="_CPPv3N18wet_testsuite_data5totalE"></span><span id="_CPPv2N18wet_testsuite_data5totalE"></span><span id="wet_testsuite_data::total__unsigned"></span><span class="target" id="structwet__testsuite__data_1aead1a6f7b2d234e6ceca9decd3f27d39"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">total</span></span></span><a class="headerlink" href="#_CPPv4N18wet_testsuite_data5totalE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="kiosk-shell.html" class="btn btn-neutral float-right" title="Weston kiosk-shell" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="test-suite.html" class="btn btn-neutral float-left" title="Weston test suite" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Weston community.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

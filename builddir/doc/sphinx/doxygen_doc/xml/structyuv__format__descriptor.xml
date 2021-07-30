@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structyuv__format__descriptor" kind="struct" language="C++" prot="public">
+    <compoundname>yuv_format_descriptor</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structyuv__format__descriptor_1a4a68ea10395297d5d528b30e7c833960" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t yuv_format_descriptor::format</definition>
+        <argsstring></argsstring>
+        <name>format</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" line="162" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structyuv__format__descriptor_1afb902191eac1416f513bb6c1accf3889" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int yuv_format_descriptor::input_planes</definition>
+        <argsstring></argsstring>
+        <name>input_planes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" line="163" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structyuv__format__descriptor_1ada04a984c822229ed3fed4b4fda1cd81" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int yuv_format_descriptor::output_planes</definition>
+        <argsstring></argsstring>
+        <name>output_planes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" line="164" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structyuv__format__descriptor_1adcd8a906203726fff949da90ba12463d" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="gl-renderer_8c_1af61174fce42866489121623510a6dbaa" kindref="member">texture_type</ref></type>
+        <definition>enum texture_type yuv_format_descriptor::texture_type</definition>
+        <argsstring></argsstring>
+        <name>texture_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" line="164" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structyuv__format__descriptor_1a6a4f08557d9c5e11c0fc8a743707df50" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structyuv__plane__descriptor" kindref="compound">yuv_plane_descriptor</ref></type>
+        <definition>struct yuv_plane_descriptor yuv_format_descriptor::plane[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>plane</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" line="164" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>yuv_format_descriptor</label>
+        <link refid="structyuv__format__descriptor"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>plane</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>yuv_plane_descriptor</label>
+        <link refid="structyuv__plane__descriptor"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" line="161" column="28" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" bodystart="161" bodyend="167"/>
+    <listofallmembers>
+      <member refid="structyuv__format__descriptor_1a4a68ea10395297d5d528b30e7c833960" prot="public" virt="non-virtual"><scope>yuv_format_descriptor</scope><name>format</name></member>
+      <member refid="structyuv__format__descriptor_1afb902191eac1416f513bb6c1accf3889" prot="public" virt="non-virtual"><scope>yuv_format_descriptor</scope><name>input_planes</name></member>
+      <member refid="structyuv__format__descriptor_1ada04a984c822229ed3fed4b4fda1cd81" prot="public" virt="non-virtual"><scope>yuv_format_descriptor</scope><name>output_planes</name></member>
+      <member refid="structyuv__format__descriptor_1a6a4f08557d9c5e11c0fc8a743707df50" prot="public" virt="non-virtual"><scope>yuv_format_descriptor</scope><name>plane</name></member>
+      <member refid="structyuv__format__descriptor_1adcd8a906203726fff949da90ba12463d" prot="public" virt="non-virtual"><scope>yuv_format_descriptor</scope><name>texture_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

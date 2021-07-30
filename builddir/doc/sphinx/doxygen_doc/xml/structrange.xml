@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structrange" kind="struct" language="C++" prot="public">
+    <compoundname>range</compoundname>
+    <includes refid="weston-test-client-helper_8h" local="no">weston-test-client-helper.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structrange_1ad3753c3f7834d8a8e292b098732bed45" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int range::a</definition>
+        <argsstring></argsstring>
+        <name>a</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="184" column="5" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrange_1ad82038b126576d13756f64833a360042" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int range::b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="185" column="5" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="183" column="12" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="183" bodyend="186"/>
+    <listofallmembers>
+      <member refid="structrange_1ad3753c3f7834d8a8e292b098732bed45" prot="public" virt="non-virtual"><scope>range</scope><name>a</name></member>
+      <member refid="structrange_1ad82038b126576d13756f64833a360042" prot="public" virt="non-virtual"><scope>range</scope><name>b</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

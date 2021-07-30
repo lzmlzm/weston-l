@@ -1,0 +1,374 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Running Weston &mdash; weston 9.0.90 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Libweston" href="libweston.html" />
+    <link rel="prev" title="Welcome to Weston documentation!" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> weston
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Running Weston</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#additional-set-up-steps">Additional set-up steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-weston-in-a-graphical-environment">Running Weston in a graphical environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-weston-on-a-stand-alone-back-end">Running Weston on a stand-alone back-end</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-weston-on-a-different-seat-on-a-stand-alone-back-end">Running Weston on a different seat on a stand-alone back-end</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="libweston.html">Libweston</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test-suite.html">Weston test suite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kiosk-shell.html">Weston kiosk-shell</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">weston</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Running Weston</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/toc/running-weston.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="running-weston">
+<h1>Running Weston<a class="headerlink" href="#running-weston" title="Permalink to this headline">¶</a></h1>
+<p>libweston uses the concept of a <em>back-end</em> to abstract the interface to the
+underlying environment where it runs on. Ultimately, the back-end is
+responsible for handling the input and generate an output. Weston, as a
+libweston user, can be run on different back-ends, including nested, by using
+the wayland backend, but also on X11 or on a stand-alone back-end like
+DRM/KMS and now deprecated fbdev.</p>
+<p>In most cases, people should allow Weston to choose the backend automatically
+as it will produce the best results. That happens for instance when running
+Weston on a machine that already has another graphical environment running,
+being either another wayland compositor (e.g.  Weston) or on a X11 server.
+You should only specify the backend manually if you know that what Weston picks
+is not the best, or the one you intended to use is different than the one
+loaded.  In that case, the backend can be selected by using <code class="docutils literal notranslate"><span class="pre">-B</span> <span class="pre">[backend.so]</span></code>
+command line option.  As each back-end uses a different way to get input and
+produce output, it means that the most suitable back-end depends on the
+environment being used.</p>
+<p>Available back-ends:</p>
+<ul class="simple">
+<li><p><strong>drm</strong> – run stand-alone on DRM/KMS and evdev (recommend)
+(<a class="reference external" href="https://www.kernel.org/doc/html/latest/gpu/index.html">DRM kernel doc</a>)</p></li>
+<li><p><strong>wayland</strong> – run as a Wayland application, nested in another Wayland compositor
+instance</p></li>
+<li><p><strong>x11</strong> – run as a x11 application, nested in a X11 display server instance</p></li>
+<li><p><strong>rdp</strong> – run as an RDP server without local input or output</p></li>
+<li><p><strong>headless</strong> – run without input or output, useful for test suite</p></li>
+<li><p><strong>fbdev</strong> – run stand-alone on fbdev/evdev (deprecated)</p></li>
+</ul>
+<p>The job of gathering all the surfaces (windows) being displayed on an output and
+stitching them together is performed by a <em>renderer</em>. By doing so, it is
+compositing all surfaces into a single image, which is being handed out to a
+back-end, and finally, displayed on the screen.</p>
+<p>libweston has a CPU-based type of renderer by making use of the
+<a class="reference external" href="http://www.pixman.org/">Pixman</a> library, but also one that can make
+use of the GPU to do that, which uses <a class="reference external" href="https://www.khronos.org/opengles/">OpenGL ES</a>
+and it is simply called the GL-renderer.</p>
+<p>Most of the back-ends provide a command line option to disable the GL-renderer,
+and use the CPU for doing that. That happens by appending to the command line
+<code class="docutils literal notranslate"><span class="pre">--use-pixman</span></code> when running Weston. One might use the CPU-based renderer
+to exclude any other potential issues with the GL-renderer.</p>
+<div class="section" id="additional-set-up-steps">
+<h2>Additional set-up steps<a class="headerlink" href="#additional-set-up-steps" title="Permalink to this headline">¶</a></h2>
+<p>Depending on your distribution some additional set-up parts might be required,
+before actually launching Weston, although any fairly modern distribution
+should have it already set-up for you. Weston creates its unix socket file (for
+example, wayland-1) in the directory specified by the required
+environment variable <code class="docutils literal notranslate"><span class="pre">$XDG_RUNTIME_DIR</span></code>. Clients use the same variable to
+find that socket. Normally this should already be provided by systemd.  If you
+are using a distribution that does not set-up <code class="docutils literal notranslate"><span class="pre">$XDG_RUNTIME_DIR</span></code>, you
+must set it using your shell profile capability. More info about how to
+set-up that up, which depends to some extent on your shell, can be found at
+<a class="reference external" href="https://wayland.freedesktop.org/building.html">Building/Running Weston</a></p>
+</div>
+<div class="section" id="running-weston-in-a-graphical-environment">
+<h2>Running Weston in a graphical environment<a class="headerlink" href="#running-weston-in-a-graphical-environment" title="Permalink to this headline">¶</a></h2>
+<p>As stated previously, if you are already in a graphical environment, Weston
+would infer and attempt to load up the correct back-end.  Either running
+in a Wayland compositor instance, or a X11 server, you should be able to run
+Weston from a X terminal or a Wayland one.</p>
+</div>
+<div class="section" id="running-weston-on-a-stand-alone-back-end">
+<h2>Running Weston on a stand-alone back-end<a class="headerlink" href="#running-weston-on-a-stand-alone-back-end" title="Permalink to this headline">¶</a></h2>
+<p>Now that we are aware of the concept of a back-end and a renderer, it is time to
+introduce the concept of a seat, as stand-alone back-ends require one.  A <em>seat</em>
+is a collection of input devices like a keyboard and a mouse, and output
+devices (monitors), forming the work or entertainment place for one person. It
+could also include sound cards or cameras.  A single computer could be serving
+multiple seats.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A graphics card is <strong>required</strong> to be a part of the seat, as among
+other things, it effectively drives the monitor.</p>
+</div>
+<p>By default Weston will use the default seat named <code class="docutils literal notranslate"><span class="pre">seat0</span></code>, but there’s an
+option to specify which seat Weston must use by passing <code class="docutils literal notranslate"><span class="pre">--seat</span></code> argument.</p>
+<p>You can start Weston from a VT assuming that there’s a seat manager supported by
+<a class="reference external" href="https://sr.ht/~kennylevinsen/seatd">libseat</a> running, such as <code class="docutils literal notranslate"><span class="pre">seatd</span></code> or
+<a class="reference external" href="https://www.freedesktop.org/wiki/Software/systemd/logind/">logind</a>.  The
+backend to be used by <code class="docutils literal notranslate"><span class="pre">libseat</span></code> can optionally be selected with
+<code class="docutils literal notranslate"><span class="pre">$LIBSEAT_BACKEND</span></code>.  If <code class="docutils literal notranslate"><span class="pre">libseat</span></code> and <code class="docutils literal notranslate"><span class="pre">seatd</span></code> are both installed, but
+<code class="docutils literal notranslate"><span class="pre">seatd</span></code> is not already running, it can be started with <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">--</span> <span class="pre">seatd</span> <span class="pre">-g</span>
+<span class="pre">video</span></code>.  If no seat manager supported by <code class="docutils literal notranslate"><span class="pre">libseat</span></code> is available, you can use
+the <code class="docutils literal notranslate"><span class="pre">weston-launch</span></code> application that can handle VT switching.</p>
+<p>Another way of launching Weston is via ssh or a serial terminal.  The simplest
+option here is to use the <code class="docutils literal notranslate"><span class="pre">libseat</span></code> launcher with <code class="docutils literal notranslate"><span class="pre">seatd</span></code>.  The process for
+setting that up is identical to the one described above, where one just need to
+ensure that <code class="docutils literal notranslate"><span class="pre">seatd</span></code> is running with the appropriate arguments, after which one
+can just run <code class="docutils literal notranslate"><span class="pre">weston</span></code>.  Alternatively and as a last resort, one can run Weston
+as root, specifying the tty to use on the command line: If TTY 2 is active, one
+would run <code class="docutils literal notranslate"><span class="pre">weston</span> <span class="pre">--tty</span> <span class="pre">2</span></code> as root.</p>
+</div>
+<div class="section" id="running-weston-on-a-different-seat-on-a-stand-alone-back-end">
+<h2>Running Weston on a different seat on a stand-alone back-end<a class="headerlink" href="#running-weston-on-a-different-seat-on-a-stand-alone-back-end" title="Permalink to this headline">¶</a></h2>
+<p>While Weston can be tested on top of an already running Wayland compositor or
+an X11 server, another option might be to have an unused GPU card which can
+be solely used by Weston.  So, instead of having a dedicated machine to run
+Weston for trying out the DRM-backend, by just having an extra GPU, one can
+create a new seat that could access the unused GPU on the same machine (and
+potentialy other inputs) and assign it to that seat. All of the
+happening while you already have your graphical environment running.</p>
+<p>In order to have that set-up, the requirements/steps would be:</p>
+<ul class="simple">
+<li><p>have an extra GPU card – you could also use integrated GPUs, while your
+other GPU is in use by another graphical environment</p></li>
+<li><p>create a udev file that assigns the card (and inputs) to another seat</p></li>
+<li><p>start Weston on that seat</p></li>
+</ul>
+<p>Start by creating a udev file, under <code class="docutils literal notranslate"><span class="pre">/etc/udev/rules.d/</span></code> adding something
+similar to the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ACTION</span><span class="o">==</span><span class="s2">&quot;remove&quot;</span><span class="p">,</span> <span class="n">GOTO</span><span class="o">=</span><span class="s2">&quot;id_insecure_seat_end&quot;</span>
+
+<span class="n">SUBSYSTEM</span><span class="o">==</span><span class="s2">&quot;drm&quot;</span><span class="p">,</span> <span class="n">KERNEL</span><span class="o">==</span><span class="s2">&quot;card*&quot;</span><span class="p">,</span> <span class="n">KERNELS</span><span class="o">==</span><span class="s2">&quot;0000:00:02.0&quot;</span><span class="p">,</span> <span class="n">ENV</span><span class="p">{</span><span class="n">ID_SEAT</span><span class="p">}</span><span class="o">=</span><span class="s2">&quot;seat-insecure&quot;</span>
+
+<span class="n">SUBSYSTEM</span><span class="o">==</span><span class="s2">&quot;input&quot;</span><span class="p">,</span> <span class="n">ATTRS</span><span class="p">{</span><span class="n">idVendor</span><span class="p">}</span><span class="o">==</span><span class="s2">&quot;222a&quot;</span><span class="p">,</span> <span class="n">ATTRS</span><span class="p">{</span><span class="n">idProduct</span><span class="p">}</span><span class="o">==</span><span class="s2">&quot;004d&quot;</span><span class="p">,</span> <span class="n">OWNER</span><span class="o">=</span><span class="s2">&quot;your_user_id&quot;</span><span class="p">,</span> <span class="n">ENV</span><span class="p">{</span><span class="n">ID_SEAT</span><span class="p">}</span><span class="o">=</span><span class="s2">&quot;seat-insecure&quot;</span><span class="p">,</span> <span class="n">ENV</span><span class="p">{</span><span class="n">WL_OUTPUT</span><span class="p">}</span><span class="o">=</span><span class="s2">&quot;HDMI-A-1&quot;</span>
+<span class="n">SUBSYSTEM</span><span class="o">==</span><span class="s2">&quot;input&quot;</span><span class="p">,</span> <span class="n">ATTRS</span><span class="p">{</span><span class="n">idVendor</span><span class="p">}</span><span class="o">==</span><span class="s2">&quot;03f0&quot;</span><span class="p">,</span> <span class="n">ATTRS</span><span class="p">{</span><span class="n">idProduct</span><span class="p">}</span><span class="o">==</span><span class="s2">&quot;1198&quot;</span><span class="p">,</span> <span class="n">OWNER</span><span class="o">=</span><span class="s2">&quot;your_user_id&quot;</span><span class="p">,</span> <span class="n">ENV</span><span class="p">{</span><span class="n">ID_SEAT</span><span class="p">}</span><span class="o">=</span><span class="s2">&quot;seat-insecure&quot;</span>
+
+<span class="n">LABEL</span><span class="o">=</span><span class="s2">&quot;id_insecure_seat_end&quot;</span>
+</pre></div>
+</div>
+<p>By using the above udev file, devices assigned to that particular seat
+will be skipped by your normal display environment. Follow the naming scheme
+when creating the file (<code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">7</span> <span class="pre">udev</span></code>). For instance you could use
+<code class="docutils literal notranslate"><span class="pre">63-insecure-seat.rules</span></code> as a filename, but take note that other udev rules
+might also be present and could potentially affect the way in which they get
+applied. Check that no other rules might take precedence before adding
+this new one.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This seat uses on purpose the name <code class="docutils literal notranslate"><span class="pre">seat-insecure</span></code>, to warn users
+that the input devices can be eavesdropped. Futher more, if you attempt
+doing this on a VT, without being already in a graphical environment
+(and although the udev rules do apply), there will be nothing stopping
+the events from input devices reaching the virtual terminal.</p>
+</div>
+<p>In the example above, there are two input devices, one of which is a
+touch panel that is being assigned to a specific output (<cite>HDMI-A-1</cite>) and
+another input which a mouse.  Notice how <code class="docutils literal notranslate"><span class="pre">ENV{ID_SEAT}</span></code> and
+<code class="docutils literal notranslate"><span class="pre">ENV{WL_OUTPUT}</span></code> specify the name of the seat, respectively the input that
+should be assign to a specific output.</p>
+<p>Resolving or extracting the udev key/value pair names, can be easily done with
+the help of <code class="docutils literal notranslate"><span class="pre">udevadm</span></code> command, for instance issuing <code class="docutils literal notranslate"><span class="pre">udevadm</span> <span class="pre">info</span> <span class="pre">-a</span>
+<span class="pre">/dev/dri/cardX</span></code> would give you the entire list of key values names for that
+particular card.  Archaically, one would might also use <code class="docutils literal notranslate"><span class="pre">lsusb</span></code> and <code class="docutils literal notranslate"><span class="pre">lspci</span></code>
+commands to retrieve the PCI vendor and device codes associated with it.</p>
+<p>If there are no input devices the DRM-backend can be started by appending
+<code class="docutils literal notranslate"><span class="pre">--continue-without-input</span></code> or by editing <code class="docutils literal notranslate"><span class="pre">weston.ini</span></code> and adding to the
+<code class="docutils literal notranslate"><span class="pre">core</span></code> section <code class="docutils literal notranslate"><span class="pre">require-input=false</span></code>.</p>
+<p>Then, weston can be run by selecting the DRM-backend and the seat <code class="docutils literal notranslate"><span class="pre">seat-insecure</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">weston</span> <span class="o">-</span><span class="n">Bdrm</span><span class="o">-</span><span class="n">backend</span><span class="o">.</span><span class="n">so</span> <span class="o">--</span><span class="n">seat</span><span class="o">=</span><span class="n">seat</span><span class="o">-</span><span class="n">insecure</span>
+</pre></div>
+</div>
+<p>If everything went well you should see weston be up-and-running on an output
+connected to that DRM device.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="libweston.html" class="btn btn-neutral float-right" title="Libweston" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to Weston documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Weston community.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

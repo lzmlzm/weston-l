@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__log__subscriber" kind="struct" language="C++" prot="public">
+    <compoundname>weston_log_subscriber</compoundname>
+    <includes refid="weston-log-internal_8h" local="no">weston-log-internal.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__log__subscriber_1a809bde45932f9d244d6a9b9e6454db32" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_log_subscriber::write) (struct weston_log_subscriber *sub, const char *data, size_t len)</definition>
+        <argsstring>)(struct weston_log_subscriber *sub, const char *data, size_t len)</argsstring>
+        <name>write</name>
+        <briefdescription>
+<para>write the data pointed by </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log-internal.h" line="54" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log-internal.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__log__subscriber_1a39f04907538dc84d5d5ddef6ad3cd954" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_log_subscriber::destroy) (struct weston_log_subscriber *sub)</definition>
+        <argsstring>)(struct weston_log_subscriber *sub)</argsstring>
+        <name>destroy</name>
+        <briefdescription>
+<para>For destroying the subscriber. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log-internal.h" line="56" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log-internal.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__log__subscriber_1a282d61ea233ec9ee3047deda47e57b7c" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_log_subscriber::destroy_subscription) (struct weston_log_subscriber *sub)</definition>
+        <argsstring>)(struct weston_log_subscriber *sub)</argsstring>
+        <name>destroy_subscription</name>
+        <briefdescription>
+<para>For the type of streams that required additional destroy operation for destroying the stream. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log-internal.h" line="59" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log-internal.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__log__subscriber_1a6043703b9922fe8d709d47b01666f415" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_log_subscriber::complete) (struct weston_log_subscriber *sub)</definition>
+        <argsstring>)(struct weston_log_subscriber *sub)</argsstring>
+        <name>complete</name>
+        <briefdescription>
+<para>For the type of streams that can inform the &apos;consumer&apos; part that write operation has been terminated/finished and should close the stream. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log-internal.h" line="64" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log-internal.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__log__subscriber_1afb01b98baeb194aa7cf353cd6d8cd22c" prot="public" static="no" mutable="no">
+        <type>struct wl_list</type>
+        <definition>struct wl_list weston_log_subscriber::subscription_list</definition>
+        <argsstring></argsstring>
+        <name>subscription_list</name>
+        <briefdescription>
+<para><ref refid="structweston__log__subscription_1a9e3247e622bbe58e3068276e495658bc" kindref="member">weston_log_subscription::owner_link</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log-internal.h" line="64" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log-internal.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Subscriber allows each type of stream to customize or to provide its own methods to manipulate the underlying storage. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>It follows also an object-oriented approach, contains the ops callbacks and a list of subcriptions of type <ref refid="structweston__log__subscription" kindref="compound">weston_log_subscription</ref>. Each subscription created will be both added to this subscription list and that of the <ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref>.</para>
+<para>A kind of stream can inherit the subscriber class and provide its own callbacks: <programlisting><codeline><highlight class="normal">struct<sp/>weston_log_data_stream<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>struct<sp/>weston_log_subscriber<sp/>base;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>struct<sp/>weston_data_stream<sp/>opaque;</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+</programlisting></para>
+<para>Passing the base class will require container retrieval type of methods to be allowed to reach the opaque type (i.e., container_of()). </para>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/weston-log-internal.h" line="52" column="28" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log-internal.h" bodystart="52" bodyend="66"/>
+    <listofallmembers>
+      <member refid="structweston__log__subscriber_1a6043703b9922fe8d709d47b01666f415" prot="public" virt="non-virtual"><scope>weston_log_subscriber</scope><name>complete</name></member>
+      <member refid="structweston__log__subscriber_1a39f04907538dc84d5d5ddef6ad3cd954" prot="public" virt="non-virtual"><scope>weston_log_subscriber</scope><name>destroy</name></member>
+      <member refid="structweston__log__subscriber_1a282d61ea233ec9ee3047deda47e57b7c" prot="public" virt="non-virtual"><scope>weston_log_subscriber</scope><name>destroy_subscription</name></member>
+      <member refid="structweston__log__subscriber_1afb01b98baeb194aa7cf353cd6d8cd22c" prot="public" virt="non-virtual"><scope>weston_log_subscriber</scope><name>subscription_list</name></member>
+      <member refid="structweston__log__subscriber_1a809bde45932f9d244d6a9b9e6454db32" prot="public" virt="non-virtual"><scope>weston_log_subscriber</scope><name>write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

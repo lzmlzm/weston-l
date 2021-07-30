@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_f264b7a649e4dd1d0aa9d46fd38b1e64" kind="dir">
+    <compoundname>/home/lzm/Wayland/weston/libweston/backend-drm</compoundname>
+    <innerfile refid="drm-gbm_8c">drm-gbm.c</innerfile>
+    <innerfile refid="drm-internal_8h">drm-internal.h</innerfile>
+    <innerfile refid="drm-virtual_8c">drm-virtual.c</innerfile>
+    <innerfile refid="drm_8c">drm.c</innerfile>
+    <innerfile refid="fb_8c">fb.c</innerfile>
+    <innerfile refid="kms_8c">kms.c</innerfile>
+    <innerfile refid="libbacklight_8c">libbacklight.c</innerfile>
+    <innerfile refid="libbacklight_8h">libbacklight.h</innerfile>
+    <innerfile refid="modes_8c">modes.c</innerfile>
+    <innerfile refid="state-helpers_8c">state-helpers.c</innerfile>
+    <innerfile refid="state-propose_8c">state-propose.c</innerfile>
+    <innerfile refid="vaapi-recorder_8c">vaapi-recorder.c</innerfile>
+    <innerfile refid="vaapi-recorder_8h">vaapi-recorder.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/backend-drm/"/>
+  </compounddef>
+</doxygen>

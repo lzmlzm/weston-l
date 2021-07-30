@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structsetup__args" kind="struct" language="C++" prot="public">
+    <compoundname>setup_args</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsetup__args_1a90e5b9a62a0b9b494f1068c6127f27eb" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structfixture__metadata" kindref="compound">fixture_metadata</ref></type>
+        <definition>struct fixture_metadata setup_args::meta</definition>
+        <argsstring></argsstring>
+        <name>meta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/alpha-blending-test.c" line="200" column="1" bodyfile="/home/lzm/Wayland/weston/tests/alpha-blending-test.c" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsetup__args_1a0fd5bb4903719c36beb60f057c9fab96" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="group__testharness_1ga3f584343987d08b8aa9abf1e9c371a90" kindref="member">renderer_type</ref></type>
+        <definition>enum renderer_type setup_args::renderer</definition>
+        <argsstring></argsstring>
+        <name>renderer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/alpha-blending-test.c" line="200" column="1" bodyfile="/home/lzm/Wayland/weston/tests/alpha-blending-test.c" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsetup__args_1aceca7131bc026e67f37581158928d4c4" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int setup_args::scale</definition>
+        <argsstring></argsstring>
+        <name>scale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/buffer-transforms-test.c" line="55" column="5" bodyfile="/home/lzm/Wayland/weston/tests/buffer-transforms-test.c" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsetup__args_1aef0d11f87910b23f6823fa754f4beca1" prot="public" static="no" mutable="no">
+        <type>enum wl_output_transform</type>
+        <definition>enum wl_output_transform setup_args::transform</definition>
+        <argsstring></argsstring>
+        <name>transform</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/buffer-transforms-test.c" line="55" column="5" bodyfile="/home/lzm/Wayland/weston/tests/buffer-transforms-test.c" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsetup__args_1a3c76ca160f8fedfdf1810a13a8103c81" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char * setup_args::transform_name</definition>
+        <argsstring></argsstring>
+        <name>transform_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/buffer-transforms-test.c" line="57" column="12" bodyfile="/home/lzm/Wayland/weston/tests/buffer-transforms-test.c" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsetup__args_1a26fcee94dcfe0dc08abf0b075c9ffeb4" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool setup_args::gl_shadow_fb</definition>
+        <argsstring></argsstring>
+        <name>gl_shadow_fb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/output-damage-test.c" line="67" column="6" bodyfile="/home/lzm/Wayland/weston/tests/output-damage-test.c" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>setup_args</label>
+        <link refid="structsetup__args"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>meta</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>fixture_metadata</label>
+        <link refid="structfixture__metadata"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lzm/Wayland/weston/tests/alpha-blending-test.c" line="35" column="17" bodyfile="/home/lzm/Wayland/weston/tests/alpha-blending-test.c" bodystart="35" bodyend="38"/>
+    <listofallmembers>
+      <member refid="structsetup__args_1a26fcee94dcfe0dc08abf0b075c9ffeb4" prot="public" virt="non-virtual"><scope>setup_args</scope><name>gl_shadow_fb</name></member>
+      <member refid="structsetup__args_1a90e5b9a62a0b9b494f1068c6127f27eb" prot="public" virt="non-virtual"><scope>setup_args</scope><name>meta</name></member>
+      <member refid="structsetup__args_1a0fd5bb4903719c36beb60f057c9fab96" prot="public" virt="non-virtual"><scope>setup_args</scope><name>renderer</name></member>
+      <member refid="structsetup__args_1aceca7131bc026e67f37581158928d4c4" prot="public" virt="non-virtual"><scope>setup_args</scope><name>scale</name></member>
+      <member refid="structsetup__args_1aef0d11f87910b23f6823fa754f4beca1" prot="public" virt="non-virtual"><scope>setup_args</scope><name>transform</name></member>
+      <member refid="structsetup__args_1a3c76ca160f8fedfdf1810a13a8103c81" prot="public" virt="non-virtual"><scope>setup_args</scope><name>transform_name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structdrm__property__info" kind="struct" language="C++" prot="public">
+    <compoundname>drm_property_info</compoundname>
+    <includes refid="drm-internal_8h" local="no">drm-internal.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdrm__property__info_1ae553114535bb2e88a2d1834cf5c0b07c" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* drm_property_info::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+<para>name as string (static, not freed) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" line="137" column="12" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdrm__property__info_1ab0805c648bb407ac900c5512c015356f" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t drm_property_info::prop_id</definition>
+        <argsstring></argsstring>
+        <name>prop_id</name>
+        <briefdescription>
+<para>KMS property object ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" line="138" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdrm__property__info_1a637f9920e8ee41b47434af986d255e37" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t drm_property_info::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" line="139" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdrm__property__info_1af865d18107586fc75d6bf893f0a1e219" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int drm_property_info::num_enum_values</definition>
+        <argsstring></argsstring>
+        <name>num_enum_values</name>
+        <briefdescription>
+<para>number of enum values </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" line="140" column="14" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdrm__property__info_1a9cb486dce96734362a780465e765f7d3" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structdrm__property__enum__info" kindref="compound">drm_property_enum_info</ref> *</type>
+        <definition>struct drm_property_enum_info* drm_property_info::enum_values</definition>
+        <argsstring></argsstring>
+        <name>enum_values</name>
+        <briefdescription>
+<para>array of enum values </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" line="141" column="29" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdrm__property__info_1a30dbc711a95850098970d85e0d851420" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int drm_property_info::num_range_values</definition>
+        <argsstring></argsstring>
+        <name>num_range_values</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" line="142" column="14" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdrm__property__info_1a6b62061cac19970544dc739e9f2591fa" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t drm_property_info::range_values[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>range_values</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" line="143" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Holds information on a DRM property, including its ID and the enum values it holds. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>DRM properties are allocated dynamically, and maintained as DRM objects within the normal object ID space; they thus do not have a stable ID to refer to. This includes enum values, which must be referred to by integer values, but these are not stable.</para>
+<para><ref refid="structdrm__property__info" kindref="compound">drm_property_info</ref> allows a cache to be maintained where Weston can use enum values internally to refer to properties, with the mapping to DRM ID values being maintained internally. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>drm_property_enum_info</label>
+        <link refid="structdrm__property__enum__info"/>
+      </node>
+      <node id="1">
+        <label>drm_property_info</label>
+        <link refid="structdrm__property__info"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>enum_values</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" line="136" column="24" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" bodystart="136" bodyend="144"/>
+    <listofallmembers>
+      <member refid="structdrm__property__info_1a9cb486dce96734362a780465e765f7d3" prot="public" virt="non-virtual"><scope>drm_property_info</scope><name>enum_values</name></member>
+      <member refid="structdrm__property__info_1a637f9920e8ee41b47434af986d255e37" prot="public" virt="non-virtual"><scope>drm_property_info</scope><name>flags</name></member>
+      <member refid="structdrm__property__info_1ae553114535bb2e88a2d1834cf5c0b07c" prot="public" virt="non-virtual"><scope>drm_property_info</scope><name>name</name></member>
+      <member refid="structdrm__property__info_1af865d18107586fc75d6bf893f0a1e219" prot="public" virt="non-virtual"><scope>drm_property_info</scope><name>num_enum_values</name></member>
+      <member refid="structdrm__property__info_1a30dbc711a95850098970d85e0d851420" prot="public" virt="non-virtual"><scope>drm_property_info</scope><name>num_range_values</name></member>
+      <member refid="structdrm__property__info_1ab0805c648bb407ac900c5512c015356f" prot="public" virt="non-virtual"><scope>drm_property_info</scope><name>prop_id</name></member>
+      <member refid="structdrm__property__info_1a6b62061cac19970544dc739e9f2591fa" prot="public" virt="non-virtual"><scope>drm_property_info</scope><name>range_values</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

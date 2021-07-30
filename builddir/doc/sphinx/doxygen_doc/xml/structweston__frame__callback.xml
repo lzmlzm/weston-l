@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__frame__callback" kind="struct" language="C++" prot="public">
+    <compoundname>weston_frame_callback</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__frame__callback_1adcfb7cc579c10ffba2faf9181dac3a2d" prot="public" static="no" mutable="no">
+        <type>struct wl_resource *</type>
+        <definition>struct wl_resource* weston_frame_callback::resource</definition>
+        <argsstring></argsstring>
+        <name>resource</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="358" column="18" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="358" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__frame__callback_1a3ab6028e919e5d0710aabc6168f9405c" prot="public" static="no" mutable="no">
+        <type>struct wl_list</type>
+        <definition>struct wl_list weston_frame_callback::link</definition>
+        <argsstring></argsstring>
+        <name>link</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="358" column="18" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="359" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="357" column="28" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="357" bodyend="360"/>
+    <listofallmembers>
+      <member refid="structweston__frame__callback_1a3ab6028e919e5d0710aabc6168f9405c" prot="public" virt="non-virtual"><scope>weston_frame_callback</scope><name>link</name></member>
+      <member refid="structweston__frame__callback_1adcfb7cc579c10ffba2faf9181dac3a2d" prot="public" virt="non-virtual"><scope>weston_frame_callback</scope><name>resource</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

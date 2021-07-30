@@ -1,0 +1,388 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structpixel__format__info" kind="struct" language="C++" prot="public">
+    <compoundname>pixel_format_info</compoundname>
+    <includes refid="pixel-formats_8h" local="no">pixel-formats.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="structpixel__format__info_1ace9530abf7b61678b69650dc89937bac" prot="public" static="no" strong="no">
+        <type></type>
+        <name>@15</name>
+        <enumvalue id="structpixel__format__info_1ace9530abf7b61678b69650dc89937bacadd05608ade5aaf7408a19c95690e2707" prot="public">
+          <name>ORDER_UV</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpixel__format__info_1ace9530abf7b61678b69650dc89937baca5fc351bb9983b8a079abe657acf05cef" prot="public">
+          <name>ORDER_VU</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixel-formats.h" line="92" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/pixel-formats.h" bodystart="92" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="enum" id="structpixel__format__info_1ac04ac5675ae08ff1b8f0474aa9c6f1af" prot="public" static="no" strong="no">
+        <type></type>
+        <name>@16</name>
+        <enumvalue id="structpixel__format__info_1ac04ac5675ae08ff1b8f0474aa9c6f1afad6746bd7eefd1b7747b05076bcf157ff" prot="public">
+          <name>ORDER_LUMA_CHROMA</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpixel__format__info_1ac04ac5675ae08ff1b8f0474aa9c6f1afa049e72cd94be7c78e133604c7add912b" prot="public">
+          <name>ORDER_CHROMA_LUMA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixel-formats.h" line="99" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/pixel-formats.h" bodystart="99" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="enum" id="structpixel__format__info_1a43a90989c50271ce43eb278ef685484f" prot="public" static="no" strong="no">
+        <type></type>
+        <name>@18</name>
+        <enumvalue id="structpixel__format__info_1a43a90989c50271ce43eb278ef685484fa62a1c5b884665b8357de20f4da9cb25c" prot="public">
+          <name>PIXEL_COMPONENT_TYPE_FIXED</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structpixel__format__info_1a43a90989c50271ce43eb278ef685484fa91ad2518c8b190f32045b34cd75a891e" prot="public">
+          <name>PIXEL_COMPONENT_TYPE_FLOAT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>How channel bits are interpreted, fixed (uint) or floating-point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixel-formats.h" line="113" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/pixel-formats.h" bodystart="113" bodyend="116"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpixel__format__info_1a3844ff33eebe78a056668815ee200b58" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t pixel_format_info::format</definition>
+        <argsstring></argsstring>
+        <name>format</name>
+        <briefdescription>
+<para>DRM/wl_shm format code. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixel-formats.h" line="39" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/pixel-formats.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpixel__format__info_1a3324befd6757b555dbb5954467fb4cc6" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* pixel_format_info::drm_format_name</definition>
+        <argsstring></argsstring>
+        <name>drm_format_name</name>
+        <briefdescription>
+<para>The DRM format name without the DRM_FORMAT_ prefix. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixel-formats.h" line="42" column="12" bodyfile="/home/lzm/Wayland/weston/libweston/pixel-formats.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpixel__format__info_1a906f4f09b3e20008bd89c7de8f3b3777" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pixel_format_info::num_planes</definition>
+        <argsstring></argsstring>
+        <name>num_planes</name>
+        <briefdescription>
+<para>If non-zero, number of planes in base (non-modified) format. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixel-formats.h" line="45" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/pixel-formats.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpixel__format__info_1a079cdc813054edfcb0ba206d0556d271" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t pixel_format_info::opaque_substitute</definition>
+        <argsstring></argsstring>
+        <name>opaque_substitute</name>
+        <briefdescription>
+<para>If format contains alpha channel, opaque equivalent of format, i.e. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>alpha channel replaced with X. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixel-formats.h" line="49" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/pixel-formats.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpixel__format__info_1aba79addab011c1decb32279a47f49787" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t pixel_format_info::sampler_type</definition>
+        <argsstring></argsstring>
+        <name>sampler_type</name>
+        <briefdescription>
+<para>How the format should be sampled, expressed in terms of tokens from the EGL_WL_bind_wayland_display extension. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If not set, assumed to be either RGB or RGBA, depending on whether or not the format contains an alpha channel. The samplers may still return alpha even for opaque formats; users must manually set the alpha channel to 1.0 (or ignore it) if the format is opaque. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixel-formats.h" line="58" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/pixel-formats.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpixel__format__info_1a0e82e2cb3508e7dcbf9092c6b90fee34" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pixel_format_info::gl_format</definition>
+        <argsstring></argsstring>
+        <name>gl_format</name>
+        <briefdescription>
+<para>GL format, if data can be natively/directly uploaded. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Note that whilst DRM formats are little-endian unless explicitly specified, (i.e. DRM_FORMAT_ARGB8888 is stored BGRA as sequential bytes in memory), GL uses the sequential byte order, so that format maps to GL_BGRA_EXT plus GL_UNSIGNED_BYTE. To add to the confusion, the explicitly-sized types (e.g. GL_UNSIGNED_SHORT_5_5_5_1) read in machine-endian order, so for these types, the correspondence depends on endianness. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixel-formats.h" line="68" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/pixel-formats.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpixel__format__info_1a930cfa401ec615657babfd57f9ea1eae" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pixel_format_info::gl_type</definition>
+        <argsstring></argsstring>
+        <name>gl_type</name>
+        <briefdescription>
+<para>GL data type, if data can be natively/directly uploaded. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixel-formats.h" line="71" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/pixel-formats.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpixel__format__info_1af3601d2bd7f1ccfb79b7be991e12408e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pixel_format_info::depth</definition>
+        <argsstring></argsstring>
+        <name>depth</name>
+        <briefdescription>
+<para>If set, this format can be used with the legacy drmModeAddFB() function (not AddFB2), using this and the bpp member. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixel-formats.h" line="75" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/pixel-formats.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpixel__format__info_1a8e976bbe9bf81dffc68d6194cd38fa8d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pixel_format_info::bpp</definition>
+        <argsstring></argsstring>
+        <name>bpp</name>
+        <briefdescription>
+<para>See &apos;depth&apos; member above. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixel-formats.h" line="78" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/pixel-formats.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpixel__format__info_1aa9dd919f06866a3a6ed5e53a5210c4df" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pixel_format_info::hsub</definition>
+        <argsstring></argsstring>
+        <name>hsub</name>
+        <briefdescription>
+<para>Horizontal subsampling; if non-zero, divide the width by this member to obtain the number of columns in the source buffer for secondary planes only. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Stride is not affected by horizontal subsampling. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixel-formats.h" line="84" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/pixel-formats.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpixel__format__info_1a74acf31bbe30da40d48f7c74bb9a8ec7" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pixel_format_info::vsub</definition>
+        <argsstring></argsstring>
+        <name>vsub</name>
+        <briefdescription>
+<para>Vertical subsampling; if non-zero, divide the height by this member to obtain the number of rows in the source buffer for secondary planes only. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixel-formats.h" line="89" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/pixel-formats.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpixel__format__info_1a4297142ce3e592cb45e65bd4b1d5fa80" prot="public" static="no" mutable="no">
+        <type>enum pixel_format_info::@15</type>
+        <definition>enum pixel_format_info::@15 pixel_format_info::chroma_order</definition>
+        <argsstring></argsstring>
+        <name>chroma_order</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixel-formats.h" line="95" column="14"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpixel__format__info_1ac4395602e25eb0d335fa1d66c0f7acf9" prot="public" static="no" mutable="no">
+        <type>enum pixel_format_info::@16</type>
+        <definition>enum pixel_format_info::@16 pixel_format_info::luma_chroma_order</definition>
+        <argsstring></argsstring>
+        <name>luma_chroma_order</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixel-formats.h" line="102" column="19"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpixel__format__info_1adab7998986019ff7fff26349dd861625" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pixel_format_info::r</definition>
+        <argsstring></argsstring>
+        <name>r</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixel-formats.h" line="106" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/pixel-formats.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpixel__format__info_1a14ec8ce143f1cf69dbd5a5156623a5ef" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pixel_format_info::g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixel-formats.h" line="107" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/pixel-formats.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpixel__format__info_1a1c07cd11c9e5560254766b802a2de9df" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pixel_format_info::b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixel-formats.h" line="108" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/pixel-formats.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpixel__format__info_1a0006be2200d8213774580975742a346f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pixel_format_info::a</definition>
+        <argsstring></argsstring>
+        <name>a</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixel-formats.h" line="109" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/pixel-formats.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpixel__format__info_1a70a22530968762973b4e01583b8325ff" prot="public" static="no" mutable="no">
+        <type>struct pixel_format_info::@17</type>
+        <definition>struct pixel_format_info::@17 pixel_format_info::bits</definition>
+        <argsstring></argsstring>
+        <name>bits</name>
+        <briefdescription>
+<para>How many significant bits each channel has, or zero if N/A. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixel-formats.h" line="110" column="6"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpixel__format__info_1a1555da5d7ca4b577eb37a55bba1722c1" prot="public" static="no" mutable="no">
+        <type>enum pixel_format_info::@18</type>
+        <definition>enum pixel_format_info::@18 pixel_format_info::component_type</definition>
+        <argsstring></argsstring>
+        <name>component_type</name>
+        <briefdescription>
+<para>How channel bits are interpreted, fixed (uint) or floating-point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixel-formats.h" line="116" column="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Contains information about pixel formats, mapping format codes from wl_shm and drm_fourcc.h (which are deliberately identical, but for the special cases of WL_SHM_ARGB8888 and WL_SHM_XRGB8888) into various sets of information. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Helper functions are provided for dealing with these raw structures. </para>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/pixel-formats.h" line="37" column="24" bodyfile="/home/lzm/Wayland/weston/libweston/pixel-formats.h" bodystart="37" bodyend="117"/>
+    <listofallmembers>
+      <member refid="structpixel__format__info_1a0006be2200d8213774580975742a346f" prot="public" virt="non-virtual"><scope>pixel_format_info</scope><name>a</name></member>
+      <member refid="structpixel__format__info_1a1c07cd11c9e5560254766b802a2de9df" prot="public" virt="non-virtual"><scope>pixel_format_info</scope><name>b</name></member>
+      <member refid="structpixel__format__info_1a70a22530968762973b4e01583b8325ff" prot="public" virt="non-virtual"><scope>pixel_format_info</scope><name>bits</name></member>
+      <member refid="structpixel__format__info_1a8e976bbe9bf81dffc68d6194cd38fa8d" prot="public" virt="non-virtual"><scope>pixel_format_info</scope><name>bpp</name></member>
+      <member refid="structpixel__format__info_1a4297142ce3e592cb45e65bd4b1d5fa80" prot="public" virt="non-virtual"><scope>pixel_format_info</scope><name>chroma_order</name></member>
+      <member refid="structpixel__format__info_1a1555da5d7ca4b577eb37a55bba1722c1" prot="public" virt="non-virtual"><scope>pixel_format_info</scope><name>component_type</name></member>
+      <member refid="structpixel__format__info_1af3601d2bd7f1ccfb79b7be991e12408e" prot="public" virt="non-virtual"><scope>pixel_format_info</scope><name>depth</name></member>
+      <member refid="structpixel__format__info_1a3324befd6757b555dbb5954467fb4cc6" prot="public" virt="non-virtual"><scope>pixel_format_info</scope><name>drm_format_name</name></member>
+      <member refid="structpixel__format__info_1a3844ff33eebe78a056668815ee200b58" prot="public" virt="non-virtual"><scope>pixel_format_info</scope><name>format</name></member>
+      <member refid="structpixel__format__info_1a14ec8ce143f1cf69dbd5a5156623a5ef" prot="public" virt="non-virtual"><scope>pixel_format_info</scope><name>g</name></member>
+      <member refid="structpixel__format__info_1a0e82e2cb3508e7dcbf9092c6b90fee34" prot="public" virt="non-virtual"><scope>pixel_format_info</scope><name>gl_format</name></member>
+      <member refid="structpixel__format__info_1a930cfa401ec615657babfd57f9ea1eae" prot="public" virt="non-virtual"><scope>pixel_format_info</scope><name>gl_type</name></member>
+      <member refid="structpixel__format__info_1aa9dd919f06866a3a6ed5e53a5210c4df" prot="public" virt="non-virtual"><scope>pixel_format_info</scope><name>hsub</name></member>
+      <member refid="structpixel__format__info_1ac4395602e25eb0d335fa1d66c0f7acf9" prot="public" virt="non-virtual"><scope>pixel_format_info</scope><name>luma_chroma_order</name></member>
+      <member refid="structpixel__format__info_1a906f4f09b3e20008bd89c7de8f3b3777" prot="public" virt="non-virtual"><scope>pixel_format_info</scope><name>num_planes</name></member>
+      <member refid="structpixel__format__info_1a079cdc813054edfcb0ba206d0556d271" prot="public" virt="non-virtual"><scope>pixel_format_info</scope><name>opaque_substitute</name></member>
+      <member refid="structpixel__format__info_1ac04ac5675ae08ff1b8f0474aa9c6f1afa049e72cd94be7c78e133604c7add912b" prot="public" virt="non-virtual"><scope>pixel_format_info</scope><name>ORDER_CHROMA_LUMA</name></member>
+      <member refid="structpixel__format__info_1ac04ac5675ae08ff1b8f0474aa9c6f1afad6746bd7eefd1b7747b05076bcf157ff" prot="public" virt="non-virtual"><scope>pixel_format_info</scope><name>ORDER_LUMA_CHROMA</name></member>
+      <member refid="structpixel__format__info_1ace9530abf7b61678b69650dc89937bacadd05608ade5aaf7408a19c95690e2707" prot="public" virt="non-virtual"><scope>pixel_format_info</scope><name>ORDER_UV</name></member>
+      <member refid="structpixel__format__info_1ace9530abf7b61678b69650dc89937baca5fc351bb9983b8a079abe657acf05cef" prot="public" virt="non-virtual"><scope>pixel_format_info</scope><name>ORDER_VU</name></member>
+      <member refid="structpixel__format__info_1a43a90989c50271ce43eb278ef685484fa62a1c5b884665b8357de20f4da9cb25c" prot="public" virt="non-virtual"><scope>pixel_format_info</scope><name>PIXEL_COMPONENT_TYPE_FIXED</name></member>
+      <member refid="structpixel__format__info_1a43a90989c50271ce43eb278ef685484fa91ad2518c8b190f32045b34cd75a891e" prot="public" virt="non-virtual"><scope>pixel_format_info</scope><name>PIXEL_COMPONENT_TYPE_FLOAT</name></member>
+      <member refid="structpixel__format__info_1adab7998986019ff7fff26349dd861625" prot="public" virt="non-virtual"><scope>pixel_format_info</scope><name>r</name></member>
+      <member refid="structpixel__format__info_1aba79addab011c1decb32279a47f49787" prot="public" virt="non-virtual"><scope>pixel_format_info</scope><name>sampler_type</name></member>
+      <member refid="structpixel__format__info_1a74acf31bbe30da40d48f7c74bb9a8ec7" prot="public" virt="non-virtual"><scope>pixel_format_info</scope><name>vsub</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

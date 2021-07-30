@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__log__debug__wayland" kind="struct" language="C++" prot="public">
+    <compoundname>weston_log_debug_wayland</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__log__debug__wayland_1afa0d005556188e3363b4a2bf27851853" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structweston__log__subscriber" kindref="compound">weston_log_subscriber</ref></type>
+        <definition>struct weston_log_subscriber weston_log_debug_wayland::base</definition>
+        <argsstring></argsstring>
+        <name>base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log-wayland.c" line="273" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log-wayland.c" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__log__debug__wayland_1aa50905e8e733e98d0f791ba361d50b68" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int weston_log_debug_wayland::fd</definition>
+        <argsstring></argsstring>
+        <name>fd</name>
+        <briefdescription>
+<para>client provided fd </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log-wayland.c" line="55" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log-wayland.c" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__log__debug__wayland_1a7e49133d3705b8760dee117aaa0df33b" prot="public" static="no" mutable="no">
+        <type>struct wl_resource *</type>
+        <definition>struct wl_resource* weston_log_debug_wayland::resource</definition>
+        <argsstring></argsstring>
+        <name>resource</name>
+        <briefdescription>
+<para>weston_debug_stream_v1 object </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log-wayland.c" line="56" column="18" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log-wayland.c" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structweston__log__debug__wayland_1a8a9360546e7792ad1c995b59a7e33078" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void weston_log_debug_wayland_write</definition>
+        <argsstring>(struct weston_log_subscriber *sub, const char *data, size_t len)</argsstring>
+        <name>weston_log_debug_wayland_write</name>
+        <param>
+          <type>struct <ref refid="structweston__log__subscriber" kindref="compound">weston_log_subscriber</ref> *</type>
+          <declname>sub</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Write data into a specific debug stream. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sub</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The subscriber&apos;s stream to write into; must not be NULL. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the data to write. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to write.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Writes the given data (binary verbatim) into the debug stream. If <computeroutput>len</computeroutput> is zero or negative, the write is silently dropped.</para>
+<para>Writing is continued until all data has been written or a write fails. If the write fails due to a signal, it is re-tried. Otherwise on failure, the stream is closed and <computeroutput>weston_debug_stream_v1.failure</computeroutput> event is sent to the client. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log-wayland.c" line="113" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log-wayland.c" bodystart="113" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="structweston__log__debug__wayland_1a62b3cdac3ba05a24970f6f80ccb60df0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void weston_log_debug_wayland_complete</definition>
+        <argsstring>(struct weston_log_subscriber *sub)</argsstring>
+        <name>weston_log_debug_wayland_complete</name>
+        <param>
+          <type>struct <ref refid="structweston__log__subscriber" kindref="compound">weston_log_subscriber</ref> *</type>
+          <declname>sub</declname>
+        </param>
+        <briefdescription>
+<para>Close the debug stream and send success event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sub</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Subscriber&apos;s stream to close.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Closes the debug stream and sends <computeroutput>weston_debug_stream_v1.complete</computeroutput> event to the client. This tells the client the debug information dump is complete. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log-wayland.c" line="153" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log-wayland.c" bodystart="153" bodyend="159"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A debug stream created by a client. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>A client provides a file descriptor for the server to write debug messages into. A <ref refid="structweston__log__debug__wayland" kindref="compound">weston_log_debug_wayland</ref> is associated to one <ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref> via the scope name, and the scope provides the messages. There can be several streams for the same scope, all streams getting the same messages.</para>
+<para>The following is specific to weston-debug protocol. Subscription/unsubscription takes place in the <ref refid="weston-log-wayland_8c_1ad3f539eefa5b3c4fbcc7fc608714f8cc" kindref="member">stream_create()</ref>, respectively in <ref refid="weston-log-wayland_8c_1ab9c5e76f32d3db45e9924f28a943095e" kindref="member">stream_destroy()</ref>. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>weston_log_debug_wayland</label>
+        <link refid="structweston__log__debug__wayland"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>weston_log_subscriber</label>
+        <link refid="structweston__log__subscriber"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lzm/Wayland/weston/libweston/weston-log-wayland.c" line="53" column="31" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log-wayland.c" bodystart="53" bodyend="57"/>
+    <listofallmembers>
+      <member refid="structweston__log__debug__wayland_1afa0d005556188e3363b4a2bf27851853" prot="public" virt="non-virtual"><scope>weston_log_debug_wayland</scope><name>base</name></member>
+      <member refid="structweston__log__debug__wayland_1aa50905e8e733e98d0f791ba361d50b68" prot="public" virt="non-virtual"><scope>weston_log_debug_wayland</scope><name>fd</name></member>
+      <member refid="structweston__log__debug__wayland_1a7e49133d3705b8760dee117aaa0df33b" prot="public" virt="non-virtual"><scope>weston_log_debug_wayland</scope><name>resource</name></member>
+      <member refid="structweston__log__debug__wayland_1a62b3cdac3ba05a24970f6f80ccb60df0" prot="public" virt="non-virtual"><scope>weston_log_debug_wayland</scope><name>weston_log_debug_wayland_complete</name></member>
+      <member refid="structweston__log__debug__wayland_1a8a9360546e7792ad1c995b59a7e33078" prot="public" virt="non-virtual"><scope>weston_log_debug_wayland</scope><name>weston_log_debug_wayland_write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

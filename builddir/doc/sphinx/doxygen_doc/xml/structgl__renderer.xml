@@ -1,0 +1,1255 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structgl__renderer" kind="struct" language="C++" prot="public">
+    <compoundname>gl_renderer</compoundname>
+    <includes refid="gl-renderer-internal_8h" local="no">gl-renderer-internal.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgl__renderer_1ac378dee768bb889023f289e8c90ad69d" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structweston__renderer" kindref="compound">weston_renderer</ref></type>
+        <definition>struct weston_renderer gl_renderer::base</definition>
+        <argsstring></argsstring>
+        <name>base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="87" column="8" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a5977b06a8c8532933e1a8de908cf05b0" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> *</type>
+        <definition>struct weston_compositor* gl_renderer::compositor</definition>
+        <argsstring></argsstring>
+        <name>compositor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="92" column="24" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1aa4a0bc78bd4d1c8568c0cb561ecc1e13" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gl_renderer::fragment_shader_debug</definition>
+        <argsstring></argsstring>
+        <name>fragment_shader_debug</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="94" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a1a517029f6ac148694f2af12f3c27ccb" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gl_renderer::fan_debug</definition>
+        <argsstring></argsstring>
+        <name>fan_debug</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="95" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a19a35e83389dac2b135df4f7d6851f71" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structweston__binding" kindref="compound">weston_binding</ref> *</type>
+        <definition>struct weston_binding* gl_renderer::fragment_binding</definition>
+        <argsstring></argsstring>
+        <name>fragment_binding</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="96" column="21" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a1c5d444052ce2cc91f4393015e446000" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structweston__binding" kindref="compound">weston_binding</ref> *</type>
+        <definition>struct weston_binding* gl_renderer::fan_binding</definition>
+        <argsstring></argsstring>
+        <name>fan_binding</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="97" column="21" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1abb719fa4fbd1d18122e43d5db16c9b93" prot="public" static="no" mutable="no">
+        <type><ref refid="gl-renderer_8h_1a3403e7aa1af3a3a900c4fb0584d680a5" kindref="member">EGLenum</ref></type>
+        <definition>EGLenum gl_renderer::platform</definition>
+        <argsstring></argsstring>
+        <name>platform</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="99" column="9" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a1f947120866d14d1a6162b22d074143f" prot="public" static="no" mutable="no">
+        <type><ref refid="gl-renderer_8h_1a87d55554aa13accdcb0e10eab910c72e" kindref="member">EGLDisplay</ref></type>
+        <definition>EGLDisplay gl_renderer::egl_display</definition>
+        <argsstring></argsstring>
+        <name>egl_display</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="100" column="12" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a49844e2bfbc88be8c84276d2e0b8a676" prot="public" static="no" mutable="no">
+        <type>EGLContext</type>
+        <definition>EGLContext gl_renderer::egl_context</definition>
+        <argsstring></argsstring>
+        <name>egl_context</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="101" column="12" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a8c2e208b8924439784d376e3c9ba4c78" prot="public" static="no" mutable="no">
+        <type><ref refid="gl-renderer_8h_1a691766e6d867e15207ec0a6d6e46253c" kindref="member">EGLConfig</ref></type>
+        <definition>EGLConfig gl_renderer::egl_config</definition>
+        <argsstring></argsstring>
+        <name>egl_config</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="102" column="11" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1ac6e67a3e0e48848dc5e8296bdbfd856d" prot="public" static="no" mutable="no">
+        <type><ref refid="gl-renderer_8h_1a1bd45435703af31ea10bc2f2229f337b" kindref="member">EGLSurface</ref></type>
+        <definition>EGLSurface gl_renderer::dummy_surface</definition>
+        <argsstring></argsstring>
+        <name>dummy_surface</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="104" column="12" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a77612987a24c5d5efa75c5136bf37e63" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t gl_renderer::gl_version</definition>
+        <argsstring></argsstring>
+        <name>gl_version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="106" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1adac0baf7ccf72aec5f5f8af6e578851d" prot="public" static="no" mutable="no">
+        <type>struct wl_array</type>
+        <definition>struct wl_array gl_renderer::vertices</definition>
+        <argsstring></argsstring>
+        <name>vertices</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="106" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a7e90652824e97ffddb9a922c43219fdf" prot="public" static="no" mutable="no">
+        <type>struct wl_array</type>
+        <definition>struct wl_array gl_renderer::vtxcnt</definition>
+        <argsstring></argsstring>
+        <name>vtxcnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="106" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a1f32740854364dc4e30784c73689e8ec" prot="public" static="no" mutable="no">
+        <type>PFNGLEGLIMAGETARGETTEXTURE2DOESPROC</type>
+        <definition>PFNGLEGLIMAGETARGETTEXTURE2DOESPROC gl_renderer::image_target_texture_2d</definition>
+        <argsstring></argsstring>
+        <name>image_target_texture_2d</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="111" column="37" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a2cfb8e070f960ca36b2524aef7ae0816" prot="public" static="no" mutable="no">
+        <type>PFNEGLCREATEIMAGEKHRPROC</type>
+        <definition>PFNEGLCREATEIMAGEKHRPROC gl_renderer::create_image</definition>
+        <argsstring></argsstring>
+        <name>create_image</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="112" column="26" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a40c0fa4fd0b6cfae3ab6c70b31d6f525" prot="public" static="no" mutable="no">
+        <type>PFNEGLDESTROYIMAGEKHRPROC</type>
+        <definition>PFNEGLDESTROYIMAGEKHRPROC gl_renderer::destroy_image</definition>
+        <argsstring></argsstring>
+        <name>destroy_image</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="113" column="27" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a6d1134d418350481ea2104ffbedb9fe9" prot="public" static="no" mutable="no">
+        <type>PFNEGLSWAPBUFFERSWITHDAMAGEEXTPROC</type>
+        <definition>PFNEGLSWAPBUFFERSWITHDAMAGEEXTPROC gl_renderer::swap_buffers_with_damage</definition>
+        <argsstring></argsstring>
+        <name>swap_buffers_with_damage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="114" column="36" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a9bdeec0fe4e48332c18c1126f5c43839" prot="public" static="no" mutable="no">
+        <type>PFNEGLGETPLATFORMDISPLAYEXTPROC</type>
+        <definition>PFNEGLGETPLATFORMDISPLAYEXTPROC gl_renderer::get_platform_display</definition>
+        <argsstring></argsstring>
+        <name>get_platform_display</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="116" column="33" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a9d7c51b6ff6e1935a0ee6bd080340275" prot="public" static="no" mutable="no">
+        <type>PFNEGLCREATEPLATFORMWINDOWSURFACEEXTPROC</type>
+        <definition>PFNEGLCREATEPLATFORMWINDOWSURFACEEXTPROC gl_renderer::create_platform_window</definition>
+        <argsstring></argsstring>
+        <name>create_platform_window</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="117" column="42" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1aa69f701008f67129465f881058162fec" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gl_renderer::has_platform_base</definition>
+        <argsstring></argsstring>
+        <name>has_platform_base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="118" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a93de6b9a4c01ae77c78ce36b2a1f9ee7" prot="public" static="no" mutable="no">
+        <type>PFNEGLBINDWAYLANDDISPLAYWL</type>
+        <definition>PFNEGLBINDWAYLANDDISPLAYWL gl_renderer::bind_display</definition>
+        <argsstring></argsstring>
+        <name>bind_display</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="120" column="28" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a48ca68a22398c47d51cb41809a7bea3d" prot="public" static="no" mutable="no">
+        <type>PFNEGLUNBINDWAYLANDDISPLAYWL</type>
+        <definition>PFNEGLUNBINDWAYLANDDISPLAYWL gl_renderer::unbind_display</definition>
+        <argsstring></argsstring>
+        <name>unbind_display</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="121" column="30" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a67447b3d33820530bee82162cce9bf3a" prot="public" static="no" mutable="no">
+        <type>PFNEGLQUERYWAYLANDBUFFERWL</type>
+        <definition>PFNEGLQUERYWAYLANDBUFFERWL gl_renderer::query_buffer</definition>
+        <argsstring></argsstring>
+        <name>query_buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="122" column="28" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1abc7c3cb9666e78b3c3de6b8d7071b514" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gl_renderer::has_bind_display</definition>
+        <argsstring></argsstring>
+        <name>has_bind_display</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="123" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a6c5ea920e1dca4a88d07314980d01155" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gl_renderer::has_context_priority</definition>
+        <argsstring></argsstring>
+        <name>has_context_priority</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="125" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a806ded7ab986e210361c1c00f18c2e9f" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gl_renderer::has_egl_image_external</definition>
+        <argsstring></argsstring>
+        <name>has_egl_image_external</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="127" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a920185695fc95f86dd822cb5beece76a" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gl_renderer::has_egl_buffer_age</definition>
+        <argsstring></argsstring>
+        <name>has_egl_buffer_age</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="129" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a2165337b1603946968079eca3c47f65b" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gl_renderer::has_egl_partial_update</definition>
+        <argsstring></argsstring>
+        <name>has_egl_partial_update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="130" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a82e63a57f7717ba9560f03ce4276cd2f" prot="public" static="no" mutable="no">
+        <type>PFNEGLSETDAMAGEREGIONKHRPROC</type>
+        <definition>PFNEGLSETDAMAGEREGIONKHRPROC gl_renderer::set_damage_region</definition>
+        <argsstring></argsstring>
+        <name>set_damage_region</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="131" column="30" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a950ceb1910c71cb4a22b6adbfe33d1ba" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gl_renderer::has_configless_context</definition>
+        <argsstring></argsstring>
+        <name>has_configless_context</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="133" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a40cc8abffa0ad500044b1c86d6111601" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gl_renderer::has_surfaceless_context</definition>
+        <argsstring></argsstring>
+        <name>has_surfaceless_context</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="135" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a3b0d80c232031cb4794dc6d1663dfad3" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gl_renderer::has_dmabuf_import</definition>
+        <argsstring></argsstring>
+        <name>has_dmabuf_import</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="137" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1ae2ab6672ea88406c24ba67d39a85c7d3" prot="public" static="no" mutable="no">
+        <type>struct wl_list</type>
+        <definition>struct wl_list gl_renderer::dmabuf_images</definition>
+        <argsstring></argsstring>
+        <name>dmabuf_images</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="137" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a8a61c9d9da383117bd578c325b81db91" prot="public" static="no" mutable="no">
+        <type>struct wl_list</type>
+        <definition>struct wl_list gl_renderer::dmabuf_formats</definition>
+        <argsstring></argsstring>
+        <name>dmabuf_formats</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="137" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1ab7dea4c1aeae5e868a156df8480facf6" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gl_renderer::has_gl_texture_rg</definition>
+        <argsstring></argsstring>
+        <name>has_gl_texture_rg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="141" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1ae89ee235b73ab0a5828144a501bef562" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structgl__shader" kindref="compound">gl_shader</ref> *</type>
+        <definition>struct gl_shader* gl_renderer::current_shader</definition>
+        <argsstring></argsstring>
+        <name>current_shader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="143" column="16" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a7bd95f699444ea14e713dba46a17c7e9" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structgl__shader" kindref="compound">gl_shader</ref> *</type>
+        <definition>struct gl_shader* gl_renderer::fallback_shader</definition>
+        <argsstring></argsstring>
+        <name>fallback_shader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="144" column="16" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1ae237cc3a53f93ac46fefb37e3e3589a7" prot="public" static="no" mutable="no">
+        <type>struct wl_signal</type>
+        <definition>struct wl_signal gl_renderer::destroy_signal</definition>
+        <argsstring></argsstring>
+        <name>destroy_signal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="144" column="16" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1ad238bebdd3aa0dea7602024e02f7dbad" prot="public" static="no" mutable="no">
+        <type>struct wl_listener</type>
+        <definition>struct wl_listener gl_renderer::output_destroy_listener</definition>
+        <argsstring></argsstring>
+        <name>output_destroy_listener</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="144" column="16" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1afa9e6c77669201d4f20cb4c198f46dcf" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gl_renderer::has_dmabuf_import_modifiers</definition>
+        <argsstring></argsstring>
+        <name>has_dmabuf_import_modifiers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="150" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a3ac4749c0390dcfe2446ded88cdb481b" prot="public" static="no" mutable="no">
+        <type>PFNEGLQUERYDMABUFFORMATSEXTPROC</type>
+        <definition>PFNEGLQUERYDMABUFFORMATSEXTPROC gl_renderer::query_dmabuf_formats</definition>
+        <argsstring></argsstring>
+        <name>query_dmabuf_formats</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="151" column="33" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a0e7c5bacc08635380c25288a2596a360" prot="public" static="no" mutable="no">
+        <type>PFNEGLQUERYDMABUFMODIFIERSEXTPROC</type>
+        <definition>PFNEGLQUERYDMABUFMODIFIERSEXTPROC gl_renderer::query_dmabuf_modifiers</definition>
+        <argsstring></argsstring>
+        <name>query_dmabuf_modifiers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="152" column="35" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a565fad372070dd5710626b6a7c1fea5c" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gl_renderer::has_native_fence_sync</definition>
+        <argsstring></argsstring>
+        <name>has_native_fence_sync</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="154" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a0d32e80810899d87319869d417efc5e3" prot="public" static="no" mutable="no">
+        <type>PFNEGLCREATESYNCKHRPROC</type>
+        <definition>PFNEGLCREATESYNCKHRPROC gl_renderer::create_sync</definition>
+        <argsstring></argsstring>
+        <name>create_sync</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="155" column="25" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a647a24d7c43b5e1ba3fa16268858fa6d" prot="public" static="no" mutable="no">
+        <type>PFNEGLDESTROYSYNCKHRPROC</type>
+        <definition>PFNEGLDESTROYSYNCKHRPROC gl_renderer::destroy_sync</definition>
+        <argsstring></argsstring>
+        <name>destroy_sync</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="156" column="26" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a32d839fb862a9fb6c723d8d03297bf0e" prot="public" static="no" mutable="no">
+        <type>PFNEGLDUPNATIVEFENCEFDANDROIDPROC</type>
+        <definition>PFNEGLDUPNATIVEFENCEFDANDROIDPROC gl_renderer::dup_native_fence_fd</definition>
+        <argsstring></argsstring>
+        <name>dup_native_fence_fd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="157" column="35" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a76861d99667a14188420258b48f8f1f1" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gl_renderer::has_wait_sync</definition>
+        <argsstring></argsstring>
+        <name>has_wait_sync</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="159" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a23da622f17dc46b8292eebc5243d8c34" prot="public" static="no" mutable="no">
+        <type>PFNEGLWAITSYNCKHRPROC</type>
+        <definition>PFNEGLWAITSYNCKHRPROC gl_renderer::wait_sync</definition>
+        <argsstring></argsstring>
+        <name>wait_sync</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="160" column="23" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a3b9ac6c2ecfa1e56308aa90531626f2e" prot="public" static="no" mutable="no">
+        <type>GLint</type>
+        <definition>GLint gl_renderer::gl_half_float_type</definition>
+        <argsstring></argsstring>
+        <name>gl_half_float_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="162" column="7" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a52539b172c96178779b6cba4061ef83d" prot="public" static="no" mutable="no">
+        <type>struct wl_list</type>
+        <definition>struct wl_list gl_renderer::shader_list</definition>
+        <argsstring></argsstring>
+        <name>shader_list</name>
+        <briefdescription>
+<para>Shader program cache in most recently used order. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Uses struct <ref refid="structgl__shader_1ac99c13e306f2a54d805ec6aff288076b" kindref="member">gl_shader::link</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="162" column="7" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer_1a25b6ad5ba07b7cb01a6aa7bda56a2b3b" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref> *</type>
+        <definition>struct weston_log_scope* gl_renderer::shader_scope</definition>
+        <argsstring></argsstring>
+        <name>shader_scope</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="169" column="23" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>gl_shader</label>
+        <link refid="structgl__shader"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>key</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>weston_testsuite_quirks</label>
+        <link refid="structweston__testsuite__quirks"/>
+      </node>
+      <node id="30">
+        <label>weston_buffer_release_reference</label>
+        <link refid="structweston__buffer__release__reference"/>
+        <childnode refid="31" relation="usage">
+          <edgelabel>buffer_release</edgelabel>
+        </childnode>
+      </node>
+      <node id="52">
+        <label>launcher_interface</label>
+        <link refid="structlauncher__interface"/>
+      </node>
+      <node id="7">
+        <label>weston_log_subscriber</label>
+        <link refid="structweston__log__subscriber"/>
+      </node>
+      <node id="33">
+        <label>weston_matrix</label>
+        <link refid="structweston__matrix"/>
+      </node>
+      <node id="32">
+        <label>weston_buffer_reference</label>
+        <link refid="structweston__buffer__reference"/>
+        <childnode refid="29" relation="usage">
+          <edgelabel>buffer</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>weston_log_context</label>
+        <link refid="structweston__log__context"/>
+      </node>
+      <node id="4">
+        <label>weston_renderer</label>
+        <link refid="structweston__renderer"/>
+      </node>
+      <node id="15">
+        <label>weston_layer_entry</label>
+        <link refid="structweston__layer__entry"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>layer</edgelabel>
+        </childnode>
+      </node>
+      <node id="44">
+        <label>weston_transform</label>
+        <link refid="structweston__transform"/>
+        <childnode refid="33" relation="usage">
+          <edgelabel>matrix</edgelabel>
+        </childnode>
+      </node>
+      <node id="17">
+        <label>weston_view</label>
+        <link refid="structweston__view"/>
+        <childnode refid="17" relation="usage">
+          <edgelabel>parent_view</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>output</edgelabel>
+        </childnode>
+        <childnode refid="44" relation="usage">
+          <edgelabel>position</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>layer_link</edgelabel>
+        </childnode>
+        <childnode refid="45" relation="usage">
+          <edgelabel>plane</edgelabel>
+        </childnode>
+        <childnode refid="33" relation="usage">
+          <edgelabel>matrix</edgelabel>
+          <edgelabel>inverse</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="usage">
+          <edgelabel>surface</edgelabel>
+        </childnode>
+      </node>
+      <node id="37">
+        <label>weston_data_source</label>
+        <link refid="structweston__data__source"/>
+        <childnode refid="38" relation="usage">
+          <edgelabel>offer</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>seat</edgelabel>
+        </childnode>
+      </node>
+      <node id="27">
+        <label>weston_buffer_viewport</label>
+        <link refid="structweston__buffer__viewport"/>
+      </node>
+      <node id="50">
+        <label>weston_backend</label>
+        <link refid="structweston__backend"/>
+        <childnode refid="18" relation="usage">
+          <edgelabel>create_output</edgelabel>
+        </childnode>
+      </node>
+      <node id="34">
+        <label>weston_pointer</label>
+        <link refid="structweston__pointer"/>
+        <childnode refid="17" relation="usage">
+          <edgelabel>focus</edgelabel>
+          <edgelabel>sprite</edgelabel>
+        </childnode>
+        <childnode refid="35" relation="usage">
+          <edgelabel>focus_client</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>seat</edgelabel>
+        </childnode>
+        <childnode refid="36" relation="usage">
+          <edgelabel>default_grab</edgelabel>
+          <edgelabel>grab</edgelabel>
+        </childnode>
+      </node>
+      <node id="18">
+        <label>weston_output</label>
+        <link refid="structweston__output"/>
+        <childnode refid="19" relation="usage">
+          <edgelabel>zoom</edgelabel>
+        </childnode>
+        <childnode refid="43" relation="usage">
+          <edgelabel>original_mode</edgelabel>
+          <edgelabel>current_mode</edgelabel>
+          <edgelabel>native_mode</edgelabel>
+        </childnode>
+        <childnode refid="33" relation="usage">
+          <edgelabel>matrix</edgelabel>
+          <edgelabel>inverse_matrix</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>compositor</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>weston_log_scope</label>
+        <link refid="structweston__log__scope"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>destroy_subscription</edgelabel>
+          <edgelabel>new_subscription</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>weston_layer</label>
+        <link refid="structweston__layer"/>
+        <childnode refid="15" relation="usage">
+          <edgelabel>view_list</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>compositor</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>weston_compositor</label>
+        <link refid="structweston__compositor"/>
+        <childnode refid="10" relation="usage">
+          <edgelabel>weston_log_ctx</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>test_data</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>default_pointer_grab</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>renderer</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>calibrator_layer</edgelabel>
+          <edgelabel>fade_layer</edgelabel>
+          <edgelabel>cursor_layer</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>touch_calibrator</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>xkb_info</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>timeline</edgelabel>
+          <edgelabel>debug_scene</edgelabel>
+        </childnode>
+        <childnode refid="49" relation="usage">
+          <edgelabel>content_protection</edgelabel>
+        </childnode>
+        <childnode refid="50" relation="usage">
+          <edgelabel>backend</edgelabel>
+        </childnode>
+        <childnode refid="45" relation="usage">
+          <edgelabel>primary_plane</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>touch_calibration_save</edgelabel>
+        </childnode>
+        <childnode refid="51" relation="usage">
+          <edgelabel>launcher</edgelabel>
+        </childnode>
+      </node>
+      <node id="40">
+        <label>weston_touch_grab</label>
+        <link refid="structweston__touch__grab"/>
+        <childnode refid="41" relation="usage">
+          <edgelabel>interface</edgelabel>
+        </childnode>
+        <childnode refid="39" relation="usage">
+          <edgelabel>touch</edgelabel>
+        </childnode>
+      </node>
+      <node id="38">
+        <label>weston_data_offer</label>
+        <link refid="structweston__data__offer"/>
+        <childnode refid="37" relation="usage">
+          <edgelabel>source</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>gl_renderer</label>
+        <link refid="structgl__renderer"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>fallback_shader</edgelabel>
+          <edgelabel>current_shader</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>shader_scope</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>fan_binding</edgelabel>
+          <edgelabel>fragment_binding</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>compositor</edgelabel>
+        </childnode>
+      </node>
+      <node id="24">
+        <label>weston_keyboard_grab</label>
+        <link refid="structweston__keyboard__grab"/>
+        <childnode refid="22" relation="usage">
+          <edgelabel>keyboard</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>interface</edgelabel>
+        </childnode>
+      </node>
+      <node id="46">
+        <label>weston_touch_device</label>
+        <link refid="structweston__touch__device"/>
+        <childnode refid="47" relation="usage">
+          <edgelabel>saved_calibration</edgelabel>
+        </childnode>
+        <childnode refid="48" relation="usage">
+          <edgelabel>ops</edgelabel>
+        </childnode>
+        <childnode refid="39" relation="usage">
+          <edgelabel>aggregate</edgelabel>
+        </childnode>
+      </node>
+      <node id="45">
+        <label>weston_plane</label>
+        <link refid="structweston__plane"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>compositor</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>weston_binding</label>
+        <link refid="structweston__binding"/>
+      </node>
+      <node id="6">
+        <label>weston_log_subscription</label>
+        <link refid="structweston__log__subscription"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>source</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>owner</edgelabel>
+        </childnode>
+      </node>
+      <node id="21">
+        <label>weston_seat</label>
+        <link refid="structweston__seat"/>
+        <childnode refid="22" relation="usage">
+          <edgelabel>keyboard_state</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>output</edgelabel>
+        </childnode>
+        <childnode refid="34" relation="usage">
+          <edgelabel>pointer_state</edgelabel>
+        </childnode>
+        <childnode refid="37" relation="usage">
+          <edgelabel>selection_data_source</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>compositor</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="usage">
+          <edgelabel>saved_kbd_focus</edgelabel>
+        </childnode>
+        <childnode refid="39" relation="usage">
+          <edgelabel>touch_state</edgelabel>
+        </childnode>
+      </node>
+      <node id="47">
+        <label>weston_touch_device_matrix</label>
+        <link refid="structweston__touch__device__matrix"/>
+      </node>
+      <node id="28">
+        <label>weston_surface_state</label>
+        <link refid="structweston__surface__state"/>
+        <childnode refid="29" relation="usage">
+          <edgelabel>buffer</edgelabel>
+        </childnode>
+        <childnode refid="27" relation="usage">
+          <edgelabel>buffer_viewport</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>buffer_release_ref</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>weston_pointer_grab_interface</label>
+        <link refid="structweston__pointer__grab__interface"/>
+      </node>
+      <node id="20">
+        <label>weston_animation</label>
+        <link refid="structweston__animation"/>
+      </node>
+      <node id="25">
+        <label>weston_keyboard_grab_interface</label>
+        <link refid="structweston__keyboard__grab__interface"/>
+      </node>
+      <node id="42">
+        <label>weston_spring</label>
+        <link refid="structweston__spring"/>
+      </node>
+      <node id="41">
+        <label>weston_touch_grab_interface</label>
+        <link refid="structweston__touch__grab__interface"/>
+      </node>
+      <node id="29">
+        <label>weston_buffer</label>
+        <link refid="structweston__buffer"/>
+      </node>
+      <node id="23">
+        <label>weston_xkb_info</label>
+        <link refid="structweston__xkb__info"/>
+      </node>
+      <node id="19">
+        <label>weston_output_zoom</label>
+        <link refid="structweston__output__zoom"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>animation_z</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>seat</edgelabel>
+        </childnode>
+        <childnode refid="42" relation="usage">
+          <edgelabel>spring_z</edgelabel>
+        </childnode>
+      </node>
+      <node id="26">
+        <label>weston_surface</label>
+        <link refid="structweston__surface"/>
+        <childnode refid="18" relation="usage">
+          <edgelabel>output</edgelabel>
+        </childnode>
+        <childnode refid="27" relation="usage">
+          <edgelabel>buffer_viewport</edgelabel>
+        </childnode>
+        <childnode refid="28" relation="usage">
+          <edgelabel>pending</edgelabel>
+        </childnode>
+        <childnode refid="32" relation="usage">
+          <edgelabel>buffer_ref</edgelabel>
+        </childnode>
+        <childnode refid="33" relation="usage">
+          <edgelabel>surface_to_buffer_matrix</edgelabel>
+          <edgelabel>buffer_to_surface_matrix</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>compositor</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>buffer_release_ref</edgelabel>
+        </childnode>
+      </node>
+      <node id="51">
+        <label>weston_launcher</label>
+        <link refid="structweston__launcher"/>
+        <childnode refid="52" relation="usage">
+          <edgelabel>iface</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gl_shader_requirements</label>
+        <link refid="structgl__shader__requirements"/>
+      </node>
+      <node id="43">
+        <label>weston_mode</label>
+        <link refid="structweston__mode"/>
+      </node>
+      <node id="31">
+        <label>weston_buffer_release</label>
+        <link refid="structweston__buffer__release"/>
+      </node>
+      <node id="11">
+        <label>weston_testsuite_data</label>
+        <link refid="structweston__testsuite__data"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>test_quirks</edgelabel>
+        </childnode>
+      </node>
+      <node id="16">
+        <label>weston_touch_calibrator</label>
+        <link refid="structweston__touch__calibrator"/>
+        <childnode refid="17" relation="usage">
+          <edgelabel>view</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>output</edgelabel>
+        </childnode>
+        <childnode refid="46" relation="usage">
+          <edgelabel>device</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>compositor</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="usage">
+          <edgelabel>surface</edgelabel>
+        </childnode>
+      </node>
+      <node id="22">
+        <label>weston_keyboard</label>
+        <link refid="structweston__keyboard"/>
+        <childnode refid="23" relation="usage">
+          <edgelabel>xkb_info</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>seat</edgelabel>
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>default_grab</edgelabel>
+          <edgelabel>input_method_grab</edgelabel>
+          <edgelabel>grab</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="usage">
+          <edgelabel>focus</edgelabel>
+        </childnode>
+      </node>
+      <node id="39">
+        <label>weston_touch</label>
+        <link refid="structweston__touch"/>
+        <childnode refid="17" relation="usage">
+          <edgelabel>focus</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>seat</edgelabel>
+        </childnode>
+        <childnode refid="40" relation="usage">
+          <edgelabel>default_grab</edgelabel>
+          <edgelabel>grab</edgelabel>
+        </childnode>
+      </node>
+      <node id="35">
+        <label>weston_pointer_client</label>
+        <link refid="structweston__pointer__client"/>
+      </node>
+      <node id="36">
+        <label>weston_pointer_grab</label>
+        <link refid="structweston__pointer__grab"/>
+        <childnode refid="13" relation="usage">
+          <edgelabel>interface</edgelabel>
+        </childnode>
+        <childnode refid="34" relation="usage">
+          <edgelabel>pointer</edgelabel>
+        </childnode>
+      </node>
+      <node id="48">
+        <label>weston_touch_device_ops</label>
+        <link refid="structweston__touch__device__ops"/>
+        <childnode refid="18" relation="usage">
+          <edgelabel>get_output</edgelabel>
+        </childnode>
+      </node>
+      <node id="49">
+        <label>content_protection</label>
+        <link refid="structcontent__protection"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>debug</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>compositor</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="90" column="18" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="90" bodyend="170"/>
+    <listofallmembers>
+      <member refid="structgl__renderer_1ac378dee768bb889023f289e8c90ad69d" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>base</name></member>
+      <member refid="structgl__renderer_1a93de6b9a4c01ae77c78ce36b2a1f9ee7" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>bind_display</name></member>
+      <member refid="structgl__renderer_1a5977b06a8c8532933e1a8de908cf05b0" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>compositor</name></member>
+      <member refid="structgl__renderer_1a2cfb8e070f960ca36b2524aef7ae0816" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>create_image</name></member>
+      <member refid="structgl__renderer_1a9d7c51b6ff6e1935a0ee6bd080340275" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>create_platform_window</name></member>
+      <member refid="structgl__renderer_1a0d32e80810899d87319869d417efc5e3" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>create_sync</name></member>
+      <member refid="structgl__renderer_1ae89ee235b73ab0a5828144a501bef562" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>current_shader</name></member>
+      <member refid="structgl__renderer_1a40c0fa4fd0b6cfae3ab6c70b31d6f525" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>destroy_image</name></member>
+      <member refid="structgl__renderer_1ae237cc3a53f93ac46fefb37e3e3589a7" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>destroy_signal</name></member>
+      <member refid="structgl__renderer_1a647a24d7c43b5e1ba3fa16268858fa6d" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>destroy_sync</name></member>
+      <member refid="structgl__renderer_1a8a61c9d9da383117bd578c325b81db91" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>dmabuf_formats</name></member>
+      <member refid="structgl__renderer_1ae2ab6672ea88406c24ba67d39a85c7d3" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>dmabuf_images</name></member>
+      <member refid="structgl__renderer_1ac6e67a3e0e48848dc5e8296bdbfd856d" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>dummy_surface</name></member>
+      <member refid="structgl__renderer_1a32d839fb862a9fb6c723d8d03297bf0e" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>dup_native_fence_fd</name></member>
+      <member refid="structgl__renderer_1a8c2e208b8924439784d376e3c9ba4c78" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>egl_config</name></member>
+      <member refid="structgl__renderer_1a49844e2bfbc88be8c84276d2e0b8a676" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>egl_context</name></member>
+      <member refid="structgl__renderer_1a1f947120866d14d1a6162b22d074143f" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>egl_display</name></member>
+      <member refid="structgl__renderer_1a7bd95f699444ea14e713dba46a17c7e9" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>fallback_shader</name></member>
+      <member refid="structgl__renderer_1a1c5d444052ce2cc91f4393015e446000" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>fan_binding</name></member>
+      <member refid="structgl__renderer_1a1a517029f6ac148694f2af12f3c27ccb" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>fan_debug</name></member>
+      <member refid="structgl__renderer_1a19a35e83389dac2b135df4f7d6851f71" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>fragment_binding</name></member>
+      <member refid="structgl__renderer_1aa4a0bc78bd4d1c8568c0cb561ecc1e13" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>fragment_shader_debug</name></member>
+      <member refid="structgl__renderer_1a9bdeec0fe4e48332c18c1126f5c43839" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>get_platform_display</name></member>
+      <member refid="structgl__renderer_1a3b9ac6c2ecfa1e56308aa90531626f2e" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>gl_half_float_type</name></member>
+      <member refid="structgl__renderer_1a77612987a24c5d5efa75c5136bf37e63" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>gl_version</name></member>
+      <member refid="structgl__renderer_1abc7c3cb9666e78b3c3de6b8d7071b514" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>has_bind_display</name></member>
+      <member refid="structgl__renderer_1a950ceb1910c71cb4a22b6adbfe33d1ba" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>has_configless_context</name></member>
+      <member refid="structgl__renderer_1a6c5ea920e1dca4a88d07314980d01155" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>has_context_priority</name></member>
+      <member refid="structgl__renderer_1a3b0d80c232031cb4794dc6d1663dfad3" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>has_dmabuf_import</name></member>
+      <member refid="structgl__renderer_1afa9e6c77669201d4f20cb4c198f46dcf" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>has_dmabuf_import_modifiers</name></member>
+      <member refid="structgl__renderer_1a920185695fc95f86dd822cb5beece76a" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>has_egl_buffer_age</name></member>
+      <member refid="structgl__renderer_1a806ded7ab986e210361c1c00f18c2e9f" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>has_egl_image_external</name></member>
+      <member refid="structgl__renderer_1a2165337b1603946968079eca3c47f65b" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>has_egl_partial_update</name></member>
+      <member refid="structgl__renderer_1ab7dea4c1aeae5e868a156df8480facf6" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>has_gl_texture_rg</name></member>
+      <member refid="structgl__renderer_1a565fad372070dd5710626b6a7c1fea5c" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>has_native_fence_sync</name></member>
+      <member refid="structgl__renderer_1aa69f701008f67129465f881058162fec" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>has_platform_base</name></member>
+      <member refid="structgl__renderer_1a40cc8abffa0ad500044b1c86d6111601" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>has_surfaceless_context</name></member>
+      <member refid="structgl__renderer_1a76861d99667a14188420258b48f8f1f1" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>has_wait_sync</name></member>
+      <member refid="structgl__renderer_1a1f32740854364dc4e30784c73689e8ec" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>image_target_texture_2d</name></member>
+      <member refid="structgl__renderer_1ad238bebdd3aa0dea7602024e02f7dbad" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>output_destroy_listener</name></member>
+      <member refid="structgl__renderer_1abb719fa4fbd1d18122e43d5db16c9b93" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>platform</name></member>
+      <member refid="structgl__renderer_1a67447b3d33820530bee82162cce9bf3a" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>query_buffer</name></member>
+      <member refid="structgl__renderer_1a3ac4749c0390dcfe2446ded88cdb481b" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>query_dmabuf_formats</name></member>
+      <member refid="structgl__renderer_1a0e7c5bacc08635380c25288a2596a360" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>query_dmabuf_modifiers</name></member>
+      <member refid="structgl__renderer_1a82e63a57f7717ba9560f03ce4276cd2f" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>set_damage_region</name></member>
+      <member refid="structgl__renderer_1a52539b172c96178779b6cba4061ef83d" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>shader_list</name></member>
+      <member refid="structgl__renderer_1a25b6ad5ba07b7cb01a6aa7bda56a2b3b" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>shader_scope</name></member>
+      <member refid="structgl__renderer_1a6d1134d418350481ea2104ffbedb9fe9" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>swap_buffers_with_damage</name></member>
+      <member refid="structgl__renderer_1a48ca68a22398c47d51cb41809a7bea3d" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>unbind_display</name></member>
+      <member refid="structgl__renderer_1adac0baf7ccf72aec5f5f8af6e578851d" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>vertices</name></member>
+      <member refid="structgl__renderer_1a7e90652824e97ffddb9a922c43219fdf" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>vtxcnt</name></member>
+      <member refid="structgl__renderer_1a23da622f17dc46b8292eebc5243d8c34" prot="public" virt="non-virtual"><scope>gl_renderer</scope><name>wait_sync</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structpermu__state" kind="struct" language="C++" prot="public">
+    <compoundname>permu_state</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpermu__state_1ad1c1a8aa5bb9576fe557bb9bfa63b295" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int permu_state::set_size</definition>
+        <argsstring></argsstring>
+        <name>set_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/subsurface-test.c" line="658" column="5" bodyfile="/home/lzm/Wayland/weston/tests/subsurface-test.c" bodystart="658" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpermu__state_1a8f77da6b93248cb0bc70e62e26802784" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int permu_state::cnt[NSTEPS]</definition>
+        <argsstring>[NSTEPS]</argsstring>
+        <name>cnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/subsurface-test.c" line="659" column="5" bodyfile="/home/lzm/Wayland/weston/tests/subsurface-test.c" bodystart="659" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/tests/subsurface-test.c" line="657" column="18" bodyfile="/home/lzm/Wayland/weston/tests/subsurface-test.c" bodystart="657" bodyend="660"/>
+    <listofallmembers>
+      <member refid="structpermu__state_1a8f77da6b93248cb0bc70e62e26802784" prot="public" virt="non-virtual"><scope>permu_state</scope><name>cnt</name></member>
+      <member refid="structpermu__state_1ad1c1a8aa5bb9576fe557bb9bfa63b295" prot="public" virt="non-virtual"><scope>permu_state</scope><name>set_size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

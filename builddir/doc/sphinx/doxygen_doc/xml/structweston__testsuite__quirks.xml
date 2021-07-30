@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__testsuite__quirks" kind="struct" language="C++" prot="public">
+    <compoundname>weston_testsuite_quirks</compoundname>
+    <includes refid="libweston_8h" local="no">libweston.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__testsuite__quirks_1abd9e19201aea3d99f24f3a33bc1028bf" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool weston_testsuite_quirks::gl_force_full_upload</definition>
+        <argsstring></argsstring>
+        <name>gl_force_full_upload</name>
+        <briefdescription>
+<para>Force GL-renderer to do a full upload of wl_shm buffers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="198" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__testsuite__quirks_1abb3769af372946baa999893d45bba17f" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool weston_testsuite_quirks::gl_force_full_redraw_of_shadow_fb</definition>
+        <argsstring></argsstring>
+        <name>gl_force_full_redraw_of_shadow_fb</name>
+        <briefdescription>
+<para>Ensure GL shadow fb is used, and always repaint it fully. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="200" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__testsuite__quirks_1a147daf91afc2c3ac1bc23e61528e4d65" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t weston_testsuite_quirks::required_capabilities</definition>
+        <argsstring></argsstring>
+        <name>required_capabilities</name>
+        <briefdescription>
+<para>Required enum weston_capability bit mask, otherwise skip run. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="202" column="10" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Weston test suite quirks. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>There are some things that need a specific behavior when we run Weston in the test suite. Tests can use this struct to select for certain behaviors.</para>
+<para><simplesect kind="see"><para><ref refid="structcompositor__setup" kindref="compound">compositor_setup</ref> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="196" column="30" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="196" bodyend="203"/>
+    <listofallmembers>
+      <member refid="structweston__testsuite__quirks_1abb3769af372946baa999893d45bba17f" prot="public" virt="non-virtual"><scope>weston_testsuite_quirks</scope><name>gl_force_full_redraw_of_shadow_fb</name></member>
+      <member refid="structweston__testsuite__quirks_1abd9e19201aea3d99f24f3a33bc1028bf" prot="public" virt="non-virtual"><scope>weston_testsuite_quirks</scope><name>gl_force_full_upload</name></member>
+      <member refid="structweston__testsuite__quirks_1a147daf91afc2c3ac1bc23e61528e4d65" prot="public" virt="non-virtual"><scope>weston_testsuite_quirks</scope><name>required_capabilities</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

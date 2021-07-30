@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__pointer__client" kind="struct" language="C++" prot="public">
+    <compoundname>weston_pointer_client</compoundname>
+    <includes refid="libweston_8h" local="no">libweston.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__pointer__client_1acf9bd559c9322da1f96425e74ed166e8" prot="public" static="no" mutable="no">
+        <type>struct wl_list</type>
+        <definition>struct wl_list weston_pointer_client::link</definition>
+        <argsstring></argsstring>
+        <name>link</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="510" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="514" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__pointer__client_1ad89fcb7cb485b563de0cca91054a7650" prot="public" static="no" mutable="no">
+        <type>struct wl_client *</type>
+        <definition>struct wl_client* weston_pointer_client::client</definition>
+        <argsstring></argsstring>
+        <name>client</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="515" column="16" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="515" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__pointer__client_1a582de2b5e172f8c11188af511c8008ed" prot="public" static="no" mutable="no">
+        <type>struct wl_list</type>
+        <definition>struct wl_list weston_pointer_client::pointer_resources</definition>
+        <argsstring></argsstring>
+        <name>pointer_resources</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="515" column="16" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="516" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__pointer__client_1ad68bdb2aa68277372a13a2d6e9a54ec7" prot="public" static="no" mutable="no">
+        <type>struct wl_list</type>
+        <definition>struct wl_list weston_pointer_client::relative_pointer_resources</definition>
+        <argsstring></argsstring>
+        <name>relative_pointer_resources</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="515" column="16" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="517" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="513" column="28" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="513" bodyend="518"/>
+    <listofallmembers>
+      <member refid="structweston__pointer__client_1ad89fcb7cb485b563de0cca91054a7650" prot="public" virt="non-virtual"><scope>weston_pointer_client</scope><name>client</name></member>
+      <member refid="structweston__pointer__client_1acf9bd559c9322da1f96425e74ed166e8" prot="public" virt="non-virtual"><scope>weston_pointer_client</scope><name>link</name></member>
+      <member refid="structweston__pointer__client_1a582de2b5e172f8c11188af511c8008ed" prot="public" virt="non-virtual"><scope>weston_pointer_client</scope><name>pointer_resources</name></member>
+      <member refid="structweston__pointer__client_1ad68bdb2aa68277372a13a2d6e9a54ec7" prot="public" virt="non-virtual"><scope>weston_pointer_client</scope><name>relative_pointer_resources</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

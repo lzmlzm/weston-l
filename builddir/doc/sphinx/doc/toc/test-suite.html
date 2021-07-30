@@ -1,0 +1,461 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Weston test suite &mdash; weston 9.0.90 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Reference manual" href="test-suite-api.html" />
+    <link rel="prev" title="Logging/Debugging" href="libweston/log.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> weston
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="running-weston.html">Running Weston</a></li>
+<li class="toctree-l1"><a class="reference internal" href="libweston.html">Libweston</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Weston test suite</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#test-execution">Test execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#types-of-tests">Types of tests</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#standalone-tests">Standalone tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#plugin-tests">Plugin tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#client-tests">Client tests</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#drm-backend-tests">DRM-backend tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#writing-tests">Writing tests</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="test-suite-api.html">Reference manual</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kiosk-shell.html">Weston kiosk-shell</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">weston</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Weston test suite</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/toc/test-suite.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="weston-test-suite">
+<h1>Weston test suite<a class="headerlink" href="#weston-test-suite" title="Permalink to this headline">¶</a></h1>
+<p>Weston test suite aims to test features of the Weston compositor and libweston.
+The automatic tests are executed as part of <code class="docutils literal notranslate"><span class="pre">meson</span> <span class="pre">test</span></code> and in the Gitlab CI.
+In addition to automatic tests, there are few manual tests that have not been
+automated, but being manual means they are also not routinely (or ever)
+executed.</p>
+<div class="section" id="test-execution">
+<h2>Test execution<a class="headerlink" href="#test-execution" title="Permalink to this headline">¶</a></h2>
+<p>The test execution hierarchy is:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">meson</span> <span class="pre">test</span></code></p>
+<ul>
+<li><p>a test program</p>
+<ul>
+<li><p>a fixture setup</p>
+<ul>
+<li><p>a test</p>
+<ul>
+<li><p>a sub-test from a data array</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>When <code class="docutils literal notranslate"><span class="pre">meson</span> <span class="pre">test</span></code> is executed, it will run all defined <em>test programs</em>
+potentially in parallel and collect their exit status. Therefore it is
+important to design each test program to be executable in parallel with every
+other test program.</p>
+<p>A <strong>test program</strong> is essentially one <code class="docutils literal notranslate"><span class="pre">.c</span></code> source code file that is built into
+one executable file (not a library, module, or plugin). Each test program is
+possible to run manually without Meson straight from the build directory
+without any environment or command line setup, e.g. with GDB or Valgrind.</p>
+<p>A test program may define one <strong>fixture setup</strong> function. The function may be
+defined alone or with a data array of an arbitrary data type. If an array is
+defined, the fixture setup will be called and all the tests in the program
+executed for each element in the array serially. Fixture setups are used for
+setting up the Weston compositor for the tests that need it. The array is
+useful for running the compositor with different settings for the same tests,
+e.g. with Pixman-renderer and GL-renderer.</p>
+<p><strong>A test</strong> in a test program is defined with one of the macros <a class="reference internal" href="test-suite-api.html#c.TEST" title="TEST"><code class="xref c c-func docutils literal notranslate"><span class="pre">TEST()</span></code></a>,
+<a class="reference internal" href="test-suite-api.html#c.TEST_P" title="TEST_P"><code class="xref c c-func docutils literal notranslate"><span class="pre">TEST_P()</span></code></a>, or <a class="reference internal" href="test-suite-api.html#c.PLUGIN_TEST" title="PLUGIN_TEST"><code class="xref c c-func docutils literal notranslate"><span class="pre">PLUGIN_TEST()</span></code></a>. <a class="reference internal" href="test-suite-api.html#c.TEST" title="TEST"><code class="xref c c-func docutils literal notranslate"><span class="pre">TEST()</span></code></a> defines a single
+test with no sub-tests. <a class="reference internal" href="test-suite-api.html#c.TEST_P" title="TEST_P"><code class="xref c c-func docutils literal notranslate"><span class="pre">TEST_P()</span></code></a> defines a data-driven array of tests:
+a set of sub-tests. <a class="reference internal" href="test-suite-api.html#c.PLUGIN_TEST" title="PLUGIN_TEST"><code class="xref c c-func docutils literal notranslate"><span class="pre">PLUGIN_TEST()</span></code></a> is used specifically by <em>plugin
+tests</em> that require access to <a class="reference internal" href="libweston/compositor.html#_CPPv417weston_compositor" title="weston_compositor"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">weston_compositor</span></code></a>.</p>
+<p>All tests and sub-tests are executed serially in a test program. The test
+harness does not <code class="docutils literal notranslate"><span class="pre">fork()</span></code> which means that any test that crashes or hits an
+assert failure will quit the whole test program on the spot, leaving following
+tests in that program not executed.</p>
+<p>The test suite has no tests that are expected to fail in general. All tests
+that test for a failure must check the exact error condition expected and
+succeed if it is met or fail for any other or no error.</p>
+</div>
+<div class="section" id="types-of-tests">
+<h2>Types of tests<a class="headerlink" href="#types-of-tests" title="Permalink to this headline">¶</a></h2>
+<p>Aside from manual vs. automatic, there are three types of tests:</p>
+<dl class="simple">
+<dt>Standalone tests</dt><dd><p>Standalone tests do not launch the full compositor.</p>
+</dd>
+<dt>Plugin tests</dt><dd><p>Plugin tests launch the Weston compositor and execute the list of tests
+from an idle callback handler in the compositor context, blocking the
+compositor while they run.</p>
+</dd>
+<dt>Client tests</dt><dd><p>Client tests launch the Weston compositor and execute the list of tests
+in a new thread that is created from an idle callback handler. This means
+the compositor runs independently from the tests and one can write a test
+like as a normal Wayland client.</p>
+</dd>
+</dl>
+<p>The type of all the tests in a test program is defined by the fixture setup
+function. A fixture setup function is any defined function with a specific
+signature and registered with either <a class="reference internal" href="test-suite-api.html#c.DECLARE_FIXTURE_SETUP" title="DECLARE_FIXTURE_SETUP"><code class="xref c c-func docutils literal notranslate"><span class="pre">DECLARE_FIXTURE_SETUP()</span></code></a> or
+<a class="reference internal" href="test-suite-api.html#c.DECLARE_FIXTURE_SETUP_WITH_ARG" title="DECLARE_FIXTURE_SETUP_WITH_ARG"><code class="xref c c-func docutils literal notranslate"><span class="pre">DECLARE_FIXTURE_SETUP_WITH_ARG()</span></code></a>.</p>
+<div class="section" id="standalone-tests">
+<span id="test-suite-standalone"></span><h3>Standalone tests<a class="headerlink" href="#standalone-tests" title="Permalink to this headline">¶</a></h3>
+<p>Standalone tests do not have a fixture setup function defined in the test
+program or the fixture setup function calls
+<a class="reference internal" href="test-suite-api.html#_CPPv438weston_test_harness_execute_standaloneP19weston_test_harness" title="weston_test_harness_execute_standalone"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">weston_test_harness_execute_standalone()</span></code></a> explicitly. All test cases must
+be defined with <a class="reference internal" href="test-suite-api.html#c.TEST" title="TEST"><code class="xref c c-func docutils literal notranslate"><span class="pre">TEST()</span></code></a> or <a class="reference internal" href="test-suite-api.html#c.TEST_P" title="TEST_P"><code class="xref c c-func docutils literal notranslate"><span class="pre">TEST_P()</span></code></a>.</p>
+<p>This is the simplest possible test example:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">TEST</span><span class="p">(</span><span class="n">always_success</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="cm">/* true */</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="plugin-tests">
+<span id="test-suite-plugin"></span><h3>Plugin tests<a class="headerlink" href="#plugin-tests" title="Permalink to this headline">¶</a></h3>
+<p>Plugin tests must have a fixture setup function that calls
+<a class="reference internal" href="test-suite-api.html#_CPPv437weston_test_harness_execute_as_pluginP19weston_test_harnessPK16compositor_setup" title="weston_test_harness_execute_as_plugin"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">weston_test_harness_execute_as_plugin()</span></code></a>. All test cases must be defined
+with <a class="reference internal" href="test-suite-api.html#c.PLUGIN_TEST" title="PLUGIN_TEST"><code class="xref c c-func docutils literal notranslate"><span class="pre">PLUGIN_TEST()</span></code></a> which declares an implicit function argument
+<a class="reference internal" href="libweston/compositor.html#_CPPv417weston_compositor" title="weston_compositor"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">weston_compositor</span></code></a> <code class="docutils literal notranslate"><span class="pre">*compositor</span></code>.</p>
+<p>The compositor fixture manufactures the necessary environment variables and the
+command line argument array to launch Weston, and calls <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">wet_main()</span></code>
+directly. An idle task handler is registered, which gets invoked when
+initialization is done. All tests are executed from that idle handler, and then
+the compositor exits.</p>
+<p>This is an example of a plugin test that just logs a line:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="k">enum</span> <span class="n">test_result_code</span>
+<span class="nf">fixture_setup</span><span class="p">(</span><span class="k">struct</span> <span class="n">weston_test_harness</span> <span class="o">*</span><span class="n">harness</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="k">struct</span> <span class="n">compositor_setup</span> <span class="n">setup</span><span class="p">;</span>
+
+     <span class="n">compositor_setup_defaults</span><span class="p">(</span><span class="o">&amp;</span><span class="n">setup</span><span class="p">);</span>
+
+     <span class="k">return</span> <span class="n">weston_test_harness_execute_as_plugin</span><span class="p">(</span><span class="n">harness</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">setup</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="n">DECLARE_FIXTURE_SETUP</span><span class="p">(</span><span class="n">fixture_setup</span><span class="p">);</span>
+
+<span class="n">PLUGIN_TEST</span><span class="p">(</span><span class="n">plugin_registry_test</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="cm">/* struct weston_compositor *compositor; */</span>
+     <span class="n">testlog</span><span class="p">(</span><span class="s">&quot;Got compositor %p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">compositor</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="client-tests">
+<span id="test-suite-client"></span><h3>Client tests<a class="headerlink" href="#client-tests" title="Permalink to this headline">¶</a></h3>
+<p>Plugin tests must have a fixture setup function that calls
+<a class="reference internal" href="test-suite-api.html#_CPPv437weston_test_harness_execute_as_clientP19weston_test_harnessPK16compositor_setup" title="weston_test_harness_execute_as_client"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">weston_test_harness_execute_as_client()</span></code></a>. All test cases must be
+defined with <a class="reference internal" href="test-suite-api.html#c.TEST" title="TEST"><code class="xref c c-func docutils literal notranslate"><span class="pre">TEST()</span></code></a> or <a class="reference internal" href="test-suite-api.html#c.TEST_P" title="TEST_P"><code class="xref c c-func docutils literal notranslate"><span class="pre">TEST_P()</span></code></a>.</p>
+<p>The compositor fixture manufactures the necessary environment variables and the
+command line argument array to launch Weston, and calls <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">wet_main()</span></code>
+directly. An idle task handler is registered, which gets invoked when
+initialization is done. The idle handler creates a new thread and returns. The
+new thread will execute all tests and then signal the compositor to exit.</p>
+<p>This is an incomplete example of an array of sub-tests and another test as
+clients:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="k">enum</span> <span class="n">test_result_code</span>
+<span class="nf">fixture_setup</span><span class="p">(</span><span class="k">struct</span> <span class="n">weston_test_harness</span> <span class="o">*</span><span class="n">harness</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="k">struct</span> <span class="n">compositor_setup</span> <span class="n">setup</span><span class="p">;</span>
+
+     <span class="n">compositor_setup_defaults</span><span class="p">(</span><span class="o">&amp;</span><span class="n">setup</span><span class="p">);</span>
+
+     <span class="k">return</span> <span class="n">weston_test_harness_execute_as_client</span><span class="p">(</span><span class="n">harness</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">setup</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="n">DECLARE_FIXTURE_SETUP</span><span class="p">(</span><span class="n">fixture_setup</span><span class="p">);</span>
+
+<span class="k">struct</span> <span class="n">bad_source_rect_args</span> <span class="p">{</span>
+     <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">static</span> <span class="k">const</span> <span class="k">struct</span> <span class="n">bad_source_rect_args</span> <span class="n">bad_source_rect_args</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+     <span class="p">{</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span>  <span class="mi">0</span><span class="p">,</span>  <span class="mi">20</span><span class="p">,</span>  <span class="mi">10</span> <span class="p">},</span>
+     <span class="p">{</span>  <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span>  <span class="mi">20</span><span class="p">,</span>  <span class="mi">10</span> <span class="p">},</span>
+     <span class="p">{</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span>   <span class="mi">0</span><span class="p">,</span>  <span class="mi">10</span> <span class="p">},</span>
+     <span class="p">{</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span>  <span class="mi">20</span><span class="p">,</span>   <span class="mi">0</span> <span class="p">},</span>
+     <span class="p">{</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">20</span><span class="p">,</span>  <span class="mi">10</span> <span class="p">},</span>
+     <span class="p">{</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span>  <span class="mi">20</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span> <span class="p">},</span>
+     <span class="p">{</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>  <span class="mi">20</span><span class="p">,</span>  <span class="mi">10</span> <span class="p">},</span>
+     <span class="p">{</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span>  <span class="o">-</span><span class="mi">1</span><span class="p">,</span>  <span class="o">-</span><span class="mi">1</span> <span class="p">},</span>
+<span class="p">};</span>
+
+<span class="n">TEST_P</span><span class="p">(</span><span class="n">test_viewporter_bad_source_rect</span><span class="p">,</span> <span class="n">bad_source_rect_args</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="k">const</span> <span class="k">struct</span> <span class="n">bad_source_rect_args</span> <span class="o">*</span><span class="n">args</span> <span class="o">=</span> <span class="n">data</span><span class="p">;</span>
+     <span class="k">struct</span> <span class="n">client</span> <span class="o">*</span><span class="n">client</span><span class="p">;</span>
+     <span class="k">struct</span> <span class="n">wp_viewport</span> <span class="o">*</span><span class="n">vp</span><span class="p">;</span>
+
+     <span class="n">client</span> <span class="o">=</span> <span class="n">create_client_and_test_surface</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">123</span><span class="p">,</span> <span class="mi">77</span><span class="p">);</span>
+
+     <span class="n">vp</span> <span class="o">=</span> <span class="n">create_viewport</span><span class="p">(</span><span class="n">client</span><span class="p">);</span>
+
+     <span class="n">testlog</span><span class="p">(</span><span class="s">&quot;wp_viewport.set_source x=%d, y=%d, w=%d, h=%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+             <span class="n">args</span><span class="o">-&gt;</span><span class="n">x</span><span class="p">,</span> <span class="n">args</span><span class="o">-&gt;</span><span class="n">y</span><span class="p">,</span> <span class="n">args</span><span class="o">-&gt;</span><span class="n">w</span><span class="p">,</span> <span class="n">args</span><span class="o">-&gt;</span><span class="n">h</span><span class="p">);</span>
+     <span class="n">set_source</span><span class="p">(</span><span class="n">vp</span><span class="p">,</span> <span class="n">args</span><span class="o">-&gt;</span><span class="n">x</span><span class="p">,</span> <span class="n">args</span><span class="o">-&gt;</span><span class="n">y</span><span class="p">,</span> <span class="n">args</span><span class="o">-&gt;</span><span class="n">w</span><span class="p">,</span> <span class="n">args</span><span class="o">-&gt;</span><span class="n">h</span><span class="p">);</span>
+
+     <span class="n">expect_protocol_error</span><span class="p">(</span><span class="n">client</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">wp_viewport_interface</span><span class="p">,</span>
+                           <span class="n">WP_VIEWPORT_ERROR_BAD_VALUE</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">TEST</span><span class="p">(</span><span class="n">test_roundtrip</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="k">struct</span> <span class="n">client</span> <span class="o">*</span><span class="n">client</span><span class="p">;</span>
+
+     <span class="n">client</span> <span class="o">=</span> <span class="n">create_client_and_test_surface</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">123</span><span class="p">,</span> <span class="mi">77</span><span class="p">);</span>
+     <span class="n">client_roundtrip</span><span class="p">(</span><span class="n">client</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="drm-backend-tests">
+<h2>DRM-backend tests<a class="headerlink" href="#drm-backend-tests" title="Permalink to this headline">¶</a></h2>
+<p>DRM-backend tests require a DRM device, so they are a special case. To select a
+device the test suite will simply look at the environment variable
+<code class="docutils literal notranslate"><span class="pre">WESTON_TEST_SUITE_DRM_DEVICE</span></code>. So the first thing the user has to do in order
+to run DRM-backend tests is to set this environment variable with the card that
+should run the tests. For instance, in order to run DRM-backend tests with
+<code class="docutils literal notranslate"><span class="pre">card0</span></code> we need to run <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">WESTON_TEST_SUITE_DRM_DEVICE=card0</span></code>.</p>
+<p>Note that the card should not be in use by a desktop environment (or any other
+program that requires master status), as there can only be one user at a time
+with master status in a DRM device. Also, this is the reason why we can not run
+two or more DRM-backend tests simultaneously. Since the test suite tries to run
+the tests in parallel, we have a lock mechanism to enforce that DRM-backend
+tests run sequentially, one at a time. Note that this will not avoid them to run
+in parallel with other types of tests.</p>
+<p>Another specificity of DRM-backend tests is that they run using the non-default
+seat <code class="docutils literal notranslate"><span class="pre">seat-weston-test</span></code>. This avoids unnecessarily opening input devices that
+may be present in the default seat <code class="docutils literal notranslate"><span class="pre">seat0</span></code>. On the other hand, this will make
+<code class="docutils literal notranslate"><span class="pre">launcher-logind</span></code> fail, as we are trying to use a seat that is different from
+the one we are logged in. In the CI we do not rely on <code class="docutils literal notranslate"><span class="pre">logind</span></code>, so it should
+fallback to <code class="docutils literal notranslate"><span class="pre">launcher-direct</span></code> anyway. It requires root, but this is also not a
+problem for the CI, as <code class="docutils literal notranslate"><span class="pre">virtme</span></code> starts as root. The problem is that to run
+the tests locally with a real hardware the users need to run as root.</p>
+</div>
+<div class="section" id="writing-tests">
+<h2>Writing tests<a class="headerlink" href="#writing-tests" title="Permalink to this headline">¶</a></h2>
+<p>Test programs do not have a <code class="docutils literal notranslate"><span class="pre">main()</span></code> of their own. They all share the
+<code class="docutils literal notranslate"><span class="pre">main()</span></code> from the test harness and only define test cases and a fixture
+setup.</p>
+<p>It is recommended to have one test program (one <code class="docutils literal notranslate"><span class="pre">.c</span></code> file) contain only one
+type of tests to keep the fixture setup simple. See
+<a class="reference internal" href="#test-suite-standalone"><span class="std std-ref">Standalone tests</span></a>, <a class="reference internal" href="#test-suite-plugin"><span class="std std-ref">Plugin tests</span></a> and
+<a class="reference internal" href="#test-suite-client"><span class="std std-ref">Client tests</span></a> how to set up each type in a test program.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>TODO:</strong> Currently it is not possible to gracefully skip or fail a test.
+You can skip with <code class="docutils literal notranslate"><span class="pre">exit(RESULT_SKIP)</span></code> but that will quit the whole test
+program and all defined tests that were not ran yet will be counted as
+failed. You can fail a test by any means, e.g. <code class="docutils literal notranslate"><span class="pre">exit(RESULT_FAIL)</span></code>, but
+the same caveat applies. Succeeded tests must simply return and not call any
+exit function.</p>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="test-suite-api.html" class="btn btn-neutral float-right" title="Reference manual" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="libweston/log.html" class="btn btn-neutral float-left" title="Logging/Debugging" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Weston community.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

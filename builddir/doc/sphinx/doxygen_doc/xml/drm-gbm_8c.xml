@@ -1,0 +1,910 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="drm-gbm_8c" kind="file" language="C++">
+    <compoundname>drm-gbm.c</compoundname>
+    <includes local="yes">config.h</includes>
+    <includes local="no">errno.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">ctype.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">dlfcn.h</includes>
+    <includes refid="drm-internal_8h" local="yes">drm-internal.h</includes>
+    <includes refid="pixman-renderer_8h" local="yes">pixman-renderer.h</includes>
+    <includes refid="pixel-formats_8h" local="yes">pixel-formats.h</includes>
+    <includes refid="gl-renderer_8h" local="yes">renderer-gl/gl-renderer.h</includes>
+    <includes local="yes">shared/weston-egl-ext.h</includes>
+    <includes refid="linux-dmabuf_8h" local="yes">linux-dmabuf.h</includes>
+    <includes refid="linux-explicit-synchronization_8h" local="yes">linux-explicit-synchronization.h</includes>
+    <incdepgraph>
+      <node id="17">
+        <label>xf86drm.h</label>
+      </node>
+      <node id="21">
+        <label>stdbool.h</label>
+      </node>
+      <node id="31">
+        <label>stdarg.h</label>
+      </node>
+      <node id="20">
+        <label>libweston/libweston.h</label>
+        <link refid="libweston_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>linux/input.h</label>
+      </node>
+      <node id="39">
+        <label>pixel-formats.h</label>
+        <link refid="pixel-formats_8h"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>assert.h</label>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c</label>
+        <link refid="drm-gbm_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdint.h</label>
+      </node>
+      <node id="15">
+        <label>sys/mman.h</label>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="30">
+        <label>libweston/weston-log.h</label>
+        <link refid="weston-log_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>wayland-server.h</label>
+      </node>
+      <node id="23">
+        <label>xkbcommon/xkbcommon.h</label>
+      </node>
+      <node id="43">
+        <label>linux-dmabuf.h</label>
+        <link refid="linux-dmabuf_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>errno.h</label>
+      </node>
+      <node id="10">
+        <label>fcntl.h</label>
+      </node>
+      <node id="9">
+        <label>drm-internal.h</label>
+        <link refid="drm-internal_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>xf86drmMode.h</label>
+      </node>
+      <node id="33">
+        <label>shared/helpers.h</label>
+      </node>
+      <node id="29">
+        <label>stddef.h</label>
+      </node>
+      <node id="7">
+        <label>string.h</label>
+      </node>
+      <node id="27">
+        <label>libweston/backend-drm.h</label>
+        <link refid="backend-drm_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>unistd.h</label>
+      </node>
+      <node id="34">
+        <label>shared/weston-drm-fourcc.h</label>
+      </node>
+      <node id="38">
+        <label>pixman-renderer.h</label>
+        <link refid="pixman-renderer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>linux-explicit-synchronization.h</label>
+        <link refid="linux-explicit-synchronization_8h"/>
+      </node>
+      <node id="42">
+        <label>shared/weston-egl-ext.h</label>
+      </node>
+      <node id="41">
+        <label>renderer-gl/gl-renderer.h</label>
+        <link refid="gl-renderer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>libweston/plugin-registry.h</label>
+        <link refid="plugin-registry_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>libweston/zalloc.h</label>
+        <link refid="zalloc_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>libudev.h</label>
+      </node>
+      <node id="16">
+        <label>time.h</label>
+      </node>
+      <node id="25">
+        <label>libweston/matrix.h</label>
+        <link refid="matrix_8h"/>
+      </node>
+      <node id="22">
+        <label>pixman.h</label>
+      </node>
+      <node id="6">
+        <label>ctype.h</label>
+      </node>
+      <node id="13">
+        <label>linux/vt.h</label>
+      </node>
+      <node id="35">
+        <label>libinput-seat.h</label>
+        <link refid="libinput-seat_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>libweston-internal.h</label>
+        <link refid="libweston-internal_8h"/>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+      </node>
+      <node id="36">
+        <label>backend.h</label>
+        <link refid="backend_8h"/>
+      </node>
+      <node id="32">
+        <label>stdio.h</label>
+      </node>
+      <node id="40">
+        <label>inttypes.h</label>
+      </node>
+      <node id="8">
+        <label>dlfcn.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="drm-gbm_8c_1a1b7376712ea5e223402e0a43829ab1ab" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structgl__renderer__interface" kindref="compound">gl_renderer_interface</ref> *</type>
+        <definition>struct gl_renderer_interface* gl_renderer</definition>
+        <argsstring></argsstring>
+        <name>gl_renderer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c" line="47" column="28" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="drm-gbm_8c_1a704700553faa9e991e48f786e28e2161" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct gbm_device *</type>
+        <definition>static struct gbm_device* create_gbm_device</definition>
+        <argsstring>(int fd)</argsstring>
+        <name>create_gbm_device</name>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c" line="50" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c" bodystart="50" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="drm-gbm_8c_1aa01f313d7b5b21a13473e6372f2cb5b3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t fallback_format_for</definition>
+        <argsstring>(uint32_t format)</argsstring>
+        <name>fallback_format_for</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>format</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c" line="82" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c" bodystart="82" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="drm-gbm_8c_1a7d3814bed133d1c5db8b1a146ad4006c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int drm_backend_create_gl_renderer</definition>
+        <argsstring>(struct drm_backend *b)</argsstring>
+        <name>drm_backend_create_gl_renderer</name>
+        <param>
+          <type>struct <ref refid="structdrm__backend" kindref="compound">drm_backend</ref> *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c" line="94" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c" bodystart="94" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="drm-gbm_8c_1a29c5bc03e5d1582752ccd9614d4ae5a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int init_egl</definition>
+        <argsstring>(struct drm_backend *b)</argsstring>
+        <name>init_egl</name>
+        <param>
+          <type>struct <ref refid="structdrm__backend" kindref="compound">drm_backend</ref> *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c" line="119" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c" bodystart="119" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="drm-gbm_8c_1a1534f583e16c2f3bc219a647e65e7025" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void drm_output_fini_cursor_egl</definition>
+        <argsstring>(struct drm_output *output)</argsstring>
+        <name>drm_output_fini_cursor_egl</name>
+        <param>
+          <type>struct <ref refid="structdrm__output" kindref="compound">drm_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c" line="134" column="13" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c" bodystart="134" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="drm-gbm_8c_1a9184b403ab6cd21fc9ad826f87460d24" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int drm_output_init_cursor_egl</definition>
+        <argsstring>(struct drm_output *output, struct drm_backend *b)</argsstring>
+        <name>drm_output_init_cursor_egl</name>
+        <param>
+          <type>struct <ref refid="structdrm__output" kindref="compound">drm_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structdrm__backend" kindref="compound">drm_backend</ref> *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c" line="145" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c" bodystart="145" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="drm-gbm_8c_1a033b431220a942bd550663eb05f70f94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int drm_output_init_egl</definition>
+        <argsstring>(struct drm_output *output, struct drm_backend *b)</argsstring>
+        <name>drm_output_init_egl</name>
+        <param>
+          <type>struct <ref refid="structdrm__output" kindref="compound">drm_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structdrm__backend" kindref="compound">drm_backend</ref> *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c" line="182" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c" bodystart="182" bodyend="251"/>
+      </memberdef>
+      <memberdef kind="function" id="drm-gbm_8c_1af955fa7eced01d757733de498e0e568e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void drm_output_fini_egl</definition>
+        <argsstring>(struct drm_output *output)</argsstring>
+        <name>drm_output_fini_egl</name>
+        <param>
+          <type>struct <ref refid="structdrm__output" kindref="compound">drm_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c" line="254" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c" bodystart="254" bodyend="270"/>
+      </memberdef>
+      <memberdef kind="function" id="drm-gbm_8c_1af9db6d4c15d36f5d3a42bfb782216952" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structdrm__fb" kindref="compound">drm_fb</ref> *</type>
+        <definition>struct drm_fb* drm_output_render_gl</definition>
+        <argsstring>(struct drm_output_state *state, pixman_region32_t *damage)</argsstring>
+        <name>drm_output_render_gl</name>
+        <param>
+          <type>struct <ref refid="structdrm__output__state" kindref="compound">drm_output_state</ref> *</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>pixman_region32_t *</type>
+          <declname>damage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c" line="273" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c" bodystart="273" bodyend="300"/>
+      </memberdef>
+      <memberdef kind="function" id="drm-gbm_8c_1a7ea9f9a8dafc663f08f0824e73ef0d0d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void switch_to_gl_renderer</definition>
+        <argsstring>(struct drm_backend *b)</argsstring>
+        <name>switch_to_gl_renderer</name>
+        <param>
+          <type>struct <ref refid="structdrm__backend" kindref="compound">drm_backend</ref> *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c" line="303" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c" bodystart="303" bodyend="354"/>
+      </memberdef>
+      <memberdef kind="function" id="drm-gbm_8c_1ae6d511cf7f30169b12495b2e2610725f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void renderer_switch_binding</definition>
+        <argsstring>(struct weston_keyboard *keyboard, const struct timespec *time, uint32_t key, void *data)</argsstring>
+        <name>renderer_switch_binding</name>
+        <param>
+          <type>struct <ref refid="structweston__keyboard" kindref="compound">weston_keyboard</ref> *</type>
+          <declname>keyboard</declname>
+        </param>
+        <param>
+          <type>const struct timespec *</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c" line="357" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c" bodystart="357" bodyend="364"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2008-2011<sp/>Kristian<sp/>Høgsberg</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2011<sp/>Intel<sp/>Corporation</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2017,<sp/>2018<sp/>Collabora,<sp/>Ltd.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2017,<sp/>2018<sp/>General<sp/>Electric<sp/>Company</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2018<sp/>DisplayLink<sp/>(UK)<sp/>Ltd.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>(including<sp/>the</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>next<sp/>paragraph)<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>NONINFRINGEMENT.<sp/><sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;errno.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ctype.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;dlfcn.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="drm-internal_8h" kindref="compound">drm-internal.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pixman-renderer_8h" kindref="compound">pixman-renderer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pixel-formats_8h" kindref="compound">pixel-formats.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="gl-renderer_8h" kindref="compound">renderer-gl/gl-renderer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;shared/weston-egl-ext.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="linux-dmabuf_8h" kindref="compound">linux-dmabuf.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="linux-explicit-synchronization_8h" kindref="compound">linux-explicit-synchronization.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structgl__renderer__interface" kindref="compound">gl_renderer_interface</ref><sp/>*<ref refid="drm-gbm_8c_1a1b7376712ea5e223402e0a43829ab1ab" kindref="member">gl_renderer</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">gbm_device<sp/>*</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><ref refid="drm-gbm_8c_1a704700553faa9e991e48f786e28e2161" kindref="member">create_gbm_device</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fd)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">gbm_device<sp/>*gbm;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structgl__renderer" kindref="compound">gl_renderer</ref><sp/>=<sp/><ref refid="compositor_8c_1a1cf9686b2a6a6764e8197fdbb473607f" kindref="member">weston_load_module</ref>(</highlight><highlight class="stringliteral">&quot;gl-renderer.so&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;gl_renderer_interface&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="structgl__renderer" kindref="compound">gl_renderer</ref>)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>GBM<sp/>will<sp/>load<sp/>a<sp/>dri<sp/>driver,<sp/>but<sp/>even<sp/>though<sp/>they<sp/>need<sp/>symbols<sp/>from</highlight></codeline>
+<codeline lineno="60"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>libglapi,<sp/>in<sp/>some<sp/>version<sp/>of<sp/>Mesa<sp/>they<sp/>are<sp/>not<sp/>linked<sp/>to<sp/>it.<sp/>Since</highlight></codeline>
+<codeline lineno="61"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>only<sp/>the<sp/>gl-renderer<sp/>module<sp/>links<sp/>to<sp/>it,<sp/>the<sp/>call<sp/>above<sp/>won&apos;t<sp/>make</highlight></codeline>
+<codeline lineno="62"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>these<sp/>symbols<sp/>globally<sp/>available,<sp/>and<sp/>loading<sp/>the<sp/>DRI<sp/>driver<sp/>fails.</highlight></codeline>
+<codeline lineno="63"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Workaround<sp/>this<sp/>by<sp/>dlopen()&apos;ing<sp/>libglapi<sp/>with<sp/>RTLD_GLOBAL.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dlopen(</highlight><highlight class="stringliteral">&quot;libglapi.so.0&quot;</highlight><highlight class="normal">,<sp/>RTLD_LAZY<sp/>|<sp/>RTLD_GLOBAL);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gbm<sp/>=<sp/>gbm_create_device(fd);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>gbm;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>When<sp/>initializing<sp/>EGL,<sp/>if<sp/>the<sp/>preferred<sp/>buffer<sp/>format<sp/>isn&apos;t<sp/>available</highlight></codeline>
+<codeline lineno="72"><highlight class="comment"><sp/>*<sp/>we<sp/>may<sp/>be<sp/>able<sp/>to<sp/>substitute<sp/>an<sp/>ARGB<sp/>format<sp/>for<sp/>an<sp/>XRGB<sp/>one.</highlight></codeline>
+<codeline lineno="73"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="74"><highlight class="comment"><sp/>*<sp/>This<sp/>returns<sp/>0<sp/>if<sp/>substitution<sp/>isn&apos;t<sp/>possible,<sp/>but<sp/>0<sp/>might<sp/>be<sp/>a</highlight></codeline>
+<codeline lineno="75"><highlight class="comment"><sp/>*<sp/>legitimate<sp/>format<sp/>for<sp/>other<sp/>EGL<sp/>platforms,<sp/>so<sp/>the<sp/>caller<sp/>is</highlight></codeline>
+<codeline lineno="76"><highlight class="comment"><sp/>*<sp/>responsible<sp/>for<sp/>checking<sp/>for<sp/>0<sp/>before<sp/>calling<sp/>gl_renderer-&gt;create().</highlight></codeline>
+<codeline lineno="77"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="78"><highlight class="comment"><sp/>*<sp/>This<sp/>works<sp/>around<sp/>https://bugs.freedesktop.org/show_bug.cgi?id=89689</highlight></codeline>
+<codeline lineno="79"><highlight class="comment"><sp/>*<sp/>but<sp/>it&apos;s<sp/>entirely<sp/>possible<sp/>we&apos;ll<sp/>see<sp/>this<sp/>again<sp/>on<sp/>other<sp/>implementations.</highlight></codeline>
+<codeline lineno="80"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint32_t</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><ref refid="drm-gbm_8c_1aa01f313d7b5b21a13473e6372f2cb5b3" kindref="member">fallback_format_for</ref>(uint32_t<sp/>format)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpixel__format__info" kindref="compound">pixel_format_info</ref><sp/>*pf;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pf<sp/>=<sp/><ref refid="pixel-formats_8c_1a5a87679d713686c9ec969a5fabe2165e" kindref="member">pixel_format_get_info_by_opaque_substitute</ref>(<ref refid="structpixel__format__info_1a3844ff33eebe78a056668815ee200b58" kindref="member">format</ref>);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!pf)</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pf-&gt;<ref refid="structpixel__format__info_1a3844ff33eebe78a056668815ee200b58" kindref="member">format</ref>;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><ref refid="drm-gbm_8c_1a7d3814bed133d1c5db8b1a146ad4006c" kindref="member">drm_backend_create_gl_renderer</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdrm__backend" kindref="compound">drm_backend</ref><sp/>*<ref refid="structpixel__format__info_1a1c07cd11c9e5560254766b802a2de9df" kindref="member">b</ref>)</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structpixel__format__info_1a3844ff33eebe78a056668815ee200b58" kindref="member">format</ref>[3]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpixel__format__info_1a1c07cd11c9e5560254766b802a2de9df" kindref="member">b</ref>-&gt;gbm_format,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="drm-gbm_8c_1aa01f313d7b5b21a13473e6372f2cb5b3" kindref="member">fallback_format_for</ref>(<ref refid="structpixel__format__info_1a1c07cd11c9e5560254766b802a2de9df" kindref="member">b</ref>-&gt;gbm_format),</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structgl__renderer__display__options" kindref="compound">gl_renderer_display_options</ref><sp/>options<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="structgl__renderer__display__options_1af7b55369e1f51f0a3f67a16c0301f6d5" kindref="member">egl_platform</ref><sp/>=<sp/>EGL_PLATFORM_GBM_KHR,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.egl_native_display<sp/>=<sp/>b-&gt;<ref refid="structdrm__backend_1a1b0a51afacc8b8503249dff3e6e0e1d5" kindref="member">gbm</ref>,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.egl_surface_type<sp/>=<sp/><ref refid="gl-renderer_8h_1a0afa78b0eede7a459e7df188ccd7a371" kindref="member">EGL_WINDOW_BIT</ref>,</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.drm_formats<sp/>=<sp/>format,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.drm_formats_count<sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(format[1])</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>options.<ref refid="structgl__renderer__display__options_1a1a8c93300796002b03508506b7139afc" kindref="member">drm_formats_count</ref><sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="structgl__renderer" kindref="compound">gl_renderer</ref>-&gt;display_create(b-&gt;<ref refid="structdrm__backend_1a39745a9a0a892536a99063caeb5fa6b6" kindref="member">compositor</ref>,<sp/>&amp;options)<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><ref refid="drm-gbm_8c_1a29c5bc03e5d1582752ccd9614d4ae5a5" kindref="member">init_egl</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdrm__backend" kindref="compound">drm_backend</ref><sp/>*b)</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b-&gt;<ref refid="structdrm__backend_1a1b0a51afacc8b8503249dff3e6e0e1d5" kindref="member">gbm</ref><sp/>=<sp/><ref refid="drm-gbm_8c_1a704700553faa9e991e48f786e28e2161" kindref="member">create_gbm_device</ref>(b-&gt;<ref refid="structdrm__backend_1aa82b86e30f7e51cb7f6551e1e959e85f" kindref="member">drm</ref>.<ref refid="structdrm__backend_1ab202144207011b5359cb5741fa58fe70" kindref="member">fd</ref>);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!b-&gt;<ref refid="structdrm__backend_1a1b0a51afacc8b8503249dff3e6e0e1d5" kindref="member">gbm</ref>)</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="drm-gbm_8c_1a7d3814bed133d1c5db8b1a146ad4006c" kindref="member">drm_backend_create_gl_renderer</ref>(b)<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gbm_device_destroy(b-&gt;<ref refid="structdrm__backend_1a1b0a51afacc8b8503249dff3e6e0e1d5" kindref="member">gbm</ref>);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="drm-gbm_8c_1a1534f583e16c2f3bc219a647e65e7025" kindref="member">drm_output_fini_cursor_egl</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdrm__output" kindref="compound">drm_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref>)</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>ARRAY_LENGTH(<ref refid="structoutput" kindref="compound">output</ref>-&gt;gbm_cursor_fb);<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="drm-internal_8h_1ae3cf6e3b3e9ffaa56cea4a92a6cec848" kindref="member">drm_fb_unref</ref>(<ref refid="structoutput" kindref="compound">output</ref>-&gt;gbm_cursor_fb[i]);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;gbm_cursor_fb[i]<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><ref refid="drm-gbm_8c_1a9184b403ab6cd21fc9ad826f87460d24" kindref="member">drm_output_init_cursor_egl</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdrm__output" kindref="compound">drm_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref>,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdrm__backend" kindref="compound">drm_backend</ref><sp/>*b)</highlight></codeline>
+<codeline lineno="146"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>No<sp/>point<sp/>creating<sp/>cursors<sp/>if<sp/>we<sp/>don&apos;t<sp/>have<sp/>a<sp/>plane<sp/>for<sp/>them.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="structoutput" kindref="compound">output</ref>-&gt;cursor_plane)</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>ARRAY_LENGTH(<ref refid="structoutput" kindref="compound">output</ref>-&gt;gbm_cursor_fb);<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">gbm_bo<sp/>*bo;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bo<sp/>=<sp/>gbm_bo_create(b-&gt;<ref refid="structdrm__backend_1a1b0a51afacc8b8503249dff3e6e0e1d5" kindref="member">gbm</ref>,<sp/>b-&gt;<ref refid="structdrm__backend_1a6604f296567ccd200064cbbb57aed7c2" kindref="member">cursor_width</ref>,<sp/>b-&gt;<ref refid="structdrm__backend_1a680e6639d09d220f29c4790fff478dc7" kindref="member">cursor_height</ref>,</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GBM_FORMAT_ARGB8888,</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="drm-internal_8h_1ad3aff0f2f31aa1b2db0e50458b5f742c" kindref="member">GBM_BO_USE_CURSOR</ref><sp/>|<sp/>GBM_BO_USE_WRITE);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!bo)</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;gbm_cursor_fb[i]<sp/>=</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="drm-internal_8h_1a34a17426370d283c9f9d994ccb00ac7a" kindref="member">drm_fb_get_from_bo</ref>(bo,<sp/>b,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/><ref refid="drm-internal_8h_1a36a88e80b1a76c0736f65f952bfc95e5aa8e603eaf9f7b05ceecc442d72877164" kindref="member">BUFFER_CURSOR</ref>);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="structoutput" kindref="compound">output</ref>-&gt;gbm_cursor_fb[i])<sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gbm_bo_destroy(bo);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>err;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;gbm_cursor_handle[i]<sp/>=<sp/>gbm_bo_get_handle(bo).s32;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal">err:</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wlog_1ga6a7cc2161ce1dad600859022b30162c8" kindref="member">weston_log</ref>(</highlight><highlight class="stringliteral">&quot;cursor<sp/>buffers<sp/>unavailable,<sp/>using<sp/>gl<sp/>cursors\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b-&gt;<ref refid="structdrm__backend_1a51d71b33e0a2454ca4685520974f27e6" kindref="member">cursors_are_broken</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="drm-gbm_8c_1a1534f583e16c2f3bc219a647e65e7025" kindref="member">drm_output_fini_cursor_egl</ref>(<ref refid="structoutput" kindref="compound">output</ref>);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Init<sp/>output<sp/>state<sp/>that<sp/>depends<sp/>on<sp/>gl<sp/>or<sp/>gbm<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><ref refid="drm-gbm_8c_1a033b431220a942bd550663eb05f70f94" kindref="member">drm_output_init_egl</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdrm__output" kindref="compound">drm_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref>,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdrm__backend" kindref="compound">drm_backend</ref><sp/>*b)</highlight></codeline>
+<codeline lineno="183"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>format[2]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;gbm_format,</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="drm-gbm_8c_1aa01f313d7b5b21a13473e6372f2cb5b3" kindref="member">fallback_format_for</ref>(<ref refid="structoutput" kindref="compound">output</ref>-&gt;gbm_format),</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structgl__renderer__output__options" kindref="compound">gl_renderer_output_options</ref><sp/>options<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="structgl__renderer__display__options_1a3c7f40c55bfef4ba47c355334fb226d4" kindref="member">drm_formats</ref><sp/>=<sp/>format,</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.drm_formats_count<sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__mode" kindref="compound">weston_mode</ref><sp/>*mode<sp/>=<sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;base.current_mode;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdrm__plane" kindref="compound">drm_plane</ref><sp/>*plane<sp/>=<sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;scanout_plane;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="structoutput" kindref="compound">output</ref>-&gt;gbm_surface<sp/>==<sp/>NULL);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>plane-&gt;<ref refid="structdrm__plane_1a86313f26511ca3f8f110a5b7af9ac78a" kindref="member">count_formats</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(plane-&gt;<ref refid="structdrm__plane_1a5adbfe14e7d3f1824dc383d8df2876cc" kindref="member">formats</ref>[i].<ref refid="structdrm__plane_1a3c95d78a9bc48b279b2ff8635f17e87d" kindref="member">format</ref><sp/>==<sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;gbm_format)</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>==<sp/>plane-&gt;<ref refid="structdrm__plane_1a86313f26511ca3f8f110a5b7af9ac78a" kindref="member">count_formats</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wlog_1ga6a7cc2161ce1dad600859022b30162c8" kindref="member">weston_log</ref>(</highlight><highlight class="stringliteral">&quot;format<sp/>0x%x<sp/>not<sp/>supported<sp/>by<sp/>output<sp/>%s\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;gbm_format,<sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;base.name);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_GBM_MODIFIERS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(plane-&gt;<ref refid="structdrm__plane_1a5adbfe14e7d3f1824dc383d8df2876cc" kindref="member">formats</ref>[i].<ref refid="structdrm__plane_1ae6bfcc58b333a60ee40b43cb7fa379cf" kindref="member">count_modifiers</ref><sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;gbm_surface<sp/>=</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gbm_surface_create_with_modifiers(b-&gt;<ref refid="structdrm__backend_1a1b0a51afacc8b8503249dff3e6e0e1d5" kindref="member">gbm</ref>,</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mode-&gt;<ref refid="structweston__mode_1aea5fb418a59b04da33ae6907309fea4e" kindref="member">width</ref>,</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mode-&gt;<ref refid="structweston__mode_1a54e031b141b63ff2479b784bfc6f021e" kindref="member">height</ref>,</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;gbm_format,</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>plane-&gt;<ref refid="structdrm__plane_1a5adbfe14e7d3f1824dc383d8df2876cc" kindref="member">formats</ref>[i].<ref refid="structdrm__plane_1adc19000ed02010eacdb2df1837fe65c0" kindref="member">modifiers</ref>,</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>plane-&gt;<ref refid="structdrm__plane_1a5adbfe14e7d3f1824dc383d8df2876cc" kindref="member">formats</ref>[i].<ref refid="structdrm__plane_1ae6bfcc58b333a60ee40b43cb7fa379cf" kindref="member">count_modifiers</ref>);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>If<sp/>allocating<sp/>with<sp/>modifiers<sp/>fails,<sp/>try<sp/>again<sp/>without.<sp/>This<sp/>can</highlight></codeline>
+<codeline lineno="221"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>happen<sp/>when<sp/>the<sp/>KMS<sp/>display<sp/>device<sp/>supports<sp/>modifiers<sp/>but<sp/>the</highlight></codeline>
+<codeline lineno="222"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>GBM<sp/>driver<sp/>does<sp/>not,<sp/>e.g.<sp/>the<sp/>old<sp/>i915<sp/>Mesa<sp/>driver.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="structoutput" kindref="compound">output</ref>-&gt;gbm_surface)</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;gbm_surface<sp/>=</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gbm_surface_create(b-&gt;<ref refid="structdrm__backend_1a1b0a51afacc8b8503249dff3e6e0e1d5" kindref="member">gbm</ref>,<sp/>mode-&gt;<ref refid="structweston__mode_1aea5fb418a59b04da33ae6907309fea4e" kindref="member">width</ref>,<sp/>mode-&gt;<ref refid="structweston__mode_1a54e031b141b63ff2479b784bfc6f021e" kindref="member">height</ref>,</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;gbm_format,</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;gbm_bo_flags);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="structoutput" kindref="compound">output</ref>-&gt;gbm_surface)<sp/>{</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wlog_1ga6a7cc2161ce1dad600859022b30162c8" kindref="member">weston_log</ref>(</highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>create<sp/>gbm<sp/>surface\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(options.<ref refid="structgl__renderer__output__options_1aef1d377ceb344ade2ebcedf02dbf6d53" kindref="member">drm_formats</ref>[1])</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>options.<ref refid="structgl__renderer__output__options_1ae575c80769bbd43947478c845e36bce3" kindref="member">drm_formats_count</ref><sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>options.<ref refid="structgl__renderer__output__options_1a82e504499e5952cfb2f0308dcfed3fee" kindref="member">window_for_legacy</ref><sp/>=<sp/>(<ref refid="gl-renderer_8h_1a4007ec919445bd39e1cdbf77c07fc090" kindref="member">EGLNativeWindowType</ref>)<sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;gbm_surface;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>options.<ref refid="structgl__renderer__output__options_1a4a41f1b90ab23ec044d3ee9f5dc18168" kindref="member">window_for_platform</ref><sp/>=<sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;gbm_surface;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(<ref refid="structgl__renderer" kindref="compound">gl_renderer</ref>-&gt;output_window_create(&amp;<ref refid="structoutput" kindref="compound">output</ref>-&gt;base,<sp/>&amp;options)<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wlog_1ga6a7cc2161ce1dad600859022b30162c8" kindref="member">weston_log</ref>(</highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>create<sp/>gl<sp/>renderer<sp/>output<sp/>state\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gbm_surface_destroy(<ref refid="structoutput" kindref="compound">output</ref>-&gt;gbm_surface);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;gbm_surface<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="drm-gbm_8c_1a9184b403ab6cd21fc9ad826f87460d24" kindref="member">drm_output_init_cursor_egl</ref>(<ref refid="structoutput" kindref="compound">output</ref>,<sp/>b);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="251"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><ref refid="drm-gbm_8c_1af955fa7eced01d757733de498e0e568e" kindref="member">drm_output_fini_egl</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdrm__output" kindref="compound">drm_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref>)</highlight></codeline>
+<codeline lineno="255"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdrm__backend" kindref="compound">drm_backend</ref><sp/>*b<sp/>=<sp/><ref refid="drm-internal_8h_1a8b3822c0c16326d34de44e3738f19c29" kindref="member">to_drm_backend</ref>(<ref refid="structoutput" kindref="compound">output</ref>-&gt;base.compositor);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Destroying<sp/>the<sp/>GBM<sp/>surface<sp/>will<sp/>destroy<sp/>all<sp/>our<sp/>GBM<sp/>buffers,</highlight></codeline>
+<codeline lineno="259"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>regardless<sp/>of<sp/>refcount.<sp/>Ensure<sp/>we<sp/>destroy<sp/>them<sp/>here.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!b-&gt;<ref refid="structdrm__backend_1a4d10f5bad395f2ef179135e803e5b0c6" kindref="member">shutting_down</ref><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;scanout_plane-&gt;state_cur-&gt;fb<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;scanout_plane-&gt;state_cur-&gt;fb-&gt;type<sp/>==<sp/><ref refid="drm-internal_8h_1a36a88e80b1a76c0736f65f952bfc95e5a43ddb947aa34f0bf5150a17c4f4526cc" kindref="member">BUFFER_GBM_SURFACE</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="drm-internal_8h_1a73b92e72537b4436549fd5c17475975d" kindref="member">drm_plane_reset_state</ref>(<ref refid="structoutput" kindref="compound">output</ref>-&gt;scanout_plane);</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structgl__renderer" kindref="compound">gl_renderer</ref>-&gt;output_destroy(&amp;<ref refid="structoutput" kindref="compound">output</ref>-&gt;base);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gbm_surface_destroy(<ref refid="structoutput" kindref="compound">output</ref>-&gt;gbm_surface);</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;gbm_surface<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="drm-gbm_8c_1a1534f583e16c2f3bc219a647e65e7025" kindref="member">drm_output_fini_cursor_egl</ref>(<ref refid="structoutput" kindref="compound">output</ref>);</highlight></codeline>
+<codeline lineno="270"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdrm__fb" kindref="compound">drm_fb</ref><sp/>*</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><ref refid="drm-gbm_8c_1af9db6d4c15d36f5d3a42bfb782216952" kindref="member">drm_output_render_gl</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdrm__output__state" kindref="compound">drm_output_state</ref><sp/>*state,<sp/>pixman_region32_t<sp/>*damage)</highlight></codeline>
+<codeline lineno="274"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdrm__output" kindref="compound">drm_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref><sp/>=<sp/>state-&gt;<ref refid="structdrm__output__state_1a079380ed7811bcbf1aecf219f7209aac" kindref="member">output</ref>;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdrm__backend" kindref="compound">drm_backend</ref><sp/>*b<sp/>=<sp/><ref refid="drm-internal_8h_1a8b3822c0c16326d34de44e3738f19c29" kindref="member">to_drm_backend</ref>(<ref refid="structoutput" kindref="compound">output</ref>-&gt;base.compositor);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">gbm_bo<sp/>*bo;</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdrm__fb" kindref="compound">drm_fb</ref><sp/>*ret;</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;base.compositor-&gt;renderer-&gt;repaint_output(&amp;<ref refid="structoutput" kindref="compound">output</ref>-&gt;base,</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>damage);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdrm__fb_1ae1364f7bbb0151c872e64de45fc73485" kindref="member">bo</ref><sp/>=<sp/>gbm_surface_lock_front_buffer(<ref refid="structoutput" kindref="compound">output</ref>-&gt;gbm_surface);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="structdrm__fb_1ae1364f7bbb0151c872e64de45fc73485" kindref="member">bo</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wlog_1ga6a7cc2161ce1dad600859022b30162c8" kindref="member">weston_log</ref>(</highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>lock<sp/>front<sp/>buffer:<sp/>%s\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strerror(errno));</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>renderer<sp/>always<sp/>produces<sp/>an<sp/>opaque<sp/>image.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/><ref refid="drm-internal_8h_1a34a17426370d283c9f9d994ccb00ac7a" kindref="member">drm_fb_get_from_bo</ref>(<ref refid="structdrm__fb_1ae1364f7bbb0151c872e64de45fc73485" kindref="member">bo</ref>,<sp/>b,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/><ref refid="drm-internal_8h_1a36a88e80b1a76c0736f65f952bfc95e5a43ddb947aa34f0bf5150a17c4f4526cc" kindref="member">BUFFER_GBM_SURFACE</ref>);</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!ret)<sp/>{</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wlog_1ga6a7cc2161ce1dad600859022b30162c8" kindref="member">weston_log</ref>(</highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>get<sp/>drm_fb<sp/>for<sp/>bo\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gbm_surface_release_buffer(<ref refid="structoutput" kindref="compound">output</ref>-&gt;gbm_surface,<sp/><ref refid="structdrm__fb_1ae1364f7bbb0151c872e64de45fc73485" kindref="member">bo</ref>);</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret-&gt;<ref refid="structdrm__fb_1a8efde831b28f27c5aa1741cdd7dfdc80" kindref="member">gbm_surface</ref><sp/>=<sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;gbm_surface;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="300"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><ref refid="drm-gbm_8c_1a7ea9f9a8dafc663f08f0824e73ef0d0d" kindref="member">switch_to_gl_renderer</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdrm__backend" kindref="compound">drm_backend</ref><sp/>*b)</highlight></codeline>
+<codeline lineno="304"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdrm__output" kindref="compound">drm_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref>;</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>dmabuf_support_inited;</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>linux_explicit_sync_inited;</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!b-&gt;<ref refid="structdrm__backend_1a68bef50ae1a36d808258884e345ee172" kindref="member">use_pixman</ref>)</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dmabuf_support_inited<sp/>=<sp/>!!b-&gt;<ref refid="structdrm__backend_1a39745a9a0a892536a99063caeb5fa6b6" kindref="member">compositor</ref>-&gt;<ref refid="structweston__compositor_1adfa35d8b6ef4bac08ccecbbd37acb81d" kindref="member">renderer</ref>-&gt;<ref refid="structweston__renderer_1a5999bb29493d522ddcff40318e677e2d" kindref="member">import_dmabuf</ref>;</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>linux_explicit_sync_inited<sp/>=</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b-&gt;<ref refid="structdrm__backend_1a39745a9a0a892536a99063caeb5fa6b6" kindref="member">compositor</ref>-&gt;<ref refid="structweston__compositor_1a5be5c87f03fcdbc3aa7c456ebb96e4aa" kindref="member">capabilities</ref><sp/>&amp;<sp/><ref refid="libweston_8h_1a4d5e112f3ecc541323c729709ea9ee2dac0105501579ea73b78960706632814a9" kindref="member">WESTON_CAP_EXPLICIT_SYNC</ref>;</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wlog_1ga6a7cc2161ce1dad600859022b30162c8" kindref="member">weston_log</ref>(</highlight><highlight class="stringliteral">&quot;Switching<sp/>to<sp/>GL<sp/>renderer\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b-&gt;<ref refid="structdrm__backend_1a1b0a51afacc8b8503249dff3e6e0e1d5" kindref="member">gbm</ref><sp/>=<sp/><ref refid="drm-gbm_8c_1a704700553faa9e991e48f786e28e2161" kindref="member">create_gbm_device</ref>(b-&gt;<ref refid="structdrm__backend_1aa82b86e30f7e51cb7f6551e1e959e85f" kindref="member">drm</ref>.<ref refid="structdrm__backend_1ab202144207011b5359cb5741fa58fe70" kindref="member">fd</ref>);</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!b-&gt;<ref refid="structdrm__backend_1a1b0a51afacc8b8503249dff3e6e0e1d5" kindref="member">gbm</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wlog_1ga6a7cc2161ce1dad600859022b30162c8" kindref="member">weston_log</ref>(</highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>create<sp/>gbm<sp/>device.<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Aborting<sp/>renderer<sp/>switch\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_list_for_each(<ref refid="structoutput" kindref="compound">output</ref>,<sp/>&amp;b-&gt;<ref refid="structdrm__backend_1a39745a9a0a892536a99063caeb5fa6b6" kindref="member">compositor</ref>-&gt;<ref refid="structweston__compositor_1a581453fe2554be5647e5ecae8f9b99ba" kindref="member">output_list</ref>,<sp/><ref refid="structdrm__output_1a285bafac36ab348108d8be01e24e451a" kindref="member">base</ref>.<ref refid="structweston__output_1ac8d0528e465546f7c9074c8319215986" kindref="member">link</ref>)</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pixman-renderer_8c_1a5cb15b33923a1033c69fd1415ed5608e" kindref="member">pixman_renderer_output_destroy</ref>(&amp;<ref refid="structoutput" kindref="compound">output</ref>-&gt;<ref refid="structdrm__output_1a285bafac36ab348108d8be01e24e451a" kindref="member">base</ref>);</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b-&gt;compositor-&gt;renderer-&gt;destroy(b-&gt;compositor);</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(<ref refid="drm-gbm_8c_1a7d3814bed133d1c5db8b1a146ad4006c" kindref="member">drm_backend_create_gl_renderer</ref>(b)<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gbm_device_destroy(b-&gt;gbm);</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wlog_1ga6a7cc2161ce1dad600859022b30162c8" kindref="member">weston_log</ref>(</highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>create<sp/>GL<sp/>renderer.<sp/>Quitting.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>FIXME:<sp/>we<sp/>need<sp/>a<sp/>function<sp/>to<sp/>shutdown<sp/>cleanly<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(0);</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_list_for_each(<ref refid="structoutput" kindref="compound">output</ref>,<sp/>&amp;b-&gt;<ref refid="structdrm__backend_1a39745a9a0a892536a99063caeb5fa6b6" kindref="member">compositor</ref>-&gt;<ref refid="structweston__compositor_1a581453fe2554be5647e5ecae8f9b99ba" kindref="member">output_list</ref>,<sp/><ref refid="structdrm__output_1a285bafac36ab348108d8be01e24e451a" kindref="member">base</ref>.<ref refid="structweston__output_1ac8d0528e465546f7c9074c8319215986" kindref="member">link</ref>)</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="drm-gbm_8c_1a033b431220a942bd550663eb05f70f94" kindref="member">drm_output_init_egl</ref>(<ref refid="structoutput" kindref="compound">output</ref>,<sp/>b);</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b-&gt;use_pixman<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(!dmabuf_support_inited<sp/>&amp;&amp;<sp/>b-&gt;compositor-&gt;renderer-&gt;<ref refid="gl-renderer_8c_1a973b2f541e84147d29d820e7c2458d82" kindref="member">import_dmabuf</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="linux-dmabuf_8c_1a9d35a0fd3b7287d34b2fd201fa1b1ca7" kindref="member">linux_dmabuf_setup</ref>(b-&gt;compositor)<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wlog_1ga6a7cc2161ce1dad600859022b30162c8" kindref="member">weston_log</ref>(</highlight><highlight class="stringliteral">&quot;Error:<sp/>initializing<sp/>dmabuf<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;support<sp/>failed.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!linux_explicit_sync_inited<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(b-&gt;compositor-&gt;capabilities<sp/>&amp;<sp/><ref refid="libweston_8h_1a4d5e112f3ecc541323c729709ea9ee2dac0105501579ea73b78960706632814a9" kindref="member">WESTON_CAP_EXPLICIT_SYNC</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="linux-explicit-synchronization_8c_1a33d5b1b9de9b58532eafe9666f39e8c0" kindref="member">linux_explicit_synchronization_setup</ref>(b-&gt;compositor)<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wlog_1ga6a7cc2161ce1dad600859022b30162c8" kindref="member">weston_log</ref>(</highlight><highlight class="stringliteral">&quot;Error:<sp/>initializing<sp/>explicit<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>synchronization<sp/>support<sp/>failed.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="354"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><ref refid="drm-gbm_8c_1ae6d511cf7f30169b12495b2e2610725f" kindref="member">renderer_switch_binding</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__keyboard" kindref="compound">weston_keyboard</ref><sp/>*<ref refid="structkeyboard" kindref="compound">keyboard</ref>,</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>timespec<sp/>*time,<sp/>uint32_t<sp/>key,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)</highlight></codeline>
+<codeline lineno="359"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdrm__backend" kindref="compound">drm_backend</ref><sp/>*b<sp/>=</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="drm-internal_8h_1a8b3822c0c16326d34de44e3738f19c29" kindref="member">to_drm_backend</ref>(<ref refid="structkeyboard" kindref="compound">keyboard</ref>-&gt;seat-&gt;compositor);</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="drm-gbm_8c_1a7ea9f9a8dafc663f08f0824e73ef0d0d" kindref="member">switch_to_gl_renderer</ref>(b);</highlight></codeline>
+<codeline lineno="364"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c"/>
+  </compounddef>
+</doxygen>

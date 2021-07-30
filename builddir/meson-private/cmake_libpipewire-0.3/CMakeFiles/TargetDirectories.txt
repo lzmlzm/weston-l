@@ -1,0 +1,2 @@
+/home/lzm/Wayland/weston/builddir/meson-private/cmake_libpipewire-0.3/CMakeFiles/rebuild_cache.dir
+/home/lzm/Wayland/weston/builddir/meson-private/cmake_libpipewire-0.3/CMakeFiles/edit_cache.dir

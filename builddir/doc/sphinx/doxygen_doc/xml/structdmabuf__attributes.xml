@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structdmabuf__attributes" kind="struct" language="C++" prot="public">
+    <compoundname>dmabuf_attributes</compoundname>
+    <includes refid="linux-dmabuf_8h" local="no">linux-dmabuf.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdmabuf__attributes_1aca9083138f9bf5e7c359f57f8daec03c" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t dmabuf_attributes::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" line="38" column="9" bodyfile="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdmabuf__attributes_1a4aea605be2fe267863b1849f1e63f44d" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t dmabuf_attributes::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" line="39" column="9" bodyfile="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdmabuf__attributes_1a164a1a414225914d63e4976fe70c3d9d" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t dmabuf_attributes::format</definition>
+        <argsstring></argsstring>
+        <name>format</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" line="40" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdmabuf__attributes_1adb394e9536714c5db04ea8e5b7ac0063" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t dmabuf_attributes::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" line="41" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdmabuf__attributes_1ad4accfe9d382c47849a35bc3bb4affc0" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int dmabuf_attributes::n_planes</definition>
+        <argsstring></argsstring>
+        <name>n_planes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" line="42" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdmabuf__attributes_1ab8e678e82a6b79f7e7ac970201251198" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int dmabuf_attributes::fd[MAX_DMABUF_PLANES]</definition>
+        <argsstring>[MAX_DMABUF_PLANES]</argsstring>
+        <name>fd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" line="43" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdmabuf__attributes_1a4e2f1d01ed4094ed5bb23628326bed72" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t dmabuf_attributes::offset[MAX_DMABUF_PLANES]</definition>
+        <argsstring>[MAX_DMABUF_PLANES]</argsstring>
+        <name>offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" line="44" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdmabuf__attributes_1a5ba22d828fbb58ee02f205c72a939f98" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t dmabuf_attributes::stride[MAX_DMABUF_PLANES]</definition>
+        <argsstring>[MAX_DMABUF_PLANES]</argsstring>
+        <name>stride</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" line="45" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdmabuf__attributes_1ab6e328e4c0816fd48290c701e9510744" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t dmabuf_attributes::modifier[MAX_DMABUF_PLANES]</definition>
+        <argsstring>[MAX_DMABUF_PLANES]</argsstring>
+        <name>modifier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" line="46" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" line="37" column="24" bodyfile="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" bodystart="37" bodyend="47"/>
+    <listofallmembers>
+      <member refid="structdmabuf__attributes_1ab8e678e82a6b79f7e7ac970201251198" prot="public" virt="non-virtual"><scope>dmabuf_attributes</scope><name>fd</name></member>
+      <member refid="structdmabuf__attributes_1adb394e9536714c5db04ea8e5b7ac0063" prot="public" virt="non-virtual"><scope>dmabuf_attributes</scope><name>flags</name></member>
+      <member refid="structdmabuf__attributes_1a164a1a414225914d63e4976fe70c3d9d" prot="public" virt="non-virtual"><scope>dmabuf_attributes</scope><name>format</name></member>
+      <member refid="structdmabuf__attributes_1a4aea605be2fe267863b1849f1e63f44d" prot="public" virt="non-virtual"><scope>dmabuf_attributes</scope><name>height</name></member>
+      <member refid="structdmabuf__attributes_1ab6e328e4c0816fd48290c701e9510744" prot="public" virt="non-virtual"><scope>dmabuf_attributes</scope><name>modifier</name></member>
+      <member refid="structdmabuf__attributes_1ad4accfe9d382c47849a35bc3bb4affc0" prot="public" virt="non-virtual"><scope>dmabuf_attributes</scope><name>n_planes</name></member>
+      <member refid="structdmabuf__attributes_1a4e2f1d01ed4094ed5bb23628326bed72" prot="public" virt="non-virtual"><scope>dmabuf_attributes</scope><name>offset</name></member>
+      <member refid="structdmabuf__attributes_1a5ba22d828fbb58ee02f205c72a939f98" prot="public" virt="non-virtual"><scope>dmabuf_attributes</scope><name>stride</name></member>
+      <member refid="structdmabuf__attributes_1aca9083138f9bf5e7c359f57f8daec03c" prot="public" virt="non-virtual"><scope>dmabuf_attributes</scope><name>width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

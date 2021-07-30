@@ -1,0 +1,604 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="config-parser_8h" kind="file" language="C++">
+    <compoundname>config-parser.h</compoundname>
+    <includes local="no">stdbool.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includedby refid="config-parser-test_8c" local="no">/home/lzm/Wayland/weston/tests/config-parser-test.c</includedby>
+    <includedby refid="weston-test-desktop-shell_8c" local="no">/home/lzm/Wayland/weston/tests/weston-test-desktop-shell.c</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>stdbool.h</label>
+      </node>
+      <node id="3">
+        <label>stdint.h</label>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/include/libweston/config-parser.h</label>
+        <link refid="config-parser_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/lzm/Wayland/weston/tests/config-parser-test.c</label>
+        <link refid="config-parser-test_8c"/>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/include/libweston/config-parser.h</label>
+        <link refid="config-parser_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/lzm/Wayland/weston/tests/weston-test-desktop-shell.c</label>
+        <link refid="weston-test-desktop-shell_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structconfig__key" prot="public">config_key</innerclass>
+    <innerclass refid="structconfig__section" prot="public">config_section</innerclass>
+    <innerclass refid="structweston__option" prot="public">weston_option</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="config-parser_8h_1ad60264cfb3043dccfdab11969a215232" prot="public" static="no">
+        <name>WESTON_CONFIG_FILE_ENV_VAR</name>
+        <initializer>&quot;WESTON_CONFIG_FILE&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/config-parser.h" line="36" column="9" bodyfile="/home/lzm/Wayland/weston/include/libweston/config-parser.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="config-parser_8h_1a358b5686f323b82aea57c30422526302" prot="public" static="no" strong="no">
+        <type></type>
+        <name>config_key_type</name>
+        <enumvalue id="config-parser_8h_1a358b5686f323b82aea57c30422526302a24b6ed89dd6d34ccbb206c9bb114f965" prot="public">
+          <name>CONFIG_KEY_INTEGER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="config-parser_8h_1a358b5686f323b82aea57c30422526302a420cc00bd4aec5eb6871e618ebdfc935" prot="public">
+          <name>CONFIG_KEY_UNSIGNED_INTEGER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="config-parser_8h_1a358b5686f323b82aea57c30422526302ac036bd1cdbca2b6bc863ad1f7f5f7cef" prot="public">
+          <name>CONFIG_KEY_STRING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="config-parser_8h_1a358b5686f323b82aea57c30422526302a31123a4ff97c0a74db931ce813947dc6" prot="public">
+          <name>CONFIG_KEY_BOOLEAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/config-parser.h" line="38" column="21" bodyfile="/home/lzm/Wayland/weston/include/libweston/config-parser.h" bodystart="38" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="enum" id="config-parser_8h_1a5bd88741a222ba994bb2e9b91f2b0b42" prot="public" static="no" strong="no">
+        <type></type>
+        <name>weston_option_type</name>
+        <enumvalue id="config-parser_8h_1a5bd88741a222ba994bb2e9b91f2b0b42a78db0af7ebad1f6a4a5d26fbd216c57b" prot="public">
+          <name>WESTON_OPTION_INTEGER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="config-parser_8h_1a5bd88741a222ba994bb2e9b91f2b0b42a36dde6a45d270b040d68d71b7994471c" prot="public">
+          <name>WESTON_OPTION_UNSIGNED_INTEGER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="config-parser_8h_1a5bd88741a222ba994bb2e9b91f2b0b42af5c880f16212cb432e4a72c925686379" prot="public">
+          <name>WESTON_OPTION_STRING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="config-parser_8h_1a5bd88741a222ba994bb2e9b91f2b0b42aa16b1e02ceb7d47c2c5309866bd2bc31" prot="public">
+          <name>WESTON_OPTION_BOOLEAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/config-parser.h" line="58" column="24" bodyfile="/home/lzm/Wayland/weston/include/libweston/config-parser.h" bodystart="58" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="config-parser_8h_1a85f7f113eac26c3f61087ed2c1782a2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int parse_options</definition>
+        <argsstring>(const struct weston_option *options, int count, int *argc, char *argv[])</argsstring>
+        <name>parse_options</name>
+        <param>
+          <type>const struct <ref refid="structweston__option" kindref="compound">weston_option</ref> *</type>
+          <declname>options</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/config-parser.h" line="73" column="1" declfile="/home/lzm/Wayland/weston/include/libweston/config-parser.h" declline="73" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="config-parser_8h_1a16babf10e26c7846ff9c67d089343a61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct weston_config_section *</type>
+        <definition>struct weston_config_section* weston_config_get_section</definition>
+        <argsstring>(struct weston_config *config, const char *section, const char *key, const char *value)</argsstring>
+        <name>weston_config_get_section</name>
+        <param>
+          <type>struct weston_config *</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>section</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/config-parser.h" line="80" column="1" declfile="/home/lzm/Wayland/weston/include/libweston/config-parser.h" declline="80" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="config-parser_8h_1a4f9170207c045c4dae8693a71f0ff8a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int weston_config_section_get_int</definition>
+        <argsstring>(struct weston_config_section *section, const char *key, int32_t *value, int32_t default_value)</argsstring>
+        <name>weston_config_section_get_int</name>
+        <param>
+          <type>struct weston_config_section *</type>
+          <declname>section</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>int32_t *</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/config-parser.h" line="83" column="1" declfile="/home/lzm/Wayland/weston/include/libweston/config-parser.h" declline="83" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="config-parser_8h_1a7405618dd9130cb615da7b5a1e8e3572" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int weston_config_section_get_uint</definition>
+        <argsstring>(struct weston_config_section *section, const char *key, uint32_t *value, uint32_t default_value)</argsstring>
+        <name>weston_config_section_get_uint</name>
+        <param>
+          <type>struct weston_config_section *</type>
+          <declname>section</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/config-parser.h" line="87" column="1" declfile="/home/lzm/Wayland/weston/include/libweston/config-parser.h" declline="87" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="config-parser_8h_1af7699f770689b4dc7894865ef63597e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int weston_config_section_get_color</definition>
+        <argsstring>(struct weston_config_section *section, const char *key, uint32_t *color, uint32_t default_color)</argsstring>
+        <name>weston_config_section_get_color</name>
+        <param>
+          <type>struct weston_config_section *</type>
+          <declname>section</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>color</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>default_color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/config-parser.h" line="91" column="1" declfile="/home/lzm/Wayland/weston/include/libweston/config-parser.h" declline="91" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="config-parser_8h_1aee8389efede2eaad290c93582dff7975" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int weston_config_section_get_double</definition>
+        <argsstring>(struct weston_config_section *section, const char *key, double *value, double default_value)</argsstring>
+        <name>weston_config_section_get_double</name>
+        <param>
+          <type>struct weston_config_section *</type>
+          <declname>section</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/config-parser.h" line="95" column="1" declfile="/home/lzm/Wayland/weston/include/libweston/config-parser.h" declline="95" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="config-parser_8h_1a67daf573edd253c1531ebc2b03dd8133" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int weston_config_section_get_string</definition>
+        <argsstring>(struct weston_config_section *section, const char *key, char **value, const char *default_value)</argsstring>
+        <name>weston_config_section_get_string</name>
+        <param>
+          <type>struct weston_config_section *</type>
+          <declname>section</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/config-parser.h" line="99" column="1" declfile="/home/lzm/Wayland/weston/include/libweston/config-parser.h" declline="99" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="config-parser_8h_1a48b3bf978836c148059b83c0a12fc5ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int weston_config_section_get_bool</definition>
+        <argsstring>(struct weston_config_section *section, const char *key, bool *value, bool default_value)</argsstring>
+        <name>weston_config_section_get_bool</name>
+        <param>
+          <type>struct weston_config_section *</type>
+          <declname>section</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/config-parser.h" line="104" column="1" declfile="/home/lzm/Wayland/weston/include/libweston/config-parser.h" declline="104" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="config-parser_8h_1a431217a639595342956adb4d57bc1b77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* weston_config_get_name_from_env</definition>
+        <argsstring>(void)</argsstring>
+        <name>weston_config_get_name_from_env</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/config-parser.h" line="109" column="1" declfile="/home/lzm/Wayland/weston/include/libweston/config-parser.h" declline="109" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="config-parser_8h_1a3124a085f849353bfb6e04885593988b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct weston_config *</type>
+        <definition>struct weston_config* weston_config_parse</definition>
+        <argsstring>(const char *name)</argsstring>
+        <name>weston_config_parse</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/config-parser.h" line="112" column="1" declfile="/home/lzm/Wayland/weston/include/libweston/config-parser.h" declline="112" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="config-parser_8h_1ad2cf429e7abb5ceffb7db37f56a599e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* weston_config_get_full_path</definition>
+        <argsstring>(struct weston_config *config)</argsstring>
+        <name>weston_config_get_full_path</name>
+        <param>
+          <type>struct weston_config *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/config-parser.h" line="115" column="1" declfile="/home/lzm/Wayland/weston/include/libweston/config-parser.h" declline="115" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="config-parser_8h_1a8962fd00ebd2212e95b6e268d7deb980" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_config_destroy</definition>
+        <argsstring>(struct weston_config *config)</argsstring>
+        <name>weston_config_destroy</name>
+        <param>
+          <type>struct weston_config *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/config-parser.h" line="118" column="1" declfile="/home/lzm/Wayland/weston/include/libweston/config-parser.h" declline="118" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="config-parser_8h_1a85cd076288b83fb657fc56d32085f3f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int weston_config_next_section</definition>
+        <argsstring>(struct weston_config *config, struct weston_config_section **section, const char **name)</argsstring>
+        <name>weston_config_next_section</name>
+        <param>
+          <type>struct weston_config *</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type>struct weston_config_section **</type>
+          <declname>section</declname>
+        </param>
+        <param>
+          <type>const char **</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/config-parser.h" line="120" column="5" declfile="/home/lzm/Wayland/weston/include/libweston/config-parser.h" declline="120" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2008<sp/>Kristian<sp/>Høgsberg</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>(including<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>next<sp/>paragraph)<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>NONINFRINGEMENT.<sp/><sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CONFIGPARSER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONFIGPARSER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/><sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="config-parser_8h_1ad60264cfb3043dccfdab11969a215232" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WESTON_CONFIG_FILE_ENV_VAR<sp/>&quot;WESTON_CONFIG_FILE&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="config-parser_8h_1a358b5686f323b82aea57c30422526302" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="config-parser_8h_1a358b5686f323b82aea57c30422526302" kindref="member">config_key_type</ref><sp/>{</highlight></codeline>
+<codeline lineno="39" refid="config-parser_8h_1a358b5686f323b82aea57c30422526302a24b6ed89dd6d34ccbb206c9bb114f965" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="config-parser_8h_1a358b5686f323b82aea57c30422526302a24b6ed89dd6d34ccbb206c9bb114f965" kindref="member">CONFIG_KEY_INTEGER</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>typeof<sp/>data<sp/>=<sp/>int<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="config-parser_8h_1a358b5686f323b82aea57c30422526302a420cc00bd4aec5eb6871e618ebdfc935" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="config-parser_8h_1a358b5686f323b82aea57c30422526302a420cc00bd4aec5eb6871e618ebdfc935" kindref="member">CONFIG_KEY_UNSIGNED_INTEGER</ref>,<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>typeof<sp/>data<sp/>=<sp/>unsigned<sp/>int<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="config-parser_8h_1a358b5686f323b82aea57c30422526302ac036bd1cdbca2b6bc863ad1f7f5f7cef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="config-parser_8h_1a358b5686f323b82aea57c30422526302ac036bd1cdbca2b6bc863ad1f7f5f7cef" kindref="member">CONFIG_KEY_STRING</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>typeof<sp/>data<sp/>=<sp/>char*<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="config-parser_8h_1a358b5686f323b82aea57c30422526302a31123a4ff97c0a74db931ce813947dc6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="config-parser_8h_1a358b5686f323b82aea57c30422526302a31123a4ff97c0a74db931ce813947dc6" kindref="member">CONFIG_KEY_BOOLEAN</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>typeof<sp/>data<sp/>=<sp/>int<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="structconfig__key" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structconfig__key" kindref="compound">config_key</ref><sp/>{</highlight></codeline>
+<codeline lineno="46" refid="structconfig__key_1aef86199211e28f1ff153dd444a919869" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structconfig__key_1aef86199211e28f1ff153dd444a919869" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="47" refid="structconfig__key_1abb75f8215c2db686c84f57d69fd244e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="config-parser_8h_1a358b5686f323b82aea57c30422526302" kindref="member">config_key_type</ref><sp/><ref refid="structconfig__key_1abb75f8215c2db686c84f57d69fd244e1" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="48" refid="structconfig__key_1a02c4013e170922d38d038cd6b13caf1b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structconfig__key_1a02c4013e170922d38d038cd6b13caf1b" kindref="member">data</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="structconfig__section" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structconfig__section" kindref="compound">config_section</ref><sp/>{</highlight></codeline>
+<codeline lineno="52" refid="structconfig__section_1a86a196878d503f6a4fe3d19b97f749a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structconfig__section_1a86a196878d503f6a4fe3d19b97f749a6" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="53" refid="structconfig__section_1ad5d66208b9e71fc7a4fbac8f9cfe4557" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structconfig__key" kindref="compound">config_key</ref><sp/>*<ref refid="structconfig__section_1ad5d66208b9e71fc7a4fbac8f9cfe4557" kindref="member">keys</ref>;</highlight></codeline>
+<codeline lineno="54" refid="structconfig__section_1aafdd536608b846c3af0cb6781c43d41e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structconfig__section_1aafdd536608b846c3af0cb6781c43d41e" kindref="member">num_keys</ref>;</highlight></codeline>
+<codeline lineno="55" refid="structconfig__section_1aaa7dbcae217222c639ea8c1c1f931f6b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="structconfig__section_1aaa7dbcae217222c639ea8c1c1f931f6b" kindref="member">done</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structconfig__key_1a02c4013e170922d38d038cd6b13caf1b" kindref="member">data</ref>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="config-parser_8h_1a5bd88741a222ba994bb2e9b91f2b0b42" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="config-parser_8h_1a5bd88741a222ba994bb2e9b91f2b0b42" kindref="member">weston_option_type</ref><sp/>{</highlight></codeline>
+<codeline lineno="59" refid="config-parser_8h_1a5bd88741a222ba994bb2e9b91f2b0b42a78db0af7ebad1f6a4a5d26fbd216c57b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="config-parser_8h_1a5bd88741a222ba994bb2e9b91f2b0b42a78db0af7ebad1f6a4a5d26fbd216c57b" kindref="member">WESTON_OPTION_INTEGER</ref>,</highlight></codeline>
+<codeline lineno="60" refid="config-parser_8h_1a5bd88741a222ba994bb2e9b91f2b0b42a36dde6a45d270b040d68d71b7994471c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="config-parser_8h_1a5bd88741a222ba994bb2e9b91f2b0b42a36dde6a45d270b040d68d71b7994471c" kindref="member">WESTON_OPTION_UNSIGNED_INTEGER</ref>,</highlight></codeline>
+<codeline lineno="61" refid="config-parser_8h_1a5bd88741a222ba994bb2e9b91f2b0b42af5c880f16212cb432e4a72c925686379" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="config-parser_8h_1a5bd88741a222ba994bb2e9b91f2b0b42af5c880f16212cb432e4a72c925686379" kindref="member">WESTON_OPTION_STRING</ref>,</highlight></codeline>
+<codeline lineno="62" refid="config-parser_8h_1a5bd88741a222ba994bb2e9b91f2b0b42aa16b1e02ceb7d47c2c5309866bd2bc31" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="config-parser_8h_1a5bd88741a222ba994bb2e9b91f2b0b42aa16b1e02ceb7d47c2c5309866bd2bc31" kindref="member">WESTON_OPTION_BOOLEAN</ref></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="structweston__option" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__option" kindref="compound">weston_option</ref><sp/>{</highlight></codeline>
+<codeline lineno="66" refid="structweston__option_1a2a40f6df19388dbc4695339f37bd896b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="config-parser_8h_1a5bd88741a222ba994bb2e9b91f2b0b42" kindref="member">weston_option_type</ref><sp/><ref refid="structweston__option_1a2a40f6df19388dbc4695339f37bd896b" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="67" refid="structweston__option_1a4f34554c2b1e00ce0fd98706397ba07a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structweston__option_1a4f34554c2b1e00ce0fd98706397ba07a" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="68" refid="structweston__option_1a6a8215f41b7a836bf7a2e466391be5f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structweston__option_1a6a8215f41b7a836bf7a2e466391be5f0" kindref="member">short_name</ref>;</highlight></codeline>
+<codeline lineno="69" refid="structweston__option_1ae6f3604788410678064d0f9951a28f44" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structweston__option_1ae6f3604788410678064d0f9951a28f44" kindref="member">data</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><ref refid="config-parser_8h_1a85f7f113eac26c3f61087ed2c1782a2d" kindref="member">parse_options</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__option" kindref="compound">weston_option</ref><sp/>*options,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[]);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">weston_config_section;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">weston_config;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">weston_config_section<sp/>*</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><ref refid="config-parser_8h_1a16babf10e26c7846ff9c67d089343a61" kindref="member">weston_config_get_section</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>weston_config<sp/>*config,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*section,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*value);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><ref refid="config-parser_8h_1a4f9170207c045c4dae8693a71f0ff8a8" kindref="member">weston_config_section_get_int</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>weston_config_section<sp/>*section,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int32_t<sp/>*value,<sp/>int32_t<sp/>default_value);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><ref refid="config-parser_8h_1a7405618dd9130cb615da7b5a1e8e3572" kindref="member">weston_config_section_get_uint</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>weston_config_section<sp/>*section,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>*value,<sp/>uint32_t<sp/>default_value);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><ref refid="config-parser_8h_1af7699f770689b4dc7894865ef63597e2" kindref="member">weston_config_section_get_color</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>weston_config_section<sp/>*section,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>*color,<sp/>uint32_t<sp/>default_color);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><ref refid="config-parser_8h_1aee8389efede2eaad290c93582dff7975" kindref="member">weston_config_section_get_double</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>weston_config_section<sp/>*section,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*value,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>default_value);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><ref refid="config-parser_8h_1a67daf573edd253c1531ebc2b03dd8133" kindref="member">weston_config_section_get_string</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>weston_config_section<sp/>*section,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**value,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*default_value);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><ref refid="config-parser_8h_1a48b3bf978836c148059b83c0a12fc5ad" kindref="member">weston_config_section_get_bool</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>weston_config_section<sp/>*section,</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>*value,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>default_value);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><ref refid="config-parser_8h_1a431217a639595342956adb4d57bc1b77" kindref="member">weston_config_get_name_from_env</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">weston_config<sp/>*</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><ref refid="config-parser_8h_1a3124a085f849353bfb6e04885593988b" kindref="member">weston_config_parse</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><ref refid="config-parser_8h_1ad2cf429e7abb5ceffb7db37f56a599e8" kindref="member">weston_config_get_full_path</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>weston_config<sp/>*config);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><ref refid="config-parser_8h_1a8962fd00ebd2212e95b6e268d7deb980" kindref="member">weston_config_destroy</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>weston_config<sp/>*config);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="config-parser_8h_1a85cd076288b83fb657fc56d32085f3f0" kindref="member">weston_config_next_section</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>weston_config<sp/>*config,</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>weston_config_section<sp/>**section,</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**name);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/><sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>CONFIGPARSER_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/include/libweston/config-parser.h"/>
+  </compounddef>
+</doxygen>

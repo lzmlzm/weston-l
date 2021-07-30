@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__position" kind="struct" language="C++" prot="public">
+    <compoundname>weston_position</compoundname>
+    <includes refid="libweston_8h" local="no">libweston.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__position_1ab67ef590596979ad925070f6122025b5" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t weston_position::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="53" column="9" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__position_1a5fe2a3c5d74c8aca5c156c3997234da9" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t weston_position::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="53" column="11" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="52" column="22" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="52" bodyend="54"/>
+    <listofallmembers>
+      <member refid="structweston__position_1ab67ef590596979ad925070f6122025b5" prot="public" virt="non-virtual"><scope>weston_position</scope><name>x</name></member>
+      <member refid="structweston__position_1a5fe2a3c5d74c8aca5c156c3997234da9" prot="public" virt="non-virtual"><scope>weston_position</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

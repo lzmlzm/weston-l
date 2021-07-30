@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structyuv__plane__descriptor" kind="struct" language="C++" prot="public">
+    <compoundname>yuv_plane_descriptor</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structyuv__plane__descriptor_1ab5483e4d6bb1fc67db5bd3a6b116afae" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int yuv_plane_descriptor::width_divisor</definition>
+        <argsstring></argsstring>
+        <name>width_divisor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" line="148" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structyuv__plane__descriptor_1ad69b451c8a65d94b30eda8d1b448156a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int yuv_plane_descriptor::height_divisor</definition>
+        <argsstring></argsstring>
+        <name>height_divisor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" line="149" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structyuv__plane__descriptor_1af068ff993eceb8fdb1635db407f4f593" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t yuv_plane_descriptor::format</definition>
+        <argsstring></argsstring>
+        <name>format</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" line="150" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structyuv__plane__descriptor_1ad352dd4da046f004a0fa36b522e2b5e1" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int yuv_plane_descriptor::plane_index</definition>
+        <argsstring></argsstring>
+        <name>plane_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" line="151" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" line="147" column="27" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" bodystart="147" bodyend="152"/>
+    <listofallmembers>
+      <member refid="structyuv__plane__descriptor_1af068ff993eceb8fdb1635db407f4f593" prot="public" virt="non-virtual"><scope>yuv_plane_descriptor</scope><name>format</name></member>
+      <member refid="structyuv__plane__descriptor_1ad69b451c8a65d94b30eda8d1b448156a" prot="public" virt="non-virtual"><scope>yuv_plane_descriptor</scope><name>height_divisor</name></member>
+      <member refid="structyuv__plane__descriptor_1ad352dd4da046f004a0fa36b522e2b5e1" prot="public" virt="non-virtual"><scope>yuv_plane_descriptor</scope><name>plane_index</name></member>
+      <member refid="structyuv__plane__descriptor_1ab5483e4d6bb1fc67db5bd3a6b116afae" prot="public" virt="non-virtual"><scope>yuv_plane_descriptor</scope><name>width_divisor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

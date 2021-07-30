@@ -1,0 +1,10 @@
+prefix=/home/lzm/Wayland/install
+libdir=${prefix}/lib/x86_64-linux-gnu
+includedir=${prefix}/include
+
+Name: libweston-desktop
+Description: Desktop shells abstraction library for libweston compositors
+Version: 9.0.90
+Requires.private: libweston-10, wayland-server >=  1.18.0
+Libs: -L${libdir} -lweston-desktop-10
+Cflags: -I${includedir}/libweston-10

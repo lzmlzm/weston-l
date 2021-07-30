@@ -1,0 +1,284 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="libbacklight_8h" kind="file" language="C++">
+    <compoundname>libbacklight.h</compoundname>
+    <includes local="no">libudev.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includedby refid="drm_8c" local="yes">/home/lzm/Wayland/weston/libweston/backend-drm/drm.c</includedby>
+    <includedby refid="libbacklight_8c" local="yes">/home/lzm/Wayland/weston/libweston/backend-drm/libbacklight.c</includedby>
+    <includedby refid="setbacklight_8c" local="yes">/home/lzm/Wayland/weston/tests/setbacklight.c</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>stdint.h</label>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/libbacklight.h</label>
+        <link refid="libbacklight_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>libudev.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/drm.c</label>
+        <link refid="drm_8c"/>
+      </node>
+      <node id="4">
+        <label>/home/lzm/Wayland/weston/tests/setbacklight.c</label>
+        <link refid="setbacklight_8c"/>
+      </node>
+      <node id="3">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/libbacklight.c</label>
+        <link refid="libbacklight_8c"/>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/libbacklight.h</label>
+        <link refid="libbacklight_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structbacklight" prot="public">backlight</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="libbacklight_8h_1af875ff2e182a2b2a3bac14e5039a37cd" prot="public" static="no" strong="no">
+        <type></type>
+        <name>backlight_type</name>
+        <enumvalue id="libbacklight_8h_1af875ff2e182a2b2a3bac14e5039a37cda184bbe3edf59a26324948ae2998286e2" prot="public">
+          <name>BACKLIGHT_RAW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libbacklight_8h_1af875ff2e182a2b2a3bac14e5039a37cdadfc413da827dcc0ce7dd0ca7fba80f63" prot="public">
+          <name>BACKLIGHT_PLATFORM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libbacklight_8h_1af875ff2e182a2b2a3bac14e5039a37cdaf9d55511c8e7baa47ef8346f0bade203" prot="public">
+          <name>BACKLIGHT_FIRMWARE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/libbacklight.h" line="40" column="20" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/libbacklight.h" bodystart="40" bodyend="44"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="libbacklight_8h_1aa2158aff5c9416dd22018fd58b371e7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structbacklight" kindref="compound">backlight</ref> *</type>
+        <definition>struct backlight* backlight_init</definition>
+        <argsstring>(struct udev_device *drm_device, uint32_t connector_type)</argsstring>
+        <name>backlight_init</name>
+        <param>
+          <type>struct udev_device *</type>
+          <declname>drm_device</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>connector_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/libbacklight.h" line="57" column="16" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/libbacklight.c" bodystart="153" bodyend="318" declfile="/home/lzm/Wayland/weston/libweston/backend-drm/libbacklight.h" declline="57" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="libbacklight_8h_1a04acc4bcce500b7f3a7c5312040b2a0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void backlight_destroy</definition>
+        <argsstring>(struct backlight *backlight)</argsstring>
+        <name>backlight_destroy</name>
+        <param>
+          <type>struct <ref refid="structbacklight" kindref="compound">backlight</ref> *</type>
+          <declname>backlight</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/libbacklight.h" line="61" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/libbacklight.c" bodystart="142" bodyend="151" declfile="/home/lzm/Wayland/weston/libweston/backend-drm/libbacklight.h" declline="61" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="libbacklight_8h_1abd9a515c12c2dee04f7f540f603a8317" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long backlight_get_max_brightness</definition>
+        <argsstring>(struct backlight *backlight)</argsstring>
+        <name>backlight_get_max_brightness</name>
+        <param>
+          <type>struct <ref refid="structbacklight" kindref="compound">backlight</ref> *</type>
+          <declname>backlight</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/libbacklight.h" line="64" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/libbacklight.c" bodystart="89" bodyend="92" declfile="/home/lzm/Wayland/weston/libweston/backend-drm/libbacklight.h" declline="64" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="libbacklight_8h_1a5d3ad62d79d13322b8a657a09401e650" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long backlight_get_brightness</definition>
+        <argsstring>(struct backlight *backlight)</argsstring>
+        <name>backlight_get_brightness</name>
+        <param>
+          <type>struct <ref refid="structbacklight" kindref="compound">backlight</ref> *</type>
+          <declname>backlight</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/libbacklight.h" line="67" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/libbacklight.c" bodystart="84" bodyend="87" declfile="/home/lzm/Wayland/weston/libweston/backend-drm/libbacklight.h" declline="67" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="libbacklight_8h_1a22256ac0a480e4e67aebcc1ba8125c70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long backlight_get_actual_brightness</definition>
+        <argsstring>(struct backlight *backlight)</argsstring>
+        <name>backlight_get_actual_brightness</name>
+        <param>
+          <type>struct <ref refid="structbacklight" kindref="compound">backlight</ref> *</type>
+          <declname>backlight</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/libbacklight.h" line="70" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/libbacklight.c" bodystart="94" bodyend="97" declfile="/home/lzm/Wayland/weston/libweston/backend-drm/libbacklight.h" declline="70" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="libbacklight_8h_1ab060dbe8e5d44601d6845bde9f187c86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long backlight_set_brightness</definition>
+        <argsstring>(struct backlight *backlight, long brightness)</argsstring>
+        <name>backlight_set_brightness</name>
+        <param>
+          <type>struct <ref refid="structbacklight" kindref="compound">backlight</ref> *</type>
+          <declname>backlight</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>brightness</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/libbacklight.h" line="73" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/libbacklight.c" bodystart="99" bodyend="140" declfile="/home/lzm/Wayland/weston/libweston/backend-drm/libbacklight.h" declline="73" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>libbacklight<sp/>-<sp/>userspace<sp/>interface<sp/>to<sp/>Linux<sp/>backlight<sp/>control</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2012<sp/>Intel<sp/>Corporation</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2010<sp/>Red<sp/>Hat<sp/>&lt;mjg@redhat.com&gt;</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>(including<sp/>the<sp/>next</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>paragraph)<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>Software.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>NONINFRINGEMENT.<sp/><sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>DEALINGS<sp/>IN<sp/>THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/>Authors:</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>Matthew<sp/>Garrett<sp/>&lt;mjg@redhat.com&gt;</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>Tiago<sp/>Vignatti<sp/>&lt;vignatti@freedesktop.org&gt;</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LIBBACKLIGHT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LIBBACKLIGHT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;libudev.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="libbacklight_8h_1af875ff2e182a2b2a3bac14e5039a37cd" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="libbacklight_8h_1af875ff2e182a2b2a3bac14e5039a37cd" kindref="member">backlight_type</ref><sp/>{</highlight></codeline>
+<codeline lineno="41" refid="libbacklight_8h_1af875ff2e182a2b2a3bac14e5039a37cda184bbe3edf59a26324948ae2998286e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libbacklight_8h_1af875ff2e182a2b2a3bac14e5039a37cda184bbe3edf59a26324948ae2998286e2" kindref="member">BACKLIGHT_RAW</ref>,</highlight></codeline>
+<codeline lineno="42" refid="libbacklight_8h_1af875ff2e182a2b2a3bac14e5039a37cdadfc413da827dcc0ce7dd0ca7fba80f63" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libbacklight_8h_1af875ff2e182a2b2a3bac14e5039a37cdadfc413da827dcc0ce7dd0ca7fba80f63" kindref="member">BACKLIGHT_PLATFORM</ref>,</highlight></codeline>
+<codeline lineno="43" refid="libbacklight_8h_1af875ff2e182a2b2a3bac14e5039a37cdaf9d55511c8e7baa47ef8346f0bade203" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libbacklight_8h_1af875ff2e182a2b2a3bac14e5039a37cdaf9d55511c8e7baa47ef8346f0bade203" kindref="member">BACKLIGHT_FIRMWARE</ref></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="structbacklight" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbacklight" kindref="compound">backlight</ref><sp/>{</highlight></codeline>
+<codeline lineno="47" refid="structbacklight_1ae213630c51692013ddc4fb46ffb0d227" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structbacklight_1ae213630c51692013ddc4fb46ffb0d227" kindref="member">path</ref>;</highlight></codeline>
+<codeline lineno="48" refid="structbacklight_1ae8d02a649bf56ba1cdb94b99ff3fc79e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structbacklight_1ae8d02a649bf56ba1cdb94b99ff3fc79e" kindref="member">max_brightness</ref>;</highlight></codeline>
+<codeline lineno="49" refid="structbacklight_1a33bf1ef0b3bcb8c428ab999c74504bac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structbacklight_1a33bf1ef0b3bcb8c428ab999c74504bac" kindref="member">brightness</ref>;</highlight></codeline>
+<codeline lineno="50" refid="structbacklight_1a202e7534593b0a3ef2df4dfa96082c8e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="libbacklight_8h_1af875ff2e182a2b2a3bac14e5039a37cd" kindref="member">backlight_type</ref><sp/><ref refid="structbacklight_1a202e7534593b0a3ef2df4dfa96082c8e" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/>*<sp/>Find<sp/>and<sp/>set<sp/>up<sp/>a<sp/>backlight<sp/>for<sp/>a<sp/>valid<sp/>udev<sp/>connector<sp/>device,<sp/>i.e.<sp/>one</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/>*<sp/>matching<sp/>drm<sp/>subsystem<sp/>and<sp/>with<sp/>status<sp/>of<sp/>connected.</highlight></codeline>
+<codeline lineno="56"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbacklight" kindref="compound">backlight</ref><sp/>*<ref refid="libbacklight_8h_1aa2158aff5c9416dd22018fd58b371e7d" kindref="member">backlight_init</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>udev_device<sp/>*drm_device,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>connector_type);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Free<sp/>backlight<sp/>resources<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="libbacklight_8h_1a04acc4bcce500b7f3a7c5312040b2a0f" kindref="member">backlight_destroy</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbacklight" kindref="compound">backlight</ref><sp/>*<ref refid="structbacklight" kindref="compound">backlight</ref>);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Provide<sp/>the<sp/>maximum<sp/>backlight<sp/>value<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="libbacklight_8h_1abd9a515c12c2dee04f7f540f603a8317" kindref="member">backlight_get_max_brightness</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbacklight" kindref="compound">backlight</ref><sp/>*<ref refid="structbacklight" kindref="compound">backlight</ref>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Provide<sp/>the<sp/>cached<sp/>backlight<sp/>value<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="libbacklight_8h_1a5d3ad62d79d13322b8a657a09401e650" kindref="member">backlight_get_brightness</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbacklight" kindref="compound">backlight</ref><sp/>*<ref refid="structbacklight" kindref="compound">backlight</ref>);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Provide<sp/>the<sp/>hardware<sp/>backlight<sp/>value<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="libbacklight_8h_1a22256ac0a480e4e67aebcc1ba8125c70" kindref="member">backlight_get_actual_brightness</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbacklight" kindref="compound">backlight</ref><sp/>*<ref refid="structbacklight" kindref="compound">backlight</ref>);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Set<sp/>the<sp/>backlight<sp/>to<sp/>a<sp/>value<sp/>between<sp/>0<sp/>and<sp/>max<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="libbacklight_8h_1ab060dbe8e5d44601d6845bde9f187c86" kindref="member">backlight_set_brightness</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbacklight" kindref="compound">backlight</ref><sp/>*<ref refid="structbacklight" kindref="compound">backlight</ref>,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="structbacklight_1a33bf1ef0b3bcb8c428ab999c74504bac" kindref="member">brightness</ref>);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LIBBACKLIGHT_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/libweston/backend-drm/libbacklight.h"/>
+  </compounddef>
+</doxygen>

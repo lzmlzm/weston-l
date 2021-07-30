@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structtouch" kind="struct" language="C++" prot="public">
+    <compoundname>touch</compoundname>
+    <includes refid="weston-test-client-helper_8h" local="no">weston-test-client-helper.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structtouch_1a022ca737a44369f0f2664935bfac14f1" prot="public" static="no" mutable="no">
+        <type>struct wl_touch *</type>
+        <definition>struct wl_touch* touch::wl_touch</definition>
+        <argsstring></argsstring>
+        <name>wl_touch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="131" column="15" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtouch_1aeeda9b8c0a035bdf44c0e24e927fdb91" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int touch::down_x</definition>
+        <argsstring></argsstring>
+        <name>down_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="132" column="5" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtouch_1a82b13de54c8ddea0e657c87c6ea244bb" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int touch::down_y</definition>
+        <argsstring></argsstring>
+        <name>down_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="133" column="5" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtouch_1a1975e8ffbf49234f45b9bf38f1720e30" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int touch::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="134" column="5" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtouch_1a84b525cac8d1c9b4404eebda5941db55" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int touch::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="135" column="5" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtouch_1a10c8641178262cec2e33b47e44bd6454" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int touch::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="136" column="5" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtouch_1a34722ffde1389ecf28701b5da87df488" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int touch::up_id</definition>
+        <argsstring></argsstring>
+        <name>up_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="137" column="5" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtouch_1a15138db97603c8a013e2e5db64009fed" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int touch::frame_no</definition>
+        <argsstring></argsstring>
+        <name>frame_no</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="138" column="5" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtouch_1a0876c6a76b91e405e281ad53e76331bb" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int touch::cancel_no</definition>
+        <argsstring></argsstring>
+        <name>cancel_no</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="139" column="5" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtouch_1af945efcc26488980c4fa174893a53782" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t touch::down_time_msec</definition>
+        <argsstring></argsstring>
+        <name>down_time_msec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="140" column="10" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtouch_1ae0d4f4b04688d5f0bfe571ff768ab580" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t touch::up_time_msec</definition>
+        <argsstring></argsstring>
+        <name>up_time_msec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="141" column="10" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtouch_1a685805860a13f7c7e551af84cc4162e7" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t touch::motion_time_msec</definition>
+        <argsstring></argsstring>
+        <name>motion_time_msec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="142" column="10" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtouch_1a546fca2caba4460e23393111d2244c63" prot="public" static="no" mutable="no">
+        <type>struct timespec</type>
+        <definition>struct timespec touch::input_timestamp</definition>
+        <argsstring></argsstring>
+        <name>input_timestamp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="142" column="10" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtouch_1a138cc07e6d5dc14151f39b848759f12d" prot="public" static="no" mutable="no">
+        <type>struct timespec</type>
+        <definition>struct timespec touch::down_time_timespec</definition>
+        <argsstring></argsstring>
+        <name>down_time_timespec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="142" column="10" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtouch_1a5549af43259d299f13e6c50582740c55" prot="public" static="no" mutable="no">
+        <type>struct timespec</type>
+        <definition>struct timespec touch::up_time_timespec</definition>
+        <argsstring></argsstring>
+        <name>up_time_timespec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="142" column="10" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtouch_1a6e984ecc0d2600e8269fc9d60c900e8f" prot="public" static="no" mutable="no">
+        <type>struct timespec</type>
+        <definition>struct timespec touch::motion_time_timespec</definition>
+        <argsstring></argsstring>
+        <name>motion_time_timespec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="142" column="10" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="130" column="12" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="130" bodyend="147"/>
+    <listofallmembers>
+      <member refid="structtouch_1a0876c6a76b91e405e281ad53e76331bb" prot="public" virt="non-virtual"><scope>touch</scope><name>cancel_no</name></member>
+      <member refid="structtouch_1af945efcc26488980c4fa174893a53782" prot="public" virt="non-virtual"><scope>touch</scope><name>down_time_msec</name></member>
+      <member refid="structtouch_1a138cc07e6d5dc14151f39b848759f12d" prot="public" virt="non-virtual"><scope>touch</scope><name>down_time_timespec</name></member>
+      <member refid="structtouch_1aeeda9b8c0a035bdf44c0e24e927fdb91" prot="public" virt="non-virtual"><scope>touch</scope><name>down_x</name></member>
+      <member refid="structtouch_1a82b13de54c8ddea0e657c87c6ea244bb" prot="public" virt="non-virtual"><scope>touch</scope><name>down_y</name></member>
+      <member refid="structtouch_1a15138db97603c8a013e2e5db64009fed" prot="public" virt="non-virtual"><scope>touch</scope><name>frame_no</name></member>
+      <member refid="structtouch_1a10c8641178262cec2e33b47e44bd6454" prot="public" virt="non-virtual"><scope>touch</scope><name>id</name></member>
+      <member refid="structtouch_1a546fca2caba4460e23393111d2244c63" prot="public" virt="non-virtual"><scope>touch</scope><name>input_timestamp</name></member>
+      <member refid="structtouch_1a685805860a13f7c7e551af84cc4162e7" prot="public" virt="non-virtual"><scope>touch</scope><name>motion_time_msec</name></member>
+      <member refid="structtouch_1a6e984ecc0d2600e8269fc9d60c900e8f" prot="public" virt="non-virtual"><scope>touch</scope><name>motion_time_timespec</name></member>
+      <member refid="structtouch_1a34722ffde1389ecf28701b5da87df488" prot="public" virt="non-virtual"><scope>touch</scope><name>up_id</name></member>
+      <member refid="structtouch_1ae0d4f4b04688d5f0bfe571ff768ab580" prot="public" virt="non-virtual"><scope>touch</scope><name>up_time_msec</name></member>
+      <member refid="structtouch_1a5549af43259d299f13e6c50582740c55" prot="public" virt="non-virtual"><scope>touch</scope><name>up_time_timespec</name></member>
+      <member refid="structtouch_1a022ca737a44369f0f2664935bfac14f1" prot="public" virt="non-virtual"><scope>touch</scope><name>wl_touch</name></member>
+      <member refid="structtouch_1a1975e8ffbf49234f45b9bf38f1720e30" prot="public" virt="non-virtual"><scope>touch</scope><name>x</name></member>
+      <member refid="structtouch_1a84b525cac8d1c9b4404eebda5941db55" prot="public" virt="non-virtual"><scope>touch</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__touch__grab__interface" kind="struct" language="C++" prot="public">
+    <compoundname>weston_touch_grab_interface</compoundname>
+    <includes refid="libweston_8h" local="no">libweston.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__touch__grab__interface_1a8dbe2bb8ff5b283b195c04476f0420fa" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_touch_grab_interface::down) (struct weston_touch_grab *grab, const struct timespec *time, int touch_id, wl_fixed_t sx, wl_fixed_t sy)</definition>
+        <argsstring>)(struct weston_touch_grab *grab, const struct timespec *time, int touch_id, wl_fixed_t sx, wl_fixed_t sy)</argsstring>
+        <name>down</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="462" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="462" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__touch__grab__interface_1aaad9f0eeb38396610edd0a632ab16a4d" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_touch_grab_interface::up) (struct weston_touch_grab *grab, const struct timespec *time, int touch_id)</definition>
+        <argsstring>)(struct weston_touch_grab *grab, const struct timespec *time, int touch_id)</argsstring>
+        <name>up</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="467" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="467" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__touch__grab__interface_1a01822269eec6e6aecff6e0be775a05d0" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_touch_grab_interface::motion) (struct weston_touch_grab *grab, const struct timespec *time, int touch_id, wl_fixed_t sx, wl_fixed_t sy)</definition>
+        <argsstring>)(struct weston_touch_grab *grab, const struct timespec *time, int touch_id, wl_fixed_t sx, wl_fixed_t sy)</argsstring>
+        <name>motion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="470" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="470" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__touch__grab__interface_1a3402b7b6c02efdf44ef1f6e0e5a7068e" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_touch_grab_interface::frame) (struct weston_touch_grab *grab)</definition>
+        <argsstring>)(struct weston_touch_grab *grab)</argsstring>
+        <name>frame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="475" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="475" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__touch__grab__interface_1a94bcbcc0fe7656ae2ae551e049b56719" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_touch_grab_interface::cancel) (struct weston_touch_grab *grab)</definition>
+        <argsstring>)(struct weston_touch_grab *grab)</argsstring>
+        <name>cancel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="476" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="476" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="461" column="34" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="461" bodyend="477"/>
+    <listofallmembers>
+      <member refid="structweston__touch__grab__interface_1a94bcbcc0fe7656ae2ae551e049b56719" prot="public" virt="non-virtual"><scope>weston_touch_grab_interface</scope><name>cancel</name></member>
+      <member refid="structweston__touch__grab__interface_1a8dbe2bb8ff5b283b195c04476f0420fa" prot="public" virt="non-virtual"><scope>weston_touch_grab_interface</scope><name>down</name></member>
+      <member refid="structweston__touch__grab__interface_1a3402b7b6c02efdf44ef1f6e0e5a7068e" prot="public" virt="non-virtual"><scope>weston_touch_grab_interface</scope><name>frame</name></member>
+      <member refid="structweston__touch__grab__interface_1a01822269eec6e6aecff6e0be775a05d0" prot="public" virt="non-virtual"><scope>weston_touch_grab_interface</scope><name>motion</name></member>
+      <member refid="structweston__touch__grab__interface_1aaad9f0eeb38396610edd0a632ab16a4d" prot="public" virt="non-virtual"><scope>weston_touch_grab_interface</scope><name>up</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

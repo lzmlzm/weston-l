@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structpixman__renderer" kind="struct" language="C++" prot="public">
+    <compoundname>pixman_renderer</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpixman__renderer_1a442bad89bb79b13901a173966f2d6122" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structweston__renderer" kindref="compound">weston_renderer</ref></type>
+        <definition>struct weston_renderer pixman_renderer::base</definition>
+        <argsstring></argsstring>
+        <name>base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixman-renderer.c" line="50" column="16" bodyfile="/home/lzm/Wayland/weston/libweston/pixman-renderer.c" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpixman__renderer_1a7fcc1757c1ae2f5d53b188f39f2a0760" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pixman_renderer::repaint_debug</definition>
+        <argsstring></argsstring>
+        <name>repaint_debug</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixman-renderer.c" line="62" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/pixman-renderer.c" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpixman__renderer_1a76ec52178d1889ef62381a6f90863823" prot="public" static="no" mutable="no">
+        <type>pixman_image_t *</type>
+        <definition>pixman_image_t* pixman_renderer::debug_color</definition>
+        <argsstring></argsstring>
+        <name>debug_color</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixman-renderer.c" line="63" column="16" bodyfile="/home/lzm/Wayland/weston/libweston/pixman-renderer.c" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpixman__renderer_1a94243406165d412f9c8f12275f8ed838" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structweston__binding" kindref="compound">weston_binding</ref> *</type>
+        <definition>struct weston_binding* pixman_renderer::debug_binding</definition>
+        <argsstring></argsstring>
+        <name>debug_binding</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixman-renderer.c" line="64" column="21" bodyfile="/home/lzm/Wayland/weston/libweston/pixman-renderer.c" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpixman__renderer_1a8736f49977015609fae5aaf52f4ae6f3" prot="public" static="no" mutable="no">
+        <type>struct wl_signal</type>
+        <definition>struct wl_signal pixman_renderer::destroy_signal</definition>
+        <argsstring></argsstring>
+        <name>destroy_signal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixman-renderer.c" line="64" column="21" bodyfile="/home/lzm/Wayland/weston/libweston/pixman-renderer.c" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>pixman_renderer</label>
+        <link refid="structpixman__renderer"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>debug_binding</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>weston_renderer</label>
+        <link refid="structweston__renderer"/>
+      </node>
+      <node id="3">
+        <label>weston_binding</label>
+        <link refid="structweston__binding"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lzm/Wayland/weston/libweston/pixman-renderer.c" line="59" column="22" bodyfile="/home/lzm/Wayland/weston/libweston/pixman-renderer.c" bodystart="59" bodyend="67"/>
+    <listofallmembers>
+      <member refid="structpixman__renderer_1a442bad89bb79b13901a173966f2d6122" prot="public" virt="non-virtual"><scope>pixman_renderer</scope><name>base</name></member>
+      <member refid="structpixman__renderer_1a94243406165d412f9c8f12275f8ed838" prot="public" virt="non-virtual"><scope>pixman_renderer</scope><name>debug_binding</name></member>
+      <member refid="structpixman__renderer_1a76ec52178d1889ef62381a6f90863823" prot="public" virt="non-virtual"><scope>pixman_renderer</scope><name>debug_color</name></member>
+      <member refid="structpixman__renderer_1a8736f49977015609fae5aaf52f4ae6f3" prot="public" virt="non-virtual"><scope>pixman_renderer</scope><name>destroy_signal</name></member>
+      <member refid="structpixman__renderer_1a7fcc1757c1ae2f5d53b188f39f2a0760" prot="public" virt="non-virtual"><scope>pixman_renderer</scope><name>repaint_debug</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

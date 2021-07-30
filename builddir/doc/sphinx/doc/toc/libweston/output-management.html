@@ -1,0 +1,301 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Output management &mdash; weston 9.0.90 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Heads" href="head.html" />
+    <link rel="prev" title="Compositor" href="compositor.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> weston
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../running-weston.html">Running Weston</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../libweston.html">Libweston</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="compositor.html">Compositor</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Output management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="head.html">Heads</a></li>
+<li class="toctree-l3"><a class="reference internal" href="output.html">Outputs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="log.html">Logging/Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libweston.html#further-work">Further work</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../test-suite.html">Weston test suite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kiosk-shell.html">Weston kiosk-shell</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">weston</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../libweston.html">Libweston</a> &raquo;</li>
+        
+      <li>Output management</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/toc/libweston/output-management.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="output-management">
+<h1>Output management<a class="headerlink" href="#output-management" title="Permalink to this headline">¶</a></h1>
+<p>Libweston output API revolves around two main concepts: <a class="reference internal" href="head.html#_CPPv411weston_head" title="weston_head"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">weston_head</span></code></a> and
+<a class="reference internal" href="output.html#_CPPv413weston_output" title="weston_output"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">weston_output</span></code></a>. A head represents a connector or a monitor (a sink)
+while an output represents the compositing state machine that produces content
+(a source) to be presented on a head. If a backend allows it, it is possible to
+attach more than one head to an output, in which case all those heads will have
+identical timings and contents (they share framebuffers if applicable).</p>
+<p>Heads are created and destroyed automatically by libweston according to e.g.
+hardware features like the existence of physical connectors. Creation, hotplug
+events and other changes to heads are notified with
+<a class="reference internal" href="compositor.html#_CPPv444weston_compositor_add_heads_changed_listenerP17weston_compositorP11wl_listener" title="weston_compositor_add_heads_changed_listener"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">weston_compositor_add_heads_changed_listener()</span></code></a>. Head destruction is
+communicated via <a class="reference internal" href="head.html#_CPPv432weston_head_add_destroy_listenerP11weston_headP11wl_listener" title="weston_head_add_destroy_listener"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">weston_head_add_destroy_listener()</span></code></a>. Note that
+disconnecting a connector does not mean the head is destroyed. A head is
+destroyed when the connector itself disappears.</p>
+<p>Some backends, mainly virtual and nested ones, may offer backend-specific API
+to create and destroy heads at will. In these cases a head does not represent
+anything physical but can be e.g. a window in another window system.</p>
+<p>Outputs are explicitly created and destroyed by the libweston user at will. To
+make a new output or to light up a head, you create an output, attach the
+head(s) to it, configure it, and finally <a class="reference internal" href="output.html#_CPPv420weston_output_enableP13weston_output" title="weston_output_enable"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">weston_output_enable()</span></code></a> it to
+make it live.</p>
+<p>An enabled output cannot be reconfigured, but this is intended to change in the
+future. You can use <a class="reference internal" href="output.html#_CPPv421weston_output_disableP13weston_output" title="weston_output_disable"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">weston_output_disable()</span></code></a> to disable an output and then
+reconfigure it, but this will cause visible glitches.</p>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="head.html">Heads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="output.html">Outputs</a></li>
+</ul>
+</div>
+<p>The following sequence diagrams show the function calls for various actions.
+<a class="reference internal" href="#libweston-initial-heads"><span class="std std-numref">Fig. 1</span></a> shows how DRM-backend creates and configures
+heads on compositor start-up.
+<a class="reference internal" href="#libweston-react-to-heads-changed"><span class="std std-numref">Fig. 2</span></a> shows the principle of a compositor
+reacting to initial heads discovered and hotplug events.</p>
+<p>When a compositor wants to light up a monitor, it creates an output as in
+<a class="reference internal" href="#libweston-create-output"><span class="std std-numref">Fig. 3</span></a>. Attaching more than one head to an output
+requires specific hardware support in the case of DRM-backend. Other backends
+are unlikely to support multiple heads per output.</p>
+<p>A connector becoming disconnected is a common reason to destroy an output.
+This happens in <a class="reference internal" href="#libweston-destroy-output"><span class="std std-numref">Fig. 4</span></a>.</p>
+<p>Heads can also disappear. This is not due to normal monitor unplug but refers
+to the connector itself disappearing. This is particularly possible with
+DisplayPort Multi-Stream Transport, where unplugging a monitor will literally
+remove a connector from the system as that connector was provided by the
+monitor for daisy-chaining. One scenario of handling that is presented in
+<a class="reference internal" href="#libweston-head-destroyed"><span class="std std-numref">Fig. 5</span></a>.</p>
+<div class="figure align-default" id="id1">
+<span id="libweston-initial-heads"></span><img alt="Sequence diagram of creating heads initially." src="../../_images/initial-heads.png" />
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Heads are being created on compositor start-up with a backend that manages
+head lifetimes completely on its own, e.g. DRM-backend.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id2">
+<span id="libweston-react-to-heads-changed"></span><img alt="Sequence diagram of reacting to head changes." src="../../_images/react-to-heads-changed.png" />
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">A compositor handles libweston notification of something with heads having
+changed. This happens on both compositor start-up and later due to hotplug.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id3">
+<span id="libweston-create-output"></span><img alt="Sequence diagram for creating an output." src="../../_images/create_output.png" />
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">A compositor creates and configures an output for a head or heads it wants
+to light up.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id4">
+<span id="libweston-destroy-output"></span><img alt="Sequence diagram of compositor destroying an output." src="../../_images/destroy-output.png" />
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">A compositor finds out a head has been disconnected and proceeds to
+destroy the corresponding output.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id5">
+<span id="libweston-head-destroyed"></span><img alt="Sequence diagram of a head being destroyed." src="../../_images/head-destroyed.png" />
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">The backend realises that a piece of hardware has disappeared and needs to
+destroy the corresponding head. The head is released, and even when the
+compositor is not listening for head destroy signal, the output gets
+automatically disabled, though not destroyed.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="head.html" class="btn btn-neutral float-right" title="Heads" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="compositor.html" class="btn btn-neutral float-left" title="Compositor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Weston community.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

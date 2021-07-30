@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="group__debug-protocol" kind="group">
+    <compoundname>debug-protocol</compoundname>
+    <title>weston-debug protocol specific</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__debug-protocol_1gab89f0b036a3978ae09bebaf853e91abc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_compositor_enable_debug_protocol</definition>
+        <argsstring>(struct weston_compositor *compositor)</argsstring>
+        <name>weston_compositor_enable_debug_protocol</name>
+        <param>
+          <type>struct <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> *</type>
+          <declname>compositor</declname>
+        </param>
+        <briefdescription>
+<para>Enable weston-debug protocol extension. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>compositor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The libweston compositor where to enable.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This enables the weston_debug_v1 Wayland protocol extension which any client can use to get debug messages from the compositor.</para>
+<para>WARNING: This feature should not be used in production. If a client provides a file descriptor that blocks writes, it will block the whole compositor indefinitely.</para>
+<para>There is no control on which client is allowed to subscribe to debug messages. Any and all clients are allowed.</para>
+<para>The debug extension is disabled by default, and once enabled, cannot be disabled again. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="493" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="493" bodyend="512"/>
+      </memberdef>
+      <memberdef kind="function" id="group__debug-protocol_1gafb6cfdb4e8668dfcc25815a291394036" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool weston_compositor_is_debug_protocol_enabled</definition>
+        <argsstring>(struct weston_compositor *wc)</argsstring>
+        <name>weston_compositor_is_debug_protocol_enabled</name>
+        <param>
+          <type>struct <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> *</type>
+          <declname>wc</declname>
+        </param>
+        <briefdescription>
+<para>Determine if the debug protocol has been enabled. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>wc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The libweston compositor to verify if debug protocol has been enabled </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="522" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="522" bodyend="525"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

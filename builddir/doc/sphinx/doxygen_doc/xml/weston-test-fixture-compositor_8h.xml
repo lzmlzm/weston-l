@@ -1,0 +1,743 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="weston-test-fixture-compositor_8h" kind="file" language="C++">
+    <compoundname>weston-test-fixture-compositor.h</compoundname>
+    <includes local="no">wayland-client-protocol.h</includes>
+    <includes refid="libweston_8h" local="no">libweston/libweston.h</includes>
+    <includes refid="weston-testsuite-data_8h" local="yes">weston-testsuite-data.h</includes>
+    <includedby refid="weston-test-runner_8h" local="yes">/home/lzm/Wayland/weston/tests/weston-test-runner.h</includedby>
+    <includedby refid="alpha-blending-test_8c" local="yes">/home/lzm/Wayland/weston/tests/alpha-blending-test.c</includedby>
+    <includedby refid="bad-buffer-test_8c" local="yes">/home/lzm/Wayland/weston/tests/bad-buffer-test.c</includedby>
+    <includedby refid="buffer-transforms-test_8c" local="yes">/home/lzm/Wayland/weston/tests/buffer-transforms-test.c</includedby>
+    <includedby refid="devices-test_8c" local="yes">/home/lzm/Wayland/weston/tests/devices-test.c</includedby>
+    <includedby refid="drm-smoke-test_8c" local="yes">/home/lzm/Wayland/weston/tests/drm-smoke-test.c</includedby>
+    <includedby refid="event-test_8c" local="yes">/home/lzm/Wayland/weston/tests/event-test.c</includedby>
+    <includedby refid="internal-screenshot-test_8c" local="yes">/home/lzm/Wayland/weston/tests/internal-screenshot-test.c</includedby>
+    <includedby refid="ivi-layout-internal-test_8c" local="yes">/home/lzm/Wayland/weston/tests/ivi-layout-internal-test.c</includedby>
+    <includedby refid="ivi-layout-test-client_8c" local="yes">/home/lzm/Wayland/weston/tests/ivi-layout-test-client.c</includedby>
+    <includedby refid="ivi-shell-app-test_8c" local="yes">/home/lzm/Wayland/weston/tests/ivi-shell-app-test.c</includedby>
+    <includedby refid="keyboard-test_8c" local="yes">/home/lzm/Wayland/weston/tests/keyboard-test.c</includedby>
+    <includedby refid="linux-explicit-synchronization-test_8c" local="yes">/home/lzm/Wayland/weston/tests/linux-explicit-synchronization-test.c</includedby>
+    <includedby refid="output-damage-test_8c" local="yes">/home/lzm/Wayland/weston/tests/output-damage-test.c</includedby>
+    <includedby refid="output-transforms-test_8c" local="yes">/home/lzm/Wayland/weston/tests/output-transforms-test.c</includedby>
+    <includedby refid="plugin-registry-test_8c" local="yes">/home/lzm/Wayland/weston/tests/plugin-registry-test.c</includedby>
+    <includedby refid="pointer-test_8c" local="yes">/home/lzm/Wayland/weston/tests/pointer-test.c</includedby>
+    <includedby refid="presentation-test_8c" local="yes">/home/lzm/Wayland/weston/tests/presentation-test.c</includedby>
+    <includedby refid="roles-test_8c" local="yes">/home/lzm/Wayland/weston/tests/roles-test.c</includedby>
+    <includedby refid="subsurface-shot-test_8c" local="yes">/home/lzm/Wayland/weston/tests/subsurface-shot-test.c</includedby>
+    <includedby refid="subsurface-test_8c" local="yes">/home/lzm/Wayland/weston/tests/subsurface-test.c</includedby>
+    <includedby refid="surface-global-test_8c" local="yes">/home/lzm/Wayland/weston/tests/surface-global-test.c</includedby>
+    <includedby refid="surface-test_8c" local="yes">/home/lzm/Wayland/weston/tests/surface-test.c</includedby>
+    <includedby refid="text-test_8c" local="yes">/home/lzm/Wayland/weston/tests/text-test.c</includedby>
+    <includedby refid="touch-test_8c" local="yes">/home/lzm/Wayland/weston/tests/touch-test.c</includedby>
+    <includedby refid="viewporter-shot-test_8c" local="yes">/home/lzm/Wayland/weston/tests/viewporter-shot-test.c</includedby>
+    <includedby refid="viewporter-test_8c" local="yes">/home/lzm/Wayland/weston/tests/viewporter-test.c</includedby>
+    <includedby refid="weston-test-fixture-compositor_8c" local="yes">/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.c</includedby>
+    <includedby refid="xwayland-test_8c" local="yes">/home/lzm/Wayland/weston/tests/xwayland-test.c</includedby>
+    <includedby refid="yuv-buffer-test_8c" local="yes">/home/lzm/Wayland/weston/tests/yuv-buffer-test.c</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="3">
+        <label>libweston/libweston.h</label>
+        <link refid="libweston_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h</label>
+        <link refid="weston-test-fixture-compositor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="12">
+        <label>stdlib.h</label>
+      </node>
+      <node id="9">
+        <label>wayland-server.h</label>
+      </node>
+      <node id="8">
+        <label>xkbcommon/xkbcommon.h</label>
+      </node>
+      <node id="13">
+        <label>weston-testsuite-data.h</label>
+        <link refid="weston-testsuite-data_8h"/>
+      </node>
+      <node id="2">
+        <label>wayland-client-protocol.h</label>
+      </node>
+      <node id="11">
+        <label>libweston/zalloc.h</label>
+        <link refid="zalloc_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>time.h</label>
+      </node>
+      <node id="10">
+        <label>libweston/matrix.h</label>
+        <link refid="matrix_8h"/>
+      </node>
+      <node id="7">
+        <label>pixman.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="29">
+        <label>/home/lzm/Wayland/weston/tests/yuv-buffer-test.c</label>
+        <link refid="yuv-buffer-test_8c"/>
+      </node>
+      <node id="37">
+        <label>/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.c</label>
+        <link refid="weston-test-fixture-compositor_8c"/>
+      </node>
+      <node id="6">
+        <label>/home/lzm/Wayland/weston/tests/buffer-transforms-test.c</label>
+        <link refid="buffer-transforms-test_8c"/>
+      </node>
+      <node id="10">
+        <label>/home/lzm/Wayland/weston/tests/input-timestamps-helper.c</label>
+        <link refid="input-timestamps-helper_8c"/>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h</label>
+        <link refid="weston-test-fixture-compositor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>/home/lzm/Wayland/weston/tests/ivi-layout-internal-test.c</label>
+        <link refid="ivi-layout-internal-test_8c"/>
+      </node>
+      <node id="9">
+        <label>/home/lzm/Wayland/weston/tests/event-test.c</label>
+        <link refid="event-test_8c"/>
+      </node>
+      <node id="15">
+        <label>/home/lzm/Wayland/weston/tests/linux-explicit-synchronization-test.c</label>
+        <link refid="linux-explicit-synchronization-test_8c"/>
+      </node>
+      <node id="24">
+        <label>/home/lzm/Wayland/weston/tests/text-test.c</label>
+        <link refid="text-test_8c"/>
+      </node>
+      <node id="21">
+        <label>/home/lzm/Wayland/weston/tests/string-test.c</label>
+        <link refid="string-test_8c"/>
+      </node>
+      <node id="31">
+        <label>/home/lzm/Wayland/weston/tests/plugin-registry-test.c</label>
+        <link refid="plugin-registry-test_8c"/>
+      </node>
+      <node id="12">
+        <label>/home/lzm/Wayland/weston/tests/ivi-layout-test-client.c</label>
+        <link refid="ivi-layout-test-client_8c"/>
+      </node>
+      <node id="36">
+        <label>/home/lzm/Wayland/weston/tests/xwayland-test.c</label>
+        <link refid="xwayland-test_8c"/>
+      </node>
+      <node id="11">
+        <label>/home/lzm/Wayland/weston/tests/internal-screenshot-test.c</label>
+        <link refid="internal-screenshot-test_8c"/>
+      </node>
+      <node id="25">
+        <label>/home/lzm/Wayland/weston/tests/touch-test.c</label>
+        <link refid="touch-test_8c"/>
+      </node>
+      <node id="4">
+        <label>/home/lzm/Wayland/weston/tests/alpha-blending-test.c</label>
+        <link refid="alpha-blending-test_8c"/>
+      </node>
+      <node id="34">
+        <label>/home/lzm/Wayland/weston/tests/vertex-clip-test.c</label>
+        <link refid="vertex-clip-test_8c"/>
+      </node>
+      <node id="17">
+        <label>/home/lzm/Wayland/weston/tests/output-transforms-test.c</label>
+        <link refid="output-transforms-test_8c"/>
+      </node>
+      <node id="23">
+        <label>/home/lzm/Wayland/weston/tests/subsurface-test.c</label>
+        <link refid="subsurface-test_8c"/>
+      </node>
+      <node id="7">
+        <label>/home/lzm/Wayland/weston/tests/devices-test.c</label>
+        <link refid="devices-test_8c"/>
+      </node>
+      <node id="27">
+        <label>/home/lzm/Wayland/weston/tests/viewporter-test.c</label>
+        <link refid="viewporter-test_8c"/>
+      </node>
+      <node id="32">
+        <label>/home/lzm/Wayland/weston/tests/surface-global-test.c</label>
+        <link refid="surface-global-test_8c"/>
+      </node>
+      <node id="16">
+        <label>/home/lzm/Wayland/weston/tests/output-damage-test.c</label>
+        <link refid="output-damage-test_8c"/>
+      </node>
+      <node id="26">
+        <label>/home/lzm/Wayland/weston/tests/viewporter-shot-test.c</label>
+        <link refid="viewporter-shot-test_8c"/>
+      </node>
+      <node id="13">
+        <label>/home/lzm/Wayland/weston/tests/ivi-shell-app-test.c</label>
+        <link refid="ivi-shell-app-test_8c"/>
+      </node>
+      <node id="20">
+        <label>/home/lzm/Wayland/weston/tests/roles-test.c</label>
+        <link refid="roles-test_8c"/>
+      </node>
+      <node id="14">
+        <label>/home/lzm/Wayland/weston/tests/keyboard-test.c</label>
+        <link refid="keyboard-test_8c"/>
+      </node>
+      <node id="18">
+        <label>/home/lzm/Wayland/weston/tests/pointer-test.c</label>
+        <link refid="pointer-test_8c"/>
+      </node>
+      <node id="5">
+        <label>/home/lzm/Wayland/weston/tests/bad-buffer-test.c</label>
+        <link refid="bad-buffer-test_8c"/>
+      </node>
+      <node id="33">
+        <label>/home/lzm/Wayland/weston/tests/surface-test.c</label>
+        <link refid="surface-test_8c"/>
+      </node>
+      <node id="35">
+        <label>/home/lzm/Wayland/weston/tests/weston-test-runner.c</label>
+        <link refid="weston-test-runner_8c"/>
+      </node>
+      <node id="2">
+        <label>/home/lzm/Wayland/weston/tests/weston-test-runner.h</label>
+        <link refid="weston-test-runner_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>/home/lzm/Wayland/weston/tests/presentation-test.c</label>
+        <link refid="presentation-test_8c"/>
+      </node>
+      <node id="8">
+        <label>/home/lzm/Wayland/weston/tests/drm-smoke-test.c</label>
+        <link refid="drm-smoke-test_8c"/>
+      </node>
+      <node id="28">
+        <label>/home/lzm/Wayland/weston/tests/weston-test-client-helper.c</label>
+        <link refid="weston-test-client-helper_8c"/>
+      </node>
+      <node id="3">
+        <label>/home/lzm/Wayland/weston/tests/weston-test-client-helper.h</label>
+        <link refid="weston-test-client-helper_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>/home/lzm/Wayland/weston/tests/subsurface-shot-test.c</label>
+        <link refid="subsurface-shot-test_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structcompositor__setup" prot="public">compositor_setup</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__testharness_1ga6d93ba47ec578b140fa2cbd3efa1218c" prot="public" static="no">
+        <name>compositor_setup_defaults</name>
+        <param><defname>s</defname></param>
+        <initializer>	do {\
+	<ref refid="group__testharness__private_1ga9c3679c70b98a4b2e87d18f7cceaf4a8" kindref="member">compositor_setup_defaults_</ref>(s, THIS_TEST_NAME); \
+} while (0)</initializer>
+        <briefdescription>
+<para>Initialize compositor setup to defaults. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The variable to initialize.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The defaults are:<itemizedlist>
+<listitem><para>backend: headless</para>
+</listitem><listitem><para>renderer: noop</para>
+</listitem><listitem><para>shell: desktop shell</para>
+</listitem><listitem><para>xwayland: no</para>
+</listitem><listitem><para>width: 320</para>
+</listitem><listitem><para>height: 240</para>
+</listitem><listitem><para>scale: 1</para>
+</listitem><listitem><para>transform: WL_OUTPUT_TRANSFORM_NORMAL</para>
+</listitem><listitem><para>config_file: none</para>
+</listitem><listitem><para>extra_module: none</para>
+</listitem><listitem><para>logging_scopes: compositor defaults</para>
+</listitem><listitem><para>testset_name: the test name from meson.build </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" line="129" column="9" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="weston-test-fixture-compositor_8h_1aac73c9ae82be39289e01acd3e038b4da" prot="public" static="no">
+        <name>weston_ini_setup</name>
+        <param><defname>setup</defname></param>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="weston-test-fixture-compositor_8h_1a6ab90fa6d470eb83a09a83c9af8d7afb" kindref="member">weston_ini_setup_</ref>(setup, __VA_ARGS__, NULL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" line="151" column="9" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__testharness_1ga3f584343987d08b8aa9abf1e9c371a90" prot="public" static="no" strong="no">
+        <type></type>
+        <name>renderer_type</name>
+        <enumvalue id="group__testharness_1gga3f584343987d08b8aa9abf1e9c371a90aaf94b7875b1ffa9fc28e99db995f19d1" prot="public">
+          <name>RENDERER_NOOP</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Dummy renderer that does nothing. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__testharness_1gga3f584343987d08b8aa9abf1e9c371a90a7c4539f6251acc274b33a085a1c520d7" prot="public">
+          <name>RENDERER_PIXMAN</name>
+          <briefdescription>
+<para>Pixman-renderer. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__testharness_1gga3f584343987d08b8aa9abf1e9c371a90ae5e927b4a68fbbf849f68aed0de9e34a" prot="public">
+          <name>RENDERER_GL</name>
+          <briefdescription>
+<para>GL-renderer. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Weston renderer type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="structcompositor__setup" kindref="compound">compositor_setup</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" line="39" column="19" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" bodystart="39" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__testharness_1ga0ad980f813d1f7469e9b9ff20f73fce9" prot="public" static="no" strong="no">
+        <type></type>
+        <name>shell_type</name>
+        <enumvalue id="group__testharness_1gga0ad980f813d1f7469e9b9ff20f73fce9a788b50d23ce49ed189c3f49fc6030d85" prot="public">
+          <name>SHELL_TEST_DESKTOP</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Desktop test-shell with predictable window placement and no helper clients. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__testharness_1gga0ad980f813d1f7469e9b9ff20f73fce9aaaca4c884866e17214dc71e0638b47bf" prot="public">
+          <name>SHELL_DESKTOP</name>
+          <briefdescription>
+<para>The full desktop shell. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__testharness_1gga0ad980f813d1f7469e9b9ff20f73fce9a6cdbedc13f80e112abaedcaa86adb0b7" prot="public">
+          <name>SHELL_IVI</name>
+          <briefdescription>
+<para>The ivi-shell. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__testharness_1gga0ad980f813d1f7469e9b9ff20f73fce9a04ec11b3eb9a976e678b87e61064afc9" prot="public">
+          <name>SHELL_FULLSCREEN</name>
+          <briefdescription>
+<para>The fullscreen-shell. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Weston shell plugin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="structcompositor__setup" kindref="compound">compositor_setup</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" line="53" column="16" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" bodystart="53" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__testharness__private_1ga9c3679c70b98a4b2e87d18f7cceaf4a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void compositor_setup_defaults_</definition>
+        <argsstring>(struct compositor_setup *setup, const char *testset_name)</argsstring>
+        <name>compositor_setup_defaults_</name>
+        <param>
+          <type>struct <ref refid="structcompositor__setup" kindref="compound">compositor_setup</ref> *</type>
+          <declname>setup</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>testset_name</declname>
+        </param>
+        <briefdescription>
+<para>Initialize part of compositor setup. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>setup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The variable to initialize. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>testset_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value for testset_name member. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" line="106" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.c" bodystart="177" bodyend="195" declfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" declline="106" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__testharness__private_1gad9955329c6b705ef5be29d881347b5b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int execute_compositor</definition>
+        <argsstring>(const struct compositor_setup *setup, struct wet_testsuite_data *data)</argsstring>
+        <name>execute_compositor</name>
+        <param>
+          <type>const struct <ref refid="structcompositor__setup" kindref="compound">compositor_setup</ref> *</type>
+          <declname>setup</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structwet__testsuite__data" kindref="compound">wet_testsuite_data</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Execute compositor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Manufactures the compositor command line and calls wet_main().</para>
+<para>Returns RESULT_SKIP if the given setup contains features that were disabled in the build, e.g. GL-renderer or DRM-backend. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" line="134" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.c" bodystart="280" bodyend="442" declfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" declline="134" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-fixture-compositor_8h_1a6ab90fa6d470eb83a09a83c9af8d7afb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_ini_setup_</definition>
+        <argsstring>(struct compositor_setup *setup,...)</argsstring>
+        <name>weston_ini_setup_</name>
+        <param>
+          <type>struct <ref refid="structcompositor__setup" kindref="compound">compositor_setup</ref> *</type>
+          <declname>setup</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" line="155" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.c" bodystart="485" bodyend="500" declfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" declline="155" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-fixture-compositor_8h_1aa4dcc2eb01029f6d9ecd8fe2e780aec0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* cfgln</definition>
+        <argsstring>(const char *fmt,...)</argsstring>
+        <name>cfgln</name>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" line="158" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.c" bodystart="503" bodyend="515" declfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" declline="158" declcolumn="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2019<sp/>Collabora,<sp/>Ltd.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>(including<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>next<sp/>paragraph)<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>NONINFRINGEMENT.<sp/><sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>WESTON_TEST_FIXTURE_COMPOSITOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WESTON_TEST_FIXTURE_COMPOSITOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;wayland-client-protocol.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="libweston_8h" kindref="compound">libweston/libweston.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="weston-testsuite-data_8h" kindref="compound">weston-testsuite-data.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="group__testharness_1ga3f584343987d08b8aa9abf1e9c371a90" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1ga3f584343987d08b8aa9abf1e9c371a90" kindref="member">renderer_type</ref><sp/>{</highlight></codeline>
+<codeline lineno="41" refid="group__testharness_1gga3f584343987d08b8aa9abf1e9c371a90aaf94b7875b1ffa9fc28e99db995f19d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__testharness_1gga3f584343987d08b8aa9abf1e9c371a90aaf94b7875b1ffa9fc28e99db995f19d1" kindref="member">RENDERER_NOOP</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="43" refid="group__testharness_1gga3f584343987d08b8aa9abf1e9c371a90a7c4539f6251acc274b33a085a1c520d7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__testharness_1gga3f584343987d08b8aa9abf1e9c371a90a7c4539f6251acc274b33a085a1c520d7" kindref="member">RENDERER_PIXMAN</ref>,</highlight></codeline>
+<codeline lineno="45" refid="group__testharness_1gga3f584343987d08b8aa9abf1e9c371a90ae5e927b4a68fbbf849f68aed0de9e34a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__testharness_1gga3f584343987d08b8aa9abf1e9c371a90ae5e927b4a68fbbf849f68aed0de9e34a" kindref="member">RENDERER_GL</ref></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="group__testharness_1ga0ad980f813d1f7469e9b9ff20f73fce9" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1ga0ad980f813d1f7469e9b9ff20f73fce9" kindref="member">shell_type</ref><sp/>{</highlight></codeline>
+<codeline lineno="56" refid="group__testharness_1gga0ad980f813d1f7469e9b9ff20f73fce9a788b50d23ce49ed189c3f49fc6030d85" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__testharness_1gga0ad980f813d1f7469e9b9ff20f73fce9a788b50d23ce49ed189c3f49fc6030d85" kindref="member">SHELL_TEST_DESKTOP</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="58" refid="group__testharness_1gga0ad980f813d1f7469e9b9ff20f73fce9aaaca4c884866e17214dc71e0638b47bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__testharness_1gga0ad980f813d1f7469e9b9ff20f73fce9aaaca4c884866e17214dc71e0638b47bf" kindref="member">SHELL_DESKTOP</ref>,</highlight></codeline>
+<codeline lineno="60" refid="group__testharness_1gga0ad980f813d1f7469e9b9ff20f73fce9a6cdbedc13f80e112abaedcaa86adb0b7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__testharness_1gga0ad980f813d1f7469e9b9ff20f73fce9a6cdbedc13f80e112abaedcaa86adb0b7" kindref="member">SHELL_IVI</ref>,</highlight></codeline>
+<codeline lineno="62" refid="group__testharness_1gga0ad980f813d1f7469e9b9ff20f73fce9a04ec11b3eb9a976e678b87e61064afc9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__testharness_1gga0ad980f813d1f7469e9b9ff20f73fce9a04ec11b3eb9a976e678b87e61064afc9" kindref="member">SHELL_FULLSCREEN</ref></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="structcompositor__setup" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structcompositor__setup" kindref="compound">compositor_setup</ref><sp/>{</highlight></codeline>
+<codeline lineno="75" refid="structcompositor__setup_1a50e75b92ffbe804e6ec0238a8a7deab1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__testsuite__quirks" kindref="compound">weston_testsuite_quirks</ref><sp/><ref refid="structcompositor__setup_1a50e75b92ffbe804e6ec0238a8a7deab1" kindref="member">test_quirks</ref>;</highlight></codeline>
+<codeline lineno="77" refid="structcompositor__setup_1a99405a1c668b098b35b25e3cf4ed00ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="libweston_8h_1a6523745d75d8e1a9a9b8aec9c8c68036" kindref="member">weston_compositor_backend</ref><sp/><ref refid="structcompositor__setup_1a99405a1c668b098b35b25e3cf4ed00ae" kindref="member">backend</ref>;</highlight></codeline>
+<codeline lineno="79" refid="structcompositor__setup_1a855aeaf92213cff9e81bab8cb5967b69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1ga3f584343987d08b8aa9abf1e9c371a90" kindref="member">renderer_type</ref><sp/><ref refid="structcompositor__setup_1a855aeaf92213cff9e81bab8cb5967b69" kindref="member">renderer</ref>;</highlight></codeline>
+<codeline lineno="81" refid="structcompositor__setup_1a7282cf883c117307ebf4c55e93c65e5c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1ga0ad980f813d1f7469e9b9ff20f73fce9" kindref="member">shell_type</ref><sp/><ref refid="structcompositor__setup_1a7282cf883c117307ebf4c55e93c65e5c" kindref="member">shell</ref>;</highlight></codeline>
+<codeline lineno="83" refid="structcompositor__setup_1a79cf704d3b38b6ca931ad2d1c5625fa4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structcompositor__setup_1a79cf704d3b38b6ca931ad2d1c5625fa4" kindref="member">xwayland</ref>;</highlight></codeline>
+<codeline lineno="85" refid="structcompositor__setup_1ab14c97eec951652f83b36509cffc86b0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structcompositor__setup_1ab14c97eec951652f83b36509cffc86b0" kindref="member">width</ref>;</highlight></codeline>
+<codeline lineno="87" refid="structcompositor__setup_1a0835352687ae40d5c1e2a6784654cd02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structcompositor__setup_1a0835352687ae40d5c1e2a6784654cd02" kindref="member">height</ref>;</highlight></codeline>
+<codeline lineno="89" refid="structcompositor__setup_1ad510bce7ff6acb50c2868f7546ae2493" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcompositor__setup_1ad510bce7ff6acb50c2868f7546ae2493" kindref="member">scale</ref>;</highlight></codeline>
+<codeline lineno="91" refid="structcompositor__setup_1ac816447cb027d27b4e07ca34aad1cb48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>wl_output_transform<sp/><ref refid="structcompositor__setup_1ac816447cb027d27b4e07ca34aad1cb48" kindref="member">transform</ref>;</highlight></codeline>
+<codeline lineno="95" refid="structcompositor__setup_1a8eb719167d6b363a540f28b5e41ce97b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structcompositor__setup_1a8eb719167d6b363a540f28b5e41ce97b" kindref="member">config_file</ref>;</highlight></codeline>
+<codeline lineno="97" refid="structcompositor__setup_1ac2ca15a1b025c2a0a8bc1ad7e7e7be0f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structcompositor__setup_1ac2ca15a1b025c2a0a8bc1ad7e7e7be0f" kindref="member">extra_module</ref>;</highlight></codeline>
+<codeline lineno="100" refid="structcompositor__setup_1a0f2c8280f5923305d4f679a86c8f0821" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structcompositor__setup_1a0f2c8280f5923305d4f679a86c8f0821" kindref="member">logging_scopes</ref>;</highlight></codeline>
+<codeline lineno="102" refid="structcompositor__setup_1a7a9d5a5b95a6b47ea192895485caf499" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structcompositor__setup_1a7a9d5a5b95a6b47ea192895485caf499" kindref="member">testset_name</ref>;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><ref refid="group__testharness__private_1ga9c3679c70b98a4b2e87d18f7cceaf4a8" kindref="member">compositor_setup_defaults_</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structcompositor__setup" kindref="compound">compositor_setup</ref><sp/>*setup,</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*testset_name);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="group__testharness_1ga6d93ba47ec578b140fa2cbd3efa1218c" refkind="member"><highlight class="preprocessor">#define<sp/>compositor_setup_defaults(s)<sp/>do<sp/>{\</highlight></codeline>
+<codeline lineno="130"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>compositor_setup_defaults_(s,<sp/>THIS_TEST_NAME);<sp/>\</highlight></codeline>
+<codeline lineno="131"><highlight class="preprocessor">}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><ref refid="group__testharness__private_1gad9955329c6b705ef5be29d881347b5b1" kindref="member">execute_compositor</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structcompositor__setup" kindref="compound">compositor_setup</ref><sp/>*setup,</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structwet__testsuite__data" kindref="compound">wet_testsuite_data</ref><sp/>*data);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>This<sp/>function<sp/>creates<sp/>and<sp/>fills<sp/>a<sp/>Weston.ini<sp/>file</highlight></codeline>
+<codeline lineno="138"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="139"><highlight class="comment"><sp/>*<sp/>\param<sp/>setup<sp/>a<sp/>compositor_setup</highlight></codeline>
+<codeline lineno="140"><highlight class="comment"><sp/>*<sp/>\param<sp/>...<sp/>Variadic<sp/>number<sp/>of<sp/>strings<sp/>that<sp/>will<sp/>be<sp/>used<sp/>to<sp/>compose</highlight></codeline>
+<codeline lineno="141"><highlight class="comment"><sp/>*<sp/>the<sp/>Weston.ini</highlight></codeline>
+<codeline lineno="142"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="143"><highlight class="comment"><sp/>*<sp/>This<sp/>function<sp/>receives<sp/>a<sp/>compositor_setup<sp/>and<sp/>a<sp/>variable<sp/>number<sp/>of</highlight></codeline>
+<codeline lineno="144"><highlight class="comment"><sp/>*<sp/>strings<sp/>that<sp/>will<sp/>compose<sp/>the<sp/>weston.ini.<sp/>And<sp/>will<sp/>create<sp/>a</highlight></codeline>
+<codeline lineno="145"><highlight class="comment"><sp/>*<sp/>&lt;test-name&gt;.ini<sp/>and<sp/>fill<sp/>it<sp/>with<sp/>the<sp/>entries.</highlight></codeline>
+<codeline lineno="146"><highlight class="comment"><sp/>*<sp/>This<sp/>function<sp/>will<sp/>assert<sp/>if<sp/>anything<sp/>goes<sp/>wrong,<sp/>then<sp/>it<sp/>will<sp/>not</highlight></codeline>
+<codeline lineno="147"><highlight class="comment"><sp/>*<sp/>have<sp/>a<sp/>return<sp/>value<sp/>to<sp/>indicate<sp/>success<sp/>or<sp/>failure.</highlight></codeline>
+<codeline lineno="148"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="149"><highlight class="comment"><sp/>*<sp/>\ingroup<sp/>testharness</highlight></codeline>
+<codeline lineno="150"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151" refid="weston-test-fixture-compositor_8h_1aac73c9ae82be39289e01acd3e038b4da" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>weston_ini_setup(setup,<sp/>...)<sp/>\</highlight></codeline>
+<codeline lineno="152"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_ini_setup_(setup,<sp/>__VA_ARGS__,<sp/>NULL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><ref refid="weston-test-fixture-compositor_8h_1a6ab90fa6d470eb83a09a83c9af8d7afb" kindref="member">weston_ini_setup_</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structcompositor__setup" kindref="compound">compositor_setup</ref><sp/>*setup,<sp/>...);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><ref refid="weston-test-fixture-compositor_8h_1aa4dcc2eb01029f6d9ecd8fe2e780aec0" kindref="member">cfgln</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*fmt,<sp/>...);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>WESTON_TEST_FIXTURE_COMPOSITOR_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h"/>
+  </compounddef>
+</doxygen>

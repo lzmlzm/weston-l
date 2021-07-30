@@ -1,0 +1,1300 @@
+Build started at 2021-06-26T20:51:39.308937
+Main binary: /usr/bin/python3
+Build Options: -Dbackend-rdp=false -Dremoting=false -Ddoc=true -Dprefix=/home/lzm/Wayland/install
+Python system: Linux
+The Meson build system
+Version: 0.55.3
+Source dir: /home/lzm/Wayland/weston
+Build dir: /home/lzm/Wayland/weston/builddir
+Build type: native build
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Project name: weston
+Project version: 9.0.90
+None of 'CC' are defined in the environment, not changing global flags.
+None of 'CFLAGS' are defined in the environment, not changing global flags.
+None of 'LDFLAGS' are defined in the environment, not changing global flags.
+None of 'CPPFLAGS' are defined in the environment, not changing global flags.
+None of 'CC_LD' are defined in the environment, not changing global flags.
+Sanity testing C compiler: cc
+Is cross compiler: False.
+None of 'CC_LD' are defined in the environment, not changing global flags.
+Sanity check compiler command line: cc /home/lzm/Wayland/weston/builddir/meson-private/sanitycheckc.c -o /home/lzm/Wayland/weston/builddir/meson-private/sanitycheckc.exe -pipe -D_FILE_OFFSET_BITS=64
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command: /home/lzm/Wayland/weston/builddir/meson-private/sanitycheckc.exe
+C compiler for the build machine: cc (gcc 9.3.0 "cc (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0")
+C linker for the build machine: cc ld.bfd 2.34
+None of 'AR' are defined in the environment, not changing global flags.
+None of 'CC' are defined in the environment, not changing global flags.
+None of 'CFLAGS' are defined in the environment, not changing global flags.
+None of 'LDFLAGS' are defined in the environment, not changing global flags.
+None of 'CPPFLAGS' are defined in the environment, not changing global flags.
+None of 'CC_LD' are defined in the environment, not changing global flags.
+Sanity testing C compiler: cc
+Is cross compiler: False.
+None of 'CC_LD' are defined in the environment, not changing global flags.
+Sanity check compiler command line: cc /home/lzm/Wayland/weston/builddir/meson-private/sanitycheckc.c -o /home/lzm/Wayland/weston/builddir/meson-private/sanitycheckc.exe -pipe -D_FILE_OFFSET_BITS=64
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command: /home/lzm/Wayland/weston/builddir/meson-private/sanitycheckc.exe
+C compiler for the host machine: cc (gcc 9.3.0 "cc (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0")
+C linker for the host machine: cc ld.bfd 2.34
+None of 'AR' are defined in the environment, not changing global flags.
+Build machine cpu family: x86_64
+Build machine cpu: x86_64
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Target machine cpu family: x86_64
+Target machine cpu: x86_64
+Found git repository at /home/lzm/Wayland/weston
+Running compile:
+Working directory:  /home/lzm/Wayland/weston/builddir/meson-private/tmpz30ee7ku
+Command line:  cc /home/lzm/Wayland/weston/builddir/meson-private/tmpz30ee7ku/testfile.c -o /home/lzm/Wayland/weston/builddir/meson-private/tmpz30ee7ku/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Wmissing-prototypes 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wmissing-prototypes: YES 
+Running compile:
+Working directory:  /home/lzm/Wayland/weston/builddir/meson-private/tmp0qj4ymgq
+Command line:  cc /home/lzm/Wayland/weston/builddir/meson-private/tmp0qj4ymgq/testfile.c -o /home/lzm/Wayland/weston/builddir/meson-private/tmp0qj4ymgq/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Wno-unused-parameter -Wunused-parameter 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-unused-parameter -Wunused-parameter: YES 
+Running compile:
+Working directory:  /home/lzm/Wayland/weston/builddir/meson-private/tmp9fcsrhfy
+Command line:  cc /home/lzm/Wayland/weston/builddir/meson-private/tmp9fcsrhfy/testfile.c -o /home/lzm/Wayland/weston/builddir/meson-private/tmp9fcsrhfy/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Wno-shift-negative-value -Wshift-negative-value 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-shift-negative-value -Wshift-negative-value: YES 
+Running compile:
+Working directory:  /home/lzm/Wayland/weston/builddir/meson-private/tmpee_i_46j
+Command line:  cc /home/lzm/Wayland/weston/builddir/meson-private/tmpee_i_46j/testfile.c -o /home/lzm/Wayland/weston/builddir/meson-private/tmpee_i_46j/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Wno-missing-field-initializers -Wmissing-field-initializers 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-missing-field-initializers -Wmissing-field-initializers: YES 
+Running compile:
+Working directory:  /home/lzm/Wayland/weston/builddir/meson-private/tmp120yim74
+Command line:  cc /home/lzm/Wayland/weston/builddir/meson-private/tmp120yim74/testfile.c -o /home/lzm/Wayland/weston/builddir/meson-private/tmp120yim74/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Wno-pedantic -Wpedantic 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-pedantic -Wpedantic: YES 
+Running compile:
+Working directory:  /home/lzm/Wayland/weston/builddir/meson-private/tmpiibsa6ds
+Command line:  cc /home/lzm/Wayland/weston/builddir/meson-private/tmpiibsa6ds/testfile.c -o /home/lzm/Wayland/weston/builddir/meson-private/tmpiibsa6ds/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Wundef 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wundef: YES 
+Running compile:
+Working directory:  /home/lzm/Wayland/weston/builddir/meson-private/tmp5aepzp77
+Command line:  cc /home/lzm/Wayland/weston/builddir/meson-private/tmp5aepzp77/testfile.c -o /home/lzm/Wayland/weston/builddir/meson-private/tmp5aepzp77/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -fvisibility=hidden 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -fvisibility=hidden: YES 
+Running compile:
+Working directory:  /home/lzm/Wayland/weston/builddir/meson-private/tmpkig_u5qj
+Command line:  cc /home/lzm/Wayland/weston/builddir/meson-private/tmpkig_u5qj/testfile.c -o /home/lzm/Wayland/weston/builddir/meson-private/tmpkig_u5qj/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -std=gnu99 
+
+Code:
+ 
+        #include <sys/sysmacros.h>
+        int main(void) {
+            /* If it's not defined as a macro, try to use as a symbol */
+            #ifndef major
+                major;
+            #endif
+            return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Header <sys/sysmacros.h> has symbol "major" : YES 
+None of 'CC_LD' are defined in the environment, not changing global flags.
+Running compile:
+Working directory:  /home/lzm/Wayland/weston/builddir/meson-private/tmp68of8qtv
+Command line:  cc /home/lzm/Wayland/weston/builddir/meson-private/tmp68of8qtv/testfile.c -o /home/lzm/Wayland/weston/builddir/meson-private/tmp68of8qtv/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 -std=gnu99 
+
+Code:
+ 
+        #define mkostemp meson_disable_define_of_mkostemp
+        
+        #include <limits.h>
+        #undef mkostemp
+        
+        #ifdef __cplusplus
+        extern "C"
+        #endif
+        char mkostemp (void);
+        
+        #if defined __stub_mkostemp || defined __stub___mkostemp
+        fail fail fail this function is not going to work
+        #endif
+        
+        int main(void) {
+          return mkostemp ();
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for function "mkostemp" : YES 
+None of 'CC_LD' are defined in the environment, not changing global flags.
+Running compile:
+Working directory:  /home/lzm/Wayland/weston/builddir/meson-private/tmpkltoj7zq
+Command line:  cc /home/lzm/Wayland/weston/builddir/meson-private/tmpkltoj7zq/testfile.c -o /home/lzm/Wayland/weston/builddir/meson-private/tmpkltoj7zq/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 -std=gnu99 
+
+Code:
+ 
+        #define strchrnul meson_disable_define_of_strchrnul
+        
+        #include <limits.h>
+        #undef strchrnul
+        
+        #ifdef __cplusplus
+        extern "C"
+        #endif
+        char strchrnul (void);
+        
+        #if defined __stub_strchrnul || defined __stub___strchrnul
+        fail fail fail this function is not going to work
+        #endif
+        
+        int main(void) {
+          return strchrnul ();
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for function "strchrnul" : YES 
+None of 'CC_LD' are defined in the environment, not changing global flags.
+Running compile:
+Working directory:  /home/lzm/Wayland/weston/builddir/meson-private/tmpgpe_9ywi
+Command line:  cc /home/lzm/Wayland/weston/builddir/meson-private/tmpgpe_9ywi/testfile.c -o /home/lzm/Wayland/weston/builddir/meson-private/tmpgpe_9ywi/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 -std=gnu99 
+
+Code:
+ 
+        #define initgroups meson_disable_define_of_initgroups
+        
+        #include <limits.h>
+        #undef initgroups
+        
+        #ifdef __cplusplus
+        extern "C"
+        #endif
+        char initgroups (void);
+        
+        #if defined __stub_initgroups || defined __stub___initgroups
+        fail fail fail this function is not going to work
+        #endif
+        
+        int main(void) {
+          return initgroups ();
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for function "initgroups" : YES 
+None of 'CC_LD' are defined in the environment, not changing global flags.
+Running compile:
+Working directory:  /home/lzm/Wayland/weston/builddir/meson-private/tmpzwvxwvmt
+Command line:  cc /home/lzm/Wayland/weston/builddir/meson-private/tmpzwvxwvmt/testfile.c -o /home/lzm/Wayland/weston/builddir/meson-private/tmpzwvxwvmt/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 -std=gnu99 
+
+Code:
+ 
+        #define posix_fallocate meson_disable_define_of_posix_fallocate
+        
+        #include <limits.h>
+        #undef posix_fallocate
+        
+        #ifdef __cplusplus
+        extern "C"
+        #endif
+        char posix_fallocate (void);
+        
+        #if defined __stub_posix_fallocate || defined __stub___posix_fallocate
+        fail fail fail this function is not going to work
+        #endif
+        
+        int main(void) {
+          return posix_fallocate ();
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for function "posix_fallocate" : YES 
+None of 'CC_LD' are defined in the environment, not changing global flags.
+Running compile:
+Working directory:  /home/lzm/Wayland/weston/builddir/meson-private/tmp1au3hucv
+Command line:  cc /home/lzm/Wayland/weston/builddir/meson-private/tmp1au3hucv/testfile.c -o /home/lzm/Wayland/weston/builddir/meson-private/tmp1au3hucv/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 -std=gnu99 
+
+Code:
+ 
+        #define memfd_create meson_disable_define_of_memfd_create
+        
+        #include <limits.h>
+        #undef memfd_create
+        
+        #ifdef __cplusplus
+        extern "C"
+        #endif
+        char memfd_create (void);
+        
+        #if defined __stub_memfd_create || defined __stub___memfd_create
+        fail fail fail this function is not going to work
+        #endif
+        
+        int main(void) {
+          return memfd_create ();
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for function "memfd_create" : YES 
+Running compile:
+Working directory:  /home/lzm/Wayland/weston/builddir/meson-private/tmpidvngvzi
+Command line:  cc /home/lzm/Wayland/weston/builddir/meson-private/tmpidvngvzi/testfile.c -pipe -E -P -D_FILE_OFFSET_BITS=64 -P -O0 -std=gnu99 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("linux/sync_file.h")
+          #error "Header 'linux/sync_file.h' could not be found"
+         #endif
+        #else
+         #include <linux/sync_file.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Has header "linux/sync_file.h" : YES 
+Message: The default backend is drm
+Pkg-config binary for MachineChoice.HOST is not cached.
+None of 'PKG_CONFIG' are defined in the environment, not changing global flags.
+Pkg-config binary missing from cross or native file, or env var undefined.
+Trying a default Pkg-config fallback at pkg-config
+Found pkg-config: /usr/bin/pkg-config (0.29.1)
+Determining dependency 'xkbcommon' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion xkbcommon` -> 0
+1.3.0
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags xkbcommon` -> 0
+-I/home/lzm/Wayland/install/include
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config xkbcommon --libs` -> 0
+-L/home/lzm/Wayland/install/lib/x86_64-linux-gnu -lxkbcommon
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config xkbcommon --libs` -> 0
+-L/home/lzm/Wayland/install/lib/x86_64-linux-gnu -lxkbcommon
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+None of 'CC_LD' are defined in the environment, not changing global flags.
+Running compile:
+Working directory:  /home/lzm/Wayland/weston/builddir/meson-private/tmpachy2gx6
+Command line:  cc /home/lzm/Wayland/weston/builddir/meson-private/tmpachy2gx6/testfile.c -o /home/lzm/Wayland/weston/builddir/meson-private/tmpachy2gx6/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include<stdio.h>
+        
+        int main(void) {
+            printf("%ld\n", (long)(sizeof(void *)));
+            return 0;
+        };
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Program stdout:
+
+8
+
+Program stderr:
+
+
+Running compile:
+Working directory:  /home/lzm/Wayland/weston/builddir/meson-private/tmp0j6941uj
+Command line:  cc /home/lzm/Wayland/weston/builddir/meson-private/tmp0j6941uj/testfile.c -o /home/lzm/Wayland/weston/builddir/meson-private/tmp0j6941uj/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 --print-search-dirs 
+
+Code:
+ 
+Compiler stdout:
+ install: /usr/lib/gcc/x86_64-linux-gnu/9/
+programs: =/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/bin/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/bin/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/bin/
+libraries: =/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/lib/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/lib/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/9/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/9/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/
+
+Compiler stderr:
+ 
+Run-time dependency xkbcommon found: YES 1.3.0
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'wayland-server' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion wayland-server` -> 0
+1.19.90
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags wayland-server` -> 0
+-I/home/lzm/Wayland/install/include
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config wayland-server --libs` -> 0
+-L/home/lzm/Wayland/install/lib/x86_64-linux-gnu -lwayland-server
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config wayland-server --libs` -> 0
+-L/home/lzm/Wayland/install/lib/x86_64-linux-gnu -lwayland-server
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency wayland-server found: YES 1.19.90
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'wayland-client' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion wayland-client` -> 0
+1.19.90
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags wayland-client` -> 0
+-I/home/lzm/Wayland/install/include
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config wayland-client --libs` -> 0
+-L/home/lzm/Wayland/install/lib/x86_64-linux-gnu -lwayland-client
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config wayland-client --libs` -> 0
+-L/home/lzm/Wayland/install/lib/x86_64-linux-gnu -lwayland-client
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency wayland-client found: YES 1.19.90
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'pixman-1' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion pixman-1` -> 0
+0.40.1
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags pixman-1` -> 0
+-I/home/lzm/Wayland/install/include/pixman-1
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config pixman-1 --libs` -> 0
+-L/home/lzm/Wayland/install/lib -lpixman-1
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config pixman-1 --libs` -> 0
+-L/home/lzm/Wayland/install/lib -lpixman-1
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency pixman-1 found: YES 0.40.1
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'libinput' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion libinput` -> 0
+1.17.0
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags libinput` -> 0
+-I/home/lzm/Wayland/install/include
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config libinput --libs` -> 0
+-L/home/lzm/Wayland/install/lib/x86_64-linux-gnu -linput
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config libinput --libs` -> 0
+-L/home/lzm/Wayland/install/lib/x86_64-linux-gnu -linput
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency libinput found: YES 1.17.0
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'libevdev' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion libevdev` -> 0
+1.11.0
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags libevdev` -> 0
+-I/home/lzm/Wayland/install/include/libevdev-1.0/
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config libevdev --libs` -> 0
+-L/home/lzm/Wayland/install/lib -levdev
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config libevdev --libs` -> 0
+-L/home/lzm/Wayland/install/lib -levdev
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency libevdev found: YES 1.11.0
+None of 'CC_LD' are defined in the environment, not changing global flags.
+Running compile:
+Working directory:  /home/lzm/Wayland/weston/builddir/meson-private/tmptl7uz6nr
+Command line:  cc /home/lzm/Wayland/weston/builddir/meson-private/tmptl7uz6nr/testfile.c -o /home/lzm/Wayland/weston/builddir/meson-private/tmptl7uz6nr/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lm -Wl,--end-group -Wl,--allow-shlib-undefined 
+
+Code:
+ int main(void) { return 0; }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Library m found: YES
+None of 'CC_LD' are defined in the environment, not changing global flags.
+Running compile:
+Working directory:  /home/lzm/Wayland/weston/builddir/meson-private/tmp1qnt8kpr
+Command line:  cc /home/lzm/Wayland/weston/builddir/meson-private/tmp1qnt8kpr/testfile.c -o /home/lzm/Wayland/weston/builddir/meson-private/tmp1qnt8kpr/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -ldl -Wl,--end-group -Wl,--allow-shlib-undefined 
+
+Code:
+ int main(void) { return 0; }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Library dl found: YES
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'libdrm' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion libdrm` -> 0
+2.4.106
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags libdrm` -> 0
+-I/home/lzm/Wayland/install/include -I/home/lzm/Wayland/install/include/libdrm
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config libdrm --libs` -> 0
+-L/home/lzm/Wayland/install/lib/x86_64-linux-gnu -ldrm
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config libdrm --libs` -> 0
+-L/home/lzm/Wayland/install/lib/x86_64-linux-gnu -ldrm
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency libdrm found: YES 2.4.106
+Run-time dependency threads found: YES
+Program python3 found: YES (/usr/bin/python3)
+Configuring version.h using configuration
+Pkg-config binary for MachineChoice.BUILD is not cached.
+None of 'PKG_CONFIG' are defined in the environment, not changing global flags.
+Pkg-config binary missing from cross or native file, or env var undefined.
+Trying a default Pkg-config fallback at pkg-config
+Found pkg-config: /usr/bin/pkg-config (0.29.1)
+Determining dependency 'wayland-scanner' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion wayland-scanner` -> 0
+1.19.90
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags wayland-scanner` -> 0
+-I/home/lzm/Wayland/install/include
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config wayland-scanner --libs` -> 0
+
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config wayland-scanner --libs` -> 0
+
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Build-time dependency wayland-scanner found: YES 1.19.90
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --variable=wayland_scanner wayland-scanner` -> 0
+/home/lzm/Wayland/install/bin/wayland-scanner
+Got pkgconfig variable wayland_scanner : /home/lzm/Wayland/install/bin/wayland-scanner
+Program /home/lzm/Wayland/install/bin/wayland-scanner found: YES
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'wayland-protocols' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion wayland-protocols` -> 0
+1.20
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags wayland-protocols` -> 0
+
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config wayland-protocols --libs` -> 0
+
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config wayland-protocols --libs` -> 0
+
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency wayland-protocols found: YES 1.20
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --variable=pkgdatadir wayland-protocols` -> 0
+//home/lzm/Wayland/install/share/wayland-protocols
+Got pkgconfig variable pkgdatadir : //home/lzm/Wayland/install/share/wayland-protocols
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'cairo' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion cairo` -> 0
+1.17.4
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags cairo` -> 0
+-I/home/lzm/Wayland/install/include/cairo -I/home/lzm/Wayland/install/include/pixman-1 -I/home/lzm/Wayland/install/include -I/home/lzm/Wayland/install/include/libdrm -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config cairo --libs` -> 0
+-L/home/lzm/Wayland/install/lib -lcairo
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config cairo --libs` -> 0
+-L/home/lzm/Wayland/install/lib -lcairo
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency cairo found: YES 1.17.4
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'libpng' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion libpng` -> 0
+1.6.37
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags libpng` -> 0
+-I/usr/include/libpng16
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config libpng --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -lpng16 -lz
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config libpng --libs` -> 0
+-lpng16 -lz
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency libpng found: YES 1.6.37
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'pango' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion pango` -> 0
+1.44.7
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags pango` -> 0
+-I/home/lzm/Wayland/install/include/cairo -I/home/lzm/Wayland/install/include/pixman-1 -I/home/lzm/Wayland/install/include -I/home/lzm/Wayland/install/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config pango --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -lpango-1.0 -lgobject-2.0 -lglib-2.0 -lharfbuzz
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config pango --libs` -> 0
+-lpango-1.0 -lgobject-2.0 -lglib-2.0 -lharfbuzz
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency pango found: YES 1.44.7
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'pangocairo' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion pangocairo` -> 0
+1.44.7
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags pangocairo` -> 0
+-I/home/lzm/Wayland/install/include/cairo -I/home/lzm/Wayland/install/include/pixman-1 -I/home/lzm/Wayland/install/include -I/home/lzm/Wayland/install/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config pangocairo --libs` -> 0
+-L/home/lzm/Wayland/install/lib -L/usr/lib/x86_64-linux-gnu -lpangocairo-1.0 -lpango-1.0 -lgobject-2.0 -lglib-2.0 -lharfbuzz -lcairo
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config pangocairo --libs` -> 0
+-L/home/lzm/Wayland/install/lib -lpangocairo-1.0 -lpango-1.0 -lgobject-2.0 -lglib-2.0 -lharfbuzz -lcairo
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency pangocairo found: YES 1.44.7
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'glib-2.0' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion glib-2.0` -> 0
+2.64.6
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags glib-2.0` -> 0
+-I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config glib-2.0 --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -lglib-2.0
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config glib-2.0 --libs` -> 0
+-lglib-2.0
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency glib-2.0 found: YES 2.64.6
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'libjpeg' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion libjpeg` -> 0
+2.0.3
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags libjpeg` -> 0
+
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config libjpeg --libs` -> 0
+-L/build/libjpeg-turbo-6HlDLQ/libjpeg-turbo-2.0.3/obj-x86_64-linux-gnu/lib/x86_64-linux-gnu -ljpeg
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config libjpeg --libs` -> 0
+-L/build/libjpeg-turbo-6HlDLQ/libjpeg-turbo-2.0.3/obj-x86_64-linux-gnu/lib/x86_64-linux-gnu -ljpeg
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency libjpeg found: YES 2.0.3
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'libwebp' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion libwebp` -> 0
+0.6.1
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags libwebp` -> 0
+
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config libwebp --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -lwebp
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config libwebp --libs` -> 0
+-lwebp
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency libwebp found: YES 0.6.1
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'egl' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion egl` -> 0
+21.2.0-devel
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags egl` -> 0
+-I/home/lzm/Wayland/install/include -I/home/lzm/Wayland/install/include/libdrm
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config egl --libs` -> 0
+-L/home/lzm/Wayland/install/lib/x86_64-linux-gnu -lEGL
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config egl --libs` -> 0
+-L/home/lzm/Wayland/install/lib/x86_64-linux-gnu -lEGL
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency egl found: YES 21.2.0-devel
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'libsystemd' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion libsystemd` -> 0
+245
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags libsystemd` -> 0
+
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config libsystemd --libs` -> 0
+-L/lib/x86_64-linux-gnu -lsystemd
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config libsystemd --libs` -> 0
+-lsystemd
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency libsystemd found: YES 245
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'dbus-1' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion dbus-1` -> 0
+1.12.16
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags dbus-1` -> 0
+-I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config dbus-1 --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -ldbus-1
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config dbus-1 --libs` -> 0
+-ldbus-1
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency dbus-1 found: YES 1.12.16
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'libudev' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion libudev` -> 0
+245
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags libudev` -> 0
+
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config libudev --libs` -> 0
+-L/lib/x86_64-linux-gnu -ludev
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config libudev --libs` -> 0
+-ludev
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency libudev found: YES 245
+None of 'CC_LD' are defined in the environment, not changing global flags.
+Running compile:
+Working directory:  /home/lzm/Wayland/weston/builddir/meson-private/tmpm53itgl_
+Command line:  cc /home/lzm/Wayland/weston/builddir/meson-private/tmpm53itgl_/testfile.c -o /home/lzm/Wayland/weston/builddir/meson-private/tmpm53itgl_/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lpam -Wl,--end-group -Wl,--allow-shlib-undefined 
+
+Code:
+ int main(void) { return 0; }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Library pam found: YES
+None of 'CC_LD' are defined in the environment, not changing global flags.
+Running compile:
+Working directory:  /home/lzm/Wayland/weston/builddir/meson-private/tmpd7mit3dh
+Command line:  cc /home/lzm/Wayland/weston/builddir/meson-private/tmpd7mit3dh/testfile.c -o /home/lzm/Wayland/weston/builddir/meson-private/tmpd7mit3dh/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 -std=gnu99 -Wl,--start-group -lpam -Wl,--end-group 
+
+Code:
+ 
+        #define pam_open_session meson_disable_define_of_pam_open_session
+        
+        #include <limits.h>
+        #undef pam_open_session
+        
+        #ifdef __cplusplus
+        extern "C"
+        #endif
+        char pam_open_session (void);
+        
+        #if defined __stub_pam_open_session || defined __stub___pam_open_session
+        fail fail fail this function is not going to work
+        #endif
+        
+        int main(void) {
+          return pam_open_session ();
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for function "pam_open_session" with dependency -lpam: YES 
+Program echo found: YES (/usr/bin/echo)
+Dependency egl found: YES 21.2.0-devel (cached)
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'glesv2' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion glesv2` -> 0
+21.2.0-devel
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags glesv2` -> 0
+-I/home/lzm/Wayland/install/include
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config glesv2 --libs` -> 0
+-L/home/lzm/Wayland/install/lib/x86_64-linux-gnu -lGLESv2
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config glesv2 --libs` -> 0
+-L/home/lzm/Wayland/install/lib/x86_64-linux-gnu -lGLESv2
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency glesv2 found: YES 21.2.0-devel
+Dependency libudev found: YES 245 (cached)
+Dependency libudev found: YES 245 (cached)
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'gbm' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion gbm` -> 0
+21.2.0-devel
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags gbm` -> 0
+-I/home/lzm/Wayland/install/include
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config gbm --libs` -> 0
+-L/home/lzm/Wayland/install/lib/x86_64-linux-gnu -lgbm
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config gbm --libs` -> 0
+-L/home/lzm/Wayland/install/lib/x86_64-linux-gnu -lgbm
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency gbm found: YES 21.2.0-devel
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'libva' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion libva` -> 0
+1.7.0
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags libva` -> 0
+
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config libva --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -lva
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config libva --libs` -> 0
+-lva
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency libva found: YES 1.7.0
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'libva-drm' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion libva-drm` -> 0
+1.7.0
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags libva-drm` -> 0
+
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config libva-drm --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -lva-drm -lva
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config libva-drm --libs` -> 0
+-lva-drm -lva
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency libva-drm found: YES 1.7.0
+Dependency threads found: YES unknown (cached)
+Dependency libudev found: YES 245 (cached)
+Dependency wayland-client found: YES 1.19.90 (cached)
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'wayland-cursor' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion wayland-cursor` -> 0
+1.19.90
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags wayland-cursor` -> 0
+-I/home/lzm/Wayland/install/include
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config wayland-cursor --libs` -> 0
+-L/home/lzm/Wayland/install/lib/x86_64-linux-gnu -lwayland-cursor
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config wayland-cursor --libs` -> 0
+-L/home/lzm/Wayland/install/lib/x86_64-linux-gnu -lwayland-cursor
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency wayland-cursor found: YES 1.19.90
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'wayland-egl' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion wayland-egl` -> 0
+18.1.0
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags wayland-egl` -> 0
+-I/home/lzm/Wayland/install/include
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config wayland-egl --libs` -> 0
+-L/home/lzm/Wayland/install/lib/x86_64-linux-gnu -lwayland-egl -lwayland-client
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config wayland-egl --libs` -> 0
+-L/home/lzm/Wayland/install/lib/x86_64-linux-gnu -lwayland-egl -lwayland-client
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency wayland-egl found: YES 18.1.0
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'xcb' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion xcb` -> 0
+1.14
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags xcb` -> 0
+-I/home/lzm/Wayland/install/include
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config xcb --libs` -> 0
+-L/home/lzm/Wayland/install/lib -lxcb
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config xcb --libs` -> 0
+-L/home/lzm/Wayland/install/lib -lxcb
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency xcb found: YES 1.14
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'xcb-shm' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion xcb-shm` -> 0
+1.14
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags xcb-shm` -> 0
+-I/home/lzm/Wayland/install/include
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config xcb-shm --libs` -> 0
+-L/home/lzm/Wayland/install/lib -lxcb-shm
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config xcb-shm --libs` -> 0
+-L/home/lzm/Wayland/install/lib -lxcb-shm
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency xcb-shm found: YES 1.14
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'x11' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion x11` -> 0
+1.6.9
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags x11` -> 0
+-I/home/lzm/Wayland/install/include
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config x11 --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -lX11
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config x11 --libs` -> 0
+-lX11
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency x11 found: YES 1.6.9
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'x11-xcb' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion x11-xcb` -> 0
+1.6.9
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags x11-xcb` -> 0
+-I/home/lzm/Wayland/install/include
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config x11-xcb --libs` -> 0
+-L/home/lzm/Wayland/install/lib -L/usr/lib/x86_64-linux-gnu -lX11-xcb -lX11 -lxcb
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config x11-xcb --libs` -> 0
+-L/home/lzm/Wayland/install/lib -lX11-xcb -lX11 -lxcb
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency x11-xcb found: YES 1.6.9
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'xcb-xkb' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion xcb-xkb` -> 0
+1.14
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags xcb-xkb` -> 0
+-I/home/lzm/Wayland/install/include
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config xcb-xkb --libs` -> 0
+-L/home/lzm/Wayland/install/lib -lxcb-xkb
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config xcb-xkb --libs` -> 0
+-L/home/lzm/Wayland/install/lib -lxcb-xkb
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency xcb-xkb found: YES 1.14
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'xwayland' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion xwayland` -> 0
+1.20.99.1
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags xwayland` -> 0
+
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config xwayland --libs` -> 0
+
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config xwayland --libs` -> 0
+
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency xwayland found: YES 1.20.99.1
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --variable=have_listenfd xwayland` -> 0
+true
+Got pkgconfig variable have_listenfd : true
+Dependency xcb found: YES 1.14 (cached)
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'xcb-composite' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion xcb-composite` -> 0
+1.14
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags xcb-composite` -> 0
+-I/home/lzm/Wayland/install/include
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config xcb-composite --libs` -> 0
+-L/home/lzm/Wayland/install/lib -lxcb-composite
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config xcb-composite --libs` -> 0
+-L/home/lzm/Wayland/install/lib -lxcb-composite
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency xcb-composite found: YES 1.14
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'xcb-shape' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion xcb-shape` -> 0
+1.14
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags xcb-shape` -> 0
+-I/home/lzm/Wayland/install/include
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config xcb-shape --libs` -> 0
+-L/home/lzm/Wayland/install/lib -lxcb-shape
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config xcb-shape --libs` -> 0
+-L/home/lzm/Wayland/install/lib -lxcb-shape
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency xcb-shape found: YES 1.14
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'xcb-xfixes' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion xcb-xfixes` -> 0
+1.14
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags xcb-xfixes` -> 0
+-I/home/lzm/Wayland/install/include
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config xcb-xfixes --libs` -> 0
+-L/home/lzm/Wayland/install/lib -lxcb-xfixes
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config xcb-xfixes --libs` -> 0
+-L/home/lzm/Wayland/install/lib -lxcb-xfixes
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency xcb-xfixes found: YES 1.14
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'xcursor' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion xcursor` -> 0
+1.2.0
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags xcursor` -> 0
+-I/home/lzm/Wayland/install/include
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config xcursor --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -lXcursor
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config xcursor --libs` -> 0
+-lXcursor
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency xcursor found: YES 1.2.0
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'cairo-xcb' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion cairo-xcb` -> 0
+1.17.4
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags cairo-xcb` -> 0
+-I/home/lzm/Wayland/install/include/cairo -I/home/lzm/Wayland/install/include/pixman-1 -I/home/lzm/Wayland/install/include -I/home/lzm/Wayland/install/include/libdrm -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config cairo-xcb --libs` -> 0
+-L/home/lzm/Wayland/install/lib -lcairo -lxcb -lxcb-render
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config cairo-xcb --libs` -> 0
+-L/home/lzm/Wayland/install/lib -lcairo -lxcb -lxcb-render
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency cairo-xcb found: YES 1.17.4
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'lcms2' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion lcms2` -> 0
+2.9
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags lcms2` -> 0
+
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config lcms2 --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -llcms2
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config lcms2 --libs` -> 0
+-llcms2
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency lcms2 found: YES 2.9
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'colord' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion colord` -> 0
+1.4.4
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags colord` -> 0
+-pthread -I/usr/include/colord-1 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config colord --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -lcolord -lgio-2.0 -lgobject-2.0 -lglib-2.0
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config colord --libs` -> 0
+-lcolord -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency colord found: YES 1.4.4
+Dependency glib-2.0 found: YES 2.64.6 (cached)
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'gobject-2.0' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion gobject-2.0` -> 0
+2.64.6
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags gobject-2.0` -> 0
+-I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config gobject-2.0 --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -lgobject-2.0 -lglib-2.0
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config gobject-2.0 --libs` -> 0
+-lgobject-2.0 -lglib-2.0
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency gobject-2.0 found: YES 2.64.6
+Dependency libsystemd found: YES 245 (cached)
+Configuring weston.ini using configuration
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'libpipewire-0.3' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion libpipewire-0.3` -> 1
+
+CMake binary for MachineChoice.HOST is not cached
+None of 'CMAKE' are defined in the environment, not changing global flags.
+CMake binary missing from cross or native file, or env var undefined.
+Trying a default CMake fallback at cmake
+Found CMake: /usr/bin/cmake (3.16.3)
+None of 'CMAKE_PREFIX_PATH' are defined in the environment, not changing global flags.
+Extracting basic cmake information
+Try CMake generator: auto
+None of 'CXX' are defined in the environment, not changing global flags.
+None of 'CXXFLAGS' are defined in the environment, not changing global flags.
+None of 'LDFLAGS' are defined in the environment, not changing global flags.
+None of 'CPPFLAGS' are defined in the environment, not changing global flags.
+None of 'CXX_LD' are defined in the environment, not changing global flags.
+None of 'FC' are defined in the environment, not changing global flags.
+Failed to find a fortran compiler for CMake. This might cause CMake to fail.
+Called `/usr/bin/cmake --trace --trace-expand --no-warn-unused-cli --trace-redirect=cmake_trace.txt .` in /home/lzm/Wayland/weston/builddir/meson-private/cmake_libpipewire-0.3 -> 0
+  -- Module search paths:    ['/', '/opt', '/usr', '/usr/local']
+  -- CMake root:             /usr/share/cmake-3.16
+  -- CMake architectures:    ['i386-linux-gnu', 'x86_64-linux-gnu']
+  -- CMake lib search paths: ['lib', 'lib32', 'lib64', 'libx32', 'share', 'lib/i386-linux-gnu', 'lib/x86_64-linux-gnu']
+Preliminary CMake check failed. Aborting.
+Run-time dependency libpipewire-0.3 found: NO (tried pkgconfig and cmake)
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'libpipewire-0.2' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion libpipewire-0.2` -> 0
+0.2.7
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags libpipewire-0.2` -> 0
+-D_REENTRANT
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config libpipewire-0.2 --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -lpipewire-0.2
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config libpipewire-0.2 --libs` -> 0
+-lpipewire-0.2
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency libpipewire-0.2 found: YES 0.2.7
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'libspa-0.2' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion libspa-0.2` -> 1
+
+CMake binary for MachineChoice.HOST is cached.
+None of 'CMAKE_PREFIX_PATH' are defined in the environment, not changing global flags.
+Preliminary CMake check failed. Aborting.
+Run-time dependency libspa-0.2 found: NO (tried pkgconfig and cmake)
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'libspa-0.1' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion libspa-0.1` -> 0
+0.2.7
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags libspa-0.1` -> 0
+-D_REENTRANT
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config libspa-0.1 --libs` -> 0
+
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config libspa-0.1 --libs` -> 0
+
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency libspa-0.1 found: YES 0.2.7
+Dependency wayland-cursor found: YES 1.19.90 (cached)
+None of 'CC_LD' are defined in the environment, not changing global flags.
+Running compile:
+Working directory:  /home/lzm/Wayland/weston/builddir/meson-private/tmpztmdyuw_
+Command line:  cc /home/lzm/Wayland/weston/builddir/meson-private/tmpztmdyuw_/testfile.c -o /home/lzm/Wayland/weston/builddir/meson-private/tmpztmdyuw_/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lutil -Wl,--end-group -Wl,--allow-shlib-undefined 
+
+Code:
+ int main(void) { return 0; }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Library util found: YES
+Dependency egl found: YES 21.2.0-devel (cached)
+Dependency glesv2 found: YES 21.2.0-devel (cached)
+Dependency gbm found: YES 21.2.0-devel (cached)
+Dependency egl found: YES 21.2.0-devel (cached)
+Dependency wayland-egl found: YES 18.1.0 (cached)
+Dependency glesv2 found: YES 21.2.0-devel (cached)
+Dependency wayland-cursor found: YES 1.19.90 (cached)
+Dependency wayland-cursor found: YES 1.19.90 (cached)
+Dependency cairo found: YES 1.17.4 (cached)
+Dependency pangocairo found: YES 1.44.7 (cached)
+Dependency gobject-2.0 found: YES 2.64.6 (cached)
+Dependency egl found: YES 21.2.0-devel (cached)
+Dependency glesv2 found: YES 21.2.0-devel (cached)
+Dependency wayland-egl found: YES 18.1.0 (cached)
+Dependency cairo found: YES 1.17.4 (cached)
+Dependency cairo found: YES 1.17.4 (cached)
+Dependency libudev found: YES 245 (cached)
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'libxml-2.0' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --modversion libxml-2.0` -> 0
+2.9.10
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config --cflags libxml-2.0` -> 0
+-I/usr/include/libxml2
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config libxml-2.0 --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -lxml2
+PKG_CONFIG_PATH: /home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig
+Called `/usr/bin/pkg-config libxml-2.0 --libs` -> 0
+-lxml2
+Using 'PKG_CONFIG_PATH' from environment with value: '/home/lzm/Wayland/install/lib/pkgconfig/:/home/lzm/Wayland/install/share/pkgconfig/:/home/lzm/Wayland/install/lib/x86_64-linux-gnu/pkgconfig'
+Run-time dependency libxml-2.0 found: YES 2.9.10
+Dependency x11 found: YES 1.6.9 (cached)
+Configuring test-config.h using configuration
+Adding test "alpha-blending"
+Adding test "bad-buffer"
+Adding test "buffer-transforms"
+Adding test "devices"
+Adding test "drm-smoke"
+Adding test "event"
+Adding test "internal-screenshot"
+Adding test "keyboard"
+Adding test "linux-explicit-synchronization"
+Adding test "output-damage"
+Adding test "output-transforms"
+Adding test "plugin-registry"
+Adding test "pointer"
+Adding test "presentation"
+Adding test "roles"
+Adding test "string"
+Adding test "subsurface"
+Adding test "subsurface-shot"
+Adding test "surface"
+Adding test "surface-global"
+Adding test "text"
+Adding test "touch"
+Adding test "vertex-clip"
+Adding test "viewporter"
+Adding test "viewporter-shot"
+Adding test "yuv-buffer"
+Adding test "xwayland"
+Adding test "ivi-layout-client"
+Adding test "ivi-layout-internal"
+Adding test "ivi-shell-app"
+Adding test "config-parser"
+Adding test "timespec"
+Adding test "zuc"
+Dependency libudev found: YES 245 (cached)
+Configuring weston.1 using configuration
+Configuring weston-bindings.7 using configuration
+Configuring weston-debug.1 using configuration
+Configuring weston.ini.5 using configuration
+Configuring weston-drm.7 using configuration
+Configuring config.h using configuration
+Program sphinx-build found: YES
+Program doxygen found: YES
+Program breathe-apidoc found: YES
+Running command: /home/lzm/.local/bin/sphinx-build --version
+--- stdout ---
+sphinx-build 4.0.2
+
+--- stderr ---
+
+
+Running command: /home/lzm/.local/bin/breathe-apidoc --version
+--- stdout ---
+Breathe (breathe-apidoc) 4.30.0
+
+--- stderr ---
+
+
+Running command: /usr/bin/doxygen --version
+--- stdout ---
+1.8.17
+
+--- stderr ---
+
+
+Configuring conf.py using configuration
+Configuring doxygen.ini using configuration
+Configuring run_doxygen_sphinx.sh using configuration
+Build targets in project: 183
+
+Found ninja-1.10.0 at /usr/bin/ninja
+None of 'STRIP' are defined in the environment, not changing global flags.
+None of 'STRIP' are defined in the environment, not changing global flags.

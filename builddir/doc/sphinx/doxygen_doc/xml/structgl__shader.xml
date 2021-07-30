@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structgl__shader" kind="struct" language="C++" prot="public">
+    <compoundname>gl_shader</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgl__shader_1a684c3a6e038a6d503104f7ebd9cbc8c5" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structgl__shader__requirements" kindref="compound">gl_shader_requirements</ref></type>
+        <definition>struct gl_shader_requirements gl_shader::key</definition>
+        <argsstring></argsstring>
+        <name>key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-shaders.c" line="456" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-shaders.c" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__shader_1a06551b1f7bef2fb2506d402d4bf07ec6" prot="public" static="no" mutable="no">
+        <type>GLuint</type>
+        <definition>GLuint gl_shader::program</definition>
+        <argsstring></argsstring>
+        <name>program</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-shaders.c" line="55" column="8" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-shaders.c" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__shader_1a918cdf6e6fcd7b5f0c6b2fcbab5fd2db" prot="public" static="no" mutable="no">
+        <type>GLuint</type>
+        <definition>GLuint gl_shader::vertex_shader</definition>
+        <argsstring></argsstring>
+        <name>vertex_shader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-shaders.c" line="56" column="8" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-shaders.c" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__shader_1af815570a5172a54fa53134cb33677cdc" prot="public" static="no" mutable="no">
+        <type>GLuint</type>
+        <definition>GLuint gl_shader::fragment_shader</definition>
+        <argsstring></argsstring>
+        <name>fragment_shader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-shaders.c" line="56" column="22" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-shaders.c" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__shader_1afdc9a88cc568783019a6df48a6f2f993" prot="public" static="no" mutable="no">
+        <type>GLint</type>
+        <definition>GLint gl_shader::proj_uniform</definition>
+        <argsstring></argsstring>
+        <name>proj_uniform</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-shaders.c" line="57" column="7" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-shaders.c" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__shader_1ad170482cf32c6aee661d25f79b78d954" prot="public" static="no" mutable="no">
+        <type>GLint</type>
+        <definition>GLint gl_shader::tex_uniforms[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>tex_uniforms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-shaders.c" line="58" column="7" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-shaders.c" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__shader_1a6c42f660a9fafce829a1d742a0a9c606" prot="public" static="no" mutable="no">
+        <type>GLint</type>
+        <definition>GLint gl_shader::alpha_uniform</definition>
+        <argsstring></argsstring>
+        <name>alpha_uniform</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-shaders.c" line="59" column="7" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-shaders.c" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__shader_1ab3a2471cc20037b5f1340b3a9219ba4d" prot="public" static="no" mutable="no">
+        <type>GLint</type>
+        <definition>GLint gl_shader::color_uniform</definition>
+        <argsstring></argsstring>
+        <name>color_uniform</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-shaders.c" line="60" column="7" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-shaders.c" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__shader_1ac99c13e306f2a54d805ec6aff288076b" prot="public" static="no" mutable="no">
+        <type>struct wl_list</type>
+        <definition>struct wl_list gl_shader::link</definition>
+        <argsstring></argsstring>
+        <name>link</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-shaders.c" line="60" column="7" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-shaders.c" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__shader_1ab98ce9efe5f0384c44deef9e59ae02d3" prot="public" static="no" mutable="no">
+        <type>struct timespec</type>
+        <definition>struct timespec gl_shader::last_used</definition>
+        <argsstring></argsstring>
+        <name>last_used</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-shaders.c" line="60" column="7" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-shaders.c" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>gl_shader</label>
+        <link refid="structgl__shader"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>key</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gl_shader_requirements</label>
+        <link refid="structgl__shader__requirements"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-shaders.c" line="53" column="16" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-shaders.c" bodystart="53" bodyend="63"/>
+    <listofallmembers>
+      <member refid="structgl__shader_1a6c42f660a9fafce829a1d742a0a9c606" prot="public" virt="non-virtual"><scope>gl_shader</scope><name>alpha_uniform</name></member>
+      <member refid="structgl__shader_1ab3a2471cc20037b5f1340b3a9219ba4d" prot="public" virt="non-virtual"><scope>gl_shader</scope><name>color_uniform</name></member>
+      <member refid="structgl__shader_1af815570a5172a54fa53134cb33677cdc" prot="public" virt="non-virtual"><scope>gl_shader</scope><name>fragment_shader</name></member>
+      <member refid="structgl__shader_1a684c3a6e038a6d503104f7ebd9cbc8c5" prot="public" virt="non-virtual"><scope>gl_shader</scope><name>key</name></member>
+      <member refid="structgl__shader_1ab98ce9efe5f0384c44deef9e59ae02d3" prot="public" virt="non-virtual"><scope>gl_shader</scope><name>last_used</name></member>
+      <member refid="structgl__shader_1ac99c13e306f2a54d805ec6aff288076b" prot="public" virt="non-virtual"><scope>gl_shader</scope><name>link</name></member>
+      <member refid="structgl__shader_1a06551b1f7bef2fb2506d402d4bf07ec6" prot="public" virt="non-virtual"><scope>gl_shader</scope><name>program</name></member>
+      <member refid="structgl__shader_1afdc9a88cc568783019a6df48a6f2f993" prot="public" virt="non-virtual"><scope>gl_shader</scope><name>proj_uniform</name></member>
+      <member refid="structgl__shader_1ad170482cf32c6aee661d25f79b78d954" prot="public" virt="non-virtual"><scope>gl_shader</scope><name>tex_uniforms</name></member>
+      <member refid="structgl__shader_1a918cdf6e6fcd7b5f0c6b2fcbab5fd2db" prot="public" virt="non-virtual"><scope>gl_shader</scope><name>vertex_shader</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

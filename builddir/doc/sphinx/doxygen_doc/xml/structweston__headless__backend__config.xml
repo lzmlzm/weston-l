@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__headless__backend__config" kind="struct" language="C++" prot="public">
+    <compoundname>weston_headless_backend_config</compoundname>
+    <includes refid="backend-headless_8h" local="no">backend-headless.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__headless__backend__config_1aea79185ab29823f57de87b4a4bcf56a0" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structweston__backend__config" kindref="compound">weston_backend_config</ref></type>
+        <definition>struct weston_backend_config weston_headless_backend_config::base</definition>
+        <argsstring></argsstring>
+        <name>base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-headless.h" line="1" column="0" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-headless.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__headless__backend__config_1a74198d12916a4e021085ef4d30f11edb" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool weston_headless_backend_config::use_pixman</definition>
+        <argsstring></argsstring>
+        <name>use_pixman</name>
+        <briefdescription>
+<para>Whether to use the pixman renderer, default is no-op. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-headless.h" line="43" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-headless.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__headless__backend__config_1a1d360517779bbac96b83074325a7013d" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool weston_headless_backend_config::use_gl</definition>
+        <argsstring></argsstring>
+        <name>use_gl</name>
+        <briefdescription>
+<para>Whether to use the GL renderer, conflicts with use_pixman. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-headless.h" line="46" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-headless.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>weston_backend_config</label>
+        <link refid="structweston__backend__config"/>
+      </node>
+      <node id="1">
+        <label>weston_headless_backend_config</label>
+        <link refid="structweston__headless__backend__config"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lzm/Wayland/weston/include/libweston/backend-headless.h" line="39" column="37" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-headless.h" bodystart="39" bodyend="47"/>
+    <listofallmembers>
+      <member refid="structweston__headless__backend__config_1aea79185ab29823f57de87b4a4bcf56a0" prot="public" virt="non-virtual"><scope>weston_headless_backend_config</scope><name>base</name></member>
+      <member refid="structweston__headless__backend__config_1a1d360517779bbac96b83074325a7013d" prot="public" virt="non-virtual"><scope>weston_headless_backend_config</scope><name>use_gl</name></member>
+      <member refid="structweston__headless__backend__config_1a74198d12916a4e021085ef4d30f11edb" prot="public" virt="non-virtual"><scope>weston_headless_backend_config</scope><name>use_pixman</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

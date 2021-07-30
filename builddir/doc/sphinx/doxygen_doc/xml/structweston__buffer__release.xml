@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__buffer__release" kind="struct" language="C++" prot="public">
+    <compoundname>weston_buffer_release</compoundname>
+    <includes refid="libweston_8h" local="no">libweston.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__buffer__release_1ad09915f551946199a868a7ef4a6de55c" prot="public" static="no" mutable="no">
+        <type>struct wl_resource *</type>
+        <definition>struct wl_resource* weston_buffer_release::resource</definition>
+        <argsstring></argsstring>
+        <name>resource</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="1219" column="18" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="1219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__buffer__release_1a78530295221869aeaa781d91197c6237" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t weston_buffer_release::ref_count</definition>
+        <argsstring></argsstring>
+        <name>ref_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="1222" column="10" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="1222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__buffer__release_1a16a29644865618443c6bee1105322f99" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int weston_buffer_release::fence_fd</definition>
+        <argsstring></argsstring>
+        <name>fence_fd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="1225" column="5" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="1225" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="1217" column="28" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="1217" bodyend="1226"/>
+    <listofallmembers>
+      <member refid="structweston__buffer__release_1a16a29644865618443c6bee1105322f99" prot="public" virt="non-virtual"><scope>weston_buffer_release</scope><name>fence_fd</name></member>
+      <member refid="structweston__buffer__release_1a78530295221869aeaa781d91197c6237" prot="public" virt="non-virtual"><scope>weston_buffer_release</scope><name>ref_count</name></member>
+      <member refid="structweston__buffer__release_1ad09915f551946199a868a7ef4a6de55c" prot="public" virt="non-virtual"><scope>weston_buffer_release</scope><name>resource</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="headless_8c" kind="file" language="C++">
+    <compoundname>headless.c</compoundname>
+    <includes local="yes">config.h</includes>
+    <includes local="no">assert.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">sys/time.h</includes>
+    <includes local="no">stdbool.h</includes>
+    <includes refid="libweston_8h" local="no">libweston/libweston.h</includes>
+    <includes refid="backend-headless_8h" local="no">libweston/backend-headless.h</includes>
+    <includes local="yes">shared/helpers.h</includes>
+    <includes refid="linux-explicit-synchronization_8h" local="yes">linux-explicit-synchronization.h</includes>
+    <includes refid="pixman-renderer_8h" local="yes">pixman-renderer.h</includes>
+    <includes refid="gl-renderer_8h" local="yes">renderer-gl/gl-renderer.h</includes>
+    <includes local="yes">shared/weston-drm-fourcc.h</includes>
+    <includes local="yes">shared/weston-egl-ext.h</includes>
+    <includes refid="linux-dmabuf_8h" local="yes">linux-dmabuf.h</includes>
+    <includes local="yes">presentation-time-server-protocol.h</includes>
+    <includes refid="windowed-output-api_8h" local="no">libweston/windowed-output-api.h</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>stdbool.h</label>
+      </node>
+      <node id="9">
+        <label>libweston/libweston.h</label>
+        <link refid="libweston_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>assert.h</label>
+      </node>
+      <node id="27">
+        <label>libweston/windowed-output-api.h</label>
+        <link refid="windowed-output-api_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdint.h</label>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="13">
+        <label>wayland-server.h</label>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/libweston/backend-headless/headless.c</label>
+        <link refid="headless_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>xkbcommon/xkbcommon.h</label>
+      </node>
+      <node id="25">
+        <label>linux-dmabuf.h</label>
+        <link refid="linux-dmabuf_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>shared/helpers.h</label>
+      </node>
+      <node id="29">
+        <label>stddef.h</label>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
+      <node id="23">
+        <label>shared/weston-drm-fourcc.h</label>
+      </node>
+      <node id="19">
+        <label>pixman-renderer.h</label>
+        <link refid="pixman-renderer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>linux-explicit-synchronization.h</label>
+        <link refid="linux-explicit-synchronization_8h"/>
+      </node>
+      <node id="24">
+        <label>shared/weston-egl-ext.h</label>
+      </node>
+      <node id="22">
+        <label>renderer-gl/gl-renderer.h</label>
+        <link refid="gl-renderer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>libweston/plugin-registry.h</label>
+        <link refid="plugin-registry_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>libweston/zalloc.h</label>
+        <link refid="zalloc_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>time.h</label>
+      </node>
+      <node id="7">
+        <label>sys/time.h</label>
+      </node>
+      <node id="14">
+        <label>libweston/matrix.h</label>
+        <link refid="matrix_8h"/>
+      </node>
+      <node id="11">
+        <label>pixman.h</label>
+      </node>
+      <node id="26">
+        <label>presentation-time-server-protocol.h</label>
+      </node>
+      <node id="21">
+        <label>libweston-internal.h</label>
+        <link refid="libweston-internal_8h"/>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+      </node>
+      <node id="20">
+        <label>backend.h</label>
+        <link refid="backend_8h"/>
+      </node>
+      <node id="16">
+        <label>libweston/backend-headless.h</label>
+        <link refid="backend-headless_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structheadless__backend" prot="public">headless_backend</innerclass>
+    <innerclass refid="structheadless__head" prot="public">headless_head</innerclass>
+    <innerclass refid="structheadless__output" prot="public">headless_output</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="headless_8c_1a17995489a7cf897299059b83a99f2055" prot="public" static="no" strong="no">
+        <type></type>
+        <name>headless_renderer_type</name>
+        <enumvalue id="headless_8c_1a17995489a7cf897299059b83a99f2055ab4a749d323bf910b29ef50c38184c7c7" prot="public">
+          <name>HEADLESS_NOOP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="headless_8c_1a17995489a7cf897299059b83a99f2055a0ea89c2f1f55e54cfd6d05c001a3971e" prot="public">
+          <name>HEADLESS_PIXMAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="headless_8c_1a17995489a7cf897299059b83a99f2055a460a662cc962d43ca873ee85a55ca281" prot="public">
+          <name>HEADLESS_GL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" line="48" column="28" bodyfile="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" bodystart="48" bodyend="52"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="headless_8c_1a4ac0f3ed620ed18e8c72e192a90a8ff0" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t headless_formats[]</definition>
+        <argsstring>[]</argsstring>
+        <name>headless_formats</name>
+        <initializer>= {
+	DRM_FORMAT_XRGB8888,
+	DRM_FORMAT_ARGB8888,
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" line="77" column="23" bodyfile="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="headless_8c_1ab736666fdb43909c7d4626db6f3d12ee" prot="public" static="yes" mutable="no">
+        <type>const struct <ref refid="structweston__windowed__output__api" kindref="compound">weston_windowed_output_api</ref></type>
+        <definition>const struct weston_windowed_output_api api</definition>
+        <argsstring></argsstring>
+        <name>api</name>
+        <initializer>= {
+	<ref refid="headless_8c_1aa8e52e20a31c46edd83b5eb7ce723ed7" kindref="member">headless_output_set_size</ref>,
+	<ref refid="headless_8c_1a880ec6b5cb5a404b75aca7e9ec9add11" kindref="member">headless_head_create</ref>,
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" line="398" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" bodystart="415" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="headless_8c_1a87d1445fff5ba51f4dc34ba58305f0ed" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>struct <ref refid="structheadless__head" kindref="compound">headless_head</ref> *</type>
+        <definition>static struct headless_head* to_headless_head</definition>
+        <argsstring>(struct weston_head *base)</argsstring>
+        <name>to_headless_head</name>
+        <param>
+          <type>struct <ref refid="structweston__head" kindref="compound">weston_head</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" line="83" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" bodystart="83" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="headless_8c_1ac88e6f2b16b796c838f22f662535384c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>struct <ref refid="structheadless__output" kindref="compound">headless_output</ref> *</type>
+        <definition>static struct headless_output* to_headless_output</definition>
+        <argsstring>(struct weston_output *base)</argsstring>
+        <name>to_headless_output</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" line="89" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" bodystart="89" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="headless_8c_1a66b315f4bde2b383fbbb495837baadc3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>struct <ref refid="structheadless__backend" kindref="compound">headless_backend</ref> *</type>
+        <definition>static struct headless_backend* to_headless_backend</definition>
+        <argsstring>(struct weston_compositor *base)</argsstring>
+        <name>to_headless_backend</name>
+        <param>
+          <type>struct <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" line="95" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" bodystart="95" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="headless_8c_1ac9f911ab13eceabd4e69e19ae366d2b0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int headless_output_start_repaint_loop</definition>
+        <argsstring>(struct weston_output *output)</argsstring>
+        <name>headless_output_start_repaint_loop</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" line="101" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" bodystart="101" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="headless_8c_1a505e1f21c7dd3046ae781debe348680f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int finish_frame_handler</definition>
+        <argsstring>(void *data)</argsstring>
+        <name>finish_frame_handler</name>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" line="112" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" bodystart="112" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="headless_8c_1a79e6ae662479dee5197724cf4056579f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int headless_output_repaint</definition>
+        <argsstring>(struct weston_output *output_base, pixman_region32_t *damage, void *repaint_data)</argsstring>
+        <name>headless_output_repaint</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output_base</declname>
+        </param>
+        <param>
+          <type>pixman_region32_t *</type>
+          <declname>damage</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>repaint_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" line="124" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" bodystart="124" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="headless_8c_1a9b0d08ee29c079950dbd42a0ef803105" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void headless_output_disable_gl</definition>
+        <argsstring>(struct headless_output *output)</argsstring>
+        <name>headless_output_disable_gl</name>
+        <param>
+          <type>struct <ref refid="structheadless__output" kindref="compound">headless_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" line="142" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" bodystart="142" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="headless_8c_1ae94b0a5bd08f1836eb88d04834d8883c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void headless_output_disable_pixman</definition>
+        <argsstring>(struct headless_output *output)</argsstring>
+        <name>headless_output_disable_pixman</name>
+        <param>
+          <type>struct <ref refid="structheadless__output" kindref="compound">headless_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" line="151" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" bodystart="151" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="headless_8c_1a8aeb48a69f88aafae89c5183aa42482a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int headless_output_disable</definition>
+        <argsstring>(struct weston_output *base)</argsstring>
+        <name>headless_output_disable</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" line="159" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" bodystart="159" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="headless_8c_1ac262c24b035db05a7729759dab2e42af" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void headless_output_destroy</definition>
+        <argsstring>(struct weston_output *base)</argsstring>
+        <name>headless_output_destroy</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" line="184" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" bodystart="184" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="headless_8c_1af8697fa39ba43d5d0b35a1209ae63305" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int headless_output_enable_gl</definition>
+        <argsstring>(struct headless_output *output)</argsstring>
+        <name>headless_output_enable_gl</name>
+        <param>
+          <type>struct <ref refid="structheadless__output" kindref="compound">headless_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" line="195" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" bodystart="195" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="headless_8c_1aaa1770f31eed02121eb50221bd11c1d1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int headless_output_enable_pixman</definition>
+        <argsstring>(struct headless_output *output)</argsstring>
+        <name>headless_output_enable_pixman</name>
+        <param>
+          <type>struct <ref refid="structheadless__output" kindref="compound">headless_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" line="215" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" bodystart="215" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="headless_8c_1a6c1b61fcdf9a1756f5a2fae7527ac5b0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int headless_output_enable</definition>
+        <argsstring>(struct weston_output *base)</argsstring>
+        <name>headless_output_enable</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" line="247" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" bodystart="247" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="function" id="headless_8c_1aa8e52e20a31c46edd83b5eb7ce723ed7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int headless_output_set_size</definition>
+        <argsstring>(struct weston_output *base, int width, int height)</argsstring>
+        <name>headless_output_set_size</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" line="283" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" bodystart="283" bodyend="324"/>
+      </memberdef>
+      <memberdef kind="function" id="headless_8c_1abfd306f18f85e7762550cf505897c207" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+        <definition>static struct weston_output* headless_output_create</definition>
+        <argsstring>(struct weston_compositor *compositor, const char *name)</argsstring>
+        <name>headless_output_create</name>
+        <param>
+          <type>struct <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> *</type>
+          <declname>compositor</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" line="327" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" bodystart="327" bodyend="348"/>
+      </memberdef>
+      <memberdef kind="function" id="headless_8c_1a880ec6b5cb5a404b75aca7e9ec9add11" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int headless_head_create</definition>
+        <argsstring>(struct weston_compositor *compositor, const char *name)</argsstring>
+        <name>headless_head_create</name>
+        <param>
+          <type>struct <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> *</type>
+          <declname>compositor</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" line="351" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" bodystart="351" bodyend="374"/>
+      </memberdef>
+      <memberdef kind="function" id="headless_8c_1ac80dcb3b6b4a848a19769ce06585c333" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void headless_head_destroy</definition>
+        <argsstring>(struct headless_head *head)</argsstring>
+        <name>headless_head_destroy</name>
+        <param>
+          <type>struct <ref refid="structheadless__head" kindref="compound">headless_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" line="377" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" bodystart="377" bodyend="381"/>
+      </memberdef>
+      <memberdef kind="function" id="headless_8c_1a028ac8e3e49db9d5e7cef04e4e08223b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void headless_destroy</definition>
+        <argsstring>(struct weston_compositor *ec)</argsstring>
+        <name>headless_destroy</name>
+        <param>
+          <type>struct <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> *</type>
+          <declname>ec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" line="384" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" bodystart="384" bodyend="395"/>
+      </memberdef>
+      <memberdef kind="function" id="headless_8c_1ad001c2e57e2decc947c16d86c2c8cba3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int headless_gl_renderer_init</definition>
+        <argsstring>(struct headless_backend *b)</argsstring>
+        <name>headless_gl_renderer_init</name>
+        <param>
+          <type>struct <ref refid="structheadless__backend" kindref="compound">headless_backend</ref> *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" line="398" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" bodystart="398" bodyend="413"/>
+      </memberdef>
+      <memberdef kind="function" id="headless_8c_1a27740c73ae611863f3abbfebb7271b28" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structheadless__backend" kindref="compound">headless_backend</ref> *</type>
+        <definition>static struct headless_backend* headless_backend_create</definition>
+        <argsstring>(struct weston_compositor *compositor, struct weston_headless_backend_config *config)</argsstring>
+        <name>headless_backend_create</name>
+        <param>
+          <type>struct <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> *</type>
+          <declname>compositor</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structweston__headless__backend__config" kindref="compound">weston_headless_backend_config</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" line="421" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" bodystart="421" bodyend="497"/>
+      </memberdef>
+      <memberdef kind="function" id="headless_8c_1aab6bb61eb85108fc9fab3348e7fecca4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void config_init_to_defaults</definition>
+        <argsstring>(struct weston_headless_backend_config *config)</argsstring>
+        <name>config_init_to_defaults</name>
+        <param>
+          <type>struct <ref refid="structweston__headless__backend__config" kindref="compound">weston_headless_backend_config</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" line="500" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" bodystart="500" bodyend="502"/>
+      </memberdef>
+      <memberdef kind="function" id="headless_8c_1afc0921b794cd85cb380c54b22ed174f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int weston_backend_init</definition>
+        <argsstring>(struct weston_compositor *compositor, struct weston_backend_config *config_base)</argsstring>
+        <name>weston_backend_init</name>
+        <param>
+          <type>struct <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> *</type>
+          <declname>compositor</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structweston__backend__config" kindref="compound">weston_backend_config</ref> *</type>
+          <declname>config_base</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" line="505" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c" bodystart="505" bodyend="526"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2010-2011<sp/>Benjamin<sp/>Franzke</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2012<sp/>Intel<sp/>Corporation</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>(including<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>next<sp/>paragraph)<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>NONINFRINGEMENT.<sp/><sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="libweston_8h" kindref="compound">libweston/libweston.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="backend-headless_8h" kindref="compound">libweston/backend-headless.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;shared/helpers.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="linux-explicit-synchronization_8h" kindref="compound">linux-explicit-synchronization.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pixman-renderer_8h" kindref="compound">pixman-renderer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="gl-renderer_8h" kindref="compound">renderer-gl/gl-renderer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;shared/weston-drm-fourcc.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;shared/weston-egl-ext.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="linux-dmabuf_8h" kindref="compound">linux-dmabuf.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;presentation-time-server-protocol.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="windowed-output-api_8h" kindref="compound">libweston/windowed-output-api.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="headless_8c_1a17995489a7cf897299059b83a99f2055" kindref="member">headless_renderer_type</ref><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="headless_8c_1a17995489a7cf897299059b83a99f2055ab4a749d323bf910b29ef50c38184c7c7" kindref="member">HEADLESS_NOOP</ref>,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="headless_8c_1a17995489a7cf897299059b83a99f2055a0ea89c2f1f55e54cfd6d05c001a3971e" kindref="member">HEADLESS_PIXMAN</ref>,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="headless_8c_1a17995489a7cf897299059b83a99f2055a460a662cc962d43ca873ee85a55ca281" kindref="member">HEADLESS_GL</ref>,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="structheadless__backend" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structheadless__backend" kindref="compound">headless_backend</ref><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__backend" kindref="compound">weston_backend</ref><sp/><ref refid="structheadless__backend_1ab209e81aeb17a796215624b57d538d8e" kindref="member">base</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__compositor" kindref="compound">weston_compositor</ref><sp/>*<ref refid="structheadless__backend_1ac93d548f286cbd48c723f9f649964b23" kindref="member">compositor</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__seat" kindref="compound">weston_seat</ref><sp/><ref refid="structheadless__backend_1affe9992fd3c4a9fe652bf38c5b753db2" kindref="member">fake_seat</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="headless_8c_1a17995489a7cf897299059b83a99f2055" kindref="member">headless_renderer_type</ref><sp/><ref refid="structheadless__backend_1ae1e407ab5a1f0a39ba191d551f24bce9" kindref="member">renderer_type</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structgl__renderer__interface" kindref="compound">gl_renderer_interface</ref><sp/>*<ref refid="structheadless__backend_1aed94c41fb96242e7881781bf073c245f" kindref="member">glri</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="structheadless__head" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structheadless__head" kindref="compound">headless_head</ref><sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__head" kindref="compound">weston_head</ref><sp/><ref refid="structheadless__head_1aa8d8e9a742b429df3f0709d775f158e0" kindref="member">base</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="structheadless__output" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structheadless__output" kindref="compound">headless_output</ref><sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__output" kindref="compound">weston_output</ref><sp/><ref refid="structheadless__output_1abeca0c6cc51f35a7520e74b7fad91944" kindref="member">base</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__mode" kindref="compound">weston_mode</ref><sp/><ref refid="structheadless__output_1ab7523a7913ccd8de63d100ee9234faa0" kindref="member">mode</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_event_source<sp/>*<ref refid="structheadless__output_1a16e97bf301b19357482b09208ad2846a" kindref="member">finish_frame_timer</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>*<ref refid="structheadless__output_1a43fcc007430d7a9a81920f19b36fe373" kindref="member">image_buf</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pixman_image_t<sp/>*<ref refid="structheadless__output_1a450fcab4c0d3f1ef422f9c3eb3ca82cf" kindref="member">image</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="headless_8c_1a4ac0f3ed620ed18e8c72e192a90a8ff0" kindref="member">headless_formats</ref>[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DRM_FORMAT_XRGB8888,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DRM_FORMAT_ARGB8888,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structheadless__head" kindref="compound">headless_head</ref><sp/>*</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><ref refid="headless_8c_1a87d1445fff5ba51f4dc34ba58305f0ed" kindref="member">to_headless_head</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__head" kindref="compound">weston_head</ref><sp/>*<ref refid="structheadless__head_1aa8d8e9a742b429df3f0709d775f158e0" kindref="member">base</ref>)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>container_of(<ref refid="structheadless__head_1aa8d8e9a742b429df3f0709d775f158e0" kindref="member">base</ref>,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structheadless__head" kindref="compound">headless_head</ref>,<sp/><ref refid="structheadless__head_1aa8d8e9a742b429df3f0709d775f158e0" kindref="member">base</ref>);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structheadless__output" kindref="compound">headless_output</ref><sp/>*</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><ref refid="headless_8c_1ac88e6f2b16b796c838f22f662535384c" kindref="member">to_headless_output</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__output" kindref="compound">weston_output</ref><sp/>*<ref refid="structheadless__output_1abeca0c6cc51f35a7520e74b7fad91944" kindref="member">base</ref>)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>container_of(<ref refid="structheadless__output_1abeca0c6cc51f35a7520e74b7fad91944" kindref="member">base</ref>,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structheadless__output" kindref="compound">headless_output</ref>,<sp/><ref refid="structheadless__output_1abeca0c6cc51f35a7520e74b7fad91944" kindref="member">base</ref>);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structheadless__backend" kindref="compound">headless_backend</ref><sp/>*</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><ref refid="headless_8c_1a66b315f4bde2b383fbbb495837baadc3" kindref="member">to_headless_backend</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__compositor" kindref="compound">weston_compositor</ref><sp/>*<ref refid="structheadless__backend_1ab209e81aeb17a796215624b57d538d8e" kindref="member">base</ref>)</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>container_of(<ref refid="structheadless__backend_1ab209e81aeb17a796215624b57d538d8e" kindref="member">base</ref>-&gt;backend,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structheadless__backend" kindref="compound">headless_backend</ref>,<sp/><ref refid="structheadless__backend_1ab209e81aeb17a796215624b57d538d8e" kindref="member">base</ref>);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><ref refid="headless_8c_1ac9f911ab13eceabd4e69e19ae366d2b0" kindref="member">headless_output_start_repaint_loop</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__output" kindref="compound">weston_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref>)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timespec<sp/>ts;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__compositor_1ga464e69b90dabde1e2f4797181f3dc65a" kindref="member">weston_compositor_read_presentation_clock</ref>(<ref refid="structoutput" kindref="compound">output</ref>-&gt;compositor,<sp/>&amp;ts);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__output_1ga0f26c6ea66cf6683814ed60baf2a04c9" kindref="member">weston_output_finish_frame</ref>(<ref refid="structoutput" kindref="compound">output</ref>,<sp/>&amp;ts,<sp/><ref refid="libweston_8h_1ac57ab20ccb8a4f9f66d9d2f9bb5500d0" kindref="member">WP_PRESENTATION_FEEDBACK_INVALID</ref>);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><ref refid="headless_8c_1a505e1f21c7dd3046ae781debe348680f" kindref="member">finish_frame_handler</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structheadless__output" kindref="compound">headless_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref><sp/>=<sp/>data;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timespec<sp/>ts;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__compositor_1ga464e69b90dabde1e2f4797181f3dc65a" kindref="member">weston_compositor_read_presentation_clock</ref>(<ref refid="structoutput" kindref="compound">output</ref>-&gt;base.compositor,<sp/>&amp;ts);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__output_1ga0f26c6ea66cf6683814ed60baf2a04c9" kindref="member">weston_output_finish_frame</ref>(&amp;<ref refid="structoutput" kindref="compound">output</ref>-&gt;base,<sp/>&amp;ts,<sp/>0);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><ref refid="headless_8c_1a79e6ae662479dee5197724cf4056579f" kindref="member">headless_output_repaint</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__output" kindref="compound">weston_output</ref><sp/>*output_base,</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pixman_region32_t<sp/>*damage,</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*repaint_data)</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structheadless__output" kindref="compound">headless_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref><sp/>=<sp/><ref refid="headless_8c_1ac88e6f2b16b796c838f22f662535384c" kindref="member">to_headless_output</ref>(output_base);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__compositor" kindref="compound">weston_compositor</ref><sp/>*ec<sp/>=<sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;base.compositor;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ec-&gt;<ref refid="structweston__compositor_1adfa35d8b6ef4bac08ccecbbd37acb81d" kindref="member">renderer</ref>-&gt;<ref refid="structweston__renderer_1a3d20edac64ed4e94abf90c3c83479f2e" kindref="member">repaint_output</ref>(&amp;<ref refid="structoutput" kindref="compound">output</ref>-&gt;base,<sp/>damage);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pixman_region32_subtract(&amp;ec-&gt;<ref refid="structweston__compositor_1acd96fdbda4ef438f5292372ab78535ce" kindref="member">primary_plane</ref>.<ref refid="structweston__plane_1a8e80302ccee9b0195d9227a04c58ef05" kindref="member">damage</ref>,</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;ec-&gt;<ref refid="structweston__compositor_1acd96fdbda4ef438f5292372ab78535ce" kindref="member">primary_plane</ref>.<ref refid="structweston__plane_1a8e80302ccee9b0195d9227a04c58ef05" kindref="member">damage</ref>,<sp/>damage);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_event_source_timer_update(<ref refid="structoutput" kindref="compound">output</ref>-&gt;finish_frame_timer,<sp/>16);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><ref refid="headless_8c_1a9b0d08ee29c079950dbd42a0ef803105" kindref="member">headless_output_disable_gl</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structheadless__output" kindref="compound">headless_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref>)</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__compositor" kindref="compound">weston_compositor</ref><sp/>*compositor<sp/>=<sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;base.compositor;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structheadless__backend" kindref="compound">headless_backend</ref><sp/>*b<sp/>=<sp/><ref refid="headless_8c_1a66b315f4bde2b383fbbb495837baadc3" kindref="member">to_headless_backend</ref>(<ref refid="structheadless__backend_1ac93d548f286cbd48c723f9f649964b23" kindref="member">compositor</ref>);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b-&gt;<ref refid="structheadless__backend_1aed94c41fb96242e7881781bf073c245f" kindref="member">glri</ref>-&gt;<ref refid="structgl__renderer__interface_1a8b5db07d1de90d0024b15596fa42e5b5" kindref="member">output_destroy</ref>(&amp;<ref refid="structoutput" kindref="compound">output</ref>-&gt;base);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><ref refid="headless_8c_1ae94b0a5bd08f1836eb88d04834d8883c" kindref="member">headless_output_disable_pixman</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structheadless__output" kindref="compound">headless_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref>)</highlight></codeline>
+<codeline lineno="152"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pixman-renderer_8c_1a5cb15b33923a1033c69fd1415ed5608e" kindref="member">pixman_renderer_output_destroy</ref>(&amp;<ref refid="structoutput" kindref="compound">output</ref>-&gt;base);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pixman_image_unref(<ref refid="structoutput" kindref="compound">output</ref>-&gt;image);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(<ref refid="structoutput" kindref="compound">output</ref>-&gt;image_buf);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><ref refid="headless_8c_1a8aeb48a69f88aafae89c5183aa42482a" kindref="member">headless_output_disable</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__output" kindref="compound">weston_output</ref><sp/>*<ref refid="structheadless__backend_1ab209e81aeb17a796215624b57d538d8e" kindref="member">base</ref>)</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structheadless__output" kindref="compound">headless_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref><sp/>=<sp/><ref refid="headless_8c_1ac88e6f2b16b796c838f22f662535384c" kindref="member">to_headless_output</ref>(<ref refid="structheadless__output_1abeca0c6cc51f35a7520e74b7fad91944" kindref="member">base</ref>);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structheadless__backend" kindref="compound">headless_backend</ref><sp/>*b<sp/>=<sp/><ref refid="headless_8c_1a66b315f4bde2b383fbbb495837baadc3" kindref="member">to_headless_backend</ref>(<ref refid="structheadless__backend_1ab209e81aeb17a796215624b57d538d8e" kindref="member">base</ref>-&gt;compositor);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="structoutput" kindref="compound">output</ref>-&gt;base.enabled)</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_event_source_remove(<ref refid="structoutput" kindref="compound">output</ref>-&gt;finish_frame_timer);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(b-&gt;<ref refid="structheadless__backend_1ae1e407ab5a1f0a39ba191d551f24bce9" kindref="member">renderer_type</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="headless_8c_1a17995489a7cf897299059b83a99f2055a460a662cc962d43ca873ee85a55ca281" kindref="member">HEADLESS_GL</ref>:</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="headless_8c_1a9b0d08ee29c079950dbd42a0ef803105" kindref="member">headless_output_disable_gl</ref>(<ref refid="structoutput" kindref="compound">output</ref>);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="headless_8c_1a17995489a7cf897299059b83a99f2055a0ea89c2f1f55e54cfd6d05c001a3971e" kindref="member">HEADLESS_PIXMAN</ref>:</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="headless_8c_1ae94b0a5bd08f1836eb88d04834d8883c" kindref="member">headless_output_disable_pixman</ref>(<ref refid="structoutput" kindref="compound">output</ref>);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="headless_8c_1a17995489a7cf897299059b83a99f2055ab4a749d323bf910b29ef50c38184c7c7" kindref="member">HEADLESS_NOOP</ref>:</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><ref refid="headless_8c_1ac262c24b035db05a7729759dab2e42af" kindref="member">headless_output_destroy</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__output" kindref="compound">weston_output</ref><sp/>*<ref refid="structheadless__backend_1ab209e81aeb17a796215624b57d538d8e" kindref="member">base</ref>)</highlight></codeline>
+<codeline lineno="185"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structheadless__output" kindref="compound">headless_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref><sp/>=<sp/><ref refid="headless_8c_1ac88e6f2b16b796c838f22f662535384c" kindref="member">to_headless_output</ref>(<ref refid="structheadless__output_1abeca0c6cc51f35a7520e74b7fad91944" kindref="member">base</ref>);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="headless_8c_1a8aeb48a69f88aafae89c5183aa42482a" kindref="member">headless_output_disable</ref>(&amp;<ref refid="structoutput" kindref="compound">output</ref>-&gt;base);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__output_1ga4f2b78dfe24872b341fccb812d1e9473" kindref="member">weston_output_release</ref>(&amp;<ref refid="structoutput" kindref="compound">output</ref>-&gt;base);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(<ref refid="structoutput" kindref="compound">output</ref>);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><ref refid="headless_8c_1af8697fa39ba43d5d0b35a1209ae63305" kindref="member">headless_output_enable_gl</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structheadless__output" kindref="compound">headless_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref>)</highlight></codeline>
+<codeline lineno="196"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__compositor" kindref="compound">weston_compositor</ref><sp/>*compositor<sp/>=<sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;base.compositor;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structheadless__backend" kindref="compound">headless_backend</ref><sp/>*b<sp/>=<sp/><ref refid="headless_8c_1a66b315f4bde2b383fbbb495837baadc3" kindref="member">to_headless_backend</ref>(<ref refid="structheadless__backend_1ac93d548f286cbd48c723f9f649964b23" kindref="member">compositor</ref>);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structgl__renderer__pbuffer__options" kindref="compound">gl_renderer_pbuffer_options</ref><sp/>options<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="structgl__renderer__pbuffer__options_1a5dc59cbda4b72ef570bd21a94b971f93" kindref="member">width</ref><sp/>=<sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;base.current_mode-&gt;<ref refid="structoutput_1a8d0ce045e764bc53e9cb70b1c5830acb" kindref="member">width</ref>,</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.height<sp/>=<sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;base.current_mode-&gt;<ref refid="structoutput_1ab82f03b52728ed0bdc7471851c0411ef" kindref="member">height</ref>,</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.drm_formats<sp/>=<sp/><ref refid="headless_8c_1a4ac0f3ed620ed18e8c72e192a90a8ff0" kindref="member">headless_formats</ref>,</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.drm_formats_count<sp/>=<sp/>ARRAY_LENGTH(<ref refid="headless_8c_1a4ac0f3ed620ed18e8c72e192a90a8ff0" kindref="member">headless_formats</ref>),</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(b-&gt;<ref refid="structheadless__backend_1aed94c41fb96242e7881781bf073c245f" kindref="member">glri</ref>-&gt;<ref refid="structgl__renderer__interface_1a668eaa9b13399a91e3d84dc36de62f15" kindref="member">output_pbuffer_create</ref>(&amp;<ref refid="structoutput" kindref="compound">output</ref>-&gt;base,<sp/>&amp;options)<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wlog_1ga6a7cc2161ce1dad600859022b30162c8" kindref="member">weston_log</ref>(</highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>create<sp/>gl<sp/>renderer<sp/>output<sp/>state\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><ref refid="headless_8c_1aaa1770f31eed02121eb50221bd11c1d1" kindref="member">headless_output_enable_pixman</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structheadless__output" kindref="compound">headless_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref>)</highlight></codeline>
+<codeline lineno="216"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpixman__renderer__output__options" kindref="compound">pixman_renderer_output_options</ref><sp/>options<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.use_shadow<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;image_buf<sp/>=<sp/>malloc(<ref refid="structoutput" kindref="compound">output</ref>-&gt;base.current_mode-&gt;<ref refid="structoutput_1a8d0ce045e764bc53e9cb70b1c5830acb" kindref="member">width</ref><sp/>*</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;base.current_mode-&gt;<ref refid="structoutput_1ab82f03b52728ed0bdc7471851c0411ef" kindref="member">height</ref><sp/>*<sp/>4);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="structoutput" kindref="compound">output</ref>-&gt;image_buf)</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;image<sp/>=<sp/>pixman_image_create_bits(PIXMAN_x8r8g8b8,</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;base.current_mode-&gt;<ref refid="structoutput_1a8d0ce045e764bc53e9cb70b1c5830acb" kindref="member">width</ref>,</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;base.current_mode-&gt;<ref refid="structoutput_1ab82f03b52728ed0bdc7471851c0411ef" kindref="member">height</ref>,</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;image_buf,</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;base.current_mode-&gt;<ref refid="structoutput_1a8d0ce045e764bc53e9cb70b1c5830acb" kindref="member">width</ref><sp/>*<sp/>4);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="pixman-renderer_8c_1a5e7faf9412b78605c77cbdda5825e086" kindref="member">pixman_renderer_output_create</ref>(&amp;<ref refid="structoutput" kindref="compound">output</ref>-&gt;base,<sp/>&amp;options)<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>err_renderer;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pixman-renderer_8c_1a64b4a12d5fcd70eccdd0cd0e76f25ead" kindref="member">pixman_renderer_output_set_buffer</ref>(&amp;<ref refid="structoutput" kindref="compound">output</ref>-&gt;base,<sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;image);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal">err_renderer:</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pixman_image_unref(<ref refid="structoutput" kindref="compound">output</ref>-&gt;image);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(<ref refid="structoutput" kindref="compound">output</ref>-&gt;image_buf);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><ref refid="headless_8c_1a6c1b61fcdf9a1756f5a2fae7527ac5b0" kindref="member">headless_output_enable</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__output" kindref="compound">weston_output</ref><sp/>*base)</highlight></codeline>
+<codeline lineno="248"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structheadless__output" kindref="compound">headless_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref><sp/>=<sp/><ref refid="headless_8c_1ac88e6f2b16b796c838f22f662535384c" kindref="member">to_headless_output</ref>(<ref refid="structheadless__output_1abeca0c6cc51f35a7520e74b7fad91944" kindref="member">base</ref>);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structheadless__backend" kindref="compound">headless_backend</ref><sp/>*b<sp/>=<sp/><ref refid="headless_8c_1a66b315f4bde2b383fbbb495837baadc3" kindref="member">to_headless_backend</ref>(<ref refid="structheadless__backend_1ab209e81aeb17a796215624b57d538d8e" kindref="member">base</ref>-&gt;compositor);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_event_loop<sp/>*loop;</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>loop<sp/>=<sp/>wl_display_get_event_loop(b-&gt;<ref refid="structheadless__backend_1ac93d548f286cbd48c723f9f649964b23" kindref="member">compositor</ref>-&gt;<ref refid="structweston__compositor_1a2ad81ce6f58ba42026cd6d86d5f88c8b" kindref="member">wl_display</ref>);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;finish_frame_timer<sp/>=</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_event_loop_add_timer(loop,<sp/><ref refid="headless_8c_1a505e1f21c7dd3046ae781debe348680f" kindref="member">finish_frame_handler</ref>,<sp/><ref refid="structoutput" kindref="compound">output</ref>);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="structoutput" kindref="compound">output</ref>-&gt;finish_frame_timer<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wlog_1ga6a7cc2161ce1dad600859022b30162c8" kindref="member">weston_log</ref>(</highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>add<sp/>finish<sp/>frame<sp/>timer\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(b-&gt;<ref refid="structheadless__backend_1ae1e407ab5a1f0a39ba191d551f24bce9" kindref="member">renderer_type</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="headless_8c_1a17995489a7cf897299059b83a99f2055a460a662cc962d43ca873ee85a55ca281" kindref="member">HEADLESS_GL</ref>:</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/><ref refid="headless_8c_1af8697fa39ba43d5d0b35a1209ae63305" kindref="member">headless_output_enable_gl</ref>(<ref refid="structoutput" kindref="compound">output</ref>);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="headless_8c_1a17995489a7cf897299059b83a99f2055a0ea89c2f1f55e54cfd6d05c001a3971e" kindref="member">HEADLESS_PIXMAN</ref>:</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/><ref refid="headless_8c_1aaa1770f31eed02121eb50221bd11c1d1" kindref="member">headless_output_enable_pixman</ref>(<ref refid="structoutput" kindref="compound">output</ref>);</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="headless_8c_1a17995489a7cf897299059b83a99f2055ab4a749d323bf910b29ef50c38184c7c7" kindref="member">HEADLESS_NOOP</ref>:</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ret<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_event_source_remove(<ref refid="structoutput" kindref="compound">output</ref>-&gt;finish_frame_timer);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="280"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><ref refid="headless_8c_1aa8e52e20a31c46edd83b5eb7ce723ed7" kindref="member">headless_output_set_size</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__output" kindref="compound">weston_output</ref><sp/>*base,</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height)</highlight></codeline>
+<codeline lineno="285"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structheadless__output" kindref="compound">headless_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref><sp/>=<sp/><ref refid="headless_8c_1ac88e6f2b16b796c838f22f662535384c" kindref="member">to_headless_output</ref>(<ref refid="structheadless__output_1abeca0c6cc51f35a7520e74b7fad91944" kindref="member">base</ref>);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__head" kindref="compound">weston_head</ref><sp/>*head;</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>output_width,<sp/>output_height;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>We<sp/>can<sp/>only<sp/>be<sp/>called<sp/>once.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(!<ref refid="structoutput" kindref="compound">output</ref>-&gt;base.current_mode);</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Make<sp/>sure<sp/>we<sp/>have<sp/>scale<sp/>set.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="structoutput" kindref="compound">output</ref>-&gt;base.<ref refid="structoutput_1aa7a572455f77dc2d50ff14cda028cde2" kindref="member">scale</ref>);</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_list_for_each(head,<sp/>&amp;<ref refid="structoutput" kindref="compound">output</ref>-&gt;base.head_list,<sp/><ref refid="structweston__head_1a21f63bcc97ea0592e94f94c6881a0ed3" kindref="member">output_link</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__head_1gad1dbb9d1e8023b3c1587b2a15d1ee550" kindref="member">weston_head_set_monitor_strings</ref>(head,<sp/></highlight><highlight class="stringliteral">&quot;weston&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;headless&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL);</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>XXX:<sp/>Calculate<sp/>proper<sp/>size.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__head_1ga453bc787c6868e53371866de3f4db622" kindref="member">weston_head_set_physical_size</ref>(head,<sp/>width,<sp/>height);</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output_width<sp/>=<sp/>width<sp/>*<sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;base.<ref refid="structoutput_1aa7a572455f77dc2d50ff14cda028cde2" kindref="member">scale</ref>;</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output_height<sp/>=<sp/>height<sp/>*<sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;base.<ref refid="structoutput_1aa7a572455f77dc2d50ff14cda028cde2" kindref="member">scale</ref>;</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;mode.flags<sp/>=</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WL_OUTPUT_MODE_CURRENT<sp/>|<sp/>WL_OUTPUT_MODE_PREFERRED;</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;mode.<ref refid="structoutput_1a8d0ce045e764bc53e9cb70b1c5830acb" kindref="member">width</ref><sp/>=<sp/>output_width;</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;mode.<ref refid="structoutput_1ab82f03b52728ed0bdc7471851c0411ef" kindref="member">height</ref><sp/>=<sp/>output_height;</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;mode.refresh<sp/>=<sp/>60000;</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_list_insert(&amp;<ref refid="structoutput" kindref="compound">output</ref>-&gt;base.mode_list,<sp/>&amp;<ref refid="structoutput" kindref="compound">output</ref>-&gt;mode.<ref refid="structoutput_1a3b73765192267573e6a570e88c1a27d0" kindref="member">link</ref>);</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;base.current_mode<sp/>=<sp/>&amp;<ref refid="structoutput" kindref="compound">output</ref>-&gt;mode;</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;base.start_repaint_loop<sp/>=<sp/><ref refid="headless_8c_1ac9f911ab13eceabd4e69e19ae366d2b0" kindref="member">headless_output_start_repaint_loop</ref>;</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;base.repaint<sp/>=<sp/><ref refid="headless_8c_1a79e6ae662479dee5197724cf4056579f" kindref="member">headless_output_repaint</ref>;</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;base.assign_planes<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;base.set_backlight<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;base.set_dpms<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;base.switch_mode<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="324"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__output" kindref="compound">weston_output</ref><sp/>*</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><ref refid="headless_8c_1abfd306f18f85e7762550cf505897c207" kindref="member">headless_output_create</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__compositor" kindref="compound">weston_compositor</ref><sp/>*<ref refid="structweston__output_1ab4b884d4d420d4254723d12f7650e878" kindref="member">compositor</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structweston__output_1ab65dff659f1d2d38bc253ca1de2b6c04" kindref="member">name</ref>)</highlight></codeline>
+<codeline lineno="328"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structheadless__output" kindref="compound">headless_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref>;</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>name<sp/>can&apos;t<sp/>be<sp/>NULL.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(name);</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref><sp/>=<sp/><ref refid="zalloc_8h_1a260ac290b02627b12230b313c8fa92b3" kindref="member">zalloc</ref>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*<ref refid="structoutput" kindref="compound">output</ref>);</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="structoutput" kindref="compound">output</ref>)</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__output_1gaeb6468e3cabf74cba4030400f1907799" kindref="member">weston_output_init</ref>(&amp;<ref refid="structoutput" kindref="compound">output</ref>-&gt;base,<sp/>compositor,<sp/>name);</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;base.destroy<sp/>=<sp/><ref refid="headless_8c_1ac262c24b035db05a7729759dab2e42af" kindref="member">headless_output_destroy</ref>;</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;base.disable<sp/>=<sp/><ref refid="headless_8c_1a8aeb48a69f88aafae89c5183aa42482a" kindref="member">headless_output_disable</ref>;</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;base.enable<sp/>=<sp/><ref refid="headless_8c_1a6c1b61fcdf9a1756f5a2fae7527ac5b0" kindref="member">headless_output_enable</ref>;</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;base.attach_head<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__compositor_1ga3bf54722d538ec9410a82d1242a84958" kindref="member">weston_compositor_add_pending_output</ref>(&amp;<ref refid="structoutput" kindref="compound">output</ref>-&gt;base,<sp/>compositor);</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;<ref refid="structoutput" kindref="compound">output</ref>-&gt;base;</highlight></codeline>
+<codeline lineno="348"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><ref refid="headless_8c_1a880ec6b5cb5a404b75aca7e9ec9add11" kindref="member">headless_head_create</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__compositor" kindref="compound">weston_compositor</ref><sp/>*compositor,</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name)</highlight></codeline>
+<codeline lineno="353"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structheadless__head" kindref="compound">headless_head</ref><sp/>*head;</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>name<sp/>can&apos;t<sp/>be<sp/>NULL.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(name);</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>head<sp/>=<sp/><ref refid="zalloc_8h_1a260ac290b02627b12230b313c8fa92b3" kindref="member">zalloc</ref>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*head);</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(head<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__head_1gab458db3cc734c39f07222a72cfca7bfe" kindref="member">weston_head_init</ref>(&amp;head-&gt;<ref refid="structheadless__head_1aa8d8e9a742b429df3f0709d775f158e0" kindref="member">base</ref>,<sp/>name);</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__head_1ga522efc0ba8ba4ce81c0ac4c1cf197f5a" kindref="member">weston_head_set_connection_status</ref>(&amp;head-&gt;<ref refid="structheadless__head_1aa8d8e9a742b429df3f0709d775f158e0" kindref="member">base</ref>,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Ideally<sp/>all<sp/>attributes<sp/>of<sp/>the<sp/>head<sp/>would<sp/>be<sp/>set<sp/>here,<sp/>so<sp/>that<sp/>the</highlight></codeline>
+<codeline lineno="367"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>user<sp/>has<sp/>all<sp/>the<sp/>information<sp/>when<sp/>deciding<sp/>to<sp/>create<sp/>outputs.</highlight></codeline>
+<codeline lineno="368"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>We<sp/>do<sp/>not<sp/>have<sp/>those<sp/>until<sp/>set_size()<sp/>time<sp/>through.</highlight></codeline>
+<codeline lineno="369"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"></highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__compositor_1ga9cc453a480c9083e2b15d974f0c9d61e" kindref="member">weston_compositor_add_head</ref>(compositor,<sp/>&amp;head-&gt;<ref refid="structheadless__head_1aa8d8e9a742b429df3f0709d775f158e0" kindref="member">base</ref>);</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="374"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><ref refid="headless_8c_1ac80dcb3b6b4a848a19769ce06585c333" kindref="member">headless_head_destroy</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structheadless__head" kindref="compound">headless_head</ref><sp/>*head)</highlight></codeline>
+<codeline lineno="378"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__head_1ga620a43a89a9f4045689f5f7bddeaa533" kindref="member">weston_head_release</ref>(&amp;head-&gt;<ref refid="structheadless__head_1aa8d8e9a742b429df3f0709d775f158e0" kindref="member">base</ref>);</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(head);</highlight></codeline>
+<codeline lineno="381"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"></highlight></codeline>
+<codeline lineno="383"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><ref refid="headless_8c_1a028ac8e3e49db9d5e7cef04e4e08223b" kindref="member">headless_destroy</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__compositor" kindref="compound">weston_compositor</ref><sp/>*ec)</highlight></codeline>
+<codeline lineno="385"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structheadless__backend" kindref="compound">headless_backend</ref><sp/>*b<sp/>=<sp/><ref refid="headless_8c_1a66b315f4bde2b383fbbb495837baadc3" kindref="member">to_headless_backend</ref>(ec);</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__head" kindref="compound">weston_head</ref><sp/>*base,<sp/>*next;</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"></highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__compositor_1gacc91a9f77baf1c72d967471bade09cb3" kindref="member">weston_compositor_shutdown</ref>(ec);</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"></highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_list_for_each_safe(base,<sp/>next,<sp/>&amp;ec-&gt;<ref refid="structweston__compositor_1a154cc4c320f1d35ecb9886f2b68b6e27" kindref="member">head_list</ref>,<sp/><ref refid="structweston__head_1a40c0e0bfe85b46ef2524d79eb83de814" kindref="member">compositor_link</ref>)</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="headless_8c_1ac80dcb3b6b4a848a19769ce06585c333" kindref="member">headless_head_destroy</ref>(<ref refid="headless_8c_1a87d1445fff5ba51f4dc34ba58305f0ed" kindref="member">to_headless_head</ref>(base));</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"></highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(b);</highlight></codeline>
+<codeline lineno="395"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"></highlight></codeline>
+<codeline lineno="397"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><ref refid="headless_8c_1ad001c2e57e2decc947c16d86c2c8cba3" kindref="member">headless_gl_renderer_init</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structheadless__backend" kindref="compound">headless_backend</ref><sp/>*b)</highlight></codeline>
+<codeline lineno="399"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structgl__renderer__display__options" kindref="compound">gl_renderer_display_options</ref><sp/>options<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.egl_platform<sp/>=<sp/>EGL_PLATFORM_SURFACELESS_MESA,</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.egl_native_display<sp/>=<sp/><ref refid="gl-renderer_8h_1a26a1926709daa561cedd150f1a6bbb23" kindref="member">EGL_DEFAULT_DISPLAY</ref>,</highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.egl_surface_type<sp/>=<sp/><ref refid="gl-renderer_8h_1ace4c8dbcd8e4e41ea1fe7b4b6c4c280e" kindref="member">EGL_PBUFFER_BIT</ref>,</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.drm_formats<sp/>=<sp/><ref refid="headless_8c_1a4ac0f3ed620ed18e8c72e192a90a8ff0" kindref="member">headless_formats</ref>,</highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.drm_formats_count<sp/>=<sp/>ARRAY_LENGTH(<ref refid="headless_8c_1a4ac0f3ed620ed18e8c72e192a90a8ff0" kindref="member">headless_formats</ref>),</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="407"><highlight class="normal"></highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b-&gt;<ref refid="structheadless__backend_1aed94c41fb96242e7881781bf073c245f" kindref="member">glri</ref><sp/>=<sp/><ref refid="compositor_8c_1a1cf9686b2a6a6764e8197fdbb473607f" kindref="member">weston_load_module</ref>(</highlight><highlight class="stringliteral">&quot;gl-renderer.so&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;gl_renderer_interface&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="409"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!b-&gt;<ref refid="structheadless__backend_1aed94c41fb96242e7881781bf073c245f" kindref="member">glri</ref>)</highlight></codeline>
+<codeline lineno="410"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="411"><highlight class="normal"></highlight></codeline>
+<codeline lineno="412"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>b-&gt;<ref refid="structheadless__backend_1aed94c41fb96242e7881781bf073c245f" kindref="member">glri</ref>-&gt;<ref refid="structgl__renderer__interface_1ae0141c11b0fe5d0749016b7904513230" kindref="member">display_create</ref>(b-&gt;<ref refid="structheadless__backend_1ac93d548f286cbd48c723f9f649964b23" kindref="member">compositor</ref>,<sp/>&amp;options);</highlight></codeline>
+<codeline lineno="413"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="414"><highlight class="normal"></highlight></codeline>
+<codeline lineno="415"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__windowed__output__api" kindref="compound">weston_windowed_output_api</ref><sp/><ref refid="headless_8c_1ab736666fdb43909c7d4626db6f3d12ee" kindref="member">api</ref><sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="416"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="headless_8c_1aa8e52e20a31c46edd83b5eb7ce723ed7" kindref="member">headless_output_set_size</ref>,</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="headless_8c_1a880ec6b5cb5a404b75aca7e9ec9add11" kindref="member">headless_head_create</ref>,</highlight></codeline>
+<codeline lineno="418"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="419"><highlight class="normal"></highlight></codeline>
+<codeline lineno="420"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structheadless__backend" kindref="compound">headless_backend</ref><sp/>*</highlight></codeline>
+<codeline lineno="421"><highlight class="normal"><ref refid="headless_8c_1a27740c73ae611863f3abbfebb7271b28" kindref="member">headless_backend_create</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__compositor" kindref="compound">weston_compositor</ref><sp/>*<ref refid="structheadless__backend_1ac93d548f286cbd48c723f9f649964b23" kindref="member">compositor</ref>,</highlight></codeline>
+<codeline lineno="422"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__headless__backend__config" kindref="compound">weston_headless_backend_config</ref><sp/>*config)</highlight></codeline>
+<codeline lineno="423"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structheadless__backend" kindref="compound">headless_backend</ref><sp/>*b;</highlight></codeline>
+<codeline lineno="425"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"></highlight></codeline>
+<codeline lineno="427"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b<sp/>=<sp/><ref refid="zalloc_8h_1a260ac290b02627b12230b313c8fa92b3" kindref="member">zalloc</ref>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*b);</highlight></codeline>
+<codeline lineno="428"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(b<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="430"><highlight class="normal"></highlight></codeline>
+<codeline lineno="431"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b-&gt;<ref refid="structheadless__backend_1ac93d548f286cbd48c723f9f649964b23" kindref="member">compositor</ref><sp/>=<sp/><ref refid="structheadless__backend_1ac93d548f286cbd48c723f9f649964b23" kindref="member">compositor</ref>;</highlight></codeline>
+<codeline lineno="432"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structheadless__backend_1ac93d548f286cbd48c723f9f649964b23" kindref="member">compositor</ref>-&gt;<ref refid="structweston__compositor_1af5fb998fe634d54b5c0d358c33bc0413" kindref="member">backend</ref><sp/>=<sp/>&amp;b-&gt;<ref refid="structheadless__backend_1ab209e81aeb17a796215624b57d538d8e" kindref="member">base</ref>;</highlight></codeline>
+<codeline lineno="433"><highlight class="normal"></highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group__compositor_1gaab7e6328af752385d84c17b9eebddf74" kindref="member">weston_compositor_set_presentation_clock_software</ref>(<ref refid="structheadless__backend_1ac93d548f286cbd48c723f9f649964b23" kindref="member">compositor</ref>)<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>err_free;</highlight></codeline>
+<codeline lineno="436"><highlight class="normal"></highlight></codeline>
+<codeline lineno="437"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b-&gt;<ref refid="structheadless__backend_1ab209e81aeb17a796215624b57d538d8e" kindref="member">base</ref>.<ref refid="structweston__backend_1ab02a21b1de2672ebac93c9ba509d6ee9" kindref="member">destroy</ref><sp/>=<sp/><ref refid="headless_8c_1a028ac8e3e49db9d5e7cef04e4e08223b" kindref="member">headless_destroy</ref>;</highlight></codeline>
+<codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b-&gt;<ref refid="structheadless__backend_1ab209e81aeb17a796215624b57d538d8e" kindref="member">base</ref>.<ref refid="structweston__backend_1a970510821a8f44ac83e8af147b2dbccb" kindref="member">create_output</ref><sp/>=<sp/><ref refid="headless_8c_1abfd306f18f85e7762550cf505897c207" kindref="member">headless_output_create</ref>;</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"></highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(config-&gt;<ref refid="structweston__headless__backend__config_1a74198d12916a4e021085ef4d30f11edb" kindref="member">use_pixman</ref><sp/>&amp;&amp;<sp/>config-&gt;<ref refid="structweston__headless__backend__config_1a1d360517779bbac96b83074325a7013d" kindref="member">use_gl</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wlog_1ga6a7cc2161ce1dad600859022b30162c8" kindref="member">weston_log</ref>(</highlight><highlight class="stringliteral">&quot;Error:<sp/>cannot<sp/>use<sp/>both<sp/>Pixman<sp/>*and*<sp/>GL<sp/>renderers.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="442"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>err_free;</highlight></codeline>
+<codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="444"><highlight class="normal"></highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(config-&gt;<ref refid="structweston__headless__backend__config_1a1d360517779bbac96b83074325a7013d" kindref="member">use_gl</ref>)</highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b-&gt;<ref refid="structheadless__backend_1ae1e407ab5a1f0a39ba191d551f24bce9" kindref="member">renderer_type</ref><sp/>=<sp/><ref refid="headless_8c_1a17995489a7cf897299059b83a99f2055a460a662cc962d43ca873ee85a55ca281" kindref="member">HEADLESS_GL</ref>;</highlight></codeline>
+<codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(config-&gt;<ref refid="structweston__headless__backend__config_1a74198d12916a4e021085ef4d30f11edb" kindref="member">use_pixman</ref>)</highlight></codeline>
+<codeline lineno="448"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b-&gt;<ref refid="structheadless__backend_1ae1e407ab5a1f0a39ba191d551f24bce9" kindref="member">renderer_type</ref><sp/>=<sp/><ref refid="headless_8c_1a17995489a7cf897299059b83a99f2055a0ea89c2f1f55e54cfd6d05c001a3971e" kindref="member">HEADLESS_PIXMAN</ref>;</highlight></codeline>
+<codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="450"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b-&gt;<ref refid="structheadless__backend_1ae1e407ab5a1f0a39ba191d551f24bce9" kindref="member">renderer_type</ref><sp/>=<sp/><ref refid="headless_8c_1a17995489a7cf897299059b83a99f2055ab4a749d323bf910b29ef50c38184c7c7" kindref="member">HEADLESS_NOOP</ref>;</highlight></codeline>
+<codeline lineno="451"><highlight class="normal"></highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(b-&gt;<ref refid="structheadless__backend_1ae1e407ab5a1f0a39ba191d551f24bce9" kindref="member">renderer_type</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="453"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="headless_8c_1a17995489a7cf897299059b83a99f2055a460a662cc962d43ca873ee85a55ca281" kindref="member">HEADLESS_GL</ref>:</highlight></codeline>
+<codeline lineno="454"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/><ref refid="headless_8c_1ad001c2e57e2decc947c16d86c2c8cba3" kindref="member">headless_gl_renderer_init</ref>(b);</highlight></codeline>
+<codeline lineno="455"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="456"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="headless_8c_1a17995489a7cf897299059b83a99f2055a0ea89c2f1f55e54cfd6d05c001a3971e" kindref="member">HEADLESS_PIXMAN</ref>:</highlight></codeline>
+<codeline lineno="457"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/><ref refid="pixman-renderer_8c_1af2ecf3d1472350eac41077273643e615" kindref="member">pixman_renderer_init</ref>(<ref refid="structheadless__backend_1ac93d548f286cbd48c723f9f649964b23" kindref="member">compositor</ref>);</highlight></codeline>
+<codeline lineno="458"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="459"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="headless_8c_1a17995489a7cf897299059b83a99f2055ab4a749d323bf910b29ef50c38184c7c7" kindref="member">HEADLESS_NOOP</ref>:</highlight></codeline>
+<codeline lineno="460"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/><ref refid="libweston-internal_8h_1a8f754b8b4d8e45b3d0264705c9293f8f" kindref="member">noop_renderer_init</ref>(<ref refid="structheadless__backend_1ac93d548f286cbd48c723f9f649964b23" kindref="member">compositor</ref>);</highlight></codeline>
+<codeline lineno="461"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="462"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="463"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(0<sp/>&amp;&amp;<sp/></highlight><highlight class="stringliteral">&quot;invalid<sp/>renderer<sp/>type&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="464"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="465"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="466"><highlight class="normal"></highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ret<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="468"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>err_input;</highlight></codeline>
+<codeline lineno="469"><highlight class="normal"></highlight></codeline>
+<codeline lineno="470"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="structheadless__backend_1ac93d548f286cbd48c723f9f649964b23" kindref="member">compositor</ref>-&gt;<ref refid="structweston__compositor_1adfa35d8b6ef4bac08ccecbbd37acb81d" kindref="member">renderer</ref>-&gt;<ref refid="structweston__renderer_1a5999bb29493d522ddcff40318e677e2d" kindref="member">import_dmabuf</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="471"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="linux-dmabuf_8c_1a9d35a0fd3b7287d34b2fd201fa1b1ca7" kindref="member">linux_dmabuf_setup</ref>(<ref refid="structheadless__backend_1ac93d548f286cbd48c723f9f649964b23" kindref="member">compositor</ref>)<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="472"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wlog_1ga6a7cc2161ce1dad600859022b30162c8" kindref="member">weston_log</ref>(</highlight><highlight class="stringliteral">&quot;Error:<sp/>dmabuf<sp/>protocol<sp/>setup<sp/>failed.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="473"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>err_input;</highlight></codeline>
+<codeline lineno="474"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="475"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="476"><highlight class="normal"></highlight></codeline>
+<codeline lineno="477"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Support<sp/>zwp_linux_explicit_synchronization_unstable_v1<sp/>to<sp/>enable</highlight></codeline>
+<codeline lineno="478"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>testing.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="479"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="linux-explicit-synchronization_8c_1a33d5b1b9de9b58532eafe9666f39e8c0" kindref="member">linux_explicit_synchronization_setup</ref>(<ref refid="structheadless__backend_1ac93d548f286cbd48c723f9f649964b23" kindref="member">compositor</ref>)<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="480"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>err_input;</highlight></codeline>
+<codeline lineno="481"><highlight class="normal"></highlight></codeline>
+<codeline lineno="482"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/><ref refid="plugin-registry_8c_1a1416d4631dfb73f6ed290b80c019c6a9" kindref="member">weston_plugin_api_register</ref>(<ref refid="structheadless__backend_1ac93d548f286cbd48c723f9f649964b23" kindref="member">compositor</ref>,<sp/><ref refid="windowed-output-api_8h_1ac72599bcf9591d7cf6e951ad7f310611" kindref="member">WESTON_WINDOWED_OUTPUT_API_NAME</ref>,</highlight></codeline>
+<codeline lineno="483"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="headless_8c_1ab736666fdb43909c7d4626db6f3d12ee" kindref="member">api</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="headless_8c_1ab736666fdb43909c7d4626db6f3d12ee" kindref="member">api</ref>));</highlight></codeline>
+<codeline lineno="484"><highlight class="normal"></highlight></codeline>
+<codeline lineno="485"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ret<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="486"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wlog_1ga6a7cc2161ce1dad600859022b30162c8" kindref="member">weston_log</ref>(</highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>register<sp/>output<sp/>API.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="487"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>err_input;</highlight></codeline>
+<codeline lineno="488"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="489"><highlight class="normal"></highlight></codeline>
+<codeline lineno="490"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>b;</highlight></codeline>
+<codeline lineno="491"><highlight class="normal"></highlight></codeline>
+<codeline lineno="492"><highlight class="normal">err_input:</highlight></codeline>
+<codeline lineno="493"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__compositor_1gacc91a9f77baf1c72d967471bade09cb3" kindref="member">weston_compositor_shutdown</ref>(<ref refid="structheadless__backend_1ac93d548f286cbd48c723f9f649964b23" kindref="member">compositor</ref>);</highlight></codeline>
+<codeline lineno="494"><highlight class="normal">err_free:</highlight></codeline>
+<codeline lineno="495"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(b);</highlight></codeline>
+<codeline lineno="496"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="497"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="498"><highlight class="normal"></highlight></codeline>
+<codeline lineno="499"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="500"><highlight class="normal"><ref refid="headless_8c_1aab6bb61eb85108fc9fab3348e7fecca4" kindref="member">config_init_to_defaults</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__headless__backend__config" kindref="compound">weston_headless_backend_config</ref><sp/>*config)</highlight></codeline>
+<codeline lineno="501"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="502"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="503"><highlight class="normal"></highlight></codeline>
+<codeline lineno="504"><highlight class="normal">WL_EXPORT<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="505"><highlight class="normal"><ref refid="headless_8c_1afc0921b794cd85cb380c54b22ed174f3" kindref="member">weston_backend_init</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__compositor" kindref="compound">weston_compositor</ref><sp/>*<ref refid="structheadless__backend_1ac93d548f286cbd48c723f9f649964b23" kindref="member">compositor</ref>,</highlight></codeline>
+<codeline lineno="506"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__backend__config" kindref="compound">weston_backend_config</ref><sp/>*config_base)</highlight></codeline>
+<codeline lineno="507"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="508"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structheadless__backend" kindref="compound">headless_backend</ref><sp/>*b;</highlight></codeline>
+<codeline lineno="509"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__headless__backend__config" kindref="compound">weston_headless_backend_config</ref><sp/>config<sp/>=<sp/>{{<sp/>0,<sp/>}};</highlight></codeline>
+<codeline lineno="510"><highlight class="normal"></highlight></codeline>
+<codeline lineno="511"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(config_base<sp/>==<sp/>NULL<sp/>||</highlight></codeline>
+<codeline lineno="512"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>config_base-&gt;<ref refid="structweston__backend__config_1a5b47052f3958d0ba08eb65955ba5ad12" kindref="member">struct_version</ref><sp/>!=<sp/><ref refid="backend-headless_8h_1a2ac8efd8a10d80fe4e615ddbc57387a2" kindref="member">WESTON_HEADLESS_BACKEND_CONFIG_VERSION</ref><sp/>||</highlight></codeline>
+<codeline lineno="513"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>config_base-&gt;<ref refid="structweston__backend__config_1acdec1efd3da3b4967cada3e902b7d655" kindref="member">struct_size</ref><sp/>&gt;<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__headless__backend__config" kindref="compound">weston_headless_backend_config</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="514"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wlog_1ga6a7cc2161ce1dad600859022b30162c8" kindref="member">weston_log</ref>(</highlight><highlight class="stringliteral">&quot;headless<sp/>backend<sp/>config<sp/>structure<sp/>is<sp/>invalid\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="515"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="516"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="517"><highlight class="normal"></highlight></codeline>
+<codeline lineno="518"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="headless_8c_1aab6bb61eb85108fc9fab3348e7fecca4" kindref="member">config_init_to_defaults</ref>(&amp;config);</highlight></codeline>
+<codeline lineno="519"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcpy(&amp;config,<sp/>config_base,<sp/>config_base-&gt;<ref refid="structweston__backend__config_1acdec1efd3da3b4967cada3e902b7d655" kindref="member">struct_size</ref>);</highlight></codeline>
+<codeline lineno="520"><highlight class="normal"></highlight></codeline>
+<codeline lineno="521"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b<sp/>=<sp/><ref refid="headless_8c_1a27740c73ae611863f3abbfebb7271b28" kindref="member">headless_backend_create</ref>(compositor,<sp/>&amp;config);</highlight></codeline>
+<codeline lineno="522"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(b<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="523"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="524"><highlight class="normal"></highlight></codeline>
+<codeline lineno="525"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="526"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/libweston/backend-headless/headless.c"/>
+  </compounddef>
+</doxygen>

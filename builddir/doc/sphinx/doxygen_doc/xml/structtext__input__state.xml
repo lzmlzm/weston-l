@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structtext__input__state" kind="struct" language="C++" prot="public">
+    <compoundname>text_input_state</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structtext__input__state_1a2590999508c3d46d3da59ad2f4cccb9d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int text_input_state::activated</definition>
+        <argsstring></argsstring>
+        <name>activated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/text-test.c" line="48" column="5" bodyfile="/home/lzm/Wayland/weston/tests/text-test.c" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtext__input__state_1a49a16f0b85157e09f06b8943f8e32e81" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int text_input_state::deactivated</definition>
+        <argsstring></argsstring>
+        <name>deactivated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/text-test.c" line="49" column="5" bodyfile="/home/lzm/Wayland/weston/tests/text-test.c" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/tests/text-test.c" line="47" column="23" bodyfile="/home/lzm/Wayland/weston/tests/text-test.c" bodystart="47" bodyend="50"/>
+    <listofallmembers>
+      <member refid="structtext__input__state_1a2590999508c3d46d3da59ad2f4cccb9d" prot="public" virt="non-virtual"><scope>text_input_state</scope><name>activated</name></member>
+      <member refid="structtext__input__state_1a49a16f0b85157e09f06b8943f8e32e81" prot="public" virt="non-virtual"><scope>text_input_state</scope><name>deactivated</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

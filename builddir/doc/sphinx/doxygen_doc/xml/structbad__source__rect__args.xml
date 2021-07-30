@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structbad__source__rect__args" kind="struct" language="C++" prot="public">
+    <compoundname>bad_source_rect_args</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structbad__source__rect__args_1a950ace45ec9030d0453320c3393a9b71" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int bad_source_rect_args::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/viewporter-test.c" line="74" column="5" bodyfile="/home/lzm/Wayland/weston/tests/viewporter-test.c" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbad__source__rect__args_1aee28b773deaa8f6231592cb49ae1d788" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int bad_source_rect_args::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/viewporter-test.c" line="74" column="7" bodyfile="/home/lzm/Wayland/weston/tests/viewporter-test.c" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbad__source__rect__args_1a5f5a4dd08896fad9c0df46358871bb3e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int bad_source_rect_args::w</definition>
+        <argsstring></argsstring>
+        <name>w</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/viewporter-test.c" line="74" column="9" bodyfile="/home/lzm/Wayland/weston/tests/viewporter-test.c" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbad__source__rect__args_1a06975e5191fe52cfdabd8d30ed194e7e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int bad_source_rect_args::h</definition>
+        <argsstring></argsstring>
+        <name>h</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/viewporter-test.c" line="74" column="11" bodyfile="/home/lzm/Wayland/weston/tests/viewporter-test.c" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/tests/viewporter-test.c" line="73" column="27" bodyfile="/home/lzm/Wayland/weston/tests/viewporter-test.c" bodystart="73" bodyend="75"/>
+    <listofallmembers>
+      <member refid="structbad__source__rect__args_1a06975e5191fe52cfdabd8d30ed194e7e" prot="public" virt="non-virtual"><scope>bad_source_rect_args</scope><name>h</name></member>
+      <member refid="structbad__source__rect__args_1a5f5a4dd08896fad9c0df46358871bb3e" prot="public" virt="non-virtual"><scope>bad_source_rect_args</scope><name>w</name></member>
+      <member refid="structbad__source__rect__args_1a950ace45ec9030d0453320c3393a9b71" prot="public" virt="non-virtual"><scope>bad_source_rect_args</scope><name>x</name></member>
+      <member refid="structbad__source__rect__args_1aee28b773deaa8f6231592cb49ae1d788" prot="public" virt="non-virtual"><scope>bad_source_rect_args</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

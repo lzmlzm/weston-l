@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structborder" kind="struct" language="C++" prot="public">
+    <compoundname>border</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structborder_1a1ba943a6be5dd251b3d4ad7bf0f8a693" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structline" kindref="compound">line</ref></type>
+        <definition>struct line border::line</definition>
+        <argsstring></argsstring>
+        <name>line</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/input.c" line="65" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/input.c" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structborder_1a744baba1e75c3be65f0f25ddf1b82f84" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="input_8c_1a72f8824b411d1122a2dfb88206ef9748" kindref="member">motion_direction</ref></type>
+        <definition>enum motion_direction border::blocking_dir</definition>
+        <argsstring></argsstring>
+        <name>blocking_dir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/input.c" line="65" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/input.c" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>vec2d</label>
+        <link refid="structvec2d"/>
+      </node>
+      <node id="1">
+        <label>border</label>
+        <link refid="structborder"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>line</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>line</label>
+        <link refid="structline"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>a</edgelabel>
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lzm/Wayland/weston/libweston/input.c" line="73" column="13" bodyfile="/home/lzm/Wayland/weston/libweston/input.c" bodystart="73" bodyend="76"/>
+    <listofallmembers>
+      <member refid="structborder_1a744baba1e75c3be65f0f25ddf1b82f84" prot="public" virt="non-virtual"><scope>border</scope><name>blocking_dir</name></member>
+      <member refid="structborder_1a1ba943a6be5dd251b3d4ad7bf0f8a693" prot="public" virt="non-virtual"><scope>border</scope><name>line</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

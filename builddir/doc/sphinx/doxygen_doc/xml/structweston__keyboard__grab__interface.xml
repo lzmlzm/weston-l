@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__keyboard__grab__interface" kind="struct" language="C++" prot="public">
+    <compoundname>weston_keyboard_grab_interface</compoundname>
+    <includes refid="libweston_8h" local="no">libweston.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__keyboard__grab__interface_1ab6d7de9f8e81b3339102b237cd94e86d" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_keyboard_grab_interface::key) (struct weston_keyboard_grab *grab, const struct timespec *time, uint32_t key, uint32_t state)</definition>
+        <argsstring>)(struct weston_keyboard_grab *grab, const struct timespec *time, uint32_t key, uint32_t state)</argsstring>
+        <name>key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="447" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="447" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__keyboard__grab__interface_1a58f22270fa84b226a2a92e9a5c63e416" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_keyboard_grab_interface::modifiers) (struct weston_keyboard_grab *grab, uint32_t serial, uint32_t mods_depressed, uint32_t mods_latched, uint32_t mods_locked, uint32_t group)</definition>
+        <argsstring>)(struct weston_keyboard_grab *grab, uint32_t serial, uint32_t mods_depressed, uint32_t mods_latched, uint32_t mods_locked, uint32_t group)</argsstring>
+        <name>modifiers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="449" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="449" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__keyboard__grab__interface_1ac9903eebe2df0319090d75da5ae717cd" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_keyboard_grab_interface::cancel) (struct weston_keyboard_grab *grab)</definition>
+        <argsstring>)(struct weston_keyboard_grab *grab)</argsstring>
+        <name>cancel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="452" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="452" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="446" column="37" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="446" bodyend="453"/>
+    <listofallmembers>
+      <member refid="structweston__keyboard__grab__interface_1ac9903eebe2df0319090d75da5ae717cd" prot="public" virt="non-virtual"><scope>weston_keyboard_grab_interface</scope><name>cancel</name></member>
+      <member refid="structweston__keyboard__grab__interface_1ab6d7de9f8e81b3339102b237cd94e86d" prot="public" virt="non-virtual"><scope>weston_keyboard_grab_interface</scope><name>key</name></member>
+      <member refid="structweston__keyboard__grab__interface_1a58f22270fa84b226a2a92e9a5c63e416" prot="public" virt="non-virtual"><scope>weston_keyboard_grab_interface</scope><name>modifiers</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__drm__output__api" kind="struct" language="C++" prot="public">
+    <compoundname>weston_drm_output_api</compoundname>
+    <includes refid="backend-drm_8h" local="no">backend-drm.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__drm__output__api_1a62a3f64dc9c4aaede1c12f1fc89531c1" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* weston_drm_output_api::set_mode) (struct weston_output *output, enum weston_drm_backend_output_mode mode, const char *modeline)</definition>
+        <argsstring>)(struct weston_output *output, enum weston_drm_backend_output_mode mode, const char *modeline)</argsstring>
+        <name>set_mode</name>
+        <briefdescription>
+<para>The mode to be used by the output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Refer to the documentation of WESTON_DRM_BACKEND_OUTPUT_PREFERRED for details.</para>
+<para>Returns 0 on success, -1 on failure. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-drm.h" line="63" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-drm.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__drm__output__api_1a4e9a8546d1567120b88c48347075e2db" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_drm_output_api::set_gbm_format) (struct weston_output *output, const char *gbm_format)</definition>
+        <argsstring>)(struct weston_output *output, const char *gbm_format)</argsstring>
+        <name>set_gbm_format</name>
+        <briefdescription>
+<para>The pixel format to be used by the output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Valid values are:<itemizedlist>
+<listitem><para>NULL - The format set at backend creation time will be used;</para>
+</listitem><listitem><para>&quot;xrgb8888&quot;;</para>
+</listitem><listitem><para>&quot;rgb565&quot;</para>
+</listitem><listitem><para>&quot;xrgb2101010&quot; </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-drm.h" line="73" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-drm.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__drm__output__api_1aff6104608293393e3a6fb52703bf25ec" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_drm_output_api::set_seat) (struct weston_output *output, const char *seat)</definition>
+        <argsstring>)(struct weston_output *output, const char *seat)</argsstring>
+        <name>set_seat</name>
+        <briefdescription>
+<para>The seat to be used by the output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set to NULL to use the default seat. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-drm.h" line="79" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-drm.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/include/libweston/backend-drm.h" line="57" column="28" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-drm.h" bodystart="57" bodyend="81"/>
+    <listofallmembers>
+      <member refid="structweston__drm__output__api_1a4e9a8546d1567120b88c48347075e2db" prot="public" virt="non-virtual"><scope>weston_drm_output_api</scope><name>set_gbm_format</name></member>
+      <member refid="structweston__drm__output__api_1a62a3f64dc9c4aaede1c12f1fc89531c1" prot="public" virt="non-virtual"><scope>weston_drm_output_api</scope><name>set_mode</name></member>
+      <member refid="structweston__drm__output__api_1aff6104608293393e3a6fb52703bf25ec" prot="public" virt="non-virtual"><scope>weston_drm_output_api</scope><name>set_seat</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structfixture__data" kind="struct" language="C++" prot="public">
+    <compoundname>fixture_data</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structfixture__data_1a133c47c14a7b4541fb101890584e67be" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* fixture_data::text</definition>
+        <argsstring></argsstring>
+        <name>text</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/config-parser-test.c" line="42" column="12" bodyfile="/home/lzm/Wayland/weston/tests/config-parser-test.c" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfixture__data_1ae7d6b814980d852e22f181defbf267f1" prot="public" static="no" mutable="no">
+        <type>struct weston_config *</type>
+        <definition>struct weston_config* fixture_data::config</definition>
+        <argsstring></argsstring>
+        <name>config</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/config-parser-test.c" line="43" column="20" bodyfile="/home/lzm/Wayland/weston/tests/config-parser-test.c" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/tests/config-parser-test.c" line="41" column="19" bodyfile="/home/lzm/Wayland/weston/tests/config-parser-test.c" bodystart="41" bodyend="44"/>
+    <listofallmembers>
+      <member refid="structfixture__data_1ae7d6b814980d852e22f181defbf267f1" prot="public" virt="non-virtual"><scope>fixture_data</scope><name>config</name></member>
+      <member refid="structfixture__data_1a133c47c14a7b4541fb101890584e67be" prot="public" virt="non-virtual"><scope>fixture_data</scope><name>text</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,987 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="state-helpers_8c" kind="file" language="C++">
+    <compoundname>state-helpers.c</compoundname>
+    <includes local="yes">config.h</includes>
+    <includes local="no">xf86drm.h</includes>
+    <includes local="no">xf86drmMode.h</includes>
+    <includes refid="drm-internal_8h" local="yes">drm-internal.h</includes>
+    <includes local="yes">shared/weston-drm-fourcc.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>xf86drm.h</label>
+      </node>
+      <node id="20">
+        <label>stdbool.h</label>
+      </node>
+      <node id="30">
+        <label>stdarg.h</label>
+      </node>
+      <node id="19">
+        <label>libweston/libweston.h</label>
+        <link refid="libweston_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>linux/input.h</label>
+      </node>
+      <node id="15">
+        <label>assert.h</label>
+      </node>
+      <node id="7">
+        <label>stdint.h</label>
+      </node>
+      <node id="16">
+        <label>sys/mman.h</label>
+      </node>
+      <node id="8">
+        <label>stdlib.h</label>
+      </node>
+      <node id="29">
+        <label>libweston/weston-log.h</label>
+        <link refid="weston-log_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>wayland-server.h</label>
+      </node>
+      <node id="22">
+        <label>xkbcommon/xkbcommon.h</label>
+      </node>
+      <node id="6">
+        <label>errno.h</label>
+      </node>
+      <node id="11">
+        <label>fcntl.h</label>
+      </node>
+      <node id="5">
+        <label>drm-internal.h</label>
+        <link refid="drm-internal_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>xf86drmMode.h</label>
+      </node>
+      <node id="32">
+        <label>shared/helpers.h</label>
+      </node>
+      <node id="28">
+        <label>stddef.h</label>
+      </node>
+      <node id="10">
+        <label>string.h</label>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/state-helpers.c</label>
+        <link refid="state-helpers_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>libweston/backend-drm.h</label>
+        <link refid="backend-drm_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>unistd.h</label>
+      </node>
+      <node id="33">
+        <label>shared/weston-drm-fourcc.h</label>
+      </node>
+      <node id="27">
+        <label>libweston/plugin-registry.h</label>
+        <link refid="plugin-registry_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>libweston/zalloc.h</label>
+        <link refid="zalloc_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>libudev.h</label>
+      </node>
+      <node id="17">
+        <label>time.h</label>
+      </node>
+      <node id="24">
+        <label>libweston/matrix.h</label>
+        <link refid="matrix_8h"/>
+      </node>
+      <node id="21">
+        <label>pixman.h</label>
+      </node>
+      <node id="9">
+        <label>ctype.h</label>
+      </node>
+      <node id="14">
+        <label>linux/vt.h</label>
+      </node>
+      <node id="34">
+        <label>libinput-seat.h</label>
+        <link refid="libinput-seat_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>libweston-internal.h</label>
+        <link refid="libweston-internal_8h"/>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+      </node>
+      <node id="35">
+        <label>backend.h</label>
+        <link refid="backend_8h"/>
+      </node>
+      <node id="31">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="state-helpers_8c_1ac0dc8a96537086031d99abaad4c54f33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structdrm__plane__state" kindref="compound">drm_plane_state</ref> *</type>
+        <definition>struct drm_plane_state* drm_plane_state_alloc</definition>
+        <argsstring>(struct drm_output_state *state_output, struct drm_plane *plane)</argsstring>
+        <name>drm_plane_state_alloc</name>
+        <param>
+          <type>struct <ref refid="structdrm__output__state" kindref="compound">drm_output_state</ref> *</type>
+          <declname>state_output</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structdrm__plane" kindref="compound">drm_plane</ref> *</type>
+          <declname>plane</declname>
+        </param>
+        <briefdescription>
+<para>Allocate a new, empty, plane state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/state-helpers.c" line="42" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/state-helpers.c" bodystart="42" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="state-helpers_8c_1a3d47a20b3993b15d4b6dde3ea45199ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void drm_plane_state_free</definition>
+        <argsstring>(struct drm_plane_state *state, bool force)</argsstring>
+        <name>drm_plane_state_free</name>
+        <param>
+          <type>struct <ref refid="structdrm__plane__state" kindref="compound">drm_plane_state</ref> *</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>force</declname>
+        </param>
+        <briefdescription>
+<para>Free an existing plane state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>As a special case, the state will not normally be freed if it is the current state; see drm_plane_set_state. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/state-helpers.c" line="74" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/state-helpers.c" bodystart="74" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="state-helpers_8c_1ac1f2a42fe563f6511bc1484a9c9f83ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structdrm__plane__state" kindref="compound">drm_plane_state</ref> *</type>
+        <definition>struct drm_plane_state* drm_plane_state_duplicate</definition>
+        <argsstring>(struct drm_output_state *state_output, struct drm_plane_state *src)</argsstring>
+        <name>drm_plane_state_duplicate</name>
+        <param>
+          <type>struct <ref refid="structdrm__output__state" kindref="compound">drm_output_state</ref> *</type>
+          <declname>state_output</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structdrm__plane__state" kindref="compound">drm_plane_state</ref> *</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+<para>Duplicate an existing plane state into a new plane state, storing it within the given output state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the output state already contains a plane state for the <ref refid="structdrm__plane" kindref="compound">drm_plane</ref> referenced by &apos;src&apos;, that plane state is freed first. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/state-helpers.c" line="106" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/state-helpers.c" bodystart="106" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="state-helpers_8c_1ac833f4d66509c3d697c950db0dc5251d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void drm_plane_state_put_back</definition>
+        <argsstring>(struct drm_plane_state *state)</argsstring>
+        <name>drm_plane_state_put_back</name>
+        <param>
+          <type>struct <ref refid="structdrm__plane__state" kindref="compound">drm_plane_state</ref> *</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Remove a plane state from an output state; if the plane was previously enabled, then replace it with a disabling state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This ensures that the output state was untouched from it was before the plane state was modified by the caller of this function.</para>
+<para>This is required as drm_output_state_get_plane may either allocate a new plane state, in which case this function will just perform a matching drm_plane_state_free, or it may instead repurpose an existing disabling state (if the plane was previously active), in which case this function will reset it. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/state-helpers.c" line="152" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/state-helpers.c" bodystart="152" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="state-helpers_8c_1ad41ed28c063b881a49ba93419e9597a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool drm_plane_state_coords_for_view</definition>
+        <argsstring>(struct drm_plane_state *state, struct weston_view *ev, uint64_t zpos)</argsstring>
+        <name>drm_plane_state_coords_for_view</name>
+        <param>
+          <type>struct <ref refid="structdrm__plane__state" kindref="compound">drm_plane_state</ref> *</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structweston__view" kindref="compound">weston_view</ref> *</type>
+          <declname>ev</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>zpos</declname>
+        </param>
+        <briefdescription>
+<para>Given a <ref refid="structweston__view" kindref="compound">weston_view</ref>, fill the <ref refid="structdrm__plane__state" kindref="compound">drm_plane_state</ref>&apos;s co-ordinates to display on a given plane. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/state-helpers.c" line="177" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/state-helpers.c" bodystart="177" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="state-helpers_8c_1a73b92e72537b4436549fd5c17475975d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void drm_plane_reset_state</definition>
+        <argsstring>(struct drm_plane *plane)</argsstring>
+        <name>drm_plane_reset_state</name>
+        <param>
+          <type>struct <ref refid="structdrm__plane" kindref="compound">drm_plane</ref> *</type>
+          <declname>plane</declname>
+        </param>
+        <briefdescription>
+<para>Reset the current state of a DRM plane. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The current state will be freed and replaced by a pristine state.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plane</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The plane to reset the current state of </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/state-helpers.c" line="272" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/state-helpers.c" bodystart="272" bodyend="277"/>
+      </memberdef>
+      <memberdef kind="function" id="state-helpers_8c_1a6b45744aec60bfe85d88dc358d1db3b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structdrm__plane__state" kindref="compound">drm_plane_state</ref> *</type>
+        <definition>struct drm_plane_state* drm_output_state_get_existing_plane</definition>
+        <argsstring>(struct drm_output_state *state_output, struct drm_plane *plane)</argsstring>
+        <name>drm_output_state_get_existing_plane</name>
+        <param>
+          <type>struct <ref refid="structdrm__output__state" kindref="compound">drm_output_state</ref> *</type>
+          <declname>state_output</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structdrm__plane" kindref="compound">drm_plane</ref> *</type>
+          <declname>plane</declname>
+        </param>
+        <briefdescription>
+<para>Return a plane state from a <ref refid="structdrm__output__state" kindref="compound">drm_output_state</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/state-helpers.c" line="283" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/state-helpers.c" bodystart="283" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="function" id="state-helpers_8c_1a5ebd0a33e0832ad5552885d2f678cef8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structdrm__plane__state" kindref="compound">drm_plane_state</ref> *</type>
+        <definition>struct drm_plane_state* drm_output_state_get_plane</definition>
+        <argsstring>(struct drm_output_state *state_output, struct drm_plane *plane)</argsstring>
+        <name>drm_output_state_get_plane</name>
+        <param>
+          <type>struct <ref refid="structdrm__output__state" kindref="compound">drm_output_state</ref> *</type>
+          <declname>state_output</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structdrm__plane" kindref="compound">drm_plane</ref> *</type>
+          <declname>plane</declname>
+        </param>
+        <briefdescription>
+<para>Return a plane state from a <ref refid="structdrm__output__state" kindref="compound">drm_output_state</ref>, either existing or freshly allocated. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/state-helpers.c" line="301" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/state-helpers.c" bodystart="301" bodyend="311"/>
+      </memberdef>
+      <memberdef kind="function" id="state-helpers_8c_1a66fce6d26926437101cf9ac3ea9c4af2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structdrm__output__state" kindref="compound">drm_output_state</ref> *</type>
+        <definition>struct drm_output_state* drm_output_state_alloc</definition>
+        <argsstring>(struct drm_output *output, struct drm_pending_state *pending_state)</argsstring>
+        <name>drm_output_state_alloc</name>
+        <param>
+          <type>struct <ref refid="structdrm__output" kindref="compound">drm_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structdrm__pending__state" kindref="compound">drm_pending_state</ref> *</type>
+          <declname>pending_state</declname>
+        </param>
+        <briefdescription>
+<para>Allocate a new, empty <ref refid="structdrm__output__state" kindref="compound">drm_output_state</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This should not generally be used in the repaint cycle; see drm_output_state_duplicate. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/state-helpers.c" line="318" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/state-helpers.c" bodystart="318" bodyend="336"/>
+      </memberdef>
+      <memberdef kind="function" id="state-helpers_8c_1a3fd5852316020ee877f1945dae71521e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structdrm__output__state" kindref="compound">drm_output_state</ref> *</type>
+        <definition>struct drm_output_state* drm_output_state_duplicate</definition>
+        <argsstring>(struct drm_output_state *src, struct drm_pending_state *pending_state, enum drm_output_state_duplicate_mode plane_mode)</argsstring>
+        <name>drm_output_state_duplicate</name>
+        <param>
+          <type>struct <ref refid="structdrm__output__state" kindref="compound">drm_output_state</ref> *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structdrm__pending__state" kindref="compound">drm_pending_state</ref> *</type>
+          <declname>pending_state</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="drm-internal_8h_1abb65c3280ac276553d946ba2a695fa63" kindref="member">drm_output_state_duplicate_mode</ref></type>
+          <declname>plane_mode</declname>
+        </param>
+        <briefdescription>
+<para>Duplicate an existing <ref refid="structdrm__output__state" kindref="compound">drm_output_state</ref> into a new one. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is generally used during the repaint cycle, to capture the existing state of an output and modify it to create a new state to be used.</para>
+<para>The mode determines whether the output will be reset to an a blank state, or an exact mirror of the current state. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/state-helpers.c" line="347" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/state-helpers.c" bodystart="347" bodyend="382"/>
+      </memberdef>
+      <memberdef kind="function" id="state-helpers_8c_1aadf95e25ad6a650a2e0503844ac2b58c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void drm_output_state_free</definition>
+        <argsstring>(struct drm_output_state *state)</argsstring>
+        <name>drm_output_state_free</name>
+        <param>
+          <type>struct <ref refid="structdrm__output__state" kindref="compound">drm_output_state</ref> *</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Free an unused <ref refid="structdrm__output__state" kindref="compound">drm_output_state</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/state-helpers.c" line="388" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/state-helpers.c" bodystart="388" bodyend="401"/>
+      </memberdef>
+      <memberdef kind="function" id="state-helpers_8c_1ad11de193ad5e894ad4dd3a5c74c427d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structdrm__pending__state" kindref="compound">drm_pending_state</ref> *</type>
+        <definition>struct drm_pending_state* drm_pending_state_alloc</definition>
+        <argsstring>(struct drm_backend *backend)</argsstring>
+        <name>drm_pending_state_alloc</name>
+        <param>
+          <type>struct <ref refid="structdrm__backend" kindref="compound">drm_backend</ref> *</type>
+          <declname>backend</declname>
+        </param>
+        <briefdescription>
+<para>Allocate a new <ref refid="structdrm__pending__state" kindref="compound">drm_pending_state</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Allocate a new, empty, &apos;pending state&apos; structure to be used across a repaint cycle or similar.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>backend</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DRM backend </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Newly-allocated pending state structure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/state-helpers.c" line="413" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/state-helpers.c" bodystart="413" bodyend="425"/>
+      </memberdef>
+      <memberdef kind="function" id="state-helpers_8c_1a933147336d9ddfff88209fb61c64016e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void drm_pending_state_free</definition>
+        <argsstring>(struct drm_pending_state *pending_state)</argsstring>
+        <name>drm_pending_state_free</name>
+        <param>
+          <type>struct <ref refid="structdrm__pending__state" kindref="compound">drm_pending_state</ref> *</type>
+          <declname>pending_state</declname>
+        </param>
+        <briefdescription>
+<para>Free a <ref refid="structdrm__pending__state" kindref="compound">drm_pending_state</ref> structure. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Frees a pending_state structure, as well as any output_states connected to this pending state.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pending_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pending state structure to free </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/state-helpers.c" line="436" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/state-helpers.c" bodystart="436" bodyend="449"/>
+      </memberdef>
+      <memberdef kind="function" id="state-helpers_8c_1ada413fc0af906a9397e40e1bc5ea7a3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structdrm__output__state" kindref="compound">drm_output_state</ref> *</type>
+        <definition>struct drm_output_state* drm_pending_state_get_output</definition>
+        <argsstring>(struct drm_pending_state *pending_state, struct drm_output *output)</argsstring>
+        <name>drm_pending_state_get_output</name>
+        <param>
+          <type>struct <ref refid="structdrm__pending__state" kindref="compound">drm_pending_state</ref> *</type>
+          <declname>pending_state</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structdrm__output" kindref="compound">drm_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>Find an output state in a pending state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Given a pending_state structure, find the output_state for a particular output.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pending_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pending state structure to search </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output to find state for </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Output state if present, or NULL if not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/state-helpers.c" line="462" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/state-helpers.c" bodystart="462" bodyend="473"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2008-2011<sp/>Kristian<sp/>Høgsberg</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2011<sp/>Intel<sp/>Corporation</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2017,<sp/>2018<sp/>Collabora,<sp/>Ltd.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2017,<sp/>2018<sp/>General<sp/>Electric<sp/>Company</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2018<sp/>DisplayLink<sp/>(UK)<sp/>Ltd.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>(including<sp/>the</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>next<sp/>paragraph)<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>NONINFRINGEMENT.<sp/><sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;xf86drm.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;xf86drmMode.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="drm-internal_8h" kindref="compound">drm-internal.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;shared/weston-drm-fourcc.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdrm__plane__state" kindref="compound">drm_plane_state</ref><sp/>*</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><ref refid="state-helpers_8c_1ac0dc8a96537086031d99abaad4c54f33" kindref="member">drm_plane_state_alloc</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdrm__output__state" kindref="compound">drm_output_state</ref><sp/>*state_output,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdrm__plane" kindref="compound">drm_plane</ref><sp/>*<ref refid="structdrm__plane__state_1ad72384929460604551a076354baba00d" kindref="member">plane</ref>)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdrm__plane__state" kindref="compound">drm_plane_state</ref><sp/>*state<sp/>=<sp/><ref refid="zalloc_8h_1a260ac290b02627b12230b313c8fa92b3" kindref="member">zalloc</ref>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*state));</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(state);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state-&gt;<ref refid="structdrm__plane__state_1a9dce0cbff4f30e5feda2878aac526a05" kindref="member">output_state</ref><sp/>=<sp/>state_output;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state-&gt;<ref refid="structdrm__plane__state_1ad72384929460604551a076354baba00d" kindref="member">plane</ref><sp/>=<sp/><ref refid="structdrm__plane__state_1ad72384929460604551a076354baba00d" kindref="member">plane</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state-&gt;<ref refid="structdrm__plane__state_1a7c56c95a62c11f834c99efbcb07027fb" kindref="member">in_fence_fd</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state-&gt;<ref refid="structdrm__plane__state_1a08f1b778522457ee267b353964f06867" kindref="member">zpos</ref><sp/>=<sp/><ref refid="drm-internal_8h_1adf65f90b1ca224c714d20a786860ba75" kindref="member">DRM_PLANE_ZPOS_INVALID_PLANE</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Here<sp/>we<sp/>only<sp/>add<sp/>the<sp/>plane<sp/>state<sp/>to<sp/>the<sp/>desired<sp/>link,<sp/>and<sp/>not</highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>set<sp/>the<sp/>member.<sp/>Having<sp/>an<sp/>output<sp/>pointer<sp/>set<sp/>means<sp/>that<sp/>the</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>plane<sp/>will<sp/>be<sp/>displayed<sp/>on<sp/>the<sp/>output;<sp/>this<sp/>won&apos;t<sp/>be<sp/>the<sp/>case</highlight></codeline>
+<codeline lineno="56"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>when<sp/>we<sp/>go<sp/>to<sp/>disable<sp/>a<sp/>plane.<sp/>In<sp/>this<sp/>case,<sp/>it<sp/>must<sp/>be<sp/>part<sp/>of</highlight></codeline>
+<codeline lineno="57"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>the<sp/>commit<sp/>(and<sp/>thus<sp/>the<sp/>output<sp/>state),<sp/>but<sp/>the<sp/>member<sp/>must<sp/>be</highlight></codeline>
+<codeline lineno="58"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>NULL,<sp/>as<sp/>it<sp/>will<sp/>not<sp/>be<sp/>on<sp/>any<sp/>output<sp/>when<sp/>the<sp/>state<sp/>takes</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>effect.</highlight></codeline>
+<codeline lineno="60"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(state_output)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_list_insert(&amp;state_output-&gt;<ref refid="structdrm__output__state_1aa72da8a13089f3841d1e77ecad154f18" kindref="member">plane_list</ref>,<sp/>&amp;state-&gt;<ref refid="structdrm__plane__state_1a75abf68bdd2ff24b4838557925f4f59d" kindref="member">link</ref>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_list_init(&amp;state-&gt;<ref refid="structdrm__plane__state_1a75abf68bdd2ff24b4838557925f4f59d" kindref="member">link</ref>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>state;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><ref refid="state-helpers_8c_1a3d47a20b3993b15d4b6dde3ea45199ea" kindref="member">drm_plane_state_free</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdrm__plane__state" kindref="compound">drm_plane_state</ref><sp/>*state,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>force)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!state)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_list_remove(&amp;state-&gt;<ref refid="structdrm__plane__state_1a75abf68bdd2ff24b4838557925f4f59d" kindref="member">link</ref>);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_list_init(&amp;state-&gt;<ref refid="structdrm__plane__state_1a75abf68bdd2ff24b4838557925f4f59d" kindref="member">link</ref>);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state-&gt;<ref refid="structdrm__plane__state_1a9dce0cbff4f30e5feda2878aac526a05" kindref="member">output_state</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state-&gt;<ref refid="structdrm__plane__state_1a7c56c95a62c11f834c99efbcb07027fb" kindref="member">in_fence_fd</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state-&gt;<ref refid="structdrm__plane__state_1a08f1b778522457ee267b353964f06867" kindref="member">zpos</ref><sp/>=<sp/><ref refid="drm-internal_8h_1adf65f90b1ca224c714d20a786860ba75" kindref="member">DRM_PLANE_ZPOS_INVALID_PLANE</ref>;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Once<sp/>the<sp/>damage<sp/>blob<sp/>has<sp/>been<sp/>submitted,<sp/>it<sp/>is<sp/>refcounted<sp/>internally</highlight></codeline>
+<codeline lineno="86"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>by<sp/>the<sp/>kernel,<sp/>which<sp/>means<sp/>we<sp/>can<sp/>safely<sp/>discard<sp/>it.</highlight></codeline>
+<codeline lineno="87"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(state-&gt;<ref refid="structdrm__plane__state_1ae2b7c05be5784b6ee852f9184ed95c3f" kindref="member">damage_blob_id</ref><sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>drmModeDestroyPropertyBlob(state-&gt;<ref refid="structdrm__plane__state_1ad72384929460604551a076354baba00d" kindref="member">plane</ref>-&gt;<ref refid="structdrm__plane_1a2edab895883082a3f29c5cc1b1cf341b" kindref="member">backend</ref>-&gt;<ref refid="structdrm__backend_1aa82b86e30f7e51cb7f6551e1e959e85f" kindref="member">drm</ref>.<ref refid="structdrm__backend_1ab202144207011b5359cb5741fa58fe70" kindref="member">fd</ref>,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state-&gt;<ref refid="structdrm__plane__state_1ae2b7c05be5784b6ee852f9184ed95c3f" kindref="member">damage_blob_id</ref>);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state-&gt;<ref refid="structdrm__plane__state_1ae2b7c05be5784b6ee852f9184ed95c3f" kindref="member">damage_blob_id</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(force<sp/>||<sp/>state<sp/>!=<sp/>state-&gt;<ref refid="structdrm__plane__state_1ad72384929460604551a076354baba00d" kindref="member">plane</ref>-&gt;<ref refid="structdrm__plane_1ad21d5cb226c249a87d6622eef178b96a" kindref="member">state_cur</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="drm-internal_8h_1ae3cf6e3b3e9ffaa56cea4a92a6cec848" kindref="member">drm_fb_unref</ref>(state-&gt;<ref refid="structdrm__plane__state_1a10ec900cdb9ff310d215f589ef214d93" kindref="member">fb</ref>);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(state);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdrm__plane__state" kindref="compound">drm_plane_state</ref><sp/>*</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><ref refid="state-helpers_8c_1ac1f2a42fe563f6511bc1484a9c9f83ba" kindref="member">drm_plane_state_duplicate</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdrm__output__state" kindref="compound">drm_output_state</ref><sp/>*state_output,</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdrm__plane__state" kindref="compound">drm_plane_state</ref><sp/>*src)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdrm__plane__state" kindref="compound">drm_plane_state</ref><sp/>*dst<sp/>=<sp/><ref refid="zalloc_8h_1a260ac290b02627b12230b313c8fa92b3" kindref="member">zalloc</ref>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*dst));</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdrm__plane__state" kindref="compound">drm_plane_state</ref><sp/>*old,<sp/>*tmp;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(src);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(dst);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*dst<sp/>=<sp/>*src;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>We<sp/>don&apos;t<sp/>want<sp/>to<sp/>copy<sp/>this,<sp/>because<sp/>damage<sp/>is<sp/>transient,<sp/>and<sp/>only</highlight></codeline>
+<codeline lineno="116"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>lasts<sp/>for<sp/>the<sp/>duration<sp/>of<sp/>a<sp/>single<sp/>repaint.</highlight></codeline>
+<codeline lineno="117"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dst-&gt;<ref refid="structdrm__plane__state_1ae2b7c05be5784b6ee852f9184ed95c3f" kindref="member">damage_blob_id</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_list_init(&amp;dst-&gt;<ref refid="structdrm__plane__state_1a75abf68bdd2ff24b4838557925f4f59d" kindref="member">link</ref>);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_list_for_each_safe(old,<sp/>tmp,<sp/>&amp;state_output-&gt;<ref refid="structdrm__output__state_1aa72da8a13089f3841d1e77ecad154f18" kindref="member">plane_list</ref>,<sp/><ref refid="structdrm__plane__state_1a75abf68bdd2ff24b4838557925f4f59d" kindref="member">link</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Duplicating<sp/>a<sp/>plane<sp/>state<sp/>into<sp/>the<sp/>same<sp/>output<sp/>state,<sp/>so</highlight></codeline>
+<codeline lineno="123"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>it<sp/>can<sp/>replace<sp/>itself<sp/>with<sp/>an<sp/>identical<sp/>copy<sp/>of<sp/>itself,</highlight></codeline>
+<codeline lineno="124"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>makes<sp/>no<sp/>sense.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(old<sp/>!=<sp/>src);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(old-&gt;<ref refid="structdrm__plane__state_1ad72384929460604551a076354baba00d" kindref="member">plane</ref><sp/>==<sp/>dst-&gt;<ref refid="structdrm__plane__state_1ad72384929460604551a076354baba00d" kindref="member">plane</ref>)</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="state-helpers_8c_1a3d47a20b3993b15d4b6dde3ea45199ea" kindref="member">drm_plane_state_free</ref>(old,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_list_insert(&amp;state_output-&gt;<ref refid="structdrm__output__state_1aa72da8a13089f3841d1e77ecad154f18" kindref="member">plane_list</ref>,<sp/>&amp;dst-&gt;<ref refid="structdrm__plane__state_1a75abf68bdd2ff24b4838557925f4f59d" kindref="member">link</ref>);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(src-&gt;<ref refid="structdrm__plane__state_1a10ec900cdb9ff310d215f589ef214d93" kindref="member">fb</ref>)</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dst-&gt;<ref refid="structdrm__plane__state_1a10ec900cdb9ff310d215f589ef214d93" kindref="member">fb</ref><sp/>=<sp/><ref refid="drm-internal_8h_1a7ec4491fc83ac113902d3019265dca11" kindref="member">drm_fb_ref</ref>(src-&gt;<ref refid="structdrm__plane__state_1a10ec900cdb9ff310d215f589ef214d93" kindref="member">fb</ref>);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dst-&gt;<ref refid="structdrm__plane__state_1a9dce0cbff4f30e5feda2878aac526a05" kindref="member">output_state</ref><sp/>=<sp/>state_output;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dst-&gt;<ref refid="structdrm__plane__state_1ac4db4bcf52ffdc93f8b92ca6f8b34bb2" kindref="member">complete</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dst;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><ref refid="state-helpers_8c_1ac833f4d66509c3d697c950db0dc5251d" kindref="member">drm_plane_state_put_back</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdrm__plane__state" kindref="compound">drm_plane_state</ref><sp/>*state)</highlight></codeline>
+<codeline lineno="153"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdrm__output__state" kindref="compound">drm_output_state</ref><sp/>*state_output;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdrm__plane" kindref="compound">drm_plane</ref><sp/>*plane;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!state)</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state_output<sp/>=<sp/>state-&gt;<ref refid="structdrm__plane__state_1a9dce0cbff4f30e5feda2878aac526a05" kindref="member">output_state</ref>;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>plane<sp/>=<sp/>state-&gt;<ref refid="structdrm__plane__state_1ad72384929460604551a076354baba00d" kindref="member">plane</ref>;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="state-helpers_8c_1a3d47a20b3993b15d4b6dde3ea45199ea" kindref="member">drm_plane_state_free</ref>(state,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Plane<sp/>was<sp/>previously<sp/>disabled;<sp/>no<sp/>need<sp/>to<sp/>keep<sp/>this<sp/>temporary</highlight></codeline>
+<codeline lineno="165"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>state<sp/>around.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!plane-&gt;<ref refid="structdrm__plane_1ad21d5cb226c249a87d6622eef178b96a" kindref="member">state_cur</ref>-&gt;<ref refid="structdrm__plane__state_1a10ec900cdb9ff310d215f589ef214d93" kindref="member">fb</ref>)</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(void)<sp/><ref refid="state-helpers_8c_1ac0dc8a96537086031d99abaad4c54f33" kindref="member">drm_plane_state_alloc</ref>(state_output,<sp/>plane);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><ref refid="state-helpers_8c_1ad41ed28c063b881a49ba93419e9597a8" kindref="member">drm_plane_state_coords_for_view</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdrm__plane__state" kindref="compound">drm_plane_state</ref><sp/>*state,</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__view" kindref="compound">weston_view</ref><sp/>*ev,<sp/>uint64_t<sp/>zpos)</highlight></codeline>
+<codeline lineno="179"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdrm__output" kindref="compound">drm_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref><sp/>=<sp/>state-&gt;<ref refid="structdrm__plane__state_1a0e320411fef6c2f00b12e2cb6687801b" kindref="member">output</ref>;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__buffer" kindref="compound">weston_buffer</ref><sp/>*<ref refid="structbuffer" kindref="compound">buffer</ref><sp/>=<sp/>ev-&gt;<ref refid="structweston__view_1a378ad6a9de6d0d4f908769d106436034" kindref="member">surface</ref>-&gt;<ref refid="structweston__surface_1affec03529ce882666716424fd468f575" kindref="member">buffer_ref</ref>.<ref refid="structweston__buffer__reference_1a87b175662a988253c4f12a2f25ce04e9" kindref="member">buffer</ref>;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pixman_region32_t<sp/>dest_rect,<sp/>src_rect;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pixman_box32_t<sp/>*box,<sp/>tbox;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>sxf1,<sp/>syf1,<sp/>sxf2,<sp/>syf2;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="drm-internal_8h_1abc4d2aef7bd66de68a3044b2d21cf920" kindref="member">drm_view_transform_supported</ref>(ev,<sp/>&amp;<ref refid="structoutput" kindref="compound">output</ref>-&gt;base))</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Update<sp/>the<sp/>base<sp/>weston_plane<sp/>co-ordinates.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>box<sp/>=<sp/>pixman_region32_extents(&amp;ev-&gt;<ref refid="structweston__view_1a6f0357af0dd60a9bc84d7df538664f71" kindref="member">transform</ref>.<ref refid="structweston__view_1a7425ba4bac68148bc9e5d8eaedff352d" kindref="member">boundingbox</ref>);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state-&gt;<ref refid="structdrm__plane__state_1ad72384929460604551a076354baba00d" kindref="member">plane</ref>-&gt;<ref refid="structdrm__plane_1a6db0329fb1df9ed790e2f950940d2855" kindref="member">base</ref>.<ref refid="structweston__plane_1ac2537d80979eca0253ae246469f9122c" kindref="member">x</ref><sp/>=<sp/>box-&gt;x1;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state-&gt;<ref refid="structdrm__plane__state_1ad72384929460604551a076354baba00d" kindref="member">plane</ref>-&gt;<ref refid="structdrm__plane_1a6db0329fb1df9ed790e2f950940d2855" kindref="member">base</ref>.<ref refid="structweston__plane_1aa44631ee41fa6a3eff42d5602e673a22" kindref="member">y</ref><sp/>=<sp/>box-&gt;y1;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>First<sp/>calculate<sp/>the<sp/>destination<sp/>co-ordinates<sp/>by<sp/>taking<sp/>the</highlight></codeline>
+<codeline lineno="195"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>area<sp/>of<sp/>the<sp/>view<sp/>which<sp/>is<sp/>visible<sp/>on<sp/>this<sp/>output,<sp/>performing<sp/>any</highlight></codeline>
+<codeline lineno="196"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>transforms<sp/>to<sp/>account<sp/>for<sp/>output<sp/>rotation<sp/>and<sp/>scale<sp/>as<sp/>necessary.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pixman_region32_init(&amp;dest_rect);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pixman_region32_intersect(&amp;dest_rect,<sp/>&amp;ev-&gt;<ref refid="structweston__view_1a6f0357af0dd60a9bc84d7df538664f71" kindref="member">transform</ref>.<ref refid="structweston__view_1a7425ba4bac68148bc9e5d8eaedff352d" kindref="member">boundingbox</ref>,</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="structoutput" kindref="compound">output</ref>-&gt;base.region);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pixman_region32_translate(&amp;dest_rect,<sp/>-<ref refid="structoutput" kindref="compound">output</ref>-&gt;base.<ref refid="structoutput_1acaa160777547223ba734d78e4690c24b" kindref="member">x</ref>,<sp/>-<ref refid="structoutput" kindref="compound">output</ref>-&gt;base.<ref refid="structoutput_1ac2c2a13096bd351fda95e72cb6f5a254" kindref="member">y</ref>);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>box<sp/>=<sp/>pixman_region32_extents(&amp;dest_rect);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tbox<sp/>=<sp/><ref refid="compositor_8c_1a1586f602e908b42e1e4b1c486a21783d" kindref="member">weston_transformed_rect</ref>(<ref refid="structoutput" kindref="compound">output</ref>-&gt;base.<ref refid="structoutput_1a8d0ce045e764bc53e9cb70b1c5830acb" kindref="member">width</ref>,</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;base.<ref refid="structoutput_1ab82f03b52728ed0bdc7471851c0411ef" kindref="member">height</ref>,</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;base.transform,</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structoutput" kindref="compound">output</ref>-&gt;base.current_scale,</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*box);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state-&gt;<ref refid="structdrm__plane__state_1a70d1e4ec3e8ee540644dcd74f85648f7" kindref="member">dest_x</ref><sp/>=<sp/>tbox.x1;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state-&gt;<ref refid="structdrm__plane__state_1ad117aa4401e9930993e585eb3fcdd851" kindref="member">dest_y</ref><sp/>=<sp/>tbox.y1;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state-&gt;<ref refid="structdrm__plane__state_1ab8cbfbec3b3795a28308f80945dcb647" kindref="member">dest_w</ref><sp/>=<sp/>tbox.x2<sp/>-<sp/>tbox.x1;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state-&gt;<ref refid="structdrm__plane__state_1a95cf58632d3b98a9d82736991e4f61f6" kindref="member">dest_h</ref><sp/>=<sp/>tbox.y2<sp/>-<sp/>tbox.y1;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pixman_region32_fini(&amp;dest_rect);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Now<sp/>calculate<sp/>the<sp/>source<sp/>rectangle,<sp/>by<sp/>finding<sp/>the<sp/>extents<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="214"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>view,<sp/>and<sp/>working<sp/>backwards<sp/>to<sp/>source<sp/>co-ordinates.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pixman_region32_init(&amp;src_rect);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pixman_region32_intersect(&amp;src_rect,<sp/>&amp;ev-&gt;<ref refid="structweston__view_1a6f0357af0dd60a9bc84d7df538664f71" kindref="member">transform</ref>.<ref refid="structweston__view_1a7425ba4bac68148bc9e5d8eaedff352d" kindref="member">boundingbox</ref>,</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="structoutput" kindref="compound">output</ref>-&gt;base.region);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>box<sp/>=<sp/>pixman_region32_extents(&amp;src_rect);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="compositor_8c_1a29e66a2344e0ea20637f84c0650ed90d" kindref="member">weston_view_from_global_float</ref>(ev,<sp/>box-&gt;x1,<sp/>box-&gt;y1,<sp/>&amp;sxf1,<sp/>&amp;syf1);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="compositor_8c_1a4feb46d02393c29f583d77410b940895" kindref="member">weston_surface_to_buffer_float</ref>(ev-&gt;<ref refid="structweston__view_1a378ad6a9de6d0d4f908769d106436034" kindref="member">surface</ref>,<sp/>sxf1,<sp/>syf1,<sp/>&amp;sxf1,<sp/>&amp;syf1);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="compositor_8c_1a29e66a2344e0ea20637f84c0650ed90d" kindref="member">weston_view_from_global_float</ref>(ev,<sp/>box-&gt;x2,<sp/>box-&gt;y2,<sp/>&amp;sxf2,<sp/>&amp;syf2);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="compositor_8c_1a4feb46d02393c29f583d77410b940895" kindref="member">weston_surface_to_buffer_float</ref>(ev-&gt;<ref refid="structweston__view_1a378ad6a9de6d0d4f908769d106436034" kindref="member">surface</ref>,<sp/>sxf2,<sp/>syf2,<sp/>&amp;sxf2,<sp/>&amp;syf2);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pixman_region32_fini(&amp;src_rect);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Buffer<sp/>transforms<sp/>may<sp/>mean<sp/>that<sp/>x2<sp/>is<sp/>to<sp/>the<sp/>left<sp/>of<sp/>x1,<sp/>and/or<sp/>that</highlight></codeline>
+<codeline lineno="226"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>y2<sp/>is<sp/>above<sp/>y1.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sxf2<sp/>&lt;<sp/>sxf1)<sp/>{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tmp<sp/>=<sp/>sxf1;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sxf1<sp/>=<sp/>sxf2;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sxf2<sp/>=<sp/>tmp;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(syf2<sp/>&lt;<sp/>syf1)<sp/>{</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tmp<sp/>=<sp/>syf1;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>syf1<sp/>=<sp/>syf2;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>syf2<sp/>=<sp/>tmp;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Shift<sp/>from<sp/>S23.8<sp/>wl_fixed<sp/>to<sp/>U16.16<sp/>KMS<sp/>fixed-point<sp/>encoding.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state-&gt;<ref refid="structdrm__plane__state_1a101fb7ab1d3deb9ac3ec67182a521207" kindref="member">src_x</ref><sp/>=<sp/>wl_fixed_from_double(sxf1)<sp/>&lt;&lt;<sp/>8;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state-&gt;<ref refid="structdrm__plane__state_1af3c8448482dfae7b02c8a44458541d40" kindref="member">src_y</ref><sp/>=<sp/>wl_fixed_from_double(syf1)<sp/>&lt;&lt;<sp/>8;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state-&gt;<ref refid="structdrm__plane__state_1a9f09e8a40ad4351174df8085eca14692" kindref="member">src_w</ref><sp/>=<sp/>wl_fixed_from_double(sxf2<sp/>-<sp/>sxf1)<sp/>&lt;&lt;<sp/>8;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state-&gt;<ref refid="structdrm__plane__state_1a18040b750d8d6969dcdc3baf257c648b" kindref="member">src_h</ref><sp/>=<sp/>wl_fixed_from_double(syf2<sp/>-<sp/>syf1)<sp/>&lt;&lt;<sp/>8;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Clamp<sp/>our<sp/>source<sp/>co-ordinates<sp/>to<sp/>surface<sp/>bounds;<sp/>it&apos;s<sp/>possible</highlight></codeline>
+<codeline lineno="245"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>for<sp/>intermediate<sp/>translations<sp/>to<sp/>give<sp/>us<sp/>slightly<sp/>incorrect</highlight></codeline>
+<codeline lineno="246"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>co-ordinates<sp/>if<sp/>we<sp/>have,<sp/>for<sp/>example,<sp/>multiple<sp/>zooming</highlight></codeline>
+<codeline lineno="247"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>transformations.<sp/>View<sp/>bounding<sp/>boxes<sp/>are<sp/>also<sp/>explicitly<sp/>rounded</highlight></codeline>
+<codeline lineno="248"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>greedily.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(state-&gt;<ref refid="structdrm__plane__state_1a101fb7ab1d3deb9ac3ec67182a521207" kindref="member">src_x</ref><sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state-&gt;<ref refid="structdrm__plane__state_1a101fb7ab1d3deb9ac3ec67182a521207" kindref="member">src_x</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(state-&gt;<ref refid="structdrm__plane__state_1af3c8448482dfae7b02c8a44458541d40" kindref="member">src_y</ref><sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state-&gt;<ref refid="structdrm__plane__state_1af3c8448482dfae7b02c8a44458541d40" kindref="member">src_y</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(state-&gt;<ref refid="structdrm__plane__state_1a9f09e8a40ad4351174df8085eca14692" kindref="member">src_w</ref><sp/>&gt;<sp/>(uint32_t)<sp/>((<ref refid="structbuffer" kindref="compound">buffer</ref>-&gt;width<sp/>&lt;&lt;<sp/>16)<sp/>-<sp/>state-&gt;<ref refid="structdrm__plane__state_1a101fb7ab1d3deb9ac3ec67182a521207" kindref="member">src_x</ref>))</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state-&gt;<ref refid="structdrm__plane__state_1a9f09e8a40ad4351174df8085eca14692" kindref="member">src_w</ref><sp/>=<sp/>(<ref refid="structbuffer" kindref="compound">buffer</ref>-&gt;width<sp/>&lt;&lt;<sp/>16)<sp/>-<sp/>state-&gt;<ref refid="structdrm__plane__state_1a101fb7ab1d3deb9ac3ec67182a521207" kindref="member">src_x</ref>;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(state-&gt;<ref refid="structdrm__plane__state_1a18040b750d8d6969dcdc3baf257c648b" kindref="member">src_h</ref><sp/>&gt;<sp/>(uint32_t)<sp/>((<ref refid="structbuffer" kindref="compound">buffer</ref>-&gt;height<sp/>&lt;&lt;<sp/>16)<sp/>-<sp/>state-&gt;<ref refid="structdrm__plane__state_1af3c8448482dfae7b02c8a44458541d40" kindref="member">src_y</ref>))</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state-&gt;<ref refid="structdrm__plane__state_1a18040b750d8d6969dcdc3baf257c648b" kindref="member">src_h</ref><sp/>=<sp/>(<ref refid="structbuffer" kindref="compound">buffer</ref>-&gt;height<sp/>&lt;&lt;<sp/>16)<sp/>-<sp/>state-&gt;<ref refid="structdrm__plane__state_1af3c8448482dfae7b02c8a44458541d40" kindref="member">src_y</ref>;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>apply<sp/>zpos<sp/>if<sp/>available<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state-&gt;<ref refid="structdrm__plane__state_1a08f1b778522457ee267b353964f06867" kindref="member">zpos</ref><sp/>=<sp/>zpos;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="262"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><ref refid="state-helpers_8c_1a73b92e72537b4436549fd5c17475975d" kindref="member">drm_plane_reset_state</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdrm__plane" kindref="compound">drm_plane</ref><sp/>*plane)</highlight></codeline>
+<codeline lineno="273"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="state-helpers_8c_1a3d47a20b3993b15d4b6dde3ea45199ea" kindref="member">drm_plane_state_free</ref>(plane-&gt;<ref refid="structdrm__plane_1ad21d5cb226c249a87d6622eef178b96a" kindref="member">state_cur</ref>,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>plane-&gt;<ref refid="structdrm__plane_1ad21d5cb226c249a87d6622eef178b96a" kindref="member">state_cur</ref><sp/>=<sp/><ref refid="state-helpers_8c_1ac0dc8a96537086031d99abaad4c54f33" kindref="member">drm_plane_state_alloc</ref>(NULL,<sp/>plane);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>plane-&gt;<ref refid="structdrm__plane_1ad21d5cb226c249a87d6622eef178b96a" kindref="member">state_cur</ref>-&gt;<ref refid="structdrm__plane__state_1ac4db4bcf52ffdc93f8b92ca6f8b34bb2" kindref="member">complete</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="277"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdrm__plane__state" kindref="compound">drm_plane_state</ref><sp/>*</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><ref refid="state-helpers_8c_1a6b45744aec60bfe85d88dc358d1db3b2" kindref="member">drm_output_state_get_existing_plane</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdrm__output__state" kindref="compound">drm_output_state</ref><sp/>*state_output,</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdrm__plane" kindref="compound">drm_plane</ref><sp/>*<ref refid="structdrm__plane__state_1ad72384929460604551a076354baba00d" kindref="member">plane</ref>)</highlight></codeline>
+<codeline lineno="285"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdrm__plane__state" kindref="compound">drm_plane_state</ref><sp/>*ps;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_list_for_each(ps,<sp/>&amp;state_output-&gt;<ref refid="structdrm__output__state_1aa72da8a13089f3841d1e77ecad154f18" kindref="member">plane_list</ref>,<sp/><ref refid="structdrm__plane__state_1a75abf68bdd2ff24b4838557925f4f59d" kindref="member">link</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ps-&gt;<ref refid="structdrm__plane__state_1ad72384929460604551a076354baba00d" kindref="member">plane</ref><sp/>==<sp/><ref refid="structdrm__plane__state_1ad72384929460604551a076354baba00d" kindref="member">plane</ref>)</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ps;</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdrm__plane__state" kindref="compound">drm_plane_state</ref><sp/>*</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><ref refid="state-helpers_8c_1a5ebd0a33e0832ad5552885d2f678cef8" kindref="member">drm_output_state_get_plane</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdrm__output__state" kindref="compound">drm_output_state</ref><sp/>*state_output,</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdrm__plane" kindref="compound">drm_plane</ref><sp/>*<ref refid="structdrm__plane__state_1ad72384929460604551a076354baba00d" kindref="member">plane</ref>)</highlight></codeline>
+<codeline lineno="303"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdrm__plane__state" kindref="compound">drm_plane_state</ref><sp/>*ps;</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ps<sp/>=<sp/><ref refid="state-helpers_8c_1a6b45744aec60bfe85d88dc358d1db3b2" kindref="member">drm_output_state_get_existing_plane</ref>(state_output,<sp/><ref refid="structdrm__plane__state_1ad72384929460604551a076354baba00d" kindref="member">plane</ref>);</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ps)</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ps;</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="state-helpers_8c_1ac0dc8a96537086031d99abaad4c54f33" kindref="member">drm_plane_state_alloc</ref>(state_output,<sp/><ref refid="structdrm__plane__state_1ad72384929460604551a076354baba00d" kindref="member">plane</ref>);</highlight></codeline>
+<codeline lineno="311"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdrm__output__state" kindref="compound">drm_output_state</ref><sp/>*</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><ref refid="state-helpers_8c_1a66fce6d26926437101cf9ac3ea9c4af2" kindref="member">drm_output_state_alloc</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdrm__output" kindref="compound">drm_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref>,</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdrm__pending__state" kindref="compound">drm_pending_state</ref><sp/>*<ref refid="structdrm__output__state_1aff9ca824fc317253fd8a3b3f0e999303" kindref="member">pending_state</ref>)</highlight></codeline>
+<codeline lineno="320"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdrm__output__state" kindref="compound">drm_output_state</ref><sp/>*state<sp/>=<sp/><ref refid="zalloc_8h_1a260ac290b02627b12230b313c8fa92b3" kindref="member">zalloc</ref>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*state));</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(state);</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state-&gt;<ref refid="structdrm__output__state_1a079380ed7811bcbf1aecf219f7209aac" kindref="member">output</ref><sp/>=<sp/><ref refid="structdrm__output__state_1a079380ed7811bcbf1aecf219f7209aac" kindref="member">output</ref>;</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state-&gt;<ref refid="structdrm__output__state_1a706abaeae61311a859b046c52599821c" kindref="member">dpms</ref><sp/>=<sp/><ref refid="libweston_8h_1a745785f1c5cf40791e2b4c3ef11043c3a3f1ea2fc87236eee5e7a9dc3c00f80a3" kindref="member">WESTON_DPMS_OFF</ref>;</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state-&gt;<ref refid="structdrm__output__state_1a158f0d5e549532c6ba80f028de1d5d51" kindref="member">protection</ref><sp/>=<sp/><ref refid="libweston_8h_1a883af45c9ba95a4ce9c18877cc420671ad11b3fce4f7baccb7a07a1107b23f92e" kindref="member">WESTON_HDCP_DISABLE</ref>;</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state-&gt;<ref refid="structdrm__output__state_1aff9ca824fc317253fd8a3b3f0e999303" kindref="member">pending_state</ref><sp/>=<sp/><ref refid="structdrm__output__state_1aff9ca824fc317253fd8a3b3f0e999303" kindref="member">pending_state</ref>;</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="structdrm__output__state_1aff9ca824fc317253fd8a3b3f0e999303" kindref="member">pending_state</ref>)</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_list_insert(&amp;<ref refid="structdrm__output__state_1aff9ca824fc317253fd8a3b3f0e999303" kindref="member">pending_state</ref>-&gt;<ref refid="structdrm__pending__state_1acd52dfd911a6a7504d7c244fa53c99ee" kindref="member">output_list</ref>,<sp/>&amp;state-&gt;<ref refid="structdrm__output__state_1a4fd38e634854f64d47486ab839bd60a6" kindref="member">link</ref>);</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_list_init(&amp;state-&gt;<ref refid="structdrm__output__state_1a4fd38e634854f64d47486ab839bd60a6" kindref="member">link</ref>);</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_list_init(&amp;state-&gt;<ref refid="structdrm__output__state_1aa72da8a13089f3841d1e77ecad154f18" kindref="member">plane_list</ref>);</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>state;</highlight></codeline>
+<codeline lineno="336"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdrm__output__state" kindref="compound">drm_output_state</ref><sp/>*</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><ref refid="state-helpers_8c_1a3fd5852316020ee877f1945dae71521e" kindref="member">drm_output_state_duplicate</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdrm__output__state" kindref="compound">drm_output_state</ref><sp/>*src,</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdrm__pending__state" kindref="compound">drm_pending_state</ref><sp/>*<ref refid="structdrm__output__state_1aff9ca824fc317253fd8a3b3f0e999303" kindref="member">pending_state</ref>,</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="drm-internal_8h_1abb65c3280ac276553d946ba2a695fa63" kindref="member">drm_output_state_duplicate_mode</ref><sp/>plane_mode)</highlight></codeline>
+<codeline lineno="350"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdrm__output__state" kindref="compound">drm_output_state</ref><sp/>*dst<sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*dst));</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdrm__plane__state" kindref="compound">drm_plane_state</ref><sp/>*ps;</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(dst);</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Copy<sp/>the<sp/>whole<sp/>structure,<sp/>then<sp/>individually<sp/>modify<sp/>the</highlight></codeline>
+<codeline lineno="357"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>pending_state,<sp/>as<sp/>well<sp/>as<sp/>the<sp/>list<sp/>link<sp/>into<sp/>our<sp/>pending</highlight></codeline>
+<codeline lineno="358"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>state.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*dst<sp/>=<sp/>*src;</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dst-&gt;<ref refid="structdrm__output__state_1aff9ca824fc317253fd8a3b3f0e999303" kindref="member">pending_state</ref><sp/>=<sp/>pending_state;</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pending_state)</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_list_insert(&amp;pending_state-&gt;<ref refid="structdrm__pending__state_1acd52dfd911a6a7504d7c244fa53c99ee" kindref="member">output_list</ref>,<sp/>&amp;dst-&gt;<ref refid="structdrm__output__state_1a4fd38e634854f64d47486ab839bd60a6" kindref="member">link</ref>);</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_list_init(&amp;dst-&gt;<ref refid="structdrm__output__state_1a4fd38e634854f64d47486ab839bd60a6" kindref="member">link</ref>);</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_list_init(&amp;dst-&gt;<ref refid="structdrm__output__state_1aa72da8a13089f3841d1e77ecad154f18" kindref="member">plane_list</ref>);</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_list_for_each(ps,<sp/>&amp;src-&gt;<ref refid="structdrm__output__state_1aa72da8a13089f3841d1e77ecad154f18" kindref="member">plane_list</ref>,<sp/><ref refid="structdrm__plane__state_1a75abf68bdd2ff24b4838557925f4f59d" kindref="member">link</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Don&apos;t<sp/>carry<sp/>planes<sp/>which<sp/>are<sp/>now<sp/>disabled;<sp/>these<sp/>should<sp/>be</highlight></codeline>
+<codeline lineno="371"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>free<sp/>for<sp/>other<sp/>outputs<sp/>to<sp/>reuse.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!ps-&gt;<ref refid="structdrm__plane__state_1a0e320411fef6c2f00b12e2cb6687801b" kindref="member">output</ref>)</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"></highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(plane_mode<sp/>==<sp/><ref refid="drm-internal_8h_1abb65c3280ac276553d946ba2a695fa63a54797b9968d9eb632249186e6d0b8df2" kindref="member">DRM_OUTPUT_STATE_CLEAR_PLANES</ref>)</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(void)<sp/><ref refid="state-helpers_8c_1ac0dc8a96537086031d99abaad4c54f33" kindref="member">drm_plane_state_alloc</ref>(dst,<sp/>ps-&gt;<ref refid="structdrm__plane__state_1ad72384929460604551a076354baba00d" kindref="member">plane</ref>);</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/><ref refid="state-helpers_8c_1ac1f2a42fe563f6511bc1484a9c9f83ba" kindref="member">drm_plane_state_duplicate</ref>(dst,<sp/>ps);</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"></highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dst;</highlight></codeline>
+<codeline lineno="382"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"></highlight></codeline>
+<codeline lineno="387"><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><ref refid="state-helpers_8c_1aadf95e25ad6a650a2e0503844ac2b58c" kindref="member">drm_output_state_free</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdrm__output__state" kindref="compound">drm_output_state</ref><sp/>*state)</highlight></codeline>
+<codeline lineno="389"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdrm__plane__state" kindref="compound">drm_plane_state</ref><sp/>*ps,<sp/>*next;</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"></highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!state)</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_list_for_each_safe(ps,<sp/>next,<sp/>&amp;state-&gt;<ref refid="structdrm__output__state_1aa72da8a13089f3841d1e77ecad154f18" kindref="member">plane_list</ref>,<sp/><ref refid="structdrm__plane__state_1a75abf68bdd2ff24b4838557925f4f59d" kindref="member">link</ref>)</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="state-helpers_8c_1a3d47a20b3993b15d4b6dde3ea45199ea" kindref="member">drm_plane_state_free</ref>(ps,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"></highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_list_remove(&amp;state-&gt;<ref refid="structdrm__output__state_1a4fd38e634854f64d47486ab839bd60a6" kindref="member">link</ref>);</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"></highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(state);</highlight></codeline>
+<codeline lineno="401"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"></highlight></codeline>
+<codeline lineno="412"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdrm__pending__state" kindref="compound">drm_pending_state</ref><sp/>*</highlight></codeline>
+<codeline lineno="413"><highlight class="normal"><ref refid="state-helpers_8c_1ad11de193ad5e894ad4dd3a5c74c427d7" kindref="member">drm_pending_state_alloc</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdrm__backend" kindref="compound">drm_backend</ref><sp/>*<ref refid="structdrm__pending__state_1ac07e076344f30ad91b12c34c874f33fe" kindref="member">backend</ref>)</highlight></codeline>
+<codeline lineno="414"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="415"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdrm__pending__state" kindref="compound">drm_pending_state</ref><sp/>*ret;</highlight></codeline>
+<codeline lineno="416"><highlight class="normal"></highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>calloc(1,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*ret));</highlight></codeline>
+<codeline lineno="418"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!ret)</highlight></codeline>
+<codeline lineno="419"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="420"><highlight class="normal"></highlight></codeline>
+<codeline lineno="421"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret-&gt;<ref refid="structdrm__pending__state_1ac07e076344f30ad91b12c34c874f33fe" kindref="member">backend</ref><sp/>=<sp/><ref refid="structdrm__pending__state_1ac07e076344f30ad91b12c34c874f33fe" kindref="member">backend</ref>;</highlight></codeline>
+<codeline lineno="422"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_list_init(&amp;ret-&gt;<ref refid="structdrm__pending__state_1acd52dfd911a6a7504d7c244fa53c99ee" kindref="member">output_list</ref>);</highlight></codeline>
+<codeline lineno="423"><highlight class="normal"></highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="425"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"></highlight></codeline>
+<codeline lineno="435"><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="436"><highlight class="normal"><ref refid="state-helpers_8c_1a933147336d9ddfff88209fb61c64016e" kindref="member">drm_pending_state_free</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdrm__pending__state" kindref="compound">drm_pending_state</ref><sp/>*pending_state)</highlight></codeline>
+<codeline lineno="437"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdrm__output__state" kindref="compound">drm_output_state</ref><sp/>*output_state,<sp/>*tmp;</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"></highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="structdrm__output__state_1aff9ca824fc317253fd8a3b3f0e999303" kindref="member">pending_state</ref>)</highlight></codeline>
+<codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="442"><highlight class="normal"></highlight></codeline>
+<codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_list_for_each_safe(output_state,<sp/>tmp,<sp/>&amp;<ref refid="structdrm__output__state_1aff9ca824fc317253fd8a3b3f0e999303" kindref="member">pending_state</ref>-&gt;<ref refid="structdrm__pending__state_1acd52dfd911a6a7504d7c244fa53c99ee" kindref="member">output_list</ref>,</highlight></codeline>
+<codeline lineno="444"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdrm__output__state_1a4fd38e634854f64d47486ab839bd60a6" kindref="member">link</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="state-helpers_8c_1aadf95e25ad6a650a2e0503844ac2b58c" kindref="member">drm_output_state_free</ref>(output_state);</highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="447"><highlight class="normal"></highlight></codeline>
+<codeline lineno="448"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(<ref refid="structdrm__output__state_1aff9ca824fc317253fd8a3b3f0e999303" kindref="member">pending_state</ref>);</highlight></codeline>
+<codeline lineno="449"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="450"><highlight class="normal"></highlight></codeline>
+<codeline lineno="461"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdrm__output__state" kindref="compound">drm_output_state</ref><sp/>*</highlight></codeline>
+<codeline lineno="462"><highlight class="normal"><ref refid="state-helpers_8c_1ada413fc0af906a9397e40e1bc5ea7a3c" kindref="member">drm_pending_state_get_output</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdrm__pending__state" kindref="compound">drm_pending_state</ref><sp/>*<ref refid="structdrm__output__state_1aff9ca824fc317253fd8a3b3f0e999303" kindref="member">pending_state</ref>,</highlight></codeline>
+<codeline lineno="463"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdrm__output" kindref="compound">drm_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref>)</highlight></codeline>
+<codeline lineno="464"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="465"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdrm__output__state" kindref="compound">drm_output_state</ref><sp/>*output_state;</highlight></codeline>
+<codeline lineno="466"><highlight class="normal"></highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_list_for_each(output_state,<sp/>&amp;<ref refid="structdrm__output__state_1aff9ca824fc317253fd8a3b3f0e999303" kindref="member">pending_state</ref>-&gt;<ref refid="structdrm__pending__state_1acd52dfd911a6a7504d7c244fa53c99ee" kindref="member">output_list</ref>,<sp/><ref refid="structdrm__output__state_1a4fd38e634854f64d47486ab839bd60a6" kindref="member">link</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="468"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(output_state-&gt;<ref refid="structdrm__output__state_1a079380ed7811bcbf1aecf219f7209aac" kindref="member">output</ref><sp/>==<sp/><ref refid="structoutput" kindref="compound">output</ref>)</highlight></codeline>
+<codeline lineno="469"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>output_state;</highlight></codeline>
+<codeline lineno="470"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="471"><highlight class="normal"></highlight></codeline>
+<codeline lineno="472"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="473"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/libweston/backend-drm/state-helpers.c"/>
+  </compounddef>
+</doxygen>

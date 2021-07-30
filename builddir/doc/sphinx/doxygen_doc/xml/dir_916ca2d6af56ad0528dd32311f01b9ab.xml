@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_916ca2d6af56ad0528dd32311f01b9ab" kind="dir">
+    <compoundname>/home/lzm/Wayland/weston/include/libweston</compoundname>
+    <innerfile refid="backend-drm_8h">backend-drm.h</innerfile>
+    <innerfile refid="backend-fbdev_8h">backend-fbdev.h</innerfile>
+    <innerfile refid="backend-headless_8h">backend-headless.h</innerfile>
+    <innerfile refid="backend-rdp_8h">backend-rdp.h</innerfile>
+    <innerfile refid="backend-wayland_8h">backend-wayland.h</innerfile>
+    <innerfile refid="backend-x11_8h">backend-x11.h</innerfile>
+    <innerfile refid="config-parser_8h">config-parser.h</innerfile>
+    <innerfile refid="libweston_8h">libweston.h</innerfile>
+    <innerfile refid="matrix_8h">matrix.h</innerfile>
+    <innerfile refid="pipewire-plugin_8h">pipewire-plugin.h</innerfile>
+    <innerfile refid="plugin-registry_8h">plugin-registry.h</innerfile>
+    <innerfile refid="remoting-plugin_8h">remoting-plugin.h</innerfile>
+    <innerfile refid="weston-log_8h">weston-log.h</innerfile>
+    <innerfile refid="windowed-output-api_8h">windowed-output-api.h</innerfile>
+    <innerfile refid="xwayland-api_8h">xwayland-api.h</innerfile>
+    <innerfile refid="zalloc_8h">zalloc.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/include/libweston/"/>
+  </compounddef>
+</doxygen>

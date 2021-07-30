@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__wayland__backend__config" kind="struct" language="C++" prot="public">
+    <compoundname>weston_wayland_backend_config</compoundname>
+    <includes refid="backend-wayland_8h" local="no">backend-wayland.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__wayland__backend__config_1ac232270b3143c0d976ce7ecc8c81eea5" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structweston__backend__config" kindref="compound">weston_backend_config</ref></type>
+        <definition>struct weston_backend_config weston_wayland_backend_config::base</definition>
+        <argsstring></argsstring>
+        <name>base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-wayland.h" line="1" column="0" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-wayland.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__wayland__backend__config_1ad9b9ec3e93b1be30b93db76222332ed7" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool weston_wayland_backend_config::use_pixman</definition>
+        <argsstring></argsstring>
+        <name>use_pixman</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-wayland.h" line="41" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-wayland.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__wayland__backend__config_1a4f9cb9629e4ff7273695d8bc46fbb645" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool weston_wayland_backend_config::sprawl</definition>
+        <argsstring></argsstring>
+        <name>sprawl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-wayland.h" line="42" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-wayland.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__wayland__backend__config_1a426c44f08e9840fee6b5afe03d8d6e32" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* weston_wayland_backend_config::display_name</definition>
+        <argsstring></argsstring>
+        <name>display_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-wayland.h" line="43" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-wayland.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__wayland__backend__config_1af6e8876f6fa87cc4c195bbc0b387cf62" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool weston_wayland_backend_config::fullscreen</definition>
+        <argsstring></argsstring>
+        <name>fullscreen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-wayland.h" line="44" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-wayland.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__wayland__backend__config_1a0c8b3d71c5df18f8e23ca3bb25b19a6a" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* weston_wayland_backend_config::cursor_theme</definition>
+        <argsstring></argsstring>
+        <name>cursor_theme</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-wayland.h" line="45" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-wayland.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__wayland__backend__config_1ac7df0b07a163c3b24292db6c0177d210" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int weston_wayland_backend_config::cursor_size</definition>
+        <argsstring></argsstring>
+        <name>cursor_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-wayland.h" line="46" column="5" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-wayland.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>weston_backend_config</label>
+        <link refid="structweston__backend__config"/>
+      </node>
+      <node id="1">
+        <label>weston_wayland_backend_config</label>
+        <link refid="structweston__wayland__backend__config"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lzm/Wayland/weston/include/libweston/backend-wayland.h" line="39" column="36" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-wayland.h" bodystart="39" bodyend="47"/>
+    <listofallmembers>
+      <member refid="structweston__wayland__backend__config_1ac232270b3143c0d976ce7ecc8c81eea5" prot="public" virt="non-virtual"><scope>weston_wayland_backend_config</scope><name>base</name></member>
+      <member refid="structweston__wayland__backend__config_1ac7df0b07a163c3b24292db6c0177d210" prot="public" virt="non-virtual"><scope>weston_wayland_backend_config</scope><name>cursor_size</name></member>
+      <member refid="structweston__wayland__backend__config_1a0c8b3d71c5df18f8e23ca3bb25b19a6a" prot="public" virt="non-virtual"><scope>weston_wayland_backend_config</scope><name>cursor_theme</name></member>
+      <member refid="structweston__wayland__backend__config_1a426c44f08e9840fee6b5afe03d8d6e32" prot="public" virt="non-virtual"><scope>weston_wayland_backend_config</scope><name>display_name</name></member>
+      <member refid="structweston__wayland__backend__config_1af6e8876f6fa87cc4c195bbc0b387cf62" prot="public" virt="non-virtual"><scope>weston_wayland_backend_config</scope><name>fullscreen</name></member>
+      <member refid="structweston__wayland__backend__config_1a4f9cb9629e4ff7273695d8bc46fbb645" prot="public" virt="non-virtual"><scope>weston_wayland_backend_config</scope><name>sprawl</name></member>
+      <member refid="structweston__wayland__backend__config_1ad9b9ec3e93b1be30b93db76222332ed7" prot="public" virt="non-virtual"><scope>weston_wayland_backend_config</scope><name>use_pixman</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__option" kind="struct" language="C++" prot="public">
+    <compoundname>weston_option</compoundname>
+    <includes refid="config-parser_8h" local="no">config-parser.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__option_1a2a40f6df19388dbc4695339f37bd896b" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="config-parser_8h_1a5bd88741a222ba994bb2e9b91f2b0b42" kindref="member">weston_option_type</ref></type>
+        <definition>enum weston_option_type weston_option::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/config-parser.h" line="55" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/config-parser.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__option_1a4f34554c2b1e00ce0fd98706397ba07a" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* weston_option::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/config-parser.h" line="67" column="12" bodyfile="/home/lzm/Wayland/weston/include/libweston/config-parser.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__option_1a6a8215f41b7a836bf7a2e466391be5f0" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char weston_option::short_name</definition>
+        <argsstring></argsstring>
+        <name>short_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/config-parser.h" line="68" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/config-parser.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__option_1ae6f3604788410678064d0f9951a28f44" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* weston_option::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/config-parser.h" line="69" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/config-parser.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/include/libweston/config-parser.h" line="65" column="20" bodyfile="/home/lzm/Wayland/weston/include/libweston/config-parser.h" bodystart="65" bodyend="70"/>
+    <listofallmembers>
+      <member refid="structweston__option_1ae6f3604788410678064d0f9951a28f44" prot="public" virt="non-virtual"><scope>weston_option</scope><name>data</name></member>
+      <member refid="structweston__option_1a4f34554c2b1e00ce0fd98706397ba07a" prot="public" virt="non-virtual"><scope>weston_option</scope><name>name</name></member>
+      <member refid="structweston__option_1a6a8215f41b7a836bf7a2e466391be5f0" prot="public" virt="non-virtual"><scope>weston_option</scope><name>short_name</name></member>
+      <member refid="structweston__option_1a2a40f6df19388dbc4695339f37bd896b" prot="public" virt="non-virtual"><scope>weston_option</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

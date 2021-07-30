@@ -1,0 +1,514 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="input-timestamps-helper_8c" kind="file" language="C++">
+    <compoundname>input-timestamps-helper.c</compoundname>
+    <includes local="yes">config.h</includes>
+    <includes local="no">assert.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">time.h</includes>
+    <includes refid="input-timestamps-helper_8h" local="yes">input-timestamps-helper.h</includes>
+    <includes local="yes">input-timestamps-unstable-v1-client-protocol.h</includes>
+    <includes local="yes">shared/timespec-util.h</includes>
+    <includes refid="zalloc_8h" local="no">libweston/zalloc.h</includes>
+    <includes refid="weston-test-client-helper_8h" local="yes">weston-test-client-helper.h</includes>
+    <incdepgraph>
+      <node id="13">
+        <label>stdbool.h</label>
+      </node>
+      <node id="28">
+        <label>viewporter-client-protocol.h</label>
+      </node>
+      <node id="21">
+        <label>libweston/libweston.h</label>
+        <link refid="libweston_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/tests/input-timestamps-helper.c</label>
+        <link refid="input-timestamps-helper_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>weston-test-fixture-compositor.h</label>
+        <link refid="weston-test-fixture-compositor_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>input-timestamps-helper.h</label>
+        <link refid="input-timestamps-helper_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>assert.h</label>
+      </node>
+      <node id="27">
+        <label>weston-screenshooter-client-protocol.h</label>
+      </node>
+      <node id="26">
+        <label>weston-test-client-protocol.h</label>
+      </node>
+      <node id="14">
+        <label>stdint.h</label>
+      </node>
+      <node id="11">
+        <label>stdlib.h</label>
+      </node>
+      <node id="23">
+        <label>wayland-server.h</label>
+      </node>
+      <node id="22">
+        <label>xkbcommon/xkbcommon.h</label>
+      </node>
+      <node id="19">
+        <label>shared/helpers.h</label>
+      </node>
+      <node id="25">
+        <label>weston-testsuite-data.h</label>
+        <link refid="weston-testsuite-data_8h"/>
+      </node>
+      <node id="16">
+        <label>wayland-client-protocol.h</label>
+      </node>
+      <node id="5">
+        <label>string.h</label>
+      </node>
+      <node id="8">
+        <label>input-timestamps-unstable-v1-client-protocol.h</label>
+      </node>
+      <node id="10">
+        <label>libweston/zalloc.h</label>
+        <link refid="zalloc_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>time.h</label>
+      </node>
+      <node id="24">
+        <label>libweston/matrix.h</label>
+        <link refid="matrix_8h"/>
+      </node>
+      <node id="15">
+        <label>pixman.h</label>
+      </node>
+      <node id="18">
+        <label>wayland-util.h</label>
+      </node>
+      <node id="17">
+        <label>weston-test-runner.h</label>
+        <link refid="weston-test-runner_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+      </node>
+      <node id="9">
+        <label>shared/timespec-util.h</label>
+      </node>
+      <node id="4">
+        <label>stdio.h</label>
+      </node>
+      <node id="12">
+        <label>weston-test-client-helper.h</label>
+        <link refid="weston-test-client-helper_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structinput__timestamps" prot="public">input_timestamps</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="input-timestamps-helper_8c_1ad6e0e3c4ce891c3c93d94273fe966e5a" prot="public" static="yes" mutable="no">
+        <type>const struct zwp_input_timestamps_v1_listener</type>
+        <definition>const struct zwp_input_timestamps_v1_listener input_timestamps_listener</definition>
+        <argsstring></argsstring>
+        <name>input_timestamps_listener</name>
+        <initializer>= {
+       .timestamp = <ref refid="input-timestamps-helper_8c_1a7bbcdf2d3b8a9126f0490ad3f66f0c41" kindref="member">input_timestamp</ref>,
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/input-timestamps-helper.c" line="71" column="1" bodyfile="/home/lzm/Wayland/weston/tests/input-timestamps-helper.c" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="input-timestamps-helper_8c_1abfa55800eead088cc1601e8705286a60" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct zwp_input_timestamps_manager_v1 *</type>
+        <definition>static struct zwp_input_timestamps_manager_v1* get_input_timestamps_manager</definition>
+        <argsstring>(struct client *client)</argsstring>
+        <name>get_input_timestamps_manager</name>
+        <param>
+          <type>struct <ref refid="structclient" kindref="compound">client</ref> *</type>
+          <declname>client</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/input-timestamps-helper.c" line="44" column="1" bodyfile="/home/lzm/Wayland/weston/tests/input-timestamps-helper.c" bodystart="44" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="input-timestamps-helper_8c_1a7bbcdf2d3b8a9126f0490ad3f66f0c41" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void input_timestamp</definition>
+        <argsstring>(void *data, struct zwp_input_timestamps_v1 *zwp_input_timestamps_v1, uint32_t tv_sec_hi, uint32_t tv_sec_lo, uint32_t tv_nsec)</argsstring>
+        <name>input_timestamp</name>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>struct zwp_input_timestamps_v1 *</type>
+          <declname>zwp_input_timestamps_v1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>tv_sec_hi</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>tv_sec_lo</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>tv_nsec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/input-timestamps-helper.c" line="71" column="1" bodyfile="/home/lzm/Wayland/weston/tests/input-timestamps-helper.c" bodystart="71" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="input-timestamps-helper_8c_1abe0e0e373385d900cb043ffcfb14586b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structinput__timestamps" kindref="compound">input_timestamps</ref> *</type>
+        <definition>struct input_timestamps* input_timestamps_create_for_keyboard</definition>
+        <argsstring>(struct client *client)</argsstring>
+        <name>input_timestamps_create_for_keyboard</name>
+        <param>
+          <type>struct <ref refid="structclient" kindref="compound">client</ref> *</type>
+          <declname>client</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/input-timestamps-helper.c" line="92" column="1" bodyfile="/home/lzm/Wayland/weston/tests/input-timestamps-helper.c" bodystart="92" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="input-timestamps-helper_8c_1adf8480aab2199afad7709b3307c11489" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structinput__timestamps" kindref="compound">input_timestamps</ref> *</type>
+        <definition>struct input_timestamps* input_timestamps_create_for_pointer</definition>
+        <argsstring>(struct client *client)</argsstring>
+        <name>input_timestamps_create_for_pointer</name>
+        <param>
+          <type>struct <ref refid="structclient" kindref="compound">client</ref> *</type>
+          <declname>client</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/input-timestamps-helper.c" line="119" column="1" bodyfile="/home/lzm/Wayland/weston/tests/input-timestamps-helper.c" bodystart="119" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="input-timestamps-helper_8c_1ab10d340e73ca58f07dd00d58aa1df388" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structinput__timestamps" kindref="compound">input_timestamps</ref> *</type>
+        <definition>struct input_timestamps* input_timestamps_create_for_touch</definition>
+        <argsstring>(struct client *client)</argsstring>
+        <name>input_timestamps_create_for_touch</name>
+        <param>
+          <type>struct <ref refid="structclient" kindref="compound">client</ref> *</type>
+          <declname>client</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/input-timestamps-helper.c" line="146" column="1" bodyfile="/home/lzm/Wayland/weston/tests/input-timestamps-helper.c" bodystart="146" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="input-timestamps-helper_8c_1afde6c34b0a97e726dab733d1815c056d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void input_timestamps_destroy</definition>
+        <argsstring>(struct input_timestamps *input_ts)</argsstring>
+        <name>input_timestamps_destroy</name>
+        <param>
+          <type>struct <ref refid="structinput__timestamps" kindref="compound">input_timestamps</ref> *</type>
+          <declname>input_ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/input-timestamps-helper.c" line="173" column="1" bodyfile="/home/lzm/Wayland/weston/tests/input-timestamps-helper.c" bodystart="173" bodyend="177"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2017<sp/>Collabora,<sp/>Ltd.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>(including<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>next<sp/>paragraph)<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>NONINFRINGEMENT.<sp/><sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="input-timestamps-helper_8h" kindref="compound">input-timestamps-helper.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;input-timestamps-unstable-v1-client-protocol.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;shared/timespec-util.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="zalloc_8h" kindref="compound">libweston/zalloc.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="weston-test-client-helper_8h" kindref="compound">weston-test-client-helper.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="structinput__timestamps" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structinput__timestamps" kindref="compound">input_timestamps</ref><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">zwp_input_timestamps_v1<sp/>*<ref refid="structinput__timestamps_1a8716ac09005c8042a4bec8d83a80513e" kindref="member">proxy</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">zwp_input_timestamps_manager_v1<sp/>*</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><ref refid="input-timestamps-helper_8c_1abfa55800eead088cc1601e8705286a60" kindref="member">get_input_timestamps_manager</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclient" kindref="compound">client</ref><sp/>*<ref refid="structclient" kindref="compound">client</ref>)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structglobal" kindref="compound">global</ref><sp/>*g;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structglobal" kindref="compound">global</ref><sp/>*global_ts<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">zwp_input_timestamps_manager_v1<sp/>*ts<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_list_for_each(g,<sp/>&amp;<ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1a7c5841d081e771cd4216f7c8572feed2" kindref="member">global_list</ref>,<sp/>link)<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(g-&gt;<ref refid="structglobal_1addc85d2e981c005a33f32104134e1bc8" kindref="member">interface</ref>,<sp/>zwp_input_timestamps_manager_v1_interface.name))</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(global_ts)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(!</highlight><highlight class="stringliteral">&quot;Multiple<sp/>input<sp/>timestamp<sp/>managers&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>global_ts<sp/>=<sp/>g;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(global_ts);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(global_ts-&gt;<ref refid="structglobal_1a7ebca62067549b259f367c73df87c064" kindref="member">version</ref><sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ts<sp/>=<sp/>wl_registry_bind(<ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1a9d3ffb64375ce782e18ab3a3bc29fd4b" kindref="member">wl_registry</ref>,<sp/>global_ts-&gt;<ref refid="structglobal_1a7894ae4e045450c7792493e63353ef65" kindref="member">name</ref>,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;zwp_input_timestamps_manager_v1_interface,<sp/>1);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(ts);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ts;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><ref refid="input-timestamps-helper_8c_1a7bbcdf2d3b8a9126f0490ad3f66f0c41" kindref="member">input_timestamp</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>zwp_input_timestamps_v1<sp/>*zwp_input_timestamps_v1,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>tv_sec_hi,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>tv_sec_lo,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>tv_nsec)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timespec<sp/>*timestamp<sp/>=<sp/>data;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timespec_from_proto(timestamp,<sp/>tv_sec_hi,<sp/>tv_sec_lo,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tv_nsec);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__testharness_1gaa1538dfd4262a1feafd60cd1f09d9878" kindref="member">testlog</ref>(</highlight><highlight class="stringliteral">&quot;test-client:<sp/>got<sp/>input<sp/>timestamp<sp/>%ld.%ld\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timestamp-&gt;tv_sec,<sp/>timestamp-&gt;tv_nsec);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">zwp_input_timestamps_v1_listener</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><ref refid="input-timestamps-helper_8c_1ad6e0e3c4ce891c3c93d94273fe966e5a" kindref="member">input_timestamps_listener</ref><sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.timestamp<sp/>=<sp/><ref refid="input-timestamps-helper_8c_1a7bbcdf2d3b8a9126f0490ad3f66f0c41" kindref="member">input_timestamp</ref>,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structinput__timestamps" kindref="compound">input_timestamps</ref><sp/>*</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><ref refid="input-timestamps-helper_8c_1abe0e0e373385d900cb043ffcfb14586b" kindref="member">input_timestamps_create_for_keyboard</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclient" kindref="compound">client</ref><sp/>*<ref refid="structclient" kindref="compound">client</ref>)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">zwp_input_timestamps_manager_v1<sp/>*manager<sp/>=</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="input-timestamps-helper_8c_1abfa55800eead088cc1601e8705286a60" kindref="member">get_input_timestamps_manager</ref>(<ref refid="structclient" kindref="compound">client</ref>);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timespec<sp/>*timestamp=<sp/>&amp;<ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1abc3887b3a98592fca0055bdb31597b90" kindref="member">keyboard</ref>-&gt;<ref refid="structkeyboard_1a876fcf976238714c258bb31c1feccd8d" kindref="member">input_timestamp</ref>;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structinput__timestamps" kindref="compound">input_timestamps</ref><sp/>*input_ts;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input_ts<sp/>=<sp/><ref refid="zalloc_8h_1a260ac290b02627b12230b313c8fa92b3" kindref="member">zalloc</ref>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*input_ts);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(input_ts);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input_ts-&gt;<ref refid="structinput__timestamps_1a8716ac09005c8042a4bec8d83a80513e" kindref="member">proxy</ref><sp/>=</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>zwp_input_timestamps_manager_v1_get_keyboard_timestamps(</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>manager,<sp/><ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1abc3887b3a98592fca0055bdb31597b90" kindref="member">keyboard</ref>-&gt;<ref refid="structkeyboard_1af83de2f2964ebd01c9017622785bbc3d" kindref="member">wl_keyboard</ref>);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(input_ts-&gt;<ref refid="structinput__timestamps_1a8716ac09005c8042a4bec8d83a80513e" kindref="member">proxy</ref>);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>zwp_input_timestamps_v1_add_listener(input_ts-&gt;<ref refid="structinput__timestamps_1a8716ac09005c8042a4bec8d83a80513e" kindref="member">proxy</ref>,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="input-timestamps-helper_8c_1ad6e0e3c4ce891c3c93d94273fe966e5a" kindref="member">input_timestamps_listener</ref>,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timestamp);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>zwp_input_timestamps_manager_v1_destroy(manager);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8h_1ab95988e6d0d010625831b6b8c92a4a9d" kindref="member">client_roundtrip</ref>(<ref refid="structclient" kindref="compound">client</ref>);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>input_ts;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structinput__timestamps" kindref="compound">input_timestamps</ref><sp/>*</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><ref refid="input-timestamps-helper_8c_1adf8480aab2199afad7709b3307c11489" kindref="member">input_timestamps_create_for_pointer</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclient" kindref="compound">client</ref><sp/>*<ref refid="structclient" kindref="compound">client</ref>)</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">zwp_input_timestamps_manager_v1<sp/>*manager<sp/>=</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="input-timestamps-helper_8c_1abfa55800eead088cc1601e8705286a60" kindref="member">get_input_timestamps_manager</ref>(<ref refid="structclient" kindref="compound">client</ref>);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timespec<sp/>*timestamp=<sp/>&amp;<ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1abf5e47efd904369fce64cab252801b1f" kindref="member">pointer</ref>-&gt;<ref refid="structpointer_1a570835d4302069281420dae3c2d575c1" kindref="member">input_timestamp</ref>;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structinput__timestamps" kindref="compound">input_timestamps</ref><sp/>*input_ts;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input_ts<sp/>=<sp/><ref refid="zalloc_8h_1a260ac290b02627b12230b313c8fa92b3" kindref="member">zalloc</ref>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*input_ts);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(input_ts);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input_ts-&gt;<ref refid="structinput__timestamps_1a8716ac09005c8042a4bec8d83a80513e" kindref="member">proxy</ref><sp/>=</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>zwp_input_timestamps_manager_v1_get_pointer_timestamps(</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>manager,<sp/><ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1abf5e47efd904369fce64cab252801b1f" kindref="member">pointer</ref>-&gt;<ref refid="structpointer_1a49b5af0a96f7491f839d46f8d7bac969" kindref="member">wl_pointer</ref>);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(input_ts-&gt;<ref refid="structinput__timestamps_1a8716ac09005c8042a4bec8d83a80513e" kindref="member">proxy</ref>);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>zwp_input_timestamps_v1_add_listener(input_ts-&gt;<ref refid="structinput__timestamps_1a8716ac09005c8042a4bec8d83a80513e" kindref="member">proxy</ref>,</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="input-timestamps-helper_8c_1ad6e0e3c4ce891c3c93d94273fe966e5a" kindref="member">input_timestamps_listener</ref>,</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timestamp);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>zwp_input_timestamps_manager_v1_destroy(manager);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8h_1ab95988e6d0d010625831b6b8c92a4a9d" kindref="member">client_roundtrip</ref>(<ref refid="structclient" kindref="compound">client</ref>);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>input_ts;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structinput__timestamps" kindref="compound">input_timestamps</ref><sp/>*</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><ref refid="input-timestamps-helper_8c_1ab10d340e73ca58f07dd00d58aa1df388" kindref="member">input_timestamps_create_for_touch</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclient" kindref="compound">client</ref><sp/>*<ref refid="structclient" kindref="compound">client</ref>)</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">zwp_input_timestamps_manager_v1<sp/>*manager<sp/>=</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="input-timestamps-helper_8c_1abfa55800eead088cc1601e8705286a60" kindref="member">get_input_timestamps_manager</ref>(<ref refid="structclient" kindref="compound">client</ref>);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timespec<sp/>*timestamp=<sp/>&amp;<ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1a9facf568420fea33baa039e0786f3e87" kindref="member">touch</ref>-&gt;<ref refid="structtouch_1a546fca2caba4460e23393111d2244c63" kindref="member">input_timestamp</ref>;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structinput__timestamps" kindref="compound">input_timestamps</ref><sp/>*input_ts;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input_ts<sp/>=<sp/><ref refid="zalloc_8h_1a260ac290b02627b12230b313c8fa92b3" kindref="member">zalloc</ref>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*input_ts);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(input_ts);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input_ts-&gt;<ref refid="structinput__timestamps_1a8716ac09005c8042a4bec8d83a80513e" kindref="member">proxy</ref><sp/>=</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>zwp_input_timestamps_manager_v1_get_touch_timestamps(</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>manager,<sp/><ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1a9facf568420fea33baa039e0786f3e87" kindref="member">touch</ref>-&gt;<ref refid="structtouch_1a022ca737a44369f0f2664935bfac14f1" kindref="member">wl_touch</ref>);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(input_ts-&gt;<ref refid="structinput__timestamps_1a8716ac09005c8042a4bec8d83a80513e" kindref="member">proxy</ref>);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>zwp_input_timestamps_v1_add_listener(input_ts-&gt;<ref refid="structinput__timestamps_1a8716ac09005c8042a4bec8d83a80513e" kindref="member">proxy</ref>,</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="input-timestamps-helper_8c_1ad6e0e3c4ce891c3c93d94273fe966e5a" kindref="member">input_timestamps_listener</ref>,</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timestamp);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>zwp_input_timestamps_manager_v1_destroy(manager);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8h_1ab95988e6d0d010625831b6b8c92a4a9d" kindref="member">client_roundtrip</ref>(<ref refid="structclient" kindref="compound">client</ref>);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>input_ts;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><ref refid="input-timestamps-helper_8c_1afde6c34b0a97e726dab733d1815c056d" kindref="member">input_timestamps_destroy</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structinput__timestamps" kindref="compound">input_timestamps</ref><sp/>*input_ts)</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>zwp_input_timestamps_v1_destroy(input_ts-&gt;<ref refid="structinput__timestamps_1a8716ac09005c8042a4bec8d83a80513e" kindref="member">proxy</ref>);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(input_ts);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/tests/input-timestamps-helper.c"/>
+  </compounddef>
+</doxygen>

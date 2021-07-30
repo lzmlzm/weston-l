@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__backend__config" kind="struct" language="C++" prot="public">
+    <compoundname>weston_backend_config</compoundname>
+    <includes refid="libweston_8h" local="no">libweston.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__backend__config_1a5b47052f3958d0ba08eb65955ba5ad12" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t weston_backend_config::struct_version</definition>
+        <argsstring></argsstring>
+        <name>struct_version</name>
+        <briefdescription>
+<para>Major version for the backend-specific config struct. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This version must match exactly what the backend expects, otherwise the struct is incompatible. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="1011" column="13" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="1011" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__backend__config_1acdec1efd3da3b4967cada3e902b7d655" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t weston_backend_config::struct_size</definition>
+        <argsstring></argsstring>
+        <name>struct_size</name>
+        <briefdescription>
+<para>Minor version of the backend-specific config struct. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This must be set to sizeof(struct backend-specific config). If the value here is smaller than what the backend expects, the extra config members will assume their default values.</para>
+<para>A value greater than what the backend expects is incompatible. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="1021" column="11" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="1021" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="1005" column="28" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="1005" bodyend="1022"/>
+    <listofallmembers>
+      <member refid="structweston__backend__config_1acdec1efd3da3b4967cada3e902b7d655" prot="public" virt="non-virtual"><scope>weston_backend_config</scope><name>struct_size</name></member>
+      <member refid="structweston__backend__config_1a5b47052f3958d0ba08eb65955ba5ad12" prot="public" virt="non-virtual"><scope>weston_backend_config</scope><name>struct_version</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

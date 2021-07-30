@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__mode" kind="struct" language="C++" prot="public">
+    <compoundname>weston_mode</compoundname>
+    <includes refid="libweston_8h" local="no">libweston.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__mode_1a3486025f88d5d3a8f8a4fb6a047fd16c" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t weston_mode::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="119" column="10" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__mode_1ad58860dcac4bd2c8221838cf89a16026" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="libweston_8h_1a6b527a10894693be26aa1d1816ddbc96" kindref="member">weston_mode_aspect_ratio</ref></type>
+        <definition>enum weston_mode_aspect_ratio weston_mode::aspect_ratio</definition>
+        <argsstring></argsstring>
+        <name>aspect_ratio</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="119" column="10" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__mode_1aea5fb418a59b04da33ae6907309fea4e" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t weston_mode::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="121" column="9" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__mode_1a54e031b141b63ff2479b784bfc6f021e" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t weston_mode::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="121" column="15" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__mode_1a604805ee46663105f12b659d88f80da8" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t weston_mode::refresh</definition>
+        <argsstring></argsstring>
+        <name>refresh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="122" column="10" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__mode_1ae460dffbf935bde13927238b881ece22" prot="public" static="no" mutable="no">
+        <type>struct wl_list</type>
+        <definition>struct wl_list weston_mode::link</definition>
+        <argsstring></argsstring>
+        <name>link</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="122" column="10" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="118" column="18" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="118" bodyend="124"/>
+    <listofallmembers>
+      <member refid="structweston__mode_1ad58860dcac4bd2c8221838cf89a16026" prot="public" virt="non-virtual"><scope>weston_mode</scope><name>aspect_ratio</name></member>
+      <member refid="structweston__mode_1a3486025f88d5d3a8f8a4fb6a047fd16c" prot="public" virt="non-virtual"><scope>weston_mode</scope><name>flags</name></member>
+      <member refid="structweston__mode_1a54e031b141b63ff2479b784bfc6f021e" prot="public" virt="non-virtual"><scope>weston_mode</scope><name>height</name></member>
+      <member refid="structweston__mode_1ae460dffbf935bde13927238b881ece22" prot="public" virt="non-virtual"><scope>weston_mode</scope><name>link</name></member>
+      <member refid="structweston__mode_1a604805ee46663105f12b659d88f80da8" prot="public" virt="non-virtual"><scope>weston_mode</scope><name>refresh</name></member>
+      <member refid="structweston__mode_1aea5fb418a59b04da33ae6907309fea4e" prot="public" virt="non-virtual"><scope>weston_mode</scope><name>width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

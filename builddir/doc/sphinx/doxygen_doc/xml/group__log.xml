@@ -1,0 +1,333 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="group__log" kind="group">
+    <compoundname>log</compoundname>
+    <title>Public Logging/Debugging API</title>
+    <innerclass refid="structweston__log__scope" prot="public">weston_log_scope</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__log_1gabfcf8e012be0cc478dd901ca59ad3721" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_timeline_refresh_subscription_objects</definition>
+        <argsstring>(struct weston_compositor *wc, void *object)</argsstring>
+        <name>weston_timeline_refresh_subscription_objects</name>
+        <param>
+          <type>struct <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> *</type>
+          <declname>wc</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+<para>Sets (on) the timeline subscription object refresh status. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function &apos;notifies&apos; timeline to print the object ID. The timeline code will reset it back, so there&apos;s no need for users to do anything about it.</para>
+<para>Can be used from outside libweston.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>wc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> instance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the underlying object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/timeline.c" line="370" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/timeline.c" bodystart="370" bodyend="382"/>
+      </memberdef>
+      <memberdef kind="function" id="group__log_1ga805835e5bfd0c13d0283e7b7e39022d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_timeline_point</definition>
+        <argsstring>(struct weston_log_scope *timeline_scope, const char *name,...)</argsstring>
+        <name>weston_timeline_point</name>
+        <param>
+          <type>struct <ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref> *</type>
+          <declname>timeline_scope</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+<para>Disseminates the message to all subscriptions of the scope <computeroutput>timeline_scope</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The <ref refid="group__log_1ga3d4fa53ee35cc16bfc3e78fb964bcdd1" kindref="member">TL_POINT()</ref> is a wrapper over this function, but it uses the <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> instance to pass the timeline scope.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timeline_scope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the timeline scope </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the timeline point. Interpretable by the tool reading the output (wesgr). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/timeline.c" line="406" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/timeline.c" bodystart="406" bodyend="461"/>
+      </memberdef>
+      <memberdef kind="function" id="group__log_1ga1a1c4adc72146aa351636b0456939d34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structweston__log__context" kindref="compound">weston_log_context</ref> *</type>
+        <definition>struct weston_log_context* weston_log_ctx_create</definition>
+        <argsstring>(void)</argsstring>
+        <name>weston_log_ctx_create</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Creates <ref refid="structweston__log__context" kindref="compound">weston_log_context</ref> structure. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>NULL in case of failure, or a <ref refid="structweston__log__context" kindref="compound">weston_log_context</ref> object in case of success</para>
+</simplesect>
+<ref refid="structweston__log__context" kindref="compound">weston_log_context</ref> is a singleton for each <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="407" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="407" bodyend="420"/>
+      </memberdef>
+      <memberdef kind="function" id="group__log_1ga23d424d8976026793627d7736375e5f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_log_ctx_destroy</definition>
+        <argsstring>(struct weston_log_context *log_ctx)</argsstring>
+        <name>weston_log_ctx_destroy</name>
+        <param>
+          <type>struct <ref refid="structweston__log__context" kindref="compound">weston_log_context</ref> *</type>
+          <declname>log_ctx</declname>
+        </param>
+        <briefdescription>
+<para>Destroy <ref refid="structweston__log__context" kindref="compound">weston_log_context</ref> structure. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>log_ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The log context to destroy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="430" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="430" bodyend="457"/>
+      </memberdef>
+      <memberdef kind="function" id="group__log_1gaff6911aac86ddf3ef624010d61630dea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_log_subscription_complete</definition>
+        <argsstring>(struct weston_log_subscription *sub)</argsstring>
+        <name>weston_log_subscription_complete</name>
+        <param>
+          <type>struct <ref refid="structweston__log__subscription" kindref="compound">weston_log_subscription</ref> *</type>
+          <declname>sub</declname>
+        </param>
+        <briefdescription>
+<para>Close the stream&apos;s complete callback if one was installed/created. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="736" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="736" bodyend="740"/>
+      </memberdef>
+      <memberdef kind="function" id="group__log_1gabefb2ce138700919fa8e07e848939ee1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_log_subscription_printf</definition>
+        <argsstring>(struct weston_log_subscription *sub, const char *fmt,...)</argsstring>
+        <name>weston_log_subscription_printf</name>
+        <param>
+          <type>struct <ref refid="structweston__log__subscription" kindref="compound">weston_log_subscription</ref> *</type>
+          <declname>sub</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+<para>Write a formatted string for a subscription. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sub</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The subscription to write for; may be NULL, in which case nothing will be written. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fmt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Printf-style format string and arguments.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Writes to formatted string to the stream that created the subscription. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="865" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="865" bodyend="873"/>
+      </memberdef>
+      <memberdef kind="function" id="group__log_1gab8f8e5728af2f0511f6fedb96828d210" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_log_subscriber_destroy</definition>
+        <argsstring>(struct weston_log_subscriber *subscriber)</argsstring>
+        <name>weston_log_subscriber_destroy</name>
+        <param>
+          <type>struct <ref refid="structweston__log__subscriber" kindref="compound">weston_log_subscriber</ref> *</type>
+          <declname>subscriber</declname>
+        </param>
+        <briefdescription>
+<para>Destroy a file type or a flight-rec type subscriber. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>They are created, respectively, with <ref refid="weston-log-file_8c_1a18475df75dfcd2f871e2266895749dfe" kindref="member">weston_log_subscriber_create_log()</ref> and <ref refid="weston-log-flight-rec_8c_1af811784d3fab3826e18189a3d2824082" kindref="member">weston_log_subscriber_create_flight_rec()</ref></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>subscriber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="structweston__log__subscriber" kindref="compound">weston_log_subscriber</ref> object to destroy </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="935" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="935" bodyend="938"/>
+      </memberdef>
+      <memberdef kind="function" id="group__log_1ga18ab9265482af8547ed947e28804b6b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_log_subscribe</definition>
+        <argsstring>(struct weston_log_context *log_ctx, struct weston_log_subscriber *subscriber, const char *scope_name)</argsstring>
+        <name>weston_log_subscribe</name>
+        <param>
+          <type>struct <ref refid="structweston__log__context" kindref="compound">weston_log_context</ref> *</type>
+          <declname>log_ctx</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structweston__log__subscriber" kindref="compound">weston_log_subscriber</ref> *</type>
+          <declname>subscriber</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>scope_name</declname>
+        </param>
+        <briefdescription>
+<para>Subscribe to a scope. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a subscription which is used to subscribe the <computeroutput>subscriber</computeroutput> to the scope <computeroutput>scope_name</computeroutput>.</para>
+<para>If <computeroutput>scope_name</computeroutput> has already been created (using weston_log_ctx_add_log_scope or weston_compositor_add_log_scope) the subscription will take place immediately, otherwise we store the subscription into a pending list. See also <ref refid="structweston__log__scope_1aacf51678148a4c087e78a87816cc36f3" kindref="member">weston_log_ctx_add_log_scope()</ref> and <ref refid="structweston__compositor_1ae4682c6463d20cedae4215dff64d91c7" kindref="member">weston_compositor_add_log_scope()</ref></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>log_ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the log context, used for accessing pending list </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>subscriber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the subscriber, which has to be created before </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>scope_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the scope name. In case the scope is not created we temporarily store the subscription in the pending list. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="959" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="959" bodyend="978"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__log_1ga54b3c5c32cc5f3527c9a3d11e0d9f54d" prot="public" static="no">
+        <name>TLP_END</name>
+        <initializer><ref refid="timeline_8h_1a008a1fa903f225ad9d217273f3cc5ce8a9ffa135a8f9b2a461691e6f092e00106" kindref="member">TLT_END</ref>, NULL</initializer>
+        <briefdescription>
+<para>Should be used as the last argument when using TL_POINT macro. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/timeline.h" line="77" column="9" bodyfile="/home/lzm/Wayland/weston/libweston/timeline.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__log_1ga3d4fa53ee35cc16bfc3e78fb964bcdd1" prot="public" static="no">
+        <name>TL_POINT</name>
+        <param><defname>ec</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>	do { \
+	<ref refid="group__log_1ga805835e5bfd0c13d0283e7b7e39022d2" kindref="member">weston_timeline_point</ref>(ec-&gt;timeline, __VA_ARGS__); \
+} while (0)</initializer>
+        <briefdescription>
+<para>This macro is used to add timeline points. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Use TLP_END when done for the vargs.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/timeline.h" line="92" column="9" bodyfile="/home/lzm/Wayland/weston/libweston/timeline.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

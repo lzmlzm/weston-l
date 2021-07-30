@@ -1,0 +1,695 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="alpha-blending-test_8c" kind="file" language="C++">
+    <compoundname>alpha-blending-test.c</compoundname>
+    <includes local="yes">config.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">sys/mman.h</includes>
+    <includes refid="weston-test-client-helper_8h" local="yes">weston-test-client-helper.h</includes>
+    <includes refid="weston-test-fixture-compositor_8h" local="yes">weston-test-fixture-compositor.h</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>stdbool.h</label>
+      </node>
+      <node id="26">
+        <label>viewporter-client-protocol.h</label>
+      </node>
+      <node id="18">
+        <label>libweston/libweston.h</label>
+        <link refid="libweston_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>weston-test-fixture-compositor.h</label>
+        <link refid="weston-test-fixture-compositor_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>assert.h</label>
+      </node>
+      <node id="25">
+        <label>weston-screenshooter-client-protocol.h</label>
+      </node>
+      <node id="24">
+        <label>weston-test-client-protocol.h</label>
+      </node>
+      <node id="9">
+        <label>stdint.h</label>
+      </node>
+      <node id="14">
+        <label>stdlib.h</label>
+      </node>
+      <node id="5">
+        <label>sys/mman.h</label>
+      </node>
+      <node id="20">
+        <label>wayland-server.h</label>
+      </node>
+      <node id="19">
+        <label>xkbcommon/xkbcommon.h</label>
+      </node>
+      <node id="16">
+        <label>shared/helpers.h</label>
+      </node>
+      <node id="23">
+        <label>weston-testsuite-data.h</label>
+        <link refid="weston-testsuite-data_8h"/>
+      </node>
+      <node id="12">
+        <label>wayland-client-protocol.h</label>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/tests/alpha-blending-test.c</label>
+        <link refid="alpha-blending-test_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>string.h</label>
+      </node>
+      <node id="22">
+        <label>libweston/zalloc.h</label>
+        <link refid="zalloc_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>time.h</label>
+      </node>
+      <node id="21">
+        <label>libweston/matrix.h</label>
+        <link refid="matrix_8h"/>
+      </node>
+      <node id="11">
+        <label>pixman.h</label>
+      </node>
+      <node id="15">
+        <label>wayland-util.h</label>
+      </node>
+      <node id="13">
+        <label>weston-test-runner.h</label>
+        <link refid="weston-test-runner_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+      <node id="6">
+        <label>weston-test-client-helper.h</label>
+        <link refid="weston-test-client-helper_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structsetup__args" prot="public">setup_args</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="alpha-blending-test_8c_1a160dd80f1882914a88dd1b48e878c139" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int ALPHA_STEPS</definition>
+        <argsstring></argsstring>
+        <name>ALPHA_STEPS</name>
+        <initializer>= 256</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/alpha-blending-test.c" line="40" column="18" bodyfile="/home/lzm/Wayland/weston/tests/alpha-blending-test.c" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="alpha-blending-test_8c_1a24572553df56d9f30a651f65cec3c56a" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int BLOCK_WIDTH</definition>
+        <argsstring></argsstring>
+        <name>BLOCK_WIDTH</name>
+        <initializer>= 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/alpha-blending-test.c" line="41" column="18" bodyfile="/home/lzm/Wayland/weston/tests/alpha-blending-test.c" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="alpha-blending-test_8c_1aabfb997aab1717c1f56f38b8a2ca6c3d" prot="public" static="yes" mutable="no">
+        <type>const struct <ref refid="structsetup__args" kindref="compound">setup_args</ref></type>
+        <definition>const struct setup_args my_setup_args[]</definition>
+        <argsstring>[]</argsstring>
+        <name>my_setup_args</name>
+        <initializer>= {
+	{
+		.renderer = <ref refid="group__testharness_1gga3f584343987d08b8aa9abf1e9c371a90a7c4539f6251acc274b33a085a1c520d7" kindref="member">RENDERER_PIXMAN</ref>,
+		.meta.name = &quot;pixman&quot;
+	},
+	{
+		.renderer = <ref refid="group__testharness_1gga3f584343987d08b8aa9abf1e9c371a90ae5e927b4a68fbbf849f68aed0de9e34a" kindref="member">RENDERER_GL</ref>,
+		.meta.name = &quot;GL&quot;
+	},
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/alpha-blending-test.c" line="41" column="18" bodyfile="/home/lzm/Wayland/weston/tests/alpha-blending-test.c" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="alpha-blending-test_8c_1ae622300b946206b8452fb1fe0b5ece05" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></type>
+        <definition>static enum test_result_code fixture_setup</definition>
+        <argsstring>(struct weston_test_harness *harness, const struct setup_args *arg)</argsstring>
+        <name>fixture_setup</name>
+        <param>
+          <type>struct <ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref> *</type>
+          <declname>harness</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structsetup__args" kindref="compound">setup_args</ref> *</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/alpha-blending-test.c" line="41" column="18" bodyfile="/home/lzm/Wayland/weston/tests/alpha-blending-test.c" bodystart="55" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="alpha-blending-test_8c_1a87369f50a65ebd39e3f69d096b0dbc78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DECLARE_FIXTURE_SETUP_WITH_ARG</definition>
+        <argsstring>(fixture_setup, my_setup_args, meta)</argsstring>
+        <name>DECLARE_FIXTURE_SETUP_WITH_ARG</name>
+        <param>
+          <type><ref refid="yuv-buffer-test_8c_1a94e9ff74226ccd29a26846ccb66d481f" kindref="member">fixture_setup</ref></type>
+        </param>
+        <param>
+          <type><ref refid="viewporter-shot-test_8c_1aabfb997aab1717c1f56f38b8a2ca6c3d" kindref="member">my_setup_args</ref></type>
+        </param>
+        <param>
+          <type>meta</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/alpha-blending-test.c" line="67" column="1" declfile="/home/lzm/Wayland/weston/tests/alpha-blending-test.c" declline="67" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="alpha-blending-test_8c_1a08412277c68ece07f43f7766c1fc7c8c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void set_opaque_rect</definition>
+        <argsstring>(struct client *client, struct surface *surface, const struct rectangle *rect)</argsstring>
+        <name>set_opaque_rect</name>
+        <param>
+          <type>struct <ref refid="structclient" kindref="compound">client</ref> *</type>
+          <declname>client</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structsurface" kindref="compound">surface</ref> *</type>
+          <declname>surface</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structrectangle" kindref="compound">rectangle</ref> *</type>
+          <declname>rect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/alpha-blending-test.c" line="70" column="1" bodyfile="/home/lzm/Wayland/weston/tests/alpha-blending-test.c" bodystart="70" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="alpha-blending-test_8c_1aa62f944b6d7139459d1795ae2b658235" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t premult_color</definition>
+        <argsstring>(uint32_t a, uint32_t r, uint32_t g, uint32_t b)</argsstring>
+        <name>premult_color</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/alpha-blending-test.c" line="83" column="1" bodyfile="/home/lzm/Wayland/weston/tests/alpha-blending-test.c" bodystart="83" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="alpha-blending-test_8c_1a066c3faedbfa8a6a337b4fb03a1e6b25" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void fill_alpha_pattern</definition>
+        <argsstring>(struct buffer *buf)</argsstring>
+        <name>fill_alpha_pattern</name>
+        <param>
+          <type>struct <ref refid="structbuffer" kindref="compound">buffer</ref> *</type>
+          <declname>buf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/alpha-blending-test.c" line="96" column="1" bodyfile="/home/lzm/Wayland/weston/tests/alpha-blending-test.c" bodystart="96" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="alpha-blending-test_8c_1a81e020c207c4f444a5d60e57c7d55fdf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>static uint8_t red</definition>
+        <argsstring>(uint32_t v)</argsstring>
+        <name>red</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/alpha-blending-test.c" line="129" column="1" bodyfile="/home/lzm/Wayland/weston/tests/alpha-blending-test.c" bodystart="129" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="alpha-blending-test_8c_1a9a6f44170dd627caeb06bd6a43943349" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>static uint8_t blue</definition>
+        <argsstring>(uint32_t v)</argsstring>
+        <name>blue</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/alpha-blending-test.c" line="135" column="1" bodyfile="/home/lzm/Wayland/weston/tests/alpha-blending-test.c" bodystart="135" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="alpha-blending-test_8c_1ad6cb6d7c64530b77fdde8327f41c8da3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool pixels_monotonic</definition>
+        <argsstring>(const uint32_t *row, int x)</argsstring>
+        <name>pixels_monotonic</name>
+        <param>
+          <type>const uint32_t *</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/alpha-blending-test.c" line="141" column="1" bodyfile="/home/lzm/Wayland/weston/tests/alpha-blending-test.c" bodystart="141" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="alpha-blending-test_8c_1a849cc204fc335edcc5bb5afa20abc01d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool check_blend_pattern</definition>
+        <argsstring>(struct buffer *shot)</argsstring>
+        <name>check_blend_pattern</name>
+        <param>
+          <type>struct <ref refid="structbuffer" kindref="compound">buffer</ref> *</type>
+          <declname>shot</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/alpha-blending-test.c" line="159" column="1" bodyfile="/home/lzm/Wayland/weston/tests/alpha-blending-test.c" bodystart="159" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="alpha-blending-test_8c_1a806cb9e82f123d87a4e9517bda40ef6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(alpha_blend_monotonic)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>alpha_blend_monotonic</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/alpha-blending-test.c" line="200" column="1" bodyfile="/home/lzm/Wayland/weston/tests/alpha-blending-test.c" bodystart="200" bodyend="260"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2020<sp/>Collabora,<sp/>Ltd.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>(including<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>next<sp/>paragraph)<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>NONINFRINGEMENT.<sp/><sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/mman.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="weston-test-client-helper_8h" kindref="compound">weston-test-client-helper.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="weston-test-fixture-compositor_8h" kindref="compound">weston-test-fixture-compositor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="structsetup__args" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsetup__args" kindref="compound">setup_args</ref><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfixture__metadata" kindref="compound">fixture_metadata</ref><sp/><ref refid="structsetup__args_1a90e5b9a62a0b9b494f1068c6127f27eb" kindref="member">meta</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1ga3f584343987d08b8aa9abf1e9c371a90" kindref="member">renderer_type</ref><sp/><ref refid="structsetup__args_1a0fd5bb4903719c36beb60f057c9fab96" kindref="member">renderer</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="alpha-blending-test_8c_1a160dd80f1882914a88dd1b48e878c139" kindref="member">ALPHA_STEPS</ref><sp/>=<sp/>256;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="alpha-blending-test_8c_1a24572553df56d9f30a651f65cec3c56a" kindref="member">BLOCK_WIDTH</ref><sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsetup__args" kindref="compound">setup_args</ref><sp/><ref refid="alpha-blending-test_8c_1aabfb997aab1717c1f56f38b8a2ca6c3d" kindref="member">my_setup_args</ref>[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="structsetup__args_1a0fd5bb4903719c36beb60f057c9fab96" kindref="member">renderer</ref><sp/>=<sp/><ref refid="group__testharness_1gga3f584343987d08b8aa9abf1e9c371a90a7c4539f6251acc274b33a085a1c520d7" kindref="member">RENDERER_PIXMAN</ref>,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.meta.name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;pixman&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.renderer<sp/>=<sp/><ref refid="group__testharness_1gga3f584343987d08b8aa9abf1e9c371a90ae5e927b4a68fbbf849f68aed0de9e34a" kindref="member">RENDERER_GL</ref>,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.meta.name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;GL&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><ref refid="alpha-blending-test_8c_1ae622300b946206b8452fb1fe0b5ece05" kindref="member">fixture_setup</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref><sp/>*harness,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structsetup__args" kindref="compound">setup_args</ref><sp/>*arg)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structcompositor__setup" kindref="compound">compositor_setup</ref><sp/>setup;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__testharness_1ga6d93ba47ec578b140fa2cbd3efa1218c" kindref="member">compositor_setup_defaults</ref>(&amp;setup);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setup.renderer<sp/>=<sp/>arg-&gt;<ref refid="structsetup__args_1a0fd5bb4903719c36beb60f057c9fab96" kindref="member">renderer</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setup.width<sp/>=<sp/><ref refid="alpha-blending-test_8c_1a24572553df56d9f30a651f65cec3c56a" kindref="member">BLOCK_WIDTH</ref><sp/>*<sp/><ref refid="alpha-blending-test_8c_1a160dd80f1882914a88dd1b48e878c139" kindref="member">ALPHA_STEPS</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setup.height<sp/>=<sp/>16;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setup.shell<sp/>=<sp/><ref refid="group__testharness_1gga0ad980f813d1f7469e9b9ff20f73fce9a788b50d23ce49ed189c3f49fc6030d85" kindref="member">SHELL_TEST_DESKTOP</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1gacd7b26a0f0f337781013b40d229cf262" kindref="member">weston_test_harness_execute_as_client</ref>(harness,<sp/>&amp;setup);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><ref refid="alpha-blending-test_8c_1a87369f50a65ebd39e3f69d096b0dbc78" kindref="member">DECLARE_FIXTURE_SETUP_WITH_ARG</ref>(<ref refid="alpha-blending-test_8c_1ae622300b946206b8452fb1fe0b5ece05" kindref="member">fixture_setup</ref>,<sp/><ref refid="alpha-blending-test_8c_1aabfb997aab1717c1f56f38b8a2ca6c3d" kindref="member">my_setup_args</ref>,<sp/>meta);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><ref refid="alpha-blending-test_8c_1a08412277c68ece07f43f7766c1fc7c8c" kindref="member">set_opaque_rect</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclient" kindref="compound">client</ref><sp/>*<ref refid="structclient" kindref="compound">client</ref>,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structsurface" kindref="compound">surface</ref><sp/>*<ref refid="structsurface" kindref="compound">surface</ref>,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structrectangle" kindref="compound">rectangle</ref><sp/>*rect)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_region<sp/>*region;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>region<sp/>=<sp/>wl_compositor_create_region(<ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1aa5c4464bb82b07c4e4383465307a2d8d" kindref="member">wl_compositor</ref>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_region_add(region,<sp/>rect-&gt;<ref refid="structrectangle_1a03970481db05be5eb4e1b55eaba3b347" kindref="member">x</ref>,<sp/>rect-&gt;<ref refid="structrectangle_1a2331724555ab2149f4ce4e2b57079e4d" kindref="member">y</ref>,<sp/>rect-&gt;<ref refid="structrectangle_1a57a9b24a714057d8d2ca9a06333560d3" kindref="member">width</ref>,<sp/>rect-&gt;<ref refid="structrectangle_1af460193d9a375b8e2813bf1fe6216cce" kindref="member">height</ref>);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_surface_set_opaque_region(<ref refid="structsurface" kindref="compound">surface</ref>-&gt;<ref refid="structsurface_1a4910a1070e78b84c00c8ab27a508b4da" kindref="member">wl_surface</ref>,<sp/>region);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_region_destroy(region);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint32_t</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><ref refid="alpha-blending-test_8c_1aa62f944b6d7139459d1795ae2b658235" kindref="member">premult_color</ref>(uint32_t<sp/>a,<sp/>uint32_t<sp/>r,<sp/>uint32_t<sp/>g,<sp/>uint32_t<sp/>b)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>c<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c<sp/>|=<sp/>a<sp/>&lt;&lt;<sp/>24;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c<sp/>|=<sp/>(a<sp/>*<sp/>r<sp/>/<sp/>255)<sp/>&lt;&lt;<sp/>16;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c<sp/>|=<sp/>(a<sp/>*<sp/>g<sp/>/<sp/>255)<sp/>&lt;&lt;<sp/>8;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c<sp/>|=<sp/>a<sp/>*<sp/>b<sp/>/<sp/>255;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>c;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><ref refid="alpha-blending-test_8c_1a066c3faedbfa8a6a337b4fb03a1e6b25" kindref="member">fill_alpha_pattern</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbuffer" kindref="compound">buffer</ref><sp/>*buf)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*pixels;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>stride_bytes;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>w,<sp/>h;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(pixman_image_get_format(buf-&gt;<ref refid="structbuffer_1a6f57d8719ac323d52c3b1fd816dedf76" kindref="member">image</ref>)<sp/>==<sp/>PIXMAN_a8r8g8b8);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pixels<sp/>=<sp/>pixman_image_get_data(buf-&gt;<ref refid="structbuffer_1a6f57d8719ac323d52c3b1fd816dedf76" kindref="member">image</ref>);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stride_bytes<sp/>=<sp/>pixman_image_get_stride(buf-&gt;<ref refid="structbuffer_1a6f57d8719ac323d52c3b1fd816dedf76" kindref="member">image</ref>);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w<sp/>=<sp/>pixman_image_get_width(buf-&gt;<ref refid="structbuffer_1a6f57d8719ac323d52c3b1fd816dedf76" kindref="member">image</ref>);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>h<sp/>=<sp/>pixman_image_get_height(buf-&gt;<ref refid="structbuffer_1a6f57d8719ac323d52c3b1fd816dedf76" kindref="member">image</ref>);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(w<sp/>==<sp/><ref refid="alpha-blending-test_8c_1a24572553df56d9f30a651f65cec3c56a" kindref="member">BLOCK_WIDTH</ref><sp/>*<sp/><ref refid="alpha-blending-test_8c_1a160dd80f1882914a88dd1b48e878c139" kindref="member">ALPHA_STEPS</ref>);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(y<sp/>=<sp/>0;<sp/>y<sp/>&lt;<sp/>h;<sp/>y++)<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>*row<sp/>=<sp/>pixels<sp/>+<sp/>y<sp/>*<sp/>stride_bytes;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>step;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(step<sp/>=<sp/>0;<sp/>step<sp/>&lt;<sp/>(uint32_t)<ref refid="alpha-blending-test_8c_1a160dd80f1882914a88dd1b48e878c139" kindref="member">ALPHA_STEPS</ref>;<sp/>step++)<sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>alpha<sp/>=<sp/>step<sp/>*<sp/>255<sp/>/<sp/>(<ref refid="alpha-blending-test_8c_1a160dd80f1882914a88dd1b48e878c139" kindref="member">ALPHA_STEPS</ref><sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>color;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>color<sp/>=<sp/><ref refid="alpha-blending-test_8c_1aa62f944b6d7139459d1795ae2b658235" kindref="member">premult_color</ref>(alpha,<sp/>0,<sp/>255<sp/>-<sp/>alpha,<sp/>255);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="alpha-blending-test_8c_1a24572553df56d9f30a651f65cec3c56a" kindref="member">BLOCK_WIDTH</ref>;<sp/>i++)</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*row++<sp/>=<sp/>color;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><ref refid="alpha-blending-test_8c_1a81e020c207c4f444a5d60e57c7d55fdf" kindref="member">red</ref>(uint32_t<sp/>v)</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(v<sp/>&gt;&gt;<sp/>16)<sp/>&amp;<sp/>0xff;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><ref refid="alpha-blending-test_8c_1a9a6f44170dd627caeb06bd6a43943349" kindref="member">blue</ref>(uint32_t<sp/>v)</highlight></codeline>
+<codeline lineno="136"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v<sp/>&amp;<sp/>0xff;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><ref refid="alpha-blending-test_8c_1ad6cb6d7c64530b77fdde8327f41c8da3" kindref="member">pixels_monotonic</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>*row,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x)</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="alpha-blending-test_8c_1a81e020c207c4f444a5d60e57c7d55fdf" kindref="member">red</ref>(row[x<sp/>+<sp/>1])<sp/>&gt;<sp/><ref refid="alpha-blending-test_8c_1a81e020c207c4f444a5d60e57c7d55fdf" kindref="member">red</ref>(row[x]))<sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__testharness_1gaa1538dfd4262a1feafd60cd1f09d9878" kindref="member">testlog</ref>(</highlight><highlight class="stringliteral">&quot;pixel<sp/>%d<sp/>-&gt;<sp/>next:<sp/>red<sp/>value<sp/>increases\n&quot;</highlight><highlight class="normal">,<sp/>x);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="alpha-blending-test_8c_1a9a6f44170dd627caeb06bd6a43943349" kindref="member">blue</ref>(row[x<sp/>+<sp/>1])<sp/>&lt;<sp/><ref refid="alpha-blending-test_8c_1a9a6f44170dd627caeb06bd6a43943349" kindref="member">blue</ref>(row[x]))<sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__testharness_1gaa1538dfd4262a1feafd60cd1f09d9878" kindref="member">testlog</ref>(</highlight><highlight class="stringliteral">&quot;pixel<sp/>%d<sp/>-&gt;<sp/>next:<sp/>blue<sp/>value<sp/>decreases\n&quot;</highlight><highlight class="normal">,<sp/>x);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><ref refid="alpha-blending-test_8c_1a849cc204fc335edcc5bb5afa20abc01d" kindref="member">check_blend_pattern</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbuffer" kindref="compound">buffer</ref><sp/>*shot)</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y<sp/>=<sp/>(<ref refid="alpha-blending-test_8c_1a24572553df56d9f30a651f65cec3c56a" kindref="member">BLOCK_WIDTH</ref><sp/>-<sp/>1)<sp/>/<sp/>2;<sp/></highlight><highlight class="comment">/*<sp/>middle<sp/>row<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*pixels;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>stride_bytes;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>*row;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(pixman_image_get_width(shot-&gt;<ref refid="structbuffer_1a6f57d8719ac323d52c3b1fd816dedf76" kindref="member">image</ref>)<sp/>&gt;=<sp/><ref refid="alpha-blending-test_8c_1a24572553df56d9f30a651f65cec3c56a" kindref="member">BLOCK_WIDTH</ref><sp/>*<sp/><ref refid="alpha-blending-test_8c_1a160dd80f1882914a88dd1b48e878c139" kindref="member">ALPHA_STEPS</ref>);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(pixman_image_get_height(shot-&gt;<ref refid="structbuffer_1a6f57d8719ac323d52c3b1fd816dedf76" kindref="member">image</ref>)<sp/>&gt;=<sp/><ref refid="alpha-blending-test_8c_1a24572553df56d9f30a651f65cec3c56a" kindref="member">BLOCK_WIDTH</ref>);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pixels<sp/>=<sp/>pixman_image_get_data(shot-&gt;<ref refid="structbuffer_1a6f57d8719ac323d52c3b1fd816dedf76" kindref="member">image</ref>);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stride_bytes<sp/>=<sp/>pixman_image_get_stride(shot-&gt;<ref refid="structbuffer_1a6f57d8719ac323d52c3b1fd816dedf76" kindref="member">image</ref>);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>row<sp/>=<sp/>pixels<sp/>+<sp/>y<sp/>*<sp/>stride_bytes;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(x<sp/>=<sp/>0;<sp/>x<sp/>&lt;<sp/><ref refid="alpha-blending-test_8c_1a24572553df56d9f30a651f65cec3c56a" kindref="member">BLOCK_WIDTH</ref><sp/>*<sp/><ref refid="alpha-blending-test_8c_1a160dd80f1882914a88dd1b48e878c139" kindref="member">ALPHA_STEPS</ref><sp/>-<sp/>1;<sp/>x++)</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="alpha-blending-test_8c_1ad6cb6d7c64530b77fdde8327f41c8da3" kindref="member">pixels_monotonic</ref>(row,<sp/>x))</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="183"><highlight class="comment"><sp/>*<sp/>Test<sp/>that<sp/>alpha<sp/>blending<sp/>is<sp/>roughly<sp/>correct,<sp/>and<sp/>that<sp/>an<sp/>alpha<sp/>ramp</highlight></codeline>
+<codeline lineno="184"><highlight class="comment"><sp/>*<sp/>results<sp/>in<sp/>a<sp/>strictly<sp/>monotonic<sp/>color<sp/>ramp.<sp/>This<sp/>should<sp/>ensure<sp/>that<sp/>any</highlight></codeline>
+<codeline lineno="185"><highlight class="comment"><sp/>*<sp/>animation<sp/>that<sp/>varies<sp/>alpha<sp/>never<sp/>goes<sp/>&quot;backwards&quot;<sp/>as<sp/>that<sp/>is<sp/>easily</highlight></codeline>
+<codeline lineno="186"><highlight class="comment"><sp/>*<sp/>noticeable.</highlight></codeline>
+<codeline lineno="187"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="188"><highlight class="comment"><sp/>*<sp/>The<sp/>background<sp/>is<sp/>a<sp/>constant<sp/>color.<sp/>On<sp/>top<sp/>of<sp/>that,<sp/>there<sp/>is<sp/>an</highlight></codeline>
+<codeline lineno="189"><highlight class="comment"><sp/>*<sp/>alpha-blended<sp/>gradient<sp/>with<sp/>ramps<sp/>in<sp/>both<sp/>alpha<sp/>and<sp/>color.<sp/>Sub-surface</highlight></codeline>
+<codeline lineno="190"><highlight class="comment"><sp/>*<sp/>ensures<sp/>the<sp/>correct<sp/>positioning<sp/>and<sp/>stacking.</highlight></codeline>
+<codeline lineno="191"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="192"><highlight class="comment"><sp/>*<sp/>The<sp/>gradient<sp/>consists<sp/>of<sp/>ALPHA_STEPS<sp/>number<sp/>of<sp/>blocks.<sp/>Block<sp/>size<sp/>is</highlight></codeline>
+<codeline lineno="193"><highlight class="comment"><sp/>*<sp/>BLOCK_WIDTH<sp/>x<sp/>BLOCK_WIDTH<sp/>and<sp/>a<sp/>block<sp/>has<sp/>a<sp/>uniform<sp/>color.</highlight></codeline>
+<codeline lineno="194"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="195"><highlight class="comment"><sp/>*<sp/>In<sp/>the<sp/>blending<sp/>result<sp/>over<sp/>x<sp/>axis:</highlight></codeline>
+<codeline lineno="196"><highlight class="comment"><sp/>*<sp/>-<sp/>red<sp/>goes<sp/>from<sp/>1.0<sp/>to<sp/>0.0,<sp/>monotonic</highlight></codeline>
+<codeline lineno="197"><highlight class="comment"><sp/>*<sp/>-<sp/>green<sp/>is<sp/>not<sp/>monotonic</highlight></codeline>
+<codeline lineno="198"><highlight class="comment"><sp/>*<sp/>-<sp/>blue<sp/>goes<sp/>from<sp/>0.0<sp/>to<sp/>1.0,<sp/>monotonic</highlight></codeline>
+<codeline lineno="199"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><ref refid="alpha-blending-test_8c_1a806cb9e82f123d87a4e9517bda40ef6f" kindref="member">TEST</ref>(alpha_blend_monotonic)</highlight></codeline>
+<codeline lineno="201"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width<sp/>=<sp/><ref refid="alpha-blending-test_8c_1a24572553df56d9f30a651f65cec3c56a" kindref="member">BLOCK_WIDTH</ref><sp/>*<sp/><ref refid="alpha-blending-test_8c_1a160dd80f1882914a88dd1b48e878c139" kindref="member">ALPHA_STEPS</ref>;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height<sp/>=<sp/><ref refid="alpha-blending-test_8c_1a24572553df56d9f30a651f65cec3c56a" kindref="member">BLOCK_WIDTH</ref>;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>pixman_color_t<sp/>background_color<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.red<sp/><sp/><sp/>=<sp/>0xffff,</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.green<sp/>=<sp/>0x8080,</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.blue<sp/><sp/>=<sp/>0x0000,</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.alpha<sp/>=<sp/>0xffff</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclient" kindref="compound">client</ref><sp/>*<ref refid="structclient" kindref="compound">client</ref>;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbuffer" kindref="compound">buffer</ref><sp/>*buf;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_subcompositor<sp/>*subco;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_surface<sp/>*surf;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_subsurface<sp/>*sub;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbuffer" kindref="compound">buffer</ref><sp/>*shot;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>match;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structclient" kindref="compound">client</ref><sp/>=<sp/><ref refid="weston-test-client-helper_8c_1af73e5cb173ce63199265176e2b0e90dd" kindref="member">create_client</ref>();</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>subco<sp/>=<sp/><ref refid="weston-test-client-helper_8c_1aed27dc43b7c4076e6c8af4c51b19f13d" kindref="member">bind_to_singleton_global</ref>(<ref refid="structclient" kindref="compound">client</ref>,<sp/>&amp;wl_subcompositor_interface,<sp/>1);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>background<sp/>window<sp/>content<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buf<sp/>=<sp/><ref refid="weston-test-client-helper_8c_1a1eecc92b5b5e115112d67cbc7f538e8d" kindref="member">create_shm_buffer_a8r8g8b8</ref>(<ref refid="structclient" kindref="compound">client</ref>,<sp/>width,<sp/>height);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8c_1a19461415389d3c87d20bf1151e460f41" kindref="member">fill_image_with_color</ref>(buf-&gt;<ref refid="structbuffer_1a6f57d8719ac323d52c3b1fd816dedf76" kindref="member">image</ref>,<sp/>&amp;background_color);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>background<sp/>window,<sp/>main<sp/>surface<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1ab08863485e285fef208584804ca7480a" kindref="member">surface</ref><sp/>=<sp/><ref refid="weston-test-client-helper_8c_1a48b9e7f0e76b1c88869a2f8666d8026e" kindref="member">create_test_surface</ref>(<ref refid="structclient" kindref="compound">client</ref>);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1ab08863485e285fef208584804ca7480a" kindref="member">surface</ref>-&gt;<ref refid="structsurface_1ad441498d73778f515b36e669b478b04f" kindref="member">width</ref><sp/>=<sp/>width;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1ab08863485e285fef208584804ca7480a" kindref="member">surface</ref>-&gt;<ref refid="structsurface_1a973cb10ddcf4f6f6def6a745fc8ca880" kindref="member">height</ref><sp/>=<sp/>height;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1ab08863485e285fef208584804ca7480a" kindref="member">surface</ref>-&gt;<ref refid="structsurface_1a6380eb64761a852c50514a0ad1b8a37c" kindref="member">buffer</ref><sp/>=<sp/>buf;<sp/></highlight><highlight class="comment">/*<sp/>pass<sp/>ownership<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="alpha-blending-test_8c_1a08412277c68ece07f43f7766c1fc7c8c" kindref="member">set_opaque_rect</ref>(<ref refid="structclient" kindref="compound">client</ref>,<sp/><ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1ab08863485e285fef208584804ca7480a" kindref="member">surface</ref>,</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structrectangle" kindref="compound">rectangle</ref>){<sp/>0,<sp/>0,<sp/>width,<sp/>height<sp/>});</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>foreground<sp/>blended<sp/>content<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buf<sp/>=<sp/><ref refid="weston-test-client-helper_8c_1a1eecc92b5b5e115112d67cbc7f538e8d" kindref="member">create_shm_buffer_a8r8g8b8</ref>(<ref refid="structclient" kindref="compound">client</ref>,<sp/>width,<sp/>height);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="alpha-blending-test_8c_1a066c3faedbfa8a6a337b4fb03a1e6b25" kindref="member">fill_alpha_pattern</ref>(buf);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>foreground<sp/>window,<sp/>sub-surface<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>surf<sp/>=<sp/>wl_compositor_create_surface(<ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1aa5c4464bb82b07c4e4383465307a2d8d" kindref="member">wl_compositor</ref>);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sub<sp/>=<sp/>wl_subcompositor_get_subsurface(subco,<sp/>surf,<sp/><ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1ab08863485e285fef208584804ca7480a" kindref="member">surface</ref>-&gt;<ref refid="structsurface_1a4910a1070e78b84c00c8ab27a508b4da" kindref="member">wl_surface</ref>);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>sub-surface<sp/>defaults<sp/>to<sp/>position<sp/>0,<sp/>0,<sp/>top-most,<sp/>synchronized<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_surface_attach(surf,<sp/>buf-&gt;<ref refid="structbuffer_1a47f5f09576d179641e98d1d6730067dc" kindref="member">proxy</ref>,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_surface_damage(surf,<sp/>0,<sp/>0,<sp/>width,<sp/>height);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_surface_commit(surf);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>attach,<sp/>damage,<sp/>commit<sp/>background<sp/>window<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8c_1a37328a264739e2481da21489c1964335" kindref="member">move_client</ref>(<ref refid="structclient" kindref="compound">client</ref>,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shot<sp/>=<sp/><ref refid="weston-test-client-helper_8c_1a43cb7562bb853f9838e8d7cd4852734b" kindref="member">capture_screenshot_of_output</ref>(<ref refid="structclient" kindref="compound">client</ref>);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(shot);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>match<sp/>=<sp/><ref refid="weston-test-client-helper_8c_1a1449fafdd0df847d4e4708a03635ddec" kindref="member">verify_image</ref>(shot,<sp/></highlight><highlight class="stringliteral">&quot;alpha_blend_monotonic&quot;</highlight><highlight class="normal">,<sp/>0,<sp/>NULL,<sp/>0);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(match);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="alpha-blending-test_8c_1a849cc204fc335edcc5bb5afa20abc01d" kindref="member">check_blend_pattern</ref>(shot));</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8c_1a014665bba4cce883927372cc5348216f" kindref="member">buffer_destroy</ref>(shot);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_subsurface_destroy(sub);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_surface_destroy(surf);</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8c_1a014665bba4cce883927372cc5348216f" kindref="member">buffer_destroy</ref>(buf);</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8c_1a9d6289c37c3b56c85f4cc40a7cf71513" kindref="member">client_destroy</ref>(<ref refid="structclient" kindref="compound">client</ref>);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/tests/alpha-blending-test.c"/>
+  </compounddef>
+</doxygen>

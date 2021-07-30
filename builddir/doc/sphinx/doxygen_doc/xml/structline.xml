@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structline" kind="struct" language="C++" prot="public">
+    <compoundname>line</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structline_1a5d1b88325b65eb0bf325a5db38639f10" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structvec2d" kindref="compound">vec2d</ref></type>
+        <definition>struct vec2d line::a</definition>
+        <argsstring></argsstring>
+        <name>a</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/input.c" line="65" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/input.c" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structline_1a646a1fdf3f7dade70673ff0bae90521a" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structvec2d" kindref="compound">vec2d</ref></type>
+        <definition>struct vec2d line::b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/input.c" line="65" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/input.c" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>vec2d</label>
+        <link refid="structvec2d"/>
+      </node>
+      <node id="1">
+        <label>line</label>
+        <link refid="structline"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>a</edgelabel>
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lzm/Wayland/weston/libweston/input.c" line="68" column="11" bodyfile="/home/lzm/Wayland/weston/libweston/input.c" bodystart="68" bodyend="71"/>
+    <listofallmembers>
+      <member refid="structline_1a5d1b88325b65eb0bf325a5db38639f10" prot="public" virt="non-virtual"><scope>line</scope><name>a</name></member>
+      <member refid="structline_1a646a1fdf3f7dade70673ff0bae90521a" prot="public" virt="non-virtual"><scope>line</scope><name>b</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

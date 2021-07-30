@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="surface-test_8c" kind="file" language="C++">
+    <compoundname>surface-test.c</compoundname>
+    <includes local="yes">config.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">assert.h</includes>
+    <includes refid="libweston_8h" local="no">libweston/libweston.h</includes>
+    <includes local="yes">compositor/weston.h</includes>
+    <includes refid="weston-test-runner_8h" local="yes">weston-test-runner.h</includes>
+    <includes refid="weston-test-fixture-compositor_8h" local="yes">weston-test-fixture-compositor.h</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>stdbool.h</label>
+      </node>
+      <node id="5">
+        <label>libweston/libweston.h</label>
+        <link refid="libweston_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>weston-test-fixture-compositor.h</label>
+        <link refid="weston-test-fixture-compositor_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>assert.h</label>
+      </node>
+      <node id="7">
+        <label>stdint.h</label>
+      </node>
+      <node id="14">
+        <label>stdlib.h</label>
+      </node>
+      <node id="11">
+        <label>wayland-server.h</label>
+      </node>
+      <node id="10">
+        <label>xkbcommon/xkbcommon.h</label>
+      </node>
+      <node id="18">
+        <label>shared/helpers.h</label>
+      </node>
+      <node id="15">
+        <label>compositor/weston.h</label>
+      </node>
+      <node id="21">
+        <label>weston-testsuite-data.h</label>
+        <link refid="weston-testsuite-data_8h"/>
+      </node>
+      <node id="20">
+        <label>wayland-client-protocol.h</label>
+      </node>
+      <node id="13">
+        <label>libweston/zalloc.h</label>
+        <link refid="zalloc_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>time.h</label>
+      </node>
+      <node id="12">
+        <label>libweston/matrix.h</label>
+        <link refid="matrix_8h"/>
+      </node>
+      <node id="9">
+        <label>pixman.h</label>
+      </node>
+      <node id="17">
+        <label>wayland-util.h</label>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/tests/surface-test.c</label>
+        <link refid="surface-test_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>weston-test-runner.h</label>
+        <link refid="weston-test-runner_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="surface-test_8c_1a94e9ff74226ccd29a26846ccb66d481f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></type>
+        <definition>static enum test_result_code fixture_setup</definition>
+        <argsstring>(struct weston_test_harness *harness)</argsstring>
+        <name>fixture_setup</name>
+        <param>
+          <type>struct <ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref> *</type>
+          <declname>harness</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/surface-test.c" line="1" column="0" bodyfile="/home/lzm/Wayland/weston/tests/surface-test.c" bodystart="37" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="surface-test_8c_1a1ac8add2dcb01a58f69f41ce2ad0ccfc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DECLARE_FIXTURE_SETUP</definition>
+        <argsstring>(fixture_setup)</argsstring>
+        <name>DECLARE_FIXTURE_SETUP</name>
+        <param>
+          <type><ref refid="yuv-buffer-test_8c_1a94e9ff74226ccd29a26846ccb66d481f" kindref="member">fixture_setup</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/surface-test.c" line="45" column="1" declfile="/home/lzm/Wayland/weston/tests/surface-test.c" declline="45" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="surface-test_8c_1a5938c87754b6ee4be1ebf4988888d9e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PLUGIN_TEST</definition>
+        <argsstring>(surface_transform)</argsstring>
+        <name>PLUGIN_TEST</name>
+        <param>
+          <type>surface_transform</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/surface-test.c" line="47" column="1" bodyfile="/home/lzm/Wayland/weston/tests/surface-test.c" bodystart="47" bodyend="71"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2012<sp/>Intel<sp/>Corporation</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>(including<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>next<sp/>paragraph)<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>NONINFRINGEMENT.<sp/><sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="libweston_8h" kindref="compound">libweston/libweston.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;compositor/weston.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="weston-test-runner_8h" kindref="compound">weston-test-runner.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="weston-test-fixture-compositor_8h" kindref="compound">weston-test-fixture-compositor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><ref refid="surface-test_8c_1a94e9ff74226ccd29a26846ccb66d481f" kindref="member">fixture_setup</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref><sp/>*harness)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structcompositor__setup" kindref="compound">compositor_setup</ref><sp/>setup;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__testharness_1ga6d93ba47ec578b140fa2cbd3efa1218c" kindref="member">compositor_setup_defaults</ref>(&amp;setup);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1gabc3f5a45b58ee07331059eb120f7b2bb" kindref="member">weston_test_harness_execute_as_plugin</ref>(harness,<sp/>&amp;setup);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><ref refid="surface-test_8c_1a1ac8add2dcb01a58f69f41ce2ad0ccfc" kindref="member">DECLARE_FIXTURE_SETUP</ref>(<ref refid="surface-test_8c_1a94e9ff74226ccd29a26846ccb66d481f" kindref="member">fixture_setup</ref>);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><ref refid="surface-test_8c_1a5938c87754b6ee4be1ebf4988888d9e5" kindref="member">PLUGIN_TEST</ref>(surface_transform)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>struct<sp/>weston_compositor<sp/>*compositor;<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__surface" kindref="compound">weston_surface</ref><sp/>*<ref refid="structsurface" kindref="compound">surface</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__view" kindref="compound">weston_view</ref><sp/>*view;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structweston__view_1ac15339472d5d777e401e8444b8537e22" kindref="member">x</ref>,<sp/><ref refid="structweston__view_1ad3d9728320b27a2a368e092fb7b09b9c" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsurface" kindref="compound">surface</ref><sp/>=<sp/><ref refid="compositor_8c_1a1e3347a74e72ecb0aa7617dbf89b76fb" kindref="member">weston_surface_create</ref>(compositor);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="structsurface" kindref="compound">surface</ref>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>view<sp/>=<sp/><ref refid="compositor_8c_1aa7c65b03520dde2e12d5a35f444435d5" kindref="member">weston_view_create</ref>(<ref refid="structsurface" kindref="compound">surface</ref>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(view);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsurface" kindref="compound">surface</ref>-&gt;<ref refid="structsurface_1ad441498d73778f515b36e669b478b04f" kindref="member">width</ref><sp/>=<sp/>200;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsurface" kindref="compound">surface</ref>-&gt;<ref refid="structsurface_1a973cb10ddcf4f6f6def6a745fc8ca880" kindref="member">height</ref><sp/>=<sp/>200;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="compositor_8c_1ae1df17820e004a35b62f4a923066e9fd" kindref="member">weston_view_set_position</ref>(view,<sp/>100,<sp/>100);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="compositor_8c_1a9605e8abe1240aa6cbe7abdd2fc7f2be" kindref="member">weston_view_update_transform</ref>(view);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="compositor_8c_1a1666f1b9cb32183712d16d893af00dae" kindref="member">weston_view_to_global_float</ref>(view,<sp/>20,<sp/>20,<sp/>&amp;<ref refid="structweston__view_1ac15339472d5d777e401e8444b8537e22" kindref="member">x</ref>,<sp/>&amp;<ref refid="structweston__view_1ad3d9728320b27a2a368e092fb7b09b9c" kindref="member">y</ref>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;20,20<sp/>maps<sp/>to<sp/>%f,<sp/>%f\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="structweston__view_1ac15339472d5d777e401e8444b8537e22" kindref="member">x</ref>,<sp/><ref refid="structweston__view_1ad3d9728320b27a2a368e092fb7b09b9c" kindref="member">y</ref>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="structweston__view_1ac15339472d5d777e401e8444b8537e22" kindref="member">x</ref><sp/>==<sp/>120<sp/>&amp;&amp;<sp/><ref refid="structweston__view_1ad3d9728320b27a2a368e092fb7b09b9c" kindref="member">y</ref><sp/>==<sp/>120);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="compositor_8c_1ae1df17820e004a35b62f4a923066e9fd" kindref="member">weston_view_set_position</ref>(view,<sp/>150,<sp/>300);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="compositor_8c_1a9605e8abe1240aa6cbe7abdd2fc7f2be" kindref="member">weston_view_update_transform</ref>(view);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="compositor_8c_1a1666f1b9cb32183712d16d893af00dae" kindref="member">weston_view_to_global_float</ref>(view,<sp/>50,<sp/>40,<sp/>&amp;<ref refid="structweston__view_1ac15339472d5d777e401e8444b8537e22" kindref="member">x</ref>,<sp/>&amp;<ref refid="structweston__view_1ad3d9728320b27a2a368e092fb7b09b9c" kindref="member">y</ref>);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="structweston__view_1ac15339472d5d777e401e8444b8537e22" kindref="member">x</ref><sp/>==<sp/>200<sp/>&amp;&amp;<sp/><ref refid="structweston__view_1ad3d9728320b27a2a368e092fb7b09b9c" kindref="member">y</ref><sp/>==<sp/>340);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/tests/surface-test.c"/>
+  </compounddef>
+</doxygen>

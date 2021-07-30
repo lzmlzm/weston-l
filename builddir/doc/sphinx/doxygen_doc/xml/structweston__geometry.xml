@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__geometry" kind="struct" language="C++" prot="public">
+    <compoundname>weston_geometry</compoundname>
+    <includes refid="libweston_8h" local="no">libweston.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__geometry_1a70c1074a2c225fec12152def41939a5d" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t weston_geometry::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="48" column="9" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__geometry_1a2c570f3c1224e0ba6754546894ec3976" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t weston_geometry::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="48" column="11" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__geometry_1a477e159bfa1399930d7554834bca0578" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t weston_geometry::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="49" column="9" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__geometry_1afaa61c8f08bcea5f12fec0bf38a91a86" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t weston_geometry::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="49" column="15" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="47" column="22" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="47" bodyend="50"/>
+    <listofallmembers>
+      <member refid="structweston__geometry_1afaa61c8f08bcea5f12fec0bf38a91a86" prot="public" virt="non-virtual"><scope>weston_geometry</scope><name>height</name></member>
+      <member refid="structweston__geometry_1a477e159bfa1399930d7554834bca0578" prot="public" virt="non-virtual"><scope>weston_geometry</scope><name>width</name></member>
+      <member refid="structweston__geometry_1a70c1074a2c225fec12152def41939a5d" prot="public" virt="non-virtual"><scope>weston_geometry</scope><name>x</name></member>
+      <member refid="structweston__geometry_1a2c570f3c1224e0ba6754546894ec3976" prot="public" virt="non-virtual"><scope>weston_geometry</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

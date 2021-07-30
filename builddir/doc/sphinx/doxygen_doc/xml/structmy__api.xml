@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structmy__api" kind="struct" language="C++" prot="public">
+    <compoundname>my_api</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmy__api_1aa9e7cda35a42a22bec1131140a0fe4b9" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* my_api::func1) (void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>func1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/plugin-registry-test.c" line="54" column="1" bodyfile="/home/lzm/Wayland/weston/tests/plugin-registry-test.c" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmy__api_1a11e8a7236063933688fec6e9892db81b" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* my_api::func2) (void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>func2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/plugin-registry-test.c" line="55" column="1" bodyfile="/home/lzm/Wayland/weston/tests/plugin-registry-test.c" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmy__api_1a82da26dae9683362d7c16f8e239233de" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* my_api::func3) (void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>func3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/plugin-registry-test.c" line="56" column="1" bodyfile="/home/lzm/Wayland/weston/tests/plugin-registry-test.c" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/tests/plugin-registry-test.c" line="53" column="26" bodyfile="/home/lzm/Wayland/weston/tests/plugin-registry-test.c" bodystart="53" bodyend="57"/>
+    <listofallmembers>
+      <member refid="structmy__api_1aa9e7cda35a42a22bec1131140a0fe4b9" prot="public" virt="non-virtual"><scope>my_api</scope><name>func1</name></member>
+      <member refid="structmy__api_1a11e8a7236063933688fec6e9892db81b" prot="public" virt="non-virtual"><scope>my_api</scope><name>func2</name></member>
+      <member refid="structmy__api_1a82da26dae9683362d7c16f8e239233de" prot="public" virt="non-virtual"><scope>my_api</scope><name>func3</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

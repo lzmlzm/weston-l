@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_137d590ab95f26ee3fc50d28cbf8936f" kind="dir">
+    <compoundname>/home/lzm/Wayland/weston/libweston/backend-rdp</compoundname>
+    <innerfile refid="rdp_8c">rdp.c</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/backend-rdp/"/>
+  </compounddef>
+</doxygen>

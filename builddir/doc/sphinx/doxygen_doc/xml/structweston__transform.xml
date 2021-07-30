@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__transform" kind="struct" language="C++" prot="public">
+    <compoundname>weston_transform</compoundname>
+    <includes refid="libweston_8h" local="no">libweston.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__transform_1a2e8c01aca6da1fca782c208b7a19486d" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structweston__matrix" kindref="compound">weston_matrix</ref></type>
+        <definition>struct weston_matrix weston_transform::matrix</definition>
+        <argsstring></argsstring>
+        <name>matrix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="57" column="15" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__transform_1a4ba9d647b2fd275411de8d7ba1568758" prot="public" static="no" mutable="no">
+        <type>struct wl_list</type>
+        <definition>struct wl_list weston_transform::link</definition>
+        <argsstring></argsstring>
+        <name>link</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="57" column="15" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>weston_matrix</label>
+        <link refid="structweston__matrix"/>
+      </node>
+      <node id="1">
+        <label>weston_transform</label>
+        <link refid="structweston__transform"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>matrix</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="60" column="23" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="60" bodyend="63"/>
+    <listofallmembers>
+      <member refid="structweston__transform_1a4ba9d647b2fd275411de8d7ba1568758" prot="public" virt="non-virtual"><scope>weston_transform</scope><name>link</name></member>
+      <member refid="structweston__transform_1a2e8c01aca6da1fca782c208b7a19486d" prot="public" virt="non-virtual"><scope>weston_transform</scope><name>matrix</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

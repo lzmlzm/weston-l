@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="input-timestamps-helper_8h" kind="file" language="C++">
+    <compoundname>input-timestamps-helper.h</compoundname>
+    <includes local="yes">config.h</includes>
+    <includedby refid="input-timestamps-helper_8c" local="yes">/home/lzm/Wayland/weston/tests/input-timestamps-helper.c</includedby>
+    <includedby refid="keyboard-test_8c" local="yes">/home/lzm/Wayland/weston/tests/keyboard-test.c</includedby>
+    <includedby refid="pointer-test_8c" local="yes">/home/lzm/Wayland/weston/tests/pointer-test.c</includedby>
+    <includedby refid="touch-test_8c" local="yes">/home/lzm/Wayland/weston/tests/touch-test.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/tests/input-timestamps-helper.h</label>
+        <link refid="input-timestamps-helper_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/lzm/Wayland/weston/tests/input-timestamps-helper.c</label>
+        <link refid="input-timestamps-helper_8c"/>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/tests/input-timestamps-helper.h</label>
+        <link refid="input-timestamps-helper_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/lzm/Wayland/weston/tests/touch-test.c</label>
+        <link refid="touch-test_8c"/>
+      </node>
+      <node id="3">
+        <label>/home/lzm/Wayland/weston/tests/keyboard-test.c</label>
+        <link refid="keyboard-test_8c"/>
+      </node>
+      <node id="4">
+        <label>/home/lzm/Wayland/weston/tests/pointer-test.c</label>
+        <link refid="pointer-test_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="input-timestamps-helper_8h_1abe0e0e373385d900cb043ffcfb14586b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structinput__timestamps" kindref="compound">input_timestamps</ref> *</type>
+        <definition>struct input_timestamps* input_timestamps_create_for_keyboard</definition>
+        <argsstring>(struct client *client)</argsstring>
+        <name>input_timestamps_create_for_keyboard</name>
+        <param>
+          <type>struct <ref refid="structclient" kindref="compound">client</ref> *</type>
+          <declname>client</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/input-timestamps-helper.h" line="35" column="1" bodyfile="/home/lzm/Wayland/weston/tests/input-timestamps-helper.c" bodystart="92" bodyend="116" declfile="/home/lzm/Wayland/weston/tests/input-timestamps-helper.h" declline="35" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="input-timestamps-helper_8h_1adf8480aab2199afad7709b3307c11489" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structinput__timestamps" kindref="compound">input_timestamps</ref> *</type>
+        <definition>struct input_timestamps* input_timestamps_create_for_pointer</definition>
+        <argsstring>(struct client *client)</argsstring>
+        <name>input_timestamps_create_for_pointer</name>
+        <param>
+          <type>struct <ref refid="structclient" kindref="compound">client</ref> *</type>
+          <declname>client</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/input-timestamps-helper.h" line="38" column="1" bodyfile="/home/lzm/Wayland/weston/tests/input-timestamps-helper.c" bodystart="119" bodyend="143" declfile="/home/lzm/Wayland/weston/tests/input-timestamps-helper.h" declline="38" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="input-timestamps-helper_8h_1ab10d340e73ca58f07dd00d58aa1df388" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structinput__timestamps" kindref="compound">input_timestamps</ref> *</type>
+        <definition>struct input_timestamps* input_timestamps_create_for_touch</definition>
+        <argsstring>(struct client *client)</argsstring>
+        <name>input_timestamps_create_for_touch</name>
+        <param>
+          <type>struct <ref refid="structclient" kindref="compound">client</ref> *</type>
+          <declname>client</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/input-timestamps-helper.h" line="41" column="1" bodyfile="/home/lzm/Wayland/weston/tests/input-timestamps-helper.c" bodystart="146" bodyend="170" declfile="/home/lzm/Wayland/weston/tests/input-timestamps-helper.h" declline="41" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="input-timestamps-helper_8h_1afde6c34b0a97e726dab733d1815c056d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void input_timestamps_destroy</definition>
+        <argsstring>(struct input_timestamps *input_ts)</argsstring>
+        <name>input_timestamps_destroy</name>
+        <param>
+          <type>struct <ref refid="structinput__timestamps" kindref="compound">input_timestamps</ref> *</type>
+          <declname>input_ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/input-timestamps-helper.h" line="44" column="1" bodyfile="/home/lzm/Wayland/weston/tests/input-timestamps-helper.c" bodystart="173" bodyend="177" declfile="/home/lzm/Wayland/weston/tests/input-timestamps-helper.h" declline="44" declcolumn="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2017<sp/>Collabora,<sp/>Ltd.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>(including<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>next<sp/>paragraph)<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>NONINFRINGEMENT.<sp/><sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>INPUT_TIMESTAMPS_HELPER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INPUT_TIMESTAMPS_HELPER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclient" kindref="compound">client</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structinput__timestamps" kindref="compound">input_timestamps</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structinput__timestamps" kindref="compound">input_timestamps</ref><sp/>*</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><ref refid="input-timestamps-helper_8h_1abe0e0e373385d900cb043ffcfb14586b" kindref="member">input_timestamps_create_for_keyboard</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclient" kindref="compound">client</ref><sp/>*<ref refid="structclient" kindref="compound">client</ref>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structinput__timestamps" kindref="compound">input_timestamps</ref><sp/>*</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><ref refid="input-timestamps-helper_8h_1adf8480aab2199afad7709b3307c11489" kindref="member">input_timestamps_create_for_pointer</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclient" kindref="compound">client</ref><sp/>*<ref refid="structclient" kindref="compound">client</ref>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structinput__timestamps" kindref="compound">input_timestamps</ref><sp/>*</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><ref refid="input-timestamps-helper_8h_1ab10d340e73ca58f07dd00d58aa1df388" kindref="member">input_timestamps_create_for_touch</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclient" kindref="compound">client</ref><sp/>*<ref refid="structclient" kindref="compound">client</ref>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><ref refid="input-timestamps-helper_8h_1afde6c34b0a97e726dab733d1815c056d" kindref="member">input_timestamps_destroy</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structinput__timestamps" kindref="compound">input_timestamps</ref><sp/>*input_ts);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>INPUT_TIMESTAMPS_HELPER_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/tests/input-timestamps-helper.h"/>
+  </compounddef>
+</doxygen>

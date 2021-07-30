@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structvertex__clip__test__data" kind="struct" language="C++" prot="public">
+    <compoundname>vertex_clip_test_data</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structvertex__clip__test__data_1a0e68eb6d6b7819850c8022a35d0ba441" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structpolygon8" kindref="compound">polygon8</ref></type>
+        <definition>struct polygon8 vertex_clip_test_data::surface</definition>
+        <argsstring></argsstring>
+        <name>surface</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/vertex-clip-test.c" line="219" column="1" bodyfile="/home/lzm/Wayland/weston/tests/vertex-clip-test.c" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvertex__clip__test__data_1a0030fe74eac83f1e998e998e86f11866" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structpolygon8" kindref="compound">polygon8</ref></type>
+        <definition>struct polygon8 vertex_clip_test_data::expected</definition>
+        <argsstring></argsstring>
+        <name>expected</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/vertex-clip-test.c" line="219" column="1" bodyfile="/home/lzm/Wayland/weston/tests/vertex-clip-test.c" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>polygon8</label>
+        <link refid="structpolygon8"/>
+      </node>
+      <node id="1">
+        <label>vertex_clip_test_data</label>
+        <link refid="structvertex__clip__test__data"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>expected</edgelabel>
+          <edgelabel>surface</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lzm/Wayland/weston/tests/vertex-clip-test.c" line="71" column="1" bodyfile="/home/lzm/Wayland/weston/tests/vertex-clip-test.c" bodystart="70" bodyend="74"/>
+    <listofallmembers>
+      <member refid="structvertex__clip__test__data_1a0030fe74eac83f1e998e998e86f11866" prot="public" virt="non-virtual"><scope>vertex_clip_test_data</scope><name>expected</name></member>
+      <member refid="structvertex__clip__test__data_1a0e68eb6d6b7819850c8022a35d0ba441" prot="public" virt="non-virtual"><scope>vertex_clip_test_data</scope><name>surface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

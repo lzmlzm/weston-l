@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__windowed__output__api" kind="struct" language="C++" prot="public">
+    <compoundname>weston_windowed_output_api</compoundname>
+    <includes refid="windowed-output-api_8h" local="no">windowed-output-api.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__windowed__output__api_1af9e442abae1c9944f580e00d39723efd" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* weston_windowed_output_api::output_set_size) (struct weston_output *output, int width, int height)</definition>
+        <argsstring>)(struct weston_output *output, int width, int height)</argsstring>
+        <name>output_set_size</name>
+        <briefdescription>
+<para>Assign a given width and height to an output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An output to be configured. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Desired width of the output. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Desired height of the output.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Returns 0 on success, -1 on failure.</para>
+<para>This assigns a desired width and height to a windowed output. The backend decides what should be done and applies the desired configuration. After using this function and generic weston_output_set_*, a windowed output should be in a state where <ref refid="group__output_1ga80c54aa6f93b50afc216bb6ab9c97575" kindref="member">weston_output_enable()</ref> can be run. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/windowed-output-api.h" line="56" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/windowed-output-api.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__windowed__output__api_1ab0d8a46e892d3e74e0c3cd92a5b3fbe2" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* weston_windowed_output_api::create_head) (struct weston_compositor *compositor, const char *name)</definition>
+        <argsstring>)(struct weston_compositor *compositor, const char *name)</argsstring>
+        <name>create_head</name>
+        <briefdescription>
+<para>Create a new windowed head. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>compositor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The compositor instance. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Desired name for a new head, not NULL.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Returns 0 on success, -1 on failure.</para>
+<para>This creates a new head in the backend. The new head will be advertised in the compositor&apos;s head list and triggers a head_changed callback.</para>
+<para>A new output can be created for the head. The output must be configured with <ref refid="structweston__windowed__output__api_1af9e442abae1c9944f580e00d39723efd" kindref="member">output_set_size()</ref> and weston_output_set_{scale,transform}() before enabling it.</para>
+<para><simplesect kind="see"><para>weston_compositor_set_heads_changed_cb(), <ref refid="group__compositor_1gadc6c426dbd044667d0d1f5ec7ec47ae0" kindref="member">weston_compositor_create_output_with_head()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/windowed-output-api.h" line="77" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/windowed-output-api.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/include/libweston/windowed-output-api.h" line="40" column="33" bodyfile="/home/lzm/Wayland/weston/include/libweston/windowed-output-api.h" bodystart="40" bodyend="79"/>
+    <listofallmembers>
+      <member refid="structweston__windowed__output__api_1ab0d8a46e892d3e74e0c3cd92a5b3fbe2" prot="public" virt="non-virtual"><scope>weston_windowed_output_api</scope><name>create_head</name></member>
+      <member refid="structweston__windowed__output__api_1af9e442abae1c9944f580e00d39723efd" prot="public" virt="non-virtual"><scope>weston_windowed_output_api</scope><name>output_set_size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

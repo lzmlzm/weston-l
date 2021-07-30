@@ -1,0 +1,447 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="linux-dmabuf_8h" kind="file" language="C++">
+    <compoundname>linux-dmabuf.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includedby refid="drm-gbm_8c" local="yes">/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c</includedby>
+    <includedby refid="drm_8c" local="yes">/home/lzm/Wayland/weston/libweston/backend-drm/drm.c</includedby>
+    <includedby refid="fb_8c" local="no">/home/lzm/Wayland/weston/libweston/backend-drm/fb.c</includedby>
+    <includedby refid="state-propose_8c" local="yes">/home/lzm/Wayland/weston/libweston/backend-drm/state-propose.c</includedby>
+    <includedby refid="headless_8c" local="yes">/home/lzm/Wayland/weston/libweston/backend-headless/headless.c</includedby>
+    <includedby refid="wayland_8c" local="yes">/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c</includedby>
+    <includedby refid="x11_8c" local="yes">/home/lzm/Wayland/weston/libweston/backend-x11/x11.c</includedby>
+    <includedby refid="compositor_8c" local="yes">/home/lzm/Wayland/weston/libweston/compositor.c</includedby>
+    <includedby refid="linux-dmabuf_8c" local="yes">/home/lzm/Wayland/weston/libweston/linux-dmabuf.c</includedby>
+    <includedby refid="gl-renderer_8c" local="yes">/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c</includedby>
+    <includedby refid="weston-direct-display_8c" local="yes">/home/lzm/Wayland/weston/libweston/weston-direct-display.c</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>stdint.h</label>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/libweston/linux-dmabuf.h</label>
+        <link refid="linux-dmabuf_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/drm.c</label>
+        <link refid="drm_8c"/>
+      </node>
+      <node id="2">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c</label>
+        <link refid="drm-gbm_8c"/>
+      </node>
+      <node id="6">
+        <label>/home/lzm/Wayland/weston/libweston/backend-headless/headless.c</label>
+        <link refid="headless_8c"/>
+      </node>
+      <node id="10">
+        <label>/home/lzm/Wayland/weston/libweston/linux-dmabuf.c</label>
+        <link refid="linux-dmabuf_8c"/>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/libweston/linux-dmabuf.h</label>
+        <link refid="linux-dmabuf_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>/home/lzm/Wayland/weston/libweston/weston-direct-display.c</label>
+        <link refid="weston-direct-display_8c"/>
+      </node>
+      <node id="8">
+        <label>/home/lzm/Wayland/weston/libweston/backend-x11/x11.c</label>
+        <link refid="x11_8c"/>
+      </node>
+      <node id="5">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/state-propose.c</label>
+        <link refid="state-propose_8c"/>
+      </node>
+      <node id="11">
+        <label>/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c</label>
+        <link refid="gl-renderer_8c"/>
+      </node>
+      <node id="7">
+        <label>/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c</label>
+        <link refid="wayland_8c"/>
+      </node>
+      <node id="4">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/fb.c</label>
+        <link refid="fb_8c"/>
+      </node>
+      <node id="9">
+        <label>/home/lzm/Wayland/weston/libweston/compositor.c</label>
+        <link refid="compositor_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structdmabuf__attributes" prot="public">dmabuf_attributes</innerclass>
+    <innerclass refid="structlinux__dmabuf__buffer" prot="public">linux_dmabuf_buffer</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="linux-dmabuf_8h_1a173d53f472d375e2e79911432fa7b858" prot="public" static="no">
+        <name>MAX_DMABUF_PLANES</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" line="31" column="9" bodyfile="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="linux-dmabuf_8h_1af5de092cebfaf86d7691b33a06d0d3ec" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* dmabuf_user_data_destroy_func) (struct linux_dmabuf_buffer *buffer)</definition>
+        <argsstring>)(struct linux_dmabuf_buffer *buffer)</argsstring>
+        <name>dmabuf_user_data_destroy_func</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" line="34" column="9" bodyfile="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="linux-dmabuf_8h_1a9d35a0fd3b7287d34b2fd201fa1b1ca7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int linux_dmabuf_setup</definition>
+        <argsstring>(struct weston_compositor *compositor)</argsstring>
+        <name>linux_dmabuf_setup</name>
+        <param>
+          <type>struct <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> *</type>
+          <declname>compositor</declname>
+        </param>
+        <briefdescription>
+<para>Advertise linux_dmabuf support. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Calling this initializes the zwp_linux_dmabuf protocol support, so that the interface will be advertised to clients. Essentially it creates a global. Do not call this function multiple times in the compositor&apos;s lifetime. There is no way to deinit explicitly, globals will be reaped when the wl_display gets destroyed.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>compositor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The compositor to init for. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero on success, -1 on failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" line="78" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/linux-dmabuf.c" bodystart="548" bodyend="556" declfile="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" declline="78" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="linux-dmabuf_8h_1a4cabda5e7831a11fc801b72d9f8bd58b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int weston_direct_display_setup</definition>
+        <argsstring>(struct weston_compositor *compositor)</argsstring>
+        <name>weston_direct_display_setup</name>
+        <param>
+          <type>struct <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> *</type>
+          <declname>compositor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" line="81" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-direct-display.c" bodystart="84" bodyend="92" declfile="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" declline="81" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="linux-dmabuf_8h_1aaac1c91887b3308aa22157b10ef77a3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structlinux__dmabuf__buffer" kindref="compound">linux_dmabuf_buffer</ref> *</type>
+        <definition>struct linux_dmabuf_buffer* linux_dmabuf_buffer_get</definition>
+        <argsstring>(struct wl_resource *resource)</argsstring>
+        <name>linux_dmabuf_buffer_get</name>
+        <param>
+          <type>struct wl_resource *</type>
+          <declname>resource</declname>
+        </param>
+        <briefdescription>
+<para>Get the <ref refid="structlinux__dmabuf__buffer" kindref="compound">linux_dmabuf_buffer</ref> from a wl_buffer resource. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the given wl_buffer resource was created through the linux_dmabuf protocol interface, returns the <ref refid="structlinux__dmabuf__buffer" kindref="compound">linux_dmabuf_buffer</ref> object. This can be used as a type check for a wl_buffer.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>resource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A wl_buffer resource. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="structlinux__dmabuf__buffer" kindref="compound">linux_dmabuf_buffer</ref> if it exists, or NULL otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" line="84" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/linux-dmabuf.c" bodystart="408" bodyend="425" declfile="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" declline="84" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="linux-dmabuf_8h_1a21027f0ac30b114a8ade4f4283f2fe52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linux_dmabuf_buffer_set_user_data</definition>
+        <argsstring>(struct linux_dmabuf_buffer *buffer, void *data, dmabuf_user_data_destroy_func func)</argsstring>
+        <name>linux_dmabuf_buffer_set_user_data</name>
+        <param>
+          <type>struct <ref refid="structlinux__dmabuf__buffer" kindref="compound">linux_dmabuf_buffer</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="linux-dmabuf_8h_1af5de092cebfaf86d7691b33a06d0d3ec" kindref="member">dmabuf_user_data_destroy_func</ref></type>
+          <declname>func</declname>
+        </param>
+        <briefdescription>
+<para>Set renderer-private data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the user data for the <ref refid="structlinux__dmabuf__buffer" kindref="compound">linux_dmabuf_buffer</ref>. It is invalid to overwrite a non-NULL user data with a new non-NULL pointer. This is meant to protect against renderers fighting over <ref refid="structlinux__dmabuf__buffer" kindref="compound">linux_dmabuf_buffer</ref> user data ownership.</para>
+<para>The renderer-private data is usually set from the <ref refid="structweston__renderer_1a5999bb29493d522ddcff40318e677e2d" kindref="member">weston_renderer::import_dmabuf</ref> hook.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="structlinux__dmabuf__buffer" kindref="compound">linux_dmabuf_buffer</ref> object to set for. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new renderer-private data pointer. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>func</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destructor function to be called for the renderer-private data when the <ref refid="structlinux__dmabuf__buffer" kindref="compound">linux_dmabuf_buffer</ref> gets destroyed.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__compositor_1ga321e3fcf45c3aa5f8d5280691f6232c3" kindref="member">weston_compositor_import_dmabuf</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" line="87" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/linux-dmabuf.c" bodystart="445" bodyend="453" declfile="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" declline="87" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="linux-dmabuf_8h_1ac7fe0165b8d6bc4a87d57a777e9ec203" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* linux_dmabuf_buffer_get_user_data</definition>
+        <argsstring>(struct linux_dmabuf_buffer *buffer)</argsstring>
+        <name>linux_dmabuf_buffer_get_user_data</name>
+        <param>
+          <type>struct <ref refid="structlinux__dmabuf__buffer" kindref="compound">linux_dmabuf_buffer</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+<para>Get renderer-private data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the user data from the <ref refid="structlinux__dmabuf__buffer" kindref="compound">linux_dmabuf_buffer</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="structlinux__dmabuf__buffer" kindref="compound">linux_dmabuf_buffer</ref> to query. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Renderer-private data pointer.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="linux-dmabuf_8c_1a21027f0ac30b114a8ade4f4283f2fe52" kindref="member">linux_dmabuf_buffer_set_user_data</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" line="91" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/linux-dmabuf.c" bodystart="465" bodyend="468" declfile="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" declline="91" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="linux-dmabuf_8h_1aac0dfaeedbe94a6eff566ebdc3fd8a73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void linux_dmabuf_buffer_send_server_error</definition>
+        <argsstring>(struct linux_dmabuf_buffer *buffer, const char *msg)</argsstring>
+        <name>linux_dmabuf_buffer_send_server_error</name>
+        <param>
+          <type>struct <ref refid="structlinux__dmabuf__buffer" kindref="compound">linux_dmabuf_buffer</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>Resolve an internal compositor error by disconnecting the client. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is used in cases when the dmabuf-based wl_buffer turns out unusable and there is no fallback path. This is used by renderers which are the fallback path in the first place.</para>
+<para>It is possible the fault is caused by a compositor bug, the underlying graphics stack bug or normal behaviour, or perhaps a client mistake. In any case, the options are to either composite garbage or nothing, or disconnect the client. This is a helper function for the latter.</para>
+<para>The error is sent as an INVALID_OBJECT error on the client&apos;s wl_display.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="structlinux__dmabuf__buffer" kindref="compound">linux_dmabuf_buffer</ref> that is unusable. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A custom error message attached to the protocol error. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" line="94" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/linux-dmabuf.c" bodystart="575" bodyend="592" declfile="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h" declline="94" declcolumn="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2014,<sp/>2015<sp/>Collabora,<sp/>Ltd.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>(including<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>next<sp/>paragraph)<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>NONINFRINGEMENT.<sp/><sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>WESTON_LINUX_DMABUF_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WESTON_LINUX_DMABUF_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="linux-dmabuf_8h_1a173d53f472d375e2e79911432fa7b858" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_DMABUF_PLANES<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlinux__dmabuf__buffer" kindref="compound">linux_dmabuf_buffer</ref>;</highlight></codeline>
+<codeline lineno="34" refid="linux-dmabuf_8h_1af5de092cebfaf86d7691b33a06d0d3ec" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="linux-dmabuf_8h_1af5de092cebfaf86d7691b33a06d0d3ec" kindref="member">dmabuf_user_data_destroy_func</ref>)(</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlinux__dmabuf__buffer" kindref="compound">linux_dmabuf_buffer</ref><sp/>*<ref refid="structbuffer" kindref="compound">buffer</ref>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="structdmabuf__attributes" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdmabuf__attributes" kindref="compound">dmabuf_attributes</ref><sp/>{</highlight></codeline>
+<codeline lineno="38" refid="structdmabuf__attributes_1aca9083138f9bf5e7c359f57f8daec03c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int32_t<sp/><ref refid="structdmabuf__attributes_1aca9083138f9bf5e7c359f57f8daec03c" kindref="member">width</ref>;</highlight></codeline>
+<codeline lineno="39" refid="structdmabuf__attributes_1a4aea605be2fe267863b1849f1e63f44d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int32_t<sp/><ref refid="structdmabuf__attributes_1a4aea605be2fe267863b1849f1e63f44d" kindref="member">height</ref>;</highlight></codeline>
+<codeline lineno="40" refid="structdmabuf__attributes_1a164a1a414225914d63e4976fe70c3d9d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structdmabuf__attributes_1a164a1a414225914d63e4976fe70c3d9d" kindref="member">format</ref>;</highlight></codeline>
+<codeline lineno="41" refid="structdmabuf__attributes_1adb394e9536714c5db04ea8e5b7ac0063" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structdmabuf__attributes_1adb394e9536714c5db04ea8e5b7ac0063" kindref="member">flags</ref>;<sp/></highlight><highlight class="comment">/*<sp/>enum<sp/>zlinux_buffer_params_flags<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="structdmabuf__attributes_1ad4accfe9d382c47849a35bc3bb4affc0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structdmabuf__attributes_1ad4accfe9d382c47849a35bc3bb4affc0" kindref="member">n_planes</ref>;</highlight></codeline>
+<codeline lineno="43" refid="structdmabuf__attributes_1ab8e678e82a6b79f7e7ac970201251198" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structdmabuf__attributes_1ab8e678e82a6b79f7e7ac970201251198" kindref="member">fd</ref>[<ref refid="linux-dmabuf_8h_1a173d53f472d375e2e79911432fa7b858" kindref="member">MAX_DMABUF_PLANES</ref>];</highlight></codeline>
+<codeline lineno="44" refid="structdmabuf__attributes_1a4e2f1d01ed4094ed5bb23628326bed72" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structdmabuf__attributes_1a4e2f1d01ed4094ed5bb23628326bed72" kindref="member">offset</ref>[<ref refid="linux-dmabuf_8h_1a173d53f472d375e2e79911432fa7b858" kindref="member">MAX_DMABUF_PLANES</ref>];</highlight></codeline>
+<codeline lineno="45" refid="structdmabuf__attributes_1a5ba22d828fbb58ee02f205c72a939f98" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structdmabuf__attributes_1a5ba22d828fbb58ee02f205c72a939f98" kindref="member">stride</ref>[<ref refid="linux-dmabuf_8h_1a173d53f472d375e2e79911432fa7b858" kindref="member">MAX_DMABUF_PLANES</ref>];</highlight></codeline>
+<codeline lineno="46" refid="structdmabuf__attributes_1ab6e328e4c0816fd48290c701e9510744" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64_t<sp/><ref refid="structdmabuf__attributes_1ab6e328e4c0816fd48290c701e9510744" kindref="member">modifier</ref>[<ref refid="linux-dmabuf_8h_1a173d53f472d375e2e79911432fa7b858" kindref="member">MAX_DMABUF_PLANES</ref>];</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="structlinux__dmabuf__buffer" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlinux__dmabuf__buffer" kindref="compound">linux_dmabuf_buffer</ref><sp/>{</highlight></codeline>
+<codeline lineno="50" refid="structlinux__dmabuf__buffer_1adcbbe091893ca755f3df9e4bdbc969d7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_resource<sp/>*<ref refid="structlinux__dmabuf__buffer_1adcbbe091893ca755f3df9e4bdbc969d7" kindref="member">buffer_resource</ref>;</highlight></codeline>
+<codeline lineno="51" refid="structlinux__dmabuf__buffer_1afe31c502c05bd5a13a08528acec7ff94" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_resource<sp/>*<ref refid="structlinux__dmabuf__buffer_1afe31c502c05bd5a13a08528acec7ff94" kindref="member">params_resource</ref>;</highlight></codeline>
+<codeline lineno="52" refid="structlinux__dmabuf__buffer_1a8587fed4c04c1fdf31d30f7a9083b3b7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__compositor" kindref="compound">weston_compositor</ref><sp/>*<ref refid="structlinux__dmabuf__buffer_1a8587fed4c04c1fdf31d30f7a9083b3b7" kindref="member">compositor</ref>;</highlight></codeline>
+<codeline lineno="53" refid="structlinux__dmabuf__buffer_1a4e22fa2d24152b8a952e2814fe58c76c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdmabuf__attributes" kindref="compound">dmabuf_attributes</ref><sp/><ref refid="structlinux__dmabuf__buffer_1a4e22fa2d24152b8a952e2814fe58c76c" kindref="member">attributes</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="structlinux__dmabuf__buffer_1a4353f55b3214225963a5973718823872" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structlinux__dmabuf__buffer_1a4353f55b3214225963a5973718823872" kindref="member">user_data</ref>;</highlight></codeline>
+<codeline lineno="56" refid="structlinux__dmabuf__buffer_1a6ede3c745441ffef663571c55a00fbfe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="linux-dmabuf_8h_1af5de092cebfaf86d7691b33a06d0d3ec" kindref="member">dmabuf_user_data_destroy_func</ref><sp/><ref refid="structlinux__dmabuf__buffer_1a6ede3c745441ffef663571c55a00fbfe" kindref="member">user_data_destroy_func</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>XXX:</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="60"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Add<sp/>backend<sp/>private<sp/>data.<sp/>This<sp/>would<sp/>be<sp/>for<sp/>the<sp/>backend</highlight></codeline>
+<codeline lineno="61"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>to<sp/>do<sp/>all<sp/>additional<sp/>imports<sp/>it<sp/>might<sp/>ever<sp/>use<sp/>in<sp/>advance.</highlight></codeline>
+<codeline lineno="62"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>basic<sp/>principle,<sp/>even<sp/>if<sp/>not<sp/>implemented<sp/>in<sp/>drivers<sp/>today,</highlight></codeline>
+<codeline lineno="63"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>is<sp/>that<sp/>dmabufs<sp/>are<sp/>first<sp/>attached,<sp/>but<sp/>the<sp/>actual<sp/>allocation</highlight></codeline>
+<codeline lineno="64"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>is<sp/>deferred<sp/>to<sp/>first<sp/>use.<sp/>This<sp/>would<sp/>allow<sp/>the<sp/>exporter<sp/>and<sp/>all</highlight></codeline>
+<codeline lineno="65"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>attachers<sp/>to<sp/>agree<sp/>on<sp/>how<sp/>to<sp/>allocate.</highlight></codeline>
+<codeline lineno="66"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="67"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>DRM<sp/>backend<sp/>would<sp/>use<sp/>this<sp/>to<sp/>create<sp/>drmFBs<sp/>for<sp/>each</highlight></codeline>
+<codeline lineno="68"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>dmabuf_buffer,<sp/>just<sp/>in<sp/>case<sp/>at<sp/>some<sp/>point<sp/>it<sp/>would<sp/>become</highlight></codeline>
+<codeline lineno="69"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>feasible<sp/>to<sp/>scan<sp/>it<sp/>out<sp/>directly.<sp/>This<sp/>would<sp/>improve<sp/>the</highlight></codeline>
+<codeline lineno="70"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>possibilities<sp/>to<sp/>successfully<sp/>scan<sp/>out,<sp/>avoiding<sp/>compositing.</highlight></codeline>
+<codeline lineno="71"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="structlinux__dmabuf__buffer_1afa2cda0071adfc3d935ed49af7e90de2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structlinux__dmabuf__buffer_1afa2cda0071adfc3d935ed49af7e90de2" kindref="member">direct_display</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><ref refid="linux-dmabuf_8h_1a9d35a0fd3b7287d34b2fd201fa1b1ca7" kindref="member">linux_dmabuf_setup</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__compositor" kindref="compound">weston_compositor</ref><sp/>*compositor);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><ref refid="linux-dmabuf_8h_1a4cabda5e7831a11fc801b72d9f8bd58b" kindref="member">weston_direct_display_setup</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__compositor" kindref="compound">weston_compositor</ref><sp/>*compositor);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlinux__dmabuf__buffer" kindref="compound">linux_dmabuf_buffer</ref><sp/>*</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><ref refid="linux-dmabuf_8h_1aaac1c91887b3308aa22157b10ef77a3f" kindref="member">linux_dmabuf_buffer_get</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>wl_resource<sp/>*resource);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><ref refid="linux-dmabuf_8h_1a21027f0ac30b114a8ade4f4283f2fe52" kindref="member">linux_dmabuf_buffer_set_user_data</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structlinux__dmabuf__buffer" kindref="compound">linux_dmabuf_buffer</ref><sp/>*<ref refid="structbuffer" kindref="compound">buffer</ref>,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="linux-dmabuf_8h_1af5de092cebfaf86d7691b33a06d0d3ec" kindref="member">dmabuf_user_data_destroy_func</ref><sp/>func);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><ref refid="linux-dmabuf_8h_1ac7fe0165b8d6bc4a87d57a777e9ec203" kindref="member">linux_dmabuf_buffer_get_user_data</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structlinux__dmabuf__buffer" kindref="compound">linux_dmabuf_buffer</ref><sp/>*<ref refid="structbuffer" kindref="compound">buffer</ref>);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><ref refid="linux-dmabuf_8h_1aac0dfaeedbe94a6eff566ebdc3fd8a73" kindref="member">linux_dmabuf_buffer_send_server_error</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structlinux__dmabuf__buffer" kindref="compound">linux_dmabuf_buffer</ref><sp/>*<ref refid="structbuffer" kindref="compound">buffer</ref>,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*msg);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>WESTON_LINUX_DMABUF_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/libweston/linux-dmabuf.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structoutput" kind="struct" language="C++" prot="public">
+    <compoundname>output</compoundname>
+    <includes refid="weston-test-client-helper_8h" local="no">weston-test-client-helper.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structoutput_1ab3714f202a35ed8ad64ec34ec33e7c41" prot="public" static="no" mutable="no">
+        <type>struct wl_output *</type>
+        <definition>struct wl_output* output::wl_output</definition>
+        <argsstring></argsstring>
+        <name>wl_output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="150" column="16" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structoutput_1a3b73765192267573e6a570e88c1a27d0" prot="public" static="no" mutable="no">
+        <type>struct wl_list</type>
+        <definition>struct wl_list output::link</definition>
+        <argsstring></argsstring>
+        <name>link</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="150" column="16" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structoutput_1acaa160777547223ba734d78e4690c24b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int output::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="152" column="5" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structoutput_1ac2c2a13096bd351fda95e72cb6f5a254" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int output::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="153" column="5" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structoutput_1a8d0ce045e764bc53e9cb70b1c5830acb" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int output::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="154" column="5" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structoutput_1ab82f03b52728ed0bdc7471851c0411ef" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int output::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="155" column="5" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structoutput_1aa7a572455f77dc2d50ff14cda028cde2" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int output::scale</definition>
+        <argsstring></argsstring>
+        <name>scale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="156" column="5" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structoutput_1af5d772347c11941b20b7e83b952d42bd" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int output::initialized</definition>
+        <argsstring></argsstring>
+        <name>initialized</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="157" column="5" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="149" column="13" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="149" bodyend="158"/>
+    <listofallmembers>
+      <member refid="structoutput_1ab82f03b52728ed0bdc7471851c0411ef" prot="public" virt="non-virtual"><scope>output</scope><name>height</name></member>
+      <member refid="structoutput_1af5d772347c11941b20b7e83b952d42bd" prot="public" virt="non-virtual"><scope>output</scope><name>initialized</name></member>
+      <member refid="structoutput_1a3b73765192267573e6a570e88c1a27d0" prot="public" virt="non-virtual"><scope>output</scope><name>link</name></member>
+      <member refid="structoutput_1aa7a572455f77dc2d50ff14cda028cde2" prot="public" virt="non-virtual"><scope>output</scope><name>scale</name></member>
+      <member refid="structoutput_1a8d0ce045e764bc53e9cb70b1c5830acb" prot="public" virt="non-virtual"><scope>output</scope><name>width</name></member>
+      <member refid="structoutput_1ab3714f202a35ed8ad64ec34ec33e7c41" prot="public" virt="non-virtual"><scope>output</scope><name>wl_output</name></member>
+      <member refid="structoutput_1acaa160777547223ba734d78e4690c24b" prot="public" virt="non-virtual"><scope>output</scope><name>x</name></member>
+      <member refid="structoutput_1ac2c2a13096bd351fda95e72cb6f5a254" prot="public" virt="non-virtual"><scope>output</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

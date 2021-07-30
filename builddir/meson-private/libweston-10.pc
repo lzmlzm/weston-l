@@ -1,0 +1,10 @@
+prefix=/home/lzm/Wayland/install
+libdir=${prefix}/lib/x86_64-linux-gnu
+includedir=${prefix}/include
+
+Name: libweston API
+Description: Header files for libweston compositors development
+Version: 9.0.90
+Requires.private: wayland-server >=  1.18.0, pixman-1 >=  0.25.2, xkbcommon >=  0.3.0
+Libs: -L${libdir} -lweston-10
+Cflags: -I${includedir}/libweston-10

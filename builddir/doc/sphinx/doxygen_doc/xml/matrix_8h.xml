@@ -1,0 +1,1121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="matrix_8h" kind="file" language="C++">
+    <compoundname>matrix.h</compoundname>
+    <includedby refid="libweston_8h" local="no">/home/lzm/Wayland/weston/include/libweston/libweston.h</includedby>
+    <includedby refid="matrix-test_8c" local="no">/home/lzm/Wayland/weston/tests/matrix-test.c</includedby>
+    <invincdepgraph>
+      <node id="6">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/drm-virtual.c</label>
+        <link refid="drm-virtual_8c"/>
+      </node>
+      <node id="31">
+        <label>/home/lzm/Wayland/weston/libweston/launcher-util.c</label>
+        <link refid="launcher-util_8c"/>
+      </node>
+      <node id="33">
+        <label>/home/lzm/Wayland/weston/libweston/launcher-util.h</label>
+        <link refid="launcher-util_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>/home/lzm/Wayland/weston/libweston/content-protection.c</label>
+        <link refid="content-protection_8c"/>
+      </node>
+      <node id="95">
+        <label>/home/lzm/Wayland/weston/tests/yuv-buffer-test.c</label>
+        <link refid="yuv-buffer-test_8c"/>
+      </node>
+      <node id="7">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/drm.c</label>
+        <link refid="drm_8c"/>
+      </node>
+      <node id="44">
+        <label>/home/lzm/Wayland/weston/libweston/plugin-registry.c</label>
+        <link refid="plugin-registry_8c"/>
+      </node>
+      <node id="103">
+        <label>/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.c</label>
+        <link refid="weston-test-fixture-compositor_8c"/>
+      </node>
+      <node id="72">
+        <label>/home/lzm/Wayland/weston/tests/buffer-transforms-test.c</label>
+        <link refid="buffer-transforms-test_8c"/>
+      </node>
+      <node id="76">
+        <label>/home/lzm/Wayland/weston/tests/input-timestamps-helper.c</label>
+        <link refid="input-timestamps-helper_8c"/>
+      </node>
+      <node id="2">
+        <label>/home/lzm/Wayland/weston/include/libweston/libweston.h</label>
+        <link refid="libweston_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="106" relation="include">
+        </childnode>
+      </node>
+      <node id="67">
+        <label>/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h</label>
+        <link refid="weston-test-fixture-compositor_8h"/>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="103" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+      </node>
+      <node id="96">
+        <label>/home/lzm/Wayland/weston/tests/ivi-layout-internal-test.c</label>
+        <link refid="ivi-layout-internal-test_8c"/>
+      </node>
+      <node id="26">
+        <label>/home/lzm/Wayland/weston/libweston/launcher-libseat.c</label>
+        <link refid="launcher-libseat_8c"/>
+      </node>
+      <node id="28">
+        <label>/home/lzm/Wayland/weston/libweston/input.c</label>
+        <link refid="input_8c"/>
+      </node>
+      <node id="5">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c</label>
+        <link refid="drm-gbm_8c"/>
+      </node>
+      <node id="107">
+        <label>/home/lzm/Wayland/weston/tests/matrix-test.c</label>
+        <link refid="matrix-test_8c"/>
+      </node>
+      <node id="41">
+        <label>/home/lzm/Wayland/weston/libweston/noop-renderer.c</label>
+        <link refid="noop-renderer_8c"/>
+      </node>
+      <node id="29">
+        <label>/home/lzm/Wayland/weston/libweston/launcher-direct.c</label>
+        <link refid="launcher-direct_8c"/>
+      </node>
+      <node id="75">
+        <label>/home/lzm/Wayland/weston/tests/event-test.c</label>
+        <link refid="event-test_8c"/>
+      </node>
+      <node id="65">
+        <label>/home/lzm/Wayland/weston/include/libweston/pipewire-plugin.h</label>
+        <link refid="pipewire-plugin_8h"/>
+      </node>
+      <node id="15">
+        <label>/home/lzm/Wayland/weston/libweston/backend-headless/headless.c</label>
+        <link refid="headless_8c"/>
+      </node>
+      <node id="38">
+        <label>/home/lzm/Wayland/weston/libweston/linux-dmabuf.c</label>
+        <link refid="linux-dmabuf_8c"/>
+      </node>
+      <node id="30">
+        <label>/home/lzm/Wayland/weston/libweston/launcher-impl.h</label>
+        <link refid="launcher-impl_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>/home/lzm/Wayland/weston/libweston/weston-log-flight-rec.c</label>
+        <link refid="weston-log-flight-rec_8c"/>
+      </node>
+      <node id="81">
+        <label>/home/lzm/Wayland/weston/tests/linux-explicit-synchronization-test.c</label>
+        <link refid="linux-explicit-synchronization-test_8c"/>
+      </node>
+      <node id="16">
+        <label>/home/lzm/Wayland/weston/libweston/backend-rdp/rdp.c</label>
+        <link refid="rdp_8c"/>
+      </node>
+      <node id="4">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h</label>
+        <link refid="drm-internal_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>/home/lzm/Wayland/weston/libweston/renderer-gl/gl-shaders.c</label>
+        <link refid="gl-shaders_8c"/>
+      </node>
+      <node id="66">
+        <label>/home/lzm/Wayland/weston/include/libweston/remoting-plugin.h</label>
+        <link refid="remoting-plugin_8h"/>
+      </node>
+      <node id="90">
+        <label>/home/lzm/Wayland/weston/tests/text-test.c</label>
+        <link refid="text-test_8c"/>
+      </node>
+      <node id="53">
+        <label>/home/lzm/Wayland/weston/libweston/weston-direct-display.c</label>
+        <link refid="weston-direct-display_8c"/>
+      </node>
+      <node id="87">
+        <label>/home/lzm/Wayland/weston/tests/string-test.c</label>
+        <link refid="string-test_8c"/>
+      </node>
+      <node id="97">
+        <label>/home/lzm/Wayland/weston/tests/plugin-registry-test.c</label>
+        <link refid="plugin-registry-test_8c"/>
+      </node>
+      <node id="56">
+        <label>/home/lzm/Wayland/weston/libweston/weston-log-wayland.c</label>
+        <link refid="weston-log-wayland_8c"/>
+      </node>
+      <node id="64">
+        <label>/home/lzm/Wayland/weston/include/libweston/backend-x11.h</label>
+        <link refid="backend-x11_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>/home/lzm/Wayland/weston/libweston/backend-x11/x11.c</label>
+        <link refid="x11_8c"/>
+      </node>
+      <node id="63">
+        <label>/home/lzm/Wayland/weston/include/libweston/backend-wayland.h</label>
+        <link refid="backend-wayland_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="78">
+        <label>/home/lzm/Wayland/weston/tests/ivi-layout-test-client.c</label>
+        <link refid="ivi-layout-test-client_8c"/>
+      </node>
+      <node id="102">
+        <label>/home/lzm/Wayland/weston/tests/xwayland-test.c</label>
+        <link refid="xwayland-test_8c"/>
+      </node>
+      <node id="77">
+        <label>/home/lzm/Wayland/weston/tests/internal-screenshot-test.c</label>
+        <link refid="internal-screenshot-test_8c"/>
+      </node>
+      <node id="54">
+        <label>/home/lzm/Wayland/weston/libweston/weston-log-file.c</label>
+        <link refid="weston-log-file_8c"/>
+      </node>
+      <node id="40">
+        <label>/home/lzm/Wayland/weston/libweston/log.c</label>
+        <link refid="log_8c"/>
+      </node>
+      <node id="62">
+        <label>/home/lzm/Wayland/weston/include/libweston/backend-rdp.h</label>
+        <link refid="backend-rdp_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>/home/lzm/Wayland/weston/libweston/backend-fbdev/fbdev.c</label>
+        <link refid="fbdev_8c"/>
+      </node>
+      <node id="24">
+        <label>/home/lzm/Wayland/weston/libweston/dbus.c</label>
+        <link refid="dbus_8c"/>
+      </node>
+      <node id="25">
+        <label>/home/lzm/Wayland/weston/libweston/dbus.h</label>
+        <link refid="dbus_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="104">
+        <label>/home/lzm/Wayland/weston/tests/ivi-layout-test-plugin.c</label>
+        <link refid="ivi-layout-test-plugin_8c"/>
+      </node>
+      <node id="27">
+        <label>/home/lzm/Wayland/weston/libweston/launcher-logind.c</label>
+        <link refid="launcher-logind_8c"/>
+      </node>
+      <node id="12">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/state-propose.c</label>
+        <link refid="state-propose_8c"/>
+      </node>
+      <node id="23">
+        <label>/home/lzm/Wayland/weston/libweston/data-device.c</label>
+        <link refid="data-device_8c"/>
+      </node>
+      <node id="91">
+        <label>/home/lzm/Wayland/weston/tests/touch-test.c</label>
+        <link refid="touch-test_8c"/>
+      </node>
+      <node id="70">
+        <label>/home/lzm/Wayland/weston/tests/alpha-blending-test.c</label>
+        <link refid="alpha-blending-test_8c"/>
+      </node>
+      <node id="46">
+        <label>/home/lzm/Wayland/weston/libweston/renderer-gl/egl-glue.c</label>
+        <link refid="egl-glue_8c"/>
+      </node>
+      <node id="11">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/state-helpers.c</label>
+        <link refid="state-helpers_8c"/>
+      </node>
+      <node id="19">
+        <label>/home/lzm/Wayland/weston/libweston/bindings.c</label>
+        <link refid="bindings_8c"/>
+      </node>
+      <node id="59">
+        <label>/home/lzm/Wayland/weston/include/libweston/backend-drm.h</label>
+        <link refid="backend-drm_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="100">
+        <label>/home/lzm/Wayland/weston/tests/vertex-clip-test.c</label>
+        <link refid="vertex-clip-test_8c"/>
+      </node>
+      <node id="51">
+        <label>/home/lzm/Wayland/weston/libweston/timeline.c</label>
+        <link refid="timeline_8c"/>
+      </node>
+      <node id="83">
+        <label>/home/lzm/Wayland/weston/tests/output-transforms-test.c</label>
+        <link refid="output-transforms-test_8c"/>
+      </node>
+      <node id="43">
+        <label>/home/lzm/Wayland/weston/libweston/pixman-renderer.c</label>
+        <link refid="pixman-renderer_8c"/>
+      </node>
+      <node id="42">
+        <label>/home/lzm/Wayland/weston/libweston/pixman-renderer.h</label>
+        <link refid="pixman-renderer_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>/home/lzm/Wayland/weston/libweston/spring-tool.c</label>
+        <link refid="spring-tool_8c"/>
+      </node>
+      <node id="39">
+        <label>/home/lzm/Wayland/weston/libweston/linux-explicit-synchronization.c</label>
+        <link refid="linux-explicit-synchronization_8c"/>
+      </node>
+      <node id="49">
+        <label>/home/lzm/Wayland/weston/libweston/screenshooter.c</label>
+        <link refid="screenshooter_8c"/>
+      </node>
+      <node id="89">
+        <label>/home/lzm/Wayland/weston/tests/subsurface-test.c</label>
+        <link refid="subsurface-test_8c"/>
+      </node>
+      <node id="3">
+        <label>/home/lzm/Wayland/weston/libweston/animation.c</label>
+        <link refid="animation_8c"/>
+      </node>
+      <node id="47">
+        <label>/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c</label>
+        <link refid="gl-renderer_8c"/>
+      </node>
+      <node id="45">
+        <label>/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h</label>
+        <link refid="gl-renderer_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c</label>
+        <link refid="vaapi-recorder_8c"/>
+      </node>
+      <node id="73">
+        <label>/home/lzm/Wayland/weston/tests/devices-test.c</label>
+        <link refid="devices-test_8c"/>
+      </node>
+      <node id="93">
+        <label>/home/lzm/Wayland/weston/tests/viewporter-test.c</label>
+        <link refid="viewporter-test_8c"/>
+      </node>
+      <node id="98">
+        <label>/home/lzm/Wayland/weston/tests/surface-global-test.c</label>
+        <link refid="surface-global-test_8c"/>
+      </node>
+      <node id="82">
+        <label>/home/lzm/Wayland/weston/tests/output-damage-test.c</label>
+        <link refid="output-damage-test_8c"/>
+      </node>
+      <node id="9">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/kms.c</label>
+        <link refid="kms_8c"/>
+      </node>
+      <node id="58">
+        <label>/home/lzm/Wayland/weston/libweston/zoom.c</label>
+        <link refid="zoom_8c"/>
+      </node>
+      <node id="35">
+        <label>/home/lzm/Wayland/weston/libweston/libinput-device.c</label>
+        <link refid="libinput-device_8c"/>
+      </node>
+      <node id="36">
+        <label>/home/lzm/Wayland/weston/libweston/libinput-device.h</label>
+        <link refid="libinput-device_8h"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c</label>
+        <link refid="wayland_8c"/>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/include/libweston/matrix.h</label>
+        <link refid="matrix_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="107" relation="include">
+        </childnode>
+      </node>
+      <node id="92">
+        <label>/home/lzm/Wayland/weston/tests/viewporter-shot-test.c</label>
+        <link refid="viewporter-shot-test_8c"/>
+      </node>
+      <node id="8">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/fb.c</label>
+        <link refid="fb_8c"/>
+      </node>
+      <node id="79">
+        <label>/home/lzm/Wayland/weston/tests/ivi-shell-app-test.c</label>
+        <link refid="ivi-shell-app-test_8c"/>
+      </node>
+      <node id="86">
+        <label>/home/lzm/Wayland/weston/tests/roles-test.c</label>
+        <link refid="roles-test_8c"/>
+      </node>
+      <node id="80">
+        <label>/home/lzm/Wayland/weston/tests/keyboard-test.c</label>
+        <link refid="keyboard-test_8c"/>
+      </node>
+      <node id="57">
+        <label>/home/lzm/Wayland/weston/libweston/weston-log.c</label>
+        <link refid="weston-log_8c"/>
+      </node>
+      <node id="20">
+        <label>/home/lzm/Wayland/weston/libweston/clipboard.c</label>
+        <link refid="clipboard_8c"/>
+      </node>
+      <node id="84">
+        <label>/home/lzm/Wayland/weston/tests/pointer-test.c</label>
+        <link refid="pointer-test_8c"/>
+      </node>
+      <node id="71">
+        <label>/home/lzm/Wayland/weston/tests/bad-buffer-test.c</label>
+        <link refid="bad-buffer-test_8c"/>
+      </node>
+      <node id="99">
+        <label>/home/lzm/Wayland/weston/tests/surface-test.c</label>
+        <link refid="surface-test_8c"/>
+      </node>
+      <node id="52">
+        <label>/home/lzm/Wayland/weston/libweston/touch-calibration.c</label>
+        <link refid="touch-calibration_8c"/>
+      </node>
+      <node id="21">
+        <label>/home/lzm/Wayland/weston/libweston/compositor.c</label>
+        <link refid="compositor_8c"/>
+      </node>
+      <node id="34">
+        <label>/home/lzm/Wayland/weston/libweston/libinput-seat.c</label>
+        <link refid="libinput-seat_8c"/>
+      </node>
+      <node id="37">
+        <label>/home/lzm/Wayland/weston/libweston/libinput-seat.h</label>
+        <link refid="libinput-seat_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="101">
+        <label>/home/lzm/Wayland/weston/tests/weston-test-runner.c</label>
+        <link refid="weston-test-runner_8c"/>
+      </node>
+      <node id="68">
+        <label>/home/lzm/Wayland/weston/tests/weston-test-runner.h</label>
+        <link refid="weston-test-runner_8h"/>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+      </node>
+      <node id="106">
+        <label>/home/lzm/Wayland/weston/tests/weston-test.c</label>
+        <link refid="weston-test_8c"/>
+      </node>
+      <node id="10">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/modes.c</label>
+        <link refid="modes_8c"/>
+      </node>
+      <node id="85">
+        <label>/home/lzm/Wayland/weston/tests/presentation-test.c</label>
+        <link refid="presentation-test_8c"/>
+      </node>
+      <node id="60">
+        <label>/home/lzm/Wayland/weston/include/libweston/backend-fbdev.h</label>
+        <link refid="backend-fbdev_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="74">
+        <label>/home/lzm/Wayland/weston/tests/drm-smoke-test.c</label>
+        <link refid="drm-smoke-test_8c"/>
+      </node>
+      <node id="105">
+        <label>/home/lzm/Wayland/weston/tests/surface-screenshot-test.c</label>
+        <link refid="surface-screenshot-test_8c"/>
+      </node>
+      <node id="61">
+        <label>/home/lzm/Wayland/weston/include/libweston/backend-headless.h</label>
+        <link refid="backend-headless_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="94">
+        <label>/home/lzm/Wayland/weston/tests/weston-test-client-helper.c</label>
+        <link refid="weston-test-client-helper_8c"/>
+      </node>
+      <node id="69">
+        <label>/home/lzm/Wayland/weston/tests/weston-test-client-helper.h</label>
+        <link refid="weston-test-client-helper_8h"/>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+      </node>
+      <node id="88">
+        <label>/home/lzm/Wayland/weston/tests/subsurface-shot-test.c</label>
+        <link refid="subsurface-shot-test_8c"/>
+      </node>
+      <node id="32">
+        <label>/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c</label>
+        <link refid="launcher-weston-launch_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structweston__matrix" prot="public">weston_matrix</innerclass>
+    <innerclass refid="structweston__vector" prot="public">weston_vector</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="matrix_8h_1a081ec7a2ab2410cf0eec2ab44fb8fffe" prot="public" static="no">
+        <name>MATRIX_TEST_EXPORT</name>
+        <initializer>static</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/matrix.h" line="78" column="12" bodyfile="/home/lzm/Wayland/weston/include/libweston/matrix.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="matrix_8h_1a36f1c17c5d79896d6e3072add55c8c2a" prot="public" static="no" strong="no">
+        <type></type>
+        <name>weston_matrix_transform_type</name>
+        <enumvalue id="matrix_8h_1a36f1c17c5d79896d6e3072add55c8c2aa827fdf83faf73bf1af8049792f35c739" prot="public">
+          <name>WESTON_MATRIX_TRANSFORM_TRANSLATE</name>
+          <initializer>= (1 &lt;&lt; 0)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="matrix_8h_1a36f1c17c5d79896d6e3072add55c8c2aa2159882a3c2449030cb1d4fba1862640" prot="public">
+          <name>WESTON_MATRIX_TRANSFORM_SCALE</name>
+          <initializer>= (1 &lt;&lt; 1)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="matrix_8h_1a36f1c17c5d79896d6e3072add55c8c2aae201f71d609db568c3962a2a870a3679" prot="public">
+          <name>WESTON_MATRIX_TRANSFORM_ROTATE</name>
+          <initializer>= (1 &lt;&lt; 2)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="matrix_8h_1a36f1c17c5d79896d6e3072add55c8c2aa32fc66af10ffb55590ed13c751be01fd" prot="public">
+          <name>WESTON_MATRIX_TRANSFORM_OTHER</name>
+          <initializer>= (1 &lt;&lt; 3)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/matrix.h" line="34" column="34" bodyfile="/home/lzm/Wayland/weston/include/libweston/matrix.h" bodystart="34" bodyend="39"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="matrix_8h_1a1a379a971f1948d4ccc8d76d58506078" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_matrix_init</definition>
+        <argsstring>(struct weston_matrix *matrix)</argsstring>
+        <name>weston_matrix_init</name>
+        <param>
+          <type>struct <ref refid="structweston__matrix" kindref="compound">weston_matrix</ref> *</type>
+          <declname>matrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/matrix.h" line="51" column="1" declfile="/home/lzm/Wayland/weston/include/libweston/matrix.h" declline="51" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="matrix_8h_1a9c0d711b100979953c76e48a9baf868a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_matrix_multiply</definition>
+        <argsstring>(struct weston_matrix *m, const struct weston_matrix *n)</argsstring>
+        <name>weston_matrix_multiply</name>
+        <param>
+          <type>struct <ref refid="structweston__matrix" kindref="compound">weston_matrix</ref> *</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structweston__matrix" kindref="compound">weston_matrix</ref> *</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/matrix.h" line="53" column="1" declfile="/home/lzm/Wayland/weston/include/libweston/matrix.h" declline="53" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="matrix_8h_1ae66be97d5f6b1aa202cf48c3c1f3a0e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_matrix_scale</definition>
+        <argsstring>(struct weston_matrix *matrix, float x, float y, float z)</argsstring>
+        <name>weston_matrix_scale</name>
+        <param>
+          <type>struct <ref refid="structweston__matrix" kindref="compound">weston_matrix</ref> *</type>
+          <declname>matrix</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/matrix.h" line="55" column="1" declfile="/home/lzm/Wayland/weston/include/libweston/matrix.h" declline="55" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="matrix_8h_1a11705753750edc192cfd0861fdfb5b8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_matrix_translate</definition>
+        <argsstring>(struct weston_matrix *matrix, float x, float y, float z)</argsstring>
+        <name>weston_matrix_translate</name>
+        <param>
+          <type>struct <ref refid="structweston__matrix" kindref="compound">weston_matrix</ref> *</type>
+          <declname>matrix</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/matrix.h" line="57" column="1" declfile="/home/lzm/Wayland/weston/include/libweston/matrix.h" declline="57" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="matrix_8h_1a0fbcd18f6763c13802bf214a68f11b5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_matrix_rotate_xy</definition>
+        <argsstring>(struct weston_matrix *matrix, float cos, float sin)</argsstring>
+        <name>weston_matrix_rotate_xy</name>
+        <param>
+          <type>struct <ref refid="structweston__matrix" kindref="compound">weston_matrix</ref> *</type>
+          <declname>matrix</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>cos</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>sin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/matrix.h" line="60" column="1" declfile="/home/lzm/Wayland/weston/include/libweston/matrix.h" declline="60" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="matrix_8h_1a8798df1cafe699c91c0cc477f7524c1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_matrix_transform</definition>
+        <argsstring>(struct weston_matrix *matrix, struct weston_vector *v)</argsstring>
+        <name>weston_matrix_transform</name>
+        <param>
+          <type>struct <ref refid="structweston__matrix" kindref="compound">weston_matrix</ref> *</type>
+          <declname>matrix</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structweston__vector" kindref="compound">weston_vector</ref> *</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/matrix.h" line="62" column="1" declfile="/home/lzm/Wayland/weston/include/libweston/matrix.h" declline="62" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="matrix_8h_1a6deb2743e2b32947874410e92b8d83e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int weston_matrix_invert</definition>
+        <argsstring>(struct weston_matrix *inverse, const struct weston_matrix *matrix)</argsstring>
+        <name>weston_matrix_invert</name>
+        <param>
+          <type>struct <ref refid="structweston__matrix" kindref="compound">weston_matrix</ref> *</type>
+          <declname>inverse</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structweston__matrix" kindref="compound">weston_matrix</ref> *</type>
+          <declname>matrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/matrix.h" line="65" column="1" declfile="/home/lzm/Wayland/weston/include/libweston/matrix.h" declline="65" declcolumn="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2008-2011<sp/>Kristian<sp/>Høgsberg</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2012<sp/>Collabora,<sp/>Ltd.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>(including<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>next<sp/>paragraph)<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>NONINFRINGEMENT.<sp/><sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>WESTON_MATRIX_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WESTON_MATRIX_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/><sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="matrix_8h_1a36f1c17c5d79896d6e3072add55c8c2a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="matrix_8h_1a36f1c17c5d79896d6e3072add55c8c2a" kindref="member">weston_matrix_transform_type</ref><sp/>{</highlight></codeline>
+<codeline lineno="35" refid="matrix_8h_1a36f1c17c5d79896d6e3072add55c8c2aa827fdf83faf73bf1af8049792f35c739" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="matrix_8h_1a36f1c17c5d79896d6e3072add55c8c2aa827fdf83faf73bf1af8049792f35c739" kindref="member">WESTON_MATRIX_TRANSFORM_TRANSLATE</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>0),</highlight></codeline>
+<codeline lineno="36" refid="matrix_8h_1a36f1c17c5d79896d6e3072add55c8c2aa2159882a3c2449030cb1d4fba1862640" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="matrix_8h_1a36f1c17c5d79896d6e3072add55c8c2aa2159882a3c2449030cb1d4fba1862640" kindref="member">WESTON_MATRIX_TRANSFORM_SCALE</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>1),</highlight></codeline>
+<codeline lineno="37" refid="matrix_8h_1a36f1c17c5d79896d6e3072add55c8c2aae201f71d609db568c3962a2a870a3679" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="matrix_8h_1a36f1c17c5d79896d6e3072add55c8c2aae201f71d609db568c3962a2a870a3679" kindref="member">WESTON_MATRIX_TRANSFORM_ROTATE</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>2),</highlight></codeline>
+<codeline lineno="38" refid="matrix_8h_1a36f1c17c5d79896d6e3072add55c8c2aa32fc66af10ffb55590ed13c751be01fd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="matrix_8h_1a36f1c17c5d79896d6e3072add55c8c2aa32fc66af10ffb55590ed13c751be01fd" kindref="member">WESTON_MATRIX_TRANSFORM_OTHER</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>3),</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="structweston__matrix" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__matrix" kindref="compound">weston_matrix</ref><sp/>{</highlight></codeline>
+<codeline lineno="42" refid="structweston__matrix_1a525734d347a66825ef16f69d00ab82c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structweston__matrix_1a525734d347a66825ef16f69d00ab82c0" kindref="member">d</ref>[16];</highlight></codeline>
+<codeline lineno="43" refid="structweston__matrix_1a82a0c24ad4a2dcdead2d84fcbc59a9ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structweston__matrix_1a82a0c24ad4a2dcdead2d84fcbc59a9ad" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="structweston__vector" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__vector" kindref="compound">weston_vector</ref><sp/>{</highlight></codeline>
+<codeline lineno="47" refid="structweston__vector_1af55e9e0affe6cdee57a6ae499424fede" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structweston__vector_1af55e9e0affe6cdee57a6ae499424fede" kindref="member">f</ref>[4];</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><ref refid="matrix_8h_1a1a379a971f1948d4ccc8d76d58506078" kindref="member">weston_matrix_init</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__matrix" kindref="compound">weston_matrix</ref><sp/>*matrix);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><ref refid="matrix_8h_1a9c0d711b100979953c76e48a9baf868a" kindref="member">weston_matrix_multiply</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__matrix" kindref="compound">weston_matrix</ref><sp/>*m,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__matrix" kindref="compound">weston_matrix</ref><sp/>*n);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><ref refid="matrix_8h_1ae66be97d5f6b1aa202cf48c3c1f3a0e1" kindref="member">weston_matrix_scale</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__matrix" kindref="compound">weston_matrix</ref><sp/>*matrix,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>z);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><ref refid="matrix_8h_1a11705753750edc192cfd0861fdfb5b8a" kindref="member">weston_matrix_translate</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__matrix" kindref="compound">weston_matrix</ref><sp/>*matrix,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>z);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><ref refid="matrix_8h_1a0fbcd18f6763c13802bf214a68f11b5d" kindref="member">weston_matrix_rotate_xy</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__matrix" kindref="compound">weston_matrix</ref><sp/>*matrix,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>cos,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>sin);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><ref refid="matrix_8h_1a8798df1cafe699c91c0cc477f7524c1b" kindref="member">weston_matrix_transform</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__matrix" kindref="compound">weston_matrix</ref><sp/>*matrix,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__vector" kindref="compound">weston_vector</ref><sp/>*v);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><ref refid="matrix_8h_1a6deb2743e2b32947874410e92b8d83e7" kindref="member">weston_matrix_invert</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__matrix" kindref="compound">weston_matrix</ref><sp/>*inverse,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__matrix" kindref="compound">weston_matrix</ref><sp/>*matrix);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>UNIT_TEST</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/>define<sp/>MATRIX_TEST_EXPORT<sp/>WL_EXPORT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">matrix_invert(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*A,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>*p,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__matrix" kindref="compound">weston_matrix</ref><sp/>*matrix);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal">inverse_transform(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*LU,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>*p,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*v);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="matrix_8h_1a081ec7a2ab2410cf0eec2ab44fb8fffe" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/>define<sp/>MATRIX_TEST_EXPORT<sp/>static</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/><sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>WESTON_MATRIX_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/include/libweston/matrix.h"/>
+  </compounddef>
+</doxygen>

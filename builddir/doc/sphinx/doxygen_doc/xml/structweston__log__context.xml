@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__log__context" kind="struct" language="C++" prot="public">
+    <compoundname>weston_log_context</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__log__context_1a77d7ffe649e310f90d93c2a39bde73a3" prot="public" static="no" mutable="no">
+        <type>struct wl_global *</type>
+        <definition>struct wl_global* weston_log_context::global</definition>
+        <argsstring></argsstring>
+        <name>global</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="68" column="16" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__log__context_1ac66559af849417dfb2aecb48bca9da4c" prot="public" static="no" mutable="no">
+        <type>struct wl_listener</type>
+        <definition>struct wl_listener weston_log_context::compositor_destroy_listener</definition>
+        <argsstring></argsstring>
+        <name>compositor_destroy_listener</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="68" column="16" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__log__context_1a8d3d91f8513fc1b28905883891173c9c" prot="public" static="no" mutable="no">
+        <type>struct wl_list</type>
+        <definition>struct wl_list weston_log_context::scope_list</definition>
+        <argsstring></argsstring>
+        <name>scope_list</name>
+        <briefdescription>
+<para><ref refid="structweston__log__scope_1a2504128f5791644bcf001ca301b45ea1" kindref="member">weston_log_scope::compositor_link</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="68" column="16" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__log__context_1af1f7edc42fab73bdbfd3baaeb1632127" prot="public" static="no" mutable="no">
+        <type>struct wl_list</type>
+        <definition>struct wl_list weston_log_context::pending_subscription_list</definition>
+        <argsstring></argsstring>
+        <name>pending_subscription_list</name>
+        <briefdescription>
+<para><ref refid="structweston__log__subscription_1a60eb786d6717a7bbe840c1572bf22a9b" kindref="member">weston_log_subscription::source_link</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="68" column="16" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Main weston-log context. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>One per <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref>. Stores list of scopes created and a list pending subscriptions.</para>
+<para>A pending subscription is a subscription to a scope which hasn&apos;t been created. When the scope is finally created the pending subscription will be removed from the pending subscription list, but not before was added in the scope&apos;s subscription list and that of the subscriber list.</para>
+<para>Pending subscriptions only make sense for other types of streams, other than those created by weston-debug protocol. In the case of the weston-debug protocol, the subscription processes is done automatically whenever a client connects and subscribes to a scope which was previously advertised by the compositor. </para>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="67" column="25" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="67" bodyend="72"/>
+    <listofallmembers>
+      <member refid="structweston__log__context_1ac66559af849417dfb2aecb48bca9da4c" prot="public" virt="non-virtual"><scope>weston_log_context</scope><name>compositor_destroy_listener</name></member>
+      <member refid="structweston__log__context_1a77d7ffe649e310f90d93c2a39bde73a3" prot="public" virt="non-virtual"><scope>weston_log_context</scope><name>global</name></member>
+      <member refid="structweston__log__context_1af1f7edc42fab73bdbfd3baaeb1632127" prot="public" virt="non-virtual"><scope>weston_log_context</scope><name>pending_subscription_list</name></member>
+      <member refid="structweston__log__context_1a8d3d91f8513fc1b28905883891173c9c" prot="public" virt="non-virtual"><scope>weston_log_context</scope><name>scope_list</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

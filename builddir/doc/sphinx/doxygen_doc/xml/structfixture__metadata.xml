@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structfixture__metadata" kind="struct" language="C++" prot="public">
+    <compoundname>fixture_metadata</compoundname>
+    <includes refid="weston-test-runner_8h" local="no">weston-test-runner.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structfixture__metadata_1aaf01a2c28621f0b45e4d8bc669469279" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* fixture_metadata::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+<para>Human friendly name of the fixture setup. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.h" line="160" column="12" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Metadata for fixture setup array elements. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Every type used as a fixture setup array&apos;s elements needs one member of this type, initialized.</para>
+<para><simplesect kind="see"><para><ref refid="group__testharness_1ga274def1a210d74f64d216796dbec4b2b" kindref="member">DECLARE_FIXTURE_SETUP_WITH_ARG()</ref> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.h" line="158" column="23" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.h" bodystart="158" bodyend="161"/>
+    <listofallmembers>
+      <member refid="structfixture__metadata_1aaf01a2c28621f0b45e4d8bc669469279" prot="public" virt="non-virtual"><scope>fixture_metadata</scope><name>name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

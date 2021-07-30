@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__fbdev__backend__config" kind="struct" language="C++" prot="public">
+    <compoundname>weston_fbdev_backend_config</compoundname>
+    <includes refid="backend-fbdev_8h" local="no">backend-fbdev.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__fbdev__backend__config_1a756b8d2340aeb9ceb42c1786cd7ba43a" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structweston__backend__config" kindref="compound">weston_backend_config</ref></type>
+        <definition>struct weston_backend_config weston_fbdev_backend_config::base</definition>
+        <argsstring></argsstring>
+        <name>base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-fbdev.h" line="1" column="0" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-fbdev.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__fbdev__backend__config_1a953e7fb78bd3819a5240f03cacc1277b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int weston_fbdev_backend_config::tty</definition>
+        <argsstring></argsstring>
+        <name>tty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-fbdev.h" line="44" column="5" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-fbdev.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__fbdev__backend__config_1aa17a85c78e3a322471c26b6818d3faca" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* weston_fbdev_backend_config::device</definition>
+        <argsstring></argsstring>
+        <name>device</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-fbdev.h" line="45" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-fbdev.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__fbdev__backend__config_1ab9610cff7cd06915a6093a8d9ef25259" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_fbdev_backend_config::configure_device) (struct weston_compositor *compositor, struct libinput_device *device)</definition>
+        <argsstring>)(struct weston_compositor *compositor, struct libinput_device *device)</argsstring>
+        <name>configure_device</name>
+        <briefdescription>
+<para>Callback used to configure input devices. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function will be called by the backend when a new input device needs to be configured. If NULL the device will use the default configuration. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-fbdev.h" line="53" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-fbdev.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__fbdev__backend__config_1a8f5da355b13bd281a2a0b3f1b7d2dd13" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* weston_fbdev_backend_config::seat_id</definition>
+        <argsstring></argsstring>
+        <name>seat_id</name>
+        <briefdescription>
+<para>The seat to be used for input and output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If seat_id is NULL, the seat is taken from XDG_SEAT environment variable. If neither is set, &quot;seat0&quot; is used. The backend will take ownership of the seat_id pointer and will free it on backend destruction. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-fbdev.h" line="63" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-fbdev.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>weston_fbdev_backend_config</label>
+        <link refid="structweston__fbdev__backend__config"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>weston_backend_config</label>
+        <link refid="structweston__backend__config"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lzm/Wayland/weston/include/libweston/backend-fbdev.h" line="41" column="34" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-fbdev.h" bodystart="41" bodyend="64"/>
+    <listofallmembers>
+      <member refid="structweston__fbdev__backend__config_1a756b8d2340aeb9ceb42c1786cd7ba43a" prot="public" virt="non-virtual"><scope>weston_fbdev_backend_config</scope><name>base</name></member>
+      <member refid="structweston__fbdev__backend__config_1ab9610cff7cd06915a6093a8d9ef25259" prot="public" virt="non-virtual"><scope>weston_fbdev_backend_config</scope><name>configure_device</name></member>
+      <member refid="structweston__fbdev__backend__config_1aa17a85c78e3a322471c26b6818d3faca" prot="public" virt="non-virtual"><scope>weston_fbdev_backend_config</scope><name>device</name></member>
+      <member refid="structweston__fbdev__backend__config_1a8f5da355b13bd281a2a0b3f1b7d2dd13" prot="public" virt="non-virtual"><scope>weston_fbdev_backend_config</scope><name>seat_id</name></member>
+      <member refid="structweston__fbdev__backend__config_1a953e7fb78bd3819a5240f03cacc1277b" prot="public" virt="non-virtual"><scope>weston_fbdev_backend_config</scope><name>tty</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

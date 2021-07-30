@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__touch__device__matrix" kind="struct" language="C++" prot="public">
+    <compoundname>weston_touch_device_matrix</compoundname>
+    <includes refid="libweston_8h" local="no">libweston.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__touch__device__matrix_1a494c194bf83d977280f6b103992ab999" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float weston_touch_device_matrix::m[6]</definition>
+        <argsstring>[6]</argsstring>
+        <name>m</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="560" column="7" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="560" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>libinput style calibration matrix </para>
+    </briefdescription>
+    <detaileddescription>
+<para>See <ulink url="https://wayland.freedesktop.org/libinput/doc/latest/absolute_axes.html">https://wayland.freedesktop.org/libinput/doc/latest/absolute_axes.html</ulink> and libinput_device_config_calibration_set_matrix(). </para>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="559" column="33" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="559" bodyend="561"/>
+    <listofallmembers>
+      <member refid="structweston__touch__device__matrix_1a494c194bf83d977280f6b103992ab999" prot="public" virt="non-virtual"><scope>weston_touch_device_matrix</scope><name>m</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

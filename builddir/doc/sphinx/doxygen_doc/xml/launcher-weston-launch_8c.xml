@@ -1,0 +1,925 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="launcher-weston-launch_8c" kind="file" language="C++">
+    <compoundname>launcher-weston-launch.c</compoundname>
+    <includes local="yes">config.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">errno.h</includes>
+    <includes local="no">signal.h</includes>
+    <includes local="no">sys/socket.h</includes>
+    <includes local="no">sys/types.h</includes>
+    <includes local="no">sys/stat.h</includes>
+    <includes local="no">sys/uio.h</includes>
+    <includes local="no">sys/ioctl.h</includes>
+    <includes local="no">fcntl.h</includes>
+    <includes local="no">unistd.h</includes>
+    <includes local="no">linux/vt.h</includes>
+    <includes local="no">linux/kd.h</includes>
+    <includes local="no">linux/major.h</includes>
+    <includes refid="libweston_8h" local="no">libweston/libweston.h</includes>
+    <includes refid="weston-launch_8h" local="yes">weston-launch.h</includes>
+    <includes refid="launcher-impl_8h" local="yes">launcher-impl.h</includes>
+    <includes local="yes">shared/string-helpers.h</includes>
+    <incdepgraph>
+      <node id="11">
+        <label>sys/stat.h</label>
+      </node>
+      <node id="20">
+        <label>stdbool.h</label>
+      </node>
+      <node id="17">
+        <label>linux/kd.h</label>
+      </node>
+      <node id="19">
+        <label>libweston/libweston.h</label>
+        <link refid="libweston_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>shared/string-helpers.h</label>
+      </node>
+      <node id="3">
+        <label>stdint.h</label>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="24">
+        <label>wayland-server.h</label>
+      </node>
+      <node id="23">
+        <label>xkbcommon/xkbcommon.h</label>
+      </node>
+      <node id="28">
+        <label>launcher-impl.h</label>
+        <link refid="launcher-impl_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>errno.h</label>
+      </node>
+      <node id="14">
+        <label>fcntl.h</label>
+      </node>
+      <node id="18">
+        <label>linux/major.h</label>
+      </node>
+      <node id="13">
+        <label>sys/ioctl.h</label>
+      </node>
+      <node id="10">
+        <label>sys/types.h</label>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
+      <node id="15">
+        <label>unistd.h</label>
+      </node>
+      <node id="27">
+        <label>weston-launch.h</label>
+        <link refid="weston-launch_8h"/>
+      </node>
+      <node id="12">
+        <label>sys/uio.h</label>
+      </node>
+      <node id="8">
+        <label>signal.h</label>
+      </node>
+      <node id="26">
+        <label>libweston/zalloc.h</label>
+        <link refid="zalloc_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>time.h</label>
+      </node>
+      <node id="25">
+        <label>libweston/matrix.h</label>
+        <link refid="matrix_8h"/>
+      </node>
+      <node id="22">
+        <label>pixman.h</label>
+      </node>
+      <node id="9">
+        <label>sys/socket.h</label>
+      </node>
+      <node id="16">
+        <label>linux/vt.h</label>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+      </node>
+      <node id="4">
+        <label>stdio.h</label>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c</label>
+        <link refid="launcher-weston-launch_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="unioncmsg__data" prot="public">cmsg_data</innerclass>
+    <innerclass refid="structlauncher__weston__launch" prot="public">launcher_weston_launch</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="launcher-weston-launch_8c_1a3040f38f421ed92b612d8299a343e1e3" prot="public" static="no">
+        <name>DRM_MAJOR</name>
+        <initializer>226</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" line="52" column="9" bodyfile="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="launcher-weston-launch_8c_1af2fc38646a7edd6cb16e696e984cdda8" prot="public" static="no">
+        <name>KDSKBMUTE</name>
+        <initializer>0x4B51</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" line="55" column="9" bodyfile="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="launcher-weston-launch_8c_1abff6b9df538edfe45ab000d27c189e4b" prot="public" static="no" mutable="no">
+        <type>const struct <ref refid="structlauncher__interface" kindref="compound">launcher_interface</ref></type>
+        <definition>const struct launcher_interface launcher_weston_launch_iface</definition>
+        <argsstring></argsstring>
+        <name>launcher_weston_launch_iface</name>
+        <initializer>= {
+	.name = &quot;weston_launch&quot;,
+	.connect = <ref refid="launcher-weston-launch_8c_1a04afe45034cf2d80b112eea05c97dc31" kindref="member">launcher_weston_launch_connect</ref>,
+	.destroy = <ref refid="launcher-weston-launch_8c_1a671f03b254e1d45c4023fbf37257a686" kindref="member">launcher_weston_launch_destroy</ref>,
+	.open = <ref refid="launcher-weston-launch_8c_1a00711898e5b6ae6049663bcdb911925d" kindref="member">launcher_weston_launch_open</ref>,
+	.close = <ref refid="launcher-weston-launch_8c_1afa503b3aaf05b410de28fd58c11a4ded" kindref="member">launcher_weston_launch_close</ref>,
+	.activate_vt = <ref refid="launcher-weston-launch_8c_1ab0c0a700b25b8eeec23abdd525c142f2" kindref="member">launcher_weston_launch_activate_vt</ref>,
+	.get_vt = <ref refid="launcher-weston-launch_8c_1a114155c40393c4f1f42fea505a5c7cc9" kindref="member">launcher_weston_launch_get_vt</ref>,
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" line="374" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" bodystart="386" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="launcher-weston-launch_8c_1ab5bae7ee8ae27bbc928f46ef4a0a8dba" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int drmDropMaster</definition>
+        <argsstring>(int drm_fd)</argsstring>
+        <name>drmDropMaster</name>
+        <param>
+          <type>int</type>
+          <declname>drm_fd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" line="65" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" bodystart="65" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="launcher-weston-launch_8c_1a2b455ed23e167e073dc9e6e306ac52e6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int drmSetMaster</definition>
+        <argsstring>(int drm_fd)</argsstring>
+        <name>drmSetMaster</name>
+        <param>
+          <type>int</type>
+          <declname>drm_fd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" line="71" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" bodystart="71" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="launcher-weston-launch_8c_1ae4315b54049a5641ef6ab8a5cdcd01ab" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ssize_t</type>
+        <definition>static ssize_t launcher_weston_launch_send</definition>
+        <argsstring>(int sockfd, void *buf, size_t buflen)</argsstring>
+        <name>launcher_weston_launch_send</name>
+        <param>
+          <type>int</type>
+          <declname>sockfd</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>buflen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" line="99" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" bodystart="99" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="launcher-weston-launch_8c_1a284b676b3b2c3a2b662fcbc233c806a6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void handle_deactivate</definition>
+        <argsstring>(struct launcher_weston_launch *launcher)</argsstring>
+        <name>handle_deactivate</name>
+        <param>
+          <type>struct <ref refid="structlauncher__weston__launch" kindref="compound">launcher_weston_launch</ref> *</type>
+          <declname>launcher</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" line="111" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" bodystart="111" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="launcher-weston-launch_8c_1ae9f9e07d21e1e68883caaa9b95e8c516" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void idle_deactivate</definition>
+        <argsstring>(void *data)</argsstring>
+        <name>idle_deactivate</name>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" line="124" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" bodystart="124" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="launcher-weston-launch_8c_1a00711898e5b6ae6049663bcdb911925d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int launcher_weston_launch_open</definition>
+        <argsstring>(struct weston_launcher *launcher_base, const char *path, int flags)</argsstring>
+        <name>launcher_weston_launch_open</name>
+        <param>
+          <type>struct <ref refid="structweston__launcher" kindref="compound">weston_launcher</ref> *</type>
+          <declname>launcher_base</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" line="135" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" bodystart="135" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="launcher-weston-launch_8c_1afa503b3aaf05b410de28fd58c11a4ded" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void launcher_weston_launch_close</definition>
+        <argsstring>(struct weston_launcher *launcher_base, int fd)</argsstring>
+        <name>launcher_weston_launch_close</name>
+        <param>
+          <type>struct <ref refid="structweston__launcher" kindref="compound">weston_launcher</ref> *</type>
+          <declname>launcher_base</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" line="209" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" bodystart="209" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="launcher-weston-launch_8c_1adfd1fec0cdc513827d1ca275bb8a5642" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void launcher_weston_launch_restore</definition>
+        <argsstring>(struct weston_launcher *launcher_base)</argsstring>
+        <name>launcher_weston_launch_restore</name>
+        <param>
+          <type>struct <ref refid="structweston__launcher" kindref="compound">weston_launcher</ref> *</type>
+          <declname>launcher_base</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" line="215" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" bodystart="215" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="launcher-weston-launch_8c_1a755a77457def1f5c7308ee66b15c497f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int launcher_weston_launch_data</definition>
+        <argsstring>(int fd, uint32_t mask, void *data)</argsstring>
+        <name>launcher_weston_launch_data</name>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" line="240" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" bodystart="240" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="function" id="launcher-weston-launch_8c_1ab0c0a700b25b8eeec23abdd525c142f2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int launcher_weston_launch_activate_vt</definition>
+        <argsstring>(struct weston_launcher *launcher_base, int vt)</argsstring>
+        <name>launcher_weston_launch_activate_vt</name>
+        <param>
+          <type>struct <ref refid="structweston__launcher" kindref="compound">weston_launcher</ref> *</type>
+          <declname>launcher_base</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>vt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" line="282" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" bodystart="282" bodyend="286"/>
+      </memberdef>
+      <memberdef kind="function" id="launcher-weston-launch_8c_1ad178e4e1e6a73dd5043ac1cb2391be7d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int launcher_weston_environment_get_fd</definition>
+        <argsstring>(const char *env)</argsstring>
+        <name>launcher_weston_environment_get_fd</name>
+        <param>
+          <type>const char *</type>
+          <declname>env</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" line="289" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" bodystart="289" bodyend="311"/>
+      </memberdef>
+      <memberdef kind="function" id="launcher-weston-launch_8c_1a04afe45034cf2d80b112eea05c97dc31" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int launcher_weston_launch_connect</definition>
+        <argsstring>(struct weston_launcher **out, struct weston_compositor *compositor, int tty, const char *seat_id, bool sync_drm)</argsstring>
+        <name>launcher_weston_launch_connect</name>
+        <param>
+          <type>struct <ref refid="structweston__launcher" kindref="compound">weston_launcher</ref> **</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> *</type>
+          <declname>compositor</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>tty</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>seat_id</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>sync_drm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" line="315" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" bodystart="315" bodyend="353"/>
+      </memberdef>
+      <memberdef kind="function" id="launcher-weston-launch_8c_1a671f03b254e1d45c4023fbf37257a686" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void launcher_weston_launch_destroy</definition>
+        <argsstring>(struct weston_launcher *launcher_base)</argsstring>
+        <name>launcher_weston_launch_destroy</name>
+        <param>
+          <type>struct <ref refid="structweston__launcher" kindref="compound">weston_launcher</ref> *</type>
+          <declname>launcher_base</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" line="356" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" bodystart="356" bodyend="371"/>
+      </memberdef>
+      <memberdef kind="function" id="launcher-weston-launch_8c_1a114155c40393c4f1f42fea505a5c7cc9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int launcher_weston_launch_get_vt</definition>
+        <argsstring>(struct weston_launcher *base)</argsstring>
+        <name>launcher_weston_launch_get_vt</name>
+        <param>
+          <type>struct <ref refid="structweston__launcher" kindref="compound">weston_launcher</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" line="374" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" bodystart="374" bodyend="384"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2012<sp/>Benjamin<sp/>Franzke</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2013<sp/>Intel<sp/>Corporation</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>(including<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>next<sp/>paragraph)<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>NONINFRINGEMENT.<sp/><sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;errno.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;signal.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/socket.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/types.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/stat.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/uio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/ioctl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fcntl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unistd.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;linux/vt.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;linux/kd.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;linux/major.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="libweston_8h" kindref="compound">libweston/libweston.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="weston-launch_8h" kindref="compound">weston-launch.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="launcher-impl_8h" kindref="compound">launcher-impl.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;shared/string-helpers.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DRM_MAJOR<sp/>226</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>KDSKBMUTE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>KDSKBMUTE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x4B51</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>BUILD_DRM_COMPOSITOR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;xf86drm.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><ref refid="launcher-weston-launch_8c_1ab5bae7ee8ae27bbc928f46ef4a0a8dba" kindref="member">drmDropMaster</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>drm_fd)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><ref refid="launcher-weston-launch_8c_1a2b455ed23e167e073dc9e6e306ac52e6" kindref="member">drmSetMaster</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>drm_fd)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>major()/minor()<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>MAJOR_IN_MKDEV</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/mkdev.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>MAJOR_IN_SYSMACROS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/sysmacros.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="unioncmsg__data" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal"><ref refid="unioncmsg__data" kindref="compound">cmsg_data</ref><sp/>{<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="unioncmsg__data_1af7d5e4d4da53387675dccdd0bcac927d" kindref="member">b</ref>[4];<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="unioncmsg__data_1a397c85ac7fb2ed9360ea22a2c22ed68a" kindref="member">fd</ref>;<sp/>};</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="structlauncher__weston__launch" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlauncher__weston__launch" kindref="compound">launcher_weston_launch</ref><sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__launcher" kindref="compound">weston_launcher</ref><sp/><ref refid="structlauncher__weston__launch_1aeb797799f1359a28c4e02ff2da7b234f" kindref="member">base</ref>;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__compositor" kindref="compound">weston_compositor</ref><sp/>*<ref refid="structlauncher__weston__launch_1a4a6aab6399a783862fc2324327740784" kindref="member">compositor</ref>;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structlauncher__weston__launch_1a65005e2b72e129b34d87f7be218b74c0" kindref="member">fd</ref>;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_event_source<sp/>*<ref refid="structlauncher__weston__launch_1aa440d15f34a06d7ba00a320532c1e9be" kindref="member">source</ref>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structlauncher__weston__launch_1a01ed29549c7269af8fdc4916376335dc" kindref="member">kb_mode</ref>,<sp/><ref refid="structlauncher__weston__launch_1a5899a695145e2aef5da6cafcbef7f34f" kindref="member">tty</ref>,<sp/><ref refid="structlauncher__weston__launch_1a025e3f452ef6091d350ecd6d081092c8" kindref="member">drm_fd</ref>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structlauncher__weston__launch_1a736431650364ab5b068bc51dee13dede" kindref="member">deferred_deactivate</ref>;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ssize_t</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><ref refid="launcher-weston-launch_8c_1ae4315b54049a5641ef6ab8a5cdcd01ab" kindref="member">launcher_weston_launch_send</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sockfd,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>buflen)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ssize_t<sp/>len;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>len<sp/>=<sp/>send(sockfd,<sp/>buf,<sp/>buflen,<sp/>0);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(len<sp/>&lt;<sp/>0<sp/>&amp;&amp;<sp/>errno<sp/>==<sp/>EINTR);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>len;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><ref refid="launcher-weston-launch_8c_1a284b676b3b2c3a2b662fcbc233c806a6" kindref="member">handle_deactivate</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structlauncher__weston__launch" kindref="compound">launcher_weston_launch</ref><sp/>*launcher)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>reply;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>launcher-&gt;<ref refid="structlauncher__weston__launch_1a4a6aab6399a783862fc2324327740784" kindref="member">compositor</ref>-&gt;<ref refid="structweston__compositor_1a1261d536f85647f94598c6892e6b5b9f" kindref="member">session_active</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_signal_emit(&amp;launcher-&gt;<ref refid="structlauncher__weston__launch_1a4a6aab6399a783862fc2324327740784" kindref="member">compositor</ref>-&gt;<ref refid="structweston__compositor_1a6e62e13d73c89d00ef3c7788ea4ddd83" kindref="member">session_signal</ref>,</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>launcher-&gt;<ref refid="structlauncher__weston__launch_1a4a6aab6399a783862fc2324327740784" kindref="member">compositor</ref>);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reply<sp/>=<sp/><ref refid="weston-launch_8h_1a6c50dae74876604cd9429610f91aa820aa583c2cc280e44923059d1c4e4274f3a" kindref="member">WESTON_LAUNCHER_DEACTIVATE_DONE</ref>;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="launcher-weston-launch_8c_1ae4315b54049a5641ef6ab8a5cdcd01ab" kindref="member">launcher_weston_launch_send</ref>(launcher-&gt;<ref refid="structlauncher__weston__launch_1a65005e2b72e129b34d87f7be218b74c0" kindref="member">fd</ref>,<sp/>&amp;reply,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>reply);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><ref refid="launcher-weston-launch_8c_1ae9f9e07d21e1e68883caaa9b95e8c516" kindref="member">idle_deactivate</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlauncher__weston__launch" kindref="compound">launcher_weston_launch</ref><sp/>*launcher<sp/>=<sp/>data;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(launcher-&gt;<ref refid="structlauncher__weston__launch_1a736431650364ab5b068bc51dee13dede" kindref="member">deferred_deactivate</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>launcher-&gt;<ref refid="structlauncher__weston__launch_1a736431650364ab5b068bc51dee13dede" kindref="member">deferred_deactivate</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="launcher-weston-launch_8c_1a284b676b3b2c3a2b662fcbc233c806a6" kindref="member">handle_deactivate</ref>((</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structlauncher__weston__launch" kindref="compound">launcher_weston_launch</ref>*)data);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><ref refid="launcher-weston-launch_8c_1a00711898e5b6ae6049663bcdb911925d" kindref="member">launcher_weston_launch_open</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__launcher" kindref="compound">weston_launcher</ref><sp/>*launcher_base,</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*path,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flags)</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlauncher__weston__launch" kindref="compound">launcher_weston_launch</ref><sp/>*launcher<sp/>=<sp/>wl_container_of(launcher_base,<sp/>launcher,<sp/><ref refid="structlauncher__weston__launch_1aeb797799f1359a28c4e02ff2da7b234f" kindref="member">base</ref>);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">msghdr<sp/>msg;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">cmsghdr<sp/>*cmsg;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">iovec<sp/>iov;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal"><ref refid="unioncmsg__data" kindref="compound">cmsg_data</ref><sp/>*data;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>control[CMSG_SPACE(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>data-&gt;<ref refid="unioncmsg__data_1a397c85ac7fb2ed9360ea22a2c22ed68a" kindref="member">fd</ref>)];</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ssize_t<sp/>len;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__launcher__open" kindref="compound">weston_launcher_open</ref><sp/>*message;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>id;<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ret;<sp/>}<sp/>event;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*message)<sp/>+<sp/>strlen(path)<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>message<sp/>=<sp/>malloc(n);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!message)</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>message-&gt;<ref refid="structweston__launcher__open_1a7ef74c0ac93f109aa3ec2090e2e4cfb0" kindref="member">header</ref>.<ref refid="structweston__launcher__message_1a7f94b94cd0db99ae848c0553f2237390" kindref="member">opcode</ref><sp/>=<sp/><ref refid="weston-launch_8h_1a0f286a1db081ef48150a577544bf44a4ac9c978f6a47b0205d7a9ffbdd775c408" kindref="member">WESTON_LAUNCHER_OPEN</ref>;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>message-&gt;<ref refid="structweston__launcher__open_1abc54199ae6533d6e915a8bd3b27d71e7" kindref="member">flags</ref><sp/>=<sp/>flags;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcpy(message-&gt;<ref refid="structweston__launcher__open_1a7aa601c40b255ba6b0f4f0fd01169737" kindref="member">path</ref>,<sp/>path);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="launcher-weston-launch_8c_1ae4315b54049a5641ef6ab8a5cdcd01ab" kindref="member">launcher_weston_launch_send</ref>(launcher-&gt;<ref refid="structlauncher__weston__launch_1a65005e2b72e129b34d87f7be218b74c0" kindref="member">fd</ref>,<sp/>message,<sp/>n);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(message);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memset(&amp;msg,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>msg);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>iov.iov_base<sp/>=<sp/>&amp;event;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>iov.iov_len<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>event;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.msg_iov<sp/>=<sp/>&amp;iov;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.msg_iovlen<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.msg_control<sp/>=<sp/>control;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1)<sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.msg_controllen<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>control;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>len<sp/>=<sp/>recvmsg(launcher-&gt;<ref refid="structlauncher__weston__launch_1a65005e2b72e129b34d87f7be218b74c0" kindref="member">fd</ref>,<sp/>&amp;msg,<sp/>MSG_CMSG_CLOEXEC);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(len<sp/>&lt;<sp/>0<sp/>&amp;&amp;<sp/>errno<sp/>==<sp/>EINTR);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Only<sp/>OPEN_REPLY<sp/>and<sp/>up<sp/>to<sp/>one<sp/>DEACTIVATE<sp/>message<sp/>should<sp/>be<sp/>possible<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((len<sp/>==<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>event)<sp/>&amp;&amp;<sp/>(event.id<sp/>==<sp/><ref refid="weston-launch_8h_1a6c50dae74876604cd9429610f91aa820ac3916549ca0e89916176556ec576f5bb" kindref="member">WESTON_LAUNCHER_OPEN_REPLY</ref>))</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((len<sp/>==<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>event.id)<sp/>&amp;&amp;<sp/>(event.id<sp/>==<sp/><ref refid="weston-launch_8h_1a6c50dae74876604cd9429610f91aa820a34b62754fd4801470eed19771cbb3d68" kindref="member">WESTON_LAUNCHER_DEACTIVATE</ref>)<sp/>&amp;&amp;<sp/>(launcher-&gt;<ref refid="structlauncher__weston__launch_1a736431650364ab5b068bc51dee13dede" kindref="member">deferred_deactivate</ref><sp/>==<sp/>0))<sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_event_loop_add_idle(wl_display_get_event_loop(launcher-&gt;<ref refid="structlauncher__weston__launch_1a4a6aab6399a783862fc2324327740784" kindref="member">compositor</ref>-&gt;<ref refid="structweston__compositor_1a2ad81ce6f58ba42026cd6d86d5f88c8b" kindref="member">wl_display</ref>),<sp/><ref refid="launcher-weston-launch_8c_1ae9f9e07d21e1e68883caaa9b95e8c516" kindref="member">idle_deactivate</ref>,<sp/>launcher);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>launcher-&gt;<ref refid="structlauncher__weston__launch_1a736431650364ab5b068bc51dee13dede" kindref="member">deferred_deactivate</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wlog_1ga6a7cc2161ce1dad600859022b30162c8" kindref="member">weston_log</ref>(</highlight><highlight class="stringliteral">&quot;unexpected<sp/>event<sp/>%d<sp/>(len=%zd)<sp/>from<sp/>weston-launch\n&quot;</highlight><highlight class="normal">,<sp/>event.id,<sp/>len);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(event.ret<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cmsg<sp/>=<sp/>CMSG_FIRSTHDR(&amp;msg);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!cmsg<sp/>||</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cmsg-&gt;cmsg_level<sp/>!=<sp/>SOL_SOCKET<sp/>||</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cmsg-&gt;cmsg_type<sp/>!=<sp/>SCM_RIGHTS)<sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;invalid<sp/>control<sp/>message\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data<sp/>=<sp/>(</highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal"><ref refid="unioncmsg__data" kindref="compound">cmsg_data</ref><sp/>*)<sp/>CMSG_DATA(cmsg);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(data-&gt;<ref refid="unioncmsg__data_1a397c85ac7fb2ed9360ea22a2c22ed68a" kindref="member">fd</ref><sp/>==<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;missing<sp/>drm<sp/>fd<sp/>in<sp/>socket<sp/>request\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>data-&gt;<ref refid="unioncmsg__data_1a397c85ac7fb2ed9360ea22a2c22ed68a" kindref="member">fd</ref>;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><ref refid="launcher-weston-launch_8c_1afa503b3aaf05b410de28fd58c11a4ded" kindref="member">launcher_weston_launch_close</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__launcher" kindref="compound">weston_launcher</ref><sp/>*launcher_base,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="unioncmsg__data_1a397c85ac7fb2ed9360ea22a2c22ed68a" kindref="member">fd</ref>)</highlight></codeline>
+<codeline lineno="210"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>close(<ref refid="unioncmsg__data_1a397c85ac7fb2ed9360ea22a2c22ed68a" kindref="member">fd</ref>);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><ref refid="launcher-weston-launch_8c_1adfd1fec0cdc513827d1ca275bb8a5642" kindref="member">launcher_weston_launch_restore</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__launcher" kindref="compound">weston_launcher</ref><sp/>*launcher_base)</highlight></codeline>
+<codeline lineno="216"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlauncher__weston__launch" kindref="compound">launcher_weston_launch</ref><sp/>*launcher<sp/>=<sp/>wl_container_of(launcher_base,<sp/>launcher,<sp/><ref refid="structlauncher__weston__launch_1aeb797799f1359a28c4e02ff2da7b234f" kindref="member">base</ref>);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">vt_mode<sp/>mode<sp/>=<sp/>{<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ioctl(launcher-&gt;<ref refid="structlauncher__weston__launch_1a5899a695145e2aef5da6cafcbef7f34f" kindref="member">tty</ref>,<sp/><ref refid="launcher-weston-launch_8c_1af2fc38646a7edd6cb16e696e984cdda8" kindref="member">KDSKBMUTE</ref>,<sp/>0)<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ioctl(launcher-&gt;<ref refid="structlauncher__weston__launch_1a5899a695145e2aef5da6cafcbef7f34f" kindref="member">tty</ref>,<sp/>KDSKBMODE,<sp/>launcher-&gt;<ref refid="structlauncher__weston__launch_1a01ed29549c7269af8fdc4916376335dc" kindref="member">kb_mode</ref>))</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wlog_1ga6a7cc2161ce1dad600859022b30162c8" kindref="member">weston_log</ref>(</highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>restore<sp/>kb<sp/>mode:<sp/>%s\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strerror(errno));</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ioctl(launcher-&gt;<ref refid="structlauncher__weston__launch_1a5899a695145e2aef5da6cafcbef7f34f" kindref="member">tty</ref>,<sp/>KDSETMODE,<sp/>KD_TEXT))</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wlog_1ga6a7cc2161ce1dad600859022b30162c8" kindref="member">weston_log</ref>(</highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>set<sp/>KD_TEXT<sp/>mode<sp/>on<sp/>tty:<sp/>%s\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strerror(errno));</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>We<sp/>have<sp/>to<sp/>drop<sp/>master<sp/>before<sp/>we<sp/>switch<sp/>the<sp/>VT<sp/>back<sp/>in</highlight></codeline>
+<codeline lineno="230"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>VT_AUTO,<sp/>so<sp/>we<sp/>don&apos;t<sp/>risk<sp/>switching<sp/>to<sp/>a<sp/>VT<sp/>with<sp/>another</highlight></codeline>
+<codeline lineno="231"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>display<sp/>server,<sp/>that<sp/>will<sp/>then<sp/>fail<sp/>to<sp/>set<sp/>drm<sp/>master.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="launcher-weston-launch_8c_1ab5bae7ee8ae27bbc928f46ef4a0a8dba" kindref="member">drmDropMaster</ref>(launcher-&gt;<ref refid="structlauncher__weston__launch_1a025e3f452ef6091d350ecd6d081092c8" kindref="member">drm_fd</ref>);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mode.mode<sp/>=<sp/>VT_AUTO;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ioctl(launcher-&gt;<ref refid="structlauncher__weston__launch_1a5899a695145e2aef5da6cafcbef7f34f" kindref="member">tty</ref>,<sp/>VT_SETMODE,<sp/>&amp;mode)<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wlog_1ga6a7cc2161ce1dad600859022b30162c8" kindref="member">weston_log</ref>(</highlight><highlight class="stringliteral">&quot;could<sp/>not<sp/>reset<sp/>vt<sp/>handling\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><ref refid="launcher-weston-launch_8c_1a755a77457def1f5c7308ee66b15c497f" kindref="member">launcher_weston_launch_data</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fd,<sp/>uint32_t<sp/>mask,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)</highlight></codeline>
+<codeline lineno="241"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlauncher__weston__launch" kindref="compound">launcher_weston_launch</ref><sp/>*launcher<sp/>=<sp/>data;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len,<sp/>ret;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mask<sp/>&amp;<sp/>(WL_EVENT_HANGUP<sp/>|<sp/>WL_EVENT_ERROR))<sp/>{</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wlog_1ga6a7cc2161ce1dad600859022b30162c8" kindref="member">weston_log</ref>(</highlight><highlight class="stringliteral">&quot;launcher<sp/>socket<sp/>closed,<sp/>exiting\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Normally<sp/>the<sp/>weston-launch<sp/>will<sp/>reset<sp/>the<sp/>tty,<sp/>but</highlight></codeline>
+<codeline lineno="248"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>in<sp/>this<sp/>case<sp/>it<sp/>died<sp/>or<sp/>something,<sp/>so<sp/>do<sp/>it<sp/>here<sp/>so</highlight></codeline>
+<codeline lineno="249"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>we<sp/>don&apos;t<sp/>end<sp/>up<sp/>with<sp/>a<sp/>stuck<sp/>vt.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="launcher-weston-launch_8c_1adfd1fec0cdc513827d1ca275bb8a5642" kindref="member">launcher_weston_launch_restore</ref>(&amp;launcher-&gt;<ref refid="structlauncher__weston__launch_1aeb797799f1359a28c4e02ff2da7b234f" kindref="member">base</ref>);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(-1);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(launcher-&gt;<ref refid="structlauncher__weston__launch_1a736431650364ab5b068bc51dee13dede" kindref="member">deferred_deactivate</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>launcher-&gt;<ref refid="structlauncher__weston__launch_1a736431650364ab5b068bc51dee13dede" kindref="member">deferred_deactivate</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="launcher-weston-launch_8c_1a284b676b3b2c3a2b662fcbc233c806a6" kindref="member">handle_deactivate</ref>(launcher);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>len<sp/>=<sp/>recv(launcher-&gt;<ref refid="structlauncher__weston__launch_1a65005e2b72e129b34d87f7be218b74c0" kindref="member">fd</ref>,<sp/>&amp;ret,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>ret,<sp/>0);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(len<sp/>&lt;<sp/>0<sp/>&amp;&amp;<sp/>errno<sp/>==<sp/>EINTR);</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(ret)<sp/>{</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="weston-launch_8h_1a6c50dae74876604cd9429610f91aa820a820b2c586a25a47b7509ef9be4f7bc33" kindref="member">WESTON_LAUNCHER_ACTIVATE</ref>:</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>launcher-&gt;<ref refid="structlauncher__weston__launch_1a4a6aab6399a783862fc2324327740784" kindref="member">compositor</ref>-&gt;<ref refid="structweston__compositor_1a1261d536f85647f94598c6892e6b5b9f" kindref="member">session_active</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_signal_emit(&amp;launcher-&gt;<ref refid="structlauncher__weston__launch_1a4a6aab6399a783862fc2324327740784" kindref="member">compositor</ref>-&gt;<ref refid="structweston__compositor_1a6e62e13d73c89d00ef3c7788ea4ddd83" kindref="member">session_signal</ref>,</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>launcher-&gt;<ref refid="structlauncher__weston__launch_1a4a6aab6399a783862fc2324327740784" kindref="member">compositor</ref>);</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="weston-launch_8h_1a6c50dae74876604cd9429610f91aa820a34b62754fd4801470eed19771cbb3d68" kindref="member">WESTON_LAUNCHER_DEACTIVATE</ref>:</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="launcher-weston-launch_8c_1a284b676b3b2c3a2b662fcbc233c806a6" kindref="member">handle_deactivate</ref>(launcher);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wlog_1ga6a7cc2161ce1dad600859022b30162c8" kindref="member">weston_log</ref>(</highlight><highlight class="stringliteral">&quot;unexpected<sp/>event<sp/>from<sp/>weston-launch\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="279"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><ref refid="launcher-weston-launch_8c_1ab0c0a700b25b8eeec23abdd525c142f2" kindref="member">launcher_weston_launch_activate_vt</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__launcher" kindref="compound">weston_launcher</ref><sp/>*launcher_base,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>vt)</highlight></codeline>
+<codeline lineno="283"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlauncher__weston__launch" kindref="compound">launcher_weston_launch</ref><sp/>*launcher<sp/>=<sp/>wl_container_of(launcher_base,<sp/>launcher,<sp/><ref refid="structlauncher__weston__launch_1aeb797799f1359a28c4e02ff2da7b234f" kindref="member">base</ref>);</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ioctl(launcher-&gt;<ref refid="structlauncher__weston__launch_1a5899a695145e2aef5da6cafcbef7f34f" kindref="member">tty</ref>,<sp/>VT_ACTIVATE,<sp/>vt);</highlight></codeline>
+<codeline lineno="286"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><ref refid="launcher-weston-launch_8c_1ad178e4e1e6a73dd5043ac1cb2391be7d" kindref="member">launcher_weston_environment_get_fd</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*env)</highlight></codeline>
+<codeline lineno="290"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*e;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structlauncher__weston__launch_1a65005e2b72e129b34d87f7be218b74c0" kindref="member">fd</ref>,<sp/>flags;</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>e<sp/>=<sp/>getenv(env);</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!e<sp/>||<sp/>!safe_strtoint(e,<sp/>&amp;<ref refid="structlauncher__weston__launch_1a65005e2b72e129b34d87f7be218b74c0" kindref="member">fd</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wlog_1ga6a7cc2161ce1dad600859022b30162c8" kindref="member">weston_log</ref>(</highlight><highlight class="stringliteral">&quot;could<sp/>not<sp/>get<sp/>launcher<sp/>fd<sp/>from<sp/>env\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flags<sp/>=<sp/>fcntl(<ref refid="structlauncher__weston__launch_1a65005e2b72e129b34d87f7be218b74c0" kindref="member">fd</ref>,<sp/>F_GETFD);</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(flags<sp/>==<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wlog_1ga6a7cc2161ce1dad600859022b30162c8" kindref="member">weston_log</ref>(</highlight><highlight class="stringliteral">&quot;could<sp/>not<sp/>get<sp/>fd<sp/>flags!,<sp/>env:<sp/>%s,<sp/>error:<sp/>%s\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>env,<sp/>strerror(errno));</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fcntl(<ref refid="structlauncher__weston__launch_1a65005e2b72e129b34d87f7be218b74c0" kindref="member">fd</ref>,<sp/>F_SETFD,<sp/>flags<sp/>|<sp/>FD_CLOEXEC);</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>unsetenv(env);</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structlauncher__weston__launch_1a65005e2b72e129b34d87f7be218b74c0" kindref="member">fd</ref>;</highlight></codeline>
+<codeline lineno="311"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><ref refid="launcher-weston-launch_8c_1a04afe45034cf2d80b112eea05c97dc31" kindref="member">launcher_weston_launch_connect</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__launcher" kindref="compound">weston_launcher</ref><sp/>**out,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__compositor" kindref="compound">weston_compositor</ref><sp/>*<ref refid="structlauncher__weston__launch_1a4a6aab6399a783862fc2324327740784" kindref="member">compositor</ref>,</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structlauncher__weston__launch_1a5899a695145e2aef5da6cafcbef7f34f" kindref="member">tty</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*seat_id,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>sync_drm)</highlight></codeline>
+<codeline lineno="317"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlauncher__weston__launch" kindref="compound">launcher_weston_launch</ref><sp/>*launcher;</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_event_loop<sp/>*loop;</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>launcher<sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*launcher);</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(launcher<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-ENOMEM;</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>launcher-&gt;<ref refid="structlauncher__weston__launch_1aeb797799f1359a28c4e02ff2da7b234f" kindref="member">base</ref>.<ref refid="structweston__launcher_1aa6f9ca9ae269376334c52aa5927a2c30" kindref="member">iface</ref><sp/>=<sp/>&amp;<ref refid="launcher-weston-launch_8c_1abff6b9df538edfe45ab000d27c189e4b" kindref="member">launcher_weston_launch_iface</ref>;</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlauncher__weston__launch" kindref="compound">launcher_weston_launch</ref><sp/>**)<sp/>out<sp/>=<sp/>launcher;</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>launcher-&gt;<ref refid="structlauncher__weston__launch_1a4a6aab6399a783862fc2324327740784" kindref="member">compositor</ref><sp/>=<sp/><ref refid="structlauncher__weston__launch_1a4a6aab6399a783862fc2324327740784" kindref="member">compositor</ref>;</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>launcher-&gt;<ref refid="structlauncher__weston__launch_1a025e3f452ef6091d350ecd6d081092c8" kindref="member">drm_fd</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>launcher-&gt;<ref refid="structlauncher__weston__launch_1a736431650364ab5b068bc51dee13dede" kindref="member">deferred_deactivate</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>launcher-&gt;<ref refid="structlauncher__weston__launch_1a65005e2b72e129b34d87f7be218b74c0" kindref="member">fd</ref><sp/>=<sp/><ref refid="launcher-weston-launch_8c_1ad178e4e1e6a73dd5043ac1cb2391be7d" kindref="member">launcher_weston_environment_get_fd</ref>(</highlight><highlight class="stringliteral">&quot;WESTON_LAUNCHER_SOCK&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(launcher-&gt;<ref refid="structlauncher__weston__launch_1a65005e2b72e129b34d87f7be218b74c0" kindref="member">fd</ref><sp/>!=<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>launcher-&gt;<ref refid="structlauncher__weston__launch_1a5899a695145e2aef5da6cafcbef7f34f" kindref="member">tty</ref><sp/>=<sp/><ref refid="launcher-weston-launch_8c_1ad178e4e1e6a73dd5043ac1cb2391be7d" kindref="member">launcher_weston_environment_get_fd</ref>(</highlight><highlight class="stringliteral">&quot;WESTON_TTY_FD&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>We<sp/>don&apos;t<sp/>get<sp/>a<sp/>chance<sp/>to<sp/>read<sp/>out<sp/>the<sp/>original<sp/>kb</highlight></codeline>
+<codeline lineno="334"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>mode<sp/>for<sp/>the<sp/>tty,<sp/>so<sp/>just<sp/>hard<sp/>code<sp/>K_UNICODE<sp/>here</highlight></codeline>
+<codeline lineno="335"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>in<sp/>case<sp/>we<sp/>have<sp/>to<sp/>clean<sp/>if<sp/>weston-launch<sp/>dies.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>launcher-&gt;<ref refid="structlauncher__weston__launch_1a01ed29549c7269af8fdc4916376335dc" kindref="member">kb_mode</ref><sp/>=<sp/>K_UNICODE;</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>loop<sp/>=<sp/>wl_display_get_event_loop(<ref refid="structlauncher__weston__launch_1a4a6aab6399a783862fc2324327740784" kindref="member">compositor</ref>-&gt;<ref refid="structweston__compositor_1a2ad81ce6f58ba42026cd6d86d5f88c8b" kindref="member">wl_display</ref>);</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>launcher-&gt;<ref refid="structlauncher__weston__launch_1aa440d15f34a06d7ba00a320532c1e9be" kindref="member">source</ref><sp/>=<sp/>wl_event_loop_add_fd(loop,<sp/>launcher-&gt;<ref refid="structlauncher__weston__launch_1a65005e2b72e129b34d87f7be218b74c0" kindref="member">fd</ref>,</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WL_EVENT_READABLE,</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="launcher-weston-launch_8c_1a755a77457def1f5c7308ee66b15c497f" kindref="member">launcher_weston_launch_data</ref>,</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>launcher);</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(launcher-&gt;<ref refid="structlauncher__weston__launch_1aa440d15f34a06d7ba00a320532c1e9be" kindref="member">source</ref><sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(launcher);</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wlog_1ga6a7cc2161ce1dad600859022b30162c8" kindref="member">weston_log</ref>(</highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>get<sp/>weston-launcher<sp/>socket<sp/>fd<sp/>event<sp/>source\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-ENOMEM;</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="353"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><ref refid="launcher-weston-launch_8c_1a671f03b254e1d45c4023fbf37257a686" kindref="member">launcher_weston_launch_destroy</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__launcher" kindref="compound">weston_launcher</ref><sp/>*launcher_base)</highlight></codeline>
+<codeline lineno="357"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlauncher__weston__launch" kindref="compound">launcher_weston_launch</ref><sp/>*launcher<sp/>=<sp/>wl_container_of(launcher_base,<sp/>launcher,<sp/><ref refid="structlauncher__weston__launch_1aeb797799f1359a28c4e02ff2da7b234f" kindref="member">base</ref>);</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(launcher-&gt;<ref refid="structlauncher__weston__launch_1a65005e2b72e129b34d87f7be218b74c0" kindref="member">fd</ref><sp/>!=<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>close(launcher-&gt;<ref refid="structlauncher__weston__launch_1a65005e2b72e129b34d87f7be218b74c0" kindref="member">fd</ref>);</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_event_source_remove(launcher-&gt;<ref refid="structlauncher__weston__launch_1aa440d15f34a06d7ba00a320532c1e9be" kindref="member">source</ref>);</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="launcher-weston-launch_8c_1adfd1fec0cdc513827d1ca275bb8a5642" kindref="member">launcher_weston_launch_restore</ref>(&amp;launcher-&gt;<ref refid="structlauncher__weston__launch_1aeb797799f1359a28c4e02ff2da7b234f" kindref="member">base</ref>);</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(launcher-&gt;<ref refid="structlauncher__weston__launch_1a5899a695145e2aef5da6cafcbef7f34f" kindref="member">tty</ref><sp/>&gt;=<sp/>0)</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>close(launcher-&gt;<ref refid="structlauncher__weston__launch_1a5899a695145e2aef5da6cafcbef7f34f" kindref="member">tty</ref>);</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(launcher);</highlight></codeline>
+<codeline lineno="371"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><ref refid="launcher-weston-launch_8c_1a114155c40393c4f1f42fea505a5c7cc9" kindref="member">launcher_weston_launch_get_vt</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__launcher" kindref="compound">weston_launcher</ref><sp/>*<ref refid="structlauncher__weston__launch_1aeb797799f1359a28c4e02ff2da7b234f" kindref="member">base</ref>)</highlight></codeline>
+<codeline lineno="375"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlauncher__weston__launch" kindref="compound">launcher_weston_launch</ref><sp/>*launcher<sp/>=<sp/>wl_container_of(<ref refid="structlauncher__weston__launch_1aeb797799f1359a28c4e02ff2da7b234f" kindref="member">base</ref>,<sp/>launcher,<sp/><ref refid="structlauncher__weston__launch_1aeb797799f1359a28c4e02ff2da7b234f" kindref="member">base</ref>);</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">stat<sp/>s;</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fstat(launcher-&gt;<ref refid="structlauncher__weston__launch_1a5899a695145e2aef5da6cafcbef7f34f" kindref="member">tty</ref>,<sp/>&amp;s)<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__wlog_1ga6a7cc2161ce1dad600859022b30162c8" kindref="member">weston_log</ref>(</highlight><highlight class="stringliteral">&quot;could<sp/>not<sp/>fstat<sp/>launcher<sp/>tty:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>strerror(errno));</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"></highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>minor(s.st_rdev);</highlight></codeline>
+<codeline lineno="384"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight></codeline>
+<codeline lineno="386"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlauncher__interface" kindref="compound">launcher_interface</ref><sp/><ref refid="launcher-weston-launch_8c_1abff6b9df538edfe45ab000d27c189e4b" kindref="member">launcher_weston_launch_iface</ref><sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="structlauncher__interface_1a6ad381fcad46afe08757d52d17e8c7c5" kindref="member">name</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;weston_launch&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.connect<sp/>=<sp/><ref refid="launcher-weston-launch_8c_1a04afe45034cf2d80b112eea05c97dc31" kindref="member">launcher_weston_launch_connect</ref>,</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.destroy<sp/>=<sp/><ref refid="launcher-weston-launch_8c_1a671f03b254e1d45c4023fbf37257a686" kindref="member">launcher_weston_launch_destroy</ref>,</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.open<sp/>=<sp/><ref refid="launcher-weston-launch_8c_1a00711898e5b6ae6049663bcdb911925d" kindref="member">launcher_weston_launch_open</ref>,</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.close<sp/>=<sp/><ref refid="launcher-weston-launch_8c_1afa503b3aaf05b410de28fd58c11a4ded" kindref="member">launcher_weston_launch_close</ref>,</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.activate_vt<sp/>=<sp/><ref refid="launcher-weston-launch_8c_1ab0c0a700b25b8eeec23abdd525c142f2" kindref="member">launcher_weston_launch_activate_vt</ref>,</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.get_vt<sp/>=<sp/><ref refid="launcher-weston-launch_8c_1a114155c40393c4f1f42fea505a5c7cc9" kindref="member">launcher_weston_launch_get_vt</ref>,</highlight></codeline>
+<codeline lineno="394"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c"/>
+  </compounddef>
+</doxygen>

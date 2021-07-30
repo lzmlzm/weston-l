@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="launcher-impl_8h" kind="file" language="C++">
+    <compoundname>launcher-impl.h</compoundname>
+    <includes local="yes">config.h</includes>
+    <includes refid="libweston_8h" local="no">libweston/libweston.h</includes>
+    <includedby refid="launcher-direct_8c" local="yes">/home/lzm/Wayland/weston/libweston/launcher-direct.c</includedby>
+    <includedby refid="launcher-libseat_8c" local="yes">/home/lzm/Wayland/weston/libweston/launcher-libseat.c</includedby>
+    <includedby refid="launcher-logind_8c" local="yes">/home/lzm/Wayland/weston/libweston/launcher-logind.c</includedby>
+    <includedby refid="launcher-util_8c" local="yes">/home/lzm/Wayland/weston/libweston/launcher-util.c</includedby>
+    <includedby refid="launcher-weston-launch_8c" local="yes">/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="3">
+        <label>libweston/libweston.h</label>
+        <link refid="libweston_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="12">
+        <label>stdlib.h</label>
+      </node>
+      <node id="9">
+        <label>wayland-server.h</label>
+      </node>
+      <node id="8">
+        <label>xkbcommon/xkbcommon.h</label>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/libweston/launcher-impl.h</label>
+        <link refid="launcher-impl_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>libweston/zalloc.h</label>
+        <link refid="zalloc_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>time.h</label>
+      </node>
+      <node id="10">
+        <label>libweston/matrix.h</label>
+        <link refid="matrix_8h"/>
+      </node>
+      <node id="7">
+        <label>pixman.h</label>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5">
+        <label>/home/lzm/Wayland/weston/libweston/launcher-util.c</label>
+        <link refid="launcher-util_8c"/>
+      </node>
+      <node id="3">
+        <label>/home/lzm/Wayland/weston/libweston/launcher-libseat.c</label>
+        <link refid="launcher-libseat_8c"/>
+      </node>
+      <node id="2">
+        <label>/home/lzm/Wayland/weston/libweston/launcher-direct.c</label>
+        <link refid="launcher-direct_8c"/>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/libweston/launcher-impl.h</label>
+        <link refid="launcher-impl_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/lzm/Wayland/weston/libweston/launcher-logind.c</label>
+        <link refid="launcher-logind_8c"/>
+      </node>
+      <node id="6">
+        <label>/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c</label>
+        <link refid="launcher-weston-launch_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structlauncher__interface" prot="public">launcher_interface</innerclass>
+    <innerclass refid="structweston__launcher" prot="public">weston_launcher</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="launcher-impl_8h_1aa2d8c686ae230de520cb5414e2dad919" prot="public" static="no" mutable="no">
+        <type>const struct <ref refid="structlauncher__interface" kindref="compound">launcher_interface</ref></type>
+        <definition>const struct launcher_interface launcher_libseat_iface</definition>
+        <argsstring></argsstring>
+        <name>launcher_libseat_iface</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/launcher-impl.h" line="1" column="0" bodyfile="/home/lzm/Wayland/weston/libweston/launcher-libseat.c" bodystart="247" bodyend="-1" declfile="/home/lzm/Wayland/weston/libweston/launcher-impl.h" declline="1" declcolumn="0"/>
+      </memberdef>
+      <memberdef kind="variable" id="launcher-impl_8h_1ac22ffffdff70fbc5f3a1b573a523bb15" prot="public" static="no" mutable="no">
+        <type>const struct <ref refid="structlauncher__interface" kindref="compound">launcher_interface</ref></type>
+        <definition>const struct launcher_interface launcher_logind_iface</definition>
+        <argsstring></argsstring>
+        <name>launcher_logind_iface</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/launcher-impl.h" line="1" column="0" bodyfile="/home/lzm/Wayland/weston/libweston/launcher-logind.c" bodystart="869" bodyend="-1" declfile="/home/lzm/Wayland/weston/libweston/launcher-impl.h" declline="1" declcolumn="0"/>
+      </memberdef>
+      <memberdef kind="variable" id="launcher-impl_8h_1abff6b9df538edfe45ab000d27c189e4b" prot="public" static="no" mutable="no">
+        <type>const struct <ref refid="structlauncher__interface" kindref="compound">launcher_interface</ref></type>
+        <definition>const struct launcher_interface launcher_weston_launch_iface</definition>
+        <argsstring></argsstring>
+        <name>launcher_weston_launch_iface</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/launcher-impl.h" line="1" column="0" bodyfile="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" bodystart="386" bodyend="-1" declfile="/home/lzm/Wayland/weston/libweston/launcher-impl.h" declline="1" declcolumn="0"/>
+      </memberdef>
+      <memberdef kind="variable" id="launcher-impl_8h_1a3ef520add7ed5dcb429d4c18a061d53b" prot="public" static="no" mutable="no">
+        <type>const struct <ref refid="structlauncher__interface" kindref="compound">launcher_interface</ref></type>
+        <definition>const struct launcher_interface launcher_direct_iface</definition>
+        <argsstring></argsstring>
+        <name>launcher_direct_iface</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/launcher-impl.h" line="1" column="0" bodyfile="/home/lzm/Wayland/weston/libweston/launcher-direct.c" bodystart="362" bodyend="-1" declfile="/home/lzm/Wayland/weston/libweston/launcher-impl.h" declline="1" declcolumn="0"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2015<sp/>Jasper<sp/>St.<sp/>Pierre</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>(including<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>next<sp/>paragraph)<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>NONINFRINGEMENT.<sp/><sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="libweston_8h" kindref="compound">libweston/libweston.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__launcher" kindref="compound">weston_launcher</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="structlauncher__interface" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlauncher__interface" kindref="compound">launcher_interface</ref><sp/>{</highlight></codeline>
+<codeline lineno="33" refid="structlauncher__interface_1a6ad381fcad46afe08757d52d17e8c7c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structlauncher__interface_1a6ad381fcad46afe08757d52d17e8c7c5" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="34" refid="structlauncher__interface_1ac4fda2d54a48fcd212281c5bb36b45c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>(*<sp/><ref refid="structlauncher__interface_1ac4fda2d54a48fcd212281c5bb36b45c4" kindref="member">connect</ref>)<sp/>(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__launcher" kindref="compound">weston_launcher</ref><sp/>**launcher_out,<sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__compositor" kindref="compound">weston_compositor</ref><sp/>*compositor,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tty,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*seat_id,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>sync_drm);</highlight></codeline>
+<codeline lineno="36" refid="structlauncher__interface_1a9ea1784b801547e37c87990a1a69d6ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>(*<sp/><ref refid="structlauncher__interface_1a9ea1784b801547e37c87990a1a69d6ca" kindref="member">destroy</ref>)<sp/>(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__launcher" kindref="compound">weston_launcher</ref><sp/>*launcher);</highlight></codeline>
+<codeline lineno="37" refid="structlauncher__interface_1a39a906b0fd55e75559946e8d3975eb3a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>(*<sp/><ref refid="structlauncher__interface_1a39a906b0fd55e75559946e8d3975eb3a" kindref="member">open</ref>)<sp/>(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__launcher" kindref="compound">weston_launcher</ref><sp/>*launcher,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*path,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flags);</highlight></codeline>
+<codeline lineno="38" refid="structlauncher__interface_1a4d365460d625667db2428015fb98d71d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>(*<sp/><ref refid="structlauncher__interface_1a4d365460d625667db2428015fb98d71d" kindref="member">close</ref>)<sp/>(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__launcher" kindref="compound">weston_launcher</ref><sp/>*launcher,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fd);</highlight></codeline>
+<codeline lineno="39" refid="structlauncher__interface_1a9fbbd0d5bc429efb5e4345233bec7e8d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>(*<sp/><ref refid="structlauncher__interface_1a9fbbd0d5bc429efb5e4345233bec7e8d" kindref="member">activate_vt</ref>)<sp/>(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__launcher" kindref="compound">weston_launcher</ref><sp/>*launcher,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>vt);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Get<sp/>the<sp/>number<sp/>of<sp/>the<sp/>VT<sp/>weston<sp/>is<sp/>running<sp/>in<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="structlauncher__interface_1ae2a57d13ba3241acc010b0aa7673391f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>(*<sp/><ref refid="structlauncher__interface_1ae2a57d13ba3241acc010b0aa7673391f" kindref="member">get_vt</ref>)<sp/>(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__launcher" kindref="compound">weston_launcher</ref><sp/>*launcher);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="structweston__launcher" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__launcher" kindref="compound">weston_launcher</ref><sp/>{</highlight></codeline>
+<codeline lineno="45" refid="structweston__launcher_1aa6f9ca9ae269376334c52aa5927a2c30" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlauncher__interface" kindref="compound">launcher_interface</ref><sp/>*<ref refid="structweston__launcher_1aa6f9ca9ae269376334c52aa5927a2c30" kindref="member">iface</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlauncher__interface" kindref="compound">launcher_interface</ref><sp/><ref refid="launcher-impl_8h_1aa2d8c686ae230de520cb5414e2dad919" kindref="member">launcher_libseat_iface</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlauncher__interface" kindref="compound">launcher_interface</ref><sp/><ref refid="launcher-impl_8h_1ac22ffffdff70fbc5f3a1b573a523bb15" kindref="member">launcher_logind_iface</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlauncher__interface" kindref="compound">launcher_interface</ref><sp/><ref refid="launcher-impl_8h_1abff6b9df538edfe45ab000d27c189e4b" kindref="member">launcher_weston_launch_iface</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlauncher__interface" kindref="compound">launcher_interface</ref><sp/><ref refid="launcher-impl_8h_1a3ef520add7ed5dcb429d4c18a061d53b" kindref="member">launcher_direct_iface</ref>;</highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/libweston/launcher-impl.h"/>
+  </compounddef>
+</doxygen>

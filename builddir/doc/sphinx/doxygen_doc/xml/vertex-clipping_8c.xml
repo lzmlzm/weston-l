@@ -1,0 +1,944 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="vertex-clipping_8c" kind="file" language="C++">
+    <compoundname>vertex-clipping.c</compoundname>
+    <includes local="no">assert.h</includes>
+    <includes local="no">float.h</includes>
+    <includes local="no">math.h</includes>
+    <includes refid="vertex-clipping_8h" local="yes">vertex-clipping.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>assert.h</label>
+      </node>
+      <node id="3">
+        <label>float.h</label>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/libweston/vertex-clipping.c</label>
+        <link refid="vertex-clipping_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>vertex-clipping.h</label>
+        <link refid="vertex-clipping_8h"/>
+      </node>
+      <node id="4">
+        <label>math.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="vertex-clipping_8c_1affe776513b24d84b39af8ab0930fef7f" prot="public" static="no">
+        <name>max</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>(((a) &gt; (b)) ? (a) : (b))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" line="281" column="9" bodyfile="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" bodystart="281" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vertex-clipping_8c_1ac6afabdc09a49a433ee19d8a9486056d" prot="public" static="no">
+        <name>min</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>(((a) &gt; (b)) ? (b) : (a))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" line="282" column="9" bodyfile="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" bodystart="282" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vertex-clipping_8c_1ade0ac16de71f1b411f933a8b2cd513bc" prot="public" static="no">
+        <name>clip</name>
+        <param><defname>x</defname></param>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer><ref refid="weston-test-client-helper_8c_1ac6afabdc09a49a433ee19d8a9486056d" kindref="member">min</ref>(<ref refid="weston-test-client-helper_8c_1affe776513b24d84b39af8ab0930fef7f" kindref="member">max</ref>(x, a), b)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" line="283" column="9" bodyfile="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" bodystart="283" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="vertex-clipping_8c_1a7278c5285b5591d65abcbf198404eeba" prot="public" static="no" strong="no">
+        <type></type>
+        <name>path_transition</name>
+        <enumvalue id="vertex-clipping_8c_1a7278c5285b5591d65abcbf198404eebaabcfc6f8e7a4cbaffd4b6f70ee7ab4e66" prot="public">
+          <name>PATH_TRANSITION_OUT_TO_OUT</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="vertex-clipping_8c_1a7278c5285b5591d65abcbf198404eebaa59c653786d29c85e125a7c91f65f121f" prot="public">
+          <name>PATH_TRANSITION_OUT_TO_IN</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="vertex-clipping_8c_1a7278c5285b5591d65abcbf198404eebaa2ba92582477fe7495f3e94c8cc00b839" prot="public">
+          <name>PATH_TRANSITION_IN_TO_OUT</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="vertex-clipping_8c_1a7278c5285b5591d65abcbf198404eebaa990d29d18fa79bbb6943d9f51aa7d0c9" prot="public">
+          <name>PATH_TRANSITION_IN_TO_IN</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" line="95" column="21" bodyfile="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" bodystart="95" bodyend="100"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="vertex-clipping_8c_1af653e2551134848d9bdddc6cc8907544" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float float_difference</definition>
+        <argsstring>(float a, float b)</argsstring>
+        <name>float_difference</name>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" line="32" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" bodystart="32" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="vertex-clipping_8c_1a550183f8909614b14c34e6114d927bd2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>static float clip_intersect_y</definition>
+        <argsstring>(float p1x, float p1y, float p2x, float p2y, float x_arg)</argsstring>
+        <name>clip_intersect_y</name>
+        <param>
+          <type>float</type>
+          <declname>p1x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>p1y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>p2x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>p2y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x_arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" line="55" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" bodystart="55" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="vertex-clipping_8c_1a4a8f4505e700365fe1dbb12f82fa6fbd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>static float clip_intersect_x</definition>
+        <argsstring>(float p1x, float p1y, float p2x, float p2y, float y_arg)</argsstring>
+        <name>clip_intersect_x</name>
+        <param>
+          <type>float</type>
+          <declname>p1x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>p1y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>p2x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>p2y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y_arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" line="77" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" bodystart="77" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="vertex-clipping_8c_1a2b69ee133de682595696a9567efe249a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void clip_append_vertex</definition>
+        <argsstring>(struct clip_context *ctx, float x, float y)</argsstring>
+        <name>clip_append_vertex</name>
+        <param>
+          <type>struct <ref refid="structclip__context" kindref="compound">clip_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" line="103" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" bodystart="103" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="vertex-clipping_8c_1a200d3e75903333dbfca378ff30177fca" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="vertex-clipping_8c_1a7278c5285b5591d65abcbf198404eeba" kindref="member">path_transition</ref></type>
+        <definition>static enum path_transition path_transition_left_edge</definition>
+        <argsstring>(struct clip_context *ctx, float x, float y)</argsstring>
+        <name>path_transition_left_edge</name>
+        <param>
+          <type>struct <ref refid="structclip__context" kindref="compound">clip_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" line="103" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" bodystart="110" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="vertex-clipping_8c_1a2d75f9a7ec9f325d2e49924734b1f2d1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="vertex-clipping_8c_1a7278c5285b5591d65abcbf198404eeba" kindref="member">path_transition</ref></type>
+        <definition>static enum path_transition path_transition_right_edge</definition>
+        <argsstring>(struct clip_context *ctx, float x, float y)</argsstring>
+        <name>path_transition_right_edge</name>
+        <param>
+          <type>struct <ref refid="structclip__context" kindref="compound">clip_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" line="103" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" bodystart="116" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="vertex-clipping_8c_1a4b2930bb70e8de2fcbb33c20eb052c2b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="vertex-clipping_8c_1a7278c5285b5591d65abcbf198404eeba" kindref="member">path_transition</ref></type>
+        <definition>static enum path_transition path_transition_top_edge</definition>
+        <argsstring>(struct clip_context *ctx, float x, float y)</argsstring>
+        <name>path_transition_top_edge</name>
+        <param>
+          <type>struct <ref refid="structclip__context" kindref="compound">clip_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" line="103" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" bodystart="122" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="vertex-clipping_8c_1a6bffef86a2acd92393895a2dc8b25f0d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="vertex-clipping_8c_1a7278c5285b5591d65abcbf198404eeba" kindref="member">path_transition</ref></type>
+        <definition>static enum path_transition path_transition_bottom_edge</definition>
+        <argsstring>(struct clip_context *ctx, float x, float y)</argsstring>
+        <name>path_transition_bottom_edge</name>
+        <param>
+          <type>struct <ref refid="structclip__context" kindref="compound">clip_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" line="103" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" bodystart="128" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="vertex-clipping_8c_1afae524fff83410fc1df1dd4c73fc97fa" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void clip_polygon_leftright</definition>
+        <argsstring>(struct clip_context *ctx, enum path_transition transition, float x, float y, float clip_x)</argsstring>
+        <name>clip_polygon_leftright</name>
+        <param>
+          <type>struct <ref refid="structclip__context" kindref="compound">clip_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="vertex-clipping_8c_1a7278c5285b5591d65abcbf198404eeba" kindref="member">path_transition</ref></type>
+          <declname>transition</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>clip_x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" line="134" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" bodystart="134" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="vertex-clipping_8c_1a3c9790b80ca2cfd7c64a608856df415c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void clip_polygon_topbottom</definition>
+        <argsstring>(struct clip_context *ctx, enum path_transition transition, float x, float y, float clip_y)</argsstring>
+        <name>clip_polygon_topbottom</name>
+        <param>
+          <type>struct <ref refid="structclip__context" kindref="compound">clip_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="vertex-clipping_8c_1a7278c5285b5591d65abcbf198404eeba" kindref="member">path_transition</ref></type>
+          <declname>transition</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>clip_y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" line="165" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" bodystart="165" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="vertex-clipping_8c_1aaccf3a949fe2ca1ffd4e59fce19d038e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void clip_context_prepare</definition>
+        <argsstring>(struct clip_context *ctx, const struct polygon8 *src, float *dst_x, float *dst_y)</argsstring>
+        <name>clip_context_prepare</name>
+        <param>
+          <type>struct <ref refid="structclip__context" kindref="compound">clip_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structpolygon8" kindref="compound">polygon8</ref> *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dst_x</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dst_y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" line="196" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" bodystart="196" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="vertex-clipping_8c_1aa2020af7309aab176dfecac9d1f6cfad" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int clip_polygon_left</definition>
+        <argsstring>(struct clip_context *ctx, const struct polygon8 *src, float *dst_x, float *dst_y)</argsstring>
+        <name>clip_polygon_left</name>
+        <param>
+          <type>struct <ref refid="structclip__context" kindref="compound">clip_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structpolygon8" kindref="compound">polygon8</ref> *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dst_x</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dst_y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" line="206" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" bodystart="206" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="vertex-clipping_8c_1a9f4b13ef66bf61cc46b133a38c6f3828" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int clip_polygon_right</definition>
+        <argsstring>(struct clip_context *ctx, const struct polygon8 *src, float *dst_x, float *dst_y)</argsstring>
+        <name>clip_polygon_right</name>
+        <param>
+          <type>struct <ref refid="structclip__context" kindref="compound">clip_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structpolygon8" kindref="compound">polygon8</ref> *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dst_x</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dst_y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" line="225" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" bodystart="225" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="vertex-clipping_8c_1acbdb519485396a5e86fe25cbf58d5e46" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int clip_polygon_top</definition>
+        <argsstring>(struct clip_context *ctx, const struct polygon8 *src, float *dst_x, float *dst_y)</argsstring>
+        <name>clip_polygon_top</name>
+        <param>
+          <type>struct <ref refid="structclip__context" kindref="compound">clip_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structpolygon8" kindref="compound">polygon8</ref> *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dst_x</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dst_y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" line="244" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" bodystart="244" bodyend="260"/>
+      </memberdef>
+      <memberdef kind="function" id="vertex-clipping_8c_1a86d43594e43ea61d2da6b4ad793f0750" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int clip_polygon_bottom</definition>
+        <argsstring>(struct clip_context *ctx, const struct polygon8 *src, float *dst_x, float *dst_y)</argsstring>
+        <name>clip_polygon_bottom</name>
+        <param>
+          <type>struct <ref refid="structclip__context" kindref="compound">clip_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structpolygon8" kindref="compound">polygon8</ref> *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dst_x</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dst_y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" line="263" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" bodystart="263" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="function" id="vertex-clipping_8c_1a01d6ade516504cf2779d35e5019b1f38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int clip_simple</definition>
+        <argsstring>(struct clip_context *ctx, struct polygon8 *surf, float *ex, float *ey)</argsstring>
+        <name>clip_simple</name>
+        <param>
+          <type>struct <ref refid="structclip__context" kindref="compound">clip_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structpolygon8" kindref="compound">polygon8</ref> *</type>
+          <declname>surf</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>ex</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>ey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" line="286" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" bodystart="286" bodyend="297"/>
+      </memberdef>
+      <memberdef kind="function" id="vertex-clipping_8c_1a5b8916a5086672dc5c79206ea49fc17b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int clip_transformed</definition>
+        <argsstring>(struct clip_context *ctx, struct polygon8 *surf, float *ex, float *ey)</argsstring>
+        <name>clip_transformed</name>
+        <param>
+          <type>struct <ref refid="structclip__context" kindref="compound">clip_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structpolygon8" kindref="compound">polygon8</ref> *</type>
+          <declname>surf</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>ex</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>ey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" line="300" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/vertex-clipping.c" bodystart="300" bodyend="330"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2012<sp/>Intel<sp/>Corporation</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>(including<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>next<sp/>paragraph)<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>NONINFRINGEMENT.<sp/><sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;float.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="vertex-clipping_8h" kindref="compound">vertex-clipping.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><ref refid="vertex-clipping_8c_1af653e2551134848d9bdddc6cc8907544" kindref="member">float_difference</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>b)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>http://www.altdevblogaday.com/2012/02/22/comparing-floating-point-numbers-2012-edition/<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>max_diff<sp/>=<sp/>4.0f<sp/>*<sp/>FLT_MIN;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>max_rel_diff<sp/>=<sp/>4.0e-5;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>diff<sp/>=<sp/>a<sp/>-<sp/>b;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>adiff<sp/>=<sp/>fabsf(diff);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(adiff<sp/>&lt;=<sp/>max_diff)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0f;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a<sp/>=<sp/>fabsf(a);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b<sp/>=<sp/>fabsf(b);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(adiff<sp/>&lt;=<sp/>(a<sp/>&gt;<sp/>b<sp/>?<sp/>a<sp/>:<sp/>b)<sp/>*<sp/>max_rel_diff)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0f;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>diff;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>A<sp/>line<sp/>segment<sp/>(p1x,<sp/>p1y)-(p2x,<sp/>p2y)<sp/>intersects<sp/>the<sp/>line<sp/>x<sp/>=<sp/>x_arg.</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/>*<sp/>Compute<sp/>the<sp/>y<sp/>coordinate<sp/>of<sp/>the<sp/>intersection.</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><ref refid="vertex-clipping_8c_1a550183f8909614b14c34e6114d927bd2" kindref="member">clip_intersect_y</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>p1x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>p1y,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>p2x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>p2y,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x_arg)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>diff<sp/>=<sp/><ref refid="vertex-clipping_8c_1af653e2551134848d9bdddc6cc8907544" kindref="member">float_difference</ref>(p1x,<sp/>p2x);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Practically<sp/>vertical<sp/>line<sp/>segment,<sp/>yet<sp/>the<sp/>end<sp/>points<sp/>have<sp/>already</highlight></codeline>
+<codeline lineno="62"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>been<sp/>determined<sp/>to<sp/>be<sp/>on<sp/>different<sp/>sides<sp/>of<sp/>the<sp/>line.<sp/>Therefore</highlight></codeline>
+<codeline lineno="63"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>the<sp/>line<sp/>segment<sp/>is<sp/>part<sp/>of<sp/>the<sp/>line<sp/>and<sp/>intersects<sp/>everywhere.</highlight></codeline>
+<codeline lineno="64"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Return<sp/>the<sp/>end<sp/>point,<sp/>so<sp/>we<sp/>use<sp/>the<sp/>whole<sp/>line<sp/>segment.</highlight></codeline>
+<codeline lineno="65"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(diff<sp/>==<sp/>0.0f)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p2y;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a<sp/>=<sp/>(x_arg<sp/>-<sp/>p2x)<sp/>/<sp/>diff;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p2y<sp/>+<sp/>(p1y<sp/>-<sp/>p2y)<sp/>*<sp/>a;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>A<sp/>line<sp/>segment<sp/>(p1x,<sp/>p1y)-(p2x,<sp/>p2y)<sp/>intersects<sp/>the<sp/>line<sp/>y<sp/>=<sp/>y_arg.</highlight></codeline>
+<codeline lineno="74"><highlight class="comment"><sp/>*<sp/>Compute<sp/>the<sp/>x<sp/>coordinate<sp/>of<sp/>the<sp/>intersection.</highlight></codeline>
+<codeline lineno="75"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><ref refid="vertex-clipping_8c_1a4a8f4505e700365fe1dbb12f82fa6fbd" kindref="member">clip_intersect_x</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>p1x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>p1y,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>p2x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>p2y,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y_arg)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>diff<sp/>=<sp/><ref refid="vertex-clipping_8c_1af653e2551134848d9bdddc6cc8907544" kindref="member">float_difference</ref>(p1y,<sp/>p2y);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Practically<sp/>horizontal<sp/>line<sp/>segment,<sp/>yet<sp/>the<sp/>end<sp/>points<sp/>have<sp/>already</highlight></codeline>
+<codeline lineno="84"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>been<sp/>determined<sp/>to<sp/>be<sp/>on<sp/>different<sp/>sides<sp/>of<sp/>the<sp/>line.<sp/>Therefore</highlight></codeline>
+<codeline lineno="85"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>the<sp/>line<sp/>segment<sp/>is<sp/>part<sp/>of<sp/>the<sp/>line<sp/>and<sp/>intersects<sp/>everywhere.</highlight></codeline>
+<codeline lineno="86"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Return<sp/>the<sp/>end<sp/>point,<sp/>so<sp/>we<sp/>use<sp/>the<sp/>whole<sp/>line<sp/>segment.</highlight></codeline>
+<codeline lineno="87"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(diff<sp/>==<sp/>0.0f)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p2x;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a<sp/>=<sp/>(y_arg<sp/>-<sp/>p2y)<sp/>/<sp/>diff;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p2x<sp/>+<sp/>(p1x<sp/>-<sp/>p2x)<sp/>*<sp/>a;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="vertex-clipping_8c_1a7278c5285b5591d65abcbf198404eeba" kindref="member">path_transition</ref><sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="vertex-clipping_8c_1a7278c5285b5591d65abcbf198404eebaabcfc6f8e7a4cbaffd4b6f70ee7ab4e66" kindref="member">PATH_TRANSITION_OUT_TO_OUT</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="vertex-clipping_8c_1a7278c5285b5591d65abcbf198404eebaa59c653786d29c85e125a7c91f65f121f" kindref="member">PATH_TRANSITION_OUT_TO_IN</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="vertex-clipping_8c_1a7278c5285b5591d65abcbf198404eebaa2ba92582477fe7495f3e94c8cc00b839" kindref="member">PATH_TRANSITION_IN_TO_OUT</ref><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="vertex-clipping_8c_1a7278c5285b5591d65abcbf198404eebaa990d29d18fa79bbb6943d9f51aa7d0c9" kindref="member">PATH_TRANSITION_IN_TO_IN</ref><sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><ref refid="vertex-clipping_8c_1a2b69ee133de682595696a9567efe249a" kindref="member">clip_append_vertex</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclip__context" kindref="compound">clip_context</ref><sp/>*ctx,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y)</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*ctx-&gt;<ref refid="structclip__context_1a87461b400324483c7b3b6f1a89ea9b67" kindref="member">vertices</ref>.<ref refid="structclip__context_1ae08005c88ff8e6e078d578df12a3fe77" kindref="member">x</ref>++<sp/>=<sp/>x;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*ctx-&gt;<ref refid="structclip__context_1a87461b400324483c7b3b6f1a89ea9b67" kindref="member">vertices</ref>.<ref refid="structclip__context_1a0b6003784de8fff7ec3e7ac625ae1a9f" kindref="member">y</ref>++<sp/>=<sp/>y;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="vertex-clipping_8c_1a7278c5285b5591d65abcbf198404eeba" kindref="member">path_transition</ref></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><ref refid="vertex-clipping_8c_1a200d3e75903333dbfca378ff30177fca" kindref="member">path_transition_left_edge</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclip__context" kindref="compound">clip_context</ref><sp/>*ctx,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y)</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((ctx-&gt;<ref refid="structclip__context_1ad4435d25358dcf19786bde156ee8248e" kindref="member">prev</ref>.<ref refid="structclip__context_1ae08005c88ff8e6e078d578df12a3fe77" kindref="member">x</ref><sp/>&gt;=<sp/>ctx-&gt;<ref refid="structclip__context_1a410f43abe5f1ad01d1089b74f089c4cf" kindref="member">clip</ref>.<ref refid="structclip__context_1ab59a01c72b45a0dbc1ccef66335ff5a4" kindref="member">x1</ref>)<sp/>&lt;&lt;<sp/>1)<sp/>|<sp/>(x<sp/>&gt;=<sp/>ctx-&gt;<ref refid="structclip__context_1a410f43abe5f1ad01d1089b74f089c4cf" kindref="member">clip</ref>.<ref refid="structclip__context_1ab59a01c72b45a0dbc1ccef66335ff5a4" kindref="member">x1</ref>);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="vertex-clipping_8c_1a7278c5285b5591d65abcbf198404eeba" kindref="member">path_transition</ref></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><ref refid="vertex-clipping_8c_1a2d75f9a7ec9f325d2e49924734b1f2d1" kindref="member">path_transition_right_edge</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclip__context" kindref="compound">clip_context</ref><sp/>*ctx,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((ctx-&gt;<ref refid="structclip__context_1ad4435d25358dcf19786bde156ee8248e" kindref="member">prev</ref>.<ref refid="structclip__context_1ae08005c88ff8e6e078d578df12a3fe77" kindref="member">x</ref><sp/>&lt;<sp/>ctx-&gt;<ref refid="structclip__context_1a410f43abe5f1ad01d1089b74f089c4cf" kindref="member">clip</ref>.<ref refid="structclip__context_1a78b18f08c8599a7f5ccb5c5f79100f91" kindref="member">x2</ref>)<sp/>&lt;&lt;<sp/>1)<sp/>|<sp/>(x<sp/>&lt;<sp/>ctx-&gt;<ref refid="structclip__context_1a410f43abe5f1ad01d1089b74f089c4cf" kindref="member">clip</ref>.<ref refid="structclip__context_1a78b18f08c8599a7f5ccb5c5f79100f91" kindref="member">x2</ref>);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="vertex-clipping_8c_1a7278c5285b5591d65abcbf198404eeba" kindref="member">path_transition</ref></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><ref refid="vertex-clipping_8c_1a4b2930bb70e8de2fcbb33c20eb052c2b" kindref="member">path_transition_top_edge</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclip__context" kindref="compound">clip_context</ref><sp/>*ctx,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y)</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((ctx-&gt;<ref refid="structclip__context_1ad4435d25358dcf19786bde156ee8248e" kindref="member">prev</ref>.<ref refid="structclip__context_1a0b6003784de8fff7ec3e7ac625ae1a9f" kindref="member">y</ref><sp/>&gt;=<sp/>ctx-&gt;<ref refid="structclip__context_1a410f43abe5f1ad01d1089b74f089c4cf" kindref="member">clip</ref>.<ref refid="structclip__context_1a61e34179d90e020bc366bc81657c839d" kindref="member">y1</ref>)<sp/>&lt;&lt;<sp/>1)<sp/>|<sp/>(y<sp/>&gt;=<sp/>ctx-&gt;<ref refid="structclip__context_1a410f43abe5f1ad01d1089b74f089c4cf" kindref="member">clip</ref>.<ref refid="structclip__context_1a61e34179d90e020bc366bc81657c839d" kindref="member">y1</ref>);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="vertex-clipping_8c_1a7278c5285b5591d65abcbf198404eeba" kindref="member">path_transition</ref></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><ref refid="vertex-clipping_8c_1a6bffef86a2acd92393895a2dc8b25f0d" kindref="member">path_transition_bottom_edge</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclip__context" kindref="compound">clip_context</ref><sp/>*ctx,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y)</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((ctx-&gt;<ref refid="structclip__context_1ad4435d25358dcf19786bde156ee8248e" kindref="member">prev</ref>.<ref refid="structclip__context_1a0b6003784de8fff7ec3e7ac625ae1a9f" kindref="member">y</ref><sp/>&lt;<sp/>ctx-&gt;<ref refid="structclip__context_1a410f43abe5f1ad01d1089b74f089c4cf" kindref="member">clip</ref>.<ref refid="structclip__context_1a3a47a86973d1f05a33343e7d4e834fef" kindref="member">y2</ref>)<sp/>&lt;&lt;<sp/>1)<sp/>|<sp/>(y<sp/>&lt;<sp/>ctx-&gt;<ref refid="structclip__context_1a410f43abe5f1ad01d1089b74f089c4cf" kindref="member">clip</ref>.<ref refid="structclip__context_1a3a47a86973d1f05a33343e7d4e834fef" kindref="member">y2</ref>);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><ref refid="vertex-clipping_8c_1afae524fff83410fc1df1dd4c73fc97fa" kindref="member">clip_polygon_leftright</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclip__context" kindref="compound">clip_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="vertex-clipping_8c_1a7278c5285b5591d65abcbf198404eeba" kindref="member">path_transition</ref><sp/>transition,</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>clip_x)</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>yi;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(transition)<sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="vertex-clipping_8c_1a7278c5285b5591d65abcbf198404eebaa990d29d18fa79bbb6943d9f51aa7d0c9" kindref="member">PATH_TRANSITION_IN_TO_IN</ref>:</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="vertex-clipping_8c_1a2b69ee133de682595696a9567efe249a" kindref="member">clip_append_vertex</ref>(ctx,<sp/>x,<sp/>y);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="vertex-clipping_8c_1a7278c5285b5591d65abcbf198404eebaa2ba92582477fe7495f3e94c8cc00b839" kindref="member">PATH_TRANSITION_IN_TO_OUT</ref>:</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>yi<sp/>=<sp/><ref refid="vertex-clipping_8c_1a550183f8909614b14c34e6114d927bd2" kindref="member">clip_intersect_y</ref>(ctx-&gt;<ref refid="structclip__context_1ad4435d25358dcf19786bde156ee8248e" kindref="member">prev</ref>.<ref refid="structclip__context_1ae08005c88ff8e6e078d578df12a3fe77" kindref="member">x</ref>,<sp/>ctx-&gt;<ref refid="structclip__context_1ad4435d25358dcf19786bde156ee8248e" kindref="member">prev</ref>.<ref refid="structclip__context_1a0b6003784de8fff7ec3e7ac625ae1a9f" kindref="member">y</ref>,<sp/>x,<sp/>y,<sp/>clip_x);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="vertex-clipping_8c_1a2b69ee133de682595696a9567efe249a" kindref="member">clip_append_vertex</ref>(ctx,<sp/>clip_x,<sp/>yi);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="vertex-clipping_8c_1a7278c5285b5591d65abcbf198404eebaa59c653786d29c85e125a7c91f65f121f" kindref="member">PATH_TRANSITION_OUT_TO_IN</ref>:</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>yi<sp/>=<sp/><ref refid="vertex-clipping_8c_1a550183f8909614b14c34e6114d927bd2" kindref="member">clip_intersect_y</ref>(ctx-&gt;<ref refid="structclip__context_1ad4435d25358dcf19786bde156ee8248e" kindref="member">prev</ref>.<ref refid="structclip__context_1ae08005c88ff8e6e078d578df12a3fe77" kindref="member">x</ref>,<sp/>ctx-&gt;<ref refid="structclip__context_1ad4435d25358dcf19786bde156ee8248e" kindref="member">prev</ref>.<ref refid="structclip__context_1a0b6003784de8fff7ec3e7ac625ae1a9f" kindref="member">y</ref>,<sp/>x,<sp/>y,<sp/>clip_x);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="vertex-clipping_8c_1a2b69ee133de682595696a9567efe249a" kindref="member">clip_append_vertex</ref>(ctx,<sp/>clip_x,<sp/>yi);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="vertex-clipping_8c_1a2b69ee133de682595696a9567efe249a" kindref="member">clip_append_vertex</ref>(ctx,<sp/>x,<sp/>y);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="vertex-clipping_8c_1a7278c5285b5591d65abcbf198404eebaabcfc6f8e7a4cbaffd4b6f70ee7ab4e66" kindref="member">PATH_TRANSITION_OUT_TO_OUT</ref>:</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>nothing<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(0<sp/>&amp;&amp;<sp/></highlight><highlight class="stringliteral">&quot;bad<sp/>enum<sp/>path_transition&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ctx-&gt;<ref refid="structclip__context_1ad4435d25358dcf19786bde156ee8248e" kindref="member">prev</ref>.<ref refid="structclip__context_1ae08005c88ff8e6e078d578df12a3fe77" kindref="member">x</ref><sp/>=<sp/>x;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ctx-&gt;<ref refid="structclip__context_1ad4435d25358dcf19786bde156ee8248e" kindref="member">prev</ref>.<ref refid="structclip__context_1a0b6003784de8fff7ec3e7ac625ae1a9f" kindref="member">y</ref><sp/>=<sp/>y;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><ref refid="vertex-clipping_8c_1a3c9790b80ca2cfd7c64a608856df415c" kindref="member">clip_polygon_topbottom</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclip__context" kindref="compound">clip_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="vertex-clipping_8c_1a7278c5285b5591d65abcbf198404eeba" kindref="member">path_transition</ref><sp/>transition,</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>clip_y)</highlight></codeline>
+<codeline lineno="168"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>xi;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(transition)<sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="vertex-clipping_8c_1a7278c5285b5591d65abcbf198404eebaa990d29d18fa79bbb6943d9f51aa7d0c9" kindref="member">PATH_TRANSITION_IN_TO_IN</ref>:</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="vertex-clipping_8c_1a2b69ee133de682595696a9567efe249a" kindref="member">clip_append_vertex</ref>(ctx,<sp/>x,<sp/>y);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="vertex-clipping_8c_1a7278c5285b5591d65abcbf198404eebaa2ba92582477fe7495f3e94c8cc00b839" kindref="member">PATH_TRANSITION_IN_TO_OUT</ref>:</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xi<sp/>=<sp/><ref refid="vertex-clipping_8c_1a4a8f4505e700365fe1dbb12f82fa6fbd" kindref="member">clip_intersect_x</ref>(ctx-&gt;<ref refid="structclip__context_1ad4435d25358dcf19786bde156ee8248e" kindref="member">prev</ref>.<ref refid="structclip__context_1ae08005c88ff8e6e078d578df12a3fe77" kindref="member">x</ref>,<sp/>ctx-&gt;<ref refid="structclip__context_1ad4435d25358dcf19786bde156ee8248e" kindref="member">prev</ref>.<ref refid="structclip__context_1a0b6003784de8fff7ec3e7ac625ae1a9f" kindref="member">y</ref>,<sp/>x,<sp/>y,<sp/>clip_y);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="vertex-clipping_8c_1a2b69ee133de682595696a9567efe249a" kindref="member">clip_append_vertex</ref>(ctx,<sp/>xi,<sp/>clip_y);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="vertex-clipping_8c_1a7278c5285b5591d65abcbf198404eebaa59c653786d29c85e125a7c91f65f121f" kindref="member">PATH_TRANSITION_OUT_TO_IN</ref>:</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xi<sp/>=<sp/><ref refid="vertex-clipping_8c_1a4a8f4505e700365fe1dbb12f82fa6fbd" kindref="member">clip_intersect_x</ref>(ctx-&gt;<ref refid="structclip__context_1ad4435d25358dcf19786bde156ee8248e" kindref="member">prev</ref>.<ref refid="structclip__context_1ae08005c88ff8e6e078d578df12a3fe77" kindref="member">x</ref>,<sp/>ctx-&gt;<ref refid="structclip__context_1ad4435d25358dcf19786bde156ee8248e" kindref="member">prev</ref>.<ref refid="structclip__context_1a0b6003784de8fff7ec3e7ac625ae1a9f" kindref="member">y</ref>,<sp/>x,<sp/>y,<sp/>clip_y);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="vertex-clipping_8c_1a2b69ee133de682595696a9567efe249a" kindref="member">clip_append_vertex</ref>(ctx,<sp/>xi,<sp/>clip_y);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="vertex-clipping_8c_1a2b69ee133de682595696a9567efe249a" kindref="member">clip_append_vertex</ref>(ctx,<sp/>x,<sp/>y);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="vertex-clipping_8c_1a7278c5285b5591d65abcbf198404eebaabcfc6f8e7a4cbaffd4b6f70ee7ab4e66" kindref="member">PATH_TRANSITION_OUT_TO_OUT</ref>:</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>nothing<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(0<sp/>&amp;&amp;<sp/></highlight><highlight class="stringliteral">&quot;bad<sp/>enum<sp/>path_transition&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ctx-&gt;<ref refid="structclip__context_1ad4435d25358dcf19786bde156ee8248e" kindref="member">prev</ref>.<ref refid="structclip__context_1ae08005c88ff8e6e078d578df12a3fe77" kindref="member">x</ref><sp/>=<sp/>x;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ctx-&gt;<ref refid="structclip__context_1ad4435d25358dcf19786bde156ee8248e" kindref="member">prev</ref>.<ref refid="structclip__context_1a0b6003784de8fff7ec3e7ac625ae1a9f" kindref="member">y</ref><sp/>=<sp/>y;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><ref refid="vertex-clipping_8c_1aaccf3a949fe2ca1ffd4e59fce19d038e" kindref="member">clip_context_prepare</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclip__context" kindref="compound">clip_context</ref><sp/>*ctx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpolygon8" kindref="compound">polygon8</ref><sp/>*src,</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*dst_x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*dst_y)</highlight></codeline>
+<codeline lineno="198"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ctx-&gt;<ref refid="structclip__context_1ad4435d25358dcf19786bde156ee8248e" kindref="member">prev</ref>.<ref refid="structclip__context_1ae08005c88ff8e6e078d578df12a3fe77" kindref="member">x</ref><sp/>=<sp/>src-&gt;<ref refid="structpolygon8_1afa55ed76396a42e950e7ac6524985479" kindref="member">x</ref>[src-&gt;<ref refid="structpolygon8_1afd03a44a5ef1bcb84b9870194746df75" kindref="member">n</ref><sp/>-<sp/>1];</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ctx-&gt;<ref refid="structclip__context_1ad4435d25358dcf19786bde156ee8248e" kindref="member">prev</ref>.<ref refid="structclip__context_1a0b6003784de8fff7ec3e7ac625ae1a9f" kindref="member">y</ref><sp/>=<sp/>src-&gt;<ref refid="structpolygon8_1a978b26eb8f59cfc6a49665af7170fdc0" kindref="member">y</ref>[src-&gt;<ref refid="structpolygon8_1afd03a44a5ef1bcb84b9870194746df75" kindref="member">n</ref><sp/>-<sp/>1];</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ctx-&gt;<ref refid="structclip__context_1a87461b400324483c7b3b6f1a89ea9b67" kindref="member">vertices</ref>.<ref refid="structclip__context_1ae08005c88ff8e6e078d578df12a3fe77" kindref="member">x</ref><sp/>=<sp/>dst_x;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ctx-&gt;<ref refid="structclip__context_1a87461b400324483c7b3b6f1a89ea9b67" kindref="member">vertices</ref>.<ref refid="structclip__context_1a0b6003784de8fff7ec3e7ac625ae1a9f" kindref="member">y</ref><sp/>=<sp/>dst_y;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><ref refid="vertex-clipping_8c_1aa2020af7309aab176dfecac9d1f6cfad" kindref="member">clip_polygon_left</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclip__context" kindref="compound">clip_context</ref><sp/>*ctx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpolygon8" kindref="compound">polygon8</ref><sp/>*src,</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*dst_x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*dst_y)</highlight></codeline>
+<codeline lineno="208"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="vertex-clipping_8c_1a7278c5285b5591d65abcbf198404eeba" kindref="member">path_transition</ref><sp/>trans;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(src-&gt;<ref refid="structpolygon8_1afd03a44a5ef1bcb84b9870194746df75" kindref="member">n</ref><sp/>&lt;<sp/>2)</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="vertex-clipping_8c_1aaccf3a949fe2ca1ffd4e59fce19d038e" kindref="member">clip_context_prepare</ref>(ctx,<sp/>src,<sp/>dst_x,<sp/>dst_y);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>src-&gt;<ref refid="structpolygon8_1afd03a44a5ef1bcb84b9870194746df75" kindref="member">n</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trans<sp/>=<sp/><ref refid="vertex-clipping_8c_1a200d3e75903333dbfca378ff30177fca" kindref="member">path_transition_left_edge</ref>(ctx,<sp/>src-&gt;<ref refid="structpolygon8_1afa55ed76396a42e950e7ac6524985479" kindref="member">x</ref>[i],<sp/>src-&gt;<ref refid="structpolygon8_1a978b26eb8f59cfc6a49665af7170fdc0" kindref="member">y</ref>[i]);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="vertex-clipping_8c_1afae524fff83410fc1df1dd4c73fc97fa" kindref="member">clip_polygon_leftright</ref>(ctx,<sp/>trans,<sp/>src-&gt;<ref refid="structpolygon8_1afa55ed76396a42e950e7ac6524985479" kindref="member">x</ref>[i],<sp/>src-&gt;<ref refid="structpolygon8_1a978b26eb8f59cfc6a49665af7170fdc0" kindref="member">y</ref>[i],</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ctx-&gt;<ref refid="structclip__context_1a410f43abe5f1ad01d1089b74f089c4cf" kindref="member">clip</ref>.<ref refid="structclip__context_1ab59a01c72b45a0dbc1ccef66335ff5a4" kindref="member">x1</ref>);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ctx-&gt;<ref refid="structclip__context_1a87461b400324483c7b3b6f1a89ea9b67" kindref="member">vertices</ref>.<ref refid="structclip__context_1ae08005c88ff8e6e078d578df12a3fe77" kindref="member">x</ref><sp/>-<sp/>dst_x;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><ref refid="vertex-clipping_8c_1a9f4b13ef66bf61cc46b133a38c6f3828" kindref="member">clip_polygon_right</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclip__context" kindref="compound">clip_context</ref><sp/>*ctx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpolygon8" kindref="compound">polygon8</ref><sp/>*src,</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*dst_x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*dst_y)</highlight></codeline>
+<codeline lineno="227"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="vertex-clipping_8c_1a7278c5285b5591d65abcbf198404eeba" kindref="member">path_transition</ref><sp/>trans;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(src-&gt;<ref refid="structpolygon8_1afd03a44a5ef1bcb84b9870194746df75" kindref="member">n</ref><sp/>&lt;<sp/>2)</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="vertex-clipping_8c_1aaccf3a949fe2ca1ffd4e59fce19d038e" kindref="member">clip_context_prepare</ref>(ctx,<sp/>src,<sp/>dst_x,<sp/>dst_y);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>src-&gt;<ref refid="structpolygon8_1afd03a44a5ef1bcb84b9870194746df75" kindref="member">n</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trans<sp/>=<sp/><ref refid="vertex-clipping_8c_1a2d75f9a7ec9f325d2e49924734b1f2d1" kindref="member">path_transition_right_edge</ref>(ctx,<sp/>src-&gt;<ref refid="structpolygon8_1afa55ed76396a42e950e7ac6524985479" kindref="member">x</ref>[i],<sp/>src-&gt;<ref refid="structpolygon8_1a978b26eb8f59cfc6a49665af7170fdc0" kindref="member">y</ref>[i]);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="vertex-clipping_8c_1afae524fff83410fc1df1dd4c73fc97fa" kindref="member">clip_polygon_leftright</ref>(ctx,<sp/>trans,<sp/>src-&gt;<ref refid="structpolygon8_1afa55ed76396a42e950e7ac6524985479" kindref="member">x</ref>[i],<sp/>src-&gt;<ref refid="structpolygon8_1a978b26eb8f59cfc6a49665af7170fdc0" kindref="member">y</ref>[i],</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ctx-&gt;<ref refid="structclip__context_1a410f43abe5f1ad01d1089b74f089c4cf" kindref="member">clip</ref>.<ref refid="structclip__context_1a78b18f08c8599a7f5ccb5c5f79100f91" kindref="member">x2</ref>);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ctx-&gt;<ref refid="structclip__context_1a87461b400324483c7b3b6f1a89ea9b67" kindref="member">vertices</ref>.<ref refid="structclip__context_1ae08005c88ff8e6e078d578df12a3fe77" kindref="member">x</ref><sp/>-<sp/>dst_x;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><ref refid="vertex-clipping_8c_1acbdb519485396a5e86fe25cbf58d5e46" kindref="member">clip_polygon_top</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclip__context" kindref="compound">clip_context</ref><sp/>*ctx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpolygon8" kindref="compound">polygon8</ref><sp/>*src,</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*dst_x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*dst_y)</highlight></codeline>
+<codeline lineno="246"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="vertex-clipping_8c_1a7278c5285b5591d65abcbf198404eeba" kindref="member">path_transition</ref><sp/>trans;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(src-&gt;<ref refid="structpolygon8_1afd03a44a5ef1bcb84b9870194746df75" kindref="member">n</ref><sp/>&lt;<sp/>2)</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="vertex-clipping_8c_1aaccf3a949fe2ca1ffd4e59fce19d038e" kindref="member">clip_context_prepare</ref>(ctx,<sp/>src,<sp/>dst_x,<sp/>dst_y);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>src-&gt;<ref refid="structpolygon8_1afd03a44a5ef1bcb84b9870194746df75" kindref="member">n</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trans<sp/>=<sp/><ref refid="vertex-clipping_8c_1a4b2930bb70e8de2fcbb33c20eb052c2b" kindref="member">path_transition_top_edge</ref>(ctx,<sp/>src-&gt;<ref refid="structpolygon8_1afa55ed76396a42e950e7ac6524985479" kindref="member">x</ref>[i],<sp/>src-&gt;<ref refid="structpolygon8_1a978b26eb8f59cfc6a49665af7170fdc0" kindref="member">y</ref>[i]);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="vertex-clipping_8c_1a3c9790b80ca2cfd7c64a608856df415c" kindref="member">clip_polygon_topbottom</ref>(ctx,<sp/>trans,<sp/>src-&gt;<ref refid="structpolygon8_1afa55ed76396a42e950e7ac6524985479" kindref="member">x</ref>[i],<sp/>src-&gt;<ref refid="structpolygon8_1a978b26eb8f59cfc6a49665af7170fdc0" kindref="member">y</ref>[i],</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ctx-&gt;<ref refid="structclip__context_1a410f43abe5f1ad01d1089b74f089c4cf" kindref="member">clip</ref>.<ref refid="structclip__context_1a61e34179d90e020bc366bc81657c839d" kindref="member">y1</ref>);</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ctx-&gt;<ref refid="structclip__context_1a87461b400324483c7b3b6f1a89ea9b67" kindref="member">vertices</ref>.<ref refid="structclip__context_1ae08005c88ff8e6e078d578df12a3fe77" kindref="member">x</ref><sp/>-<sp/>dst_x;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><ref refid="vertex-clipping_8c_1a86d43594e43ea61d2da6b4ad793f0750" kindref="member">clip_polygon_bottom</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclip__context" kindref="compound">clip_context</ref><sp/>*ctx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpolygon8" kindref="compound">polygon8</ref><sp/>*src,</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*dst_x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*dst_y)</highlight></codeline>
+<codeline lineno="265"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="vertex-clipping_8c_1a7278c5285b5591d65abcbf198404eeba" kindref="member">path_transition</ref><sp/>trans;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(src-&gt;<ref refid="structpolygon8_1afd03a44a5ef1bcb84b9870194746df75" kindref="member">n</ref><sp/>&lt;<sp/>2)</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="vertex-clipping_8c_1aaccf3a949fe2ca1ffd4e59fce19d038e" kindref="member">clip_context_prepare</ref>(ctx,<sp/>src,<sp/>dst_x,<sp/>dst_y);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>src-&gt;<ref refid="structpolygon8_1afd03a44a5ef1bcb84b9870194746df75" kindref="member">n</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>trans<sp/>=<sp/><ref refid="vertex-clipping_8c_1a6bffef86a2acd92393895a2dc8b25f0d" kindref="member">path_transition_bottom_edge</ref>(ctx,<sp/>src-&gt;<ref refid="structpolygon8_1afa55ed76396a42e950e7ac6524985479" kindref="member">x</ref>[i],<sp/>src-&gt;<ref refid="structpolygon8_1a978b26eb8f59cfc6a49665af7170fdc0" kindref="member">y</ref>[i]);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="vertex-clipping_8c_1a3c9790b80ca2cfd7c64a608856df415c" kindref="member">clip_polygon_topbottom</ref>(ctx,<sp/>trans,<sp/>src-&gt;<ref refid="structpolygon8_1afa55ed76396a42e950e7ac6524985479" kindref="member">x</ref>[i],<sp/>src-&gt;<ref refid="structpolygon8_1a978b26eb8f59cfc6a49665af7170fdc0" kindref="member">y</ref>[i],</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ctx-&gt;<ref refid="structclip__context_1a410f43abe5f1ad01d1089b74f089c4cf" kindref="member">clip</ref>.<ref refid="structclip__context_1a3a47a86973d1f05a33343e7d4e834fef" kindref="member">y2</ref>);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ctx-&gt;<ref refid="structclip__context_1a87461b400324483c7b3b6f1a89ea9b67" kindref="member">vertices</ref>.<ref refid="structclip__context_1ae08005c88ff8e6e078d578df12a3fe77" kindref="member">x</ref><sp/>-<sp/>dst_x;</highlight></codeline>
+<codeline lineno="279"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>max(a,<sp/>b)<sp/>(((a)<sp/>&gt;<sp/>(b))<sp/>?<sp/>(a)<sp/>:<sp/>(b))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>min(a,<sp/>b)<sp/>(((a)<sp/>&gt;<sp/>(b))<sp/>?<sp/>(b)<sp/>:<sp/>(a))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>clip(x,<sp/>a,<sp/>b)<sp/><sp/>min(max(x,<sp/>a),<sp/>b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><ref refid="vertex-clipping_8c_1a01d6ade516504cf2779d35e5019b1f38" kindref="member">clip_simple</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclip__context" kindref="compound">clip_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpolygon8" kindref="compound">polygon8</ref><sp/>*surf,</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*ex,</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*ey)</highlight></codeline>
+<codeline lineno="290"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>surf-&gt;<ref refid="structpolygon8_1afd03a44a5ef1bcb84b9870194746df75" kindref="member">n</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ex[i]<sp/>=<sp/><ref refid="vertex-clipping_8c_1ade0ac16de71f1b411f933a8b2cd513bc" kindref="member">clip</ref>(surf-&gt;<ref refid="structpolygon8_1afa55ed76396a42e950e7ac6524985479" kindref="member">x</ref>[i],<sp/>ctx-&gt;<ref refid="structclip__context_1a410f43abe5f1ad01d1089b74f089c4cf" kindref="member">clip</ref>.<ref refid="structclip__context_1ab59a01c72b45a0dbc1ccef66335ff5a4" kindref="member">x1</ref>,<sp/>ctx-&gt;<ref refid="structclip__context_1a410f43abe5f1ad01d1089b74f089c4cf" kindref="member">clip</ref>.<ref refid="structclip__context_1a78b18f08c8599a7f5ccb5c5f79100f91" kindref="member">x2</ref>);</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ey[i]<sp/>=<sp/><ref refid="vertex-clipping_8c_1ade0ac16de71f1b411f933a8b2cd513bc" kindref="member">clip</ref>(surf-&gt;<ref refid="structpolygon8_1a978b26eb8f59cfc6a49665af7170fdc0" kindref="member">y</ref>[i],<sp/>ctx-&gt;<ref refid="structclip__context_1a410f43abe5f1ad01d1089b74f089c4cf" kindref="member">clip</ref>.<ref refid="structclip__context_1a61e34179d90e020bc366bc81657c839d" kindref="member">y1</ref>,<sp/>ctx-&gt;<ref refid="structclip__context_1a410f43abe5f1ad01d1089b74f089c4cf" kindref="member">clip</ref>.<ref refid="structclip__context_1a3a47a86973d1f05a33343e7d4e834fef" kindref="member">y2</ref>);</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>surf-&gt;<ref refid="structpolygon8_1afd03a44a5ef1bcb84b9870194746df75" kindref="member">n</ref>;</highlight></codeline>
+<codeline lineno="297"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><ref refid="vertex-clipping_8c_1a5b8916a5086672dc5c79206ea49fc17b" kindref="member">clip_transformed</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclip__context" kindref="compound">clip_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpolygon8" kindref="compound">polygon8</ref><sp/>*surf,</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*ex,</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*ey)</highlight></codeline>
+<codeline lineno="304"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpolygon8" kindref="compound">polygon8</ref><sp/>polygon;</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/><ref refid="structpolygon8_1afd03a44a5ef1bcb84b9870194746df75" kindref="member">n</ref>;</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>polygon.n<sp/>=<sp/><ref refid="vertex-clipping_8c_1aa2020af7309aab176dfecac9d1f6cfad" kindref="member">clip_polygon_left</ref>(ctx,<sp/>surf,<sp/>polygon.x,<sp/>polygon.y);</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>surf-&gt;<ref refid="structpolygon8_1afd03a44a5ef1bcb84b9870194746df75" kindref="member">n</ref><sp/>=<sp/><ref refid="vertex-clipping_8c_1a9f4b13ef66bf61cc46b133a38c6f3828" kindref="member">clip_polygon_right</ref>(ctx,<sp/>&amp;polygon,<sp/>surf-&gt;<ref refid="structpolygon8_1afa55ed76396a42e950e7ac6524985479" kindref="member">x</ref>,<sp/>surf-&gt;<ref refid="structpolygon8_1a978b26eb8f59cfc6a49665af7170fdc0" kindref="member">y</ref>);</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>polygon.n<sp/>=<sp/><ref refid="vertex-clipping_8c_1acbdb519485396a5e86fe25cbf58d5e46" kindref="member">clip_polygon_top</ref>(ctx,<sp/>surf,<sp/>polygon.x,<sp/>polygon.y);</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>surf-&gt;<ref refid="structpolygon8_1afd03a44a5ef1bcb84b9870194746df75" kindref="member">n</ref><sp/>=<sp/><ref refid="vertex-clipping_8c_1a86d43594e43ea61d2da6b4ad793f0750" kindref="member">clip_polygon_bottom</ref>(ctx,<sp/>&amp;polygon,<sp/>surf-&gt;<ref refid="structpolygon8_1afa55ed76396a42e950e7ac6524985479" kindref="member">x</ref>,<sp/>surf-&gt;<ref refid="structpolygon8_1a978b26eb8f59cfc6a49665af7170fdc0" kindref="member">y</ref>);</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Get<sp/>rid<sp/>of<sp/>duplicate<sp/>vertices<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ex[0]<sp/>=<sp/>surf-&gt;<ref refid="structpolygon8_1afa55ed76396a42e950e7ac6524985479" kindref="member">x</ref>[0];</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ey[0]<sp/>=<sp/>surf-&gt;<ref refid="structpolygon8_1a978b26eb8f59cfc6a49665af7170fdc0" kindref="member">y</ref>[0];</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpolygon8_1afd03a44a5ef1bcb84b9870194746df75" kindref="member">n</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>surf-&gt;<ref refid="structpolygon8_1afd03a44a5ef1bcb84b9870194746df75" kindref="member">n</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="vertex-clipping_8c_1af653e2551134848d9bdddc6cc8907544" kindref="member">float_difference</ref>(ex[<ref refid="structpolygon8_1afd03a44a5ef1bcb84b9870194746df75" kindref="member">n</ref><sp/>-<sp/>1],<sp/>surf-&gt;<ref refid="structpolygon8_1afa55ed76396a42e950e7ac6524985479" kindref="member">x</ref>[i])<sp/>==<sp/>0.0f<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="vertex-clipping_8c_1af653e2551134848d9bdddc6cc8907544" kindref="member">float_difference</ref>(ey[<ref refid="structpolygon8_1afd03a44a5ef1bcb84b9870194746df75" kindref="member">n</ref><sp/>-<sp/>1],<sp/>surf-&gt;<ref refid="structpolygon8_1a978b26eb8f59cfc6a49665af7170fdc0" kindref="member">y</ref>[i])<sp/>==<sp/>0.0f)</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ex[<ref refid="structpolygon8_1afd03a44a5ef1bcb84b9870194746df75" kindref="member">n</ref>]<sp/>=<sp/>surf-&gt;<ref refid="structpolygon8_1afa55ed76396a42e950e7ac6524985479" kindref="member">x</ref>[i];</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ey[<ref refid="structpolygon8_1afd03a44a5ef1bcb84b9870194746df75" kindref="member">n</ref>]<sp/>=<sp/>surf-&gt;<ref refid="structpolygon8_1a978b26eb8f59cfc6a49665af7170fdc0" kindref="member">y</ref>[i];</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpolygon8_1afd03a44a5ef1bcb84b9870194746df75" kindref="member">n</ref>++;</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="vertex-clipping_8c_1af653e2551134848d9bdddc6cc8907544" kindref="member">float_difference</ref>(ex[<ref refid="structpolygon8_1afd03a44a5ef1bcb84b9870194746df75" kindref="member">n</ref><sp/>-<sp/>1],<sp/>surf-&gt;<ref refid="structpolygon8_1afa55ed76396a42e950e7ac6524985479" kindref="member">x</ref>[0])<sp/>==<sp/>0.0f<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="vertex-clipping_8c_1af653e2551134848d9bdddc6cc8907544" kindref="member">float_difference</ref>(ey[<ref refid="structpolygon8_1afd03a44a5ef1bcb84b9870194746df75" kindref="member">n</ref><sp/>-<sp/>1],<sp/>surf-&gt;<ref refid="structpolygon8_1a978b26eb8f59cfc6a49665af7170fdc0" kindref="member">y</ref>[0])<sp/>==<sp/>0.0f)</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpolygon8_1afd03a44a5ef1bcb84b9870194746df75" kindref="member">n</ref>--;</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structpolygon8_1afd03a44a5ef1bcb84b9870194746df75" kindref="member">n</ref>;</highlight></codeline>
+<codeline lineno="330"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/libweston/vertex-clipping.c"/>
+  </compounddef>
+</doxygen>

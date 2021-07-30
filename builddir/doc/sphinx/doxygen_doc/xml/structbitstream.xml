@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structbitstream" kind="struct" language="C++" prot="public">
+    <compoundname>bitstream</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structbitstream_1a303d5118c1fe92f9fdb046a0374d7d51" prot="public" static="no" mutable="no">
+        <type>unsigned int *</type>
+        <definition>unsigned int* bitstream::buffer</definition>
+        <argsstring></argsstring>
+        <name>buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" line="124" column="14" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbitstream_1a80ac41b464033ae76a961a1d25ba0b67" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int bitstream::bit_offset</definition>
+        <argsstring></argsstring>
+        <name>bit_offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" line="125" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbitstream_1a9706e330c7c4b5715284edc8d37da83e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int bitstream::max_size_in_dword</definition>
+        <argsstring></argsstring>
+        <name>max_size_in_dword</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" line="126" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" line="123" column="16" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" bodystart="123" bodyend="127"/>
+    <listofallmembers>
+      <member refid="structbitstream_1a80ac41b464033ae76a961a1d25ba0b67" prot="public" virt="non-virtual"><scope>bitstream</scope><name>bit_offset</name></member>
+      <member refid="structbitstream_1a303d5118c1fe92f9fdb046a0374d7d51" prot="public" virt="non-virtual"><scope>bitstream</scope><name>buffer</name></member>
+      <member refid="structbitstream_1a9706e330c7c4b5715284edc8d37da83e" prot="public" virt="non-virtual"><scope>bitstream</scope><name>max_size_in_dword</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

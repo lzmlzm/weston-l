@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__debug__log__flight__recorder" kind="struct" language="C++" prot="public">
+    <compoundname>weston_debug_log_flight_recorder</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__debug__log__flight__recorder_1a75eb963fcf8dd715a1b7359575c31a8b" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structweston__log__subscriber" kindref="compound">weston_log_subscriber</ref></type>
+        <definition>struct weston_log_subscriber weston_debug_log_flight_recorder::base</definition>
+        <argsstring></argsstring>
+        <name>base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log-flight-rec.c" line="46" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log-flight-rec.c" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__debug__log__flight__recorder_1a941aa5d2e0be90a749b528c845611dc3" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structweston__ring__buffer" kindref="compound">weston_ring_buffer</ref></type>
+        <definition>struct weston_ring_buffer weston_debug_log_flight_recorder::rb</definition>
+        <argsstring></argsstring>
+        <name>rb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log-flight-rec.c" line="46" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log-flight-rec.c" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A black box type of stream, used to aggregate data continuously, and when needed, to dump its contents for inspection. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>weston_debug_log_flight_recorder</label>
+        <link refid="structweston__debug__log__flight__recorder"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>rb</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>weston_log_subscriber</label>
+        <link refid="structweston__log__subscriber"/>
+      </node>
+      <node id="2">
+        <label>weston_ring_buffer</label>
+        <link refid="structweston__ring__buffer"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lzm/Wayland/weston/libweston/weston-log-flight-rec.c" line="56" column="39" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log-flight-rec.c" bodystart="56" bodyend="59"/>
+    <listofallmembers>
+      <member refid="structweston__debug__log__flight__recorder_1a75eb963fcf8dd715a1b7359575c31a8b" prot="public" virt="non-virtual"><scope>weston_debug_log_flight_recorder</scope><name>base</name></member>
+      <member refid="structweston__debug__log__flight__recorder_1a941aa5d2e0be90a749b528c845611dc3" prot="public" virt="non-virtual"><scope>weston_debug_log_flight_recorder</scope><name>rb</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

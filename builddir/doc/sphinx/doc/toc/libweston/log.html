@@ -1,0 +1,1250 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Logging/Debugging &mdash; weston 9.0.90 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Weston test suite" href="../test-suite.html" />
+    <link rel="prev" title="Outputs" href="output.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> weston
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../running-weston.html">Running Weston</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../libweston.html">Libweston</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="compositor.html">Compositor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="output-management.html">Output management</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Logging/Debugging</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#weston-s-printf">Weston’s printf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#logging-context">Logging context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#log-scopes">Log scopes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#available-scopes-in-weston">Available scopes in weston</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#subscribers">Subscribers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#logger">Logger</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flight-recorder">Flight recorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#weston-debug-protocol">weston-debug protocol</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#timeline-points">Timeline points</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#inserting-timeline-points">Inserting timeline points</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#debug-protocol-api">Debug protocol API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#weston-log-api">Weston Log API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#logging-api">Logging API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#internal-logging-api">Internal logging API</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../libweston.html#further-work">Further work</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../test-suite.html">Weston test suite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kiosk-shell.html">Weston kiosk-shell</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">weston</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../libweston.html">Libweston</a> &raquo;</li>
+        
+      <li>Logging/Debugging</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/toc/libweston/log.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="logging-debugging">
+<h1>Logging/Debugging<a class="headerlink" href="#logging-debugging" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="weston-s-printf">
+<h2>Weston’s printf<a class="headerlink" href="#weston-s-printf" title="Permalink to this headline">¶</a></h2>
+<p>Logging in weston takes place through <a class="reference internal" href="#_CPPv410weston_logPKcz" title="weston_log"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">weston_log()</span></code></a> function, which
+calls a log handler (<a class="reference internal" href="#_CPPv411log_handler" title="log_handler"><code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">log_handler</span></code></a>) that has to be installed before
+actually calling <a class="reference internal" href="#_CPPv410weston_logPKcz" title="weston_log"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">weston_log()</span></code></a>.  In weston, the log handler makes use of
+the logging framework which is (mostly) comprised of <a class="reference internal" href="#log-scopes"><span class="std std-ref">Log scopes</span></a> (produces
+of data) and <a class="reference internal" href="#subscribers"><span class="std std-ref">Subscribers</span></a>.</p>
+</div>
+<div class="section" id="logging-context">
+<h2>Logging context<a class="headerlink" href="#logging-context" title="Permalink to this headline">¶</a></h2>
+<p>Management of the logging framework in weston happens under the
+<a class="reference internal" href="#_CPPv418weston_log_context" title="weston_log_context"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">weston_log_context</span></code></a> object and is entirely separated from the main
+compositor instance (<a class="reference internal" href="compositor.html#_CPPv417weston_compositor" title="weston_compositor"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">weston_compositor</span></code></a>). The compositor
+instance can be brought up much more later, but in the same time logging can
+take place much earlier without the need of a compositor instance.</p>
+<p>Instantiation of the <a class="reference internal" href="#_CPPv418weston_log_context" title="weston_log_context"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">weston_log_context</span></code></a> object takes place using
+<a class="reference internal" href="#_CPPv421weston_log_ctx_createv" title="weston_log_ctx_create"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">weston_log_ctx_create()</span></code></a> and clean-up/destroy with
+<a class="reference internal" href="#_CPPv422weston_log_ctx_destroyP18weston_log_context" title="weston_log_ctx_destroy"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">weston_log_ctx_destroy()</span></code></a> or <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">weston_log_ctx_compositor_destroy()</span></code>.</p>
+</div>
+<div class="section" id="log-scopes">
+<h2>Log scopes<a class="headerlink" href="#log-scopes" title="Permalink to this headline">¶</a></h2>
+<p>A scope represents a source for a data stream (i.e., a producer). You’ll
+require one as a way to generate data. Creating a log scope is done using
+<code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">weston_log_ctx_add_log_scope()</span></code> or
+<code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">weston_compositor_add_log_scope()</span></code>. You can customize the scope
+behaviour and you’ll require at least a name and a description for the scope.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A scope <strong>name</strong> identifies that scope. Scope retrieval from the
+<a class="reference internal" href="#_CPPv418weston_log_context" title="weston_log_context"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">weston_log_context</span></code></a> is done using the scope name. The name is
+important for the subscription part, detailed bit later.</p>
+</div>
+<p>Log scopes are managed <strong>explicitly</strong>, and destroying the scope is done using
+<code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">weston_log_scope_destroy()</span></code>.</p>
+<div class="section" id="available-scopes-in-weston">
+<h3>Available scopes in weston<a class="headerlink" href="#available-scopes-in-weston" title="Permalink to this headline">¶</a></h3>
+<p>Weston has a few scopes worth mentioning:</p>
+<ul class="simple">
+<li><p><strong>log</strong> - a debug scope for generic logging, upon which <a class="reference internal" href="#_CPPv410weston_logPKcz" title="weston_log"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">weston_log()</span></code></a>
+re-routes its data.</p></li>
+<li><p><strong>proto</strong> - debug scope that displays the protocol communication. It is
+similar to WAYLAND_DEBUG=server environmental variable but has the ability to
+distinguish multiple clients.</p></li>
+<li><p><strong>scene-graph</strong> - an one-shot debug scope which describes the current scene
+graph comprising of layers (containers of views), views (which represent a
+window), their surfaces, sub-surfaces, buffer type and format, both in
+<code class="samp docutils literal notranslate"><span class="pre">DRM_FOURCC</span></code> type and human-friendly form.</p></li>
+<li><p><strong>drm-backend</strong> - Weston uses DRM (Direct Rendering Manager) as one of its
+backends and this debug scope display information related to that: details
+the transitions of a view as it takes before being assigned to a hardware
+plane or to a renderer, current assignments of views, the compositing mode
+Weston is using for rendering the scene-graph, describes the current hardware
+plane properties like CRTC_ID, FB_ID, FORMAT when doing a commit or a
+page-flip. It incorporates the scene-graph scope as well.</p></li>
+<li><p><strong>xwm-wm-x11</strong> - a scope for the X11 window manager in Weston for supporting
+Xwayland, printing some X11 protocol actions.</p></li>
+<li><p><strong>content-protection-debug</strong> - scope for debugging HDCP issues.</p></li>
+<li><p><strong>timeline</strong> - see more at <a class="reference internal" href="#timeline-points"><span class="std std-ref">Timeline points</span></a></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Besides ‘log’ scope, which is a generic scope, intended for usage through
+<a class="reference internal" href="#_CPPv410weston_logPKcz" title="weston_log"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">weston_log()</span></code></a>, all the others scopes listed above could suffer various
+modifications and might not represent a current list on which one should
+rely upon.</p>
+</div>
+</div>
+</div>
+<div class="section" id="subscribers">
+<h2>Subscribers<a class="headerlink" href="#subscribers" title="Permalink to this headline">¶</a></h2>
+<p>Besides creating a creating a scope, a subscriber (<a class="reference internal" href="#_CPPv421weston_log_subscriber" title="weston_log_subscriber"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">weston_log_subscriber</span></code></a>)
+object needs to be created. The subscriber object is an opaque
+object (private) and allows customization of the back-end side of libweston.
+The subscriber object can define its own methods. Users wanting to define
+a new data stream should extend this <a class="reference internal" href="#_CPPv421weston_log_subscriber" title="weston_log_subscriber"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">weston_log_subscriber</span></code></a>.</p>
+<p>For example libweston make uses of several type of subscribers, specific to the
+data streams they will be generating:</p>
+<ul class="simple">
+<li><p>a <strong>‘logger’</strong> type created by <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">weston_log_subscriber_create_log()</span></code></p></li>
+<li><p>a <strong>‘flight-recoder’</strong> type created by <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">weston_log_subscriber_destroy_flight_rec()</span></code></p></li>
+<li><p>for the <strong>‘weston-debug’</strong> protocol, which is private/hidden created whenever a
+client connects</p></li>
+</ul>
+<p>Like log scopes, the subscribers are also manged <strong>explicitly</strong> and both of the
+subscriber types above have their destroy counter-parts. <cite>weston-debug</cite>
+protocol is a bit special in this regard as the destroying part is handled
+implicitly using wayland protocol specifics.</p>
+<p>Once the subscriber has been created there needs to be a subscription process
+in which we establish a relationship between the subscriber and the scope.</p>
+<p>To create a subscription we use <a class="reference internal" href="#_CPPv420weston_log_subscribeP18weston_log_contextP21weston_log_subscriberPKc" title="weston_log_subscribe"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">weston_log_subscribe()</span></code></a> which uses the
+subscriber created previously and the scope name. If the scope was not created
+at the time, the subscription will be (at least for a time) a <em>pending
+subscription</em>. Once the scope is created the <em>pending subscription</em> is
+destroyed, not before creating a new subscription to accommodate the
+initial/original one.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The subscription process is (an) internal API and is managed implicitly.</p>
+</div>
+<p>When a scope is being destroyed the subscriptions for this scope will be
+destroyed as well.</p>
+<div class="section" id="logger">
+<h3>Logger<a class="headerlink" href="#logger" title="Permalink to this headline">¶</a></h3>
+<p>weston uses a logger type of a subscriber for logging everything in the code
+(through the help of <a class="reference internal" href="#_CPPv410weston_logPKcz" title="weston_log"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">weston_log()</span></code></a>).  The subscriber method
+(<code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">weston_log_subscriber_create_log()</span></code>) takes an <code class="samp docutils literal notranslate"><span class="pre">FILE</span> <span class="pre">*</span></code> as an
+argument in case the std <code class="samp docutils literal notranslate"><span class="pre">stdout</span></code> file-descriptor is not where the data
+should be sent to.</p>
+<p>Additionally, specifying which scopes to subscribe to can be done using
+<code class="samp docutils literal notranslate"><span class="pre">--logger-scopes</span></code> command line option. As log scopes are already created
+in the code, this merely subscribes to them. Default, the ‘log’ scope is being
+subscribr to the logger subscriber.</p>
+</div>
+<div class="section" id="flight-recorder">
+<h3>Flight recorder<a class="headerlink" href="#flight-recorder" title="Permalink to this headline">¶</a></h3>
+<p>The flight recorder acts like a black box found in airplanes: it accumulates
+data until the user wants to display its contents. The backed up storage is a
+simple ring-buffer of a compiled-time fixed size value, and the memory is
+forcibly-mapped such that we make sure the kernel allocated storage for it.</p>
+<p>The user can use the debug keybinding <code class="samp docutils literal notranslate"><span class="pre">KEY_D</span></code> (shift+mod+space-d) to
+force the contents to be printed on <code class="samp docutils literal notranslate"><span class="pre">stdout</span></code> file-descriptor.
+The user has first to specify which log scope to subscribe to.</p>
+<p>Specifying which scopes to subscribe for the flight-recorder can be done using
+<code class="samp docutils literal notranslate"><span class="pre">--flight-rec-scopes</span></code>. By default, the ‘log’ scope and ‘drm-backend’ are
+the scopes subscribed to.</p>
+</div>
+<div class="section" id="weston-debug-protocol">
+<h3>weston-debug protocol<a class="headerlink" href="#weston-debug-protocol" title="Permalink to this headline">¶</a></h3>
+<p>Weston-debug protocol is only present in the weston compositor (i.e., a weston
+specific compositor). It make uses of the the logging framework presented
+above, with the exception that the subscription happens automatically rather
+than manually with <a class="reference internal" href="#_CPPv420weston_log_subscribeP18weston_log_contextP21weston_log_subscriberPKc" title="weston_log_subscribe"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">weston_log_subscribe()</span></code></a> in case of the other two
+types of subscribers.  Also the subscriber is created once the client has
+connected and requested data from a log scope.  This means that each time a
+client connects a new subscriber will be created.  For each stream subscribed a
+subscription will be created.  Enabling the debug-protocol happens using the
+<code class="samp docutils literal notranslate"><span class="pre">--debug</span></code> command line.</p>
+</div>
+</div>
+<div class="section" id="timeline-points">
+<h2>Timeline points<a class="headerlink" href="#timeline-points" title="Permalink to this headline">¶</a></h2>
+<p>A special log scope is the ‘timeline’ scope which, together with
+<a class="reference external" href="https://github.com/ppaalanen/wesgr">wesgr</a> tool, helps diagnose latency issues.
+Timeline points write to this ‘timeline’ scope in different parts of the
+compositor, including the GL renderer.</p>
+<p>As with all other scopes this scope is available over the debug protocol, or by
+using the others <a class="reference internal" href="#subscribers"><span class="std std-ref">Subscribers</span></a>. By far the easiest way to get data out
+of this scope would be to use the debug protocol.
+Then use <a class="reference external" href="https://github.com/ppaalanen/wesgr">wesgr</a> to process the data which
+will transform it into a SVG that can be rendered by any web browser.</p>
+<p>The following illustrates how to use it:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">./weston-debug timeline &gt; log.json</span>
+<span class="go">./wesgr -i log.json -o log.svg</span>
+</pre></div>
+</div>
+<div class="section" id="inserting-timeline-points">
+<h3>Inserting timeline points<a class="headerlink" href="#inserting-timeline-points" title="Permalink to this headline">¶</a></h3>
+<p>Timline points can be inserted using <a class="reference internal" href="#c.TL_POINT" title="TL_POINT"><code class="xref c c-macro docutils literal notranslate"><span class="pre">TL_POINT</span></code></a> macro. The macro will
+take the <a class="reference internal" href="compositor.html#_CPPv417weston_compositor" title="weston_compositor"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">weston_compositor</span></code></a> instance, followed by the name of the
+timeline point. What follows next is a variable number of arguments, which
+<strong>must</strong> end with the macro <a class="reference internal" href="#c.TLP_END" title="TLP_END"><code class="xref c c-macro docutils literal notranslate"><span class="pre">TLP_END</span></code></a>.</p>
+</div>
+</div>
+<div class="section" id="debug-protocol-api">
+<h2>Debug protocol API<a class="headerlink" href="#debug-protocol-api" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv439weston_compositor_enable_debug_protocolP17weston_compositor">
+<span id="_CPPv339weston_compositor_enable_debug_protocolP17weston_compositor"></span><span id="_CPPv239weston_compositor_enable_debug_protocolP17weston_compositor"></span><span id="weston_compositor_enable_debug_protocol__weston_compositorP"></span><span class="target" id="group__debug-protocol_1gab89f0b036a3978ae09bebaf853e91abc"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_enable_debug_protocol</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="compositor.html#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">compositor</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv439weston_compositor_enable_debug_protocolP17weston_compositor" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Enable weston-debug protocol extension. </p>
+<p>
+This enables the weston_debug_v1 Wayland protocol extension which any client can use to get debug messages from the compositor.</p>
+<p>WARNING: This feature should not be used in production. If a client provides a file descriptor that blocks writes, it will block the whole compositor indefinitely.</p>
+<p>There is no control on which client is allowed to subscribe to debug messages. Any and all clients are allowed.</p>
+<p>The debug extension is disabled by default, and once enabled, cannot be disabled again. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>compositor</strong> – The libweston compositor where to enable.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv443weston_compositor_is_debug_protocol_enabledP17weston_compositor">
+<span id="_CPPv343weston_compositor_is_debug_protocol_enabledP17weston_compositor"></span><span id="_CPPv243weston_compositor_is_debug_protocol_enabledP17weston_compositor"></span><span id="weston_compositor_is_debug_protocol_enabled__weston_compositorP"></span><span class="target" id="group__debug-protocol_1gafb6cfdb4e8668dfcc25815a291394036"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_is_debug_protocol_enabled</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="compositor.html#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">wc</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv443weston_compositor_is_debug_protocol_enabledP17weston_compositor" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Determine if the debug protocol has been enabled. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>wc</strong> – The libweston compositor to verify if debug protocol has been enabled </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="weston-log-api">
+<h2>Weston Log API<a class="headerlink" href="#weston-log-api" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv410log_func_t">
+<span id="_CPPv310log_func_t"></span><span id="_CPPv210log_func_t"></span><span id="log_func_t"></span><span class="target" id="group__wlog_1ga7f6de92f37121c82cae44dce48df4611"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">log_func_t</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">fmt</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">va_list</span></span><span class="w"> </span><span class="n"><span class="pre">ap</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv410log_func_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv411log_handler">
+<span id="_CPPv311log_handler"></span><span id="_CPPv211log_handler"></span><span id="log_handler__log_func_t"></span><span class="target" id="group__wlog_1ga1af9e91eb3e0c3be04d9219966247db8"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv410log_func_t" title="log_func_t"><span class="n"><span class="pre">log_func_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">log_handler</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv419default_log_handlerPKc7va_list" title="default_log_handler"><span class="n"><span class="pre">default_log_handler</span></span></a><a class="headerlink" href="#_CPPv411log_handler" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Needs to be set, defaults to default_log_handler. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv420log_continue_handler">
+<span id="_CPPv320log_continue_handler"></span><span id="_CPPv220log_continue_handler"></span><span id="log_continue_handler__log_func_t"></span><span class="target" id="group__wlog_1ga3e3d1e661b185ed76d1fb1c004bdbff7"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv410log_func_t" title="log_func_t"><span class="n"><span class="pre">log_func_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">log_continue_handler</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv419default_log_handlerPKc7va_list" title="default_log_handler"><span class="n"><span class="pre">default_log_handler</span></span></a><a class="headerlink" href="#_CPPv420log_continue_handler" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Needs to be set, defaults to default_log_handler. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv419default_log_handlerPKc7va_list">
+<span id="_CPPv319default_log_handlerPKc7va_list"></span><span id="_CPPv219default_log_handlerPKc7va_list"></span><span id="default_log_handler__cCP.va_list"></span><span class="target" id="group__wlog_1ga61ef301bb57d863af5bcdb2d1a3942cb"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">default_log_handler</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">fmt</span></span>, <span class="n"><span class="pre">va_list</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ap</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419default_log_handlerPKc7va_list" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sentinel log message handler. </p>
+<p>This function is used as the default handler for log messages. It exists only to issue a noisy reminder to the user that a real handler must be installed prior to issuing logging calls. The process is immediately aborted after the reminder is printed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fmt</strong> – The format string. Ignored. </p></li>
+<li><p><strong>ap</strong> – The variadic argument list. Ignored. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv422weston_log_set_handler10log_func_t10log_func_t">
+<span id="_CPPv322weston_log_set_handler10log_func_t10log_func_t"></span><span id="_CPPv222weston_log_set_handler10log_func_t10log_func_t"></span><span id="weston_log_set_handler__log_func_t.log_func_t"></span><span class="target" id="group__wlog_1gaae64561b04016b5b060befc9b5f5fb85"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_log_set_handler</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv410log_func_t" title="log_func_t"><span class="n"><span class="pre">log_func_t</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">log</span></span>, <a class="reference internal" href="#_CPPv410log_func_t" title="log_func_t"><span class="n"><span class="pre">log_func_t</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">cont</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422weston_log_set_handler10log_func_t10log_func_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Install the log handler. </p>
+<p>The given functions will be called to output text as passed to the <em>weston_log</em> and <em>weston_log_continue</em> functions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>log</strong> – The log function. This function will be called when <em>weston_log</em> is called, and should begin a new line, with user defined line headers, if any. </p></li>
+<li><p><strong>cont</strong> – The continue log function. This function will be called when <em>weston_log_continue</em> is called, and should append its output to the current line, without any header or other content in between. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv411weston_vlogPKc7va_list">
+<span id="_CPPv311weston_vlogPKc7va_list"></span><span id="_CPPv211weston_vlogPKc7va_list"></span><span id="weston_vlog__cCP.va_list"></span><span class="target" id="group__wlog_1gab61770ae7ae15976b04e88681b1d1c4a"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_vlog</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">fmt</span></span>, <span class="n"><span class="pre">va_list</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ap</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411weston_vlogPKc7va_list" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>weston_vlog calls log_handler </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv410weston_logPKcz">
+<span id="_CPPv310weston_logPKcz"></span><span id="_CPPv210weston_logPKcz"></span><span id="weston_log__cCP.z"></span><span class="target" id="group__wlog_1ga6a7cc2161ce1dad600859022b30162c8"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_log</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">fmt</span></span>, <span class="p"><span class="pre">...</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv410weston_logPKcz" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>printf() equivalent in weston compositor. </p>
+<p><p></p>
+ </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Needs <a class="reference internal" href="#_CPPv411log_handler" title="log_handler"><code class="xref cpp cpp-var docutils literal notranslate"><span class="pre">log_handler</span></code></a> to be set-up!</p>
+</div>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv420weston_vlog_continuePKc7va_list">
+<span id="_CPPv320weston_vlog_continuePKc7va_list"></span><span id="_CPPv220weston_vlog_continuePKc7va_list"></span><span id="weston_vlog_continue__cCP.va_list"></span><span class="target" id="group__wlog_1gaae8b11650848785c5367ee698d2e0f3d"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_vlog_continue</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">fmt</span></span>, <span class="n"><span class="pre">va_list</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">argp</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420weston_vlog_continuePKc7va_list" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>weston_vlog_continue calls log_continue_handler </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv419weston_log_continuePKcz">
+<span id="_CPPv319weston_log_continuePKcz"></span><span id="_CPPv219weston_log_continuePKcz"></span><span id="weston_log_continue__cCP.z"></span><span class="target" id="group__wlog_1gaa0016cb4379eb39a57ac3be92f19ffa9"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_log_continue</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">fmt</span></span>, <span class="p"><span class="pre">...</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419weston_log_continuePKcz" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>weston_log_continue </p>
+</dd></dl>
+
+</div>
+<div class="section" id="logging-api">
+<h2>Logging API<a class="headerlink" href="#logging-api" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv444weston_timeline_refresh_subscription_objectsP17weston_compositorPv">
+<span id="_CPPv344weston_timeline_refresh_subscription_objectsP17weston_compositorPv"></span><span id="_CPPv244weston_timeline_refresh_subscription_objectsP17weston_compositorPv"></span><span id="weston_timeline_refresh_subscription_objects__weston_compositorP.voidP"></span><span class="target" id="group__log_1gabfcf8e012be0cc478dd901ca59ad3721"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_timeline_refresh_subscription_objects</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="compositor.html#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">wc</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">object</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv444weston_timeline_refresh_subscription_objectsP17weston_compositorPv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets (on) the timeline subscription object refresh status. </p>
+<p>This function ‘notifies’ timeline to print the object ID. The timeline code will reset it back, so there’s no need for users to do anything about it.</p>
+<p>Can be used from outside libweston.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>wc</strong> – a <a class="reference internal" href="compositor.html#structweston__compositor"><span class="std std-ref">weston_compositor</span></a> instance </p></li>
+<li><p><strong>object</strong> – the underlying object </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv421weston_timeline_pointP16weston_log_scopePKcz">
+<span id="_CPPv321weston_timeline_pointP16weston_log_scopePKcz"></span><span id="_CPPv221weston_timeline_pointP16weston_log_scopePKcz"></span><span id="weston_timeline_point__weston_log_scopeP.cCP.z"></span><span class="target" id="group__log_1ga805835e5bfd0c13d0283e7b7e39022d2"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_timeline_point</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv416weston_log_scope" title="weston_log_scope"><span class="n"><span class="pre">weston_log_scope</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">timeline_scope</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="p"><span class="pre">...</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421weston_timeline_pointP16weston_log_scopePKcz" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Disseminates the message to all subscriptions of the scope <code class="docutils literal notranslate"><span class="pre">timeline_scope</span></code>. </p>
+<p>The <a class="reference internal" href="#group__log_1ga3d4fa53ee35cc16bfc3e78fb964bcdd1"><span class="std std-ref">TL_POINT()</span></a> is a wrapper over this function, but it uses the <a class="reference internal" href="compositor.html#structweston__compositor"><span class="std std-ref">weston_compositor</span></a> instance to pass the timeline scope.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>timeline_scope</strong> – the timeline scope </p></li>
+<li><p><strong>name</strong> – the name of the timeline point. Interpretable by the tool reading the output (wesgr). </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv421weston_log_ctx_createv">
+<span id="_CPPv321weston_log_ctx_createv"></span><span id="_CPPv221weston_log_ctx_createv"></span><span id="weston_log_ctx_create__void"></span><span class="target" id="group__log_1ga1a1c4adc72146aa351636b0456939d34"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv418weston_log_context" title="weston_log_context"><span class="n"><span class="pre">weston_log_context</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">weston_log_ctx_create</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421weston_log_ctx_createv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Creates <a class="reference internal" href="#structweston__log__context"><span class="std std-ref">weston_log_context</span></a> structure. </p>
+<p><a class="reference internal" href="#structweston__log__context"><span class="std std-ref">weston_log_context</span></a> is a singleton for each <a class="reference internal" href="compositor.html#structweston__compositor"><span class="std std-ref">weston_compositor</span></a>. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>NULL in case of failure, or a <a class="reference internal" href="#structweston__log__context"><span class="std std-ref">weston_log_context</span></a> object in case of success</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv422weston_log_ctx_destroyP18weston_log_context">
+<span id="_CPPv322weston_log_ctx_destroyP18weston_log_context"></span><span id="_CPPv222weston_log_ctx_destroyP18weston_log_context"></span><span id="weston_log_ctx_destroy__weston_log_contextP"></span><span class="target" id="group__log_1ga23d424d8976026793627d7736375e5f1"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_log_ctx_destroy</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv418weston_log_context" title="weston_log_context"><span class="n"><span class="pre">weston_log_context</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">log_ctx</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422weston_log_ctx_destroyP18weston_log_context" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Destroy <a class="reference internal" href="#structweston__log__context"><span class="std std-ref">weston_log_context</span></a> structure. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>log_ctx</strong> – The log context to destroy. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv432weston_log_subscription_completeP23weston_log_subscription">
+<span id="_CPPv332weston_log_subscription_completeP23weston_log_subscription"></span><span id="_CPPv232weston_log_subscription_completeP23weston_log_subscription"></span><span id="weston_log_subscription_complete__weston_log_subscriptionP"></span><span class="target" id="group__log_1gaff6911aac86ddf3ef624010d61630dea"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_log_subscription_complete</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv423weston_log_subscription" title="weston_log_subscription"><span class="n"><span class="pre">weston_log_subscription</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">sub</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv432weston_log_subscription_completeP23weston_log_subscription" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Close the stream’s complete callback if one was installed/created. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv430weston_log_subscription_printfP23weston_log_subscriptionPKcz">
+<span id="_CPPv330weston_log_subscription_printfP23weston_log_subscriptionPKcz"></span><span id="_CPPv230weston_log_subscription_printfP23weston_log_subscriptionPKcz"></span><span id="weston_log_subscription_printf__weston_log_subscriptionP.cCP.z"></span><span class="target" id="group__log_1gabefb2ce138700919fa8e07e848939ee1"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_log_subscription_printf</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv423weston_log_subscription" title="weston_log_subscription"><span class="n"><span class="pre">weston_log_subscription</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">sub</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">fmt</span></span>, <span class="p"><span class="pre">...</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv430weston_log_subscription_printfP23weston_log_subscriptionPKcz" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Write a formatted string for a subscription. </p>
+<p>
+Writes to formatted string to the stream that created the subscription. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sub</strong> – The subscription to write for; may be NULL, in which case nothing will be written. </p></li>
+<li><p><strong>fmt</strong> – Printf-style format string and arguments.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv429weston_log_subscriber_destroyP21weston_log_subscriber">
+<span id="_CPPv329weston_log_subscriber_destroyP21weston_log_subscriber"></span><span id="_CPPv229weston_log_subscriber_destroyP21weston_log_subscriber"></span><span id="weston_log_subscriber_destroy__weston_log_subscriberP"></span><span class="target" id="group__log_1gab8f8e5728af2f0511f6fedb96828d210"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_log_subscriber_destroy</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv421weston_log_subscriber" title="weston_log_subscriber"><span class="n"><span class="pre">weston_log_subscriber</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">subscriber</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429weston_log_subscriber_destroyP21weston_log_subscriber" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Destroy a file type or a flight-rec type subscriber. </p>
+<p>They are created, respectively, with weston_log_subscriber_create_log() and weston_log_subscriber_create_flight_rec()</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>subscriber</strong> – the <a class="reference internal" href="#structweston__log__subscriber"><span class="std std-ref">weston_log_subscriber</span></a> object to destroy </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv420weston_log_subscribeP18weston_log_contextP21weston_log_subscriberPKc">
+<span id="_CPPv320weston_log_subscribeP18weston_log_contextP21weston_log_subscriberPKc"></span><span id="_CPPv220weston_log_subscribeP18weston_log_contextP21weston_log_subscriberPKc"></span><span id="weston_log_subscribe__weston_log_contextP.weston_log_subscriberP.cCP"></span><span class="target" id="group__log_1ga18ab9265482af8547ed947e28804b6b8"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_log_subscribe</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv418weston_log_context" title="weston_log_context"><span class="n"><span class="pre">weston_log_context</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">log_ctx</span></span>, <span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv421weston_log_subscriber" title="weston_log_subscriber"><span class="n"><span class="pre">weston_log_subscriber</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">subscriber</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">scope_name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420weston_log_subscribeP18weston_log_contextP21weston_log_subscriberPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Subscribe to a scope. </p>
+<p>Creates a subscription which is used to subscribe the <code class="docutils literal notranslate"><span class="pre">subscriber</span></code> to the scope <code class="docutils literal notranslate"><span class="pre">scope_name</span></code>.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">scope_name</span></code> has already been created (using weston_log_ctx_add_log_scope or weston_compositor_add_log_scope) the subscription will take place immediately, otherwise we store the subscription into a pending list. See also <a class="reference internal" href="#structweston__log__scope_1aacf51678148a4c087e78a87816cc36f3"><span class="std std-ref">weston_log_ctx_add_log_scope()</span></a> and <a class="reference internal" href="compositor.html#structweston__compositor_1ae4682c6463d20cedae4215dff64d91c7"><span class="std std-ref">weston_compositor_add_log_scope()</span></a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>log_ctx</strong> – the log context, used for accessing pending list </p></li>
+<li><p><strong>subscriber</strong> – the subscriber, which has to be created before </p></li>
+<li><p><strong>scope_name</strong> – the scope name. In case the scope is not created we temporarily store the subscription in the pending list. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.TLP_END">
+<span class="target" id="group__log_1ga54b3c5c32cc5f3527c9a3d11e0d9f54d"></span><span class="sig-name descname"><span class="n"><span class="pre">TLP_END</span></span></span><a class="headerlink" href="#c.TLP_END" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Should be used as the last argument when using TL_POINT macro. </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.TL_POINT">
+<span class="target" id="group__log_1ga3d4fa53ee35cc16bfc3e78fb964bcdd1"></span><span class="sig-name descname"><span class="n"><span class="pre">TL_POINT</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">ec</span></span>, <span class="p"><span class="pre">...</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.TL_POINT" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>This macro is used to add timeline points. </p>
+<p>Use TLP_END when done for the vargs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ec</strong> – <a class="reference internal" href="compositor.html#structweston__compositor"><span class="std std-ref">weston_compositor</span></a> instance </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv416weston_log_scope">
+<span id="_CPPv316weston_log_scope"></span><span id="_CPPv216weston_log_scope"></span><span id="weston_log_scope"></span><span class="target" id="structweston__log__scope"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_log_scope</span></span></span><a class="headerlink" href="#_CPPv416weston_log_scope" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>weston-log message scope </p>
+<p>This is used for scoping logging/debugging messages. Clients can subscribe to only the scopes they are interested in. A scope is identified by its name (also referred to as debug stream name). </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N16weston_log_scope19weston_log_scope_cbE">
+<span id="_CPPv3N16weston_log_scope19weston_log_scope_cbE"></span><span id="_CPPv2N16weston_log_scope19weston_log_scope_cbE"></span><span id="weston_log_scope::weston_log_scope_cb"></span><span class="target" id="structweston__log__scope_1aa459afbea55ca94648cbc9abed32ddf3"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">weston_log_scope_cb</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv423weston_log_subscription" title="weston_log_subscription"><span class="n"><span class="pre">weston_log_subscription</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">sub</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">user_data</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N16weston_log_scope19weston_log_scope_cbE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#structweston__log__scope"><span class="std std-ref">weston_log_scope</span></a> callback </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sub</strong> – The subscription. </p></li>
+<li><p><strong>user_data</strong> – The <code class="docutils literal notranslate"><span class="pre">user_data</span></code> argument given to <a class="reference internal" href="#structweston__log__scope_1aacf51678148a4c087e78a87816cc36f3"><span class="std std-ref">weston_log_ctx_add_log_scope()</span></a> or <a class="reference internal" href="compositor.html#structweston__compositor_1ae4682c6463d20cedae4215dff64d91c7"><span class="std std-ref">weston_compositor_add_log_scope()</span></a>. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16weston_log_scope28weston_log_ctx_add_log_scopeEP18weston_log_contextPKcPKc19weston_log_scope_cb19weston_log_scope_cbPv">
+<span id="_CPPv3N16weston_log_scope28weston_log_ctx_add_log_scopeEP18weston_log_contextPKcPKc19weston_log_scope_cb19weston_log_scope_cbPv"></span><span id="_CPPv2N16weston_log_scope28weston_log_ctx_add_log_scopeEP18weston_log_contextPKcPKc19weston_log_scope_cb19weston_log_scope_cbPv"></span><span id="weston_log_scope::weston_log_ctx_add_log_scope__weston_log_contextP.cCP.cCP.weston_log_scope_cb.weston_log_scope_cb.voidP"></span><span class="target" id="structweston__log__scope_1aacf51678148a4c087e78a87816cc36f3"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv416weston_log_scope" title="weston_log_scope"><span class="n"><span class="pre">weston_log_scope</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">weston_log_ctx_add_log_scope</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv418weston_log_context" title="weston_log_context"><span class="n"><span class="pre">weston_log_context</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">log_ctx</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">description</span></span>, <a class="reference internal" href="#_CPPv4N16weston_log_scope19weston_log_scope_cbE" title="weston_log_scope::weston_log_scope_cb"><span class="n"><span class="pre">weston_log_scope_cb</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">new_subscription</span></span>, <a class="reference internal" href="#_CPPv4N16weston_log_scope19weston_log_scope_cbE" title="weston_log_scope::weston_log_scope_cb"><span class="n"><span class="pre">weston_log_scope_cb</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">destroy_subscription</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">user_data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16weston_log_scope28weston_log_ctx_add_log_scopeEP18weston_log_contextPKcPKc19weston_log_scope_cb19weston_log_scope_cbPv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Register a new stream name, creating a log scope. </p>
+<p>
+This function is used to create a log scope. All debug message printing happens for a scope, which allows clients to subscribe to the kind of debug messages they want by <code class="docutils literal notranslate"><span class="pre">name</span></code>. For the weston-debug protocol, subscription for the scope will happen automatically but for other types of streams, <a class="reference internal" href="#group__log_1ga18ab9265482af8547ed947e28804b6b8"><span class="std std-ref">weston_log_subscribe()</span></a> should be called as to create a subscription and tie it to the scope created by this function.</p>
+<p><code class="docutils literal notranslate"><span class="pre">name</span></code> must be unique in the <a class="reference internal" href="compositor.html#structweston__compositor"><span class="std std-ref">weston_compositor</span></a> instance. <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">description</span></code> must both be provided. In case of the weston-debug protocol, the description is printed when a client asks for a list of supported log scopes.</p>
+<p><code class="docutils literal notranslate"><span class="pre">new_subscription</span></code>, if not NULL, is called when a client subscribes to the log scope creating a debug stream. This is for log scopes that need to print messages as a response to a client appearing, e.g. printing a list of windows on demand or a static preamble. The argument <code class="docutils literal notranslate"><span class="pre">user_data</span></code> is passed in to the callback and is otherwise unused.</p>
+<p>For one-shot debug streams, <code class="docutils literal notranslate"><span class="pre">new_subscription</span></code> should finally call <a class="reference internal" href="#group__log_1gaff6911aac86ddf3ef624010d61630dea"><span class="std std-ref">weston_log_subscription_complete()</span></a> to close the stream and tell the client the printing is complete. Otherwise the client expects more data to be written. The complete callback in <a class="reference internal" href="#structweston__log__subscriber"><span class="std std-ref">weston_log_subscriber</span></a> should be installed to trigger it and it is set-up automatically for the weston-debug protocol.</p>
+<p>As subscription can take place before creating the scope, any pending subscriptions to scope added by <a class="reference internal" href="#group__log_1ga18ab9265482af8547ed947e28804b6b8"><span class="std std-ref">weston_log_subscribe()</span></a>, will be checked against the scope being created and if found will be added to the scope’s subscription list.</p>
+<p>The log scope must be destroyed using <a class="reference internal" href="#structweston__log__scope_1a32ad399b7e203a9ad0a5a11cdd0711ce"><span class="std std-ref">weston_log_scope_destroy()</span></a> before destroying the <a class="reference internal" href="compositor.html#structweston__compositor"><span class="std std-ref">weston_compositor</span></a>.</p>
+<p><dl class="simple">
+<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="#structweston__log__scope_1aa459afbea55ca94648cbc9abed32ddf3"><span class="std std-ref">weston_log_scope_cb</span></a>, <a class="reference internal" href="#group__log_1ga18ab9265482af8547ed947e28804b6b8"><span class="std std-ref">weston_log_subscribe</span></a> </p>
+</dd>
+</dl>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>log_ctx</strong> – The <a class="reference internal" href="#structweston__log__context"><span class="std std-ref">weston_log_context</span></a> where to add. </p></li>
+<li><p><strong>name</strong> – The debug stream/scope name; must not be NULL. </p></li>
+<li><p><strong>description</strong> – The log scope description for humans; must not be NULL. </p></li>
+<li><p><strong>new_subscription</strong> – Optional callback when a client subscribes to this scope. </p></li>
+<li><p><strong>destroy_subscription</strong> – Optional callback when a client destroys the subscription. </p></li>
+<li><p><strong>user_data</strong> – Optional user data pointer for the callback. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A valid pointer on success, NULL on failure.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16weston_log_scope24weston_log_scope_destroyEP16weston_log_scope">
+<span id="_CPPv3N16weston_log_scope24weston_log_scope_destroyEP16weston_log_scope"></span><span id="_CPPv2N16weston_log_scope24weston_log_scope_destroyEP16weston_log_scope"></span><span id="weston_log_scope::weston_log_scope_destroy__weston_log_scopeP"></span><span class="target" id="structweston__log__scope_1a32ad399b7e203a9ad0a5a11cdd0711ce"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_log_scope_destroy</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv416weston_log_scope" title="weston_log_scope"><span class="n"><span class="pre">weston_log_scope</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">scope</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16weston_log_scope24weston_log_scope_destroyEP16weston_log_scope" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Destroy a log scope. </p>
+<p>
+Destroys the log scope, calling each stream’s destroy callback if one was installed/created. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>scope</strong> – The log scope to destroy; may be NULL.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16weston_log_scope27weston_log_scope_is_enabledEP16weston_log_scope">
+<span id="_CPPv3N16weston_log_scope27weston_log_scope_is_enabledEP16weston_log_scope"></span><span id="_CPPv2N16weston_log_scope27weston_log_scope_is_enabledEP16weston_log_scope"></span><span id="weston_log_scope::weston_log_scope_is_enabled__weston_log_scopeP"></span><span class="target" id="structweston__log__scope_1aa2f05b02a0c471f5dbcf7d78816aa045"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_log_scope_is_enabled</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv416weston_log_scope" title="weston_log_scope"><span class="n"><span class="pre">weston_log_scope</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">scope</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16weston_log_scope27weston_log_scope_is_enabledEP16weston_log_scope" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Are there any active subscriptions to the scope? </p>
+<p>
+As printing some debugging messages may be relatively expensive, one can use this function to determine if there is a need to gather the debugging information at all. If this function returns false, all printing for this scope is dropped, so gathering the information is pointless.</p>
+<p>The return value of this function should not be stored, as new clients may subscribe to the debug scope later.</p>
+<p>If the given scope is NULL, this function will always return false, making it safe to use in teardown or destroy code, provided the scope is initialized to NULL before creation and set to NULL after destruction. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>scope</strong> – The log scope to check; may be NULL. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if any streams are open for this scope, false otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16weston_log_scope25weston_log_scope_completeEP16weston_log_scope">
+<span id="_CPPv3N16weston_log_scope25weston_log_scope_completeEP16weston_log_scope"></span><span id="_CPPv2N16weston_log_scope25weston_log_scope_completeEP16weston_log_scope"></span><span id="weston_log_scope::weston_log_scope_complete__weston_log_scopeP"></span><span class="target" id="structweston__log__scope_1af7b1c182738e453d1c7acb7dcea35a8a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_log_scope_complete</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv416weston_log_scope" title="weston_log_scope"><span class="n"><span class="pre">weston_log_scope</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">scope</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16weston_log_scope25weston_log_scope_completeEP16weston_log_scope" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Close the log scope. </p>
+<p>
+Complete the log scope, calling each stream’s complete callback if one was installed/created. This can be useful to signal the reading end that the data has been transmitted and should no longer expect that written over the stream. Particularly useful for the weston-debug protocol.</p>
+<p><dl class="simple">
+<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="#structweston__log__scope_1aacf51678148a4c087e78a87816cc36f3"><span class="std std-ref">weston_log_ctx_add_log_scope</span></a>, <a class="reference internal" href="compositor.html#structweston__compositor_1ae4682c6463d20cedae4215dff64d91c7"><span class="std std-ref">weston_compositor_add_log_scope</span></a>, <a class="reference internal" href="#structweston__log__scope_1a32ad399b7e203a9ad0a5a11cdd0711ce"><span class="std std-ref">weston_log_scope_destroy</span></a> </p>
+</dd>
+</dl>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>scope</strong> – The log scope to complete; may be NULL.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16weston_log_scope22weston_log_scope_writeEP16weston_log_scopePKc6size_t">
+<span id="_CPPv3N16weston_log_scope22weston_log_scope_writeEP16weston_log_scopePKc6size_t"></span><span id="_CPPv2N16weston_log_scope22weston_log_scope_writeEP16weston_log_scopePKc6size_t"></span><span id="weston_log_scope::weston_log_scope_write__weston_log_scopeP.cCP.s"></span><span class="target" id="structweston__log__scope_1a08df8a2d23964301c3d11b9aaf468911"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_log_scope_write</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv416weston_log_scope" title="weston_log_scope"><span class="n"><span class="pre">weston_log_scope</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">scope</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">data</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">len</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16weston_log_scope22weston_log_scope_writeEP16weston_log_scopePKc6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Write log data for a scope. </p>
+<p>
+Writes the given data to all subscribed clients’ streams. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scope</strong> – The debug scope to write for; may be NULL, in which case nothing will be written. </p></li>
+<li><p><strong>data</strong> – <strong>[in]</strong> Pointer to the data to write. </p></li>
+<li><p><strong>len</strong> – Number of bytes to write.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16weston_log_scope24weston_log_scope_vprintfEP16weston_log_scopePKc7va_list">
+<span id="_CPPv3N16weston_log_scope24weston_log_scope_vprintfEP16weston_log_scopePKc7va_list"></span><span id="_CPPv2N16weston_log_scope24weston_log_scope_vprintfEP16weston_log_scopePKc7va_list"></span><span id="weston_log_scope::weston_log_scope_vprintf__weston_log_scopeP.cCP.va_list"></span><span class="target" id="structweston__log__scope_1a543ea2886597eaaf68e4e36a773561dc"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_log_scope_vprintf</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv416weston_log_scope" title="weston_log_scope"><span class="n"><span class="pre">weston_log_scope</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">scope</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">fmt</span></span>, <span class="n"><span class="pre">va_list</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ap</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16weston_log_scope24weston_log_scope_vprintfEP16weston_log_scopePKc7va_list" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Write a formatted string for a scope (varargs) </p>
+<p>
+Writes to formatted string to all subscribed clients’ streams.</p>
+<p>The behavioral details for each stream are the same as for weston_debug_stream_write(). </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scope</strong> – The log scope to write for; may be NULL, in which case nothing will be written. </p></li>
+<li><p><strong>fmt</strong> – Printf-style format string. </p></li>
+<li><p><strong>ap</strong> – Formatting arguments.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16weston_log_scope23weston_log_scope_printfEP16weston_log_scopePKcz">
+<span id="_CPPv3N16weston_log_scope23weston_log_scope_printfEP16weston_log_scopePKcz"></span><span id="_CPPv2N16weston_log_scope23weston_log_scope_printfEP16weston_log_scopePKcz"></span><span id="weston_log_scope::weston_log_scope_printf__weston_log_scopeP.cCP.z"></span><span class="target" id="structweston__log__scope_1ab8df80c01a6b256dee3d6a873b21ad05"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_log_scope_printf</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv416weston_log_scope" title="weston_log_scope"><span class="n"><span class="pre">weston_log_scope</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">scope</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">fmt</span></span>, <span class="p"><span class="pre">...</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16weston_log_scope23weston_log_scope_printfEP16weston_log_scopePKcz" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Write a formatted string for a scope. </p>
+<p>
+Writes to formatted string to all subscribed clients’ streams.</p>
+<p>The behavioral details for each stream are the same as for weston_debug_stream_write(). </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scope</strong> – The log scope to write for; may be NULL, in which case nothing will be written. </p></li>
+<li><p><strong>fmt</strong> – Printf-style format string and arguments.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16weston_log_scope26weston_log_scope_timestampEP16weston_log_scopePc6size_t">
+<span id="_CPPv3N16weston_log_scope26weston_log_scope_timestampEP16weston_log_scopePc6size_t"></span><span id="_CPPv2N16weston_log_scope26weston_log_scope_timestampEP16weston_log_scopePc6size_t"></span><span id="weston_log_scope::weston_log_scope_timestamp__weston_log_scopeP.cP.s"></span><span class="target" id="structweston__log__scope_1aa752383fa9a80459da866ec7b71b98f5"></span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">weston_log_scope_timestamp</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv416weston_log_scope" title="weston_log_scope"><span class="n"><span class="pre">weston_log_scope</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">scope</span></span>, <span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">buf</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">len</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16weston_log_scope26weston_log_scope_timestampEP16weston_log_scopePc6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Write debug scope name and current time into string. </p>
+<p>
+Reads the current local wall-clock time and formats it into a string. and append the debug scope name to it, if a scope is available. The string is NUL-terminated, even if truncated. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scope</strong> – <strong>[in]</strong> debug scope; may be NULL </p></li>
+<li><p><strong>buf</strong> – <strong>[out]</strong> Buffer to store the string. </p></li>
+<li><p><strong>len</strong> – Available size in the buffer in bytes. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">buf</span></code> </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N16weston_log_scope4nameE">
+<span id="_CPPv3N16weston_log_scope4nameE"></span><span id="_CPPv2N16weston_log_scope4nameE"></span><span id="weston_log_scope::name__cP"></span><span class="target" id="structweston__log__scope_1a3068b920ca319f7f4cd1aeabf0f9e589"></span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">name</span></span></span><a class="headerlink" href="#_CPPv4N16weston_log_scope4nameE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N16weston_log_scope4descE">
+<span id="_CPPv3N16weston_log_scope4descE"></span><span id="_CPPv2N16weston_log_scope4descE"></span><span id="weston_log_scope::desc__cP"></span><span class="target" id="structweston__log__scope_1aba6120d3554fa98bec011128c1b4ad05"></span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">desc</span></span></span><a class="headerlink" href="#_CPPv4N16weston_log_scope4descE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N16weston_log_scope16new_subscriptionE">
+<span id="_CPPv3N16weston_log_scope16new_subscriptionE"></span><span id="_CPPv2N16weston_log_scope16new_subscriptionE"></span><span id="weston_log_scope::new_subscription__weston_log_scope_cb"></span><span class="target" id="structweston__log__scope_1aee55c61b9ca748336f1ea36b193a1d94"></span><a class="reference internal" href="#_CPPv4N16weston_log_scope19weston_log_scope_cbE" title="weston_log_scope::weston_log_scope_cb"><span class="n"><span class="pre">weston_log_scope_cb</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">new_subscription</span></span></span><a class="headerlink" href="#_CPPv4N16weston_log_scope16new_subscriptionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N16weston_log_scope20destroy_subscriptionE">
+<span id="_CPPv3N16weston_log_scope20destroy_subscriptionE"></span><span id="_CPPv2N16weston_log_scope20destroy_subscriptionE"></span><span id="weston_log_scope::destroy_subscription__weston_log_scope_cb"></span><span class="target" id="structweston__log__scope_1a3ea6dd5038173e04cfb336c08b0b23e5"></span><a class="reference internal" href="#_CPPv4N16weston_log_scope19weston_log_scope_cbE" title="weston_log_scope::weston_log_scope_cb"><span class="n"><span class="pre">weston_log_scope_cb</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">destroy_subscription</span></span></span><a class="headerlink" href="#_CPPv4N16weston_log_scope20destroy_subscriptionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N16weston_log_scope9user_dataE">
+<span id="_CPPv3N16weston_log_scope9user_dataE"></span><span id="_CPPv2N16weston_log_scope9user_dataE"></span><span id="weston_log_scope::user_data__voidP"></span><span class="target" id="structweston__log__scope_1ab8ff54c73d2058f7d6f692a5d65c3d00"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">user_data</span></span></span><a class="headerlink" href="#_CPPv4N16weston_log_scope9user_dataE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N16weston_log_scope15compositor_linkE">
+<span id="_CPPv3N16weston_log_scope15compositor_linkE"></span><span id="_CPPv2N16weston_log_scope15compositor_linkE"></span><span id="weston_log_scope::compositor_link__wl_list"></span><span class="target" id="structweston__log__scope_1a2504128f5791644bcf001ca301b45ea1"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_list</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compositor_link</span></span></span><a class="headerlink" href="#_CPPv4N16weston_log_scope15compositor_linkE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N16weston_log_scope17subscription_listE">
+<span id="_CPPv3N16weston_log_scope17subscription_listE"></span><span id="_CPPv2N16weston_log_scope17subscription_listE"></span><span id="weston_log_scope::subscription_list__wl_list"></span><span class="target" id="structweston__log__scope_1afe6121c70d4e7f15371c5718dacd577e"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_list</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">subscription_list</span></span></span><a class="headerlink" href="#_CPPv4N16weston_log_scope17subscription_listE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#structweston__log__subscription_1a60eb786d6717a7bbe840c1572bf22a9b"><span class="std std-ref">weston_log_subscription::source_link</span></a> </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="internal-logging-api">
+<h2>Internal logging API<a class="headerlink" href="#internal-logging-api" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The following is mean to be internal API and aren’t exposed in libweston!</p>
+</div>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv435weston_timeline_create_subscriptionP23weston_log_subscriptionPv">
+<span id="_CPPv335weston_timeline_create_subscriptionP23weston_log_subscriptionPv"></span><span id="_CPPv235weston_timeline_create_subscriptionP23weston_log_subscriptionPv"></span><span id="weston_timeline_create_subscription__weston_log_subscriptionP.voidP"></span><span class="target" id="group__internal-log_1gaf645b896b2c3a18fb2b1ffb060d46551"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_timeline_create_subscription</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv423weston_log_subscription" title="weston_log_subscription"><span class="n"><span class="pre">weston_log_subscription</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">sub</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">user_data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv435weston_timeline_create_subscriptionP23weston_log_subscriptionPv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Create a timeline subscription and hang it off the subscription. </p>
+<p>Called when the subscription is created. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv436weston_timeline_destroy_subscriptionP23weston_log_subscriptionPv">
+<span id="_CPPv336weston_timeline_destroy_subscriptionP23weston_log_subscriptionPv"></span><span id="_CPPv236weston_timeline_destroy_subscriptionP23weston_log_subscriptionPv"></span><span id="weston_timeline_destroy_subscription__weston_log_subscriptionP.voidP"></span><span class="target" id="group__internal-log_1ga250932e6f6394c2de70b3ecb209e04b9"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_timeline_destroy_subscription</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv423weston_log_subscription" title="weston_log_subscription"><span class="n"><span class="pre">weston_log_subscription</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">sub</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">user_data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv436weston_timeline_destroy_subscriptionP23weston_log_subscriptionPv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Destroy the timeline subscription and all timeline subscription objects associated with it. </p>
+<p>Called when (before) the subscription is destroyed. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv420weston_log_get_scopeP18weston_log_contextPKc">
+<span id="_CPPv320weston_log_get_scopeP18weston_log_contextPKc"></span><span id="_CPPv220weston_log_get_scopeP18weston_log_contextPKc"></span><span id="weston_log_get_scope__weston_log_contextP.cCP"></span><span class="target" id="group__internal-log_1gaeb074aac2aa63f0108fe29330bee24d0"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv416weston_log_scope" title="weston_log_scope"><span class="n"><span class="pre">weston_log_scope</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">weston_log_get_scope</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv418weston_log_context" title="weston_log_context"><span class="n"><span class="pre">weston_log_context</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">log_ctx</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420weston_log_get_scopeP18weston_log_contextPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Look-up the scope from the scope list stored in the log context, by matching against the <code class="docutils literal notranslate"><span class="pre">name</span></code>. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>log_ctx</strong> – </p></li>
+<li><p><strong>name</strong> – the scope name, see <a class="reference internal" href="#structweston__log__scope_1aacf51678148a4c087e78a87816cc36f3"><span class="std std-ref">weston_log_ctx_add_log_scope()</span></a> and <a class="reference internal" href="compositor.html#structweston__compositor_1ae4682c6463d20cedae4215dff64d91c7"><span class="std std-ref">weston_compositor_add_log_scope()</span></a> </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>NULL if none found, or a pointer to a <a class="reference internal" href="#structweston__log__scope"><span class="std std-ref">weston_log_scope</span></a> </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv434weston_log_run_cb_new_subscriptionP23weston_log_subscription">
+<span id="_CPPv334weston_log_run_cb_new_subscriptionP23weston_log_subscription"></span><span id="_CPPv234weston_log_run_cb_new_subscriptionP23weston_log_subscription"></span><span id="weston_log_run_cb_new_subscription__weston_log_subscriptionP"></span><span class="target" id="group__internal-log_1gaca722e7819b8b02f71620d240c32d633"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_log_run_cb_new_subscription</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv423weston_log_subscription" title="weston_log_subscription"><span class="n"><span class="pre">weston_log_subscription</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">sub</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv434weston_log_run_cb_new_subscriptionP23weston_log_subscription" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Wrapper to invoke the weston_log_scope_cb. </p>
+<p>Allows to call the cb new_subscription of a log scope. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv438weston_debug_protocol_advertise_scopesP18weston_log_contextP11wl_resource">
+<span id="_CPPv338weston_debug_protocol_advertise_scopesP18weston_log_contextP11wl_resource"></span><span id="_CPPv238weston_debug_protocol_advertise_scopesP18weston_log_contextP11wl_resource"></span><span id="weston_debug_protocol_advertise_scopes__weston_log_contextP.wl_resourceP"></span><span class="target" id="group__internal-log_1ga86bcfce4ad81cf4072f25fb8cdee9ff9"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_debug_protocol_advertise_scopes</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv418weston_log_context" title="weston_log_context"><span class="n"><span class="pre">weston_log_context</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">log_ctx</span></span>, <span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_resource</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">res</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv438weston_debug_protocol_advertise_scopesP18weston_log_contextP11wl_resource" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Advertise the log scope name and the log scope description. </p>
+<p>This is only used by the weston-debug protocol! </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv437weston_log_ctx_disable_debug_protocolP18weston_log_context">
+<span id="_CPPv337weston_log_ctx_disable_debug_protocolP18weston_log_context"></span><span id="_CPPv237weston_log_ctx_disable_debug_protocolP18weston_log_context"></span><span id="weston_log_ctx_disable_debug_protocol__weston_log_contextP"></span><span class="target" id="group__internal-log_1ga98472934b52a36c43c53e05a4f087861"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_log_ctx_disable_debug_protocol</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv418weston_log_context" title="weston_log_context"><span class="n"><span class="pre">weston_log_context</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">log_ctx</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv437weston_log_ctx_disable_debug_protocolP18weston_log_context" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Disable debug-protocol. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>log_ctx</strong> – The log context where the debug-protocol is linked </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv421timeline_emit_context">
+<span id="_CPPv321timeline_emit_context"></span><span id="_CPPv221timeline_emit_context"></span><span id="timeline_emit_context"></span><span class="target" id="structtimeline__emit__context"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">timeline_emit_context</span></span></span><a class="headerlink" href="#_CPPv421timeline_emit_context" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Timeline itself is not a subscriber but a scope (a producer of data), and it re-routes the data it produces to all the subscriptions (and implicitly to the subscribers) using a subscription iteration to go through all of them. </p>
+<p>Public API:<ul class="simple">
+<li><p><a class="reference internal" href="#group__log_1gabfcf8e012be0cc478dd901ca59ad3721"><span class="std std-ref">weston_timeline_refresh_subscription_objects()</span></a> - allows outside parts of libweston notify/signal timeline code about the fact that underlying object has suffered some modifications and needs to re-emit the object ID.</p></li>
+<li><p>weston_log_timeline_point() - which will disseminate data to all subscriptions</p></li>
+</ul>
+</p>
+<p>Do note that only <a class="reference internal" href="#group__log_1gabfcf8e012be0cc478dd901ca59ad3721"><span class="std std-ref">weston_timeline_refresh_subscription_objects()</span></a> is exported in libweston.</p>
+<p>Destruction of the objects assigned to each underlying objects happens in two places: one in the logging framework callback of the log scope (‘destroy_subscription’), and secondly, when the object itself gets destroyed.</p>
+<p><a class="reference internal" href="#structtimeline__emit__context"><span class="std std-ref">timeline_emit_context</span></a> - For each subscription this object will be created to store a buffer when the object itself will be written and a subscription, which will be used to force the object ID if there is a need to do so (the underlying object has been refreshed, or better said has suffered some modification). Data written to a subscription will be flushed before the data written to the FILE *.</p>
+<p><dl class="simple">
+<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="#group__log_1ga805835e5bfd0c13d0283e7b7e39022d2"><span class="std std-ref">weston_timeline_point</span></a> </p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">param cur</dt>
+<dd class="field-odd"><p>a FILE * </p>
+</dd>
+<dt class="field-even">param subscription</dt>
+<dd class="field-even"><p>a pointer to an already created subscription</p>
+</dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N21timeline_emit_context3curE">
+<span id="_CPPv3N21timeline_emit_context3curE"></span><span id="_CPPv2N21timeline_emit_context3curE"></span><span id="timeline_emit_context::cur__FILEP"></span><span class="target" id="structtimeline__emit__context_1a24e717269c8f193209536941715a91fd"></span><span class="n"><span class="pre">FILE</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">cur</span></span></span><a class="headerlink" href="#_CPPv4N21timeline_emit_context3curE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N21timeline_emit_context12subscriptionE">
+<span id="_CPPv3N21timeline_emit_context12subscriptionE"></span><span id="_CPPv2N21timeline_emit_context12subscriptionE"></span><span id="timeline_emit_context::subscription__weston_log_subscriptionP"></span><span class="target" id="structtimeline__emit__context_1ae7d73e2e8700f467af9ea98576d0e898"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv423weston_log_subscription" title="weston_log_subscription"><span class="n"><span class="pre">weston_log_subscription</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">subscription</span></span></span><a class="headerlink" href="#_CPPv4N21timeline_emit_context12subscriptionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv428weston_timeline_subscription">
+<span id="_CPPv328weston_timeline_subscription"></span><span id="_CPPv228weston_timeline_subscription"></span><span id="weston_timeline_subscription"></span><span class="target" id="structweston__timeline__subscription"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_timeline_subscription</span></span></span><a class="headerlink" href="#_CPPv428weston_timeline_subscription" title="Permalink to this definition">¶</a><br /></dt>
+<dd><em>#include &lt;timeline.h&gt;</em><p>Timeline subscription created for each subscription. </p>
+<p>Created automatically by <a class="reference internal" href="#structweston__log__scope_1aee55c61b9ca748336f1ea36b193a1d94"><span class="std std-ref">weston_log_scope::new_subscription</span></a> and destroyed by <a class="reference internal" href="#structweston__log__scope_1a3ea6dd5038173e04cfb336c08b0b23e5"><span class="std std-ref">weston_log_scope::destroy_subscription</span></a>. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N28weston_timeline_subscription7next_idE">
+<span id="_CPPv3N28weston_timeline_subscription7next_idE"></span><span id="_CPPv2N28weston_timeline_subscription7next_idE"></span><span id="weston_timeline_subscription::next_id__unsigned-i"></span><span class="target" id="structweston__timeline__subscription_1aa9199d17a4610435159171a929784ac6"></span><span class="kt"><span class="pre">unsigned</span> <span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">next_id</span></span></span><a class="headerlink" href="#_CPPv4N28weston_timeline_subscription7next_idE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N28weston_timeline_subscription7objectsE">
+<span id="_CPPv3N28weston_timeline_subscription7objectsE"></span><span id="_CPPv2N28weston_timeline_subscription7objectsE"></span><span id="weston_timeline_subscription::objects__wl_list"></span><span class="target" id="structweston__timeline__subscription_1a3b2578d45d9a2e99cb8c06d2f7c28dab"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_list</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">objects</span></span></span><a class="headerlink" href="#_CPPv4N28weston_timeline_subscription7objectsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#structweston__timeline__subscription__object_1a5ca3b851aab252c1b903a9e41c3028a5"><span class="std std-ref">weston_timeline_subscription_object::subscription_link</span></a> </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv435weston_timeline_subscription_object">
+<span id="_CPPv335weston_timeline_subscription_object"></span><span id="_CPPv235weston_timeline_subscription_object"></span><span id="weston_timeline_subscription_object"></span><span class="target" id="structweston__timeline__subscription__object"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_timeline_subscription_object</span></span></span><a class="headerlink" href="#_CPPv435weston_timeline_subscription_object" title="Permalink to this definition">¶</a><br /></dt>
+<dd><em>#include &lt;timeline.h&gt;</em><p>Created when object is first seen for a particular timeline subscription Destroyed when the subscription got destroyed or object was destroyed. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N35weston_timeline_subscription_object6objectE">
+<span id="_CPPv3N35weston_timeline_subscription_object6objectE"></span><span id="_CPPv2N35weston_timeline_subscription_object6objectE"></span><span id="weston_timeline_subscription_object::object__voidP"></span><span class="target" id="structweston__timeline__subscription__object_1a607b471a6e5d936d93fa207f513a4f2c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">object</span></span></span><a class="headerlink" href="#_CPPv4N35weston_timeline_subscription_object6objectE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>points to the object </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N35weston_timeline_subscription_object2idE">
+<span id="_CPPv3N35weston_timeline_subscription_object2idE"></span><span id="_CPPv2N35weston_timeline_subscription_object2idE"></span><span id="weston_timeline_subscription_object::id__unsigned-i"></span><span class="target" id="structweston__timeline__subscription__object_1af6302bc6cf14ef84961eaf66ccbf9b47"></span><span class="kt"><span class="pre">unsigned</span> <span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">id</span></span></span><a class="headerlink" href="#_CPPv4N35weston_timeline_subscription_object2idE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N35weston_timeline_subscription_object13force_refreshE">
+<span id="_CPPv3N35weston_timeline_subscription_object13force_refreshE"></span><span id="_CPPv2N35weston_timeline_subscription_object13force_refreshE"></span><span id="weston_timeline_subscription_object::force_refresh__b"></span><span class="target" id="structweston__timeline__subscription__object_1a2e698a60abee7372d547f856141a5be4"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">force_refresh</span></span></span><a class="headerlink" href="#_CPPv4N35weston_timeline_subscription_object13force_refreshE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N35weston_timeline_subscription_object17subscription_linkE">
+<span id="_CPPv3N35weston_timeline_subscription_object17subscription_linkE"></span><span id="_CPPv2N35weston_timeline_subscription_object17subscription_linkE"></span><span id="weston_timeline_subscription_object::subscription_link__wl_list"></span><span class="target" id="structweston__timeline__subscription__object_1a5ca3b851aab252c1b903a9e41c3028a5"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_list</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">subscription_link</span></span></span><a class="headerlink" href="#_CPPv4N35weston_timeline_subscription_object17subscription_linkE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#structweston__timeline__subscription_1a3b2578d45d9a2e99cb8c06d2f7c28dab"><span class="std std-ref">weston_timeline_subscription::objects</span></a> </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N35weston_timeline_subscription_object16destroy_listenerE">
+<span id="_CPPv3N35weston_timeline_subscription_object16destroy_listenerE"></span><span id="_CPPv2N35weston_timeline_subscription_object16destroy_listenerE"></span><span id="weston_timeline_subscription_object::destroy_listener__wl_listener"></span><span class="target" id="structweston__timeline__subscription__object_1a0b7e9795218732f87970c00b7a73c6d1"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_listener</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">destroy_listener</span></span></span><a class="headerlink" href="#_CPPv4N35weston_timeline_subscription_object16destroy_listenerE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv421weston_log_subscriber">
+<span id="_CPPv321weston_log_subscriber"></span><span id="_CPPv221weston_log_subscriber"></span><span id="weston_log_subscriber"></span><span class="target" id="structweston__log__subscriber"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_log_subscriber</span></span></span><a class="headerlink" href="#_CPPv421weston_log_subscriber" title="Permalink to this definition">¶</a><br /></dt>
+<dd><em>#include &lt;weston-log-internal.h&gt;</em><p>Subscriber allows each type of stream to customize or to provide its own methods to manipulate the underlying storage. </p>
+<p>It follows also an object-oriented approach, contains the ops callbacks and a list of subcriptions of type <a class="reference internal" href="#structweston__log__subscription"><span class="std std-ref">weston_log_subscription</span></a>. Each subscription created will be both added to this subscription list and that of the <a class="reference internal" href="#structweston__log__scope"><span class="std std-ref">weston_log_scope</span></a>.</p>
+<p>A kind of stream can inherit the subscriber class and provide its own callbacks: <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">struct</span> <span class="n">weston_log_data_stream</span> <span class="p">{</span>
+        <span class="n">struct</span> <span class="n">weston_log_subscriber</span> <span class="n">base</span><span class="p">;</span>
+        <span class="n">struct</span> <span class="n">weston_data_stream</span> <span class="n">opaque</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</p>
+<p>Passing the base class will require container retrieval type of methods to be allowed to reach the opaque type (i.e., container_of()). </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N21weston_log_subscriber5writeE">
+<span id="_CPPv3N21weston_log_subscriber5writeE"></span><span id="_CPPv2N21weston_log_subscriber5writeE"></span><span class="target" id="structweston__log__subscriber_1a809bde45932f9d244d6a9b9e6454db32"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">write</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv421weston_log_subscriber" title="weston_log_subscriber"><span class="n"><span class="pre">weston_log_subscriber</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">sub</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n"><span class="pre">len</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N21weston_log_subscriber5writeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>write the data pointed by </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N21weston_log_subscriber7destroyE">
+<span id="_CPPv3N21weston_log_subscriber7destroyE"></span><span id="_CPPv2N21weston_log_subscriber7destroyE"></span><span class="target" id="structweston__log__subscriber_1a39f04907538dc84d5d5ddef6ad3cd954"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">destroy</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv421weston_log_subscriber" title="weston_log_subscriber"><span class="n"><span class="pre">weston_log_subscriber</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">sub</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N21weston_log_subscriber7destroyE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>For destroying the subscriber. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N21weston_log_subscriber20destroy_subscriptionE">
+<span id="_CPPv3N21weston_log_subscriber20destroy_subscriptionE"></span><span id="_CPPv2N21weston_log_subscriber20destroy_subscriptionE"></span><span class="target" id="structweston__log__subscriber_1a282d61ea233ec9ee3047deda47e57b7c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">destroy_subscription</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv421weston_log_subscriber" title="weston_log_subscriber"><span class="n"><span class="pre">weston_log_subscriber</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">sub</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N21weston_log_subscriber20destroy_subscriptionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>For the type of streams that required additional destroy operation for destroying the stream. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N21weston_log_subscriber8completeE">
+<span id="_CPPv3N21weston_log_subscriber8completeE"></span><span id="_CPPv2N21weston_log_subscriber8completeE"></span><span class="target" id="structweston__log__subscriber_1a6043703b9922fe8d709d47b01666f415"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">complete</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv421weston_log_subscriber" title="weston_log_subscriber"><span class="n"><span class="pre">weston_log_subscriber</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">sub</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N21weston_log_subscriber8completeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>For the type of streams that can inform the ‘consumer’ part that write operation has been terminated/finished and should close the stream. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N21weston_log_subscriber17subscription_listE">
+<span id="_CPPv3N21weston_log_subscriber17subscription_listE"></span><span id="_CPPv2N21weston_log_subscriber17subscription_listE"></span><span id="weston_log_subscriber::subscription_list__wl_list"></span><span class="target" id="structweston__log__subscriber_1afb01b98baeb194aa7cf353cd6d8cd22c"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_list</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">subscription_list</span></span></span><a class="headerlink" href="#_CPPv4N21weston_log_subscriber17subscription_listE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#structweston__log__subscription_1a9e3247e622bbe58e3068276e495658bc"><span class="std std-ref">weston_log_subscription::owner_link</span></a> </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv418weston_log_context">
+<span id="_CPPv318weston_log_context"></span><span id="_CPPv218weston_log_context"></span><span id="weston_log_context"></span><span class="target" id="structweston__log__context"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_log_context</span></span></span><a class="headerlink" href="#_CPPv418weston_log_context" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Main weston-log context. </p>
+<p>One per <a class="reference internal" href="compositor.html#structweston__compositor"><span class="std std-ref">weston_compositor</span></a>. Stores list of scopes created and a list pending subscriptions.</p>
+<p>A pending subscription is a subscription to a scope which hasn’t been created. When the scope is finally created the pending subscription will be removed from the pending subscription list, but not before was added in the scope’s subscription list and that of the subscriber list.</p>
+<p>Pending subscriptions only make sense for other types of streams, other than those created by weston-debug protocol. In the case of the weston-debug protocol, the subscription processes is done automatically whenever a client connects and subscribes to a scope which was previously advertised by the compositor. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18weston_log_context6globalE">
+<span id="_CPPv3N18weston_log_context6globalE"></span><span id="_CPPv2N18weston_log_context6globalE"></span><span id="weston_log_context::global__wl_globalP"></span><span class="target" id="structweston__log__context_1a77d7ffe649e310f90d93c2a39bde73a3"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_global</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">global</span></span></span><a class="headerlink" href="#_CPPv4N18weston_log_context6globalE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18weston_log_context27compositor_destroy_listenerE">
+<span id="_CPPv3N18weston_log_context27compositor_destroy_listenerE"></span><span id="_CPPv2N18weston_log_context27compositor_destroy_listenerE"></span><span id="weston_log_context::compositor_destroy_listener__wl_listener"></span><span class="target" id="structweston__log__context_1ac66559af849417dfb2aecb48bca9da4c"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_listener</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compositor_destroy_listener</span></span></span><a class="headerlink" href="#_CPPv4N18weston_log_context27compositor_destroy_listenerE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18weston_log_context10scope_listE">
+<span id="_CPPv3N18weston_log_context10scope_listE"></span><span id="_CPPv2N18weston_log_context10scope_listE"></span><span id="weston_log_context::scope_list__wl_list"></span><span class="target" id="structweston__log__context_1a8d3d91f8513fc1b28905883891173c9c"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_list</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">scope_list</span></span></span><a class="headerlink" href="#_CPPv4N18weston_log_context10scope_listE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#structweston__log__scope_1a2504128f5791644bcf001ca301b45ea1"><span class="std std-ref">weston_log_scope::compositor_link</span></a> </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18weston_log_context25pending_subscription_listE">
+<span id="_CPPv3N18weston_log_context25pending_subscription_listE"></span><span id="_CPPv2N18weston_log_context25pending_subscription_listE"></span><span id="weston_log_context::pending_subscription_list__wl_list"></span><span class="target" id="structweston__log__context_1af1f7edc42fab73bdbfd3baaeb1632127"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_list</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pending_subscription_list</span></span></span><a class="headerlink" href="#_CPPv4N18weston_log_context25pending_subscription_listE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#structweston__log__subscription_1a60eb786d6717a7bbe840c1572bf22a9b"><span class="std std-ref">weston_log_subscription::source_link</span></a> </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv423weston_log_subscription">
+<span id="_CPPv323weston_log_subscription"></span><span id="_CPPv223weston_log_subscription"></span><span id="weston_log_subscription"></span><span class="target" id="structweston__log__subscription"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_log_subscription</span></span></span><a class="headerlink" href="#_CPPv423weston_log_subscription" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Ties a subscriber to a scope. </p>
+<p>A subscription is created each time we’d want to subscribe to a scope. From the stream type we can retrieve the subscriber and from the subscriber we reach each of the streams callbacks. See also <a class="reference internal" href="#structweston__log__subscriber"><span class="std std-ref">weston_log_subscriber</span></a> object.</p>
+<p>When a subscription has been created we store it in the scope’s subscription list and in the subscriber’s subscription list. The subscription might be a pending subscription until the scope for which there’s was a subscribe has been created. The scope creation will take of looking through the pending subscription list.</p>
+<p>A subscription can reached from a subscriber subscription list by using the streams base class. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N23weston_log_subscription38weston_log_subscription_create_pendingEP21weston_log_subscriberPKcP18weston_log_context">
+<span id="_CPPv3N23weston_log_subscription38weston_log_subscription_create_pendingEP21weston_log_subscriberPKcP18weston_log_context"></span><span id="_CPPv2N23weston_log_subscription38weston_log_subscription_create_pendingEP21weston_log_subscriberPKcP18weston_log_context"></span><span id="weston_log_subscription::weston_log_subscription_create_pending__weston_log_subscriberP.cCP.weston_log_contextP"></span><span class="target" id="structweston__log__subscription_1a1384f76a99f909eee35abf5cd73f8bd4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_log_subscription_create_pending</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv421weston_log_subscriber" title="weston_log_subscriber"><span class="n"><span class="pre">weston_log_subscriber</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">owner</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">scope_name</span></span>, <span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv418weston_log_context" title="weston_log_context"><span class="n"><span class="pre">weston_log_context</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">log_ctx</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N23weston_log_subscription38weston_log_subscription_create_pendingEP21weston_log_subscriberPKcP18weston_log_context" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Create a pending subscription and add it the list of pending subscriptions. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>owner</strong> – a subscriber represented by <a class="reference internal" href="#structweston__log__subscriber"><span class="std std-ref">weston_log_subscriber</span></a> object </p></li>
+<li><p><strong>scope_name</strong> – the name of the scope (which we don’t have in the list of scopes) </p></li>
+<li><p><strong>log_ctx</strong> – the logging context used to add the pending subscription </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N23weston_log_subscription39weston_log_subscription_destroy_pendingEP23weston_log_subscription">
+<span id="_CPPv3N23weston_log_subscription39weston_log_subscription_destroy_pendingEP23weston_log_subscription"></span><span id="_CPPv2N23weston_log_subscription39weston_log_subscription_destroy_pendingEP23weston_log_subscription"></span><span id="weston_log_subscription::weston_log_subscription_destroy_pending__weston_log_subscriptionP"></span><span class="target" id="structweston__log__subscription_1af95e45789a81b5426076d20648d0d6e6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_log_subscription_destroy_pending</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv423weston_log_subscription" title="weston_log_subscription"><span class="n"><span class="pre">weston_log_subscription</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">sub</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N23weston_log_subscription39weston_log_subscription_destroy_pendingEP23weston_log_subscription" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Destroys the pending subscription created previously with <a class="reference internal" href="#structweston__log__subscription_1a1384f76a99f909eee35abf5cd73f8bd4"><span class="std std-ref">weston_log_subscription_create_pending()</span></a> </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sub</strong> – the <a class="reference internal" href="#structweston__log__subscription"><span class="std std-ref">weston_log_subscription</span></a> object to remove from the list of subscriptions and to destroy the subscription </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N23weston_log_subscription29weston_log_subscription_writeEP23weston_log_subscriptionPKc6size_t">
+<span id="_CPPv3N23weston_log_subscription29weston_log_subscription_writeEP23weston_log_subscriptionPKc6size_t"></span><span id="_CPPv2N23weston_log_subscription29weston_log_subscription_writeEP23weston_log_subscriptionPKc6size_t"></span><span id="weston_log_subscription::weston_log_subscription_write__weston_log_subscriptionP.cCP.s"></span><span class="target" id="structweston__log__subscription_1a0f5cd20fdbb25fb01bd0b5dfe2f91946"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_log_subscription_write</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv423weston_log_subscription" title="weston_log_subscription"><span class="n"><span class="pre">weston_log_subscription</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">sub</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">data</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">len</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N23weston_log_subscription29weston_log_subscription_writeEP23weston_log_subscriptionPKc6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Write to the stream’s subscription. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N23weston_log_subscription31weston_log_subscription_vprintfEP23weston_log_subscriptionPKc7va_list">
+<span id="_CPPv3N23weston_log_subscription31weston_log_subscription_vprintfEP23weston_log_subscriptionPKc7va_list"></span><span id="_CPPv2N23weston_log_subscription31weston_log_subscription_vprintfEP23weston_log_subscriptionPKc7va_list"></span><span id="weston_log_subscription::weston_log_subscription_vprintf__weston_log_subscriptionP.cCP.va_list"></span><span class="target" id="structweston__log__subscription_1a0f85dfccef3e82a8be68eaf6cda2e4c1"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_log_subscription_vprintf</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv423weston_log_subscription" title="weston_log_subscription"><span class="n"><span class="pre">weston_log_subscription</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">sub</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">fmt</span></span>, <span class="n"><span class="pre">va_list</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ap</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N23weston_log_subscription31weston_log_subscription_vprintfEP23weston_log_subscriptionPKc7va_list" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Write a formatted string to the stream’s subscription. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N23weston_log_subscription30weston_log_subscription_createEP21weston_log_subscriberP16weston_log_scope">
+<span id="_CPPv3N23weston_log_subscription30weston_log_subscription_createEP21weston_log_subscriberP16weston_log_scope"></span><span id="_CPPv2N23weston_log_subscription30weston_log_subscription_createEP21weston_log_subscriberP16weston_log_scope"></span><span id="weston_log_subscription::weston_log_subscription_create__weston_log_subscriberP.weston_log_scopeP"></span><span class="target" id="structweston__log__subscription_1a67f2f56cb833e93b6cf989969145a65a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_log_subscription_create</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv421weston_log_subscriber" title="weston_log_subscriber"><span class="n"><span class="pre">weston_log_subscriber</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">owner</span></span>, <span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv416weston_log_scope" title="weston_log_scope"><span class="n"><span class="pre">weston_log_scope</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">scope</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N23weston_log_subscription30weston_log_subscription_createEP21weston_log_subscriberP16weston_log_scope" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Creates a new subscription using the subscriber by <code class="docutils literal notranslate"><span class="pre">owner</span></code>. </p>
+<p>The subscription created is added to the <code class="docutils literal notranslate"><span class="pre">owner</span></code> subscription list. Destroying the subscription using <a class="reference internal" href="#structweston__log__subscription_1aa849cadbd5df8d355e8018cc69120962"><span class="std std-ref">weston_log_subscription_destroy()</span></a> will remove the link from the subscription list and free storage alloc’ed.</p>
+<p>Note that this adds the subscription to the scope’s subscription list hence the <code class="docutils literal notranslate"><span class="pre">scope</span></code> required argument.</p>
+<p><dl class="simple">
+<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="#structweston__log__subscription_1aa849cadbd5df8d355e8018cc69120962"><span class="std std-ref">weston_log_subscription_destroy</span></a>, <a class="reference internal" href="#structweston__log__subscription_1afbcb799b4461d0197321608b8e3aa7e9"><span class="std std-ref">weston_log_subscription_remove</span></a>, <a class="reference internal" href="#structweston__log__subscription_1ae69bb5084749d138f7fc613621c30f74"><span class="std std-ref">weston_log_subscription_add</span></a> </p>
+</dd>
+</dl>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>owner</strong> – the subscriber owner, must be created before creating a subscription </p></li>
+<li><p><strong>scope</strong> – the scope in order to add the subscription to the scope’s subscription list </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a <a class="reference internal" href="#structweston__log__subscription"><span class="std std-ref">weston_log_subscription</span></a> object in case of success, or NULL otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N23weston_log_subscription31weston_log_subscription_destroyEP23weston_log_subscription">
+<span id="_CPPv3N23weston_log_subscription31weston_log_subscription_destroyEP23weston_log_subscription"></span><span id="_CPPv2N23weston_log_subscription31weston_log_subscription_destroyEP23weston_log_subscription"></span><span id="weston_log_subscription::weston_log_subscription_destroy__weston_log_subscriptionP"></span><span class="target" id="structweston__log__subscription_1aa849cadbd5df8d355e8018cc69120962"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_log_subscription_destroy</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv423weston_log_subscription" title="weston_log_subscription"><span class="n"><span class="pre">weston_log_subscription</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">sub</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N23weston_log_subscription31weston_log_subscription_destroyEP23weston_log_subscription" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Destroys the subscription. </p>
+<p>Removes the subscription from the scopes subscription list and from subscriber’s subscription list. It destroys the subscription afterwads. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N23weston_log_subscription27weston_log_subscription_addEP16weston_log_scopeP23weston_log_subscription">
+<span id="_CPPv3N23weston_log_subscription27weston_log_subscription_addEP16weston_log_scopeP23weston_log_subscription"></span><span id="_CPPv2N23weston_log_subscription27weston_log_subscription_addEP16weston_log_scopeP23weston_log_subscription"></span><span id="weston_log_subscription::weston_log_subscription_add__weston_log_scopeP.weston_log_subscriptionP"></span><span class="target" id="structweston__log__subscription_1ae69bb5084749d138f7fc613621c30f74"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_log_subscription_add</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv416weston_log_scope" title="weston_log_scope"><span class="n"><span class="pre">weston_log_scope</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">scope</span></span>, <span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv423weston_log_subscription" title="weston_log_subscription"><span class="n"><span class="pre">weston_log_subscription</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">sub</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N23weston_log_subscription27weston_log_subscription_addEP16weston_log_scopeP23weston_log_subscription" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Adds the subscription <code class="docutils literal notranslate"><span class="pre">sub</span></code> to the subscription list of the scope. </p>
+<p>This should used when the scope has been created, and the subscription <code class="docutils literal notranslate"><span class="pre">sub</span></code> has be created before calling this function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scope</strong> – the scope </p></li>
+<li><p><strong>sub</strong> – the subscription, it must be created before, see <a class="reference internal" href="#structweston__log__subscription_1a67f2f56cb833e93b6cf989969145a65a"><span class="std std-ref">weston_log_subscription_create()</span></a> </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N23weston_log_subscription30weston_log_subscription_removeEP23weston_log_subscription">
+<span id="_CPPv3N23weston_log_subscription30weston_log_subscription_removeEP23weston_log_subscription"></span><span id="_CPPv2N23weston_log_subscription30weston_log_subscription_removeEP23weston_log_subscription"></span><span id="weston_log_subscription::weston_log_subscription_remove__weston_log_subscriptionP"></span><span class="target" id="structweston__log__subscription_1afbcb799b4461d0197321608b8e3aa7e9"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_log_subscription_remove</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv423weston_log_subscription" title="weston_log_subscription"><span class="n"><span class="pre">weston_log_subscription</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">sub</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N23weston_log_subscription30weston_log_subscription_removeEP23weston_log_subscription" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Removes the subscription from the scope’s subscription list. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N23weston_log_subscription5ownerE">
+<span id="_CPPv3N23weston_log_subscription5ownerE"></span><span id="_CPPv2N23weston_log_subscription5ownerE"></span><span id="weston_log_subscription::owner__weston_log_subscriberP"></span><span class="target" id="structweston__log__subscription_1a22b159f9d3e823d40ff8f301af72e73c"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv421weston_log_subscriber" title="weston_log_subscriber"><span class="n"><span class="pre">weston_log_subscriber</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">owner</span></span></span><a class="headerlink" href="#_CPPv4N23weston_log_subscription5ownerE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N23weston_log_subscription10owner_linkE">
+<span id="_CPPv3N23weston_log_subscription10owner_linkE"></span><span id="_CPPv2N23weston_log_subscription10owner_linkE"></span><span id="weston_log_subscription::owner_link__wl_list"></span><span class="target" id="structweston__log__subscription_1a9e3247e622bbe58e3068276e495658bc"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_list</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">owner_link</span></span></span><a class="headerlink" href="#_CPPv4N23weston_log_subscription10owner_linkE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#structweston__log__subscriber_1afb01b98baeb194aa7cf353cd6d8cd22c"><span class="std std-ref">weston_log_subscriber::subscription_list</span></a> </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N23weston_log_subscription10scope_nameE">
+<span id="_CPPv3N23weston_log_subscription10scope_nameE"></span><span id="_CPPv2N23weston_log_subscription10scope_nameE"></span><span id="weston_log_subscription::scope_name__cP"></span><span class="target" id="structweston__log__subscription_1a1c9c254d7ac6afa67ca474a968a7668f"></span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">scope_name</span></span></span><a class="headerlink" href="#_CPPv4N23weston_log_subscription10scope_nameE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N23weston_log_subscription6sourceE">
+<span id="_CPPv3N23weston_log_subscription6sourceE"></span><span id="_CPPv2N23weston_log_subscription6sourceE"></span><span id="weston_log_subscription::source__weston_log_scopeP"></span><span class="target" id="structweston__log__subscription_1a1a1e4d9a5bdda40238c3e8eed23ebadc"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv416weston_log_scope" title="weston_log_scope"><span class="n"><span class="pre">weston_log_scope</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">source</span></span></span><a class="headerlink" href="#_CPPv4N23weston_log_subscription6sourceE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N23weston_log_subscription11source_linkE">
+<span id="_CPPv3N23weston_log_subscription11source_linkE"></span><span id="_CPPv2N23weston_log_subscription11source_linkE"></span><span id="weston_log_subscription::source_link__wl_list"></span><span class="target" id="structweston__log__subscription_1a60eb786d6717a7bbe840c1572bf22a9b"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_list</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">source_link</span></span></span><a class="headerlink" href="#_CPPv4N23weston_log_subscription11source_linkE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#structweston__log__scope_1afe6121c70d4e7f15371c5718dacd577e"><span class="std std-ref">weston_log_scope::subscription_list</span></a> or <a class="reference internal" href="#structweston__log__context_1af1f7edc42fab73bdbfd3baaeb1632127"><span class="std std-ref">weston_log_context::pending_subscription_list</span></a> </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N23weston_log_subscription4dataE">
+<span id="_CPPv3N23weston_log_subscription4dataE"></span><span id="_CPPv2N23weston_log_subscription4dataE"></span><span id="weston_log_subscription::data__voidP"></span><span class="target" id="structweston__log__subscription_1a232f3aa82d1577b7759b47c32b0ebe4f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">data</span></span></span><a class="headerlink" href="#_CPPv4N23weston_log_subscription4dataE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../test-suite.html" class="btn btn-neutral float-right" title="Weston test suite" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="output.html" class="btn btn-neutral float-left" title="Outputs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Weston community.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

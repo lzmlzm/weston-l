@@ -1,0 +1,1089 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Compositor &mdash; weston 9.0.90 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Output management" href="output-management.html" />
+    <link rel="prev" title="Libweston" href="../libweston.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> weston
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../running-weston.html">Running Weston</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../libweston.html">Libweston</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Compositor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#compositor-api">Compositor API</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="output-management.html">Output management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="log.html">Logging/Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libweston.html#further-work">Further work</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../test-suite.html">Weston test suite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kiosk-shell.html">Weston kiosk-shell</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">weston</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../libweston.html">Libweston</a> &raquo;</li>
+        
+      <li>Compositor</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/toc/libweston/compositor.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="compositor">
+<h1>Compositor<a class="headerlink" href="#compositor" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="#_CPPv417weston_compositor" title="weston_compositor"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">weston_compositor</span></code></a> represents the core object of the library, which
+aggregates all the other objects and maintains their state. You can create it
+using <a class="reference internal" href="#_CPPv424weston_compositor_createP10wl_displayP18weston_log_contextPvPK21weston_testsuite_data" title="weston_compositor_create"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">weston_compositor_create()</span></code></a>, while for releasing all the resources
+associated with it and then destroy it, you should use
+<a class="reference internal" href="#_CPPv425weston_compositor_destroyP17weston_compositor" title="weston_compositor_destroy"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">weston_compositor_destroy()</span></code></a>.</p>
+<div class="section" id="compositor-api">
+<h2>Compositor API<a class="headerlink" href="#compositor-api" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv426weston_compositor_get_timeP8timespec">
+<span id="_CPPv326weston_compositor_get_timeP8timespec"></span><span id="_CPPv226weston_compositor_get_timeP8timespec"></span><span id="weston_compositor_get_time__timespecP"></span><span class="target" id="group__compositor_1ga8e5847024d92d76171a144d15c5452da"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_get_time</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">timespec</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">time</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv426weston_compositor_get_timeP8timespec" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>weston_compositor_get_time </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv427weston_compositor_pick_viewP17weston_compositor10wl_fixed_t10wl_fixed_tP10wl_fixed_tP10wl_fixed_t">
+<span id="_CPPv327weston_compositor_pick_viewP17weston_compositor10wl_fixed_t10wl_fixed_tP10wl_fixed_tP10wl_fixed_t"></span><span id="_CPPv227weston_compositor_pick_viewP17weston_compositor10wl_fixed_t10wl_fixed_tP10wl_fixed_tP10wl_fixed_t"></span><span id="weston_compositor_pick_view__weston_compositorP.wl_fixed_t.wl_fixed_t.wl_fixed_tP.wl_fixed_tP"></span><span class="target" id="group__compositor_1gad2c7ea85353aed21f10e1e663e216ae0"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">weston_view</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_pick_view</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">compositor</span></span>, <span class="n"><span class="pre">wl_fixed_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">x</span></span>, <span class="n"><span class="pre">wl_fixed_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">y</span></span>, <span class="n"><span class="pre">wl_fixed_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">vx</span></span>, <span class="n"><span class="pre">wl_fixed_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">vy</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv427weston_compositor_pick_viewP17weston_compositor10wl_fixed_t10wl_fixed_tP10wl_fixed_tP10wl_fixed_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>weston_compositor_pick_view </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv428weston_compositor_damage_allP17weston_compositor">
+<span id="_CPPv328weston_compositor_damage_allP17weston_compositor"></span><span id="_CPPv228weston_compositor_damage_allP17weston_compositor"></span><span id="weston_compositor_damage_all__weston_compositorP"></span><span class="target" id="group__compositor_1ga674d4dd1642c36ca73a7ddc246a4b411"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_damage_all</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">compositor</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv428weston_compositor_damage_allP17weston_compositor" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>weston_compositor_damage_all </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv434weston_compositor_schedule_repaintP17weston_compositor">
+<span id="_CPPv334weston_compositor_schedule_repaintP17weston_compositor"></span><span id="_CPPv234weston_compositor_schedule_repaintP17weston_compositor"></span><span id="weston_compositor_schedule_repaint__weston_compositorP"></span><span class="target" id="group__compositor_1ga8477eedbbb0660db00b0c1be93c913db"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_schedule_repaint</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">compositor</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv434weston_compositor_schedule_repaintP17weston_compositor" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>weston_compositor_schedule_repaint </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv422weston_compositor_wakeP17weston_compositor">
+<span id="_CPPv322weston_compositor_wakeP17weston_compositor"></span><span id="_CPPv222weston_compositor_wakeP17weston_compositor"></span><span id="weston_compositor_wake__weston_compositorP"></span><span class="target" id="group__compositor_1ga7efd2631f78297037a9ba5668b5fa9ac"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_wake</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">compositor</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422weston_compositor_wakeP17weston_compositor" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Restores the compositor to active status. </p>
+<p>
+If the compositor was in a sleeping mode, all outputs are powered back on via DPMS. Otherwise if the compositor was inactive (idle/locked, offscreen, or sleeping) then the compositor’s wake signal will fire.</p>
+<p>Restarts the idle timer. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>compositor</strong> – The compositor instance</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv427weston_compositor_offscreenP17weston_compositor">
+<span id="_CPPv327weston_compositor_offscreenP17weston_compositor"></span><span id="_CPPv227weston_compositor_offscreenP17weston_compositor"></span><span id="weston_compositor_offscreen__weston_compositorP"></span><span class="target" id="group__compositor_1gabbeb356dd9688004330df598b514a27c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_offscreen</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">compositor</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv427weston_compositor_offscreenP17weston_compositor" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Turns off rendering and frame events for the compositor. </p>
+<p>
+This is used for example to prevent further rendering while the compositor is shutting down.</p>
+<p>Stops the idle timer. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>compositor</strong> – The compositor instance</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv423weston_compositor_sleepP17weston_compositor">
+<span id="_CPPv323weston_compositor_sleepP17weston_compositor"></span><span id="_CPPv223weston_compositor_sleepP17weston_compositor"></span><span id="weston_compositor_sleep__weston_compositorP"></span><span class="target" id="group__compositor_1ga0d01f39e15e169b13384be82bb05370d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_sleep</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">compositor</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv423weston_compositor_sleepP17weston_compositor" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Powers down all attached output devices. </p>
+<p>
+Causes rendering to the outputs to cease, and no frame events to be sent. Only powers down the outputs if the compositor is not already in sleep mode.</p>
+<p>Stops the idle timer. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>compositor</strong> – The compositor instance</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv429weston_compositor_stack_planeP17weston_compositorP12weston_planeP12weston_plane">
+<span id="_CPPv329weston_compositor_stack_planeP17weston_compositorP12weston_planeP12weston_plane"></span><span id="_CPPv229weston_compositor_stack_planeP17weston_compositorP12weston_planeP12weston_plane"></span><span id="weston_compositor_stack_plane__weston_compositorP.weston_planeP.weston_planeP"></span><span class="target" id="group__compositor_1gac0da9a90074155e609e2f5845cbf25fc"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_stack_plane</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">ec</span></span>, <span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">weston_plane</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">plane</span></span>, <span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">weston_plane</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">above</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429weston_compositor_stack_planeP17weston_compositorP12weston_planeP12weston_plane" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>weston_compositor_stack_plane </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv440weston_compositor_schedule_heads_changedP17weston_compositor">
+<span id="_CPPv340weston_compositor_schedule_heads_changedP17weston_compositor"></span><span id="_CPPv240weston_compositor_schedule_heads_changedP17weston_compositor"></span><span id="weston_compositor_schedule_heads_changed__weston_compositorP"></span><span class="target" id="group__compositor_1gae456afce819647679741443d15cd82cb"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_schedule_heads_changed</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">compositor</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv440weston_compositor_schedule_heads_changedP17weston_compositor" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Schedule a call on idle to heads_changed callback. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>compositor</strong> – The Compositor. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv426weston_compositor_add_headP17weston_compositorP11weston_head">
+<span id="_CPPv326weston_compositor_add_headP17weston_compositorP11weston_head"></span><span id="_CPPv226weston_compositor_add_headP17weston_compositorP11weston_head"></span><span id="weston_compositor_add_head__weston_compositorP.weston_headP"></span><span class="target" id="group__compositor_1ga9cc453a480c9083e2b15d974f0c9d61e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_add_head</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">compositor</span></span>, <span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="head.html#_CPPv411weston_head" title="weston_head"><span class="n"><span class="pre">weston_head</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">head</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv426weston_compositor_add_headP17weston_compositorP11weston_head" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Register a new head. </p>
+<p>
+This signals the core that a new head has become available, leading to heads_changed hook being called later. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>compositor</strong> – The compositor. </p></li>
+<li><p><strong>head</strong> – The head to register, must not be already registered.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv444weston_compositor_add_heads_changed_listenerP17weston_compositorP11wl_listener">
+<span id="_CPPv344weston_compositor_add_heads_changed_listenerP17weston_compositorP11wl_listener"></span><span id="_CPPv244weston_compositor_add_heads_changed_listenerP17weston_compositorP11wl_listener"></span><span id="weston_compositor_add_heads_changed_listener__weston_compositorP.wl_listenerP"></span><span class="target" id="group__compositor_1gaaf5629bbdce30062a548444c7df59205"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_add_heads_changed_listener</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">compositor</span></span>, <span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_listener</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">listener</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv444weston_compositor_add_heads_changed_listenerP17weston_compositorP11wl_listener" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Adds a listener to be called when heads change. </p>
+<p>
+The listener notify function argument is <a class="reference internal" href="#structweston__compositor"><span class="std std-ref">weston_compositor</span></a>.</p>
+<p>The listener function will be called after heads are added or their connection status has changed. Several changes may be accumulated into a single call. The user is expected to iterate over the existing heads and check their statuses to find out what changed.</p>
+<p><dl class="simple">
+<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="#group__compositor_1ga23fa98d05ed6886179c337931ae8a407"><span class="std std-ref">weston_compositor_iterate_heads</span></a>, <a class="reference internal" href="head.html#group__head_1gad0da27f9a2e98faf8aecf84704935440"><span class="std std-ref">weston_head_is_connected</span></a>, <a class="reference internal" href="head.html#group__head_1ga8d49a887b440265b363a5075fefff343"><span class="std std-ref">weston_head_is_enabled</span></a> </p>
+</dd>
+</dl>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>compositor</strong> – The compositor. </p></li>
+<li><p><strong>listener</strong> – The listener to add.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv431weston_compositor_iterate_headsP17weston_compositorP11weston_head">
+<span id="_CPPv331weston_compositor_iterate_headsP17weston_compositorP11weston_head"></span><span id="_CPPv231weston_compositor_iterate_headsP17weston_compositorP11weston_head"></span><span id="weston_compositor_iterate_heads__weston_compositorP.weston_headP"></span><span class="target" id="group__compositor_1ga23fa98d05ed6886179c337931ae8a407"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="head.html#_CPPv411weston_head" title="weston_head"><span class="n"><span class="pre">weston_head</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_iterate_heads</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">compositor</span></span>, <span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="head.html#_CPPv411weston_head" title="weston_head"><span class="n"><span class="pre">weston_head</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">iter</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv431weston_compositor_iterate_headsP17weston_compositorP11weston_head" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Iterate over available heads. </p>
+<p>
+Returns all available heads, regardless of being connected or enabled.</p>
+<p>You can iterate over all heads as follows: <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">struct</span> <span class="n">weston_head</span> <span class="o">*</span><span class="n">head</span> <span class="o">=</span> <span class="n">NULL</span><span class="p">;</span>
+
+<span class="k">while</span> <span class="p">((</span><span class="n">head</span> <span class="o">=</span> <span class="n">weston_compositor_iterate_heads</span><span class="p">(</span><span class="n">compositor</span><span class="p">,</span> <span class="n">head</span><span class="p">)))</span> <span class="p">{</span>
+        <span class="o">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</p>
+<p>If you cause <code class="docutils literal notranslate"><span class="pre">iter</span></code> to be removed from the list, you cannot use it to continue iterating. Removing any other item is safe. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>compositor</strong> – The compositor. </p></li>
+<li><p><strong>iter</strong> – The iterator, or NULL for start. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The next available head in the list.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv431weston_compositor_remove_outputP13weston_output">
+<span id="_CPPv331weston_compositor_remove_outputP13weston_output"></span><span id="_CPPv231weston_compositor_remove_outputP13weston_output"></span><span id="weston_compositor_remove_output__weston_outputP"></span><span class="target" id="group__compositor_1ga794fc39a73df6dca432c753825ef2a1b"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_remove_output</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="output.html#_CPPv413weston_output" title="weston_output"><span class="n"><span class="pre">weston_output</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">output</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv431weston_compositor_remove_outputP13weston_output" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Removes output from compositor’s list of enabled outputs. </p>
+<p>
+The following happens:</p>
+<p><ul class="simple">
+<li><p>The output assignments of all views in the current scenegraph are recomputed.</p></li>
+<li><p>Presentation feedback is discarded.</p></li>
+<li><p>Compositor is notified that outputs were changed and applies the necessary changes to re-layout outputs.</p></li>
+<li><p>The output is put back in the pending outputs list.</p></li>
+<li><p>Signal is emitted to notify all users of the <a class="reference internal" href="output.html#structweston__output"><span class="std std-ref">weston_output</span></a> object that the output is being destroyed.</p></li>
+<li><p>wl_output protocol objects referencing this <a class="reference internal" href="output.html#structweston__output"><span class="std std-ref">weston_output</span></a> are made inert, and the wl_output global is removed.</p></li>
+<li><p>The output’s internal ID is released. </p></li>
+</ul>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>output</strong> – The <a class="reference internal" href="output.html#structweston__output"><span class="std std-ref">weston_output</span></a> object that is being removed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv436weston_compositor_add_pending_outputP13weston_outputP17weston_compositor">
+<span id="_CPPv336weston_compositor_add_pending_outputP13weston_outputP17weston_compositor"></span><span id="_CPPv236weston_compositor_add_pending_outputP13weston_outputP17weston_compositor"></span><span id="weston_compositor_add_pending_output__weston_outputP.weston_compositorP"></span><span class="target" id="group__compositor_1ga3bf54722d538ec9410a82d1242a84958"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_add_pending_output</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="output.html#_CPPv413weston_output" title="weston_output"><span class="n"><span class="pre">weston_output</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">output</span></span>, <span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">compositor</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv436weston_compositor_add_pending_outputP13weston_outputP17weston_compositor" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Adds <a class="reference internal" href="output.html#structweston__output"><span class="std std-ref">weston_output</span></a> object to pending output list. </p>
+<p>
+The opposite of this operation is built into <a class="reference internal" href="output.html#group__output_1ga4f2b78dfe24872b341fccb812d1e9473"><span class="std std-ref">weston_output_release()</span></a>. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>output</strong> – The <a class="reference internal" href="output.html#structweston__output"><span class="std std-ref">weston_output</span></a> object to add </p></li>
+<li><p><strong>compositor</strong> – The compositor instance.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv437weston_compositor_flush_heads_changedP17weston_compositor">
+<span id="_CPPv337weston_compositor_flush_heads_changedP17weston_compositor"></span><span id="_CPPv237weston_compositor_flush_heads_changedP17weston_compositor"></span><span id="weston_compositor_flush_heads_changed__weston_compositorP"></span><span class="target" id="group__compositor_1gae835d9bf9af471b041a588778a774db2"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_flush_heads_changed</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">compositor</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv437weston_compositor_flush_heads_changedP17weston_compositor" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Forces a synchronous call to heads_changed hook. </p>
+<p>
+If there are new or changed heads, calls the heads_changed hook and returns after the hook returns. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>compositor</strong> – The compositor instance</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv437weston_compositor_find_output_by_nameP17weston_compositorPKc">
+<span id="_CPPv337weston_compositor_find_output_by_nameP17weston_compositorPKc"></span><span id="_CPPv237weston_compositor_find_output_by_nameP17weston_compositorPKc"></span><span id="weston_compositor_find_output_by_name__weston_compositorP.cCP"></span><span class="target" id="group__compositor_1ga2a4277e31b2ef83535ad5ace9cb61488"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="output.html#_CPPv413weston_output" title="weston_output"><span class="n"><span class="pre">weston_output</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_find_output_by_name</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">compositor</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv437weston_compositor_find_output_by_nameP17weston_compositorPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Find an output by its given name. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>compositor</strong> – The compositor to search in. </p></li>
+<li><p><strong>name</strong> – The output name to search for. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An existing output with the given name, or NULL if not found. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv431weston_compositor_create_outputP17weston_compositorPKc">
+<span id="_CPPv331weston_compositor_create_outputP17weston_compositorPKc"></span><span id="_CPPv231weston_compositor_create_outputP17weston_compositorPKc"></span><span id="weston_compositor_create_output__weston_compositorP.cCP"></span><span class="target" id="group__compositor_1gafee0c9120b6d2ffcdbf3d7cae5837975"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="output.html#_CPPv413weston_output" title="weston_output"><span class="n"><span class="pre">weston_output</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_create_output</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">compositor</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv431weston_compositor_create_outputP17weston_compositorPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Create a named output. </p>
+<p>
+This creates a new <a class="reference internal" href="output.html#structweston__output"><span class="std std-ref">weston_output</span></a> that starts with no heads attached.</p>
+<p>An output must be configured and it must have at least one head before it can be enabled. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>compositor</strong> – The compositor. </p></li>
+<li><p><strong>name</strong> – The name for the output. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A new <code class="docutils literal notranslate"><a class="reference internal" href="output.html#structweston__output"><span class="std std-ref"><span class="pre">weston_output</span></span></a></code>, or NULL on failure.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv441weston_compositor_create_output_with_headP17weston_compositorP11weston_head">
+<span id="_CPPv341weston_compositor_create_output_with_headP17weston_compositorP11weston_head"></span><span id="_CPPv241weston_compositor_create_output_with_headP17weston_compositorP11weston_head"></span><span id="weston_compositor_create_output_with_head__weston_compositorP.weston_headP"></span><span class="target" id="group__compositor_1gadc6c426dbd044667d0d1f5ec7ec47ae0"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="output.html#_CPPv413weston_output" title="weston_output"><span class="n"><span class="pre">weston_output</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_create_output_with_head</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">compositor</span></span>, <span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="head.html#_CPPv411weston_head" title="weston_head"><span class="n"><span class="pre">weston_head</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">head</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv441weston_compositor_create_output_with_headP17weston_compositorP11weston_head" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Create an output for an unused head. </p>
+<p>
+This creates a new <a class="reference internal" href="output.html#structweston__output"><span class="std std-ref">weston_output</span></a> that starts with the given head attached. The output inherits the name of the head. The head must not be already attached to another output.</p>
+<p>An output must be configured before it can be enabled. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>compositor</strong> – The compositor. </p></li>
+<li><p><strong>head</strong> – The head to attach to the output. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A new <code class="docutils literal notranslate"><a class="reference internal" href="output.html#structweston__output"><span class="std std-ref"><span class="pre">weston_output</span></span></a></code>, or NULL on failure.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv435weston_compositor_print_scene_graphP17weston_compositor">
+<span id="_CPPv335weston_compositor_print_scene_graphP17weston_compositor"></span><span id="_CPPv235weston_compositor_print_scene_graphP17weston_compositor"></span><span id="weston_compositor_print_scene_graph__weston_compositorP"></span><span class="target" id="group__compositor_1ga4fa96710c12bf0aee8935872bc1c7437"></span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_print_scene_graph</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">ec</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv435weston_compositor_print_scene_graphP17weston_compositor" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Output information on how libweston is currently composing the scene graph. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv431weston_compositor_get_test_dataP17weston_compositor">
+<span id="_CPPv331weston_compositor_get_test_dataP17weston_compositor"></span><span id="_CPPv231weston_compositor_get_test_dataP17weston_compositor"></span><span id="weston_compositor_get_test_data__weston_compositorP"></span><span class="target" id="group__compositor_1gaa92b2b7d2b73302bf143e1c3245045f0"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_get_test_data</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">ec</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv431weston_compositor_get_test_dataP17weston_compositor" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Retrieve testsuite data from compositor. </p>
+<p>The testsuite data can be defined by the test suite of projects that uses libweston and given to the compositor at the moment of its creation. This function should be used when we need to retrieve the testsuite private data from the compositor.</p>
+<p><dl class="simple">
+<dt><strong>See</strong></dt><dd><p>weston_compositor_test_data_init </p>
+</dd>
+</dl>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ec</strong> – The weston compositor. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The testsuite data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv424weston_compositor_createP10wl_displayP18weston_log_contextPvPK21weston_testsuite_data">
+<span id="_CPPv324weston_compositor_createP10wl_displayP18weston_log_contextPvPK21weston_testsuite_data"></span><span id="_CPPv224weston_compositor_createP10wl_displayP18weston_log_contextPvPK21weston_testsuite_data"></span><span id="weston_compositor_create__wl_displayP.weston_log_contextP.voidP.weston_testsuite_dataCP"></span><span class="target" id="group__compositor_1ga081445a62197fac7bcbeeab449261373"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_create</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_display</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">display</span></span>, <span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="log.html#_CPPv418weston_log_context" title="weston_log_context"><span class="n"><span class="pre">weston_log_context</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">log_ctx</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">user_data</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="../test-suite-api.html#_CPPv421weston_testsuite_data" title="weston_testsuite_data"><span class="n"><span class="pre">weston_testsuite_data</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">test_data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv424weston_compositor_createP10wl_displayP18weston_log_contextPvPK21weston_testsuite_data" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Create the compositor. </p>
+<p>This functions creates and initializes a compositor instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>display</strong> – The Wayland display to be used. </p></li>
+<li><p><strong>user_data</strong> – A pointer to an object that can later be retrieved </p></li>
+<li><p><strong>log_ctx</strong> – A pointer to weston_debug_compositor </p></li>
+<li><p><strong>test_data</strong> – Optional testsuite data, or NULL. using the <a class="reference internal" href="#group__compositor_1gaaecdc50a0ea2aebbf36a22db50e62385"><span class="std std-ref">weston_compositor_get_user_data</span></a> function. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The compositor instance on success or NULL on failure. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv426weston_compositor_shutdownP17weston_compositor">
+<span id="_CPPv326weston_compositor_shutdownP17weston_compositor"></span><span id="_CPPv226weston_compositor_shutdownP17weston_compositor"></span><span id="weston_compositor_shutdown__weston_compositorP"></span><span class="target" id="group__compositor_1gacc91a9f77baf1c72d967471bade09cb3"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_shutdown</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">ec</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv426weston_compositor_shutdownP17weston_compositor" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>weston_compositor_shutdown </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv432weston_compositor_exit_with_codeP17weston_compositori">
+<span id="_CPPv332weston_compositor_exit_with_codeP17weston_compositori"></span><span id="_CPPv232weston_compositor_exit_with_codeP17weston_compositori"></span><span id="weston_compositor_exit_with_code__weston_compositorP.i"></span><span class="target" id="group__compositor_1ga6299e93b80dfd70bd2c9c1603417f940"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_exit_with_code</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">compositor</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">exit_code</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv432weston_compositor_exit_with_codeP17weston_compositori" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>weston_compositor_exit_with_code </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv442weston_compositor_set_default_pointer_grabP17weston_compositorPK29weston_pointer_grab_interface">
+<span id="_CPPv342weston_compositor_set_default_pointer_grabP17weston_compositorPK29weston_pointer_grab_interface"></span><span id="_CPPv242weston_compositor_set_default_pointer_grabP17weston_compositorPK29weston_pointer_grab_interface"></span><span id="weston_compositor_set_default_pointer_grab__weston_compositorP.weston_pointer_grab_interfaceCP"></span><span class="target" id="group__compositor_1gad227efb7ecb34f771ad93dc86fdb5bcf"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_set_default_pointer_grab</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">ec</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">weston_pointer_grab_interface</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">interface</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv442weston_compositor_set_default_pointer_grabP17weston_compositorPK29weston_pointer_grab_interface" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>weston_compositor_set_default_pointer_grab </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv440weston_compositor_set_presentation_clockP17weston_compositor9clockid_t">
+<span id="_CPPv340weston_compositor_set_presentation_clockP17weston_compositor9clockid_t"></span><span id="_CPPv240weston_compositor_set_presentation_clockP17weston_compositor9clockid_t"></span><span id="weston_compositor_set_presentation_clock__weston_compositorP.clockid_t"></span><span class="target" id="group__compositor_1gabaca768863a217e3c5fa4d7519676a9a"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_set_presentation_clock</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">compositor</span></span>, <span class="n"><span class="pre">clockid_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">clk_id</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv440weston_compositor_set_presentation_clockP17weston_compositor9clockid_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>weston_compositor_set_presentation_clock </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv449weston_compositor_set_presentation_clock_softwareP17weston_compositor">
+<span id="_CPPv349weston_compositor_set_presentation_clock_softwareP17weston_compositor"></span><span id="_CPPv249weston_compositor_set_presentation_clock_softwareP17weston_compositor"></span><span id="weston_compositor_set_presentation_clock_software__weston_compositorP"></span><span class="target" id="group__compositor_1gaab7e6328af752385d84c17b9eebddf74"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_set_presentation_clock_software</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">compositor</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv449weston_compositor_set_presentation_clock_softwareP17weston_compositor" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>For choosing the software clock, when the display hardware or API does not expose a compatible presentation timestamp. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv441weston_compositor_read_presentation_clockPK17weston_compositorP8timespec">
+<span id="_CPPv341weston_compositor_read_presentation_clockPK17weston_compositorP8timespec"></span><span id="_CPPv241weston_compositor_read_presentation_clockPK17weston_compositorP8timespec"></span><span id="weston_compositor_read_presentation_clock__weston_compositorCP.timespecP"></span><span class="target" id="group__compositor_1ga464e69b90dabde1e2f4797181f3dc65a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_read_presentation_clock</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">compositor</span></span>, <span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">timespec</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">ts</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv441weston_compositor_read_presentation_clockPK17weston_compositorP8timespec" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Read the current time from the Presentation clock. </p>
+<p>
+This function is never meant to fail. If reading the clock does fail, an error message is logged and a zero time is returned. Callers are not supposed to detect or react to failures. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Reading the current time in user space is always imprecise to some degree.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>compositor</strong> – </p></li>
+<li><p><strong>ts</strong> – <strong>[out]</strong> The current time.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv431weston_compositor_import_dmabufP17weston_compositorP19linux_dmabuf_buffer">
+<span id="_CPPv331weston_compositor_import_dmabufP17weston_compositorP19linux_dmabuf_buffer"></span><span id="_CPPv231weston_compositor_import_dmabufP17weston_compositorP19linux_dmabuf_buffer"></span><span id="weston_compositor_import_dmabuf__weston_compositorP.linux_dmabuf_bufferP"></span><span class="target" id="group__compositor_1ga321e3fcf45c3aa5f8d5280691f6232c3"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_import_dmabuf</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">compositor</span></span>, <span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">linux_dmabuf_buffer</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">buffer</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv431weston_compositor_import_dmabufP17weston_compositorP19linux_dmabuf_buffer" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Import dmabuf buffer into current renderer. </p>
+<p>
+This function tests that the linux_dmabuf_buffer is usable for the current renderer. Returns false on unusable buffers. Usually usability is tested by importing the dmabufs for composition.</p>
+<p>This hook is also used for detecting if the renderer supports dmabufs at all. If the renderer hook is NULL, dmabufs are not supported. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>compositor</strong> – </p></li>
+<li><p><strong>buffer</strong> – the dmabuf buffer to import </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>true on usable buffers, false otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv425weston_compositor_destroyP17weston_compositor">
+<span id="_CPPv325weston_compositor_destroyP17weston_compositor"></span><span id="_CPPv225weston_compositor_destroyP17weston_compositor"></span><span id="weston_compositor_destroy__weston_compositorP"></span><span class="target" id="group__compositor_1ga4f29f61ed5f73015798a14bdabb73dcc"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_destroy</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">compositor</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv425weston_compositor_destroyP17weston_compositor" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Destroys the compositor. </p>
+<p>This function cleans up the compositor state and then destroys it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>compositor</strong> – The compositor to be destroyed. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv422weston_compositor_exitP17weston_compositor">
+<span id="_CPPv322weston_compositor_exitP17weston_compositor"></span><span id="_CPPv222weston_compositor_exitP17weston_compositor"></span><span id="weston_compositor_exit__weston_compositorP"></span><span class="target" id="group__compositor_1gaf4e53253ff94f741ee4a04e7e52e302f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_exit</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">compositor</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422weston_compositor_exitP17weston_compositor" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Instruct the compositor to exit. </p>
+<p>This functions does not directly destroy the compositor object, it merely command it to start the tear down process. It is not guaranteed that the tear down will happen immediately.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>compositor</strong> – The compositor to tear down. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv431weston_compositor_get_user_dataP17weston_compositor">
+<span id="_CPPv331weston_compositor_get_user_dataP17weston_compositor"></span><span id="_CPPv231weston_compositor_get_user_dataP17weston_compositor"></span><span id="weston_compositor_get_user_data__weston_compositorP"></span><span class="target" id="group__compositor_1gaaecdc50a0ea2aebbf36a22db50e62385"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_get_user_data</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">compositor</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv431weston_compositor_get_user_dataP17weston_compositor" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return the user data stored in the compositor. </p>
+<p>This function returns the user data pointer set with user_data parameter to the <a class="reference internal" href="#group__compositor_1ga081445a62197fac7bcbeeab449261373"><span class="std std-ref">weston_compositor_create</span></a> function. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv430weston_compositor_load_backendP17weston_compositor25weston_compositor_backendP21weston_backend_config">
+<span id="_CPPv330weston_compositor_load_backendP17weston_compositor25weston_compositor_backendP21weston_backend_config"></span><span id="_CPPv230weston_compositor_load_backendP17weston_compositor25weston_compositor_backendP21weston_backend_config"></span><span id="weston_compositor_load_backend__weston_compositorP.weston_compositor_backend.weston_backend_configP"></span><span class="target" id="group__compositor_1ga14405f588f9880d19e0764af6243e5ef"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_load_backend</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">compositor</span></span>, <span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="n"><span class="pre">weston_compositor_backend</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">backend</span></span>, <span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">weston_backend_config</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">config_base</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv430weston_compositor_load_backendP17weston_compositor25weston_compositor_backendP21weston_backend_config" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Load a backend into a <a class="reference internal" href="#structweston__compositor"><span class="std std-ref">weston_compositor</span></a>. </p>
+<p>A backend must be loaded to make a <a class="reference internal" href="#structweston__compositor"><span class="std std-ref">weston_compositor</span></a> work. A backend provides input and output capabilities, and determines the renderer to use.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>compositor</strong> – A compositor that has not had a backend loaded yet. </p></li>
+<li><p><strong>backend</strong> – Name of the backend file. </p></li>
+<li><p><strong>config_base</strong> – A pointer to a backend-specific configuration structure’s ‘base’ member.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>0 on success, or -1 on error. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv431weston_compositor_load_xwaylandP17weston_compositor">
+<span id="_CPPv331weston_compositor_load_xwaylandP17weston_compositor"></span><span id="_CPPv231weston_compositor_load_xwaylandP17weston_compositor"></span><span id="weston_compositor_load_xwayland__weston_compositorP"></span><span class="target" id="group__compositor_1gac6e898461759aedc521674d927c4f433"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_load_xwayland</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">compositor</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv431weston_compositor_load_xwaylandP17weston_compositor" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>weston_compositor_load_xwayland </p>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv417weston_compositor">
+<span id="_CPPv317weston_compositor"></span><span id="_CPPv217weston_compositor"></span><span id="weston_compositor"></span><span class="target" id="structweston__compositor"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor</span></span></span><a class="headerlink" href="#_CPPv417weston_compositor" title="Permalink to this definition">¶</a><br /></dt>
+<dd><em>#include &lt;libweston.h&gt;</em><p>Main object, container-like structure which aggregates all other objects. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor31weston_compositor_add_log_scopeEP17weston_compositorPKcPKc19weston_log_scope_cb19weston_log_scope_cbPv">
+<span id="_CPPv3N17weston_compositor31weston_compositor_add_log_scopeEP17weston_compositorPKcPKc19weston_log_scope_cb19weston_log_scope_cbPv"></span><span id="_CPPv2N17weston_compositor31weston_compositor_add_log_scopeEP17weston_compositorPKcPKc19weston_log_scope_cb19weston_log_scope_cbPv"></span><span id="weston_compositor::weston_compositor_add_log_scope__weston_compositorP.cCP.cCP.weston_log_scope_cb.weston_log_scope_cb.voidP"></span><span class="target" id="structweston__compositor_1ae4682c6463d20cedae4215dff64d91c7"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="log.html#_CPPv416weston_log_scope" title="weston_log_scope"><span class="n"><span class="pre">weston_log_scope</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">weston_compositor_add_log_scope</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">compositor</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">description</span></span>, <span class="n"><span class="pre">weston_log_scope_cb</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">new_subscription</span></span>, <span class="n"><span class="pre">weston_log_scope_cb</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">destroy_subscription</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">user_data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17weston_compositor31weston_compositor_add_log_scopeEP17weston_compositorPKcPKc19weston_log_scope_cb19weston_log_scope_cbPv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Register a new stream name, creating a log scope. </p>
+<p>
+This function works like <a class="reference internal" href="log.html#structweston__log__scope_1aacf51678148a4c087e78a87816cc36f3"><span class="std std-ref">weston_log_ctx_add_log_scope()</span></a>, but the log scope created is linked to the log context of <code class="docutils literal notranslate"><span class="pre">compositor</span></code>.</p>
+<p><dl class="simple">
+<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="log.html#structweston__log__scope_1aacf51678148a4c087e78a87816cc36f3"><span class="std std-ref">weston_log_ctx_add_log_scope</span></a> </p>
+</dd>
+</dl>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>compositor</strong> – The compositor that contains the log context where the log scope will be linked. </p></li>
+<li><p><strong>name</strong> – The debug stream/scope name; must not be NULL. </p></li>
+<li><p><strong>description</strong> – The log scope description for humans; must not be NULL. </p></li>
+<li><p><strong>new_subscription</strong> – Optional callback when a client subscribes to this scope. </p></li>
+<li><p><strong>destroy_subscription</strong> – Optional callback when a client destroys the subscription. </p></li>
+<li><p><strong>user_data</strong> – Optional user data pointer for the callback. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A valid pointer on success, NULL on failure.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor14destroy_signalE">
+<span id="_CPPv3N17weston_compositor14destroy_signalE"></span><span id="_CPPv2N17weston_compositor14destroy_signalE"></span><span id="weston_compositor::destroy_signal__wl_signal"></span><span class="target" id="structweston__compositor_1a2c143f1cc8d4f174db0fb3ef76a03d20"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_signal</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">destroy_signal</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor14destroy_signalE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor10wl_displayE">
+<span id="_CPPv3N17weston_compositor10wl_displayE"></span><span id="_CPPv2N17weston_compositor10wl_displayE"></span><span id="weston_compositor::wl_display__wl_displayP"></span><span class="target" id="structweston__compositor_1a2ad81ce6f58ba42026cd6d86d5f88c8b"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N17weston_compositor10wl_displayE" title="weston_compositor::wl_display"><span class="n"><span class="pre">wl_display</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">wl_display</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor10wl_displayE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor8xwaylandE">
+<span id="_CPPv3N17weston_compositor8xwaylandE"></span><span id="_CPPv2N17weston_compositor8xwaylandE"></span><span id="weston_compositor::xwayland__weston_desktop_xwaylandP"></span><span class="target" id="structweston__compositor_1af41ffc09664fe0648be001cab87934d3"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">weston_desktop_xwayland</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">xwayland</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor8xwaylandE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor18xwayland_interfaceE">
+<span id="_CPPv3N17weston_compositor18xwayland_interfaceE"></span><span id="_CPPv2N17weston_compositor18xwayland_interfaceE"></span><span id="weston_compositor::xwayland_interface__weston_desktop_xwayland_interfaceCP"></span><span class="target" id="structweston__compositor_1a209b54489bb78aca659015cc51b29c43"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">weston_desktop_xwayland_interface</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">xwayland_interface</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor18xwayland_interfaceE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor21create_surface_signalE">
+<span id="_CPPv3N17weston_compositor21create_surface_signalE"></span><span id="_CPPv2N17weston_compositor21create_surface_signalE"></span><span id="weston_compositor::create_surface_signal__wl_signal"></span><span class="target" id="structweston__compositor_1af145ea36a816ec78391cef574c216aa0"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_signal</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">create_surface_signal</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor21create_surface_signalE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor15activate_signalE">
+<span id="_CPPv3N17weston_compositor15activate_signalE"></span><span id="_CPPv2N17weston_compositor15activate_signalE"></span><span id="weston_compositor::activate_signal__wl_signal"></span><span class="target" id="structweston__compositor_1a952d2d5dad528b120372c5cd95e46dad"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_signal</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">activate_signal</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor15activate_signalE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor16transform_signalE">
+<span id="_CPPv3N17weston_compositor16transform_signalE"></span><span id="_CPPv2N17weston_compositor16transform_signalE"></span><span id="weston_compositor::transform_signal__wl_signal"></span><span class="target" id="structweston__compositor_1a827dae6ce67aec219d500428b1eddaf3"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_signal</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">transform_signal</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor16transform_signalE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor11kill_signalE">
+<span id="_CPPv3N17weston_compositor11kill_signalE"></span><span id="_CPPv2N17weston_compositor11kill_signalE"></span><span id="weston_compositor::kill_signal__wl_signal"></span><span class="target" id="structweston__compositor_1a798aed078c7671946fa4c6a5e0ecc111"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_signal</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kill_signal</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor11kill_signalE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor11idle_signalE">
+<span id="_CPPv3N17weston_compositor11idle_signalE"></span><span id="_CPPv2N17weston_compositor11idle_signalE"></span><span id="weston_compositor::idle_signal__wl_signal"></span><span class="target" id="structweston__compositor_1ad0a0e9d1055742e7ddb9d35007e77a6a"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_signal</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">idle_signal</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor11idle_signalE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor11wake_signalE">
+<span id="_CPPv3N17weston_compositor11wake_signalE"></span><span id="_CPPv2N17weston_compositor11wake_signalE"></span><span id="weston_compositor::wake_signal__wl_signal"></span><span class="target" id="structweston__compositor_1a56bf6876b62efff1f6de4247973e4147"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_signal</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">wake_signal</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor11wake_signalE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor23show_input_panel_signalE">
+<span id="_CPPv3N17weston_compositor23show_input_panel_signalE"></span><span id="_CPPv2N17weston_compositor23show_input_panel_signalE"></span><span id="weston_compositor::show_input_panel_signal__wl_signal"></span><span class="target" id="structweston__compositor_1a414a46edb9a0238a0f8d390cb69a3509"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_signal</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">show_input_panel_signal</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor23show_input_panel_signalE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor23hide_input_panel_signalE">
+<span id="_CPPv3N17weston_compositor23hide_input_panel_signalE"></span><span id="_CPPv2N17weston_compositor23hide_input_panel_signalE"></span><span id="weston_compositor::hide_input_panel_signal__wl_signal"></span><span class="target" id="structweston__compositor_1af55878b6f2a64f3d2f40826151088b62"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_signal</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hide_input_panel_signal</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor23hide_input_panel_signalE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor25update_input_panel_signalE">
+<span id="_CPPv3N17weston_compositor25update_input_panel_signalE"></span><span id="_CPPv2N17weston_compositor25update_input_panel_signalE"></span><span id="weston_compositor::update_input_panel_signal__wl_signal"></span><span class="target" id="structweston__compositor_1aa84ea0c71118fc80e0422bbc539bdec0"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_signal</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">update_input_panel_signal</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor25update_input_panel_signalE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor19seat_created_signalE">
+<span id="_CPPv3N17weston_compositor19seat_created_signalE"></span><span id="_CPPv2N17weston_compositor19seat_created_signalE"></span><span id="weston_compositor::seat_created_signal__wl_signal"></span><span class="target" id="structweston__compositor_1a4c1ce59b05fd209548f06c0dcf7c14e2"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_signal</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">seat_created_signal</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor19seat_created_signalE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor21output_created_signalE">
+<span id="_CPPv3N17weston_compositor21output_created_signalE"></span><span id="_CPPv2N17weston_compositor21output_created_signalE"></span><span id="weston_compositor::output_created_signal__wl_signal"></span><span class="target" id="structweston__compositor_1a02dee1be3d004bb90e665aebef5bae5a"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_signal</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">output_created_signal</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor21output_created_signalE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor23output_destroyed_signalE">
+<span id="_CPPv3N17weston_compositor23output_destroyed_signalE"></span><span id="_CPPv2N17weston_compositor23output_destroyed_signalE"></span><span id="weston_compositor::output_destroyed_signal__wl_signal"></span><span class="target" id="structweston__compositor_1ab1912e258bec64ce232b91caa3e54363"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_signal</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">output_destroyed_signal</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor23output_destroyed_signalE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor19output_moved_signalE">
+<span id="_CPPv3N17weston_compositor19output_moved_signalE"></span><span id="_CPPv2N17weston_compositor19output_moved_signalE"></span><span id="weston_compositor::output_moved_signal__wl_signal"></span><span class="target" id="structweston__compositor_1ace8526d2c738b726c11666b3ef137973"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_signal</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">output_moved_signal</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor19output_moved_signalE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor21output_resized_signalE">
+<span id="_CPPv3N17weston_compositor21output_resized_signalE"></span><span id="_CPPv2N17weston_compositor21output_resized_signalE"></span><span id="weston_compositor::output_resized_signal__wl_signal"></span><span class="target" id="structweston__compositor_1a0d4092bb81afcabc46e564b47b197e3a"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_signal</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">output_resized_signal</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor21output_resized_signalE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor27output_heads_changed_signalE">
+<span id="_CPPv3N17weston_compositor27output_heads_changed_signalE"></span><span id="_CPPv2N17weston_compositor27output_heads_changed_signalE"></span><span id="weston_compositor::output_heads_changed_signal__wl_signal"></span><span class="target" id="structweston__compositor_1adc89a6a44aa577d05bddc16bdf44b926"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_signal</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">output_heads_changed_signal</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor27output_heads_changed_signalE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor14session_signalE">
+<span id="_CPPv3N17weston_compositor14session_signalE"></span><span id="_CPPv2N17weston_compositor14session_signalE"></span><span id="weston_compositor::session_signal__wl_signal"></span><span class="target" id="structweston__compositor_1a6e62e13d73c89d00ef3c7788ea4ddd83"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_signal</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">session_signal</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor14session_signalE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor14session_activeE">
+<span id="_CPPv3N17weston_compositor14session_activeE"></span><span id="_CPPv2N17weston_compositor14session_activeE"></span><span id="weston_compositor::session_active__b"></span><span class="target" id="structweston__compositor_1a1261d536f85647f94598c6892e6b5b9f"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">session_active</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor14session_activeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor10fade_layerE">
+<span id="_CPPv3N17weston_compositor10fade_layerE"></span><span id="_CPPv2N17weston_compositor10fade_layerE"></span><span id="weston_compositor::fade_layer__weston_layer"></span><span class="target" id="structweston__compositor_1a4726d887fd6b31d6c71f76275715c286"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">weston_layer</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fade_layer</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor10fade_layerE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor12cursor_layerE">
+<span id="_CPPv3N17weston_compositor12cursor_layerE"></span><span id="_CPPv2N17weston_compositor12cursor_layerE"></span><span id="weston_compositor::cursor_layer__weston_layer"></span><span class="target" id="structweston__compositor_1a232bc7c0608ea7161cb5d8cfca6e9a82"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">weston_layer</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cursor_layer</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor12cursor_layerE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor19pending_output_listE">
+<span id="_CPPv3N17weston_compositor19pending_output_listE"></span><span id="_CPPv2N17weston_compositor19pending_output_listE"></span><span id="weston_compositor::pending_output_list__wl_list"></span><span class="target" id="structweston__compositor_1aa4d5b4d134294d69e1ed01d24df78b4e"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_list</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pending_output_list</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor19pending_output_listE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor11output_listE">
+<span id="_CPPv3N17weston_compositor11output_listE"></span><span id="_CPPv2N17weston_compositor11output_listE"></span><span id="weston_compositor::output_list__wl_list"></span><span class="target" id="structweston__compositor_1a581453fe2554be5647e5ecae8f9b99ba"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_list</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">output_list</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor11output_listE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor9head_listE">
+<span id="_CPPv3N17weston_compositor9head_listE"></span><span id="_CPPv2N17weston_compositor9head_listE"></span><span id="weston_compositor::head_list__wl_list"></span><span class="target" id="structweston__compositor_1a154cc4c320f1d35ecb9886f2b68b6e27"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_list</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">head_list</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor9head_listE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor9seat_listE">
+<span id="_CPPv3N17weston_compositor9seat_listE"></span><span id="_CPPv2N17weston_compositor9seat_listE"></span><span id="weston_compositor::seat_list__wl_list"></span><span class="target" id="structweston__compositor_1ab4c35ec45448163579d52c41d7df701b"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_list</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">seat_list</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor9seat_listE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor10layer_listE">
+<span id="_CPPv3N17weston_compositor10layer_listE"></span><span id="_CPPv2N17weston_compositor10layer_listE"></span><span id="weston_compositor::layer_list__wl_list"></span><span class="target" id="structweston__compositor_1a9d3d923255aac874249ee6208d012a1c"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_list</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">layer_list</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor10layer_listE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor9view_listE">
+<span id="_CPPv3N17weston_compositor9view_listE"></span><span id="_CPPv2N17weston_compositor9view_listE"></span><span id="weston_compositor::view_list__wl_list"></span><span class="target" id="structweston__compositor_1a32ac5a7b9ccbac09ec941681d12cce44"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_list</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">view_list</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor9view_listE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor10plane_listE">
+<span id="_CPPv3N17weston_compositor10plane_listE"></span><span id="_CPPv2N17weston_compositor10plane_listE"></span><span id="weston_compositor::plane_list__wl_list"></span><span class="target" id="structweston__compositor_1a23c931ea0ccaf279dbbc8676c8d75d50"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_list</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">plane_list</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor10plane_listE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor16key_binding_listE">
+<span id="_CPPv3N17weston_compositor16key_binding_listE"></span><span id="_CPPv2N17weston_compositor16key_binding_listE"></span><span id="weston_compositor::key_binding_list__wl_list"></span><span class="target" id="structweston__compositor_1aecb5f1570118d8d5be93a9cbfba801a8"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_list</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">key_binding_list</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor16key_binding_listE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor21modifier_binding_listE">
+<span id="_CPPv3N17weston_compositor21modifier_binding_listE"></span><span id="_CPPv2N17weston_compositor21modifier_binding_listE"></span><span id="weston_compositor::modifier_binding_list__wl_list"></span><span class="target" id="structweston__compositor_1ae104a342fa491e915b59b0588f78adb8"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_list</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">modifier_binding_list</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor21modifier_binding_listE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor19button_binding_listE">
+<span id="_CPPv3N17weston_compositor19button_binding_listE"></span><span id="_CPPv2N17weston_compositor19button_binding_listE"></span><span id="weston_compositor::button_binding_list__wl_list"></span><span class="target" id="structweston__compositor_1ac93a122178ceea1b99d8c7c8c37e9831"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_list</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">button_binding_list</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor19button_binding_listE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor18touch_binding_listE">
+<span id="_CPPv3N17weston_compositor18touch_binding_listE"></span><span id="_CPPv2N17weston_compositor18touch_binding_listE"></span><span id="weston_compositor::touch_binding_list__wl_list"></span><span class="target" id="structweston__compositor_1adbb5488a5e90fed2c76ed9b655df48db"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_list</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">touch_binding_list</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor18touch_binding_listE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor17axis_binding_listE">
+<span id="_CPPv3N17weston_compositor17axis_binding_listE"></span><span id="_CPPv2N17weston_compositor17axis_binding_listE"></span><span id="weston_compositor::axis_binding_list__wl_list"></span><span class="target" id="structweston__compositor_1a8ce64080f33197bdc4ef63ba85d5e7c3"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_list</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">axis_binding_list</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor17axis_binding_listE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor18debug_binding_listE">
+<span id="_CPPv3N17weston_compositor18debug_binding_listE"></span><span id="_CPPv2N17weston_compositor18debug_binding_listE"></span><span id="weston_compositor::debug_binding_list__wl_list"></span><span class="target" id="structweston__compositor_1ad5dbb2c4d3f94f4006a8002aa45d7d51"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_list</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">debug_binding_list</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor18debug_binding_listE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor5stateE">
+<span id="_CPPv3N17weston_compositor5stateE"></span><span id="_CPPv2N17weston_compositor5stateE"></span><span id="weston_compositor::state__uint32_t"></span><span class="target" id="structweston__compositor_1a74c7666a27a5435492ec4b2b576177af"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">state</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor5stateE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor11idle_sourceE">
+<span id="_CPPv3N17weston_compositor11idle_sourceE"></span><span id="_CPPv2N17weston_compositor11idle_sourceE"></span><span id="weston_compositor::idle_source__wl_event_sourceP"></span><span class="target" id="structweston__compositor_1ab553646b778cf32b1956852f5b9cdcb4"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_event_source</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">idle_source</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor11idle_sourceE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor12idle_inhibitE">
+<span id="_CPPv3N17weston_compositor12idle_inhibitE"></span><span id="_CPPv2N17weston_compositor12idle_inhibitE"></span><span id="weston_compositor::idle_inhibit__uint32_t"></span><span class="target" id="structweston__compositor_1a5044af245cac705c327f2122805a3469"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">idle_inhibit</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor12idle_inhibitE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor9idle_timeE">
+<span id="_CPPv3N17weston_compositor9idle_timeE"></span><span id="_CPPv2N17weston_compositor9idle_timeE"></span><span id="weston_compositor::idle_time__i"></span><span class="target" id="structweston__compositor_1ab8688167325c7fd781a3725cbf23faaa"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">idle_time</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor9idle_timeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor13repaint_timerE">
+<span id="_CPPv3N17weston_compositor13repaint_timerE"></span><span id="_CPPv2N17weston_compositor13repaint_timerE"></span><span id="weston_compositor::repaint_timer__wl_event_sourceP"></span><span class="target" id="structweston__compositor_1a18bd4b791afdf479323c96c85f5b6750"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_event_source</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">repaint_timer</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor13repaint_timerE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor20default_pointer_grabE">
+<span id="_CPPv3N17weston_compositor20default_pointer_grabE"></span><span id="_CPPv2N17weston_compositor20default_pointer_grabE"></span><span id="weston_compositor::default_pointer_grab__weston_pointer_grab_interfaceCP"></span><span class="target" id="structweston__compositor_1afb8c36f1ea6c3a7b5898771c60127ed9"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">weston_pointer_grab_interface</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">default_pointer_grab</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor20default_pointer_grabE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor13primary_planeE">
+<span id="_CPPv3N17weston_compositor13primary_planeE"></span><span id="_CPPv2N17weston_compositor13primary_planeE"></span><span id="weston_compositor::primary_plane__weston_plane"></span><span class="target" id="structweston__compositor_1acd96fdbda4ef438f5292372ab78535ce"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">weston_plane</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">primary_plane</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor13primary_planeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor12capabilitiesE">
+<span id="_CPPv3N17weston_compositor12capabilitiesE"></span><span id="_CPPv2N17weston_compositor12capabilitiesE"></span><span id="weston_compositor::capabilities__uint32_t"></span><span class="target" id="structweston__compositor_1a5be5c87f03fcdbc3aa7c456ebb96e4aa"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">capabilities</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor12capabilitiesE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor8rendererE">
+<span id="_CPPv3N17weston_compositor8rendererE"></span><span id="_CPPv2N17weston_compositor8rendererE"></span><span id="weston_compositor::renderer__weston_rendererP"></span><span class="target" id="structweston__compositor_1adfa35d8b6ef4bac08ccecbbd37acb81d"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">weston_renderer</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">renderer</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor8rendererE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor11read_formatE">
+<span id="_CPPv3N17weston_compositor11read_formatE"></span><span id="_CPPv2N17weston_compositor11read_formatE"></span><span id="weston_compositor::read_format__pixman_format_code_t"></span><span class="target" id="structweston__compositor_1a974cb74b7d8dd5117a8e98d363d341c3"></span><span class="n"><span class="pre">pixman_format_code_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read_format</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor11read_formatE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor7backendE">
+<span id="_CPPv3N17weston_compositor7backendE"></span><span id="_CPPv2N17weston_compositor7backendE"></span><span id="weston_compositor::backend__weston_backendP"></span><span class="target" id="structweston__compositor_1af5fb998fe634d54b5c0d358c33bc0413"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">weston_backend</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">backend</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor7backendE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor8launcherE">
+<span id="_CPPv3N17weston_compositor8launcherE"></span><span id="_CPPv2N17weston_compositor8launcherE"></span><span id="weston_compositor::launcher__weston_launcherP"></span><span class="target" id="structweston__compositor_1ab1ec453cf4bf3f99467e79acf7591086"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">weston_launcher</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">launcher</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor8launcherE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor15plugin_api_listE">
+<span id="_CPPv3N17weston_compositor15plugin_api_listE"></span><span id="_CPPv2N17weston_compositor15plugin_api_listE"></span><span id="weston_compositor::plugin_api_list__wl_list"></span><span class="target" id="structweston__compositor_1a971594f6ff5050e72c298a17fb88f177"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_list</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">plugin_api_list</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor15plugin_api_listE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor14output_id_poolE">
+<span id="_CPPv3N17weston_compositor14output_id_poolE"></span><span id="_CPPv2N17weston_compositor14output_id_poolE"></span><span id="weston_compositor::output_id_pool__uint32_t"></span><span class="target" id="structweston__compositor_1a5f4e57922615e82919d0d73283425782"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">output_id_pool</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor14output_id_poolE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor9xkb_namesE">
+<span id="_CPPv3N17weston_compositor9xkb_namesE"></span><span id="_CPPv2N17weston_compositor9xkb_namesE"></span><span id="weston_compositor::xkb_names__xkb_rule_names"></span><span class="target" id="structweston__compositor_1a777b8b9257cd31d0e1a66c14b45de824"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">xkb_rule_names</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">xkb_names</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor9xkb_namesE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor11xkb_contextE">
+<span id="_CPPv3N17weston_compositor11xkb_contextE"></span><span id="_CPPv2N17weston_compositor11xkb_contextE"></span><span id="weston_compositor::xkb_context__xkb_contextP"></span><span class="target" id="structweston__compositor_1a7dc311ad4df22872764ddf01e9ac1a27"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N17weston_compositor11xkb_contextE" title="weston_compositor::xkb_context"><span class="n"><span class="pre">xkb_context</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">xkb_context</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor11xkb_contextE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor8xkb_infoE">
+<span id="_CPPv3N17weston_compositor8xkb_infoE"></span><span id="_CPPv2N17weston_compositor8xkb_infoE"></span><span id="weston_compositor::xkb_info__weston_xkb_infoP"></span><span class="target" id="structweston__compositor_1a5393cfe8cf2c54f154478bf2f53e77a9"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">weston_xkb_info</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">xkb_info</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor8xkb_infoE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor14kb_repeat_rateE">
+<span id="_CPPv3N17weston_compositor14kb_repeat_rateE"></span><span id="_CPPv2N17weston_compositor14kb_repeat_rateE"></span><span id="weston_compositor::kb_repeat_rate__int32_t"></span><span class="target" id="structweston__compositor_1a0bdcc28a8f535b9f63f4d31803babd42"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kb_repeat_rate</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor14kb_repeat_rateE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor15kb_repeat_delayE">
+<span id="_CPPv3N17weston_compositor15kb_repeat_delayE"></span><span id="_CPPv2N17weston_compositor15kb_repeat_delayE"></span><span id="weston_compositor::kb_repeat_delay__int32_t"></span><span class="target" id="structweston__compositor_1a5501dff49a64b01b35db831d20dbf24b"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kb_repeat_delay</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor15kb_repeat_delayE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor12vt_switchingE">
+<span id="_CPPv3N17weston_compositor12vt_switchingE"></span><span id="_CPPv2N17weston_compositor12vt_switchingE"></span><span id="weston_compositor::vt_switching__b"></span><span class="target" id="structweston__compositor_1aea80aab28c8cd947b1444ca00cea353a"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vt_switching</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor12vt_switchingE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor18presentation_clockE">
+<span id="_CPPv3N17weston_compositor18presentation_clockE"></span><span id="_CPPv2N17weston_compositor18presentation_clockE"></span><span id="weston_compositor::presentation_clock__clockid_t"></span><span class="target" id="structweston__compositor_1a1c71e925911663d02d441842a5793e91"></span><span class="n"><span class="pre">clockid_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">presentation_clock</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor18presentation_clockE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor12repaint_msecE">
+<span id="_CPPv3N17weston_compositor12repaint_msecE"></span><span id="_CPPv2N17weston_compositor12repaint_msecE"></span><span id="weston_compositor::repaint_msec__int32_t"></span><span class="target" id="structweston__compositor_1aebdb50c57184889bb82a75433ec5bb74"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">repaint_msec</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor12repaint_msecE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor18last_repaint_startE">
+<span id="_CPPv3N17weston_compositor18last_repaint_startE"></span><span id="_CPPv2N17weston_compositor18last_repaint_startE"></span><span id="weston_compositor::last_repaint_start__timespec"></span><span class="target" id="structweston__compositor_1afb6d3bf67f2a115cc9e0db0786c8392a"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">timespec</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">last_repaint_start</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor18last_repaint_startE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor15activate_serialE">
+<span id="_CPPv3N17weston_compositor15activate_serialE"></span><span id="_CPPv2N17weston_compositor15activate_serialE"></span><span id="weston_compositor::activate_serial__unsigned-i"></span><span class="target" id="structweston__compositor_1ae4926a7915767362658139b652fe0237"></span><span class="kt"><span class="pre">unsigned</span> <span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">activate_serial</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor15activate_serialE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor19pointer_constraintsE">
+<span id="_CPPv3N17weston_compositor19pointer_constraintsE"></span><span id="_CPPv2N17weston_compositor19pointer_constraintsE"></span><span id="weston_compositor::pointer_constraints__wl_globalP"></span><span class="target" id="structweston__compositor_1abbe2803202d4ab7f0e51681d8b820ce5"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_global</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">pointer_constraints</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor19pointer_constraintsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor9exit_codeE">
+<span id="_CPPv3N17weston_compositor9exit_codeE"></span><span id="_CPPv2N17weston_compositor9exit_codeE"></span><span id="weston_compositor::exit_code__i"></span><span class="target" id="structweston__compositor_1a1fa6ab0d71bc8d7d605ac607faa9552f"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">exit_code</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor9exit_codeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor9user_dataE">
+<span id="_CPPv3N17weston_compositor9user_dataE"></span><span id="_CPPv2N17weston_compositor9user_dataE"></span><span id="weston_compositor::user_data__voidP"></span><span class="target" id="structweston__compositor_1a21f2b4d090a79fff8da494ee2774cef6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">user_data</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor9user_dataE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor4exitE">
+<span id="_CPPv3N17weston_compositor4exitE"></span><span id="_CPPv2N17weston_compositor4exitE"></span><span class="target" id="structweston__compositor_1ae3996cfb4ee9b4cf1947c09156e94325"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">exit</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N17weston_compositor4exitE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor13require_inputE">
+<span id="_CPPv3N17weston_compositor13require_inputE"></span><span id="_CPPv2N17weston_compositor13require_inputE"></span><span id="weston_compositor::require_input__b"></span><span class="target" id="structweston__compositor_1a267a0cc8636e211d81de78a41c12cc28"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">require_input</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor13require_inputE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor9test_dataE">
+<span id="_CPPv3N17weston_compositor9test_dataE"></span><span id="_CPPv2N17weston_compositor9test_dataE"></span><span id="weston_compositor::test_data__weston_testsuite_data"></span><span class="target" id="structweston__compositor_1a90cacc8c057f29e53566637f6dfa3fad"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="../test-suite-api.html#_CPPv421weston_testsuite_data" title="weston_testsuite_data"><span class="n"><span class="pre">weston_testsuite_data</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">test_data</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor9test_dataE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor20heads_changed_signalE">
+<span id="_CPPv3N17weston_compositor20heads_changed_signalE"></span><span id="_CPPv2N17weston_compositor20heads_changed_signalE"></span><span id="weston_compositor::heads_changed_signal__wl_signal"></span><span class="target" id="structweston__compositor_1a09a2bfe7cc2442ae9afe49fe4819a8c6"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_signal</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">heads_changed_signal</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor20heads_changed_signalE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor20heads_changed_sourceE">
+<span id="_CPPv3N17weston_compositor20heads_changed_sourceE"></span><span id="_CPPv2N17weston_compositor20heads_changed_sourceE"></span><span id="weston_compositor::heads_changed_source__wl_event_sourceP"></span><span class="target" id="structweston__compositor_1ac221c8e240a724149b758b4aa4a357b4"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_event_source</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">heads_changed_source</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor20heads_changed_sourceE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor10touch_modeE">
+<span id="_CPPv3N17weston_compositor10touch_modeE"></span><span id="_CPPv2N17weston_compositor10touch_modeE"></span><span id="weston_compositor::touch_mode__weston_touch_mode"></span><span class="target" id="structweston__compositor_1a9568df63aecb8047457297dc0ebbe22f"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="n"><span class="pre">weston_touch_mode</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">touch_mode</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor10touch_modeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor17touch_calibrationE">
+<span id="_CPPv3N17weston_compositor17touch_calibrationE"></span><span id="_CPPv2N17weston_compositor17touch_calibrationE"></span><span id="weston_compositor::touch_calibration__wl_globalP"></span><span class="target" id="structweston__compositor_1a811158fa9c3d80b448f2d62d6514f63a"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_global</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">touch_calibration</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor17touch_calibrationE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor22touch_calibration_saveE">
+<span id="_CPPv3N17weston_compositor22touch_calibration_saveE"></span><span id="_CPPv2N17weston_compositor22touch_calibration_saveE"></span><span id="weston_compositor::touch_calibration_save__weston_touch_calibration_save_func"></span><span class="target" id="structweston__compositor_1a53dcb228aae6ec3e25364b7e5fce9ac9"></span><span class="n"><span class="pre">weston_touch_calibration_save_func</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">touch_calibration_save</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor22touch_calibration_saveE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor16calibrator_layerE">
+<span id="_CPPv3N17weston_compositor16calibrator_layerE"></span><span id="_CPPv2N17weston_compositor16calibrator_layerE"></span><span id="weston_compositor::calibrator_layer__weston_layer"></span><span class="target" id="structweston__compositor_1a920db960c53baadaaa9f8e6a231541c3"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">weston_layer</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">calibrator_layer</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor16calibrator_layerE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor16touch_calibratorE">
+<span id="_CPPv3N17weston_compositor16touch_calibratorE"></span><span id="_CPPv2N17weston_compositor16touch_calibratorE"></span><span id="weston_compositor::touch_calibrator__weston_touch_calibratorP"></span><span class="target" id="structweston__compositor_1acfbeb96c7859596d757822ca8d3cad73"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">weston_touch_calibrator</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">touch_calibrator</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor16touch_calibratorE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor14weston_log_ctxE">
+<span id="_CPPv3N17weston_compositor14weston_log_ctxE"></span><span id="_CPPv2N17weston_compositor14weston_log_ctxE"></span><span id="weston_compositor::weston_log_ctx__weston_log_contextP"></span><span class="target" id="structweston__compositor_1aa3f5874da7035c9d98b75a88a68fa4ca"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="log.html#_CPPv418weston_log_context" title="weston_log_context"><span class="n"><span class="pre">weston_log_context</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">weston_log_ctx</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor14weston_log_ctxE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor11debug_sceneE">
+<span id="_CPPv3N17weston_compositor11debug_sceneE"></span><span id="_CPPv2N17weston_compositor11debug_sceneE"></span><span id="weston_compositor::debug_scene__weston_log_scopeP"></span><span class="target" id="structweston__compositor_1a6487d84ea5397f7a97e5bbd5b2a36ee8"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="log.html#_CPPv416weston_log_scope" title="weston_log_scope"><span class="n"><span class="pre">weston_log_scope</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">debug_scene</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor11debug_sceneE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor8timelineE">
+<span id="_CPPv3N17weston_compositor8timelineE"></span><span id="_CPPv2N17weston_compositor8timelineE"></span><span id="weston_compositor::timeline__weston_log_scopeP"></span><span class="target" id="structweston__compositor_1adfcfd084e55976891e8a742c3c2490af"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="log.html#_CPPv416weston_log_scope" title="weston_log_scope"><span class="n"><span class="pre">weston_log_scope</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">timeline</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor8timelineE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17weston_compositor18content_protectionE">
+<span id="_CPPv3N17weston_compositor18content_protectionE"></span><span id="_CPPv2N17weston_compositor18content_protectionE"></span><span id="weston_compositor::content_protection__content_protectionP"></span><span class="target" id="structweston__compositor_1a42ad71eeccc5497d3667cca8e38f39f8"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N17weston_compositor18content_protectionE" title="weston_compositor::content_protection"><span class="n"><span class="pre">content_protection</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">content_protection</span></span></span><a class="headerlink" href="#_CPPv4N17weston_compositor18content_protectionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="output-management.html" class="btn btn-neutral float-right" title="Output management" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../libweston.html" class="btn btn-neutral float-left" title="Libweston" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Weston community.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

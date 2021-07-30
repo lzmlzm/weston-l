@@ -1,0 +1,307 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="pixman-renderer_8h" kind="file" language="C++">
+    <compoundname>pixman-renderer.h</compoundname>
+    <includes local="yes">config.h</includes>
+    <includes refid="libweston_8h" local="no">libweston/libweston.h</includes>
+    <includes refid="backend_8h" local="yes">backend.h</includes>
+    <includes refid="libweston-internal_8h" local="yes">libweston-internal.h</includes>
+    <includedby refid="drm-gbm_8c" local="yes">/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c</includedby>
+    <includedby refid="drm_8c" local="yes">/home/lzm/Wayland/weston/libweston/backend-drm/drm.c</includedby>
+    <includedby refid="fbdev_8c" local="yes">/home/lzm/Wayland/weston/libweston/backend-fbdev/fbdev.c</includedby>
+    <includedby refid="headless_8c" local="yes">/home/lzm/Wayland/weston/libweston/backend-headless/headless.c</includedby>
+    <includedby refid="rdp_8c" local="yes">/home/lzm/Wayland/weston/libweston/backend-rdp/rdp.c</includedby>
+    <includedby refid="wayland_8c" local="yes">/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c</includedby>
+    <includedby refid="x11_8c" local="yes">/home/lzm/Wayland/weston/libweston/backend-x11/x11.c</includedby>
+    <includedby refid="pixman-renderer_8c" local="yes">/home/lzm/Wayland/weston/libweston/pixman-renderer.c</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="3">
+        <label>libweston/libweston.h</label>
+        <link refid="libweston_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="12">
+        <label>stdlib.h</label>
+      </node>
+      <node id="9">
+        <label>wayland-server.h</label>
+      </node>
+      <node id="8">
+        <label>xkbcommon/xkbcommon.h</label>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/libweston/pixman-renderer.h</label>
+        <link refid="pixman-renderer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>libweston/zalloc.h</label>
+        <link refid="zalloc_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>time.h</label>
+      </node>
+      <node id="10">
+        <label>libweston/matrix.h</label>
+        <link refid="matrix_8h"/>
+      </node>
+      <node id="7">
+        <label>pixman.h</label>
+      </node>
+      <node id="14">
+        <label>libweston-internal.h</label>
+        <link refid="libweston-internal_8h"/>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+      </node>
+      <node id="13">
+        <label>backend.h</label>
+        <link refid="backend_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/drm.c</label>
+        <link refid="drm_8c"/>
+      </node>
+      <node id="2">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c</label>
+        <link refid="drm-gbm_8c"/>
+      </node>
+      <node id="5">
+        <label>/home/lzm/Wayland/weston/libweston/backend-headless/headless.c</label>
+        <link refid="headless_8c"/>
+      </node>
+      <node id="6">
+        <label>/home/lzm/Wayland/weston/libweston/backend-rdp/rdp.c</label>
+        <link refid="rdp_8c"/>
+      </node>
+      <node id="8">
+        <label>/home/lzm/Wayland/weston/libweston/backend-x11/x11.c</label>
+        <link refid="x11_8c"/>
+      </node>
+      <node id="4">
+        <label>/home/lzm/Wayland/weston/libweston/backend-fbdev/fbdev.c</label>
+        <link refid="fbdev_8c"/>
+      </node>
+      <node id="9">
+        <label>/home/lzm/Wayland/weston/libweston/pixman-renderer.c</label>
+        <link refid="pixman-renderer_8c"/>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/libweston/pixman-renderer.h</label>
+        <link refid="pixman-renderer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c</label>
+        <link refid="wayland_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structpixman__renderer__output__options" prot="public">pixman_renderer_output_options</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="pixman-renderer_8h_1af2ecf3d1472350eac41077273643e615" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int pixman_renderer_init</definition>
+        <argsstring>(struct weston_compositor *ec)</argsstring>
+        <name>pixman_renderer_init</name>
+        <param>
+          <type>struct <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> *</type>
+          <declname>ec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixman-renderer.h" line="33" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/pixman-renderer.c" bodystart="853" bodyend="886" declfile="/home/lzm/Wayland/weston/libweston/pixman-renderer.h" declline="33" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pixman-renderer_8h_1a5e7faf9412b78605c77cbdda5825e086" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int pixman_renderer_output_create</definition>
+        <argsstring>(struct weston_output *output, const struct pixman_renderer_output_options *options)</argsstring>
+        <name>pixman_renderer_output_create</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structpixman__renderer__output__options" kindref="compound">pixman_renderer_output_options</ref> *</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixman-renderer.h" line="41" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/pixman-renderer.c" bodystart="914" bodyend="950" declfile="/home/lzm/Wayland/weston/libweston/pixman-renderer.h" declline="41" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pixman-renderer_8h_1a64b4a12d5fcd70eccdd0cd0e76f25ead" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void pixman_renderer_output_set_buffer</definition>
+        <argsstring>(struct weston_output *output, pixman_image_t *buffer)</argsstring>
+        <name>pixman_renderer_output_set_buffer</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>pixman_image_t *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixman-renderer.h" line="45" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/pixman-renderer.c" bodystart="889" bodyend="902" declfile="/home/lzm/Wayland/weston/libweston/pixman-renderer.h" declline="45" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pixman-renderer_8h_1a66d47450e03d5001ac3e413f2a301bf5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void pixman_renderer_output_set_hw_extra_damage</definition>
+        <argsstring>(struct weston_output *output, pixman_region32_t *extra_damage)</argsstring>
+        <name>pixman_renderer_output_set_hw_extra_damage</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>pixman_region32_t *</type>
+          <declname>extra_damage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixman-renderer.h" line="49" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/pixman-renderer.c" bodystart="905" bodyend="911" declfile="/home/lzm/Wayland/weston/libweston/pixman-renderer.h" declline="49" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pixman-renderer_8h_1a5cb15b33923a1033c69fd1415ed5608e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void pixman_renderer_output_destroy</definition>
+        <argsstring>(struct weston_output *output)</argsstring>
+        <name>pixman_renderer_output_destroy</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixman-renderer.h" line="53" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/pixman-renderer.c" bodystart="953" bodyend="970" declfile="/home/lzm/Wayland/weston/libweston/pixman-renderer.h" declline="53" declcolumn="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2013<sp/>Vasily<sp/>Khoruzhick<sp/>&lt;anarsoul@gmail.com&gt;</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>(including<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>next<sp/>paragraph)<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>NONINFRINGEMENT.<sp/><sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="libweston_8h" kindref="compound">libweston/libweston.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="backend_8h" kindref="compound">backend.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="libweston-internal_8h" kindref="compound">libweston-internal.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><ref refid="pixman-renderer_8h_1af2ecf3d1472350eac41077273643e615" kindref="member">pixman_renderer_init</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__compositor" kindref="compound">weston_compositor</ref><sp/>*ec);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="structpixman__renderer__output__options" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpixman__renderer__output__options" kindref="compound">pixman_renderer_output_options</ref><sp/>{</highlight></codeline>
+<codeline lineno="37" refid="structpixman__renderer__output__options_1ad88a2cca5c4b06a2565aa49ed1991124" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structpixman__renderer__output__options_1ad88a2cca5c4b06a2565aa49ed1991124" kindref="member">use_shadow</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><ref refid="pixman-renderer_8h_1a5e7faf9412b78605c77cbdda5825e086" kindref="member">pixman_renderer_output_create</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__output" kindref="compound">weston_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref>,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpixman__renderer__output__options" kindref="compound">pixman_renderer_output_options</ref><sp/>*options);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><ref refid="pixman-renderer_8h_1a64b4a12d5fcd70eccdd0cd0e76f25ead" kindref="member">pixman_renderer_output_set_buffer</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__output" kindref="compound">weston_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref>,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pixman_image_t<sp/>*<ref refid="structbuffer" kindref="compound">buffer</ref>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><ref refid="pixman-renderer_8h_1a66d47450e03d5001ac3e413f2a301bf5" kindref="member">pixman_renderer_output_set_hw_extra_damage</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__output" kindref="compound">weston_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref>,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pixman_region32_t<sp/>*extra_damage);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><ref refid="pixman-renderer_8h_1a5cb15b33923a1033c69fd1415ed5608e" kindref="member">pixman_renderer_output_destroy</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__output" kindref="compound">weston_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref>);</highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/libweston/pixman-renderer.h"/>
+  </compounddef>
+</doxygen>

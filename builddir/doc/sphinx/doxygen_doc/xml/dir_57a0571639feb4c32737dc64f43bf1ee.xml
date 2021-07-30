@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_57a0571639feb4c32737dc64f43bf1ee" kind="dir">
+    <compoundname>/home/lzm/Wayland/weston/libweston/renderer-gl</compoundname>
+    <innerfile refid="egl-glue_8c">egl-glue.c</innerfile>
+    <innerfile refid="gl-renderer-internal_8h">gl-renderer-internal.h</innerfile>
+    <innerfile refid="gl-renderer_8c">gl-renderer.c</innerfile>
+    <innerfile refid="gl-renderer_8h">gl-renderer.h</innerfile>
+    <innerfile refid="gl-shaders_8c">gl-shaders.c</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/"/>
+  </compounddef>
+</doxygen>

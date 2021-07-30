@@ -1,0 +1,239 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structkeyboard" kind="struct" language="C++" prot="public">
+    <compoundname>keyboard</compoundname>
+    <includes refid="weston-test-client-helper_8h" local="no">weston-test-client-helper.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structkeyboard_1af83de2f2964ebd01c9017622785bbc3d" prot="public" static="no" mutable="no">
+        <type>struct wl_keyboard *</type>
+        <definition>struct wl_keyboard* keyboard::wl_keyboard</definition>
+        <argsstring></argsstring>
+        <name>wl_keyboard</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="113" column="18" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structkeyboard_1a06aad4b35ab08a52de3e894e107f7f81" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structsurface" kindref="compound">surface</ref> *</type>
+        <definition>struct surface* keyboard::focus</definition>
+        <argsstring></argsstring>
+        <name>focus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="114" column="14" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structkeyboard_1a321b7e51d52f6353dd1a79db007ce680" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t keyboard::key</definition>
+        <argsstring></argsstring>
+        <name>key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="115" column="10" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structkeyboard_1ad91e5a995bc6d923ea08bee05aac51b6" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t keyboard::state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="116" column="10" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structkeyboard_1a2ad72b676536692317410757f96d8c27" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t keyboard::mods_depressed</definition>
+        <argsstring></argsstring>
+        <name>mods_depressed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="117" column="10" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structkeyboard_1a8bb44ac8e8fceb671ab93f263ccb9617" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t keyboard::mods_latched</definition>
+        <argsstring></argsstring>
+        <name>mods_latched</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="118" column="10" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structkeyboard_1a2012e8f062eb115b64e39dfdd94373fb" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t keyboard::mods_locked</definition>
+        <argsstring></argsstring>
+        <name>mods_locked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="119" column="10" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structkeyboard_1adb62149681606abc035f3bb35b72aa8d" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t keyboard::group</definition>
+        <argsstring></argsstring>
+        <name>group</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="120" column="10" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structkeyboard_1a52c32ae3ad36dead362d3c8fc56c066b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int keyboard::rate</definition>
+        <argsstring></argsstring>
+        <name>rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="122" column="5" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structkeyboard_1a1dfa4ae22ac86834b68c62ae66e760fc" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int keyboard::delay</definition>
+        <argsstring></argsstring>
+        <name>delay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="123" column="5" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structkeyboard_1aed056de28ae574695b75ead3b76d42cb" prot="public" static="no" mutable="no">
+        <type>struct keyboard::@37</type>
+        <definition>struct keyboard::@37 keyboard::repeat_info</definition>
+        <argsstring></argsstring>
+        <name>repeat_info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="124" column="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="structkeyboard_1a08428791734bc0760f8c623566a6f69b" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t keyboard::key_time_msec</definition>
+        <argsstring></argsstring>
+        <name>key_time_msec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="125" column="10" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structkeyboard_1a876fcf976238714c258bb31c1feccd8d" prot="public" static="no" mutable="no">
+        <type>struct timespec</type>
+        <definition>struct timespec keyboard::input_timestamp</definition>
+        <argsstring></argsstring>
+        <name>input_timestamp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="125" column="10" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structkeyboard_1ae90d178a3ebc2361a9e48134f370d48c" prot="public" static="no" mutable="no">
+        <type>struct timespec</type>
+        <definition>struct timespec keyboard::key_time_timespec</definition>
+        <argsstring></argsstring>
+        <name>key_time_timespec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="125" column="10" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>output</label>
+        <link refid="structoutput"/>
+      </node>
+      <node id="2">
+        <label>surface</label>
+        <link refid="structsurface"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>output</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>buffer</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>buffer</label>
+        <link refid="structbuffer"/>
+      </node>
+      <node id="1">
+        <label>keyboard</label>
+        <link refid="structkeyboard"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>focus</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="112" column="15" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="112" bodyend="128"/>
+    <listofallmembers>
+      <member refid="structkeyboard_1a1dfa4ae22ac86834b68c62ae66e760fc" prot="public" virt="non-virtual"><scope>keyboard</scope><name>delay</name></member>
+      <member refid="structkeyboard_1a06aad4b35ab08a52de3e894e107f7f81" prot="public" virt="non-virtual"><scope>keyboard</scope><name>focus</name></member>
+      <member refid="structkeyboard_1adb62149681606abc035f3bb35b72aa8d" prot="public" virt="non-virtual"><scope>keyboard</scope><name>group</name></member>
+      <member refid="structkeyboard_1a876fcf976238714c258bb31c1feccd8d" prot="public" virt="non-virtual"><scope>keyboard</scope><name>input_timestamp</name></member>
+      <member refid="structkeyboard_1a321b7e51d52f6353dd1a79db007ce680" prot="public" virt="non-virtual"><scope>keyboard</scope><name>key</name></member>
+      <member refid="structkeyboard_1a08428791734bc0760f8c623566a6f69b" prot="public" virt="non-virtual"><scope>keyboard</scope><name>key_time_msec</name></member>
+      <member refid="structkeyboard_1ae90d178a3ebc2361a9e48134f370d48c" prot="public" virt="non-virtual"><scope>keyboard</scope><name>key_time_timespec</name></member>
+      <member refid="structkeyboard_1a2ad72b676536692317410757f96d8c27" prot="public" virt="non-virtual"><scope>keyboard</scope><name>mods_depressed</name></member>
+      <member refid="structkeyboard_1a8bb44ac8e8fceb671ab93f263ccb9617" prot="public" virt="non-virtual"><scope>keyboard</scope><name>mods_latched</name></member>
+      <member refid="structkeyboard_1a2012e8f062eb115b64e39dfdd94373fb" prot="public" virt="non-virtual"><scope>keyboard</scope><name>mods_locked</name></member>
+      <member refid="structkeyboard_1a52c32ae3ad36dead362d3c8fc56c066b" prot="public" virt="non-virtual"><scope>keyboard</scope><name>rate</name></member>
+      <member refid="structkeyboard_1aed056de28ae574695b75ead3b76d42cb" prot="public" virt="non-virtual"><scope>keyboard</scope><name>repeat_info</name></member>
+      <member refid="structkeyboard_1ad91e5a995bc6d923ea08bee05aac51b6" prot="public" virt="non-virtual"><scope>keyboard</scope><name>state</name></member>
+      <member refid="structkeyboard_1af83de2f2964ebd01c9017622785bbc3d" prot="public" virt="non-virtual"><scope>keyboard</scope><name>wl_keyboard</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

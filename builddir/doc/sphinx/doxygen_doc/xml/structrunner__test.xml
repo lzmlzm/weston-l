@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structrunner__test" kind="struct" language="C++" prot="public">
+    <compoundname>runner_test</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structrunner__test_1a47aa31a91b74448c6322d4a2ff56ec3c" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* runner_test::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/ivi-layout-test-plugin.c" line="48" column="12" bodyfile="/home/lzm/Wayland/weston/tests/ivi-layout-test-plugin.c" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrunner__test_1aa44cf1351c6ce9639a6dffe9474db66a" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* runner_test::run) (struct test_context *)</definition>
+        <argsstring>)(struct test_context *)</argsstring>
+        <name>run</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/ivi-layout-test-plugin.c" line="49" column="1" bodyfile="/home/lzm/Wayland/weston/tests/ivi-layout-test-plugin.c" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/tests/ivi-layout-test-plugin.c" line="47" column="18" bodyfile="/home/lzm/Wayland/weston/tests/ivi-layout-test-plugin.c" bodystart="47" bodyend="50"/>
+    <listofallmembers>
+      <member refid="structrunner__test_1a47aa31a91b74448c6322d4a2ff56ec3c" prot="public" virt="non-virtual"><scope>runner_test</scope><name>name</name></member>
+      <member refid="structrunner__test_1aa44cf1351c6ce9639a6dffe9474db66a" prot="public" virt="non-virtual"><scope>runner_test</scope><name>run</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

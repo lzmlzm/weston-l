@@ -1,0 +1,684 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="weston-test-desktop-shell_8c" kind="file" language="C++">
+    <compoundname>weston-test-desktop-shell.c</compoundname>
+    <includes local="yes">config.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">unistd.h</includes>
+    <includes local="no">linux/input.h</includes>
+    <includes local="no">assert.h</includes>
+    <includes local="no">signal.h</includes>
+    <includes local="no">math.h</includes>
+    <includes local="no">sys/types.h</includes>
+    <includes local="yes">compositor/weston.h</includes>
+    <includes refid="config-parser_8h" local="no">libweston/config-parser.h</includes>
+    <includes local="yes">shared/helpers.h</includes>
+    <includes local="no">libweston-desktop/libweston-desktop.h</includes>
+    <incdepgraph>
+      <node id="15">
+        <label>stdbool.h</label>
+      </node>
+      <node id="17">
+        <label>libweston-desktop/libweston-desktop.h</label>
+      </node>
+      <node id="8">
+        <label>linux/input.h</label>
+      </node>
+      <node id="9">
+        <label>assert.h</label>
+      </node>
+      <node id="4">
+        <label>stdint.h</label>
+      </node>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="16">
+        <label>shared/helpers.h</label>
+      </node>
+      <node id="13">
+        <label>compositor/weston.h</label>
+      </node>
+      <node id="12">
+        <label>sys/types.h</label>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
+      <node id="7">
+        <label>unistd.h</label>
+      </node>
+      <node id="10">
+        <label>signal.h</label>
+      </node>
+      <node id="11">
+        <label>math.h</label>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+      </node>
+      <node id="5">
+        <label>stdio.h</label>
+      </node>
+      <node id="14">
+        <label>libweston/config-parser.h</label>
+        <link refid="config-parser_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/tests/weston-test-desktop-shell.c</label>
+        <link refid="weston-test-desktop-shell_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structdesktest__shell" prot="public">desktest_shell</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="weston-test-desktop-shell_8c_1a40746ae5ca7de39b26deb6e5849b1337" prot="public" static="yes" mutable="no">
+        <type>const struct weston_desktop_api</type>
+        <definition>const struct weston_desktop_api shell_desktop_api</definition>
+        <argsstring></argsstring>
+        <name>shell_desktop_api</name>
+        <initializer>= {
+	.struct_size = sizeof(struct weston_desktop_api),
+	.surface_added = <ref refid="weston-test-desktop-shell_8c_1ad0d26c7a823a130ce784acff8ca57248" kindref="member">desktop_surface_added</ref>,
+	.surface_removed = <ref refid="weston-test-desktop-shell_8c_1a742d95f322e5684b85adc6565729e8e0" kindref="member">desktop_surface_removed</ref>,
+	.committed = <ref refid="weston-test-desktop-shell_8c_1a48d8bad324f5b71495c07aeffe004dcd" kindref="member">desktop_surface_committed</ref>,
+	.move = <ref refid="weston-test-desktop-shell_8c_1aa8c91a417534907496444fb87b478318" kindref="member">desktop_surface_move</ref>,
+	.resize = <ref refid="weston-test-desktop-shell_8c_1a38d8711b41feb81b1f05ebd1761862cb" kindref="member">desktop_surface_resize</ref>,
+	.fullscreen_requested = <ref refid="weston-test-desktop-shell_8c_1ac86ae3bb7e40010839fcf53497004764" kindref="member">desktop_surface_fullscreen_requested</ref>,
+	.maximized_requested = <ref refid="weston-test-desktop-shell_8c_1a8f9307bf1f437cd5b6825d188eadf2b2" kindref="member">desktop_surface_maximized_requested</ref>,
+	.minimized_requested = <ref refid="weston-test-desktop-shell_8c_1ac3bff4fe402409f898bae0ef398957b8" kindref="member">desktop_surface_minimized_requested</ref>,
+	.ping_timeout = <ref refid="weston-test-desktop-shell_8c_1ad95f90209d4c675df6422de79fe426e4" kindref="member">desktop_surface_ping_timeout</ref>,
+	.pong = <ref refid="weston-test-desktop-shell_8c_1a1759c09ce3723c2072057c20a048aff6" kindref="member">desktop_surface_pong</ref>,
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-desktop-shell.c" line="141" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-desktop-shell.c" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="weston-test-desktop-shell_8c_1ad0d26c7a823a130ce784acff8ca57248" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void desktop_surface_added</definition>
+        <argsstring>(struct weston_desktop_surface *desktop_surface, void *shell)</argsstring>
+        <name>desktop_surface_added</name>
+        <param>
+          <type>struct weston_desktop_surface *</type>
+          <declname>desktop_surface</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>shell</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-desktop-shell.c" line="55" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-desktop-shell.c" bodystart="55" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-desktop-shell_8c_1a742d95f322e5684b85adc6565729e8e0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void desktop_surface_removed</definition>
+        <argsstring>(struct weston_desktop_surface *desktop_surface, void *shell)</argsstring>
+        <name>desktop_surface_removed</name>
+        <param>
+          <type>struct weston_desktop_surface *</type>
+          <declname>desktop_surface</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>shell</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-desktop-shell.c" line="68" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-desktop-shell.c" bodystart="68" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-desktop-shell_8c_1a48d8bad324f5b71495c07aeffe004dcd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void desktop_surface_committed</definition>
+        <argsstring>(struct weston_desktop_surface *desktop_surface, int32_t sx, int32_t sy, void *shell)</argsstring>
+        <name>desktop_surface_committed</name>
+        <param>
+          <type>struct weston_desktop_surface *</type>
+          <declname>desktop_surface</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>sx</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>sy</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>shell</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-desktop-shell.c" line="81" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-desktop-shell.c" bodystart="81" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-desktop-shell_8c_1aa8c91a417534907496444fb87b478318" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void desktop_surface_move</definition>
+        <argsstring>(struct weston_desktop_surface *desktop_surface, struct weston_seat *seat, uint32_t serial, void *shell)</argsstring>
+        <name>desktop_surface_move</name>
+        <param>
+          <type>struct weston_desktop_surface *</type>
+          <declname>desktop_surface</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structweston__seat" kindref="compound">weston_seat</ref> *</type>
+          <declname>seat</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>serial</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>shell</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-desktop-shell.c" line="103" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-desktop-shell.c" bodystart="103" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-desktop-shell_8c_1a38d8711b41feb81b1f05ebd1761862cb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void desktop_surface_resize</definition>
+        <argsstring>(struct weston_desktop_surface *desktop_surface, struct weston_seat *seat, uint32_t serial, enum weston_desktop_surface_edge edges, void *shell)</argsstring>
+        <name>desktop_surface_resize</name>
+        <param>
+          <type>struct weston_desktop_surface *</type>
+          <declname>desktop_surface</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structweston__seat" kindref="compound">weston_seat</ref> *</type>
+          <declname>seat</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>serial</declname>
+        </param>
+        <param>
+          <type>enum weston_desktop_surface_edge</type>
+          <declname>edges</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>shell</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-desktop-shell.c" line="109" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-desktop-shell.c" bodystart="109" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-desktop-shell_8c_1ac86ae3bb7e40010839fcf53497004764" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void desktop_surface_fullscreen_requested</definition>
+        <argsstring>(struct weston_desktop_surface *desktop_surface, bool fullscreen, struct weston_output *output, void *shell)</argsstring>
+        <name>desktop_surface_fullscreen_requested</name>
+        <param>
+          <type>struct weston_desktop_surface *</type>
+          <declname>desktop_surface</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>fullscreen</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>shell</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-desktop-shell.c" line="116" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-desktop-shell.c" bodystart="116" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-desktop-shell_8c_1a8f9307bf1f437cd5b6825d188eadf2b2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void desktop_surface_maximized_requested</definition>
+        <argsstring>(struct weston_desktop_surface *desktop_surface, bool maximized, void *shell)</argsstring>
+        <name>desktop_surface_maximized_requested</name>
+        <param>
+          <type>struct weston_desktop_surface *</type>
+          <declname>desktop_surface</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>maximized</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>shell</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-desktop-shell.c" line="123" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-desktop-shell.c" bodystart="123" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-desktop-shell_8c_1ac3bff4fe402409f898bae0ef398957b8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void desktop_surface_minimized_requested</definition>
+        <argsstring>(struct weston_desktop_surface *desktop_surface, void *shell)</argsstring>
+        <name>desktop_surface_minimized_requested</name>
+        <param>
+          <type>struct weston_desktop_surface *</type>
+          <declname>desktop_surface</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>shell</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-desktop-shell.c" line="129" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-desktop-shell.c" bodystart="129" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-desktop-shell_8c_1ad95f90209d4c675df6422de79fe426e4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void desktop_surface_ping_timeout</definition>
+        <argsstring>(struct weston_desktop_client *desktop_client, void *shell)</argsstring>
+        <name>desktop_surface_ping_timeout</name>
+        <param>
+          <type>struct weston_desktop_client *</type>
+          <declname>desktop_client</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>shell</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-desktop-shell.c" line="135" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-desktop-shell.c" bodystart="135" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-desktop-shell_8c_1a1759c09ce3723c2072057c20a048aff6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void desktop_surface_pong</definition>
+        <argsstring>(struct weston_desktop_client *desktop_client, void *shell)</argsstring>
+        <name>desktop_surface_pong</name>
+        <param>
+          <type>struct weston_desktop_client *</type>
+          <declname>desktop_client</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>shell</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-desktop-shell.c" line="141" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-desktop-shell.c" bodystart="141" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-desktop-shell_8c_1a5ae4fb51febdfe7aa5d7c8fe66f6ce9c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void shell_destroy</definition>
+        <argsstring>(struct wl_listener *listener, void *data)</argsstring>
+        <name>shell_destroy</name>
+        <param>
+          <type>struct wl_listener *</type>
+          <declname>listener</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-desktop-shell.c" line="161" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-desktop-shell.c" bodystart="161" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-desktop-shell_8c_1af1cfd72c2f830a3bd0bf15c4eaed1426" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wet_shell_init</definition>
+        <argsstring>(struct weston_compositor *ec, int *argc, char *argv[])</argsstring>
+        <name>wet_shell_init</name>
+        <param>
+          <type>struct <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> *</type>
+          <declname>ec</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-desktop-shell.c" line="177" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-desktop-shell.c" bodystart="177" bodyend="239"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2010-2012<sp/>Intel<sp/>Corporation</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2011-2012<sp/>Collabora,<sp/>Ltd.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2013<sp/>Raspberry<sp/>Pi<sp/>Foundation</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>(including<sp/>the<sp/>next</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>paragraph)<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>Software.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/><sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>DEALINGS<sp/>IN<sp/>THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unistd.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;linux/input.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;signal.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/types.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;compositor/weston.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="config-parser_8h" kindref="compound">libweston/config-parser.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;shared/helpers.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;libweston-desktop/libweston-desktop.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="structdesktest__shell" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdesktest__shell" kindref="compound">desktest_shell</ref><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_listener<sp/><ref refid="structdesktest__shell_1a29fa2f7a88d5a5956bcdecb6ec2a9976" kindref="member">compositor_destroy_listener</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">weston_desktop<sp/>*<ref refid="structdesktest__shell_1adc143a2c5a5a48329e28a330414fb26a" kindref="member">desktop</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__layer" kindref="compound">weston_layer</ref><sp/><ref refid="structdesktest__shell_1a1e14973a0ce3bca7a39722945d5a6c1d" kindref="member">background_layer</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__surface" kindref="compound">weston_surface</ref><sp/>*<ref refid="structdesktest__shell_1a8ced2768a5a3d943cdb3b3a3770a1901" kindref="member">background_surface</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__view" kindref="compound">weston_view</ref><sp/>*<ref refid="structdesktest__shell_1a70ae7e58664303e845a1ae02265840d1" kindref="member">background_view</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__layer" kindref="compound">weston_layer</ref><sp/><ref refid="structdesktest__shell_1a57e9ae007e5e7d9068e46d9ddfbbe892" kindref="member">layer</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__view" kindref="compound">weston_view</ref><sp/>*<ref refid="structdesktest__shell_1a69d6a7aa62ee23d3b623805cb1bc2ba3" kindref="member">view</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><ref refid="weston-test-desktop-shell_8c_1ad0d26c7a823a130ce784acff8ca57248" kindref="member">desktop_surface_added</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>weston_desktop_surface<sp/>*desktop_surface,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*shell)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdesktest__shell" kindref="compound">desktest_shell</ref><sp/>*dts<sp/>=<sp/>shell;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(!dts-&gt;<ref refid="structdesktest__shell_1a69d6a7aa62ee23d3b623805cb1bc2ba3" kindref="member">view</ref>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dts-&gt;<ref refid="structdesktest__shell_1a69d6a7aa62ee23d3b623805cb1bc2ba3" kindref="member">view</ref><sp/>=<sp/>weston_desktop_surface_create_view(desktop_surface);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(dts-&gt;<ref refid="structdesktest__shell_1a69d6a7aa62ee23d3b623805cb1bc2ba3" kindref="member">view</ref>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><ref refid="weston-test-desktop-shell_8c_1a742d95f322e5684b85adc6565729e8e0" kindref="member">desktop_surface_removed</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>weston_desktop_surface<sp/>*desktop_surface,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*shell)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdesktest__shell" kindref="compound">desktest_shell</ref><sp/>*dts<sp/>=<sp/>shell;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(dts-&gt;<ref refid="structdesktest__shell_1a69d6a7aa62ee23d3b623805cb1bc2ba3" kindref="member">view</ref>);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_desktop_surface_unlink_view(dts-&gt;<ref refid="structdesktest__shell_1a69d6a7aa62ee23d3b623805cb1bc2ba3" kindref="member">view</ref>);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="compositor_8c_1a3b0df14d913003992656e8f791a6da9f" kindref="member">weston_view_destroy</ref>(dts-&gt;<ref refid="structdesktest__shell_1a69d6a7aa62ee23d3b623805cb1bc2ba3" kindref="member">view</ref>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dts-&gt;<ref refid="structdesktest__shell_1a69d6a7aa62ee23d3b623805cb1bc2ba3" kindref="member">view</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><ref refid="weston-test-desktop-shell_8c_1a48d8bad324f5b71495c07aeffe004dcd" kindref="member">desktop_surface_committed</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>weston_desktop_surface<sp/>*desktop_surface,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int32_t<sp/>sx,<sp/>int32_t<sp/>sy,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*shell)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdesktest__shell" kindref="compound">desktest_shell</ref><sp/>*dts<sp/>=<sp/>shell;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__surface" kindref="compound">weston_surface</ref><sp/>*<ref refid="structsurface" kindref="compound">surface</ref><sp/>=</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_desktop_surface_get_surface(desktop_surface);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__geometry" kindref="compound">weston_geometry</ref><sp/>geometry<sp/>=</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_desktop_surface_get_geometry(desktop_surface);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(dts-&gt;<ref refid="structdesktest__shell_1a69d6a7aa62ee23d3b623805cb1bc2ba3" kindref="member">view</ref>);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="compositor_8c_1a13f5eb8c585d0bd1598d04ce4b318e7f" kindref="member">weston_surface_is_mapped</ref>(<ref refid="structsurface" kindref="compound">surface</ref>))</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsurface" kindref="compound">surface</ref>-&gt;is_mapped<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="compositor_8c_1adcf675a1f1ac2cea92e8ca52900b89c4" kindref="member">weston_layer_entry_insert</ref>(&amp;dts-&gt;<ref refid="structdesktest__shell_1a57e9ae007e5e7d9068e46d9ddfbbe892" kindref="member">layer</ref>.<ref refid="structweston__layer_1a7eeb6d35105ca2c3960477be4abf882e" kindref="member">view_list</ref>,<sp/>&amp;dts-&gt;<ref refid="structdesktest__shell_1a69d6a7aa62ee23d3b623805cb1bc2ba3" kindref="member">view</ref>-&gt;<ref refid="structweston__view_1a5185d78e10d20bba70022466b196e990" kindref="member">layer_link</ref>);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="compositor_8c_1ae1df17820e004a35b62f4a923066e9fd" kindref="member">weston_view_set_position</ref>(dts-&gt;<ref refid="structdesktest__shell_1a69d6a7aa62ee23d3b623805cb1bc2ba3" kindref="member">view</ref>,<sp/>0<sp/>-<sp/>geometry.<ref refid="structweston__geometry_1a70c1074a2c225fec12152def41939a5d" kindref="member">x</ref>,<sp/>0<sp/>-<sp/>geometry.<ref refid="structweston__geometry_1a2c570f3c1224e0ba6754546894ec3976" kindref="member">y</ref>);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="compositor_8c_1a9605e8abe1240aa6cbe7abdd2fc7f2be" kindref="member">weston_view_update_transform</ref>(dts-&gt;<ref refid="structdesktest__shell_1a69d6a7aa62ee23d3b623805cb1bc2ba3" kindref="member">view</ref>);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dts-&gt;<ref refid="structdesktest__shell_1a69d6a7aa62ee23d3b623805cb1bc2ba3" kindref="member">view</ref>-&gt;<ref refid="structweston__view_1a18d37d84392f17fc306c8410a84b1f04" kindref="member">is_mapped</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><ref refid="weston-test-desktop-shell_8c_1aa8c91a417534907496444fb87b478318" kindref="member">desktop_surface_move</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>weston_desktop_surface<sp/>*desktop_surface,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__seat" kindref="compound">weston_seat</ref><sp/>*seat,<sp/>uint32_t<sp/>serial,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*shell)</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><ref refid="weston-test-desktop-shell_8c_1a38d8711b41feb81b1f05ebd1761862cb" kindref="member">desktop_surface_resize</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>weston_desktop_surface<sp/>*desktop_surface,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__seat" kindref="compound">weston_seat</ref><sp/>*seat,<sp/>uint32_t<sp/>serial,</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>weston_desktop_surface_edge<sp/>edges,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*shell)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><ref refid="weston-test-desktop-shell_8c_1ac86ae3bb7e40010839fcf53497004764" kindref="member">desktop_surface_fullscreen_requested</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>weston_desktop_surface<sp/>*desktop_surface,</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>fullscreen,</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__output" kindref="compound">weston_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref>,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*shell)</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><ref refid="weston-test-desktop-shell_8c_1a8f9307bf1f437cd5b6825d188eadf2b2" kindref="member">desktop_surface_maximized_requested</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>weston_desktop_surface<sp/>*desktop_surface,</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>maximized,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*shell)</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><ref refid="weston-test-desktop-shell_8c_1ac3bff4fe402409f898bae0ef398957b8" kindref="member">desktop_surface_minimized_requested</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>weston_desktop_surface<sp/>*desktop_surface,</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*shell)</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><ref refid="weston-test-desktop-shell_8c_1ad95f90209d4c675df6422de79fe426e4" kindref="member">desktop_surface_ping_timeout</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>weston_desktop_client<sp/>*desktop_client,</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*shell)</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><ref refid="weston-test-desktop-shell_8c_1a1759c09ce3723c2072057c20a048aff6" kindref="member">desktop_surface_pong</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>weston_desktop_client<sp/>*desktop_client,</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*shell)</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">weston_desktop_api<sp/><ref refid="weston-test-desktop-shell_8c_1a40746ae5ca7de39b26deb6e5849b1337" kindref="member">shell_desktop_api</ref><sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.struct_size<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">weston_desktop_api),</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.surface_added<sp/>=<sp/><ref refid="weston-test-desktop-shell_8c_1ad0d26c7a823a130ce784acff8ca57248" kindref="member">desktop_surface_added</ref>,</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.surface_removed<sp/>=<sp/><ref refid="weston-test-desktop-shell_8c_1a742d95f322e5684b85adc6565729e8e0" kindref="member">desktop_surface_removed</ref>,</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.committed<sp/>=<sp/><ref refid="weston-test-desktop-shell_8c_1a48d8bad324f5b71495c07aeffe004dcd" kindref="member">desktop_surface_committed</ref>,</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.move<sp/>=<sp/><ref refid="weston-test-desktop-shell_8c_1aa8c91a417534907496444fb87b478318" kindref="member">desktop_surface_move</ref>,</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.resize<sp/>=<sp/><ref refid="weston-test-desktop-shell_8c_1a38d8711b41feb81b1f05ebd1761862cb" kindref="member">desktop_surface_resize</ref>,</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.fullscreen_requested<sp/>=<sp/><ref refid="weston-test-desktop-shell_8c_1ac86ae3bb7e40010839fcf53497004764" kindref="member">desktop_surface_fullscreen_requested</ref>,</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.maximized_requested<sp/>=<sp/><ref refid="weston-test-desktop-shell_8c_1a8f9307bf1f437cd5b6825d188eadf2b2" kindref="member">desktop_surface_maximized_requested</ref>,</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.minimized_requested<sp/>=<sp/><ref refid="weston-test-desktop-shell_8c_1ac3bff4fe402409f898bae0ef398957b8" kindref="member">desktop_surface_minimized_requested</ref>,</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.ping_timeout<sp/>=<sp/><ref refid="weston-test-desktop-shell_8c_1ad95f90209d4c675df6422de79fe426e4" kindref="member">desktop_surface_ping_timeout</ref>,</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.pong<sp/>=<sp/><ref refid="weston-test-desktop-shell_8c_1a1759c09ce3723c2072057c20a048aff6" kindref="member">desktop_surface_pong</ref>,</highlight></codeline>
+<codeline lineno="158"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><ref refid="weston-test-desktop-shell_8c_1a5ae4fb51febdfe7aa5d7c8fe66f6ce9c" kindref="member">shell_destroy</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>wl_listener<sp/>*listener,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdesktest__shell" kindref="compound">desktest_shell</ref><sp/>*dts;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dts<sp/>=<sp/>container_of(listener,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structdesktest__shell" kindref="compound">desktest_shell</ref>,</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-log_8c_1aae33b9ae9c3e9e1ccdcdedcbd3998ed3" kindref="member">compositor_destroy_listener</ref>);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_list_remove(&amp;dts-&gt;<ref refid="structdesktest__shell_1a29fa2f7a88d5a5956bcdecb6ec2a9976" kindref="member">compositor_destroy_listener</ref>.link);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_desktop_destroy(dts-&gt;<ref refid="structdesktest__shell_1adc143a2c5a5a48329e28a330414fb26a" kindref="member">desktop</ref>);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="compositor_8c_1a3b0df14d913003992656e8f791a6da9f" kindref="member">weston_view_destroy</ref>(dts-&gt;<ref refid="structdesktest__shell_1a70ae7e58664303e845a1ae02265840d1" kindref="member">background_view</ref>);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="compositor_8c_1aa8175b2c6f8cd4cc3f3f6006ecf7acb1" kindref="member">weston_surface_destroy</ref>(dts-&gt;<ref refid="structdesktest__shell_1a8ced2768a5a3d943cdb3b3a3770a1901" kindref="member">background_surface</ref>);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(dts);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal">WL_EXPORT<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><ref refid="weston-test-desktop-shell_8c_1af1cfd72c2f830a3bd0bf15c4eaed1426" kindref="member">wet_shell_init</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__compositor" kindref="compound">weston_compositor</ref><sp/>*ec,</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])</highlight></codeline>
+<codeline lineno="179"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdesktest__shell" kindref="compound">desktest_shell</ref><sp/>*dts;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dts<sp/>=<sp/><ref refid="zalloc_8h_1a260ac290b02627b12230b313c8fa92b3" kindref="member">zalloc</ref>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*dts);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!dts)</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="compositor_8c_1a91193ce4a068dee9a1cf248a81a049bc" kindref="member">weston_compositor_add_destroy_listener_once</ref>(ec,</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;dts-&gt;<ref refid="structdesktest__shell_1a29fa2f7a88d5a5956bcdecb6ec2a9976" kindref="member">compositor_destroy_listener</ref>,</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-desktop-shell_8c_1a5ae4fb51febdfe7aa5d7c8fe66f6ce9c" kindref="member">shell_destroy</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(dts);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="compositor_8c_1ab4294fb27b3079ee70660a0975d3e0e5" kindref="member">weston_layer_init</ref>(&amp;dts-&gt;<ref refid="structdesktest__shell_1a57e9ae007e5e7d9068e46d9ddfbbe892" kindref="member">layer</ref>,<sp/>ec);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="compositor_8c_1ab4294fb27b3079ee70660a0975d3e0e5" kindref="member">weston_layer_init</ref>(&amp;dts-&gt;<ref refid="structdesktest__shell_1a1e14973a0ce3bca7a39722945d5a6c1d" kindref="member">background_layer</ref>,<sp/>ec);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="compositor_8c_1a736341961367a84eac0b635b94eefc61" kindref="member">weston_layer_set_position</ref>(&amp;dts-&gt;<ref refid="structdesktest__shell_1a57e9ae007e5e7d9068e46d9ddfbbe892" kindref="member">layer</ref>,</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libweston_8h_1adbefa5d26af7f90e33b3e4da6b67be5ca8d9648b768e66696eb0377487fdb3bee" kindref="member">WESTON_LAYER_POSITION_NORMAL</ref>);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="compositor_8c_1a736341961367a84eac0b635b94eefc61" kindref="member">weston_layer_set_position</ref>(&amp;dts-&gt;<ref refid="structdesktest__shell_1a1e14973a0ce3bca7a39722945d5a6c1d" kindref="member">background_layer</ref>,</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libweston_8h_1adbefa5d26af7f90e33b3e4da6b67be5ca535c01934b02be5377b30abdf7821807" kindref="member">WESTON_LAYER_POSITION_BACKGROUND</ref>);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dts-&gt;<ref refid="structdesktest__shell_1a8ced2768a5a3d943cdb3b3a3770a1901" kindref="member">background_surface</ref><sp/>=<sp/><ref refid="compositor_8c_1a1e3347a74e72ecb0aa7617dbf89b76fb" kindref="member">weston_surface_create</ref>(ec);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dts-&gt;<ref refid="structdesktest__shell_1a8ced2768a5a3d943cdb3b3a3770a1901" kindref="member">background_surface</ref><sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>out_free;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dts-&gt;<ref refid="structdesktest__shell_1a70ae7e58664303e845a1ae02265840d1" kindref="member">background_view</ref><sp/>=<sp/><ref refid="compositor_8c_1aa7c65b03520dde2e12d5a35f444435d5" kindref="member">weston_view_create</ref>(dts-&gt;<ref refid="structdesktest__shell_1a8ced2768a5a3d943cdb3b3a3770a1901" kindref="member">background_surface</ref>);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dts-&gt;<ref refid="structdesktest__shell_1a70ae7e58664303e845a1ae02265840d1" kindref="member">background_view</ref><sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>out_surface;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="compositor_8c_1a864f2297b36a4f94f96b8ba55869fe66" kindref="member">weston_surface_set_color</ref>(dts-&gt;<ref refid="structdesktest__shell_1a8ced2768a5a3d943cdb3b3a3770a1901" kindref="member">background_surface</ref>,<sp/>0.16,<sp/>0.32,<sp/>0.48,<sp/>1.);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pixman_region32_fini(&amp;dts-&gt;<ref refid="structdesktest__shell_1a8ced2768a5a3d943cdb3b3a3770a1901" kindref="member">background_surface</ref>-&gt;<ref refid="structweston__surface_1ab587081c8482be3e8c68d6d806945aff" kindref="member">opaque</ref>);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pixman_region32_init_rect(&amp;dts-&gt;<ref refid="structdesktest__shell_1a8ced2768a5a3d943cdb3b3a3770a1901" kindref="member">background_surface</ref>-&gt;<ref refid="structweston__surface_1ab587081c8482be3e8c68d6d806945aff" kindref="member">opaque</ref>,<sp/>0,<sp/>0,<sp/>2000,<sp/>2000);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pixman_region32_fini(&amp;dts-&gt;<ref refid="structdesktest__shell_1a8ced2768a5a3d943cdb3b3a3770a1901" kindref="member">background_surface</ref>-&gt;<ref refid="structweston__surface_1ab288fca02a260a7eb9ca4d82b5b5f8e1" kindref="member">input</ref>);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pixman_region32_init_rect(&amp;dts-&gt;<ref refid="structdesktest__shell_1a8ced2768a5a3d943cdb3b3a3770a1901" kindref="member">background_surface</ref>-&gt;<ref refid="structweston__surface_1ab288fca02a260a7eb9ca4d82b5b5f8e1" kindref="member">input</ref>,<sp/>0,<sp/>0,<sp/>2000,<sp/>2000);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="compositor_8c_1ab9e73efa632b2b2aa47c1b460f08e16f" kindref="member">weston_surface_set_size</ref>(dts-&gt;<ref refid="structdesktest__shell_1a8ced2768a5a3d943cdb3b3a3770a1901" kindref="member">background_surface</ref>,<sp/>2000,<sp/>2000);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="compositor_8c_1ae1df17820e004a35b62f4a923066e9fd" kindref="member">weston_view_set_position</ref>(dts-&gt;<ref refid="structdesktest__shell_1a70ae7e58664303e845a1ae02265840d1" kindref="member">background_view</ref>,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="compositor_8c_1adcf675a1f1ac2cea92e8ca52900b89c4" kindref="member">weston_layer_entry_insert</ref>(&amp;dts-&gt;<ref refid="structdesktest__shell_1a1e14973a0ce3bca7a39722945d5a6c1d" kindref="member">background_layer</ref>.<ref refid="structweston__layer_1a7eeb6d35105ca2c3960477be4abf882e" kindref="member">view_list</ref>,<sp/>&amp;dts-&gt;<ref refid="structdesktest__shell_1a70ae7e58664303e845a1ae02265840d1" kindref="member">background_view</ref>-&gt;<ref refid="structweston__view_1a5185d78e10d20bba70022466b196e990" kindref="member">layer_link</ref>);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="compositor_8c_1a9605e8abe1240aa6cbe7abdd2fc7f2be" kindref="member">weston_view_update_transform</ref>(dts-&gt;<ref refid="structdesktest__shell_1a70ae7e58664303e845a1ae02265840d1" kindref="member">background_view</ref>);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dts-&gt;<ref refid="structdesktest__shell_1adc143a2c5a5a48329e28a330414fb26a" kindref="member">desktop</ref><sp/>=<sp/>weston_desktop_create(ec,<sp/>&amp;<ref refid="weston-test-desktop-shell_8c_1a40746ae5ca7de39b26deb6e5849b1337" kindref="member">shell_desktop_api</ref>,<sp/>dts);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dts-&gt;<ref refid="structdesktest__shell_1adc143a2c5a5a48329e28a330414fb26a" kindref="member">desktop</ref><sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>out_view;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>screenshooter_create(ec);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal">out_view:</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="compositor_8c_1a3b0df14d913003992656e8f791a6da9f" kindref="member">weston_view_destroy</ref>(dts-&gt;<ref refid="structdesktest__shell_1a70ae7e58664303e845a1ae02265840d1" kindref="member">background_view</ref>);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal">out_surface:</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="compositor_8c_1aa8175b2c6f8cd4cc3f3f6006ecf7acb1" kindref="member">weston_surface_destroy</ref>(dts-&gt;<ref refid="structdesktest__shell_1a8ced2768a5a3d943cdb3b3a3770a1901" kindref="member">background_surface</ref>);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal">out_free:</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_list_remove(&amp;dts-&gt;<ref refid="structdesktest__shell_1a29fa2f7a88d5a5956bcdecb6ec2a9976" kindref="member">compositor_destroy_listener</ref>.link);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(dts);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/tests/weston-test-desktop-shell.c"/>
+  </compounddef>
+</doxygen>

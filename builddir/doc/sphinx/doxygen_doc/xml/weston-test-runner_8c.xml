@@ -1,0 +1,1476 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="weston-test-runner_8c" kind="file" language="C++">
+    <compoundname>weston-test-runner.c</compoundname>
+    <includes local="yes">config.h</includes>
+    <includes local="no">unistd.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">sys/wait.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">assert.h</includes>
+    <includes local="no">errno.h</includes>
+    <includes local="no">signal.h</includes>
+    <includes local="no">getopt.h</includes>
+    <includes local="yes">test-config.h</includes>
+    <includes refid="weston-test-runner_8h" local="yes">weston-test-runner.h</includes>
+    <includes refid="weston-testsuite-data_8h" local="yes">weston-testsuite-data.h</includes>
+    <includes local="yes">shared/string-helpers.h</includes>
+    <incdepgraph>
+      <node id="19">
+        <label>stdbool.h</label>
+      </node>
+      <node id="18">
+        <label>libweston/libweston.h</label>
+        <link refid="libweston_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>weston-test-fixture-compositor.h</label>
+        <link refid="weston-test-fixture-compositor_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>assert.h</label>
+      </node>
+      <node id="28">
+        <label>shared/string-helpers.h</label>
+      </node>
+      <node id="20">
+        <label>stdint.h</label>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="24">
+        <label>wayland-server.h</label>
+      </node>
+      <node id="23">
+        <label>xkbcommon/xkbcommon.h</label>
+      </node>
+      <node id="9">
+        <label>errno.h</label>
+      </node>
+      <node id="15">
+        <label>shared/helpers.h</label>
+      </node>
+      <node id="27">
+        <label>weston-testsuite-data.h</label>
+        <link refid="weston-testsuite-data_8h"/>
+      </node>
+      <node id="17">
+        <label>wayland-client-protocol.h</label>
+      </node>
+      <node id="7">
+        <label>string.h</label>
+      </node>
+      <node id="3">
+        <label>unistd.h</label>
+      </node>
+      <node id="12">
+        <label>test-config.h</label>
+      </node>
+      <node id="10">
+        <label>signal.h</label>
+      </node>
+      <node id="26">
+        <label>libweston/zalloc.h</label>
+        <link refid="zalloc_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>time.h</label>
+      </node>
+      <node id="6">
+        <label>sys/wait.h</label>
+      </node>
+      <node id="25">
+        <label>libweston/matrix.h</label>
+        <link refid="matrix_8h"/>
+      </node>
+      <node id="22">
+        <label>pixman.h</label>
+      </node>
+      <node id="14">
+        <label>wayland-util.h</label>
+      </node>
+      <node id="11">
+        <label>getopt.h</label>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/tests/weston-test-runner.c</label>
+        <link refid="weston-test-runner_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>weston-test-runner.h</label>
+        <link refid="weston-test-runner_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+      </node>
+      <node id="4">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structweston__test__run__info" prot="public">weston_test_run_info</innerclass>
+    <innerclass refid="structweston__test__harness" prot="public">weston_test_harness</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="weston-test-runner_8c_1ab3b3895093289b8aef2ca7765c2003af" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* weston_test_cb) (struct wet_testsuite_data *suite_data, const struct weston_test_entry *t, const void *test_data, int iteration)</definition>
+        <argsstring>)(struct wet_testsuite_data *suite_data, const struct weston_test_entry *t, const void *test_data, int iteration)</argsstring>
+        <name>weston_test_cb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="208" column="9" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="weston-test-runner_8c_1a10abd8530a8aa8cd06e3e7f4b548dbcb" prot="public" static="no" mutable="no">
+        <type>const struct <ref refid="structweston__test__entry" kindref="compound">weston_test_entry</ref> __start_test_section</type>
+        <definition>const struct weston_test_entry __start_test_section __stop_test_section</definition>
+        <argsstring></argsstring>
+        <name>__stop_test_section</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="1" column="0" declfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" declline="1" declcolumn="0"/>
+      </memberdef>
+      <memberdef kind="variable" id="weston-test-runner_8c_1aac4f6e89dcc4db4c4c7ef92791ebca59" prot="public" static="yes" mutable="no">
+        <type>const struct <ref refid="structweston__test__run__info" kindref="compound">weston_test_run_info</ref> *</type>
+        <definition>const struct weston_test_run_info* test_run_info_</definition>
+        <argsstring></argsstring>
+        <name>test_run_info_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="55" column="40" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__testharness_1gae81a0b16dc498f48d248e7fb7d819660" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* get_test_name</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_test_name</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the test name string with counter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The test name with fixture number <computeroutput>-f%d</computeroutput> added. For an array driven test, e.g. defined with <ref refid="group__testharness_1gaac6645411da307a1046bcaa84d46583f" kindref="member">TEST_P()</ref>, the name has also a <computeroutput>-e%d</computeroutput> suffix to indicate the array element number.</para>
+</simplesect>
+This is only usable from code paths inside <ref refid="group__testharness_1ga45feb1f37ce559e49baf8655d769ef85" kindref="member">TEST()</ref>, <ref refid="group__testharness_1gaac6645411da307a1046bcaa84d46583f" kindref="member">TEST_P()</ref>, <ref refid="group__testharness_1ga889ae2ce5ee27319a760457a33a2da1a" kindref="member">PLUGIN_TEST()</ref> etc. defined functions. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="69" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="69" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="group__testharness_1gaa0dd40f331a900d10af1cbad1d4372aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int get_test_fixture_index</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_test_fixture_index</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the current fixture index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the current fixture index which can be used directly as an index into the array passed as an argument to <ref refid="group__testharness_1ga274def1a210d74f64d216796dbec4b2b" kindref="member">DECLARE_FIXTURE_SETUP_WITH_ARG()</ref>.</para>
+<para>This is only usable from code paths inside <ref refid="group__testharness_1ga45feb1f37ce559e49baf8655d769ef85" kindref="member">TEST()</ref>, <ref refid="group__testharness_1gaac6645411da307a1046bcaa84d46583f" kindref="member">TEST_P()</ref>, <ref refid="group__testharness_1ga889ae2ce5ee27319a760457a33a2da1a" kindref="member">PLUGIN_TEST()</ref> etc. defined functions. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="85" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="85" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="group__testharness_1gaa1538dfd4262a1feafd60cd1f09d9878" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void testlog</definition>
+        <argsstring>(const char *fmt,...)</argsstring>
+        <name>testlog</name>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+<para>Print into test log. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is exactly like printf() except the output goes to the test log, which is at stderr.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fmt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>printf format string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="100" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="100" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-runner_8c_1ab88f6d36ffea5bd84606f7c5c94b827d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const void *</type>
+        <definition>static const void* fixture_setup_array_get_arg</definition>
+        <argsstring>(const struct fixture_setup_array *fsa, int findex)</argsstring>
+        <name>fixture_setup_array_get_arg</name>
+        <param>
+          <type>const struct <ref refid="structfixture__setup__array" kindref="compound">fixture_setup_array</ref> *</type>
+          <declname>fsa</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>findex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="110" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="110" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-runner_8c_1adfb5219521aa984e2ce0a267d123f980" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>static const char* fixture_setup_array_get_name</definition>
+        <argsstring>(const struct fixture_setup_array *fsa, int findex)</argsstring>
+        <name>fixture_setup_array_get_name</name>
+        <param>
+          <type>const struct <ref refid="structfixture__setup__array" kindref="compound">fixture_setup_array</ref> *</type>
+          <declname>fsa</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>findex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="121" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="121" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-runner_8c_1a091bf06ad4d8958c37f71bab256036a3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const struct <ref refid="structweston__test__entry" kindref="compound">weston_test_entry</ref> *</type>
+        <definition>static const struct weston_test_entry* find_test</definition>
+        <argsstring>(const char *name)</argsstring>
+        <name>find_test</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="135" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="135" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-runner_8c_1a46417fa10946385478d634ea90ff877c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></type>
+        <definition>static enum test_result_code run_test</definition>
+        <argsstring>(int fixture_nr, const struct weston_test_entry *t, void *data, int iteration)</argsstring>
+        <name>run_test</name>
+        <param>
+          <type>int</type>
+          <declname>fixture_nr</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structweston__test__entry" kindref="compound">weston_test_entry</ref> *</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>iteration</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="135" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="147" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-runner_8c_1a18ba97fffd1e133efcbbfdb9fc629641" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void list_tests</definition>
+        <argsstring>(void)</argsstring>
+        <name>list_tests</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="174" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="174" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-runner_8c_1a90b8f642b12378a1b6544f63cbd99efd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void for_each_test_case</definition>
+        <argsstring>(struct wet_testsuite_data *data, weston_test_cb cb)</argsstring>
+        <name>for_each_test_case</name>
+        <param>
+          <type>struct <ref refid="structwet__testsuite__data" kindref="compound">wet_testsuite_data</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="weston-test-runner_8c_1ab3b3895093289b8aef2ca7765c2003af" kindref="member">weston_test_cb</ref></type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="214" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="214" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-runner_8c_1a222ab9aa101c64dce3c0a6ab2f7f5f1b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>static const char* result_to_str</definition>
+        <argsstring>(enum test_result_code ret)</argsstring>
+        <name>result_to_str</name>
+        <param>
+          <type>enum <ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></type>
+          <declname>ret</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="241" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="241" bodyend="256"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-runner_8c_1a0356e2f55fbd20aa1dfa2e03503e594a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void run_case</definition>
+        <argsstring>(struct wet_testsuite_data *suite_data, const struct weston_test_entry *t, const void *test_data, int iteration)</argsstring>
+        <name>run_case</name>
+        <param>
+          <type>struct <ref refid="structwet__testsuite__data" kindref="compound">wet_testsuite_data</ref> *</type>
+          <declname>suite_data</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structweston__test__entry" kindref="compound">weston_test_entry</ref> *</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>test_data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>iteration</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="259" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="259" bodyend="305"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-runner_8c_1ac4b6e16cbd094f5fdb06042c1c9b043a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void testsuite_run</definition>
+        <argsstring>(struct wet_testsuite_data *data)</argsstring>
+        <name>testsuite_run</name>
+        <param>
+          <type>struct <ref refid="structwet__testsuite__data" kindref="compound">wet_testsuite_data</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="309" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="309" bodyend="312"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-runner_8c_1acc8a914f1348ceeb6c89595be28bf34e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void count_case</definition>
+        <argsstring>(struct wet_testsuite_data *suite_data, const struct weston_test_entry *t, const void *test_data, int iteration)</argsstring>
+        <name>count_case</name>
+        <param>
+          <type>struct <ref refid="structwet__testsuite__data" kindref="compound">wet_testsuite_data</ref> *</type>
+          <declname>suite_data</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structweston__test__entry" kindref="compound">weston_test_entry</ref> *</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>test_data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>iteration</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="315" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="315" bodyend="321"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-runner_8c_1ac42bd7970edaf552fac4a5323dc29923" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void tap_plan</definition>
+        <argsstring>(struct wet_testsuite_data *data, int count_fixtures)</argsstring>
+        <name>tap_plan</name>
+        <param>
+          <type>struct <ref refid="structwet__testsuite__data" kindref="compound">wet_testsuite_data</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>count_fixtures</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="324" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="324" bodyend="330"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-runner_8c_1a5d821c933f1f186346f36bc7009b4207" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void skip_case</definition>
+        <argsstring>(struct wet_testsuite_data *suite_data, const struct weston_test_entry *t, const void *test_data, int iteration)</argsstring>
+        <name>skip_case</name>
+        <param>
+          <type>struct <ref refid="structwet__testsuite__data" kindref="compound">wet_testsuite_data</ref> *</type>
+          <declname>suite_data</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structweston__test__entry" kindref="compound">weston_test_entry</ref> *</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>test_data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>iteration</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="333" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="333" bodyend="349"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-runner_8c_1a175f1f6de5cca46589bc8033e2c86507" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void tap_skip_fixture</definition>
+        <argsstring>(struct wet_testsuite_data *data)</argsstring>
+        <name>tap_skip_fixture</name>
+        <param>
+          <type>struct <ref refid="structwet__testsuite__data" kindref="compound">wet_testsuite_data</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="352" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="352" bodyend="355"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-runner_8c_1a51ea1db09acd9d77f8780f7a450fbe5a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void help</definition>
+        <argsstring>(const char *exe)</argsstring>
+        <name>help</name>
+        <param>
+          <type>const char *</type>
+          <declname>exe</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="358" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="358" bodyend="372"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-runner_8c_1a428a83a736ca2fbf2f9390552713dcaa" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void parse_command_line</definition>
+        <argsstring>(struct weston_test_harness *harness, int argc, char **argv)</argsstring>
+        <name>parse_command_line</name>
+        <param>
+          <type>struct <ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref> *</type>
+          <declname>harness</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="375" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="375" bodyend="428"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-runner_8c_1abed005fa71f43ceecd716c33942bc1ce" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref> *</type>
+        <definition>static struct weston_test_harness* weston_test_harness_create</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>weston_test_harness_create</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="431" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="431" bodyend="483"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-runner_8c_1a7d37f35c90a9c240094943ba9a545b21" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void weston_test_harness_destroy</definition>
+        <argsstring>(struct weston_test_harness *harness)</argsstring>
+        <name>weston_test_harness_destroy</name>
+        <param>
+          <type>struct <ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref> *</type>
+          <declname>harness</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="486" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="486" bodyend="489"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-runner_8c_1a839cc498e73be003df0e33af6431bd8d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></type>
+        <definition>static enum test_result_code counts_to_result</definition>
+        <argsstring>(const struct wet_testsuite_data *data)</argsstring>
+        <name>counts_to_result</name>
+        <param>
+          <type>const struct <ref refid="structwet__testsuite__data" kindref="compound">wet_testsuite_data</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="486" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="492" bodyend="503"/>
+      </memberdef>
+      <memberdef kind="function" id="group__testharness_1gacd7b26a0f0f337781013b40d229cf262" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></type>
+        <definition>enum test_result_code weston_test_harness_execute_as_client</definition>
+        <argsstring>(struct weston_test_harness *harness, const struct compositor_setup *setup)</argsstring>
+        <name>weston_test_harness_execute_as_client</name>
+        <param>
+          <type>struct <ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref> *</type>
+          <declname>harness</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structcompositor__setup" kindref="compound">compositor_setup</ref> *</type>
+          <declname>setup</declname>
+        </param>
+        <briefdescription>
+<para>Execute all tests as client tests. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>harness</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The test harness context. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>setup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The compositor configuration.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Initializes the compositor with the given setup and executes the compositor. The compositor creates a new thread where all tests in the test program are serially executed. Once the thread finishes, the compositor returns from its event loop and cleans up.</para>
+<para>Returns RESULT_SKIP if the requested compositor features, e.g. GL-renderer, are not built.</para>
+<para><simplesect kind="see"><para><ref refid="group__testharness_1gadc7eda648944f75a48748e6456a0e735" kindref="member">DECLARE_FIXTURE_SETUP()</ref>, <ref refid="group__testharness_1ga274def1a210d74f64d216796dbec4b2b" kindref="member">DECLARE_FIXTURE_SETUP_WITH_ARG()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="486" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="522" bodyend="529"/>
+      </memberdef>
+      <memberdef kind="function" id="group__testharness_1gabc3f5a45b58ee07331059eb120f7b2bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></type>
+        <definition>enum test_result_code weston_test_harness_execute_as_plugin</definition>
+        <argsstring>(struct weston_test_harness *harness, const struct compositor_setup *setup)</argsstring>
+        <name>weston_test_harness_execute_as_plugin</name>
+        <param>
+          <type>struct <ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref> *</type>
+          <declname>harness</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structcompositor__setup" kindref="compound">compositor_setup</ref> *</type>
+          <declname>setup</declname>
+        </param>
+        <briefdescription>
+<para>Execute all tests as plugin tests. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>harness</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The test harness context. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>setup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The compositor configuration.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Initializes the compositor with the given setup and executes the compositor. The compositor executes all tests in the test program serially from an idle handler, then returns from its event loop and cleans up.</para>
+<para>Returns RESULT_SKIP if the requested compositor features, e.g. GL-renderer, are not built.</para>
+<para><simplesect kind="see"><para><ref refid="group__testharness_1gadc7eda648944f75a48748e6456a0e735" kindref="member">DECLARE_FIXTURE_SETUP()</ref>, <ref refid="group__testharness_1ga274def1a210d74f64d216796dbec4b2b" kindref="member">DECLARE_FIXTURE_SETUP_WITH_ARG()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="486" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="547" bodyend="554"/>
+      </memberdef>
+      <memberdef kind="function" id="group__testharness_1ga9f98c3e898eb09ad2bd86343199ff619" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></type>
+        <definition>enum test_result_code weston_test_harness_execute_standalone</definition>
+        <argsstring>(struct weston_test_harness *harness)</argsstring>
+        <name>weston_test_harness_execute_standalone</name>
+        <param>
+          <type>struct <ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref> *</type>
+          <declname>harness</declname>
+        </param>
+        <briefdescription>
+<para>Execute all tests as standalone tests. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>harness</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The test harness context.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Executes all tests in the test program serially without any further setup, particularly without any compositor instance created.</para>
+<para><simplesect kind="see"><para><ref refid="group__testharness_1gadc7eda648944f75a48748e6456a0e735" kindref="member">DECLARE_FIXTURE_SETUP()</ref>, <ref refid="group__testharness_1ga274def1a210d74f64d216796dbec4b2b" kindref="member">DECLARE_FIXTURE_SETUP_WITH_ARG()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="486" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="567" bodyend="575"/>
+      </memberdef>
+      <memberdef kind="function" id="group__testharness_1ga02d7b07ce89636ff14598286827d279d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const struct <ref refid="structfixture__setup__array" kindref="compound">fixture_setup_array</ref> *</type>
+        <definition>const struct fixture_setup_array* fixture_setup_array_get_</definition>
+        <argsstring>(void)</argsstring>
+        <name>fixture_setup_array_get_</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Fixture data array getter method. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="group__testharness_1ga274def1a210d74f64d216796dbec4b2b" kindref="member">DECLARE_FIXTURE_SETUP_WITH_ARG()</ref> overrides this in test programs. The default implementation has no data and makes the tests run once. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="585" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="585" bodyend="596"/>
+      </memberdef>
+      <memberdef kind="function" id="group__testharness_1ga46577b43cb4378b2289ebfb91f5c6010" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></type>
+        <definition>enum test_result_code fixture_setup_run_</definition>
+        <argsstring>(struct weston_test_harness *harness, const void *arg_)</argsstring>
+        <name>fixture_setup_run_</name>
+        <param>
+          <type>struct <ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref> *</type>
+          <declname>harness</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>arg_</declname>
+        </param>
+        <briefdescription>
+<para>Fixture setup function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="group__testharness_1gadc7eda648944f75a48748e6456a0e735" kindref="member">DECLARE_FIXTURE_SETUP()</ref> and <ref refid="group__testharness_1ga274def1a210d74f64d216796dbec4b2b" kindref="member">DECLARE_FIXTURE_SETUP_WITH_ARG()</ref> override this in test programs. The default implementation just calls <ref refid="group__testharness_1ga9f98c3e898eb09ad2bd86343199ff619" kindref="member">weston_test_harness_execute_standalone()</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="585" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="608" bodyend="611"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-runner_8c_1afb7c0310280c171f6d429be4ea645e4f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void fixture_report</definition>
+        <argsstring>(const struct wet_testsuite_data *d, enum test_result_code ret)</argsstring>
+        <name>fixture_report</name>
+        <param>
+          <type>const struct <ref refid="structwet__testsuite__data" kindref="compound">wet_testsuite_data</ref> *</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></type>
+          <declname>ret</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="614" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="614" bodyend="621"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-runner_8c_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="624" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="624" bodyend="682"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2012<sp/>Intel<sp/>Corporation</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>(including<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>next<sp/>paragraph)<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>NONINFRINGEMENT.<sp/><sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unistd.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/wait.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;errno.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;signal.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;getopt.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;test-config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="weston-test-runner_8h" kindref="compound">weston-test-runner.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="weston-testsuite-data_8h" kindref="compound">weston-testsuite-data.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;shared/string-helpers.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__test__entry" kindref="compound">weston_test_entry</ref><sp/>__start_test_section,<sp/><ref refid="weston-test-runner_8c_1a10abd8530a8aa8cd06e3e7f4b548dbcb" kindref="member">__stop_test_section</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="structweston__test__run__info" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__test__run__info" kindref="compound">weston_test_run_info</ref><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structweston__test__run__info_1ad85b5b68131ad88c597b65b78b618be5" kindref="member">name</ref>[512];</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structweston__test__run__info_1a57f742607757b0daafd076aa134788ae" kindref="member">fixture_nr</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__test__run__info" kindref="compound">weston_test_run_info</ref><sp/>*<ref refid="weston-test-runner_8c_1aac4f6e89dcc4db4c4c7ef92791ebca59" kindref="member">test_run_info_</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><ref refid="group__testharness_1gae81a0b16dc498f48d248e7fb7d819660" kindref="member">get_test_name</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="weston-test-runner_8c_1aac4f6e89dcc4db4c4c7ef92791ebca59" kindref="member">test_run_info_</ref>-&gt;<ref refid="structweston__test__run__info_1ad85b5b68131ad88c597b65b78b618be5" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><ref refid="group__testharness_1gaa0dd40f331a900d10af1cbad1d4372aa" kindref="member">get_test_fixture_index</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="weston-test-runner_8c_1aac4f6e89dcc4db4c4c7ef92791ebca59" kindref="member">test_run_info_</ref>-&gt;<ref refid="structweston__test__run__info_1a57f742607757b0daafd076aa134788ae" kindref="member">fixture_nr</ref><sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><ref refid="group__testharness_1gaa1538dfd4262a1feafd60cd1f09d9878" kindref="member">testlog</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*fmt,<sp/>...)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>va_list<sp/>argp;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>va_start(argp,<sp/>fmt);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vfprintf(stderr,<sp/>fmt,<sp/>argp);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>va_end(argp);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><ref refid="weston-test-runner_8c_1ab88f6d36ffea5bd84606f7c5c94b827d" kindref="member">fixture_setup_array_get_arg</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structfixture__setup__array" kindref="compound">fixture_setup_array</ref><sp/>*fsa,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>findex)</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*array_data<sp/>=<sp/>fsa-&gt;<ref refid="structfixture__setup__array_1aee35175bb680c0a47025cf2502a96f7c" kindref="member">array</ref>;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(array_data)</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>array_data<sp/>+<sp/>findex<sp/>*<sp/>fsa-&gt;<ref refid="structfixture__setup__array_1ac6e0ba03a3efb7fb349bdaae25cbafa0" kindref="member">element_size</ref>;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><ref refid="weston-test-runner_8c_1adfb5219521aa984e2ce0a267d123f980" kindref="member">fixture_setup_array_get_name</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structfixture__setup__array" kindref="compound">fixture_setup_array</ref><sp/>*fsa,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>findex)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*element_data<sp/>=<sp/><ref refid="weston-test-runner_8c_1ab88f6d36ffea5bd84606f7c5c94b827d" kindref="member">fixture_setup_array_get_arg</ref>(fsa,<sp/>findex);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfixture__metadata" kindref="compound">fixture_metadata</ref><sp/>*meta;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!element_data)</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>meta<sp/>=<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)(element_data<sp/>+<sp/>fsa-&gt;<ref refid="structfixture__setup__array_1a2606a50c547b715f247fd6fa1888c208" kindref="member">meta_offset</ref>);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>meta-&gt;<ref refid="structfixture__metadata_1aaf01a2c28621f0b45e4d8bc669469279" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__test__entry" kindref="compound">weston_test_entry</ref><sp/>*</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><ref refid="weston-test-runner_8c_1a091bf06ad4d8958c37f71bab256036a3" kindref="member">find_test</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structweston__test__entry_1aa2d340947469ae6e1e1d21154ada010c" kindref="member">name</ref>)</highlight></codeline>
+<codeline lineno="136"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__test__entry" kindref="compound">weston_test_entry</ref><sp/>*t;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(t<sp/>=<sp/>&amp;__start_test_section;<sp/>t<sp/>&lt;<sp/>&amp;<ref refid="weston-test-runner_8c_1a10abd8530a8aa8cd06e3e7f4b548dbcb" kindref="member">__stop_test_section</ref>;<sp/>t++)</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(t-&gt;<ref refid="structweston__test__entry_1aa2d340947469ae6e1e1d21154ada010c" kindref="member">name</ref>,<sp/><ref refid="structweston__test__entry_1aa2d340947469ae6e1e1d21154ada010c" kindref="member">name</ref>)<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>t;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><ref refid="weston-test-runner_8c_1a46417fa10946385478d634ea90ff877c" kindref="member">run_test</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fixture_nr,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__test__entry" kindref="compound">weston_test_entry</ref><sp/>*t,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iteration)</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__test__run__info" kindref="compound">weston_test_run_info</ref><sp/>info;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(data)<sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(info.name,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(info.name),<sp/></highlight><highlight class="stringliteral">&quot;%s-f%02d-e%02d&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t-&gt;<ref refid="structweston__test__entry_1aa2d340947469ae6e1e1d21154ada010c" kindref="member">name</ref>,<sp/><ref refid="structweston__test__run__info_1a57f742607757b0daafd076aa134788ae" kindref="member">fixture_nr</ref>,<sp/>iteration);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(info.name,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(info.name),<sp/></highlight><highlight class="stringliteral">&quot;%s-f%02d&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t-&gt;<ref refid="structweston__test__entry_1aa2d340947469ae6e1e1d21154ada010c" kindref="member">name</ref>,<sp/><ref refid="structweston__test__run__info_1a57f742607757b0daafd076aa134788ae" kindref="member">fixture_nr</ref>);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info.fixture_nr<sp/>=<sp/><ref refid="structweston__test__run__info_1a57f742607757b0daafd076aa134788ae" kindref="member">fixture_nr</ref>;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-runner_8c_1aac4f6e89dcc4db4c4c7ef92791ebca59" kindref="member">test_run_info_</ref><sp/>=<sp/>&amp;info;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t-&gt;<ref refid="structweston__test__entry_1aabba374e8d72ab10531d89ec9fb04bf6" kindref="member">run</ref>(data);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-runner_8c_1aac4f6e89dcc4db4c4c7ef92791ebca59" kindref="member">test_run_info_</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="166"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>XXX:<sp/>We<sp/>should<sp/>return<sp/>t-&gt;run(data);<sp/>but<sp/>that<sp/>requires<sp/>changing</highlight></codeline>
+<codeline lineno="167"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>the<sp/>function<sp/>signature<sp/>and<sp/>stop<sp/>using<sp/>assert()<sp/>in<sp/>tests.</highlight></codeline>
+<codeline lineno="168"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>https://gitlab.freedesktop.org/wayland/weston/issues/311</highlight></codeline>
+<codeline lineno="169"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a818c541216b4ca0e29b7885495a46ad2" kindref="member">RESULT_OK</ref>;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><ref refid="weston-test-runner_8c_1a18ba97fffd1e133efcbbfdb9fc629641" kindref="member">list_tests</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfixture__setup__array" kindref="compound">fixture_setup_array</ref><sp/>*fsa;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__test__entry" kindref="compound">weston_test_entry</ref><sp/>*t;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fsa<sp/>=<sp/><ref refid="group__testharness_1ga02d7b07ce89636ff14598286827d279d" kindref="member">fixture_setup_array_get_</ref>();</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fsa-&gt;<ref refid="structfixture__setup__array_1a6951fe80c14c9cd286965c3745d4d366" kindref="member">n_elements</ref><sp/>&gt;<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Fixture<sp/>setups:\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>fsa-&gt;<ref refid="structfixture__setup__array_1a6951fe80c14c9cd286965c3745d4d366" kindref="member">n_elements</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%2d:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>i<sp/>+<sp/>1,</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-runner_8c_1adfb5219521aa984e2ce0a267d123f980" kindref="member">fixture_setup_array_get_name</ref>(fsa,<sp/>i));</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;One<sp/>fixture<sp/>setup.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Test<sp/>names:\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(t<sp/>=<sp/>&amp;__start_test_section;<sp/>t<sp/>&lt;<sp/>&amp;<ref refid="weston-test-runner_8c_1a10abd8530a8aa8cd06e3e7f4b548dbcb" kindref="member">__stop_test_section</ref>;<sp/>t++)<sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;<sp/><sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>t-&gt;<ref refid="structweston__test__entry_1aa2d340947469ae6e1e1d21154ada010c" kindref="member">name</ref>);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(t-&gt;<ref refid="structweston__test__entry_1a12a79b4e5483c31ac942f7e2ad15cf28" kindref="member">n_elements</ref><sp/>&gt;<sp/>1)</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/>with<sp/>array<sp/>of<sp/>%d<sp/>cases\n&quot;</highlight><highlight class="normal">,<sp/>t-&gt;<ref refid="structweston__test__entry_1a12a79b4e5483c31ac942f7e2ad15cf28" kindref="member">n_elements</ref>);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200" refid="structweston__test__harness" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref><sp/>{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int32_t<sp/><ref refid="structweston__test__harness_1a91beb28acb0a6401fecfe7b89758cd55" kindref="member">fixt_ind</ref>;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structweston__test__harness_1a67c17aa4a31971c76c9a5efff00b93c6" kindref="member">chosen_testname</ref>;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int32_t<sp/><ref refid="structweston__test__harness_1a737150dc8272ab37cc08557274ae7563" kindref="member">case_ind</ref>;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structwet__testsuite__data" kindref="compound">wet_testsuite_data</ref><sp/><ref refid="structweston__test__harness_1a853fe4d2d402c4ddee253453bc9e3771" kindref="member">data</ref>;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="weston-test-runner_8c_1ab3b3895093289b8aef2ca7765c2003af" kindref="member">weston_test_cb</ref>)(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structwet__testsuite__data" kindref="compound">wet_testsuite_data</ref><sp/>*suite_data,</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__test__entry" kindref="compound">weston_test_entry</ref><sp/>*t,</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="vertex-clip-test_8c_1a6115133101abda4c59ea992ce2982aeb" kindref="member">test_data</ref>,</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iteration);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><ref refid="weston-test-runner_8c_1a90b8f642b12378a1b6544f63cbd99efd" kindref="member">for_each_test_case</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structwet__testsuite__data" kindref="compound">wet_testsuite_data</ref><sp/>*data,<sp/><ref refid="weston-test-runner_8c_1ab3b3895093289b8aef2ca7765c2003af" kindref="member">weston_test_cb</ref><sp/>cb)</highlight></codeline>
+<codeline lineno="215"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>data-&gt;<ref refid="structwet__testsuite__data_1a4b4c9647bf38610bc13bd09a24d6d80c" kindref="member">tests_count</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__test__entry" kindref="compound">weston_test_entry</ref><sp/>*t<sp/>=<sp/>&amp;data-&gt;<ref refid="structwet__testsuite__data_1a029a517bc21ee17737e87cf5e6d94aa0" kindref="member">tests</ref>[i];</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*current_test_data<sp/>=<sp/>t-&gt;<ref refid="structweston__test__entry_1a77d2fd516c11498f754123e36e40ff00" kindref="member">table_data</ref>;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>elem;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>elem_end;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(data-&gt;<ref refid="structwet__testsuite__data_1aab2f9cb5578501e4e4d001f786584a4c" kindref="member">case_index</ref><sp/>==<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elem<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elem_end<sp/>=<sp/>t-&gt;<ref refid="structweston__test__entry_1a12a79b4e5483c31ac942f7e2ad15cf28" kindref="member">n_elements</ref>;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elem<sp/>=<sp/>data-&gt;<ref refid="structwet__testsuite__data_1aab2f9cb5578501e4e4d001f786584a4c" kindref="member">case_index</ref>;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elem_end<sp/>=<sp/>elem<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>elem<sp/>&lt;<sp/>elem_end;<sp/>elem++)<sp/>{</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>current_test_data<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)t-&gt;<ref refid="structweston__test__entry_1a77d2fd516c11498f754123e36e40ff00" kindref="member">table_data</ref><sp/>+</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elem<sp/>*<sp/>t-&gt;<ref refid="structweston__test__entry_1a029f6a581698ea375429be890e46cdf8" kindref="member">element_size</ref>;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cb(data,<sp/>t,<sp/>current_test_data,<sp/>elem);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="238"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><ref refid="weston-test-runner_8c_1a222ab9aa101c64dce3c0a6ab2f7f5f1b" kindref="member">result_to_str</ref>(</highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref><sp/>ret)</highlight></codeline>
+<codeline lineno="242"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*names[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[<ref refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103adbaa15b6c3bcc0196b4b314fac50e36c" kindref="member">RESULT_FAIL</ref>]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;fail&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[<ref refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a1a9437b5f7317085e7fc0358a47d32f3" kindref="member">RESULT_HARD_ERROR</ref>]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;hard<sp/>error&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[<ref refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a818c541216b4ca0e29b7885495a46ad2" kindref="member">RESULT_OK</ref>]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;ok&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>WESTON_TEST_SKIP_IS_FAILURE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[<ref refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a4afc80cf43bd4cdf7cbcbfefcb5bf5ae" kindref="member">RESULT_SKIP</ref>]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;skip<sp/>error&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[<ref refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a4afc80cf43bd4cdf7cbcbfefcb5bf5ae" kindref="member">RESULT_SKIP</ref>]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;skip&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(ret<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>ret<sp/>&lt;<sp/>ARRAY_LENGTH(names));</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>names[ret];</highlight></codeline>
+<codeline lineno="256"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><ref refid="weston-test-runner_8c_1a0356e2f55fbd20aa1dfa2e03503e594a" kindref="member">run_case</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structwet__testsuite__data" kindref="compound">wet_testsuite_data</ref><sp/>*suite_data,</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__test__entry" kindref="compound">weston_test_entry</ref><sp/>*t,</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="vertex-clip-test_8c_1a6115133101abda4c59ea992ce2982aeb" kindref="member">test_data</ref>,</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iteration)</highlight></codeline>
+<codeline lineno="263"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref><sp/>ret;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*fail<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="weston-test-client-helper_8c_1a70a6740f5702a0a4d532a927658d028f" kindref="member">skip</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fixture_nr<sp/>=<sp/>suite_data-&gt;<ref refid="structwet__testsuite__data_1a73c16d413050a5d633e8b1d6866f6b95" kindref="member">fixture_iteration</ref><sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iteration_nr<sp/>=<sp/>iteration<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__testharness_1gaa1538dfd4262a1feafd60cd1f09d9878" kindref="member">testlog</ref>(</highlight><highlight class="stringliteral">&quot;***<sp/>Run<sp/>%s<sp/>%s/%d\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>suite_data-&gt;<ref refid="structwet__testsuite__data_1a22b5ac1fc15302e5f27ba4fdbd99449f" kindref="member">fixture_name</ref>,<sp/>t-&gt;<ref refid="structweston__test__entry_1aa2d340947469ae6e1e1d21154ada010c" kindref="member">name</ref>,<sp/>iteration_nr);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(suite_data-&gt;<ref refid="structwet__testsuite__data_1a9058a6cc8cca95a80c3c4417aa2707db" kindref="member">type</ref><sp/>==<sp/><ref refid="group__testharness__private_1ggaac4452a7487c189982bfeaca04a1326fa3120f83ea36457050043776ca058fda2" kindref="member">TEST_TYPE_PLUGIN</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/><ref refid="weston-test-runner_8c_1a46417fa10946385478d634ea90ff877c" kindref="member">run_test</ref>(fixture_nr,<sp/>t,<sp/>suite_data-&gt;<ref refid="structwet__testsuite__data_1a51825d253002fb20aa5f45d8baa4661a" kindref="member">compositor</ref>,</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>iteration);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/><ref refid="weston-test-runner_8c_1a46417fa10946385478d634ea90ff877c" kindref="member">run_test</ref>(fixture_nr,<sp/>t,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)<ref refid="vertex-clip-test_8c_1a6115133101abda4c59ea992ce2982aeb" kindref="member">test_data</ref>,<sp/>iteration);</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(ret)<sp/>{</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a818c541216b4ca0e29b7885495a46ad2" kindref="member">RESULT_OK</ref>:</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>suite_data-&gt;<ref refid="structwet__testsuite__data_1a9c820aa6adadc2fb909cb17df263aa53" kindref="member">passed</ref>++;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103adbaa15b6c3bcc0196b4b314fac50e36c" kindref="member">RESULT_FAIL</ref>:</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a1a9437b5f7317085e7fc0358a47d32f3" kindref="member">RESULT_HARD_ERROR</ref>:</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>suite_data-&gt;<ref refid="structwet__testsuite__data_1a33b872ae5e946dc2b3c94745db4b05c0" kindref="member">failed</ref>++;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fail<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;not<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a4afc80cf43bd4cdf7cbcbfefcb5bf5ae" kindref="member">RESULT_SKIP</ref>:</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>suite_data-&gt;<ref refid="structwet__testsuite__data_1ad4d0227ba15118e44ebfdf4562c46987" kindref="member">skipped</ref>++;</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8c_1a70a6740f5702a0a4d532a927658d028f" kindref="member">skip</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;<sp/>#<sp/>SKIP&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>WESTON_TEST_SKIP_IS_FAILURE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fail<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;not<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__testharness_1gaa1538dfd4262a1feafd60cd1f09d9878" kindref="member">testlog</ref>(</highlight><highlight class="stringliteral">&quot;***<sp/>Result<sp/>%s<sp/>%s/%d:<sp/>%s\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>suite_data-&gt;<ref refid="structwet__testsuite__data_1a22b5ac1fc15302e5f27ba4fdbd99449f" kindref="member">fixture_name</ref>,<sp/>t-&gt;<ref refid="structweston__test__entry_1aa2d340947469ae6e1e1d21154ada010c" kindref="member">name</ref>,<sp/>iteration_nr,</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-runner_8c_1a222ab9aa101c64dce3c0a6ab2f7f5f1b" kindref="member">result_to_str</ref>(ret));</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>suite_data-&gt;<ref refid="structwet__testsuite__data_1a3bf92117893e3145dfa182e76ddd6c0f" kindref="member">counter</ref>++;</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%sok<sp/>%d<sp/>%s<sp/>%s/%d%s\n&quot;</highlight><highlight class="normal">,<sp/>fail,<sp/>suite_data-&gt;<ref refid="structwet__testsuite__data_1a3bf92117893e3145dfa182e76ddd6c0f" kindref="member">counter</ref>,</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>suite_data-&gt;<ref refid="structwet__testsuite__data_1a22b5ac1fc15302e5f27ba4fdbd99449f" kindref="member">fixture_name</ref>,<sp/>t-&gt;<ref refid="structweston__test__entry_1aa2d340947469ae6e1e1d21154ada010c" kindref="member">name</ref>,<sp/>iteration_nr,<sp/><ref refid="weston-test-client-helper_8c_1a70a6740f5702a0a4d532a927658d028f" kindref="member">skip</ref>);</highlight></codeline>
+<codeline lineno="305"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>This<sp/>function<sp/>might<sp/>run<sp/>in<sp/>a<sp/>new<sp/>thread<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><ref refid="weston-test-runner_8c_1ac4b6e16cbd094f5fdb06042c1c9b043a" kindref="member">testsuite_run</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structwet__testsuite__data" kindref="compound">wet_testsuite_data</ref><sp/>*data)</highlight></codeline>
+<codeline lineno="310"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-runner_8c_1a90b8f642b12378a1b6544f63cbd99efd" kindref="member">for_each_test_case</ref>(data,<sp/><ref refid="weston-test-runner_8c_1a0356e2f55fbd20aa1dfa2e03503e594a" kindref="member">run_case</ref>);</highlight></codeline>
+<codeline lineno="312"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><ref refid="weston-test-runner_8c_1acc8a914f1348ceeb6c89595be28bf34e" kindref="member">count_case</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structwet__testsuite__data" kindref="compound">wet_testsuite_data</ref><sp/>*suite_data,</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__test__entry" kindref="compound">weston_test_entry</ref><sp/>*t,</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="vertex-clip-test_8c_1a6115133101abda4c59ea992ce2982aeb" kindref="member">test_data</ref>,</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iteration)</highlight></codeline>
+<codeline lineno="319"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>suite_data-&gt;<ref refid="structwet__testsuite__data_1aead1a6f7b2d234e6ceca9decd3f27d39" kindref="member">total</ref>++;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><ref refid="weston-test-runner_8c_1ac42bd7970edaf552fac4a5323dc29923" kindref="member">tap_plan</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structwet__testsuite__data" kindref="compound">wet_testsuite_data</ref><sp/>*data,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count_fixtures)</highlight></codeline>
+<codeline lineno="325"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data-&gt;<ref refid="structwet__testsuite__data_1aead1a6f7b2d234e6ceca9decd3f27d39" kindref="member">total</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-runner_8c_1a90b8f642b12378a1b6544f63cbd99efd" kindref="member">for_each_test_case</ref>(data,<sp/><ref refid="weston-test-runner_8c_1acc8a914f1348ceeb6c89595be28bf34e" kindref="member">count_case</ref>);</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;1..%d\n&quot;</highlight><highlight class="normal">,<sp/>data-&gt;<ref refid="structwet__testsuite__data_1aead1a6f7b2d234e6ceca9decd3f27d39" kindref="member">total</ref><sp/>*<sp/>count_fixtures);</highlight></codeline>
+<codeline lineno="330"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><ref refid="weston-test-runner_8c_1a5d821c933f1f186346f36bc7009b4207" kindref="member">skip_case</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structwet__testsuite__data" kindref="compound">wet_testsuite_data</ref><sp/>*suite_data,</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__test__entry" kindref="compound">weston_test_entry</ref><sp/>*t,</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="vertex-clip-test_8c_1a6115133101abda4c59ea992ce2982aeb" kindref="member">test_data</ref>,</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iteration)</highlight></codeline>
+<codeline lineno="337"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*skip_error<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iteration_nr<sp/>=<sp/>iteration<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>WESTON_TEST_SKIP_IS_FAILURE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>skip_error<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;not<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>suite_data-&gt;<ref refid="structwet__testsuite__data_1a3bf92117893e3145dfa182e76ddd6c0f" kindref="member">counter</ref>++;</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%sok<sp/>%d<sp/>%s<sp/>%s/%d<sp/>#<sp/>SKIP<sp/>fixture\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>skip_error,<sp/>suite_data-&gt;<ref refid="structwet__testsuite__data_1a3bf92117893e3145dfa182e76ddd6c0f" kindref="member">counter</ref>,</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>suite_data-&gt;<ref refid="structwet__testsuite__data_1a22b5ac1fc15302e5f27ba4fdbd99449f" kindref="member">fixture_name</ref>,<sp/>t-&gt;<ref refid="structweston__test__entry_1aa2d340947469ae6e1e1d21154ada010c" kindref="member">name</ref>,<sp/>iteration_nr);</highlight></codeline>
+<codeline lineno="349"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><ref refid="weston-test-runner_8c_1a175f1f6de5cca46589bc8033e2c86507" kindref="member">tap_skip_fixture</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structwet__testsuite__data" kindref="compound">wet_testsuite_data</ref><sp/>*data)</highlight></codeline>
+<codeline lineno="353"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-runner_8c_1a90b8f642b12378a1b6544f63cbd99efd" kindref="member">for_each_test_case</ref>(data,<sp/><ref refid="weston-test-runner_8c_1a5d821c933f1f186346f36bc7009b4207" kindref="member">skip_case</ref>);</highlight></codeline>
+<codeline lineno="355"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><ref refid="weston-test-runner_8c_1a51ea1db09acd9d77f8780f7a450fbe5a" kindref="member">help</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*exe)</highlight></codeline>
+<codeline lineno="359"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Usage:<sp/>%s<sp/>[options]<sp/>[testname<sp/>[number]]\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;This<sp/>is<sp/>a<sp/>Weston<sp/>test<sp/>suite<sp/>executable<sp/>that<sp/>runs<sp/>some<sp/>tests.\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Options:\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/>-f,<sp/>--fixture<sp/>N<sp/><sp/>Run<sp/>only<sp/>fixture<sp/>number<sp/>N.<sp/>0<sp/>runs<sp/>all<sp/>(default).\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/>-h,<sp/>--help<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Print<sp/>this<sp/>help<sp/>and<sp/>exit<sp/>with<sp/>success.\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/>-l,<sp/>--list<sp/><sp/><sp/><sp/><sp/><sp/><sp/>List<sp/>all<sp/>tests<sp/>in<sp/>this<sp/>executable<sp/>and<sp/>exit<sp/>with<sp/>success.\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;testname:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Optional;<sp/>name<sp/>of<sp/>the<sp/>test<sp/>to<sp/>execute<sp/>instead<sp/>of<sp/>all<sp/>tests.\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;number:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Optional;<sp/>for<sp/>a<sp/>multi-case<sp/>test,<sp/>run<sp/>the<sp/>given<sp/>case<sp/>only.\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Both<sp/>fixture<sp/>and<sp/>case<sp/>numbering<sp/>starts<sp/>from<sp/>1.\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exe);</highlight></codeline>
+<codeline lineno="372"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"></highlight></codeline>
+<codeline lineno="374"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><ref refid="weston-test-runner_8c_1a428a83a736ca2fbf2f9390552713dcaa" kindref="member">parse_command_line</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref><sp/>*harness,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**argv)</highlight></codeline>
+<codeline lineno="376"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>c;</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">option<sp/>opts[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="stringliteral">&quot;fixture&quot;</highlight><highlight class="normal">,<sp/>required_argument,<sp/>NULL,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;f&apos;</highlight><highlight class="normal"><sp/>},</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="stringliteral">&quot;help&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/>no_argument,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;h&apos;</highlight><highlight class="normal"><sp/>},</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="stringliteral">&quot;list&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/>no_argument,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;l&apos;</highlight><highlight class="normal"><sp/>},</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL,<sp/><sp/><sp/><sp/><sp/><sp/>0<sp/><sp/>}</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"></highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((c<sp/>=<sp/>getopt_long(argc,<sp/>argv,<sp/></highlight><highlight class="stringliteral">&quot;f:hl&quot;</highlight><highlight class="normal">,<sp/>opts,<sp/>NULL))<sp/>!=<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(c)<sp/>{</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;f&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!safe_strtoint(optarg,<sp/>&amp;harness-&gt;<ref refid="structweston__test__harness_1a91beb28acb0a6401fecfe7b89758cd55" kindref="member">fixt_ind</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Error:<sp/>&apos;%s&apos;<sp/>does<sp/>not<sp/>look<sp/>like<sp/>a<sp/>number<sp/>(command<sp/>line).\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>optarg);</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(<ref refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a1a9437b5f7317085e7fc0358a47d32f3" kindref="member">RESULT_HARD_ERROR</ref>);</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>harness-&gt;<ref refid="structweston__test__harness_1a91beb28acb0a6401fecfe7b89758cd55" kindref="member">fixt_ind</ref>--;<sp/></highlight><highlight class="comment">/*<sp/>convert<sp/>base-1<sp/>to<sp/>base<sp/>0<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;h&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-runner_8c_1a51ea1db09acd9d77f8780f7a450fbe5a" kindref="member">help</ref>(argv[0]);</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(<ref refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a818c541216b4ca0e29b7885495a46ad2" kindref="member">RESULT_OK</ref>);</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;l&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-runner_8c_1a18ba97fffd1e133efcbbfdb9fc629641" kindref="member">list_tests</ref>();</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(<ref refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a818c541216b4ca0e29b7885495a46ad2" kindref="member">RESULT_OK</ref>);</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:</highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(<ref refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a1a9437b5f7317085e7fc0358a47d32f3" kindref="member">RESULT_HARD_ERROR</ref>);</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"></highlight></codeline>
+<codeline lineno="409"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(optind<sp/>&lt;<sp/>argc)</highlight></codeline>
+<codeline lineno="410"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>harness-&gt;<ref refid="structweston__test__harness_1a67c17aa4a31971c76c9a5efff00b93c6" kindref="member">chosen_testname</ref><sp/>=<sp/>argv[optind++];</highlight></codeline>
+<codeline lineno="411"><highlight class="normal"></highlight></codeline>
+<codeline lineno="412"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(optind<sp/>&lt;<sp/>argc)<sp/>{</highlight></codeline>
+<codeline lineno="413"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!safe_strtoint(argv[optind],<sp/>&amp;harness-&gt;<ref refid="structweston__test__harness_1a737150dc8272ab37cc08557274ae7563" kindref="member">case_ind</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="414"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,</highlight></codeline>
+<codeline lineno="415"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Error:<sp/>&apos;%s&apos;<sp/>does<sp/>not<sp/>look<sp/>like<sp/>a<sp/>number<sp/>(command<sp/>line).\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="416"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>argv[optind]);</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(<ref refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a1a9437b5f7317085e7fc0358a47d32f3" kindref="member">RESULT_HARD_ERROR</ref>);</highlight></codeline>
+<codeline lineno="418"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="419"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>harness-&gt;<ref refid="structweston__test__harness_1a737150dc8272ab37cc08557274ae7563" kindref="member">case_ind</ref>--;<sp/></highlight><highlight class="comment">/*<sp/>convert<sp/>base-1<sp/>to<sp/>base<sp/>0<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="420"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>optind++;</highlight></codeline>
+<codeline lineno="421"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="422"><highlight class="normal"></highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(optind<sp/>&lt;<sp/>argc)<sp/>{</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Unexpected<sp/>extra<sp/>arguments<sp/>given<sp/>(command<sp/>line).\n\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="425"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-runner_8c_1a51ea1db09acd9d77f8780f7a450fbe5a" kindref="member">help</ref>(argv[0]);</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(<ref refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a1a9437b5f7317085e7fc0358a47d32f3" kindref="member">RESULT_HARD_ERROR</ref>);</highlight></codeline>
+<codeline lineno="427"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="428"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"></highlight></codeline>
+<codeline lineno="430"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref><sp/>*</highlight></codeline>
+<codeline lineno="431"><highlight class="normal"><ref refid="weston-test-runner_8c_1abed005fa71f43ceecd716c33942bc1ce" kindref="member">weston_test_harness_create</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**argv)</highlight></codeline>
+<codeline lineno="432"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfixture__setup__array" kindref="compound">fixture_setup_array</ref><sp/>*fsa;</highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref><sp/>*harness;</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"></highlight></codeline>
+<codeline lineno="436"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>harness<sp/>=<sp/><ref refid="zalloc_8h_1a260ac290b02627b12230b313c8fa92b3" kindref="member">zalloc</ref>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*harness));</highlight></codeline>
+<codeline lineno="437"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(harness);</highlight></codeline>
+<codeline lineno="438"><highlight class="normal"></highlight></codeline>
+<codeline lineno="439"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>harness-&gt;<ref refid="structweston__test__harness_1a91beb28acb0a6401fecfe7b89758cd55" kindref="member">fixt_ind</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>harness-&gt;<ref refid="structweston__test__harness_1a737150dc8272ab37cc08557274ae7563" kindref="member">case_ind</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-runner_8c_1a428a83a736ca2fbf2f9390552713dcaa" kindref="member">parse_command_line</ref>(harness,<sp/>argc,<sp/>argv);</highlight></codeline>
+<codeline lineno="442"><highlight class="normal"></highlight></codeline>
+<codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fsa<sp/>=<sp/><ref refid="group__testharness_1ga02d7b07ce89636ff14598286827d279d" kindref="member">fixture_setup_array_get_</ref>();</highlight></codeline>
+<codeline lineno="444"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(harness-&gt;<ref refid="structweston__test__harness_1a91beb28acb0a6401fecfe7b89758cd55" kindref="member">fixt_ind</ref><sp/>&lt;<sp/>-1<sp/>||<sp/>harness-&gt;<ref refid="structweston__test__harness_1a91beb28acb0a6401fecfe7b89758cd55" kindref="member">fixt_ind</ref><sp/>&gt;=<sp/>fsa-&gt;<ref refid="structfixture__setup__array_1a6951fe80c14c9cd286965c3745d4d366" kindref="member">n_elements</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,</highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Error:<sp/>fixture<sp/>index<sp/>%d<sp/>(command<sp/>line)<sp/>is<sp/>invalid<sp/>for<sp/>this<sp/>program.\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>harness-&gt;<ref refid="structweston__test__harness_1a91beb28acb0a6401fecfe7b89758cd55" kindref="member">fixt_ind</ref><sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="448"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(<ref refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a1a9437b5f7317085e7fc0358a47d32f3" kindref="member">RESULT_HARD_ERROR</ref>);</highlight></codeline>
+<codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="450"><highlight class="normal"></highlight></codeline>
+<codeline lineno="451"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(harness-&gt;<ref refid="structweston__test__harness_1a67c17aa4a31971c76c9a5efff00b93c6" kindref="member">chosen_testname</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__test__entry" kindref="compound">weston_test_entry</ref><sp/>*t;</highlight></codeline>
+<codeline lineno="453"><highlight class="normal"></highlight></codeline>
+<codeline lineno="454"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t<sp/>=<sp/><ref refid="weston-test-runner_8c_1a091bf06ad4d8958c37f71bab256036a3" kindref="member">find_test</ref>(harness-&gt;<ref refid="structweston__test__harness_1a67c17aa4a31971c76c9a5efff00b93c6" kindref="member">chosen_testname</ref>);</highlight></codeline>
+<codeline lineno="455"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!t)<sp/>{</highlight></codeline>
+<codeline lineno="456"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,</highlight></codeline>
+<codeline lineno="457"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Error:<sp/>test<sp/>&apos;%s&apos;<sp/>not<sp/>found<sp/>(command<sp/>line).\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="458"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>harness-&gt;<ref refid="structweston__test__harness_1a67c17aa4a31971c76c9a5efff00b93c6" kindref="member">chosen_testname</ref>);</highlight></codeline>
+<codeline lineno="459"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(<ref refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a1a9437b5f7317085e7fc0358a47d32f3" kindref="member">RESULT_HARD_ERROR</ref>);</highlight></codeline>
+<codeline lineno="460"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="461"><highlight class="normal"></highlight></codeline>
+<codeline lineno="462"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(harness-&gt;<ref refid="structweston__test__harness_1a737150dc8272ab37cc08557274ae7563" kindref="member">case_ind</ref><sp/>&lt;<sp/>-1<sp/>||</highlight></codeline>
+<codeline lineno="463"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>harness-&gt;<ref refid="structweston__test__harness_1a737150dc8272ab37cc08557274ae7563" kindref="member">case_ind</ref><sp/>&gt;=<sp/>t-&gt;<ref refid="structweston__test__entry_1a12a79b4e5483c31ac942f7e2ad15cf28" kindref="member">n_elements</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="464"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,</highlight></codeline>
+<codeline lineno="465"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Error:<sp/>case<sp/>index<sp/>%d<sp/>(command<sp/>line)<sp/>is<sp/>invalid<sp/>for<sp/>this<sp/>test.\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="466"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>harness-&gt;<ref refid="structweston__test__harness_1a737150dc8272ab37cc08557274ae7563" kindref="member">case_ind</ref><sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(<ref refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a1a9437b5f7317085e7fc0358a47d32f3" kindref="member">RESULT_HARD_ERROR</ref>);</highlight></codeline>
+<codeline lineno="468"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="469"><highlight class="normal"></highlight></codeline>
+<codeline lineno="470"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>harness-&gt;<ref refid="structweston__test__harness_1a853fe4d2d402c4ddee253453bc9e3771" kindref="member">data</ref>.<ref refid="structwet__testsuite__data_1a029a517bc21ee17737e87cf5e6d94aa0" kindref="member">tests</ref><sp/>=<sp/>t;</highlight></codeline>
+<codeline lineno="471"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>harness-&gt;<ref refid="structweston__test__harness_1a853fe4d2d402c4ddee253453bc9e3771" kindref="member">data</ref>.<ref refid="structwet__testsuite__data_1a4b4c9647bf38610bc13bd09a24d6d80c" kindref="member">tests_count</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="472"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>harness-&gt;<ref refid="structweston__test__harness_1a853fe4d2d402c4ddee253453bc9e3771" kindref="member">data</ref>.<ref refid="structwet__testsuite__data_1aab2f9cb5578501e4e4d001f786584a4c" kindref="member">case_index</ref><sp/>=<sp/>harness-&gt;<ref refid="structweston__test__harness_1a737150dc8272ab37cc08557274ae7563" kindref="member">case_ind</ref>;</highlight></codeline>
+<codeline lineno="473"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="474"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>harness-&gt;<ref refid="structweston__test__harness_1a853fe4d2d402c4ddee253453bc9e3771" kindref="member">data</ref>.<ref refid="structwet__testsuite__data_1a029a517bc21ee17737e87cf5e6d94aa0" kindref="member">tests</ref><sp/>=<sp/>&amp;__start_test_section;</highlight></codeline>
+<codeline lineno="475"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>harness-&gt;<ref refid="structweston__test__harness_1a853fe4d2d402c4ddee253453bc9e3771" kindref="member">data</ref>.<ref refid="structwet__testsuite__data_1a4b4c9647bf38610bc13bd09a24d6d80c" kindref="member">tests_count</ref><sp/>=</highlight></codeline>
+<codeline lineno="476"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="weston-test-runner_8c_1a10abd8530a8aa8cd06e3e7f4b548dbcb" kindref="member">__stop_test_section</ref><sp/>-<sp/>&amp;__start_test_section;</highlight></codeline>
+<codeline lineno="477"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>harness-&gt;<ref refid="structweston__test__harness_1a853fe4d2d402c4ddee253453bc9e3771" kindref="member">data</ref>.<ref refid="structwet__testsuite__data_1aab2f9cb5578501e4e4d001f786584a4c" kindref="member">case_index</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="478"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="479"><highlight class="normal"></highlight></codeline>
+<codeline lineno="480"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>harness-&gt;<ref refid="structweston__test__harness_1a853fe4d2d402c4ddee253453bc9e3771" kindref="member">data</ref>.<ref refid="structwet__testsuite__data_1aa778aef8c2990ddf1367f24d5af3b23b" kindref="member">run</ref><sp/>=<sp/><ref refid="weston-test-runner_8c_1ac4b6e16cbd094f5fdb06042c1c9b043a" kindref="member">testsuite_run</ref>;</highlight></codeline>
+<codeline lineno="481"><highlight class="normal"></highlight></codeline>
+<codeline lineno="482"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>harness;</highlight></codeline>
+<codeline lineno="483"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="484"><highlight class="normal"></highlight></codeline>
+<codeline lineno="485"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="486"><highlight class="normal"><ref refid="weston-test-runner_8c_1a7d37f35c90a9c240094943ba9a545b21" kindref="member">weston_test_harness_destroy</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref><sp/>*harness)</highlight></codeline>
+<codeline lineno="487"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="488"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(harness);</highlight></codeline>
+<codeline lineno="489"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="490"><highlight class="normal"></highlight></codeline>
+<codeline lineno="491"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></highlight></codeline>
+<codeline lineno="492"><highlight class="normal"><ref refid="weston-test-runner_8c_1a839cc498e73be003df0e33af6431bd8d" kindref="member">counts_to_result</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structwet__testsuite__data" kindref="compound">wet_testsuite_data</ref><sp/>*data)</highlight></codeline>
+<codeline lineno="493"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="494"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>WESTON_TEST_SKIP_IS_FAILURE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="495"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(data-&gt;<ref refid="structwet__testsuite__data_1ad4d0227ba15118e44ebfdf4562c46987" kindref="member">skipped</ref><sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="496"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103adbaa15b6c3bcc0196b4b314fac50e36c" kindref="member">RESULT_FAIL</ref>;</highlight></codeline>
+<codeline lineno="497"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="498"><highlight class="normal"></highlight></codeline>
+<codeline lineno="499"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>RESULT_SKIP<sp/>is<sp/>reserved<sp/>for<sp/>fixture<sp/>setup<sp/>itself<sp/>skipping<sp/>everything<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="500"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(data-&gt;<ref refid="structwet__testsuite__data_1aead1a6f7b2d234e6ceca9decd3f27d39" kindref="member">total</ref><sp/>==<sp/>data-&gt;<ref refid="structwet__testsuite__data_1a9c820aa6adadc2fb909cb17df263aa53" kindref="member">passed</ref><sp/>+<sp/>data-&gt;<ref refid="structwet__testsuite__data_1ad4d0227ba15118e44ebfdf4562c46987" kindref="member">skipped</ref>)</highlight></codeline>
+<codeline lineno="501"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a818c541216b4ca0e29b7885495a46ad2" kindref="member">RESULT_OK</ref>;</highlight></codeline>
+<codeline lineno="502"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103adbaa15b6c3bcc0196b4b314fac50e36c" kindref="member">RESULT_FAIL</ref>;</highlight></codeline>
+<codeline lineno="503"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="504"><highlight class="normal"></highlight></codeline>
+<codeline lineno="521"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></highlight></codeline>
+<codeline lineno="522"><highlight class="normal"><ref refid="group__testharness_1gacd7b26a0f0f337781013b40d229cf262" kindref="member">weston_test_harness_execute_as_client</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref><sp/>*harness,</highlight></codeline>
+<codeline lineno="523"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structcompositor__setup" kindref="compound">compositor_setup</ref><sp/>*setup)</highlight></codeline>
+<codeline lineno="524"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="525"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structwet__testsuite__data" kindref="compound">wet_testsuite_data</ref><sp/>*data<sp/>=<sp/>&amp;harness-&gt;<ref refid="structweston__test__harness_1a853fe4d2d402c4ddee253453bc9e3771" kindref="member">data</ref>;</highlight></codeline>
+<codeline lineno="526"><highlight class="normal"></highlight></codeline>
+<codeline lineno="527"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data-&gt;<ref refid="structwet__testsuite__data_1a9058a6cc8cca95a80c3c4417aa2707db" kindref="member">type</ref><sp/>=<sp/><ref refid="group__testharness__private_1ggaac4452a7487c189982bfeaca04a1326fa29e6ee8780af534f3ec9f60fa1c24763" kindref="member">TEST_TYPE_CLIENT</ref>;</highlight></codeline>
+<codeline lineno="528"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__testharness__private_1gad9955329c6b705ef5be29d881347b5b1" kindref="member">execute_compositor</ref>(setup,<sp/>data);</highlight></codeline>
+<codeline lineno="529"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="530"><highlight class="normal"></highlight></codeline>
+<codeline lineno="546"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></highlight></codeline>
+<codeline lineno="547"><highlight class="normal"><ref refid="group__testharness_1gabc3f5a45b58ee07331059eb120f7b2bb" kindref="member">weston_test_harness_execute_as_plugin</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref><sp/>*harness,</highlight></codeline>
+<codeline lineno="548"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structcompositor__setup" kindref="compound">compositor_setup</ref><sp/>*setup)</highlight></codeline>
+<codeline lineno="549"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="550"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structwet__testsuite__data" kindref="compound">wet_testsuite_data</ref><sp/>*data<sp/>=<sp/>&amp;harness-&gt;<ref refid="structweston__test__harness_1a853fe4d2d402c4ddee253453bc9e3771" kindref="member">data</ref>;</highlight></codeline>
+<codeline lineno="551"><highlight class="normal"></highlight></codeline>
+<codeline lineno="552"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data-&gt;<ref refid="structwet__testsuite__data_1a9058a6cc8cca95a80c3c4417aa2707db" kindref="member">type</ref><sp/>=<sp/><ref refid="group__testharness__private_1ggaac4452a7487c189982bfeaca04a1326fa3120f83ea36457050043776ca058fda2" kindref="member">TEST_TYPE_PLUGIN</ref>;</highlight></codeline>
+<codeline lineno="553"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__testharness__private_1gad9955329c6b705ef5be29d881347b5b1" kindref="member">execute_compositor</ref>(setup,<sp/>data);</highlight></codeline>
+<codeline lineno="554"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="555"><highlight class="normal"></highlight></codeline>
+<codeline lineno="566"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></highlight></codeline>
+<codeline lineno="567"><highlight class="normal"><ref refid="group__testharness_1ga9f98c3e898eb09ad2bd86343199ff619" kindref="member">weston_test_harness_execute_standalone</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref><sp/>*harness)</highlight></codeline>
+<codeline lineno="568"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="569"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structwet__testsuite__data" kindref="compound">wet_testsuite_data</ref><sp/>*data<sp/>=<sp/>&amp;harness-&gt;<ref refid="structweston__test__harness_1a853fe4d2d402c4ddee253453bc9e3771" kindref="member">data</ref>;</highlight></codeline>
+<codeline lineno="570"><highlight class="normal"></highlight></codeline>
+<codeline lineno="571"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data-&gt;<ref refid="structwet__testsuite__data_1a9058a6cc8cca95a80c3c4417aa2707db" kindref="member">type</ref><sp/>=<sp/><ref refid="group__testharness__private_1ggaac4452a7487c189982bfeaca04a1326fafa838cea02f9c1b9df0c3cc3dbd1dc85" kindref="member">TEST_TYPE_STANDALONE</ref>;</highlight></codeline>
+<codeline lineno="572"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data-&gt;<ref refid="structwet__testsuite__data_1aa778aef8c2990ddf1367f24d5af3b23b" kindref="member">run</ref>(data);</highlight></codeline>
+<codeline lineno="573"><highlight class="normal"></highlight></codeline>
+<codeline lineno="574"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a818c541216b4ca0e29b7885495a46ad2" kindref="member">RESULT_OK</ref>;</highlight></codeline>
+<codeline lineno="575"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="576"><highlight class="normal"></highlight></codeline>
+<codeline lineno="584"><highlight class="normal">__attribute__((weak))<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfixture__setup__array" kindref="compound">fixture_setup_array</ref><sp/>*</highlight></codeline>
+<codeline lineno="585"><highlight class="normal"><ref refid="group__testharness_1ga02d7b07ce89636ff14598286827d279d" kindref="member">fixture_setup_array_get_</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="586"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="587"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>A<sp/>dummy<sp/>fixture<sp/>without<sp/>a<sp/>data<sp/>array.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="588"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfixture__setup__array" kindref="compound">fixture_setup_array</ref><sp/>default_fsa<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="589"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="structfixture__setup__array_1aee35175bb680c0a47025cf2502a96f7c" kindref="member">array</ref><sp/>=<sp/>NULL,</highlight></codeline>
+<codeline lineno="590"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.element_size<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="591"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.n_elements<sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="592"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.meta_offset<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="593"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="594"><highlight class="normal"></highlight></codeline>
+<codeline lineno="595"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;default_fsa;</highlight></codeline>
+<codeline lineno="596"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="597"><highlight class="normal"></highlight></codeline>
+<codeline lineno="607"><highlight class="normal">__attribute__((weak))<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></highlight></codeline>
+<codeline lineno="608"><highlight class="normal"><ref refid="group__testharness_1ga46577b43cb4378b2289ebfb91f5c6010" kindref="member">fixture_setup_run_</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref><sp/>*harness,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*arg_)</highlight></codeline>
+<codeline lineno="609"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="610"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1ga9f98c3e898eb09ad2bd86343199ff619" kindref="member">weston_test_harness_execute_standalone</ref>(harness);</highlight></codeline>
+<codeline lineno="611"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="612"><highlight class="normal"></highlight></codeline>
+<codeline lineno="613"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="614"><highlight class="normal"><ref refid="weston-test-runner_8c_1afb7c0310280c171f6d429be4ea645e4f" kindref="member">fixture_report</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structwet__testsuite__data" kindref="compound">wet_testsuite_data</ref><sp/>*d,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref><sp/>ret)</highlight></codeline>
+<codeline lineno="615"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="616"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fixture_nr<sp/>=<sp/>d-&gt;<ref refid="structwet__testsuite__data_1a73c16d413050a5d633e8b1d6866f6b95" kindref="member">fixture_iteration</ref><sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="617"><highlight class="normal"></highlight></codeline>
+<codeline lineno="618"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__testharness_1gaa1538dfd4262a1feafd60cd1f09d9878" kindref="member">testlog</ref>(</highlight><highlight class="stringliteral">&quot;---<sp/>Fixture<sp/>%d<sp/>(%s)<sp/>%s:<sp/>passed<sp/>%d,<sp/>skipped<sp/>%d,<sp/>failed<sp/>%d,<sp/>total<sp/>%d\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="619"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fixture_nr,<sp/>d-&gt;<ref refid="structwet__testsuite__data_1a22b5ac1fc15302e5f27ba4fdbd99449f" kindref="member">fixture_name</ref>,<sp/><ref refid="weston-test-runner_8c_1a222ab9aa101c64dce3c0a6ab2f7f5f1b" kindref="member">result_to_str</ref>(ret),</highlight></codeline>
+<codeline lineno="620"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>d-&gt;<ref refid="structwet__testsuite__data_1a9c820aa6adadc2fb909cb17df263aa53" kindref="member">passed</ref>,<sp/>d-&gt;<ref refid="structwet__testsuite__data_1ad4d0227ba15118e44ebfdf4562c46987" kindref="member">skipped</ref>,<sp/>d-&gt;<ref refid="structwet__testsuite__data_1a33b872ae5e946dc2b3c94745db4b05c0" kindref="member">failed</ref>,<sp/>d-&gt;<ref refid="structwet__testsuite__data_1aead1a6f7b2d234e6ceca9decd3f27d39" kindref="member">total</ref>);</highlight></codeline>
+<codeline lineno="621"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="622"><highlight class="normal"></highlight></codeline>
+<codeline lineno="623"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="624"><highlight class="normal"><ref refid="weston-test-runner_8c_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])</highlight></codeline>
+<codeline lineno="625"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="626"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref><sp/>*harness;</highlight></codeline>
+<codeline lineno="627"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref><sp/>ret;</highlight></codeline>
+<codeline lineno="628"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref><sp/>result<sp/>=<sp/><ref refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a818c541216b4ca0e29b7885495a46ad2" kindref="member">RESULT_OK</ref>;</highlight></codeline>
+<codeline lineno="629"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfixture__setup__array" kindref="compound">fixture_setup_array</ref><sp/>*fsa;</highlight></codeline>
+<codeline lineno="630"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fi;</highlight></codeline>
+<codeline lineno="631"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fi_end;</highlight></codeline>
+<codeline lineno="632"><highlight class="normal"></highlight></codeline>
+<codeline lineno="633"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>harness<sp/>=<sp/><ref refid="weston-test-runner_8c_1abed005fa71f43ceecd716c33942bc1ce" kindref="member">weston_test_harness_create</ref>(argc,<sp/>argv);</highlight></codeline>
+<codeline lineno="634"><highlight class="normal"></highlight></codeline>
+<codeline lineno="635"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fsa<sp/>=<sp/><ref refid="group__testharness_1ga02d7b07ce89636ff14598286827d279d" kindref="member">fixture_setup_array_get_</ref>();</highlight></codeline>
+<codeline lineno="636"><highlight class="normal"></highlight></codeline>
+<codeline lineno="637"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(harness-&gt;<ref refid="structweston__test__harness_1a91beb28acb0a6401fecfe7b89758cd55" kindref="member">fixt_ind</ref><sp/>==<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="638"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fi<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="639"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fi_end<sp/>=<sp/>fsa-&gt;<ref refid="structfixture__setup__array_1a6951fe80c14c9cd286965c3745d4d366" kindref="member">n_elements</ref>;</highlight></codeline>
+<codeline lineno="640"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="641"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fi<sp/>=<sp/>harness-&gt;<ref refid="structweston__test__harness_1a91beb28acb0a6401fecfe7b89758cd55" kindref="member">fixt_ind</ref>;</highlight></codeline>
+<codeline lineno="642"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fi_end<sp/>=<sp/>fi<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="643"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="644"><highlight class="normal"></highlight></codeline>
+<codeline lineno="645"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-runner_8c_1ac42bd7970edaf552fac4a5323dc29923" kindref="member">tap_plan</ref>(&amp;harness-&gt;<ref refid="structweston__test__harness_1a853fe4d2d402c4ddee253453bc9e3771" kindref="member">data</ref>,<sp/>fi_end<sp/>-<sp/>fi);</highlight></codeline>
+<codeline lineno="646"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__testharness_1gaa1538dfd4262a1feafd60cd1f09d9878" kindref="member">testlog</ref>(</highlight><highlight class="stringliteral">&quot;Iterating<sp/>through<sp/>%d<sp/>fixtures.\n&quot;</highlight><highlight class="normal">,<sp/>fi_end<sp/>-<sp/>fi);</highlight></codeline>
+<codeline lineno="647"><highlight class="normal"></highlight></codeline>
+<codeline lineno="648"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>fi<sp/>&lt;<sp/>fi_end;<sp/>fi++)<sp/>{</highlight></codeline>
+<codeline lineno="649"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*arg<sp/>=<sp/><ref refid="weston-test-runner_8c_1ab88f6d36ffea5bd84606f7c5c94b827d" kindref="member">fixture_setup_array_get_arg</ref>(fsa,<sp/>fi);</highlight></codeline>
+<codeline lineno="650"><highlight class="normal"></highlight></codeline>
+<codeline lineno="651"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>harness-&gt;<ref refid="structweston__test__harness_1a853fe4d2d402c4ddee253453bc9e3771" kindref="member">data</ref>.<ref refid="structwet__testsuite__data_1a73c16d413050a5d633e8b1d6866f6b95" kindref="member">fixture_iteration</ref><sp/>=<sp/>fi;</highlight></codeline>
+<codeline lineno="652"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>harness-&gt;<ref refid="structweston__test__harness_1a853fe4d2d402c4ddee253453bc9e3771" kindref="member">data</ref>.<ref refid="structwet__testsuite__data_1a22b5ac1fc15302e5f27ba4fdbd99449f" kindref="member">fixture_name</ref><sp/>=<sp/><ref refid="weston-test-runner_8c_1adfb5219521aa984e2ce0a267d123f980" kindref="member">fixture_setup_array_get_name</ref>(fsa,</highlight></codeline>
+<codeline lineno="653"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fi);</highlight></codeline>
+<codeline lineno="654"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>harness-&gt;<ref refid="structweston__test__harness_1a853fe4d2d402c4ddee253453bc9e3771" kindref="member">data</ref>.<ref refid="structwet__testsuite__data_1a9c820aa6adadc2fb909cb17df263aa53" kindref="member">passed</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="655"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>harness-&gt;<ref refid="structweston__test__harness_1a853fe4d2d402c4ddee253453bc9e3771" kindref="member">data</ref>.<ref refid="structwet__testsuite__data_1ad4d0227ba15118e44ebfdf4562c46987" kindref="member">skipped</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="656"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>harness-&gt;<ref refid="structweston__test__harness_1a853fe4d2d402c4ddee253453bc9e3771" kindref="member">data</ref>.<ref refid="structwet__testsuite__data_1a33b872ae5e946dc2b3c94745db4b05c0" kindref="member">failed</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="657"><highlight class="normal"></highlight></codeline>
+<codeline lineno="658"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__testharness_1gaa1538dfd4262a1feafd60cd1f09d9878" kindref="member">testlog</ref>(</highlight><highlight class="stringliteral">&quot;---<sp/>Fixture<sp/>%d<sp/>(%s)...\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="659"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fi<sp/>+<sp/>1,<sp/>harness-&gt;<ref refid="structweston__test__harness_1a853fe4d2d402c4ddee253453bc9e3771" kindref="member">data</ref>.<ref refid="structwet__testsuite__data_1a22b5ac1fc15302e5f27ba4fdbd99449f" kindref="member">fixture_name</ref>);</highlight></codeline>
+<codeline lineno="660"><highlight class="normal"></highlight></codeline>
+<codeline lineno="661"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/><ref refid="group__testharness_1ga46577b43cb4378b2289ebfb91f5c6010" kindref="member">fixture_setup_run_</ref>(harness,<sp/>arg);</highlight></codeline>
+<codeline lineno="662"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-runner_8c_1afb7c0310280c171f6d429be4ea645e4f" kindref="member">fixture_report</ref>(&amp;harness-&gt;<ref refid="structweston__test__harness_1a853fe4d2d402c4ddee253453bc9e3771" kindref="member">data</ref>,<sp/>ret);</highlight></codeline>
+<codeline lineno="663"><highlight class="normal"></highlight></codeline>
+<codeline lineno="664"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ret<sp/>==<sp/><ref refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a4afc80cf43bd4cdf7cbcbfefcb5bf5ae" kindref="member">RESULT_SKIP</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="665"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-runner_8c_1a175f1f6de5cca46589bc8033e2c86507" kindref="member">tap_skip_fixture</ref>(&amp;harness-&gt;<ref refid="structweston__test__harness_1a853fe4d2d402c4ddee253453bc9e3771" kindref="member">data</ref>);</highlight></codeline>
+<codeline lineno="666"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>WESTON_TEST_SKIP_IS_FAILURE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="667"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/><ref refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103adbaa15b6c3bcc0196b4b314fac50e36c" kindref="member">RESULT_FAIL</ref>;</highlight></codeline>
+<codeline lineno="668"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="669"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="670"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="671"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="672"><highlight class="normal"></highlight></codeline>
+<codeline lineno="673"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ret<sp/>!=<sp/><ref refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a818c541216b4ca0e29b7885495a46ad2" kindref="member">RESULT_OK</ref><sp/>&amp;&amp;<sp/>result<sp/>!=<sp/><ref refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a1a9437b5f7317085e7fc0358a47d32f3" kindref="member">RESULT_HARD_ERROR</ref>)</highlight></codeline>
+<codeline lineno="674"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>ret;</highlight></codeline>
+<codeline lineno="675"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="weston-test-runner_8c_1a839cc498e73be003df0e33af6431bd8d" kindref="member">counts_to_result</ref>(&amp;harness-&gt;<ref refid="structweston__test__harness_1a853fe4d2d402c4ddee253453bc9e3771" kindref="member">data</ref>)<sp/>!=<sp/><ref refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a818c541216b4ca0e29b7885495a46ad2" kindref="member">RESULT_OK</ref>)</highlight></codeline>
+<codeline lineno="676"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/><ref refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103adbaa15b6c3bcc0196b4b314fac50e36c" kindref="member">RESULT_FAIL</ref>;</highlight></codeline>
+<codeline lineno="677"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="678"><highlight class="normal"></highlight></codeline>
+<codeline lineno="679"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-runner_8c_1a7d37f35c90a9c240094943ba9a545b21" kindref="member">weston_test_harness_destroy</ref>(harness);</highlight></codeline>
+<codeline lineno="680"><highlight class="normal"></highlight></codeline>
+<codeline lineno="681"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="682"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c"/>
+  </compounddef>
+</doxygen>

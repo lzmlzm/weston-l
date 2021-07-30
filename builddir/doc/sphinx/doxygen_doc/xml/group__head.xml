@@ -1,0 +1,803 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="group__head" kind="group">
+    <compoundname>head</compoundname>
+    <title>Head</title>
+    <innerclass refid="structweston__head" prot="public">weston_head</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__head_1ga09a7ecebc209197f9691e09a4c8a3c8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structweston__head" kindref="compound">weston_head</ref> *</type>
+        <definition>struct weston_head* weston_head_from_resource</definition>
+        <argsstring>(struct wl_resource *resource)</argsstring>
+        <name>weston_head_from_resource</name>
+        <param>
+          <type>struct wl_resource *</type>
+          <declname>resource</declname>
+        </param>
+        <briefdescription>
+<para>Get the backing object of wl_output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>resource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A wl_output protocol object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The backing object (user data) of a wl_resource representing a wl_output protocol object. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="5042" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="5042" bodyend="5048"/>
+      </memberdef>
+      <memberdef kind="function" id="group__head_1gab458db3cc734c39f07222a72cfca7bfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_head_init</definition>
+        <argsstring>(struct weston_head *head, const char *name)</argsstring>
+        <name>weston_head_init</name>
+        <param>
+          <type>struct <ref refid="structweston__head" kindref="compound">weston_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Initialize a pre-allocated <ref refid="structweston__head" kindref="compound">weston_head</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The head to initialize. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The head name, e.g. the connector name or equivalent.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The head will be safe to attach, detach and release.</para>
+<para>The name is used in logs, and can be used by compositors as a configuration identifier. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="5064" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="5064" bodyend="5078"/>
+      </memberdef>
+      <memberdef kind="function" id="group__head_1gac5cc5415250a9aa4f830af252b72a666" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_head_detach</definition>
+        <argsstring>(struct weston_head *head)</argsstring>
+        <name>weston_head_detach</name>
+        <param>
+          <type>struct <ref refid="structweston__head" kindref="compound">weston_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <briefdescription>
+<para>Detach a head from its output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The head to detach.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+It is safe to detach a non-attached head.</para>
+<para>If the head is attached to an enabled output and the output will be left with no heads, the output will be disabled.</para>
+<para><simplesect kind="see"><para><ref refid="group__output_1gad86b73873e740780e6a1b4b7ad7b7e2b" kindref="member">weston_output_disable</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="5342" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="5342" bodyend="5373"/>
+      </memberdef>
+      <memberdef kind="function" id="group__head_1ga620a43a89a9f4045689f5f7bddeaa533" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_head_release</definition>
+        <argsstring>(struct weston_head *head)</argsstring>
+        <name>weston_head_release</name>
+        <param>
+          <type>struct <ref refid="structweston__head" kindref="compound">weston_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <briefdescription>
+<para>Destroy a head. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The head to be released.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Destroys the head. The caller is responsible for freeing the memory pointed to by <computeroutput>head</computeroutput>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="5386" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="5386" bodyend="5398"/>
+      </memberdef>
+      <memberdef kind="function" id="group__head_1gad1dbb9d1e8023b3c1587b2a15d1ee550" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_head_set_monitor_strings</definition>
+        <argsstring>(struct weston_head *head, const char *make, const char *model, const char *serialno)</argsstring>
+        <name>weston_head_set_monitor_strings</name>
+        <param>
+          <type>struct <ref refid="structweston__head" kindref="compound">weston_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>make</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>model</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>serialno</declname>
+        </param>
+        <briefdescription>
+<para>Store monitor make, model and serial number. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The head to modify. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>make</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The monitor make. If EDID is available, the PNP ID. Otherwise any string, or NULL for none. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>model</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The monitor model or name, or a made-up string, or NULL for none. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>serialno</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The monitor serial number, a made-up string, or NULL for none.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This may set the device_changed flag. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="5438" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="5438" bodyend="5457"/>
+      </memberdef>
+      <memberdef kind="function" id="group__head_1ga0ec29ead0db5f04159e9b69a889713b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_head_set_non_desktop</definition>
+        <argsstring>(struct weston_head *head, bool non_desktop)</argsstring>
+        <name>weston_head_set_non_desktop</name>
+        <param>
+          <type>struct <ref refid="structweston__head" kindref="compound">weston_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>non_desktop</declname>
+        </param>
+        <briefdescription>
+<para>Store display non-desktop status. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The head to modify. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>non_desktop</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether the head connects to a non-desktop display. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="5468" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="5468" bodyend="5476"/>
+      </memberdef>
+      <memberdef kind="function" id="group__head_1ga0af29bbbf4c6d09c82bbac58286c656a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_head_set_transform</definition>
+        <argsstring>(struct weston_head *head, uint32_t transform)</argsstring>
+        <name>weston_head_set_transform</name>
+        <param>
+          <type>struct <ref refid="structweston__head" kindref="compound">weston_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>transform</declname>
+        </param>
+        <briefdescription>
+<para>Store display transformation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The head to modify. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>transform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The transformation to apply for this head</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This may set the device_changed flag. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="5489" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="5489" bodyend="5497"/>
+      </memberdef>
+      <memberdef kind="function" id="group__head_1ga453bc787c6868e53371866de3f4db622" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_head_set_physical_size</definition>
+        <argsstring>(struct weston_head *head, int32_t mm_width, int32_t mm_height)</argsstring>
+        <name>weston_head_set_physical_size</name>
+        <param>
+          <type>struct <ref refid="structweston__head" kindref="compound">weston_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>mm_width</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>mm_height</declname>
+        </param>
+        <briefdescription>
+<para>Store physical image size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The head to modify. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mm_width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Image area width in millimeters. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mm_height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Image area height in millimeters.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This may set the device_changed flag. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="5512" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="5512" bodyend="5523"/>
+      </memberdef>
+      <memberdef kind="function" id="group__head_1gab4123b993477c318d4c87d782b6e4b51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_head_set_subpixel</definition>
+        <argsstring>(struct weston_head *head, enum wl_output_subpixel sp)</argsstring>
+        <name>weston_head_set_subpixel</name>
+        <param>
+          <type>struct <ref refid="structweston__head" kindref="compound">weston_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <param>
+          <type>enum wl_output_subpixel</type>
+          <declname>sp</declname>
+        </param>
+        <briefdescription>
+<para>Store monitor sub-pixel layout. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The head to modify. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sub-pixel layout. The possible values are:<itemizedlist>
+<listitem><para>WL_OUTPUT_SUBPIXEL_UNKNOWN,</para>
+</listitem><listitem><para>WL_OUTPUT_SUBPIXEL_NONE,</para>
+</listitem><listitem><para>WL_OUTPUT_SUBPIXEL_HORIZONTAL_RGB,</para>
+</listitem><listitem><para>WL_OUTPUT_SUBPIXEL_HORIZONTAL_BGR,</para>
+</listitem><listitem><para>WL_OUTPUT_SUBPIXEL_VERTICAL_RGB,</para>
+</listitem><listitem><para>WL_OUTPUT_SUBPIXEL_VERTICAL_BGR</para>
+</listitem></itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This may set the device_changed flag. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="5542" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="5542" bodyend="5551"/>
+      </memberdef>
+      <memberdef kind="function" id="group__head_1ga4ece2c0a2966224ebece0b092a6a9883" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_head_set_internal</definition>
+        <argsstring>(struct weston_head *head)</argsstring>
+        <name>weston_head_set_internal</name>
+        <param>
+          <type>struct <ref refid="structweston__head" kindref="compound">weston_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <briefdescription>
+<para>Mark the monitor as internal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is used for embedded screens, like laptop panels.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The head to mark as internal.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+By default a head is external. The type is often inferred from the physical connector type. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="5566" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="5566" bodyend="5569"/>
+      </memberdef>
+      <memberdef kind="function" id="group__head_1ga522efc0ba8ba4ce81c0ac4c1cf197f5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_head_set_connection_status</definition>
+        <argsstring>(struct weston_head *head, bool connected)</argsstring>
+        <name>weston_head_set_connection_status</name>
+        <param>
+          <type>struct <ref refid="structweston__head" kindref="compound">weston_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>connected</declname>
+        </param>
+        <briefdescription>
+<para>Store connector status. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The head to modify. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>connected</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether the head is connected.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Connectors are created as disconnected. This function can be used to set the connector status.</para>
+<para>The status should be set to true when a physical connector is connected to a video sink device like a monitor and to false when the connector is disconnected. For nested backends, the connection status should reflect the connection to the parent display server.</para>
+<para>When the connection status changes, it schedules a call to the heads_changed hook and sets the device_changed flag.</para>
+<para><simplesect kind="see"><para>weston_compositor_set_heads_changed_cb </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="5592" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="5592" bodyend="5600"/>
+      </memberdef>
+      <memberdef kind="function" id="group__head_1gad0da27f9a2e98faf8aecf84704935440" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool weston_head_is_connected</definition>
+        <argsstring>(struct weston_head *head)</argsstring>
+        <name>weston_head_is_connected</name>
+        <param>
+          <type>struct <ref refid="structweston__head" kindref="compound">weston_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <briefdescription>
+<para>Is the head currently connected? </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The head to query. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Connection status.</para>
+</simplesect>
+Returns true if the head is physically connected to a monitor, or in case of a nested backend returns true when there is a connection to the parent display server.</para>
+<para>This is independent from the head being enabled.</para>
+<para><simplesect kind="see"><para><ref refid="group__head_1ga8d49a887b440265b363a5075fefff343" kindref="member">weston_head_is_enabled</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="5653" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="5653" bodyend="5656"/>
+      </memberdef>
+      <memberdef kind="function" id="group__head_1ga8d49a887b440265b363a5075fefff343" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool weston_head_is_enabled</definition>
+        <argsstring>(struct weston_head *head)</argsstring>
+        <name>weston_head_is_enabled</name>
+        <param>
+          <type>struct <ref refid="structweston__head" kindref="compound">weston_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <briefdescription>
+<para>Is the head currently enabled? </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The head to query. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Video status.</para>
+</simplesect>
+Returns true if the head is currently transmitting a video stream.</para>
+<para>This is independent of the head being connected.</para>
+<para><simplesect kind="see"><para><ref refid="group__head_1gad0da27f9a2e98faf8aecf84704935440" kindref="member">weston_head_is_connected</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="5671" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="5671" bodyend="5677"/>
+      </memberdef>
+      <memberdef kind="function" id="group__head_1ga8166b9178e0d63360ebe4bd1a3d9466b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool weston_head_is_device_changed</definition>
+        <argsstring>(struct weston_head *head)</argsstring>
+        <name>weston_head_is_device_changed</name>
+        <param>
+          <type>struct <ref refid="structweston__head" kindref="compound">weston_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <briefdescription>
+<para>Has the device information changed? </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The head to query. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the device information has changed since last reset.</para>
+</simplesect>
+The information about the connected display device, e.g. a monitor, may change without being disconnected in between. Changing information causes a call to the heads_changed hook.</para>
+<para>The information includes make, model, serial number, physical size, and sub-pixel type. The connection status is also included.</para>
+<para><simplesect kind="see"><para><ref refid="group__head_1ga4f891068162ad3c11b7c971dcf7087d6" kindref="member">weston_head_reset_device_changed</ref>, weston_compositor_set_heads_changed_cb </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="5695" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="5695" bodyend="5698"/>
+      </memberdef>
+      <memberdef kind="function" id="group__head_1gaf349968c812aa4496e3afd9e2a550ce8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool weston_head_is_non_desktop</definition>
+        <argsstring>(struct weston_head *head)</argsstring>
+        <name>weston_head_is_non_desktop</name>
+        <param>
+          <type>struct <ref refid="structweston__head" kindref="compound">weston_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <briefdescription>
+<para>Does the head represent a non-desktop display? </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The head to query. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the device is a non-desktop display.</para>
+</simplesect>
+Non-desktop heads are not attached to outputs by default. This stops weston from extending the desktop onto head mounted displays. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="5711" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="5711" bodyend="5714"/>
+      </memberdef>
+      <memberdef kind="function" id="group__head_1ga4f891068162ad3c11b7c971dcf7087d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_head_reset_device_changed</definition>
+        <argsstring>(struct weston_head *head)</argsstring>
+        <name>weston_head_reset_device_changed</name>
+        <param>
+          <type>struct <ref refid="structweston__head" kindref="compound">weston_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <briefdescription>
+<para>Acknowledge device information change. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The head to acknowledge.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Clears the device changed flag on this head. When a compositor has processed device information, it should call this to be able to notice further changes.</para>
+<para><simplesect kind="see"><para><ref refid="group__head_1ga8166b9178e0d63360ebe4bd1a3d9466b" kindref="member">weston_head_is_device_changed</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="5728" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="5728" bodyend="5731"/>
+      </memberdef>
+      <memberdef kind="function" id="group__head_1gadc2cacc63e1e08fa67962fd1379dd085" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* weston_head_get_name</definition>
+        <argsstring>(struct weston_head *head)</argsstring>
+        <name>weston_head_get_name</name>
+        <param>
+          <type>struct <ref refid="structweston__head" kindref="compound">weston_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <briefdescription>
+<para>Get the name of a head. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The head to query. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The head&apos;s name, not NULL.</para>
+</simplesect>
+The name depends on the backend. The DRM backend uses connector names, other backends may use hardcoded names or user-given names. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="5744" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="5744" bodyend="5747"/>
+      </memberdef>
+      <memberdef kind="function" id="group__head_1gaa421449fe0fad20bece74a1359e9dea7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+        <definition>struct weston_output* weston_head_get_output</definition>
+        <argsstring>(struct weston_head *head)</argsstring>
+        <name>weston_head_get_output</name>
+        <param>
+          <type>struct <ref refid="structweston__head" kindref="compound">weston_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <briefdescription>
+<para>Get the output the head is attached to. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The head to query. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The output the head is attached to, or NULL if detached. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="5756" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="5756" bodyend="5759"/>
+      </memberdef>
+      <memberdef kind="function" id="group__head_1ga2be199d2caef16d084aa4aa56434f0ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t weston_head_get_transform</definition>
+        <argsstring>(struct weston_head *head)</argsstring>
+        <name>weston_head_get_transform</name>
+        <param>
+          <type>struct <ref refid="structweston__head" kindref="compound">weston_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <briefdescription>
+<para>Get the head&apos;s native transformation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The head to query. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The head&apos;s native transform, as a WL_OUTPUT_TRANSFORM_* value</para>
+</simplesect>
+A <ref refid="structweston__head" kindref="compound">weston_head</ref> may have a &apos;native&apos; transform provided by the backend. Examples include panels which are physically rotated, where the rotation is recorded and described as part of the system configuration. This call will return any known native transform for the head. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="5774" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="5774" bodyend="5777"/>
+      </memberdef>
+      <memberdef kind="function" id="group__head_1gacb1d8713745a3e871acad1bdb129d720" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_head_add_destroy_listener</definition>
+        <argsstring>(struct weston_head *head, struct wl_listener *listener)</argsstring>
+        <name>weston_head_add_destroy_listener</name>
+        <param>
+          <type>struct <ref refid="structweston__head" kindref="compound">weston_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <param>
+          <type>struct wl_listener *</type>
+          <declname>listener</declname>
+        </param>
+        <briefdescription>
+<para>Add destroy callback for a head. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The head to watch for. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>listener</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The listener to add. The <computeroutput>notify</computeroutput> member must be set.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Heads may get destroyed for various reasons by the backends. If a head is attached to an output, the compositor should listen for head destruction and reconfigure or destroy the output if necessary.</para>
+<para>The destroy callbacks will be called on <ref refid="structweston__head" kindref="compound">weston_head</ref> destruction before any automatic detaching from an associated <ref refid="structweston__output" kindref="compound">weston_output</ref> and before any <ref refid="structweston__head" kindref="compound">weston_head</ref> information is lost.</para>
+<para>The <computeroutput>data</computeroutput> argument to the notify callback is the <ref refid="structweston__head" kindref="compound">weston_head</ref> being destroyed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="5798" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="5798" bodyend="5802"/>
+      </memberdef>
+      <memberdef kind="function" id="group__head_1ga523c746a6ae0d5457e5696b903c1508d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct wl_listener *</type>
+        <definition>struct wl_listener* weston_head_get_destroy_listener</definition>
+        <argsstring>(struct weston_head *head, wl_notify_func_t notify)</argsstring>
+        <name>weston_head_get_destroy_listener</name>
+        <param>
+          <type>struct <ref refid="structweston__head" kindref="compound">weston_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <param>
+          <type>wl_notify_func_t</type>
+          <declname>notify</declname>
+        </param>
+        <briefdescription>
+<para>Look up destroy listener for a head. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The head to query. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>notify</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The notify function used used for the added destroy listener. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The listener, or NULL if not found.</para>
+</simplesect>
+This looks up the previously added destroy listener struct based on the notify function it has. The listener can be used to access user data through <computeroutput>container_of()</computeroutput>.</para>
+<para><simplesect kind="see"><para>wl_signal_get() </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="5818" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="5818" bodyend="5822"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

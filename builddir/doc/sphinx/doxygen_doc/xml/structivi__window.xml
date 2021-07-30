@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structivi__window" kind="struct" language="C++" prot="public">
+    <compoundname>ivi_window</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structivi__window_1af3db60816f661f505f95e25b2c0d14ff" prot="public" static="no" mutable="no">
+        <type>struct wl_surface *</type>
+        <definition>struct wl_surface* ivi_window::wl_surface</definition>
+        <argsstring></argsstring>
+        <name>wl_surface</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/ivi-layout-test-client.c" line="156" column="17" bodyfile="/home/lzm/Wayland/weston/tests/ivi-layout-test-client.c" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structivi__window_1a7ecc24185f1fd6461622335cbad4f796" prot="public" static="no" mutable="no">
+        <type>struct ivi_surface *</type>
+        <definition>struct ivi_surface* ivi_window::ivi_surface</definition>
+        <argsstring></argsstring>
+        <name>ivi_surface</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/ivi-layout-test-client.c" line="157" column="18" bodyfile="/home/lzm/Wayland/weston/tests/ivi-layout-test-client.c" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structivi__window_1af6f37a763846996a0ad79f780ad01ea5" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t ivi_window::ivi_id</definition>
+        <argsstring></argsstring>
+        <name>ivi_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/ivi-layout-test-client.c" line="158" column="10" bodyfile="/home/lzm/Wayland/weston/tests/ivi-layout-test-client.c" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/tests/ivi-layout-test-client.c" line="155" column="17" bodyfile="/home/lzm/Wayland/weston/tests/ivi-layout-test-client.c" bodystart="155" bodyend="159"/>
+    <listofallmembers>
+      <member refid="structivi__window_1af6f37a763846996a0ad79f780ad01ea5" prot="public" virt="non-virtual"><scope>ivi_window</scope><name>ivi_id</name></member>
+      <member refid="structivi__window_1a7ecc24185f1fd6461622335cbad4f796" prot="public" virt="non-virtual"><scope>ivi_window</scope><name>ivi_surface</name></member>
+      <member refid="structivi__window_1af3db60816f661f505f95e25b2c0d14ff" prot="public" virt="non-virtual"><scope>ivi_window</scope><name>wl_surface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

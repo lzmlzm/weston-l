@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structcompositor__setup" kind="struct" language="C++" prot="public">
+    <compoundname>compositor_setup</compoundname>
+    <includes refid="weston-test-fixture-compositor_8h" local="no">weston-test-fixture-compositor.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcompositor__setup_1a50e75b92ffbe804e6ec0238a8a7deab1" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structweston__testsuite__quirks" kindref="compound">weston_testsuite_quirks</ref></type>
+        <definition>struct weston_testsuite_quirks compositor_setup::test_quirks</definition>
+        <argsstring></argsstring>
+        <name>test_quirks</name>
+        <briefdescription>
+<para>The test suite quirks. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" line="158" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcompositor__setup_1a99405a1c668b098b35b25e3cf4ed00ae" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="libweston_8h_1a6523745d75d8e1a9a9b8aec9c8c68036" kindref="member">weston_compositor_backend</ref></type>
+        <definition>enum weston_compositor_backend compositor_setup::backend</definition>
+        <argsstring></argsstring>
+        <name>backend</name>
+        <briefdescription>
+<para>The backend to use. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" line="158" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcompositor__setup_1a855aeaf92213cff9e81bab8cb5967b69" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="group__testharness_1ga3f584343987d08b8aa9abf1e9c371a90" kindref="member">renderer_type</ref></type>
+        <definition>enum renderer_type compositor_setup::renderer</definition>
+        <argsstring></argsstring>
+        <name>renderer</name>
+        <briefdescription>
+<para>The renderer to use. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" line="158" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcompositor__setup_1a7282cf883c117307ebf4c55e93c65e5c" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="group__testharness_1ga0ad980f813d1f7469e9b9ff20f73fce9" kindref="member">shell_type</ref></type>
+        <definition>enum shell_type compositor_setup::shell</definition>
+        <argsstring></argsstring>
+        <name>shell</name>
+        <briefdescription>
+<para>The shell plugin to use. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" line="158" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcompositor__setup_1a79cf704d3b38b6ca931ad2d1c5625fa4" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool compositor_setup::xwayland</definition>
+        <argsstring></argsstring>
+        <name>xwayland</name>
+        <briefdescription>
+<para>Whether to enable xwayland support. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" line="83" column="6" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcompositor__setup_1ab14c97eec951652f83b36509cffc86b0" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned compositor_setup::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription>
+<para>Default output width. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" line="85" column="10" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcompositor__setup_1a0835352687ae40d5c1e2a6784654cd02" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned compositor_setup::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+<para>Default output height. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" line="87" column="10" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcompositor__setup_1ad510bce7ff6acb50c2868f7546ae2493" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int compositor_setup::scale</definition>
+        <argsstring></argsstring>
+        <name>scale</name>
+        <briefdescription>
+<para>Default output scale. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" line="89" column="5" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcompositor__setup_1ac816447cb027d27b4e07ca34aad1cb48" prot="public" static="no" mutable="no">
+        <type>enum wl_output_transform</type>
+        <definition>enum wl_output_transform compositor_setup::transform</definition>
+        <argsstring></argsstring>
+        <name>transform</name>
+        <briefdescription>
+<para>Default output transform, one of WL_OUTPUT_TRANSFORM_*. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" line="89" column="5" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcompositor__setup_1a8eb719167d6b363a540f28b5e41ce97b" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* compositor_setup::config_file</definition>
+        <argsstring></argsstring>
+        <name>config_file</name>
+        <briefdescription>
+<para>The absolute path to <computeroutput>weston.ini</computeroutput> to use, or NULL for <computeroutput><ndash/>no-config</computeroutput> . </para>
+        </briefdescription>
+        <detaileddescription>
+<para>To properly fill this entry use <ref refid="weston-test-fixture-compositor_8h_1aac73c9ae82be39289e01acd3e038b4da" kindref="member">weston_ini_setup()</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" line="95" column="6" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcompositor__setup_1ac2ca15a1b025c2a0a8bc1ad7e7e7be0f" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* compositor_setup::extra_module</definition>
+        <argsstring></argsstring>
+        <name>extra_module</name>
+        <briefdescription>
+<para>Full path to an extra plugin to load, or NULL for none. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" line="97" column="12" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcompositor__setup_1a0f2c8280f5923305d4f679a86c8f0821" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* compositor_setup::logging_scopes</definition>
+        <argsstring></argsstring>
+        <name>logging_scopes</name>
+        <briefdescription>
+<para>Debug scopes for the compositor log, or NULL for compositor defaults. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" line="100" column="12" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcompositor__setup_1a7a9d5a5b95a6b47ea192895485caf499" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* compositor_setup::testset_name</definition>
+        <argsstring></argsstring>
+        <name>testset_name</name>
+        <briefdescription>
+<para>The name of this test program, used as a unique identifier. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" line="102" column="12" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Weston compositor configuration. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This structure determines the Weston compositor command line arguments. You should always use <ref refid="group__testharness_1ga6d93ba47ec578b140fa2cbd3efa1218c" kindref="member">compositor_setup_defaults()</ref> to initialize this, then override any members you need with assignments. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>weston_testsuite_quirks</label>
+        <link refid="structweston__testsuite__quirks"/>
+      </node>
+      <node id="1">
+        <label>compositor_setup</label>
+        <link refid="structcompositor__setup"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>test_quirks</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" line="73" column="23" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" bodystart="73" bodyend="103"/>
+    <listofallmembers>
+      <member refid="structcompositor__setup_1a99405a1c668b098b35b25e3cf4ed00ae" prot="public" virt="non-virtual"><scope>compositor_setup</scope><name>backend</name></member>
+      <member refid="structcompositor__setup_1a8eb719167d6b363a540f28b5e41ce97b" prot="public" virt="non-virtual"><scope>compositor_setup</scope><name>config_file</name></member>
+      <member refid="structcompositor__setup_1ac2ca15a1b025c2a0a8bc1ad7e7e7be0f" prot="public" virt="non-virtual"><scope>compositor_setup</scope><name>extra_module</name></member>
+      <member refid="structcompositor__setup_1a0835352687ae40d5c1e2a6784654cd02" prot="public" virt="non-virtual"><scope>compositor_setup</scope><name>height</name></member>
+      <member refid="structcompositor__setup_1a0f2c8280f5923305d4f679a86c8f0821" prot="public" virt="non-virtual"><scope>compositor_setup</scope><name>logging_scopes</name></member>
+      <member refid="structcompositor__setup_1a855aeaf92213cff9e81bab8cb5967b69" prot="public" virt="non-virtual"><scope>compositor_setup</scope><name>renderer</name></member>
+      <member refid="structcompositor__setup_1ad510bce7ff6acb50c2868f7546ae2493" prot="public" virt="non-virtual"><scope>compositor_setup</scope><name>scale</name></member>
+      <member refid="structcompositor__setup_1a7282cf883c117307ebf4c55e93c65e5c" prot="public" virt="non-virtual"><scope>compositor_setup</scope><name>shell</name></member>
+      <member refid="structcompositor__setup_1a50e75b92ffbe804e6ec0238a8a7deab1" prot="public" virt="non-virtual"><scope>compositor_setup</scope><name>test_quirks</name></member>
+      <member refid="structcompositor__setup_1a7a9d5a5b95a6b47ea192895485caf499" prot="public" virt="non-virtual"><scope>compositor_setup</scope><name>testset_name</name></member>
+      <member refid="structcompositor__setup_1ac816447cb027d27b4e07ca34aad1cb48" prot="public" virt="non-virtual"><scope>compositor_setup</scope><name>transform</name></member>
+      <member refid="structcompositor__setup_1ab14c97eec951652f83b36509cffc86b0" prot="public" virt="non-virtual"><scope>compositor_setup</scope><name>width</name></member>
+      <member refid="structcompositor__setup_1a79cf704d3b38b6ca931ad2d1c5625fa4" prot="public" virt="non-virtual"><scope>compositor_setup</scope><name>xwayland</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

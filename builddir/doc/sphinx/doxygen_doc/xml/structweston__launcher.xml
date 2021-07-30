@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__launcher" kind="struct" language="C++" prot="public">
+    <compoundname>weston_launcher</compoundname>
+    <includes refid="launcher-impl_8h" local="no">launcher-impl.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__launcher_1aa6f9ca9ae269376334c52aa5927a2c30" prot="public" static="no" mutable="no">
+        <type>const struct <ref refid="structlauncher__interface" kindref="compound">launcher_interface</ref> *</type>
+        <definition>const struct launcher_interface* weston_launcher::iface</definition>
+        <argsstring></argsstring>
+        <name>iface</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/launcher-impl.h" line="45" column="31" bodyfile="/home/lzm/Wayland/weston/libweston/launcher-impl.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>launcher_interface</label>
+        <link refid="structlauncher__interface"/>
+      </node>
+      <node id="1">
+        <label>weston_launcher</label>
+        <link refid="structweston__launcher"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>iface</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lzm/Wayland/weston/libweston/launcher-impl.h" line="44" column="22" bodyfile="/home/lzm/Wayland/weston/libweston/launcher-impl.h" bodystart="44" bodyend="46"/>
+    <listofallmembers>
+      <member refid="structweston__launcher_1aa6f9ca9ae269376334c52aa5927a2c30" prot="public" virt="non-virtual"><scope>weston_launcher</scope><name>iface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

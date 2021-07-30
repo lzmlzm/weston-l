@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__launcher__open" kind="struct" language="C++" prot="public">
+    <compoundname>weston_launcher_open</compoundname>
+    <includes refid="weston-launch_8h" local="no">weston-launch.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__launcher__open_1a7ef74c0ac93f109aa3ec2090e2e4cfb0" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structweston__launcher__message" kindref="compound">weston_launcher_message</ref></type>
+        <definition>struct weston_launcher_message weston_launcher_open::header</definition>
+        <argsstring></argsstring>
+        <name>header</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-launch.h" line="43" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/weston-launch.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__launcher__open_1abc54199ae6533d6e915a8bd3b27d71e7" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int weston_launcher_open::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-launch.h" line="48" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/weston-launch.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__launcher__open_1a7aa601c40b255ba6b0f4f0fd01169737" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char weston_launcher_open::path[0]</definition>
+        <argsstring>[0]</argsstring>
+        <name>path</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-launch.h" line="49" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/weston-launch.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>weston_launcher_open</label>
+        <link refid="structweston__launcher__open"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>header</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>weston_launcher_message</label>
+        <link refid="structweston__launcher__message"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lzm/Wayland/weston/libweston/weston-launch.h" line="46" column="27" bodyfile="/home/lzm/Wayland/weston/libweston/weston-launch.h" bodystart="46" bodyend="50"/>
+    <listofallmembers>
+      <member refid="structweston__launcher__open_1abc54199ae6533d6e915a8bd3b27d71e7" prot="public" virt="non-virtual"><scope>weston_launcher_open</scope><name>flags</name></member>
+      <member refid="structweston__launcher__open_1a7ef74c0ac93f109aa3ec2090e2e4cfb0" prot="public" virt="non-virtual"><scope>weston_launcher_open</scope><name>header</name></member>
+      <member refid="structweston__launcher__open_1a7aa601c40b255ba6b0f4f0fd01169737" prot="public" virt="non-virtual"><scope>weston_launcher_open</scope><name>path</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

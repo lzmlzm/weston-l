@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structdrm__mode" kind="struct" language="C++" prot="public">
+    <compoundname>drm_mode</compoundname>
+    <includes refid="drm-internal_8h" local="no">drm-internal.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdrm__mode_1a54dc8021ba381fa3a73e995f097cd26a" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structweston__mode" kindref="compound">weston_mode</ref></type>
+        <definition>struct weston_mode drm_mode::base</definition>
+        <argsstring></argsstring>
+        <name>base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" line="244" column="7" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" bodystart="295" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdrm__mode_1a66e3572933e343c9d63fa5f4c257c376" prot="public" static="no" mutable="no">
+        <type>drmModeModeInfo</type>
+        <definition>drmModeModeInfo drm_mode::mode_info</definition>
+        <argsstring></argsstring>
+        <name>mode_info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" line="296" column="17" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" bodystart="296" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdrm__mode_1a4f3b8b563709ecbda9cd5f74ea12c18b" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t drm_mode::blob_id</definition>
+        <argsstring></argsstring>
+        <name>blob_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" line="297" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" bodystart="297" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>drm_mode</label>
+        <link refid="structdrm__mode"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>weston_mode</label>
+        <link refid="structweston__mode"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" line="294" column="15" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" bodystart="294" bodyend="298"/>
+    <listofallmembers>
+      <member refid="structdrm__mode_1a54dc8021ba381fa3a73e995f097cd26a" prot="public" virt="non-virtual"><scope>drm_mode</scope><name>base</name></member>
+      <member refid="structdrm__mode_1a4f3b8b563709ecbda9cd5f74ea12c18b" prot="public" virt="non-virtual"><scope>drm_mode</scope><name>blob_id</name></member>
+      <member refid="structdrm__mode_1a66e3572933e343c9d63fa5f4c257c376" prot="public" virt="non-virtual"><scope>drm_mode</scope><name>mode_info</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

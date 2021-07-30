@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__spring" kind="struct" language="C++" prot="public">
+    <compoundname>weston_spring</compoundname>
+    <includes refid="libweston_8h" local="no">libweston.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__spring_1af8bc656f1d55b00bc672526a35a53c6c" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double weston_spring::k</definition>
+        <argsstring></argsstring>
+        <name>k</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="141" column="8" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__spring_1abd60549cc2e089dd0708d37cd74778c0" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double weston_spring::friction</definition>
+        <argsstring></argsstring>
+        <name>friction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="142" column="8" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__spring_1a98c80cbc0ad25df5f783096cfe7c55ff" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double weston_spring::current</definition>
+        <argsstring></argsstring>
+        <name>current</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="143" column="8" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__spring_1aa07d1dd67a0e548a1f68f0547c9c8cab" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double weston_spring::target</definition>
+        <argsstring></argsstring>
+        <name>target</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="144" column="8" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__spring_1a759cec4b5305967c72a81cace9ebe505" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double weston_spring::previous</definition>
+        <argsstring></argsstring>
+        <name>previous</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="145" column="8" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__spring_1a21e199c9954b7cbc645c69bab8ab92d4" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double weston_spring::min</definition>
+        <argsstring></argsstring>
+        <name>min</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="146" column="8" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__spring_1ab247ed744b676353b5a4ae5352f10268" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double weston_spring::max</definition>
+        <argsstring></argsstring>
+        <name>max</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="146" column="12" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__spring_1ac82469582c592ecd7dc381688cdbaa63" prot="public" static="no" mutable="no">
+        <type>struct timespec</type>
+        <definition>struct timespec weston_spring::timestamp</definition>
+        <argsstring></argsstring>
+        <name>timestamp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="146" column="12" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__spring_1afc597d2ff33e16a671a9194522fa4729" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t weston_spring::clip</definition>
+        <argsstring></argsstring>
+        <name>clip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="148" column="10" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="140" column="20" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="140" bodyend="149"/>
+    <listofallmembers>
+      <member refid="structweston__spring_1afc597d2ff33e16a671a9194522fa4729" prot="public" virt="non-virtual"><scope>weston_spring</scope><name>clip</name></member>
+      <member refid="structweston__spring_1a98c80cbc0ad25df5f783096cfe7c55ff" prot="public" virt="non-virtual"><scope>weston_spring</scope><name>current</name></member>
+      <member refid="structweston__spring_1abd60549cc2e089dd0708d37cd74778c0" prot="public" virt="non-virtual"><scope>weston_spring</scope><name>friction</name></member>
+      <member refid="structweston__spring_1af8bc656f1d55b00bc672526a35a53c6c" prot="public" virt="non-virtual"><scope>weston_spring</scope><name>k</name></member>
+      <member refid="structweston__spring_1ab247ed744b676353b5a4ae5352f10268" prot="public" virt="non-virtual"><scope>weston_spring</scope><name>max</name></member>
+      <member refid="structweston__spring_1a21e199c9954b7cbc645c69bab8ab92d4" prot="public" virt="non-virtual"><scope>weston_spring</scope><name>min</name></member>
+      <member refid="structweston__spring_1a759cec4b5305967c72a81cace9ebe505" prot="public" virt="non-virtual"><scope>weston_spring</scope><name>previous</name></member>
+      <member refid="structweston__spring_1aa07d1dd67a0e548a1f68f0547c9c8cab" prot="public" virt="non-virtual"><scope>weston_spring</scope><name>target</name></member>
+      <member refid="structweston__spring_1ac82469582c592ecd7dc381688cdbaa63" prot="public" virt="non-virtual"><scope>weston_spring</scope><name>timestamp</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

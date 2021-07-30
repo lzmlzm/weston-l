@@ -1,0 +1,8 @@
+[options]
+backend-rdp = false
+remoting = false
+doc = true
+prefix = /home/lzm/Wayland/install
+
+[properties]
+

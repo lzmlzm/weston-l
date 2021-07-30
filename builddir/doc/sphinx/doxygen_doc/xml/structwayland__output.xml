@@ -1,0 +1,876 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structwayland__output" kind="struct" language="C++" prot="public">
+    <compoundname>wayland_output</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structwayland__output_1ab2886e18b56e07e460e68d4513251a25" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref></type>
+        <definition>struct weston_output wayland_output::base</definition>
+        <argsstring></argsstring>
+        <name>base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" line="87" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwayland__output_1a605aa5a55786032fd41a47d8f6b22707" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool wayland_output::draw_initial_frame</definition>
+        <argsstring></argsstring>
+        <name>draw_initial_frame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" line="106" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwayland__output_1abfee2998a425d1be56d678c6f39d15e2" prot="public" static="no" mutable="no">
+        <type>struct wl_surface *</type>
+        <definition>struct wl_surface* wayland_output::surface</definition>
+        <argsstring></argsstring>
+        <name>surface</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" line="107" column="17" bodyfile="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwayland__output_1ad7ae8817e0077eef8d932f7f268b940d" prot="public" static="no" mutable="no">
+        <type>struct wl_output *</type>
+        <definition>struct wl_output* wayland_output::output</definition>
+        <argsstring></argsstring>
+        <name>output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" line="109" column="16" bodyfile="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwayland__output_1a3efc00067ea16262a3689013690c6d92" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t wayland_output::global_id</definition>
+        <argsstring></argsstring>
+        <name>global_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" line="110" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwayland__output_1a84d148a9791d5a11c3e66c73d698908c" prot="public" static="no" mutable="no">
+        <type>struct wl_shell_surface *</type>
+        <definition>struct wl_shell_surface* wayland_output::shell_surface</definition>
+        <argsstring></argsstring>
+        <name>shell_surface</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" line="112" column="23" bodyfile="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwayland__output_1a937564ec7225c69d4280634ba89e27bf" prot="public" static="no" mutable="no">
+        <type>struct xdg_surface *</type>
+        <definition>struct xdg_surface* wayland_output::xdg_surface</definition>
+        <argsstring></argsstring>
+        <name>xdg_surface</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" line="113" column="18" bodyfile="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwayland__output_1ae86e46bc035898e498cd9f8cc8504d8a" prot="public" static="no" mutable="no">
+        <type>struct xdg_toplevel *</type>
+        <definition>struct xdg_toplevel* wayland_output::xdg_toplevel</definition>
+        <argsstring></argsstring>
+        <name>xdg_toplevel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" line="114" column="19" bodyfile="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwayland__output_1a81209e1effbc06c05a6625ea6b9a3c26" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int wayland_output::configure_width</definition>
+        <argsstring></argsstring>
+        <name>configure_width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" line="115" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwayland__output_1a29182b28e2f6b4d8e4f6876af9043743" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int wayland_output::configure_height</definition>
+        <argsstring></argsstring>
+        <name>configure_height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" line="115" column="21" bodyfile="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwayland__output_1af7d5850934ed1b5b07d1c23e0873b7ca" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool wayland_output::wait_for_configure</definition>
+        <argsstring></argsstring>
+        <name>wait_for_configure</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" line="116" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwayland__output_1a2541185cd31420b6f1985473f7df550a" prot="public" static="no" mutable="no">
+        <type>struct wayland_output::@7</type>
+        <definition>struct wayland_output::@7 wayland_output::parent</definition>
+        <argsstring></argsstring>
+        <name>parent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" line="117" column="8"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwayland__output_1a30981b911b936f9a09dabe81812b09bf" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int wayland_output::keyboard_count</definition>
+        <argsstring></argsstring>
+        <name>keyboard_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" line="119" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwayland__output_1a7098db7c4e3b1d79e68243ac9fa9afeb" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* wayland_output::title</definition>
+        <argsstring></argsstring>
+        <name>title</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" line="121" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwayland__output_1af5774662310bdc13b1a563255e4b5a0c" prot="public" static="no" mutable="no">
+        <type>struct frame *</type>
+        <definition>struct frame* wayland_output::frame</definition>
+        <argsstring></argsstring>
+        <name>frame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" line="122" column="12" bodyfile="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwayland__output_1a50d52cbd4586cd0ff19388748bb9ef39" prot="public" static="no" mutable="no">
+        <type>struct wl_egl_window *</type>
+        <definition>struct wl_egl_window* wayland_output::egl_window</definition>
+        <argsstring></argsstring>
+        <name>egl_window</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" line="125" column="20" bodyfile="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwayland__output_1a335f2534b158592cc7aeed921e07aac3" prot="public" static="no" mutable="no">
+        <type>cairo_surface_t *</type>
+        <definition>cairo_surface_t* wayland_output::top</definition>
+        <argsstring></argsstring>
+        <name>top</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" line="127" column="17" bodyfile="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwayland__output_1a4b241e5d83a819497ca1badc8dbb99a6" prot="public" static="no" mutable="no">
+        <type>cairo_surface_t *</type>
+        <definition>cairo_surface_t* wayland_output::left</definition>
+        <argsstring></argsstring>
+        <name>left</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" line="128" column="17" bodyfile="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwayland__output_1a792a343831a3a3bce81fd67d718c8195" prot="public" static="no" mutable="no">
+        <type>cairo_surface_t *</type>
+        <definition>cairo_surface_t* wayland_output::right</definition>
+        <argsstring></argsstring>
+        <name>right</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" line="129" column="17" bodyfile="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwayland__output_1a995f76e79079ff5ede2a49a83a78dfc4" prot="public" static="no" mutable="no">
+        <type>cairo_surface_t *</type>
+        <definition>cairo_surface_t* wayland_output::bottom</definition>
+        <argsstring></argsstring>
+        <name>bottom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" line="130" column="17" bodyfile="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwayland__output_1a8b9341bc7cf6ba40fc8dec029273f0f5" prot="public" static="no" mutable="no">
+        <type>struct wayland_output::@8::@10</type>
+        <definition>struct wayland_output::@8::@10 wayland_output::border</definition>
+        <argsstring></argsstring>
+        <name>border</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" line="131" column="8"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwayland__output_1acf1b94eaba95dc2ac8e9061c37679136" prot="public" static="no" mutable="no">
+        <type>struct wayland_output::@8</type>
+        <definition>struct wayland_output::@8 wayland_output::gl</definition>
+        <argsstring></argsstring>
+        <name>gl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" line="132" column="4"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwayland__output_1a1a2a7916f23aba74960233cd3ccc3ef1" prot="public" static="no" mutable="no">
+        <type>struct wl_list</type>
+        <definition>struct wl_list wayland_output::buffers</definition>
+        <argsstring></argsstring>
+        <name>buffers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" line="130" column="17" bodyfile="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwayland__output_1ad7a34b73b7f40bac085e74bb2767a69b" prot="public" static="no" mutable="no">
+        <type>struct wl_list</type>
+        <definition>struct wl_list wayland_output::free_buffers</definition>
+        <argsstring></argsstring>
+        <name>free_buffers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" line="130" column="17" bodyfile="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwayland__output_1af749e0517381decffd8b24c853c55adb" prot="public" static="no" mutable="no">
+        <type>struct wayland_output::@9</type>
+        <definition>struct wayland_output::@9 wayland_output::shm</definition>
+        <argsstring></argsstring>
+        <name>shm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" line="137" column="5"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwayland__output_1a46bf61bed1676530ec19b83cb1ebc18a" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structweston__mode" kindref="compound">weston_mode</ref></type>
+        <definition>struct weston_mode wayland_output::mode</definition>
+        <argsstring></argsstring>
+        <name>mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" line="122" column="12" bodyfile="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwayland__output_1a32f82fc3fd3367cd63ee3bc6b891e612" prot="public" static="no" mutable="no">
+        <type>struct wl_callback *</type>
+        <definition>struct wl_callback* wayland_output::frame_cb</definition>
+        <argsstring></argsstring>
+        <name>frame_cb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" line="141" column="18" bodyfile="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="21">
+        <label>weston_testsuite_quirks</label>
+        <link refid="structweston__testsuite__quirks"/>
+      </node>
+      <node id="14">
+        <label>weston_buffer_release_reference</label>
+        <link refid="structweston__buffer__release__reference"/>
+        <childnode refid="15" relation="usage">
+          <edgelabel>buffer_release</edgelabel>
+        </childnode>
+      </node>
+      <node id="42">
+        <label>launcher_interface</label>
+        <link refid="structlauncher__interface"/>
+      </node>
+      <node id="38">
+        <label>weston_log_subscriber</label>
+        <link refid="structweston__log__subscriber"/>
+      </node>
+      <node id="17">
+        <label>weston_matrix</label>
+        <link refid="structweston__matrix"/>
+      </node>
+      <node id="16">
+        <label>weston_buffer_reference</label>
+        <link refid="structweston__buffer__reference"/>
+        <childnode refid="13" relation="usage">
+          <edgelabel>buffer</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>weston_log_context</label>
+        <link refid="structweston__log__context"/>
+      </node>
+      <node id="23">
+        <label>weston_renderer</label>
+        <link refid="structweston__renderer"/>
+      </node>
+      <node id="25">
+        <label>weston_layer_entry</label>
+        <link refid="structweston__layer__entry"/>
+        <childnode refid="24" relation="usage">
+          <edgelabel>layer</edgelabel>
+        </childnode>
+      </node>
+      <node id="28">
+        <label>weston_transform</label>
+        <link refid="structweston__transform"/>
+        <childnode refid="17" relation="usage">
+          <edgelabel>matrix</edgelabel>
+        </childnode>
+      </node>
+      <node id="27">
+        <label>weston_view</label>
+        <link refid="structweston__view"/>
+        <childnode refid="27" relation="usage">
+          <edgelabel>parent_view</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>output</edgelabel>
+        </childnode>
+        <childnode refid="28" relation="usage">
+          <edgelabel>position</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>layer_link</edgelabel>
+        </childnode>
+        <childnode refid="29" relation="usage">
+          <edgelabel>plane</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>matrix</edgelabel>
+          <edgelabel>inverse</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>surface</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>wayland_output</label>
+        <link refid="structwayland__output"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="49" relation="usage">
+          <edgelabel>mode</edgelabel>
+        </childnode>
+      </node>
+      <node id="46">
+        <label>weston_data_source</label>
+        <link refid="structweston__data__source"/>
+        <childnode refid="47" relation="usage">
+          <edgelabel>offer</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>seat</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>weston_buffer_viewport</label>
+        <link refid="structweston__buffer__viewport"/>
+      </node>
+      <node id="40">
+        <label>weston_backend</label>
+        <link refid="structweston__backend"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>create_output</edgelabel>
+        </childnode>
+      </node>
+      <node id="43">
+        <label>weston_pointer</label>
+        <link refid="structweston__pointer"/>
+        <childnode refid="27" relation="usage">
+          <edgelabel>focus</edgelabel>
+          <edgelabel>sprite</edgelabel>
+        </childnode>
+        <childnode refid="44" relation="usage">
+          <edgelabel>focus_client</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>seat</edgelabel>
+        </childnode>
+        <childnode refid="45" relation="usage">
+          <edgelabel>default_grab</edgelabel>
+          <edgelabel>grab</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>weston_output</label>
+        <link refid="structweston__output"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>zoom</edgelabel>
+        </childnode>
+        <childnode refid="49" relation="usage">
+          <edgelabel>original_mode</edgelabel>
+          <edgelabel>current_mode</edgelabel>
+          <edgelabel>native_mode</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>matrix</edgelabel>
+          <edgelabel>inverse_matrix</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>compositor</edgelabel>
+        </childnode>
+      </node>
+      <node id="36">
+        <label>weston_log_scope</label>
+        <link refid="structweston__log__scope"/>
+        <childnode refid="37" relation="usage">
+          <edgelabel>destroy_subscription</edgelabel>
+          <edgelabel>new_subscription</edgelabel>
+        </childnode>
+      </node>
+      <node id="24">
+        <label>weston_layer</label>
+        <link refid="structweston__layer"/>
+        <childnode refid="25" relation="usage">
+          <edgelabel>view_list</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>compositor</edgelabel>
+        </childnode>
+      </node>
+      <node id="18">
+        <label>weston_compositor</label>
+        <link refid="structweston__compositor"/>
+        <childnode refid="19" relation="usage">
+          <edgelabel>weston_log_ctx</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>test_data</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>default_pointer_grab</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>renderer</edgelabel>
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>calibrator_layer</edgelabel>
+          <edgelabel>fade_layer</edgelabel>
+          <edgelabel>cursor_layer</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="usage">
+          <edgelabel>touch_calibrator</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>xkb_info</edgelabel>
+        </childnode>
+        <childnode refid="36" relation="usage">
+          <edgelabel>timeline</edgelabel>
+          <edgelabel>debug_scene</edgelabel>
+        </childnode>
+        <childnode refid="39" relation="usage">
+          <edgelabel>content_protection</edgelabel>
+        </childnode>
+        <childnode refid="40" relation="usage">
+          <edgelabel>backend</edgelabel>
+        </childnode>
+        <childnode refid="29" relation="usage">
+          <edgelabel>primary_plane</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>touch_calibration_save</edgelabel>
+        </childnode>
+        <childnode refid="41" relation="usage">
+          <edgelabel>launcher</edgelabel>
+        </childnode>
+      </node>
+      <node id="34">
+        <label>weston_touch_grab</label>
+        <link refid="structweston__touch__grab"/>
+        <childnode refid="35" relation="usage">
+          <edgelabel>interface</edgelabel>
+        </childnode>
+        <childnode refid="33" relation="usage">
+          <edgelabel>touch</edgelabel>
+        </childnode>
+      </node>
+      <node id="47">
+        <label>weston_data_offer</label>
+        <link refid="structweston__data__offer"/>
+        <childnode refid="46" relation="usage">
+          <edgelabel>source</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>weston_keyboard_grab</label>
+        <link refid="structweston__keyboard__grab"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>keyboard</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>interface</edgelabel>
+        </childnode>
+      </node>
+      <node id="30">
+        <label>weston_touch_device</label>
+        <link refid="structweston__touch__device"/>
+        <childnode refid="31" relation="usage">
+          <edgelabel>saved_calibration</edgelabel>
+        </childnode>
+        <childnode refid="32" relation="usage">
+          <edgelabel>ops</edgelabel>
+        </childnode>
+        <childnode refid="33" relation="usage">
+          <edgelabel>aggregate</edgelabel>
+        </childnode>
+      </node>
+      <node id="29">
+        <label>weston_plane</label>
+        <link refid="structweston__plane"/>
+        <childnode refid="18" relation="usage">
+          <edgelabel>compositor</edgelabel>
+        </childnode>
+      </node>
+      <node id="37">
+        <label>weston_log_subscription</label>
+        <link refid="structweston__log__subscription"/>
+        <childnode refid="36" relation="usage">
+          <edgelabel>source</edgelabel>
+        </childnode>
+        <childnode refid="38" relation="usage">
+          <edgelabel>owner</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>weston_seat</label>
+        <link refid="structweston__seat"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>keyboard_state</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>output</edgelabel>
+        </childnode>
+        <childnode refid="43" relation="usage">
+          <edgelabel>pointer_state</edgelabel>
+        </childnode>
+        <childnode refid="46" relation="usage">
+          <edgelabel>selection_data_source</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>compositor</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>saved_kbd_focus</edgelabel>
+        </childnode>
+        <childnode refid="33" relation="usage">
+          <edgelabel>touch_state</edgelabel>
+        </childnode>
+      </node>
+      <node id="31">
+        <label>weston_touch_device_matrix</label>
+        <link refid="structweston__touch__device__matrix"/>
+      </node>
+      <node id="12">
+        <label>weston_surface_state</label>
+        <link refid="structweston__surface__state"/>
+        <childnode refid="13" relation="usage">
+          <edgelabel>buffer</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>buffer_viewport</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>buffer_release_ref</edgelabel>
+        </childnode>
+      </node>
+      <node id="22">
+        <label>weston_pointer_grab_interface</label>
+        <link refid="structweston__pointer__grab__interface"/>
+      </node>
+      <node id="4">
+        <label>weston_animation</label>
+        <link refid="structweston__animation"/>
+      </node>
+      <node id="9">
+        <label>weston_keyboard_grab_interface</label>
+        <link refid="structweston__keyboard__grab__interface"/>
+      </node>
+      <node id="48">
+        <label>weston_spring</label>
+        <link refid="structweston__spring"/>
+      </node>
+      <node id="35">
+        <label>weston_touch_grab_interface</label>
+        <link refid="structweston__touch__grab__interface"/>
+      </node>
+      <node id="13">
+        <label>weston_buffer</label>
+        <link refid="structweston__buffer"/>
+      </node>
+      <node id="7">
+        <label>weston_xkb_info</label>
+        <link refid="structweston__xkb__info"/>
+      </node>
+      <node id="3">
+        <label>weston_output_zoom</label>
+        <link refid="structweston__output__zoom"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>animation_z</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>seat</edgelabel>
+        </childnode>
+        <childnode refid="48" relation="usage">
+          <edgelabel>spring_z</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>weston_surface</label>
+        <link refid="structweston__surface"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>output</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>buffer_viewport</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>pending</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>buffer_ref</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>surface_to_buffer_matrix</edgelabel>
+          <edgelabel>buffer_to_surface_matrix</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>compositor</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>buffer_release_ref</edgelabel>
+        </childnode>
+      </node>
+      <node id="41">
+        <label>weston_launcher</label>
+        <link refid="structweston__launcher"/>
+        <childnode refid="42" relation="usage">
+          <edgelabel>iface</edgelabel>
+        </childnode>
+      </node>
+      <node id="49">
+        <label>weston_mode</label>
+        <link refid="structweston__mode"/>
+      </node>
+      <node id="20">
+        <label>weston_testsuite_data</label>
+        <link refid="structweston__testsuite__data"/>
+        <childnode refid="21" relation="usage">
+          <edgelabel>test_quirks</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>weston_buffer_release</label>
+        <link refid="structweston__buffer__release"/>
+      </node>
+      <node id="26">
+        <label>weston_touch_calibrator</label>
+        <link refid="structweston__touch__calibrator"/>
+        <childnode refid="27" relation="usage">
+          <edgelabel>view</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>output</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>device</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>compositor</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>surface</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>weston_keyboard</label>
+        <link refid="structweston__keyboard"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>xkb_info</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>seat</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>default_grab</edgelabel>
+          <edgelabel>input_method_grab</edgelabel>
+          <edgelabel>grab</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>focus</edgelabel>
+        </childnode>
+      </node>
+      <node id="33">
+        <label>weston_touch</label>
+        <link refid="structweston__touch"/>
+        <childnode refid="27" relation="usage">
+          <edgelabel>focus</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>seat</edgelabel>
+        </childnode>
+        <childnode refid="34" relation="usage">
+          <edgelabel>default_grab</edgelabel>
+          <edgelabel>grab</edgelabel>
+        </childnode>
+      </node>
+      <node id="44">
+        <label>weston_pointer_client</label>
+        <link refid="structweston__pointer__client"/>
+      </node>
+      <node id="45">
+        <label>weston_pointer_grab</label>
+        <link refid="structweston__pointer__grab"/>
+        <childnode refid="22" relation="usage">
+          <edgelabel>interface</edgelabel>
+        </childnode>
+        <childnode refid="43" relation="usage">
+          <edgelabel>pointer</edgelabel>
+        </childnode>
+      </node>
+      <node id="32">
+        <label>weston_touch_device_ops</label>
+        <link refid="structweston__touch__device__ops"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>get_output</edgelabel>
+        </childnode>
+      </node>
+      <node id="39">
+        <label>content_protection</label>
+        <link refid="structcontent__protection"/>
+        <childnode refid="36" relation="usage">
+          <edgelabel>debug</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>compositor</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" line="102" column="21" bodyfile="/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c" bodystart="102" bodyend="142"/>
+    <listofallmembers>
+      <member refid="structwayland__output_1ab2886e18b56e07e460e68d4513251a25" prot="public" virt="non-virtual"><scope>wayland_output</scope><name>base</name></member>
+      <member refid="structwayland__output_1a8b9341bc7cf6ba40fc8dec029273f0f5" prot="public" virt="non-virtual"><scope>wayland_output</scope><name>border</name></member>
+      <member refid="structwayland__output_1a995f76e79079ff5ede2a49a83a78dfc4" prot="public" virt="non-virtual"><scope>wayland_output</scope><name>bottom</name></member>
+      <member refid="structwayland__output_1a1a2a7916f23aba74960233cd3ccc3ef1" prot="public" virt="non-virtual"><scope>wayland_output</scope><name>buffers</name></member>
+      <member refid="structwayland__output_1a29182b28e2f6b4d8e4f6876af9043743" prot="public" virt="non-virtual"><scope>wayland_output</scope><name>configure_height</name></member>
+      <member refid="structwayland__output_1a81209e1effbc06c05a6625ea6b9a3c26" prot="public" virt="non-virtual"><scope>wayland_output</scope><name>configure_width</name></member>
+      <member refid="structwayland__output_1a605aa5a55786032fd41a47d8f6b22707" prot="public" virt="non-virtual"><scope>wayland_output</scope><name>draw_initial_frame</name></member>
+      <member refid="structwayland__output_1a50d52cbd4586cd0ff19388748bb9ef39" prot="public" virt="non-virtual"><scope>wayland_output</scope><name>egl_window</name></member>
+      <member refid="structwayland__output_1af5774662310bdc13b1a563255e4b5a0c" prot="public" virt="non-virtual"><scope>wayland_output</scope><name>frame</name></member>
+      <member refid="structwayland__output_1a32f82fc3fd3367cd63ee3bc6b891e612" prot="public" virt="non-virtual"><scope>wayland_output</scope><name>frame_cb</name></member>
+      <member refid="structwayland__output_1ad7a34b73b7f40bac085e74bb2767a69b" prot="public" virt="non-virtual"><scope>wayland_output</scope><name>free_buffers</name></member>
+      <member refid="structwayland__output_1acf1b94eaba95dc2ac8e9061c37679136" prot="public" virt="non-virtual"><scope>wayland_output</scope><name>gl</name></member>
+      <member refid="structwayland__output_1a3efc00067ea16262a3689013690c6d92" prot="public" virt="non-virtual"><scope>wayland_output</scope><name>global_id</name></member>
+      <member refid="structwayland__output_1a30981b911b936f9a09dabe81812b09bf" prot="public" virt="non-virtual"><scope>wayland_output</scope><name>keyboard_count</name></member>
+      <member refid="structwayland__output_1a4b241e5d83a819497ca1badc8dbb99a6" prot="public" virt="non-virtual"><scope>wayland_output</scope><name>left</name></member>
+      <member refid="structwayland__output_1a46bf61bed1676530ec19b83cb1ebc18a" prot="public" virt="non-virtual"><scope>wayland_output</scope><name>mode</name></member>
+      <member refid="structwayland__output_1ad7ae8817e0077eef8d932f7f268b940d" prot="public" virt="non-virtual"><scope>wayland_output</scope><name>output</name></member>
+      <member refid="structwayland__output_1a2541185cd31420b6f1985473f7df550a" prot="public" virt="non-virtual"><scope>wayland_output</scope><name>parent</name></member>
+      <member refid="structwayland__output_1a792a343831a3a3bce81fd67d718c8195" prot="public" virt="non-virtual"><scope>wayland_output</scope><name>right</name></member>
+      <member refid="structwayland__output_1a84d148a9791d5a11c3e66c73d698908c" prot="public" virt="non-virtual"><scope>wayland_output</scope><name>shell_surface</name></member>
+      <member refid="structwayland__output_1af749e0517381decffd8b24c853c55adb" prot="public" virt="non-virtual"><scope>wayland_output</scope><name>shm</name></member>
+      <member refid="structwayland__output_1abfee2998a425d1be56d678c6f39d15e2" prot="public" virt="non-virtual"><scope>wayland_output</scope><name>surface</name></member>
+      <member refid="structwayland__output_1a7098db7c4e3b1d79e68243ac9fa9afeb" prot="public" virt="non-virtual"><scope>wayland_output</scope><name>title</name></member>
+      <member refid="structwayland__output_1a335f2534b158592cc7aeed921e07aac3" prot="public" virt="non-virtual"><scope>wayland_output</scope><name>top</name></member>
+      <member refid="structwayland__output_1af7d5850934ed1b5b07d1c23e0873b7ca" prot="public" virt="non-virtual"><scope>wayland_output</scope><name>wait_for_configure</name></member>
+      <member refid="structwayland__output_1a937564ec7225c69d4280634ba89e27bf" prot="public" virt="non-virtual"><scope>wayland_output</scope><name>xdg_surface</name></member>
+      <member refid="structwayland__output_1ae86e46bc035898e498cd9f8cc8504d8a" prot="public" virt="non-virtual"><scope>wayland_output</scope><name>xdg_toplevel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

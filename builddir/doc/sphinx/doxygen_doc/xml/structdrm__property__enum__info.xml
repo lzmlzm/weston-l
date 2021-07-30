@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structdrm__property__enum__info" kind="struct" language="C++" prot="public">
+    <compoundname>drm_property_enum_info</compoundname>
+    <includes refid="drm-internal_8h" local="no">drm-internal.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdrm__property__enum__info_1a6db057aebb52c40ae82d5ab89c3a7709" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* drm_property_enum_info::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+<para>name as string (static, not freed) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" line="118" column="12" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdrm__property__enum__info_1a63f5dffaeb44fcc5e8adc1eb30794e37" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool drm_property_enum_info::valid</definition>
+        <argsstring></argsstring>
+        <name>valid</name>
+        <briefdescription>
+<para>true if value is supported; ignore if false </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" line="119" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdrm__property__enum__info_1a75456ebd33382718c1b41aa40ffaf21a" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t drm_property_enum_info::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+<para>raw value </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" line="120" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents the values of an enum-type KMS property. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" line="117" column="29" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" bodystart="117" bodyend="121"/>
+    <listofallmembers>
+      <member refid="structdrm__property__enum__info_1a6db057aebb52c40ae82d5ab89c3a7709" prot="public" virt="non-virtual"><scope>drm_property_enum_info</scope><name>name</name></member>
+      <member refid="structdrm__property__enum__info_1a63f5dffaeb44fcc5e8adc1eb30794e37" prot="public" virt="non-virtual"><scope>drm_property_enum_info</scope><name>valid</name></member>
+      <member refid="structdrm__property__enum__info_1a75456ebd33382718c1b41aa40ffaf21a" prot="public" virt="non-virtual"><scope>drm_property_enum_info</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

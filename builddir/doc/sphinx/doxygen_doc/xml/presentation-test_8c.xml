@@ -1,0 +1,739 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="presentation-test_8c" kind="file" language="C++">
+    <compoundname>presentation-test.c</compoundname>
+    <includes local="yes">config.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">assert.h</includes>
+    <includes local="no">time.h</includes>
+    <includes local="yes">shared/helpers.h</includes>
+    <includes local="yes">shared/xalloc.h</includes>
+    <includes local="yes">shared/timespec-util.h</includes>
+    <includes refid="weston-test-client-helper_8h" local="yes">weston-test-client-helper.h</includes>
+    <includes local="yes">presentation-time-client-protocol.h</includes>
+    <includes refid="weston-test-fixture-compositor_8h" local="yes">weston-test-fixture-compositor.h</includes>
+    <incdepgraph>
+      <node id="13">
+        <label>stdbool.h</label>
+      </node>
+      <node id="27">
+        <label>viewporter-client-protocol.h</label>
+      </node>
+      <node id="19">
+        <label>libweston/libweston.h</label>
+        <link refid="libweston_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>weston-test-fixture-compositor.h</label>
+        <link refid="weston-test-fixture-compositor_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>assert.h</label>
+      </node>
+      <node id="28">
+        <label>presentation-time-client-protocol.h</label>
+      </node>
+      <node id="26">
+        <label>weston-screenshooter-client-protocol.h</label>
+      </node>
+      <node id="25">
+        <label>weston-test-client-protocol.h</label>
+      </node>
+      <node id="3">
+        <label>stdint.h</label>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="21">
+        <label>wayland-server.h</label>
+      </node>
+      <node id="20">
+        <label>xkbcommon/xkbcommon.h</label>
+      </node>
+      <node id="10">
+        <label>shared/xalloc.h</label>
+      </node>
+      <node id="9">
+        <label>shared/helpers.h</label>
+      </node>
+      <node id="24">
+        <label>weston-testsuite-data.h</label>
+        <link refid="weston-testsuite-data_8h"/>
+      </node>
+      <node id="15">
+        <label>wayland-client-protocol.h</label>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
+      <node id="23">
+        <label>libweston/zalloc.h</label>
+        <link refid="zalloc_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>time.h</label>
+      </node>
+      <node id="22">
+        <label>libweston/matrix.h</label>
+        <link refid="matrix_8h"/>
+      </node>
+      <node id="14">
+        <label>pixman.h</label>
+      </node>
+      <node id="17">
+        <label>wayland-util.h</label>
+      </node>
+      <node id="16">
+        <label>weston-test-runner.h</label>
+        <link refid="weston-test-runner_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+      </node>
+      <node id="11">
+        <label>shared/timespec-util.h</label>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/tests/presentation-test.c</label>
+        <link refid="presentation-test_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdio.h</label>
+      </node>
+      <node id="12">
+        <label>weston-test-client-helper.h</label>
+        <link refid="weston-test-client-helper_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structfeedback" prot="public">feedback</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="presentation-test_8c_1a7c189210bc8073f9534f6f013fc4ee8e" prot="public" static="yes" mutable="no">
+        <type>const struct wp_presentation_feedback_listener</type>
+        <definition>const struct wp_presentation_feedback_listener feedback_listener</definition>
+        <argsstring></argsstring>
+        <name>feedback_listener</name>
+        <initializer>= {
+	<ref refid="presentation-test_8c_1a4877a097b7bbf84108fdf27926f8d0b8" kindref="member">feedback_sync_output</ref>,
+	<ref refid="presentation-test_8c_1ac99364b2d2263b756092586bc14a8b7b" kindref="member">feedback_presented</ref>,
+	<ref refid="presentation-test_8c_1ad873c75c1a24a4dce5c954486df26314" kindref="member">feedback_discarded</ref>
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/presentation-test.c" line="133" column="1" bodyfile="/home/lzm/Wayland/weston/tests/presentation-test.c" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="presentation-test_8c_1a94e9ff74226ccd29a26846ccb66d481f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></type>
+        <definition>static enum test_result_code fixture_setup</definition>
+        <argsstring>(struct weston_test_harness *harness)</argsstring>
+        <name>fixture_setup</name>
+        <param>
+          <type>struct <ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref> *</type>
+          <declname>harness</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/presentation-test.c" line="1" column="0" bodyfile="/home/lzm/Wayland/weston/tests/presentation-test.c" bodystart="43" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="presentation-test_8c_1a1ac8add2dcb01a58f69f41ce2ad0ccfc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DECLARE_FIXTURE_SETUP</definition>
+        <argsstring>(fixture_setup)</argsstring>
+        <name>DECLARE_FIXTURE_SETUP</name>
+        <param>
+          <type><ref refid="yuv-buffer-test_8c_1a94e9ff74226ccd29a26846ccb66d481f" kindref="member">fixture_setup</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/presentation-test.c" line="51" column="1" declfile="/home/lzm/Wayland/weston/tests/presentation-test.c" declline="51" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="presentation-test_8c_1a1b41d59c8f2967f63d464bcd17a69f04" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct wp_presentation *</type>
+        <definition>static struct wp_presentation* get_presentation</definition>
+        <argsstring>(struct client *client)</argsstring>
+        <name>get_presentation</name>
+        <param>
+          <type>struct <ref refid="structclient" kindref="compound">client</ref> *</type>
+          <declname>client</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/presentation-test.c" line="54" column="1" bodyfile="/home/lzm/Wayland/weston/tests/presentation-test.c" bodystart="54" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="presentation-test_8c_1a4877a097b7bbf84108fdf27926f8d0b8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void feedback_sync_output</definition>
+        <argsstring>(void *data, struct wp_presentation_feedback *presentation_feedback, struct wl_output *output)</argsstring>
+        <name>feedback_sync_output</name>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>struct wp_presentation_feedback *</type>
+          <declname>presentation_feedback</declname>
+        </param>
+        <param>
+          <type>struct wl_output *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/presentation-test.c" line="99" column="1" bodyfile="/home/lzm/Wayland/weston/tests/presentation-test.c" bodystart="99" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="presentation-test_8c_1ac99364b2d2263b756092586bc14a8b7b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void feedback_presented</definition>
+        <argsstring>(void *data, struct wp_presentation_feedback *presentation_feedback, uint32_t tv_sec_hi, uint32_t tv_sec_lo, uint32_t tv_nsec, uint32_t refresh_nsec, uint32_t seq_hi, uint32_t seq_lo, uint32_t flags)</argsstring>
+        <name>feedback_presented</name>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>struct wp_presentation_feedback *</type>
+          <declname>presentation_feedback</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>tv_sec_hi</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>tv_sec_lo</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>tv_nsec</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>refresh_nsec</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>seq_hi</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>seq_lo</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/presentation-test.c" line="112" column="1" bodyfile="/home/lzm/Wayland/weston/tests/presentation-test.c" bodystart="112" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="presentation-test_8c_1ad873c75c1a24a4dce5c954486df26314" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void feedback_discarded</definition>
+        <argsstring>(void *data, struct wp_presentation_feedback *presentation_feedback)</argsstring>
+        <name>feedback_discarded</name>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>struct wp_presentation_feedback *</type>
+          <declname>presentation_feedback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/presentation-test.c" line="133" column="1" bodyfile="/home/lzm/Wayland/weston/tests/presentation-test.c" bodystart="133" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="presentation-test_8c_1a3df949d5def66a445a20626825bd138a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structfeedback" kindref="compound">feedback</ref> *</type>
+        <definition>static struct feedback* feedback_create</definition>
+        <argsstring>(struct client *client, struct wl_surface *surface, struct wp_presentation *pres)</argsstring>
+        <name>feedback_create</name>
+        <param>
+          <type>struct <ref refid="structclient" kindref="compound">client</ref> *</type>
+          <declname>client</declname>
+        </param>
+        <param>
+          <type>struct wl_surface *</type>
+          <declname>surface</declname>
+        </param>
+        <param>
+          <type>struct wp_presentation *</type>
+          <declname>pres</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/presentation-test.c" line="149" column="1" bodyfile="/home/lzm/Wayland/weston/tests/presentation-test.c" bodystart="149" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="presentation-test_8c_1a756165c673b78f4fb3c8a4d09ae1303f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void feedback_wait</definition>
+        <argsstring>(struct feedback *fb)</argsstring>
+        <name>feedback_wait</name>
+        <param>
+          <type>struct <ref refid="structfeedback" kindref="compound">feedback</ref> *</type>
+          <declname>fb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/presentation-test.c" line="164" column="1" bodyfile="/home/lzm/Wayland/weston/tests/presentation-test.c" bodystart="164" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="presentation-test_8c_1acde56e92c9723bdd7fe8af7766d162e3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>static char* pflags_to_str</definition>
+        <argsstring>(uint32_t flags, char *str, unsigned len)</argsstring>
+        <name>pflags_to_str</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>flags</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/presentation-test.c" line="172" column="1" bodyfile="/home/lzm/Wayland/weston/tests/presentation-test.c" bodystart="172" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="presentation-test_8c_1ac81677d502ae1326af74701e2fb4daad" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void feedback_print</definition>
+        <argsstring>(struct feedback *fb)</argsstring>
+        <name>feedback_print</name>
+        <param>
+          <type>struct <ref refid="structfeedback" kindref="compound">feedback</ref> *</type>
+          <declname>fb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/presentation-test.c" line="197" column="1" bodyfile="/home/lzm/Wayland/weston/tests/presentation-test.c" bodystart="197" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="presentation-test_8c_1aee18ac4fc5b311e07ada2f7f69bf991d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void feedback_destroy</definition>
+        <argsstring>(struct feedback *fb)</argsstring>
+        <name>feedback_destroy</name>
+        <param>
+          <type>struct <ref refid="structfeedback" kindref="compound">feedback</ref> *</type>
+          <declname>fb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/presentation-test.c" line="219" column="1" bodyfile="/home/lzm/Wayland/weston/tests/presentation-test.c" bodystart="219" bodyend="223"/>
+      </memberdef>
+      <memberdef kind="function" id="presentation-test_8c_1ac632522d9a9b1b92ea0fb27527b12c46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(test_presentation_feedback_simple)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>test_presentation_feedback_simple</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/presentation-test.c" line="225" column="1" bodyfile="/home/lzm/Wayland/weston/tests/presentation-test.c" bodystart="225" bodyend="250"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2014<sp/>Collabora,<sp/>Ltd.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>(including<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>next<sp/>paragraph)<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>NONINFRINGEMENT.<sp/><sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;shared/helpers.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;shared/xalloc.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;shared/timespec-util.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="weston-test-client-helper_8h" kindref="compound">weston-test-client-helper.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;presentation-time-client-protocol.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="weston-test-fixture-compositor_8h" kindref="compound">weston-test-fixture-compositor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><ref refid="presentation-test_8c_1a94e9ff74226ccd29a26846ccb66d481f" kindref="member">fixture_setup</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref><sp/>*harness)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structcompositor__setup" kindref="compound">compositor_setup</ref><sp/>setup;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__testharness_1ga6d93ba47ec578b140fa2cbd3efa1218c" kindref="member">compositor_setup_defaults</ref>(&amp;setup);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1gacd7b26a0f0f337781013b40d229cf262" kindref="member">weston_test_harness_execute_as_client</ref>(harness,<sp/>&amp;setup);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><ref refid="presentation-test_8c_1a1ac8add2dcb01a58f69f41ce2ad0ccfc" kindref="member">DECLARE_FIXTURE_SETUP</ref>(<ref refid="presentation-test_8c_1a94e9ff74226ccd29a26846ccb66d481f" kindref="member">fixture_setup</ref>);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wp_presentation<sp/>*</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><ref refid="presentation-test_8c_1a1b41d59c8f2967f63d464bcd17a69f04" kindref="member">get_presentation</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclient" kindref="compound">client</ref><sp/>*<ref refid="structclient" kindref="compound">client</ref>)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structglobal" kindref="compound">global</ref><sp/>*g;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structglobal" kindref="compound">global</ref><sp/>*global_pres<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wp_presentation<sp/>*pres;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_list_for_each(g,<sp/>&amp;<ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1a7c5841d081e771cd4216f7c8572feed2" kindref="member">global_list</ref>,<sp/>link)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(g-&gt;<ref refid="structglobal_1addc85d2e981c005a33f32104134e1bc8" kindref="member">interface</ref>,<sp/>wp_presentation_interface.name))</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(global_pres)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(0<sp/>&amp;&amp;<sp/></highlight><highlight class="stringliteral">&quot;multiple<sp/>presentation<sp/>objects&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>global_pres<sp/>=<sp/>g;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(global_pres<sp/>&amp;&amp;<sp/></highlight><highlight class="stringliteral">&quot;no<sp/>presentation<sp/>found&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(global_pres-&gt;<ref refid="structglobal_1a7ebca62067549b259f367c73df87c064" kindref="member">version</ref><sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pres<sp/>=<sp/>wl_registry_bind(<ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1a9d3ffb64375ce782e18ab3a3bc29fd4b" kindref="member">wl_registry</ref>,<sp/>global_pres-&gt;<ref refid="structglobal_1a7894ae4e045450c7792493e63353ef65" kindref="member">name</ref>,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;wp_presentation_interface,<sp/>1);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(pres);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pres;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="structfeedback" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfeedback" kindref="compound">feedback</ref><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclient" kindref="compound">client</ref><sp/>*<ref refid="structfeedback_1a835010272ab94ba61bb6eb99ce4dc67f" kindref="member">client</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wp_presentation_feedback<sp/>*<ref refid="structfeedback_1a6dbba5cf529d99d6db82bcef55721507" kindref="member">obj</ref>;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structfeedback_1a6d7e600aa798db539a8554c6cfdcb5e3a2c3c328f6022b70f5616187cff2c249d" kindref="member">FB_PENDING</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structfeedback_1a6d7e600aa798db539a8554c6cfdcb5e3a47196d67261996d864454a23648eb8ad" kindref="member">FB_PRESENTED</ref>,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structfeedback_1a6d7e600aa798db539a8554c6cfdcb5e3aa6da92df06077fdb1dd1d5f039562b29" kindref="member">FB_DISCARDED</ref></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><ref refid="structfeedback_1a9b7b858af2188e8b10c4c51a417d2396" kindref="member">result</ref>;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_output<sp/>*<ref refid="structfeedback_1a2ea348f595f0b2e7205ad5f35066b32a" kindref="member">sync_output</ref>;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64_t<sp/><ref refid="structfeedback_1a6ada4b072301f65b4d3a4103a6f63f05" kindref="member">seq</ref>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timespec<sp/><ref refid="structfeedback_1ab54a8ffc634ca90e00dfb911f6c03865" kindref="member">time</ref>;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structfeedback_1a44d682cbe2a004dd724164ad0e2dded7" kindref="member">refresh_nsec</ref>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structfeedback_1a85e67b82c6f3195d66650307e87cba99" kindref="member">flags</ref>;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><ref refid="presentation-test_8c_1a4877a097b7bbf84108fdf27926f8d0b8" kindref="member">feedback_sync_output</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>wp_presentation_feedback<sp/>*<ref refid="compositor_8c_1a3c4d41b60377ef8140fddb73b2ac6400" kindref="member">presentation_feedback</ref>,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>wl_output<sp/>*<ref refid="structoutput" kindref="compound">output</ref>)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfeedback" kindref="compound">feedback</ref><sp/>*fb<sp/>=<sp/>data;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(fb-&gt;<ref refid="structfeedback_1a9b7b858af2188e8b10c4c51a417d2396" kindref="member">result</ref><sp/>==<sp/><ref refid="structfeedback_1a6d7e600aa798db539a8554c6cfdcb5e3a2c3c328f6022b70f5616187cff2c249d" kindref="member">FB_PENDING</ref>);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="structoutput" kindref="compound">output</ref>)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fb-&gt;<ref refid="structfeedback_1a2ea348f595f0b2e7205ad5f35066b32a" kindref="member">sync_output</ref><sp/>=<sp/><ref refid="structoutput" kindref="compound">output</ref>;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><ref refid="presentation-test_8c_1ac99364b2d2263b756092586bc14a8b7b" kindref="member">feedback_presented</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>wp_presentation_feedback<sp/>*<ref refid="compositor_8c_1a3c4d41b60377ef8140fddb73b2ac6400" kindref="member">presentation_feedback</ref>,</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>tv_sec_hi,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>tv_sec_lo,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>tv_nsec,</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structfeedback_1a44d682cbe2a004dd724164ad0e2dded7" kindref="member">refresh_nsec</ref>,</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>seq_hi,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>seq_lo,</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structfeedback_1a85e67b82c6f3195d66650307e87cba99" kindref="member">flags</ref>)</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfeedback" kindref="compound">feedback</ref><sp/>*fb<sp/>=<sp/>data;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(fb-&gt;<ref refid="structfeedback_1a9b7b858af2188e8b10c4c51a417d2396" kindref="member">result</ref><sp/>==<sp/><ref refid="structfeedback_1a6d7e600aa798db539a8554c6cfdcb5e3a2c3c328f6022b70f5616187cff2c249d" kindref="member">FB_PENDING</ref>);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fb-&gt;<ref refid="structfeedback_1a9b7b858af2188e8b10c4c51a417d2396" kindref="member">result</ref><sp/>=<sp/><ref refid="structfeedback_1a6d7e600aa798db539a8554c6cfdcb5e3a47196d67261996d864454a23648eb8ad" kindref="member">FB_PRESENTED</ref>;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fb-&gt;<ref refid="structfeedback_1a6ada4b072301f65b4d3a4103a6f63f05" kindref="member">seq</ref><sp/>=<sp/>((uint64_t)seq_hi<sp/>&lt;&lt;<sp/>32)<sp/>+<sp/>seq_lo;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timespec_from_proto(&amp;fb-&gt;<ref refid="structfeedback_1ab54a8ffc634ca90e00dfb911f6c03865" kindref="member">time</ref>,<sp/>tv_sec_hi,<sp/>tv_sec_lo,<sp/>tv_nsec);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fb-&gt;<ref refid="structfeedback_1a44d682cbe2a004dd724164ad0e2dded7" kindref="member">refresh_nsec</ref><sp/>=<sp/><ref refid="structfeedback_1a44d682cbe2a004dd724164ad0e2dded7" kindref="member">refresh_nsec</ref>;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fb-&gt;<ref refid="structfeedback_1a85e67b82c6f3195d66650307e87cba99" kindref="member">flags</ref><sp/>=<sp/><ref refid="structfeedback_1a85e67b82c6f3195d66650307e87cba99" kindref="member">flags</ref>;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><ref refid="presentation-test_8c_1ad873c75c1a24a4dce5c954486df26314" kindref="member">feedback_discarded</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>wp_presentation_feedback<sp/>*<ref refid="compositor_8c_1a3c4d41b60377ef8140fddb73b2ac6400" kindref="member">presentation_feedback</ref>)</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfeedback" kindref="compound">feedback</ref><sp/>*fb<sp/>=<sp/>data;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(fb-&gt;<ref refid="structfeedback_1a9b7b858af2188e8b10c4c51a417d2396" kindref="member">result</ref><sp/>==<sp/><ref refid="structfeedback_1a6d7e600aa798db539a8554c6cfdcb5e3a2c3c328f6022b70f5616187cff2c249d" kindref="member">FB_PENDING</ref>);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fb-&gt;<ref refid="structfeedback_1a9b7b858af2188e8b10c4c51a417d2396" kindref="member">result</ref><sp/>=<sp/><ref refid="structfeedback_1a6d7e600aa798db539a8554c6cfdcb5e3aa6da92df06077fdb1dd1d5f039562b29" kindref="member">FB_DISCARDED</ref>;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wp_presentation_feedback_listener<sp/><ref refid="presentation-test_8c_1a7c189210bc8073f9534f6f013fc4ee8e" kindref="member">feedback_listener</ref><sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="presentation-test_8c_1a4877a097b7bbf84108fdf27926f8d0b8" kindref="member">feedback_sync_output</ref>,</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="presentation-test_8c_1ac99364b2d2263b756092586bc14a8b7b" kindref="member">feedback_presented</ref>,</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="presentation-test_8c_1ad873c75c1a24a4dce5c954486df26314" kindref="member">feedback_discarded</ref></highlight></codeline>
+<codeline lineno="146"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfeedback" kindref="compound">feedback</ref><sp/>*</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><ref refid="presentation-test_8c_1a3df949d5def66a445a20626825bd138a" kindref="member">feedback_create</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclient" kindref="compound">client</ref><sp/>*<ref refid="structclient" kindref="compound">client</ref>,</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>wl_surface<sp/>*<ref refid="structsurface" kindref="compound">surface</ref>,</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>wp_presentation<sp/>*pres)</highlight></codeline>
+<codeline lineno="152"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfeedback" kindref="compound">feedback</ref><sp/>*fb;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fb<sp/>=<sp/>xzalloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*fb);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fb-&gt;<ref refid="structfeedback_1a835010272ab94ba61bb6eb99ce4dc67f" kindref="member">client</ref><sp/>=<sp/><ref refid="structfeedback_1a835010272ab94ba61bb6eb99ce4dc67f" kindref="member">client</ref>;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fb-&gt;<ref refid="structfeedback_1a6dbba5cf529d99d6db82bcef55721507" kindref="member">obj</ref><sp/>=<sp/>wp_presentation_feedback(pres,<sp/><ref refid="structsurface" kindref="compound">surface</ref>);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wp_presentation_feedback_add_listener(fb-&gt;<ref refid="structfeedback_1a6dbba5cf529d99d6db82bcef55721507" kindref="member">obj</ref>,<sp/>&amp;<ref refid="presentation-test_8c_1a7c189210bc8073f9534f6f013fc4ee8e" kindref="member">feedback_listener</ref>,<sp/>fb);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fb;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><ref refid="presentation-test_8c_1a756165c673b78f4fb3c8a4d09ae1303f" kindref="member">feedback_wait</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structfeedback" kindref="compound">feedback</ref><sp/>*fb)</highlight></codeline>
+<codeline lineno="165"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(fb-&gt;<ref refid="structfeedback_1a9b7b858af2188e8b10c4c51a417d2396" kindref="member">result</ref><sp/>==<sp/><ref refid="structfeedback_1a6d7e600aa798db539a8554c6cfdcb5e3a2c3c328f6022b70f5616187cff2c249d" kindref="member">FB_PENDING</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(wl_display_dispatch(fb-&gt;<ref refid="structfeedback_1a835010272ab94ba61bb6eb99ce4dc67f" kindref="member">client</ref>-&gt;<ref refid="structclient_1a352435d858382f9c925c9f248f12d1ce" kindref="member">wl_display</ref>)<sp/>&gt;=<sp/>0);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><ref refid="presentation-test_8c_1acde56e92c9723bdd7fe8af7766d162e3" kindref="member">pflags_to_str</ref>(uint32_t<sp/><ref refid="structfeedback_1a85e67b82c6f3195d66650307e87cba99" kindref="member">flags</ref>,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*str,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>len)</highlight></codeline>
+<codeline lineno="173"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>flag;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>sym;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>desc[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>WP_PRESENTATION_FEEDBACK_KIND_VSYNC,<sp/></highlight><highlight class="charliteral">&apos;s&apos;</highlight><highlight class="normal"><sp/>},</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>WP_PRESENTATION_FEEDBACK_KIND_HW_CLOCK,<sp/></highlight><highlight class="charliteral">&apos;c&apos;</highlight><highlight class="normal"><sp/>},</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>WP_PRESENTATION_FEEDBACK_KIND_HW_COMPLETION,<sp/></highlight><highlight class="charliteral">&apos;e&apos;</highlight><highlight class="normal"><sp/>},</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>WP_PRESENTATION_FEEDBACK_KIND_ZERO_COPY,<sp/></highlight><highlight class="charliteral">&apos;z&apos;</highlight><highlight class="normal"><sp/>},</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*str<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(len<sp/>&lt;<sp/>ARRAY_LENGTH(desc)<sp/>+<sp/>1)</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>str;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>ARRAY_LENGTH(desc);<sp/>i++)</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>str[i]<sp/>=<sp/>flags<sp/>&amp;<sp/>desc[i].flag<sp/>?<sp/>desc[i].sym<sp/>:<sp/></highlight><highlight class="charliteral">&apos;_&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>str[ARRAY_LENGTH(desc)]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>str;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><ref refid="presentation-test_8c_1ac81677d502ae1326af74701e2fb4daad" kindref="member">feedback_print</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structfeedback" kindref="compound">feedback</ref><sp/>*fb)</highlight></codeline>
+<codeline lineno="198"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>str[10];</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(fb-&gt;<ref refid="structfeedback_1a9b7b858af2188e8b10c4c51a417d2396" kindref="member">result</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>FB_PENDING:</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__testharness_1gaa1538dfd4262a1feafd60cd1f09d9878" kindref="member">testlog</ref>(</highlight><highlight class="stringliteral">&quot;pending&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>FB_DISCARDED:</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__testharness_1gaa1538dfd4262a1feafd60cd1f09d9878" kindref="member">testlog</ref>(</highlight><highlight class="stringliteral">&quot;discarded&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>FB_PRESENTED:</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="presentation-test_8c_1acde56e92c9723bdd7fe8af7766d162e3" kindref="member">pflags_to_str</ref>(fb-&gt;<ref refid="structfeedback_1a85e67b82c6f3195d66650307e87cba99" kindref="member">flags</ref>,<sp/>str,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>str);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__testharness_1gaa1538dfd4262a1feafd60cd1f09d9878" kindref="member">testlog</ref>(</highlight><highlight class="stringliteral">&quot;presented<sp/>%lld.%09lld,<sp/>refresh<sp/>%u<sp/>us,<sp/>[%s]<sp/>seq<sp/>%&quot;</highlight><highlight class="normal"><sp/>PRIu64,</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">)fb-&gt;<ref refid="structfeedback_1ab54a8ffc634ca90e00dfb911f6c03865" kindref="member">time</ref>.tv_sec,<sp/>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">)fb-&gt;<ref refid="structfeedback_1ab54a8ffc634ca90e00dfb911f6c03865" kindref="member">time</ref>.tv_nsec,</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fb-&gt;<ref refid="structfeedback_1a44d682cbe2a004dd724164ad0e2dded7" kindref="member">refresh_nsec</ref><sp/>/<sp/>1000,<sp/>str,<sp/>fb-&gt;<ref refid="structfeedback_1a6ada4b072301f65b4d3a4103a6f63f05" kindref="member">seq</ref>);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><ref refid="presentation-test_8c_1aee18ac4fc5b311e07ada2f7f69bf991d" kindref="member">feedback_destroy</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structfeedback" kindref="compound">feedback</ref><sp/>*fb)</highlight></codeline>
+<codeline lineno="220"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wp_presentation_feedback_destroy(fb-&gt;<ref refid="structfeedback_1a6dbba5cf529d99d6db82bcef55721507" kindref="member">obj</ref>);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(fb);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><ref refid="presentation-test_8c_1ac632522d9a9b1b92ea0fb27527b12c46" kindref="member">TEST</ref>(test_presentation_feedback_simple)</highlight></codeline>
+<codeline lineno="226"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclient" kindref="compound">client</ref><sp/>*<ref refid="structclient" kindref="compound">client</ref>;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfeedback" kindref="compound">feedback</ref><sp/>*fb;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wp_presentation<sp/>*pres;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structclient" kindref="compound">client</ref><sp/>=<sp/><ref refid="weston-test-client-helper_8c_1afaf75d0d97a6872840e248ca4e300190" kindref="member">create_client_and_test_surface</ref>(100,<sp/>50,<sp/>123,<sp/>77);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="structclient" kindref="compound">client</ref>);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pres<sp/>=<sp/><ref refid="presentation-test_8c_1a1b41d59c8f2967f63d464bcd17a69f04" kindref="member">get_presentation</ref>(<ref refid="structclient" kindref="compound">client</ref>);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_surface_attach(<ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1ab08863485e285fef208584804ca7480a" kindref="member">surface</ref>-&gt;<ref refid="structsurface_1a4910a1070e78b84c00c8ab27a508b4da" kindref="member">wl_surface</ref>,</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1ab08863485e285fef208584804ca7480a" kindref="member">surface</ref>-&gt;<ref refid="structsurface_1a6380eb64761a852c50514a0ad1b8a37c" kindref="member">buffer</ref>-&gt;<ref refid="structbuffer_1a47f5f09576d179641e98d1d6730067dc" kindref="member">proxy</ref>,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fb<sp/>=<sp/><ref refid="presentation-test_8c_1a3df949d5def66a445a20626825bd138a" kindref="member">feedback_create</ref>(<ref refid="structclient" kindref="compound">client</ref>,<sp/><ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1ab08863485e285fef208584804ca7480a" kindref="member">surface</ref>-&gt;<ref refid="structsurface_1a4910a1070e78b84c00c8ab27a508b4da" kindref="member">wl_surface</ref>,<sp/>pres);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_surface_damage(<ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1ab08863485e285fef208584804ca7480a" kindref="member">surface</ref>-&gt;<ref refid="structsurface_1a4910a1070e78b84c00c8ab27a508b4da" kindref="member">wl_surface</ref>,<sp/>0,<sp/>0,<sp/>100,<sp/>100);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_surface_commit(<ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1ab08863485e285fef208584804ca7480a" kindref="member">surface</ref>-&gt;<ref refid="structsurface_1a4910a1070e78b84c00c8ab27a508b4da" kindref="member">wl_surface</ref>);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8h_1ab95988e6d0d010625831b6b8c92a4a9d" kindref="member">client_roundtrip</ref>(<ref refid="structclient" kindref="compound">client</ref>);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="presentation-test_8c_1a756165c673b78f4fb3c8a4d09ae1303f" kindref="member">feedback_wait</ref>(fb);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__testharness_1gaa1538dfd4262a1feafd60cd1f09d9878" kindref="member">testlog</ref>(</highlight><highlight class="stringliteral">&quot;%s<sp/>feedback:&quot;</highlight><highlight class="normal">,<sp/>__func__);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="presentation-test_8c_1ac81677d502ae1326af74701e2fb4daad" kindref="member">feedback_print</ref>(fb);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__testharness_1gaa1538dfd4262a1feafd60cd1f09d9878" kindref="member">testlog</ref>(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="presentation-test_8c_1aee18ac4fc5b311e07ada2f7f69bf991d" kindref="member">feedback_destroy</ref>(fb);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/tests/presentation-test.c"/>
+  </compounddef>
+</doxygen>

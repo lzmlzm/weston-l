@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structpixman__renderer__output__options" kind="struct" language="C++" prot="public">
+    <compoundname>pixman_renderer_output_options</compoundname>
+    <includes refid="pixman-renderer_8h" local="no">pixman-renderer.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpixman__renderer__output__options_1ad88a2cca5c4b06a2565aa49ed1991124" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool pixman_renderer_output_options::use_shadow</definition>
+        <argsstring></argsstring>
+        <name>use_shadow</name>
+        <briefdescription>
+<para>Composite into a shadow buffer, copying to the hardware buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixman-renderer.h" line="37" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/pixman-renderer.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/pixman-renderer.h" line="35" column="37" bodyfile="/home/lzm/Wayland/weston/libweston/pixman-renderer.h" bodystart="35" bodyend="38"/>
+    <listofallmembers>
+      <member refid="structpixman__renderer__output__options_1ad88a2cca5c4b06a2565aa49ed1991124" prot="public" virt="non-virtual"><scope>pixman_renderer_output_options</scope><name>use_shadow</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

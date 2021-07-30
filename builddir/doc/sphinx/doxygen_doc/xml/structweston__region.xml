@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__region" kind="struct" language="C++" prot="public">
+    <compoundname>weston_region</compoundname>
+    <includes refid="libweston_8h" local="no">libweston.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__region_1a8168d93a65ac64bb5773c723466953e5" prot="public" static="no" mutable="no">
+        <type>struct wl_resource *</type>
+        <definition>struct wl_resource* weston_region::resource</definition>
+        <argsstring></argsstring>
+        <name>resource</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="1236" column="18" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="1236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__region_1ac4632bb6e79b9c80e7a678437f571bf4" prot="public" static="no" mutable="no">
+        <type>pixman_region32_t</type>
+        <definition>pixman_region32_t weston_region::region</definition>
+        <argsstring></argsstring>
+        <name>region</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="1237" column="19" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="1237" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="1235" column="20" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="1235" bodyend="1238"/>
+    <listofallmembers>
+      <member refid="structweston__region_1ac4632bb6e79b9c80e7a678437f571bf4" prot="public" virt="non-virtual"><scope>weston_region</scope><name>region</name></member>
+      <member refid="structweston__region_1a8168d93a65ac64bb5773c723466953e5" prot="public" virt="non-virtual"><scope>weston_region</scope><name>resource</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

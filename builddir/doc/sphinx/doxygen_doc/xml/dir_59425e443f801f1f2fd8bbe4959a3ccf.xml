@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_59425e443f801f1f2fd8bbe4959a3ccf" kind="dir">
+    <compoundname>/home/lzm/Wayland/weston/tests</compoundname>
+    <innerfile refid="alpha-blending-test_8c">alpha-blending-test.c</innerfile>
+    <innerfile refid="bad-buffer-test_8c">bad-buffer-test.c</innerfile>
+    <innerfile refid="buffer-transforms-test_8c">buffer-transforms-test.c</innerfile>
+    <innerfile refid="config-parser-test_8c">config-parser-test.c</innerfile>
+    <innerfile refid="devices-test_8c">devices-test.c</innerfile>
+    <innerfile refid="drm-smoke-test_8c">drm-smoke-test.c</innerfile>
+    <innerfile refid="event-test_8c">event-test.c</innerfile>
+    <innerfile refid="input-timestamps-helper_8c">input-timestamps-helper.c</innerfile>
+    <innerfile refid="input-timestamps-helper_8h">input-timestamps-helper.h</innerfile>
+    <innerfile refid="internal-screenshot-test_8c">internal-screenshot-test.c</innerfile>
+    <innerfile refid="ivi-layout-internal-test_8c">ivi-layout-internal-test.c</innerfile>
+    <innerfile refid="ivi-layout-test-client_8c">ivi-layout-test-client.c</innerfile>
+    <innerfile refid="ivi-layout-test-plugin_8c">ivi-layout-test-plugin.c</innerfile>
+    <innerfile refid="ivi-shell-app-test_8c">ivi-shell-app-test.c</innerfile>
+    <innerfile refid="ivi-test_8h">ivi-test.h</innerfile>
+    <innerfile refid="keyboard-test_8c">keyboard-test.c</innerfile>
+    <innerfile refid="linux-explicit-synchronization-test_8c">linux-explicit-synchronization-test.c</innerfile>
+    <innerfile refid="matrix-test_8c">matrix-test.c</innerfile>
+    <innerfile refid="output-damage-test_8c">output-damage-test.c</innerfile>
+    <innerfile refid="output-transforms-test_8c">output-transforms-test.c</innerfile>
+    <innerfile refid="plugin-registry-test_8c">plugin-registry-test.c</innerfile>
+    <innerfile refid="pointer-test_8c">pointer-test.c</innerfile>
+    <innerfile refid="presentation-test_8c">presentation-test.c</innerfile>
+    <innerfile refid="roles-test_8c">roles-test.c</innerfile>
+    <innerfile refid="setbacklight_8c">setbacklight.c</innerfile>
+    <innerfile refid="string-test_8c">string-test.c</innerfile>
+    <innerfile refid="subsurface-shot-test_8c">subsurface-shot-test.c</innerfile>
+    <innerfile refid="subsurface-test_8c">subsurface-test.c</innerfile>
+    <innerfile refid="surface-global-test_8c">surface-global-test.c</innerfile>
+    <innerfile refid="surface-screenshot-test_8c">surface-screenshot-test.c</innerfile>
+    <innerfile refid="surface-test_8c">surface-test.c</innerfile>
+    <innerfile refid="text-test_8c">text-test.c</innerfile>
+    <innerfile refid="timespec-test_8c">timespec-test.c</innerfile>
+    <innerfile refid="touch-test_8c">touch-test.c</innerfile>
+    <innerfile refid="vertex-clip-test_8c">vertex-clip-test.c</innerfile>
+    <innerfile refid="viewporter-shot-test_8c">viewporter-shot-test.c</innerfile>
+    <innerfile refid="viewporter-test_8c">viewporter-test.c</innerfile>
+    <innerfile refid="weston-test-client-helper_8c">weston-test-client-helper.c</innerfile>
+    <innerfile refid="weston-test-client-helper_8h">weston-test-client-helper.h</innerfile>
+    <innerfile refid="weston-test-desktop-shell_8c">weston-test-desktop-shell.c</innerfile>
+    <innerfile refid="weston-test-fixture-compositor_8c">weston-test-fixture-compositor.c</innerfile>
+    <innerfile refid="weston-test-fixture-compositor_8h">weston-test-fixture-compositor.h</innerfile>
+    <innerfile refid="weston-test-runner_8c">weston-test-runner.c</innerfile>
+    <innerfile refid="weston-test-runner_8h">weston-test-runner.h</innerfile>
+    <innerfile refid="weston-test_8c">weston-test.c</innerfile>
+    <innerfile refid="weston-testsuite-data_8h">weston-testsuite-data.h</innerfile>
+    <innerfile refid="xwayland-test_8c">xwayland-test.c</innerfile>
+    <innerfile refid="yuv-buffer-test_8c">yuv-buffer-test.c</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/tests/"/>
+  </compounddef>
+</doxygen>

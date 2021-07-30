@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structgl__fbo__texture" kind="struct" language="C++" prot="public">
+    <compoundname>gl_fbo_texture</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgl__fbo__texture_1ab346dd37d3b8bb1d7bfb35575ca154c1" prot="public" static="no" mutable="no">
+        <type>GLuint</type>
+        <definition>GLuint gl_fbo_texture::fbo</definition>
+        <argsstring></argsstring>
+        <name>fbo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" line="82" column="8" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__fbo__texture_1a6db86c9455344d4ff6f1d4de71f363ca" prot="public" static="no" mutable="no">
+        <type>GLuint</type>
+        <definition>GLuint gl_fbo_texture::tex</definition>
+        <argsstring></argsstring>
+        <name>tex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" line="83" column="8" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__fbo__texture_1aa9f44804d5d0ccbb1e214f72794b8ace" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t gl_fbo_texture::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" line="84" column="9" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__fbo__texture_1a63739da3b338ccdb9c0ce0cd1cf39cdf" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t gl_fbo_texture::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" line="85" column="9" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" line="81" column="21" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" bodystart="81" bodyend="86"/>
+    <listofallmembers>
+      <member refid="structgl__fbo__texture_1ab346dd37d3b8bb1d7bfb35575ca154c1" prot="public" virt="non-virtual"><scope>gl_fbo_texture</scope><name>fbo</name></member>
+      <member refid="structgl__fbo__texture_1a63739da3b338ccdb9c0ce0cd1cf39cdf" prot="public" virt="non-virtual"><scope>gl_fbo_texture</scope><name>height</name></member>
+      <member refid="structgl__fbo__texture_1a6db86c9455344d4ff6f1d4de71f363ca" prot="public" virt="non-virtual"><scope>gl_fbo_texture</scope><name>tex</name></member>
+      <member refid="structgl__fbo__texture_1aa9f44804d5d0ccbb1e214f72794b8ace" prot="public" virt="non-virtual"><scope>gl_fbo_texture</scope><name>width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

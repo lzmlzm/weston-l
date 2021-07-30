@@ -1,0 +1,684 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="clipboard_8c" kind="file" language="C++">
+    <compoundname>clipboard.c</compoundname>
+    <includes local="yes">config.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">linux/input.h</includes>
+    <includes local="no">fcntl.h</includes>
+    <includes local="no">unistd.h</includes>
+    <includes local="no">sys/uio.h</includes>
+    <includes refid="libweston_8h" local="no">libweston/libweston.h</includes>
+    <includes refid="libweston-internal_8h" local="yes">libweston-internal.h</includes>
+    <includes local="yes">shared/helpers.h</includes>
+    <incdepgraph>
+      <node id="11">
+        <label>stdbool.h</label>
+      </node>
+      <node id="10">
+        <label>libweston/libweston.h</label>
+        <link refid="libweston_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>linux/input.h</label>
+      </node>
+      <node id="3">
+        <label>stdint.h</label>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="15">
+        <label>wayland-server.h</label>
+      </node>
+      <node id="14">
+        <label>xkbcommon/xkbcommon.h</label>
+      </node>
+      <node id="7">
+        <label>fcntl.h</label>
+      </node>
+      <node id="19">
+        <label>shared/helpers.h</label>
+      </node>
+      <node id="5">
+        <label>string.h</label>
+      </node>
+      <node id="8">
+        <label>unistd.h</label>
+      </node>
+      <node id="9">
+        <label>sys/uio.h</label>
+      </node>
+      <node id="17">
+        <label>libweston/zalloc.h</label>
+        <link refid="zalloc_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>time.h</label>
+      </node>
+      <node id="16">
+        <label>libweston/matrix.h</label>
+        <link refid="matrix_8h"/>
+      </node>
+      <node id="13">
+        <label>pixman.h</label>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/libweston/clipboard.c</label>
+        <link refid="clipboard_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>libweston-internal.h</label>
+        <link refid="libweston-internal_8h"/>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structclipboard__source" prot="public">clipboard_source</innerclass>
+    <innerclass refid="structclipboard" prot="public">clipboard</innerclass>
+    <innerclass refid="structclipboard__client" prot="public">clipboard_client</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="clipboard_8c_1aa5e389c686d0b762b530d683ac6402a9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void clipboard_client_create</definition>
+        <argsstring>(struct clipboard_source *source, int fd)</argsstring>
+        <name>clipboard_client_create</name>
+        <param>
+          <type>struct <ref refid="structclipboard__source" kindref="compound">clipboard_source</ref> *</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/clipboard.c" line="217" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/clipboard.c" bodystart="217" bodyend="233" declfile="/home/lzm/Wayland/weston/libweston/clipboard.c" declline="57" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="clipboard_8c_1a80e3940b1aa303d5edd416c588f37e1d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void clipboard_source_unref</definition>
+        <argsstring>(struct clipboard_source *source)</argsstring>
+        <name>clipboard_source_unref</name>
+        <param>
+          <type>struct <ref refid="structclipboard__source" kindref="compound">clipboard_source</ref> *</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/clipboard.c" line="60" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/clipboard.c" bodystart="60" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="clipboard_8c_1a855337bd7716b5d13a7504368d9c433e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int clipboard_source_data</definition>
+        <argsstring>(int fd, uint32_t mask, void *data)</argsstring>
+        <name>clipboard_source_data</name>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/clipboard.c" line="82" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/clipboard.c" bodystart="82" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="clipboard_8c_1aadba6433581e75202f490c89ffdce089" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void clipboard_source_accept</definition>
+        <argsstring>(struct weston_data_source *source, uint32_t time, const char *mime_type)</argsstring>
+        <name>clipboard_source_accept</name>
+        <param>
+          <type>struct <ref refid="structweston__data__source" kindref="compound">weston_data_source</ref> *</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>mime_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/clipboard.c" line="112" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/clipboard.c" bodystart="112" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="clipboard_8c_1ac13a0e03b6e8597a20ddef7e3a6479bd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void clipboard_source_send</definition>
+        <argsstring>(struct weston_data_source *base, const char *mime_type, int32_t fd)</argsstring>
+        <name>clipboard_source_send</name>
+        <param>
+          <type>struct <ref refid="structweston__data__source" kindref="compound">weston_data_source</ref> *</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>mime_type</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/clipboard.c" line="118" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/clipboard.c" bodystart="118" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="clipboard_8c_1aa25fdd3224f27a3d8f8a77e47230d371" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void clipboard_source_cancel</definition>
+        <argsstring>(struct weston_data_source *source)</argsstring>
+        <name>clipboard_source_cancel</name>
+        <param>
+          <type>struct <ref refid="structweston__data__source" kindref="compound">weston_data_source</ref> *</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/clipboard.c" line="133" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/clipboard.c" bodystart="133" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="clipboard_8c_1a1c18e821eed64f69257d8031bab0f4dc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structclipboard__source" kindref="compound">clipboard_source</ref> *</type>
+        <definition>static struct clipboard_source* clipboard_source_create</definition>
+        <argsstring>(struct clipboard *clipboard, const char *mime_type, uint32_t serial, int fd)</argsstring>
+        <name>clipboard_source_create</name>
+        <param>
+          <type>struct <ref refid="structclipboard" kindref="compound">clipboard</ref> *</type>
+          <declname>clipboard</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>mime_type</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>serial</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/clipboard.c" line="138" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/clipboard.c" bodystart="138" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="clipboard_8c_1a98c0f5d94059a96071871fb35d9df8f4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int clipboard_client_data</definition>
+        <argsstring>(int fd, uint32_t mask, void *data)</argsstring>
+        <name>clipboard_client_data</name>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>mask</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/clipboard.c" line="193" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/clipboard.c" bodystart="193" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="clipboard_8c_1a2178f3c6e43007dc52f1d0b913b89ee2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void clipboard_set_selection</definition>
+        <argsstring>(struct wl_listener *listener, void *data)</argsstring>
+        <name>clipboard_set_selection</name>
+        <param>
+          <type>struct wl_listener *</type>
+          <declname>listener</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/clipboard.c" line="236" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/clipboard.c" bodystart="236" bodyend="275"/>
+      </memberdef>
+      <memberdef kind="function" id="clipboard_8c_1a04e07d7525b03c73bff1984ea8b9a418" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void clipboard_destroy</definition>
+        <argsstring>(struct wl_listener *listener, void *data)</argsstring>
+        <name>clipboard_destroy</name>
+        <param>
+          <type>struct wl_listener *</type>
+          <declname>listener</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/clipboard.c" line="278" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/clipboard.c" bodystart="278" bodyend="287"/>
+      </memberdef>
+      <memberdef kind="function" id="clipboard_8c_1a6b4f345ba46e19810219d1414a676716" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structclipboard" kindref="compound">clipboard</ref> *</type>
+        <definition>struct clipboard* clipboard_create</definition>
+        <argsstring>(struct weston_seat *seat)</argsstring>
+        <name>clipboard_create</name>
+        <param>
+          <type>struct <ref refid="structweston__seat" kindref="compound">weston_seat</ref> *</type>
+          <declname>seat</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/clipboard.c" line="290" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/clipboard.c" bodystart="290" bodyend="308"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2012<sp/>Intel<sp/>Corporation</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>(including<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>next<sp/>paragraph)<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>NONINFRINGEMENT.<sp/><sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;linux/input.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fcntl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unistd.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/uio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="libweston_8h" kindref="compound">libweston/libweston.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="libweston-internal_8h" kindref="compound">libweston-internal.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;shared/helpers.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="structclipboard__source" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclipboard__source" kindref="compound">clipboard_source</ref><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__data__source" kindref="compound">weston_data_source</ref><sp/><ref refid="structclipboard__source_1ab73c616698de1e417159038bc3121302" kindref="member">base</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_array<sp/><ref refid="structclipboard__source_1ad399e65109d44074e59a0420e0da2a3b" kindref="member">contents</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclipboard" kindref="compound">clipboard</ref><sp/>*<ref refid="structclipboard__source_1a4117591c232d1eb32580001a028fc212" kindref="member">clipboard</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_event_source<sp/>*<ref refid="structclipboard__source_1a3596788401c8d12ae60e31d41ea87516" kindref="member">event_source</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structclipboard__source_1a0072a9f1e58d0fd56d8501077dcc82a7" kindref="member">serial</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structclipboard__source_1ae99e528657ced0ba5725c0b1a6ca6972" kindref="member">refcount</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structclipboard__source_1ad81a187d435beb2e89ce9ec83bab36d8" kindref="member">fd</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="structclipboard" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclipboard" kindref="compound">clipboard</ref><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__seat" kindref="compound">weston_seat</ref><sp/>*<ref refid="structclipboard_1a97dc69b3b09271aacb0dce3738cfb55a" kindref="member">seat</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_listener<sp/><ref refid="structclipboard_1a09b219b37fb300a2b8dd06ae46f44eeb" kindref="member">selection_listener</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_listener<sp/><ref refid="structclipboard_1a0b4c1a54ae62d751401ca4f3c1670f54" kindref="member">destroy_listener</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclipboard__source" kindref="compound">clipboard_source</ref><sp/>*<ref refid="structclipboard_1a8f946384457a91c155063bdf24d26322" kindref="member">source</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="clipboard_8c_1aa5e389c686d0b762b530d683ac6402a9" kindref="member">clipboard_client_create</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclipboard__source" kindref="compound">clipboard_source</ref><sp/>*source,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structclipboard__source_1ad81a187d435beb2e89ce9ec83bab36d8" kindref="member">fd</ref>);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><ref refid="clipboard_8c_1a80e3940b1aa303d5edd416c588f37e1d" kindref="member">clipboard_source_unref</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclipboard__source" kindref="compound">clipboard_source</ref><sp/>*source)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**s;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source-&gt;<ref refid="structclipboard__source_1ae99e528657ced0ba5725c0b1a6ca6972" kindref="member">refcount</ref>--;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(source-&gt;<ref refid="structclipboard__source_1ae99e528657ced0ba5725c0b1a6ca6972" kindref="member">refcount</ref><sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(source-&gt;<ref refid="structclipboard__source_1a3596788401c8d12ae60e31d41ea87516" kindref="member">event_source</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_event_source_remove(source-&gt;<ref refid="structclipboard__source_1a3596788401c8d12ae60e31d41ea87516" kindref="member">event_source</ref>);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>close(source-&gt;<ref refid="structclipboard__source_1ad81a187d435beb2e89ce9ec83bab36d8" kindref="member">fd</ref>);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_signal_emit(&amp;source-&gt;<ref refid="structclipboard__source_1ab73c616698de1e417159038bc3121302" kindref="member">base</ref>.<ref refid="structweston__data__source_1a3623787d7a11e747846ae5179d6f816f" kindref="member">destroy_signal</ref>,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;source-&gt;<ref refid="structclipboard__source_1ab73c616698de1e417159038bc3121302" kindref="member">base</ref>);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s<sp/>=<sp/>source-&gt;<ref refid="structclipboard__source_1ab73c616698de1e417159038bc3121302" kindref="member">base</ref>.<ref refid="structweston__data__source_1a6d4815f549c63ffb787ad7b9a01ed4f1" kindref="member">mime_types</ref>.data;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(*s);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_array_release(&amp;source-&gt;<ref refid="structclipboard__source_1ab73c616698de1e417159038bc3121302" kindref="member">base</ref>.<ref refid="structweston__data__source_1a6d4815f549c63ffb787ad7b9a01ed4f1" kindref="member">mime_types</ref>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_array_release(&amp;source-&gt;<ref refid="structclipboard__source_1ad399e65109d44074e59a0420e0da2a3b" kindref="member">contents</ref>);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(source);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><ref refid="clipboard_8c_1a855337bd7716b5d13a7504368d9c433e" kindref="member">clipboard_source_data</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structclipboard__source_1ad81a187d435beb2e89ce9ec83bab36d8" kindref="member">fd</ref>,<sp/>uint32_t<sp/>mask,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclipboard__source" kindref="compound">clipboard_source</ref><sp/>*source<sp/>=<sp/>data;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclipboard" kindref="compound">clipboard</ref><sp/>*<ref refid="structclipboard" kindref="compound">clipboard</ref><sp/>=<sp/><ref refid="structclipboard_1a8f946384457a91c155063bdf24d26322" kindref="member">source</ref>-&gt;<ref refid="structclipboard__source_1a4117591c232d1eb32580001a028fc212" kindref="member">clipboard</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*p;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len,<sp/>size;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="structclipboard_1a8f946384457a91c155063bdf24d26322" kindref="member">source</ref>-&gt;<ref refid="structclipboard__source_1ad399e65109d44074e59a0420e0da2a3b" kindref="member">contents</ref>.alloc<sp/>-<sp/><ref refid="structclipboard_1a8f946384457a91c155063bdf24d26322" kindref="member">source</ref>-&gt;<ref refid="structclipboard__source_1ad399e65109d44074e59a0420e0da2a3b" kindref="member">contents</ref>.size<sp/>&lt;<sp/>1024)<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_array_add(&amp;<ref refid="structclipboard_1a8f946384457a91c155063bdf24d26322" kindref="member">source</ref>-&gt;<ref refid="structclipboard__source_1ad399e65109d44074e59a0420e0da2a3b" kindref="member">contents</ref>,<sp/>1024);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structclipboard_1a8f946384457a91c155063bdf24d26322" kindref="member">source</ref>-&gt;<ref refid="structclipboard__source_1ad399e65109d44074e59a0420e0da2a3b" kindref="member">contents</ref>.size<sp/>-=<sp/>1024;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p<sp/>=<sp/><ref refid="structclipboard_1a8f946384457a91c155063bdf24d26322" kindref="member">source</ref>-&gt;<ref refid="structclipboard__source_1ad399e65109d44074e59a0420e0da2a3b" kindref="member">contents</ref>.data<sp/>+<sp/><ref refid="structclipboard_1a8f946384457a91c155063bdf24d26322" kindref="member">source</ref>-&gt;<ref refid="structclipboard__source_1ad399e65109d44074e59a0420e0da2a3b" kindref="member">contents</ref>.size;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size<sp/>=<sp/><ref refid="structclipboard_1a8f946384457a91c155063bdf24d26322" kindref="member">source</ref>-&gt;<ref refid="structclipboard__source_1ad399e65109d44074e59a0420e0da2a3b" kindref="member">contents</ref>.alloc<sp/>-<sp/><ref refid="structclipboard_1a8f946384457a91c155063bdf24d26322" kindref="member">source</ref>-&gt;<ref refid="structclipboard__source_1ad399e65109d44074e59a0420e0da2a3b" kindref="member">contents</ref>.size;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>len<sp/>=<sp/>read(fd,<sp/>p,<sp/>size);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(len<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_event_source_remove(<ref refid="structclipboard_1a8f946384457a91c155063bdf24d26322" kindref="member">source</ref>-&gt;<ref refid="structclipboard__source_1a3596788401c8d12ae60e31d41ea87516" kindref="member">event_source</ref>);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>close(fd);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structclipboard_1a8f946384457a91c155063bdf24d26322" kindref="member">source</ref>-&gt;<ref refid="structclipboard__source_1a3596788401c8d12ae60e31d41ea87516" kindref="member">event_source</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(len<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="clipboard_8c_1a80e3940b1aa303d5edd416c588f37e1d" kindref="member">clipboard_source_unref</ref>(<ref refid="structclipboard_1a8f946384457a91c155063bdf24d26322" kindref="member">source</ref>);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structclipboard" kindref="compound">clipboard</ref>-&gt;<ref refid="structclipboard_1a8f946384457a91c155063bdf24d26322" kindref="member">source</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structclipboard_1a8f946384457a91c155063bdf24d26322" kindref="member">source</ref>-&gt;<ref refid="structclipboard__source_1ad399e65109d44074e59a0420e0da2a3b" kindref="member">contents</ref>.size<sp/>+=<sp/>len;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><ref refid="clipboard_8c_1aadba6433581e75202f490c89ffdce089" kindref="member">clipboard_source_accept</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__data__source" kindref="compound">weston_data_source</ref><sp/>*<ref refid="structclipboard_1a8f946384457a91c155063bdf24d26322" kindref="member">source</ref>,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>time,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*mime_type)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><ref refid="clipboard_8c_1ac13a0e03b6e8597a20ddef7e3a6479bd" kindref="member">clipboard_source_send</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__data__source" kindref="compound">weston_data_source</ref><sp/>*base,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*mime_type,<sp/>int32_t<sp/>fd)</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclipboard__source" kindref="compound">clipboard_source</ref><sp/>*source<sp/>=</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>container_of(<ref refid="structclipboard__source_1ab73c616698de1e417159038bc3121302" kindref="member">base</ref>,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclipboard__source" kindref="compound">clipboard_source</ref>,<sp/><ref refid="structclipboard__source_1ab73c616698de1e417159038bc3121302" kindref="member">base</ref>);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**s;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s<sp/>=<sp/>source-&gt;<ref refid="structclipboard__source_1ab73c616698de1e417159038bc3121302" kindref="member">base</ref>.<ref refid="structweston__data__source_1a6d4815f549c63ffb787ad7b9a01ed4f1" kindref="member">mime_types</ref>.data;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(mime_type,<sp/>s[0])<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="clipboard_8c_1aa5e389c686d0b762b530d683ac6402a9" kindref="member">clipboard_client_create</ref>(source,<sp/><ref refid="structclipboard__source_1ad81a187d435beb2e89ce9ec83bab36d8" kindref="member">fd</ref>);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>close(<ref refid="structclipboard__source_1ad81a187d435beb2e89ce9ec83bab36d8" kindref="member">fd</ref>);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><ref refid="clipboard_8c_1aa25fdd3224f27a3d8f8a77e47230d371" kindref="member">clipboard_source_cancel</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__data__source" kindref="compound">weston_data_source</ref><sp/>*source)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclipboard__source" kindref="compound">clipboard_source</ref><sp/>*</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><ref refid="clipboard_8c_1a1c18e821eed64f69257d8031bab0f4dc" kindref="member">clipboard_source_create</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclipboard" kindref="compound">clipboard</ref><sp/>*<ref refid="structclipboard" kindref="compound">clipboard</ref>,</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*mime_type,<sp/>uint32_t<sp/><ref refid="structclipboard__source_1a0072a9f1e58d0fd56d8501077dcc82a7" kindref="member">serial</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structclipboard__source_1ad81a187d435beb2e89ce9ec83bab36d8" kindref="member">fd</ref>)</highlight></codeline>
+<codeline lineno="140"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_display<sp/>*display<sp/>=<sp/><ref refid="structclipboard" kindref="compound">clipboard</ref>-&gt;<ref refid="structclipboard_1a97dc69b3b09271aacb0dce3738cfb55a" kindref="member">seat</ref>-&gt;<ref refid="structweston__seat_1a58160bbc8f87efa12c73096be486b27f" kindref="member">compositor</ref>-&gt;<ref refid="structweston__compositor_1a2ad81ce6f58ba42026cd6d86d5f88c8b" kindref="member">wl_display</ref>;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_event_loop<sp/>*loop<sp/>=<sp/>wl_display_get_event_loop(display);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclipboard__source" kindref="compound">clipboard_source</ref><sp/>*source;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**s;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source<sp/>=<sp/><ref refid="zalloc_8h_1a260ac290b02627b12230b313c8fa92b3" kindref="member">zalloc</ref>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*source);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(source<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_array_init(&amp;source-&gt;<ref refid="structclipboard__source_1ad399e65109d44074e59a0420e0da2a3b" kindref="member">contents</ref>);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_array_init(&amp;source-&gt;<ref refid="structclipboard__source_1ab73c616698de1e417159038bc3121302" kindref="member">base</ref>.<ref refid="structweston__data__source_1a6d4815f549c63ffb787ad7b9a01ed4f1" kindref="member">mime_types</ref>);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source-&gt;<ref refid="structclipboard__source_1ab73c616698de1e417159038bc3121302" kindref="member">base</ref>.<ref refid="structweston__data__source_1ab007d6a6debd221e6dda5742fdd4b8e2" kindref="member">resource</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source-&gt;<ref refid="structclipboard__source_1ab73c616698de1e417159038bc3121302" kindref="member">base</ref>.<ref refid="structweston__data__source_1a6e558827e0c61f10719fe29ca6b82e5a" kindref="member">accept</ref><sp/>=<sp/><ref refid="clipboard_8c_1aadba6433581e75202f490c89ffdce089" kindref="member">clipboard_source_accept</ref>;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source-&gt;<ref refid="structclipboard__source_1ab73c616698de1e417159038bc3121302" kindref="member">base</ref>.<ref refid="structweston__data__source_1a6ef8e0b4696b756d3c9eae99a2f91592" kindref="member">send</ref><sp/>=<sp/><ref refid="clipboard_8c_1ac13a0e03b6e8597a20ddef7e3a6479bd" kindref="member">clipboard_source_send</ref>;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source-&gt;<ref refid="structclipboard__source_1ab73c616698de1e417159038bc3121302" kindref="member">base</ref>.<ref refid="structweston__data__source_1a511b73075b7a85dbfd36e46b8f200da0" kindref="member">cancel</ref><sp/>=<sp/><ref refid="clipboard_8c_1aa25fdd3224f27a3d8f8a77e47230d371" kindref="member">clipboard_source_cancel</ref>;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_signal_init(&amp;source-&gt;<ref refid="structclipboard__source_1ab73c616698de1e417159038bc3121302" kindref="member">base</ref>.<ref refid="structweston__data__source_1a3623787d7a11e747846ae5179d6f816f" kindref="member">destroy_signal</ref>);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source-&gt;<ref refid="structclipboard__source_1ae99e528657ced0ba5725c0b1a6ca6972" kindref="member">refcount</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source-&gt;<ref refid="structclipboard__source_1a4117591c232d1eb32580001a028fc212" kindref="member">clipboard</ref><sp/>=<sp/><ref refid="structclipboard__source_1a4117591c232d1eb32580001a028fc212" kindref="member">clipboard</ref>;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source-&gt;<ref refid="structclipboard__source_1a0072a9f1e58d0fd56d8501077dcc82a7" kindref="member">serial</ref><sp/>=<sp/><ref refid="structclipboard__source_1a0072a9f1e58d0fd56d8501077dcc82a7" kindref="member">serial</ref>;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source-&gt;<ref refid="structclipboard__source_1ad81a187d435beb2e89ce9ec83bab36d8" kindref="member">fd</ref><sp/>=<sp/><ref refid="structclipboard__source_1ad81a187d435beb2e89ce9ec83bab36d8" kindref="member">fd</ref>;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s<sp/>=<sp/>wl_array_add(&amp;source-&gt;<ref refid="structclipboard__source_1ab73c616698de1e417159038bc3121302" kindref="member">base</ref>.<ref refid="structweston__data__source_1a6d4815f549c63ffb787ad7b9a01ed4f1" kindref="member">mime_types</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*s);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(s<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>err_add;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*s<sp/>=<sp/>strdup(mime_type);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*s<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>err_strdup;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source-&gt;<ref refid="structclipboard__source_1a3596788401c8d12ae60e31d41ea87516" kindref="member">event_source</ref><sp/>=</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_event_loop_add_fd(loop,<sp/><ref refid="structclipboard__source_1ad81a187d435beb2e89ce9ec83bab36d8" kindref="member">fd</ref>,<sp/>WL_EVENT_READABLE,</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="clipboard_8c_1a855337bd7716b5d13a7504368d9c433e" kindref="member">clipboard_source_data</ref>,<sp/>source);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(source-&gt;<ref refid="structclipboard__source_1a3596788401c8d12ae60e31d41ea87516" kindref="member">event_source</ref><sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>err_source;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>source;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/>err_source:</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(*s);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/>err_strdup:</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_array_release(&amp;source-&gt;<ref refid="structclipboard__source_1ab73c616698de1e417159038bc3121302" kindref="member">base</ref>.<ref refid="structweston__data__source_1a6d4815f549c63ffb787ad7b9a01ed4f1" kindref="member">mime_types</ref>);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/>err_add:</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(source);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186" refid="structclipboard__client" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclipboard__client" kindref="compound">clipboard_client</ref><sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_event_source<sp/>*<ref refid="structclipboard__client_1ad5f07850ae55e83e2a39e254d46a6553" kindref="member">event_source</ref>;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="structclipboard__client_1a97de2c40f0c3a0646c09622bfc8a7a2c" kindref="member">offset</ref>;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclipboard__source" kindref="compound">clipboard_source</ref><sp/>*<ref refid="structclipboard__client_1ae94955e41117423f713770ede0417fbc" kindref="member">source</ref>;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><ref refid="clipboard_8c_1a98c0f5d94059a96071871fb35d9df8f4" kindref="member">clipboard_client_data</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structclipboard__source_1ad81a187d435beb2e89ce9ec83bab36d8" kindref="member">fd</ref>,<sp/>uint32_t<sp/>mask,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclipboard__client" kindref="compound">clipboard_client</ref><sp/>*<ref refid="structclient" kindref="compound">client</ref><sp/>=<sp/>data;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*p;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size<sp/>=<sp/><ref refid="structclient" kindref="compound">client</ref>-&gt;source-&gt;contents.size;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p<sp/>=<sp/><ref refid="structclient" kindref="compound">client</ref>-&gt;source-&gt;contents.data;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>len<sp/>=<sp/>write(fd,<sp/>p<sp/>+<sp/><ref refid="structclient" kindref="compound">client</ref>-&gt;offset,<sp/>size<sp/>-<sp/><ref refid="structclient" kindref="compound">client</ref>-&gt;offset);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(len<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structclient" kindref="compound">client</ref>-&gt;offset<sp/>+=<sp/>len;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="structclient" kindref="compound">client</ref>-&gt;offset<sp/>==<sp/>size<sp/>||<sp/>len<sp/>&lt;=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>close(fd);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_event_source_remove(<ref refid="structclient" kindref="compound">client</ref>-&gt;event_source);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="clipboard_8c_1a80e3940b1aa303d5edd416c588f37e1d" kindref="member">clipboard_source_unref</ref>(<ref refid="structclient" kindref="compound">client</ref>-&gt;source);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(<ref refid="structclient" kindref="compound">client</ref>);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><ref refid="clipboard_8c_1aa5e389c686d0b762b530d683ac6402a9" kindref="member">clipboard_client_create</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclipboard__source" kindref="compound">clipboard_source</ref><sp/>*<ref refid="structclipboard__client_1ae94955e41117423f713770ede0417fbc" kindref="member">source</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fd)</highlight></codeline>
+<codeline lineno="218"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__seat" kindref="compound">weston_seat</ref><sp/>*seat<sp/>=<sp/>source-&gt;<ref refid="structclipboard__source_1a4117591c232d1eb32580001a028fc212" kindref="member">clipboard</ref>-&gt;<ref refid="structclipboard_1a97dc69b3b09271aacb0dce3738cfb55a" kindref="member">seat</ref>;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclipboard__client" kindref="compound">clipboard_client</ref><sp/>*<ref refid="structclient" kindref="compound">client</ref>;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_event_loop<sp/>*loop<sp/>=</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_display_get_event_loop(seat-&gt;<ref refid="structweston__seat_1a58160bbc8f87efa12c73096be486b27f" kindref="member">compositor</ref>-&gt;<ref refid="structweston__compositor_1a2ad81ce6f58ba42026cd6d86d5f88c8b" kindref="member">wl_display</ref>);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structclient" kindref="compound">client</ref><sp/>=<sp/><ref refid="zalloc_8h_1a260ac290b02627b12230b313c8fa92b3" kindref="member">zalloc</ref>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*<ref refid="structclient" kindref="compound">client</ref>);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="structclient" kindref="compound">client</ref><sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structclient" kindref="compound">client</ref>-&gt;source<sp/>=<sp/>source;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source-&gt;<ref refid="structclipboard__source_1ae99e528657ced0ba5725c0b1a6ca6972" kindref="member">refcount</ref>++;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structclient" kindref="compound">client</ref>-&gt;event_source<sp/>=</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_event_loop_add_fd(loop,<sp/>fd,<sp/>WL_EVENT_WRITABLE,</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="clipboard_8c_1a98c0f5d94059a96071871fb35d9df8f4" kindref="member">clipboard_client_data</ref>,<sp/><ref refid="structclient" kindref="compound">client</ref>);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><ref refid="clipboard_8c_1a2178f3c6e43007dc52f1d0b913b89ee2" kindref="member">clipboard_set_selection</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>wl_listener<sp/>*listener,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)</highlight></codeline>
+<codeline lineno="237"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclipboard" kindref="compound">clipboard</ref><sp/>*<ref refid="structclipboard" kindref="compound">clipboard</ref><sp/>=</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>container_of(listener,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclipboard" kindref="compound">clipboard</ref>,<sp/><ref refid="structclipboard_1a09b219b37fb300a2b8dd06ae46f44eeb" kindref="member">selection_listener</ref>);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__seat" kindref="compound">weston_seat</ref><sp/>*seat<sp/>=<sp/>data;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__data__source" kindref="compound">weston_data_source</ref><sp/>*source<sp/>=<sp/><ref refid="structweston__data__source_1a5b3ed5d4a2a7457f15cd80a0602c7ef4" kindref="member">seat</ref>-&gt;<ref refid="structweston__seat_1ac2277c3fa30a4bde31212b646ef3caca" kindref="member">selection_data_source</ref>;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**<ref refid="structweston__data__source_1a6d4815f549c63ffb787ad7b9a01ed4f1" kindref="member">mime_types</ref>;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>p[2];</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(source<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="structclipboard" kindref="compound">clipboard</ref>-&gt;<ref refid="structclipboard_1a8f946384457a91c155063bdf24d26322" kindref="member">source</ref>)</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="data-device_8c_1a8ddb6f9ae194b2f77f67640a46008b67" kindref="member">weston_seat_set_selection</ref>(<ref refid="structweston__data__source_1a5b3ed5d4a2a7457f15cd80a0602c7ef4" kindref="member">seat</ref>,</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="structclipboard" kindref="compound">clipboard</ref>-&gt;<ref refid="structclipboard_1a8f946384457a91c155063bdf24d26322" kindref="member">source</ref>-&gt;<ref refid="structclipboard__source_1ab73c616698de1e417159038bc3121302" kindref="member">base</ref>,</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structclipboard" kindref="compound">clipboard</ref>-&gt;<ref refid="structclipboard_1a8f946384457a91c155063bdf24d26322" kindref="member">source</ref>-&gt;<ref refid="structclipboard__source_1a0072a9f1e58d0fd56d8501077dcc82a7" kindref="member">serial</ref>);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(source-&gt;<ref refid="structweston__data__source_1a6e558827e0c61f10719fe29ca6b82e5a" kindref="member">accept</ref><sp/>==<sp/><ref refid="clipboard_8c_1aadba6433581e75202f490c89ffdce089" kindref="member">clipboard_source_accept</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Callback<sp/>for<sp/>our<sp/>data<sp/>source.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="structclipboard" kindref="compound">clipboard</ref>-&gt;<ref refid="structclipboard_1a8f946384457a91c155063bdf24d26322" kindref="member">source</ref>)</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="clipboard_8c_1a80e3940b1aa303d5edd416c588f37e1d" kindref="member">clipboard_source_unref</ref>(<ref refid="structclipboard" kindref="compound">clipboard</ref>-&gt;<ref refid="structclipboard_1a8f946384457a91c155063bdf24d26322" kindref="member">source</ref>);</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structclipboard" kindref="compound">clipboard</ref>-&gt;<ref refid="structclipboard_1a8f946384457a91c155063bdf24d26322" kindref="member">source</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structweston__data__source_1a6d4815f549c63ffb787ad7b9a01ed4f1" kindref="member">mime_types</ref><sp/>=<sp/>source-&gt;<ref refid="structweston__data__source_1a6d4815f549c63ffb787ad7b9a01ed4f1" kindref="member">mime_types</ref>.data;</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="structweston__data__source_1a6d4815f549c63ffb787ad7b9a01ed4f1" kindref="member">mime_types</ref><sp/>||<sp/>pipe2(p,<sp/>O_CLOEXEC)<sp/>==<sp/>-1)</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source-&gt;<ref refid="structweston__data__source_1a6ef8e0b4696b756d3c9eae99a2f91592" kindref="member">send</ref>(source,<sp/><ref refid="structweston__data__source_1a6d4815f549c63ffb787ad7b9a01ed4f1" kindref="member">mime_types</ref>[0],<sp/>p[1]);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structclipboard" kindref="compound">clipboard</ref>-&gt;<ref refid="structclipboard_1a8f946384457a91c155063bdf24d26322" kindref="member">source</ref><sp/>=</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="clipboard_8c_1a1c18e821eed64f69257d8031bab0f4dc" kindref="member">clipboard_source_create</ref>(<ref refid="structclipboard" kindref="compound">clipboard</ref>,<sp/><ref refid="structweston__data__source_1a6d4815f549c63ffb787ad7b9a01ed4f1" kindref="member">mime_types</ref>[0],</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structweston__data__source_1a5b3ed5d4a2a7457f15cd80a0602c7ef4" kindref="member">seat</ref>-&gt;<ref refid="structweston__seat_1a3b802aed9c69455b95568a3c7a2b887e" kindref="member">selection_serial</ref>,<sp/>p[0]);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="structclipboard" kindref="compound">clipboard</ref>-&gt;<ref refid="structclipboard_1a8f946384457a91c155063bdf24d26322" kindref="member">source</ref><sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>close(p[0]);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="275"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><ref refid="clipboard_8c_1a04e07d7525b03c73bff1984ea8b9a418" kindref="member">clipboard_destroy</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>wl_listener<sp/>*listener,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data)</highlight></codeline>
+<codeline lineno="279"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclipboard" kindref="compound">clipboard</ref><sp/>*<ref refid="structclipboard" kindref="compound">clipboard</ref><sp/>=</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>container_of(listener,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclipboard" kindref="compound">clipboard</ref>,<sp/><ref refid="structclipboard_1a0b4c1a54ae62d751401ca4f3c1670f54" kindref="member">destroy_listener</ref>);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_list_remove(&amp;<ref refid="structclipboard" kindref="compound">clipboard</ref>-&gt;<ref refid="structclipboard_1a09b219b37fb300a2b8dd06ae46f44eeb" kindref="member">selection_listener</ref>.link);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_list_remove(&amp;<ref refid="structclipboard" kindref="compound">clipboard</ref>-&gt;<ref refid="structclipboard_1a0b4c1a54ae62d751401ca4f3c1670f54" kindref="member">destroy_listener</ref>.link);</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(<ref refid="structclipboard" kindref="compound">clipboard</ref>);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclipboard" kindref="compound">clipboard</ref><sp/>*</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><ref refid="clipboard_8c_1a6b4f345ba46e19810219d1414a676716" kindref="member">clipboard_create</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__seat" kindref="compound">weston_seat</ref><sp/>*<ref refid="structclipboard_1a97dc69b3b09271aacb0dce3738cfb55a" kindref="member">seat</ref>)</highlight></codeline>
+<codeline lineno="291"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclipboard" kindref="compound">clipboard</ref><sp/>*<ref refid="structclipboard" kindref="compound">clipboard</ref>;</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structclipboard" kindref="compound">clipboard</ref><sp/>=<sp/><ref refid="zalloc_8h_1a260ac290b02627b12230b313c8fa92b3" kindref="member">zalloc</ref>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>*<ref refid="structclipboard" kindref="compound">clipboard</ref>);</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="structclipboard" kindref="compound">clipboard</ref><sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structclipboard" kindref="compound">clipboard</ref>-&gt;<ref refid="structclipboard_1a97dc69b3b09271aacb0dce3738cfb55a" kindref="member">seat</ref><sp/>=<sp/><ref refid="structclipboard_1a97dc69b3b09271aacb0dce3738cfb55a" kindref="member">seat</ref>;</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structclipboard" kindref="compound">clipboard</ref>-&gt;<ref refid="structclipboard_1a09b219b37fb300a2b8dd06ae46f44eeb" kindref="member">selection_listener</ref>.notify<sp/>=<sp/><ref refid="clipboard_8c_1a2178f3c6e43007dc52f1d0b913b89ee2" kindref="member">clipboard_set_selection</ref>;</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structclipboard" kindref="compound">clipboard</ref>-&gt;<ref refid="structclipboard_1a0b4c1a54ae62d751401ca4f3c1670f54" kindref="member">destroy_listener</ref>.notify<sp/>=<sp/><ref refid="clipboard_8c_1a04e07d7525b03c73bff1984ea8b9a418" kindref="member">clipboard_destroy</ref>;</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_signal_add(&amp;<ref refid="structclipboard_1a97dc69b3b09271aacb0dce3738cfb55a" kindref="member">seat</ref>-&gt;<ref refid="structweston__seat_1a407370ba48e4a88858215df78a38c6ee" kindref="member">selection_signal</ref>,</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="structclipboard" kindref="compound">clipboard</ref>-&gt;<ref refid="structclipboard_1a09b219b37fb300a2b8dd06ae46f44eeb" kindref="member">selection_listener</ref>);</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_signal_add(&amp;<ref refid="structclipboard_1a97dc69b3b09271aacb0dce3738cfb55a" kindref="member">seat</ref>-&gt;<ref refid="structweston__seat_1ae7acf8dcc27a2d3b68de44934f28d413" kindref="member">destroy_signal</ref>,</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="structclipboard" kindref="compound">clipboard</ref>-&gt;<ref refid="structclipboard_1a0b4c1a54ae62d751401ca4f3c1670f54" kindref="member">destroy_listener</ref>);</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structclipboard" kindref="compound">clipboard</ref>;</highlight></codeline>
+<codeline lineno="308"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/libweston/clipboard.c"/>
+  </compounddef>
+</doxygen>

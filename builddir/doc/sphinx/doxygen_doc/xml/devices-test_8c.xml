@@ -1,0 +1,736 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="devices-test_8c" kind="file" language="C++">
+    <compoundname>devices-test.c</compoundname>
+    <includes local="yes">config.h</includes>
+    <includes local="no">string.h</includes>
+    <includes refid="weston-test-client-helper_8h" local="yes">weston-test-client-helper.h</includes>
+    <includes refid="weston-test-fixture-compositor_8h" local="yes">weston-test-fixture-compositor.h</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>stdbool.h</label>
+      </node>
+      <node id="24">
+        <label>viewporter-client-protocol.h</label>
+      </node>
+      <node id="16">
+        <label>libweston/libweston.h</label>
+        <link refid="libweston_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>weston-test-fixture-compositor.h</label>
+        <link refid="weston-test-fixture-compositor_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>assert.h</label>
+      </node>
+      <node id="23">
+        <label>weston-screenshooter-client-protocol.h</label>
+      </node>
+      <node id="22">
+        <label>weston-test-client-protocol.h</label>
+      </node>
+      <node id="7">
+        <label>stdint.h</label>
+      </node>
+      <node id="12">
+        <label>stdlib.h</label>
+      </node>
+      <node id="18">
+        <label>wayland-server.h</label>
+      </node>
+      <node id="17">
+        <label>xkbcommon/xkbcommon.h</label>
+      </node>
+      <node id="14">
+        <label>shared/helpers.h</label>
+      </node>
+      <node id="21">
+        <label>weston-testsuite-data.h</label>
+        <link refid="weston-testsuite-data_8h"/>
+      </node>
+      <node id="10">
+        <label>wayland-client-protocol.h</label>
+      </node>
+      <node id="3">
+        <label>string.h</label>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/tests/devices-test.c</label>
+        <link refid="devices-test_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>libweston/zalloc.h</label>
+        <link refid="zalloc_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>time.h</label>
+      </node>
+      <node id="19">
+        <label>libweston/matrix.h</label>
+        <link refid="matrix_8h"/>
+      </node>
+      <node id="9">
+        <label>pixman.h</label>
+      </node>
+      <node id="13">
+        <label>wayland-util.h</label>
+      </node>
+      <node id="11">
+        <label>weston-test-runner.h</label>
+        <link refid="weston-test-runner_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+      </node>
+      <node id="4">
+        <label>weston-test-client-helper.h</label>
+        <link refid="weston-test-client-helper_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="devices-test_8c_1a5be6a201cf6a4fbcb8f2b87faf29f25e" prot="public" static="no">
+        <name>WL_SEAT_CAPABILITY_ALL</name>
+        <initializer>				(WL_SEAT_CAPABILITY_KEYBOARD |\
+				WL_SEAT_CAPABILITY_POINTER  |\
+				WL_SEAT_CAPABILITY_TOUCH)</initializer>
+        <briefdescription>
+<para>Test (un)plugging devices. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>At the end of each test we must return Weston to the previous state (add all removed devices and remove extra devices), so that the environment is prepared for the other tests too </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/devices-test.c" line="51" column="9" bodyfile="/home/lzm/Wayland/weston/tests/devices-test.c" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="devices-test_8c_1a698c124f1c293f98840449d6c5b9d984" prot="public" static="no">
+        <name>COUNT</name>
+        <initializer>15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/devices-test.c" line="111" column="9" bodyfile="/home/lzm/Wayland/weston/tests/devices-test.c" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="devices-test_8c_1a94e9ff74226ccd29a26846ccb66d481f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></type>
+        <definition>static enum test_result_code fixture_setup</definition>
+        <argsstring>(struct weston_test_harness *harness)</argsstring>
+        <name>fixture_setup</name>
+        <param>
+          <type>struct <ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref> *</type>
+          <declname>harness</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/devices-test.c" line="1" column="0" bodyfile="/home/lzm/Wayland/weston/tests/devices-test.c" bodystart="33" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="devices-test_8c_1a1ac8add2dcb01a58f69f41ce2ad0ccfc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DECLARE_FIXTURE_SETUP</definition>
+        <argsstring>(fixture_setup)</argsstring>
+        <name>DECLARE_FIXTURE_SETUP</name>
+        <param>
+          <type><ref refid="yuv-buffer-test_8c_1a94e9ff74226ccd29a26846ccb66d481f" kindref="member">fixture_setup</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/devices-test.c" line="41" column="1" declfile="/home/lzm/Wayland/weston/tests/devices-test.c" declline="41" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="devices-test_8c_1ad279cc97b52a6d850f6e0a9f86d07896" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(seat_capabilities_test)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>seat_capabilities_test</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/devices-test.c" line="57" column="1" bodyfile="/home/lzm/Wayland/weston/tests/devices-test.c" bodystart="57" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="devices-test_8c_1a4f63e0f62b19562bdb6d1e88213c1a2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(multiple_device_add_and_remove)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>multiple_device_add_and_remove</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/devices-test.c" line="112" column="1" bodyfile="/home/lzm/Wayland/weston/tests/devices-test.c" bodystart="112" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="devices-test_8c_1ad0ea4e4451cafce012f2f7e4042c3cca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(device_release_before_destroy)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>device_release_before_destroy</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/devices-test.c" line="149" column="1" bodyfile="/home/lzm/Wayland/weston/tests/devices-test.c" bodystart="149" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="devices-test_8c_1a5518dd7dfe85d9d819720a02a7f39028" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(device_release_before_destroy_multiple)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>device_release_before_destroy_multiple</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/devices-test.c" line="186" column="1" bodyfile="/home/lzm/Wayland/weston/tests/devices-test.c" bodystart="186" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="devices-test_8c_1ac93764d8cbf7706c2d8d90c2a833552c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(device_release_after_destroy)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>device_release_after_destroy</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/devices-test.c" line="204" column="1" bodyfile="/home/lzm/Wayland/weston/tests/devices-test.c" bodystart="204" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="devices-test_8c_1aa95a9ca157f5872afe1e88cb91708135" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(device_release_after_destroy_multiple)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>device_release_after_destroy_multiple</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/devices-test.c" line="242" column="1" bodyfile="/home/lzm/Wayland/weston/tests/devices-test.c" bodystart="242" bodyend="251"/>
+      </memberdef>
+      <memberdef kind="function" id="devices-test_8c_1a0482fe7391318088a8eb8e756963277a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(get_device_after_destroy)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>get_device_after_destroy</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/devices-test.c" line="256" column="1" bodyfile="/home/lzm/Wayland/weston/tests/devices-test.c" bodystart="256" bodyend="313"/>
+      </memberdef>
+      <memberdef kind="function" id="devices-test_8c_1a24ac57493c07ac97c32c28038fe21bda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(get_device_after_destroy_multiple)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>get_device_after_destroy_multiple</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/devices-test.c" line="315" column="1" bodyfile="/home/lzm/Wayland/weston/tests/devices-test.c" bodystart="315" bodyend="324"/>
+      </memberdef>
+      <memberdef kind="function" id="devices-test_8c_1a68b1e4c48e87bb62844584645d3abd53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(seats_have_names)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>seats_have_names</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/devices-test.c" line="326" column="1" bodyfile="/home/lzm/Wayland/weston/tests/devices-test.c" bodystart="326" bodyend="334"/>
+      </memberdef>
+      <memberdef kind="function" id="devices-test_8c_1a9110361aec2223dd809fd629b5672d20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(seat_destroy_and_recreate)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>seat_destroy_and_recreate</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/devices-test.c" line="336" column="1" bodyfile="/home/lzm/Wayland/weston/tests/devices-test.c" bodystart="336" bodyend="356"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2015<sp/>Red<sp/>Hat,<sp/>Inc.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>(including<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>next<sp/>paragraph)<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>NONINFRINGEMENT.<sp/><sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="weston-test-client-helper_8h" kindref="compound">weston-test-client-helper.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="weston-test-fixture-compositor_8h" kindref="compound">weston-test-fixture-compositor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><ref refid="devices-test_8c_1a94e9ff74226ccd29a26846ccb66d481f" kindref="member">fixture_setup</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref><sp/>*harness)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structcompositor__setup" kindref="compound">compositor_setup</ref><sp/>setup;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__testharness_1ga6d93ba47ec578b140fa2cbd3efa1218c" kindref="member">compositor_setup_defaults</ref>(&amp;setup);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1gacd7b26a0f0f337781013b40d229cf262" kindref="member">weston_test_harness_execute_as_client</ref>(harness,<sp/>&amp;setup);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><ref refid="devices-test_8c_1a1ac8add2dcb01a58f69f41ce2ad0ccfc" kindref="member">DECLARE_FIXTURE_SETUP</ref>(<ref refid="devices-test_8c_1a94e9ff74226ccd29a26846ccb66d481f" kindref="member">fixture_setup</ref>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor">#define<sp/>WL_SEAT_CAPABILITY_ALL<sp/>(WL_SEAT_CAPABILITY_KEYBOARD<sp/>|\</highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WL_SEAT_CAPABILITY_POINTER<sp/><sp/>|\</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WL_SEAT_CAPABILITY_TOUCH)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>simply<sp/>test<sp/>if<sp/>weston<sp/>sends<sp/>the<sp/>right<sp/>capabilities<sp/>when</highlight></codeline>
+<codeline lineno="56"><highlight class="comment"><sp/>*<sp/>some<sp/>devices<sp/>are<sp/>removed<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><ref refid="devices-test_8c_1ad279cc97b52a6d850f6e0a9f86d07896" kindref="member">TEST</ref>(seat_capabilities_test)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclient" kindref="compound">client</ref><sp/>*cl<sp/>=<sp/><ref refid="weston-test-client-helper_8c_1afaf75d0d97a6872840e248ca4e300190" kindref="member">create_client_and_test_surface</ref>(100,<sp/>100,<sp/>100,<sp/>100);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1ac680907260db3ec09cd3eba48b342124" kindref="member">caps</ref><sp/>==<sp/><ref refid="devices-test_8c_1a5be6a201cf6a4fbcb8f2b87faf29f25e" kindref="member">WL_SEAT_CAPABILITY_ALL</ref>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1abf5e47efd904369fce64cab252801b1f" kindref="member">pointer</ref>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_release(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;pointer&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8h_1ab95988e6d0d010625831b6b8c92a4a9d" kindref="member">client_roundtrip</ref>(cl);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(!cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1abf5e47efd904369fce64cab252801b1f" kindref="member">pointer</ref>);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(!(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1ac680907260db3ec09cd3eba48b342124" kindref="member">caps</ref><sp/>&amp;<sp/>WL_SEAT_CAPABILITY_POINTER));</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1abc3887b3a98592fca0055bdb31597b90" kindref="member">keyboard</ref>);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_release(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;keyboard&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8h_1ab95988e6d0d010625831b6b8c92a4a9d" kindref="member">client_roundtrip</ref>(cl);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(!cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1abc3887b3a98592fca0055bdb31597b90" kindref="member">keyboard</ref>);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(!(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1ac680907260db3ec09cd3eba48b342124" kindref="member">caps</ref><sp/>&amp;<sp/>WL_SEAT_CAPABILITY_KEYBOARD));</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1a9facf568420fea33baa039e0786f3e87" kindref="member">touch</ref>);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_release(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;touch&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8h_1ab95988e6d0d010625831b6b8c92a4a9d" kindref="member">client_roundtrip</ref>(cl);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(!cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1a9facf568420fea33baa039e0786f3e87" kindref="member">touch</ref>);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(!(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1ac680907260db3ec09cd3eba48b342124" kindref="member">caps</ref><sp/>&amp;<sp/>WL_SEAT_CAPABILITY_TOUCH));</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>restore<sp/>previous<sp/>state<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_add(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;keyboard&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_add(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;pointer&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_add(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;touch&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8h_1ab95988e6d0d010625831b6b8c92a4a9d" kindref="member">client_roundtrip</ref>(cl);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1abf5e47efd904369fce64cab252801b1f" kindref="member">pointer</ref>);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1abc3887b3a98592fca0055bdb31597b90" kindref="member">keyboard</ref>);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1a9facf568420fea33baa039e0786f3e87" kindref="member">touch</ref>);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>add<sp/>extra<sp/>devices<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_add(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;keyboard&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_add(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;pointer&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_add(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;touch&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8h_1ab95988e6d0d010625831b6b8c92a4a9d" kindref="member">client_roundtrip</ref>(cl);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>remove<sp/>extra<sp/>devices<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_release(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;keyboard&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_release(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;pointer&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_release(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;touch&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8h_1ab95988e6d0d010625831b6b8c92a4a9d" kindref="member">client_roundtrip</ref>(cl);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>we<sp/>still<sp/>should<sp/>have<sp/>all<sp/>the<sp/>capabilities,<sp/>since<sp/>the<sp/>devices</highlight></codeline>
+<codeline lineno="103"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>were<sp/>doubled<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1ac680907260db3ec09cd3eba48b342124" kindref="member">caps</ref><sp/>==<sp/><ref refid="devices-test_8c_1a5be6a201cf6a4fbcb8f2b87faf29f25e" kindref="member">WL_SEAT_CAPABILITY_ALL</ref>);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1abf5e47efd904369fce64cab252801b1f" kindref="member">pointer</ref>);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1abc3887b3a98592fca0055bdb31597b90" kindref="member">keyboard</ref>);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1a9facf568420fea33baa039e0786f3e87" kindref="member">touch</ref>);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>COUNT<sp/>15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><ref refid="devices-test_8c_1ad279cc97b52a6d850f6e0a9f86d07896" kindref="member">TEST</ref>(multiple_device_add_and_remove)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclient" kindref="compound">client</ref><sp/>*cl<sp/>=<sp/><ref refid="weston-test-client-helper_8c_1afaf75d0d97a6872840e248ca4e300190" kindref="member">create_client_and_test_surface</ref>(100,<sp/>100,<sp/>100,<sp/>100);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>add<sp/>device<sp/>a<sp/>lot<sp/>of<sp/>times<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="devices-test_8c_1a698c124f1c293f98840449d6c5b9d984" kindref="member">COUNT</ref>;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_add(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;keyboard&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_add(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;pointer&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_add(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;touch&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8h_1ab95988e6d0d010625831b6b8c92a4a9d" kindref="member">client_roundtrip</ref>(cl);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1abf5e47efd904369fce64cab252801b1f" kindref="member">pointer</ref>);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1abc3887b3a98592fca0055bdb31597b90" kindref="member">keyboard</ref>);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1a9facf568420fea33baa039e0786f3e87" kindref="member">touch</ref>);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1ac680907260db3ec09cd3eba48b342124" kindref="member">caps</ref><sp/>==<sp/><ref refid="devices-test_8c_1a5be6a201cf6a4fbcb8f2b87faf29f25e" kindref="member">WL_SEAT_CAPABILITY_ALL</ref>);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>release<sp/>all<sp/>new<sp/>devices<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="devices-test_8c_1a698c124f1c293f98840449d6c5b9d984" kindref="member">COUNT</ref>;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_release(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;keyboard&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_release(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;pointer&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_release(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;touch&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8h_1ab95988e6d0d010625831b6b8c92a4a9d" kindref="member">client_roundtrip</ref>(cl);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>there<sp/>is<sp/>still<sp/>one<sp/>from<sp/>each<sp/>device<sp/>left<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1ac680907260db3ec09cd3eba48b342124" kindref="member">caps</ref><sp/>==<sp/><ref refid="devices-test_8c_1a5be6a201cf6a4fbcb8f2b87faf29f25e" kindref="member">WL_SEAT_CAPABILITY_ALL</ref>);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1abf5e47efd904369fce64cab252801b1f" kindref="member">pointer</ref>);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1abc3887b3a98592fca0055bdb31597b90" kindref="member">keyboard</ref>);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1a9facf568420fea33baa039e0786f3e87" kindref="member">touch</ref>);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><ref refid="devices-test_8c_1ad279cc97b52a6d850f6e0a9f86d07896" kindref="member">TEST</ref>(device_release_before_destroy)</highlight></codeline>
+<codeline lineno="150"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclient" kindref="compound">client</ref><sp/>*cl<sp/>=<sp/><ref refid="weston-test-client-helper_8c_1afaf75d0d97a6872840e248ca4e300190" kindref="member">create_client_and_test_surface</ref>(100,<sp/>100,<sp/>100,<sp/>100);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>we<sp/>can<sp/>release<sp/>pointer<sp/>when<sp/>we<sp/>won&apos;t<sp/>be<sp/>using<sp/>it<sp/>anymore.</highlight></codeline>
+<codeline lineno="154"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Do<sp/>it<sp/>and<sp/>see<sp/>what<sp/>happens<sp/>if<sp/>the<sp/>device<sp/>is<sp/>destroyed</highlight></codeline>
+<codeline lineno="155"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>right<sp/>after<sp/>that<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_pointer_release(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1abf5e47efd904369fce64cab252801b1f" kindref="member">pointer</ref>-&gt;<ref refid="structpointer_1a49b5af0a96f7491f839d46f8d7bac969" kindref="member">wl_pointer</ref>);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>we<sp/>must<sp/>free<sp/>and<sp/>set<sp/>to<sp/>NULL<sp/>the<sp/>structures,<sp/>otherwise</highlight></codeline>
+<codeline lineno="158"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>seat<sp/>capabilities<sp/>will<sp/>double-free<sp/>them<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1abf5e47efd904369fce64cab252801b1f" kindref="member">pointer</ref>);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1abf5e47efd904369fce64cab252801b1f" kindref="member">pointer</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_keyboard_release(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1abc3887b3a98592fca0055bdb31597b90" kindref="member">keyboard</ref>-&gt;<ref refid="structkeyboard_1af83de2f2964ebd01c9017622785bbc3d" kindref="member">wl_keyboard</ref>);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1abc3887b3a98592fca0055bdb31597b90" kindref="member">keyboard</ref>);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1abc3887b3a98592fca0055bdb31597b90" kindref="member">keyboard</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_touch_release(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1a9facf568420fea33baa039e0786f3e87" kindref="member">touch</ref>-&gt;<ref refid="structtouch_1a022ca737a44369f0f2664935bfac14f1" kindref="member">wl_touch</ref>);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1a9facf568420fea33baa039e0786f3e87" kindref="member">touch</ref>);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1a9facf568420fea33baa039e0786f3e87" kindref="member">touch</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_release(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;pointer&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_release(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;keyboard&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_release(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;touch&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8h_1ab95988e6d0d010625831b6b8c92a4a9d" kindref="member">client_roundtrip</ref>(cl);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1ac680907260db3ec09cd3eba48b342124" kindref="member">caps</ref><sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>restore<sp/>previous<sp/>state<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_add(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;pointer&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_add(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;keyboard&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_add(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;touch&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8h_1ab95988e6d0d010625831b6b8c92a4a9d" kindref="member">client_roundtrip</ref>(cl);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1ac680907260db3ec09cd3eba48b342124" kindref="member">caps</ref><sp/>==<sp/><ref refid="devices-test_8c_1a5be6a201cf6a4fbcb8f2b87faf29f25e" kindref="member">WL_SEAT_CAPABILITY_ALL</ref>);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><ref refid="devices-test_8c_1ad279cc97b52a6d850f6e0a9f86d07896" kindref="member">TEST</ref>(device_release_before_destroy_multiple)</highlight></codeline>
+<codeline lineno="187"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>if<sp/>weston<sp/>crashed<sp/>during<sp/>this<sp/>test,<sp/>then<sp/>there<sp/>is</highlight></codeline>
+<codeline lineno="191"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>some<sp/>inconsistency<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>30;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Fifty<sp/>times<sp/>run<sp/>the<sp/>previous<sp/>test.<sp/>This<sp/>will<sp/>create</highlight></codeline>
+<codeline lineno="194"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>fifty<sp/>clients,<sp/>because<sp/>we<sp/>don&apos;t<sp/>have<sp/>any</highlight></codeline>
+<codeline lineno="195"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>way<sp/>how<sp/>to<sp/>destroy<sp/>them<sp/>(worth<sp/>of<sp/>adding!).<sp/>Only<sp/>one</highlight></codeline>
+<codeline lineno="196"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>client<sp/>will<sp/>run<sp/>at<sp/>a<sp/>time<sp/>though<sp/>and<sp/>so<sp/>should<sp/>have<sp/>no</highlight></codeline>
+<codeline lineno="197"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>effect<sp/>on<sp/>the<sp/>result<sp/>of<sp/>the<sp/>test<sp/>(after<sp/>the<sp/>client</highlight></codeline>
+<codeline lineno="198"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>finishes<sp/>its<sp/>body,<sp/>it<sp/>just<sp/>&apos;is&apos;<sp/>and<sp/>does<sp/>nothing).<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>device_release_before_destroy();</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="201"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>normal<sp/>work-flow<sp/>test<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><ref refid="devices-test_8c_1ad279cc97b52a6d850f6e0a9f86d07896" kindref="member">TEST</ref>(device_release_after_destroy)</highlight></codeline>
+<codeline lineno="205"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclient" kindref="compound">client</ref><sp/>*cl<sp/>=<sp/><ref refid="weston-test-client-helper_8c_1afaf75d0d97a6872840e248ca4e300190" kindref="member">create_client_and_test_surface</ref>(100,<sp/>100,<sp/>100,<sp/>100);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_release(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;pointer&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_pointer_release(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1abf5e47efd904369fce64cab252801b1f" kindref="member">pointer</ref>-&gt;<ref refid="structpointer_1a49b5af0a96f7491f839d46f8d7bac969" kindref="member">wl_pointer</ref>);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>we<sp/>must<sp/>free<sp/>the<sp/>memory<sp/>manually,<sp/>otherwise<sp/>seat.capabilities</highlight></codeline>
+<codeline lineno="211"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>will<sp/>try<sp/>to<sp/>free<sp/>it<sp/>and<sp/>will<sp/>use<sp/>invalid<sp/>proxy<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1abf5e47efd904369fce64cab252801b1f" kindref="member">pointer</ref>);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1abf5e47efd904369fce64cab252801b1f" kindref="member">pointer</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8h_1ab95988e6d0d010625831b6b8c92a4a9d" kindref="member">client_roundtrip</ref>(cl);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_release(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;keyboard&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_keyboard_release(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1abc3887b3a98592fca0055bdb31597b90" kindref="member">keyboard</ref>-&gt;<ref refid="structkeyboard_1af83de2f2964ebd01c9017622785bbc3d" kindref="member">wl_keyboard</ref>);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1abc3887b3a98592fca0055bdb31597b90" kindref="member">keyboard</ref>);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1abc3887b3a98592fca0055bdb31597b90" kindref="member">keyboard</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8h_1ab95988e6d0d010625831b6b8c92a4a9d" kindref="member">client_roundtrip</ref>(cl);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_release(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;touch&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_touch_release(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1a9facf568420fea33baa039e0786f3e87" kindref="member">touch</ref>-&gt;<ref refid="structtouch_1a022ca737a44369f0f2664935bfac14f1" kindref="member">wl_touch</ref>);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1a9facf568420fea33baa039e0786f3e87" kindref="member">touch</ref>);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1a9facf568420fea33baa039e0786f3e87" kindref="member">touch</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8h_1ab95988e6d0d010625831b6b8c92a4a9d" kindref="member">client_roundtrip</ref>(cl);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1ac680907260db3ec09cd3eba48b342124" kindref="member">caps</ref><sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>restore<sp/>previous<sp/>state<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_add(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;pointer&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_add(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;keyboard&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_add(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;touch&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8h_1ab95988e6d0d010625831b6b8c92a4a9d" kindref="member">client_roundtrip</ref>(cl);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1ac680907260db3ec09cd3eba48b342124" kindref="member">caps</ref><sp/>==<sp/><ref refid="devices-test_8c_1a5be6a201cf6a4fbcb8f2b87faf29f25e" kindref="member">WL_SEAT_CAPABILITY_ALL</ref>);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><ref refid="devices-test_8c_1ad279cc97b52a6d850f6e0a9f86d07896" kindref="member">TEST</ref>(device_release_after_destroy_multiple)</highlight></codeline>
+<codeline lineno="243"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>if<sp/>weston<sp/>crashed<sp/>during<sp/>this<sp/>test,<sp/>then<sp/>there<sp/>is</highlight></codeline>
+<codeline lineno="247"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>some<sp/>inconsistency<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>30;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>device_release_after_destroy();</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="251"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>see<sp/>https://bugzilla.gnome.org/show_bug.cgi?id=745008</highlight></codeline>
+<codeline lineno="254"><highlight class="comment"><sp/>*<sp/>It<sp/>is<sp/>a<sp/>mutter<sp/>bug,<sp/>but<sp/>highly<sp/>relevant.<sp/>Weston<sp/>does<sp/>not</highlight></codeline>
+<codeline lineno="255"><highlight class="comment"><sp/>*<sp/>suffer<sp/>from<sp/>this<sp/>bug<sp/>atm,<sp/>but<sp/>it<sp/>is<sp/>worth<sp/>of<sp/>testing.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><ref refid="devices-test_8c_1ad279cc97b52a6d850f6e0a9f86d07896" kindref="member">TEST</ref>(get_device_after_destroy)</highlight></codeline>
+<codeline lineno="257"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclient" kindref="compound">client</ref><sp/>*cl<sp/>=<sp/><ref refid="weston-test-client-helper_8c_1afaf75d0d97a6872840e248ca4e300190" kindref="member">create_client_and_test_surface</ref>(100,<sp/>100,<sp/>100,<sp/>100);</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_pointer<sp/>*wl_pointer;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_keyboard<sp/>*wl_keyboard;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_touch<sp/>*wl_touch;</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>There&apos;s<sp/>a<sp/>race:</highlight></codeline>
+<codeline lineno="264"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/>1)<sp/>compositor<sp/>destroys<sp/>device</highlight></codeline>
+<codeline lineno="265"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/>2)<sp/>client<sp/>asks<sp/>for<sp/>the<sp/>device,<sp/>because<sp/>it<sp/>has<sp/>not<sp/>received</highlight></codeline>
+<codeline lineno="266"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/>the<sp/>new<sp/>capabilities<sp/>yet</highlight></codeline>
+<codeline lineno="267"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/>3)<sp/>compositor<sp/>gets<sp/>the<sp/>request<sp/>with<sp/>a<sp/>new_id<sp/>for<sp/>the</highlight></codeline>
+<codeline lineno="268"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/>destroyed<sp/>device</highlight></codeline>
+<codeline lineno="269"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/>4)<sp/>client<sp/>uses<sp/>the<sp/>new_id</highlight></codeline>
+<codeline lineno="270"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/>5)<sp/>client<sp/>gets<sp/>new<sp/>capabilities,<sp/>destroying<sp/>the<sp/>objects</highlight></codeline>
+<codeline lineno="271"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="272"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>If<sp/>the<sp/>compositor<sp/>just<sp/>bails<sp/>out<sp/>in<sp/>step<sp/>3)<sp/>and<sp/>does<sp/>not</highlight></codeline>
+<codeline lineno="273"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>create<sp/>the<sp/>resource,<sp/>then<sp/>the<sp/>client<sp/>gets<sp/>an<sp/>error<sp/>in<sp/>step<sp/>4)</highlight></codeline>
+<codeline lineno="274"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>-<sp/>even<sp/>though<sp/>it<sp/>followed<sp/>the<sp/>protocol<sp/>(it<sp/>just<sp/>didn&apos;t<sp/>know</highlight></codeline>
+<codeline lineno="275"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>about<sp/>new<sp/>capabilities).</highlight></codeline>
+<codeline lineno="276"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="277"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>This<sp/>test<sp/>simulates<sp/>this<sp/>situation</highlight></codeline>
+<codeline lineno="278"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>connection<sp/>is<sp/>buffered,<sp/>so<sp/>after<sp/>calling<sp/>client_roundtrip(),</highlight></codeline>
+<codeline lineno="281"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>this<sp/>whole<sp/>batch<sp/>will<sp/>be<sp/>delivered<sp/>to<sp/>compositor<sp/>and<sp/>will</highlight></codeline>
+<codeline lineno="282"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>exactly<sp/>simulate<sp/>our<sp/>situation<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_release(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;pointer&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_pointer<sp/>=<sp/>wl_seat_get_pointer(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1af45f5a0b505dce542ea33fe3da08a85d" kindref="member">wl_seat</ref>);</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(wl_pointer);</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>this<sp/>should<sp/>be<sp/>ignored<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_pointer_set_cursor(wl_pointer,<sp/>0,<sp/>NULL,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>this<sp/>should<sp/>not<sp/>be<sp/>ignored<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_pointer_release(wl_pointer);</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8h_1ab95988e6d0d010625831b6b8c92a4a9d" kindref="member">client_roundtrip</ref>(cl);</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_release(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;keyboard&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_keyboard<sp/>=<sp/>wl_seat_get_keyboard(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1af45f5a0b505dce542ea33fe3da08a85d" kindref="member">wl_seat</ref>);</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(wl_keyboard);</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_keyboard_release(wl_keyboard);</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8h_1ab95988e6d0d010625831b6b8c92a4a9d" kindref="member">client_roundtrip</ref>(cl);</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_release(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;touch&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_touch<sp/>=<sp/>wl_seat_get_touch(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1af45f5a0b505dce542ea33fe3da08a85d" kindref="member">wl_seat</ref>);</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(wl_touch);</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_touch_release(wl_touch);</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8h_1ab95988e6d0d010625831b6b8c92a4a9d" kindref="member">client_roundtrip</ref>(cl);</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>get<sp/>weston<sp/>to<sp/>the<sp/>previous<sp/>state<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_add(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;pointer&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_add(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;keyboard&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_add(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;touch&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8h_1ab95988e6d0d010625831b6b8c92a4a9d" kindref="member">client_roundtrip</ref>(cl);</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1ac680907260db3ec09cd3eba48b342124" kindref="member">caps</ref><sp/>==<sp/><ref refid="devices-test_8c_1a5be6a201cf6a4fbcb8f2b87faf29f25e" kindref="member">WL_SEAT_CAPABILITY_ALL</ref>);</highlight></codeline>
+<codeline lineno="313"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><ref refid="devices-test_8c_1ad279cc97b52a6d850f6e0a9f86d07896" kindref="member">TEST</ref>(get_device_after_destroy_multiple)</highlight></codeline>
+<codeline lineno="316"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>if<sp/>weston<sp/>crashed<sp/>during<sp/>this<sp/>test,<sp/>then<sp/>there<sp/>is</highlight></codeline>
+<codeline lineno="320"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>some<sp/>inconsistency<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>30;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get_device_after_destroy();</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="324"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><ref refid="devices-test_8c_1ad279cc97b52a6d850f6e0a9f86d07896" kindref="member">TEST</ref>(seats_have_names)</highlight></codeline>
+<codeline lineno="327"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclient" kindref="compound">client</ref><sp/>*cl<sp/>=<sp/><ref refid="weston-test-client-helper_8c_1afaf75d0d97a6872840e248ca4e300190" kindref="member">create_client_and_test_surface</ref>(100,<sp/>100,<sp/>100,<sp/>100);</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structinput" kindref="compound">input</ref><sp/>*<ref refid="structinput" kindref="compound">input</ref>;</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_list_for_each(<ref refid="structinput" kindref="compound">input</ref>,<sp/>&amp;cl-&gt;<ref refid="structclient_1af00846258eadd39a5b83837d16124762" kindref="member">inputs</ref>,<sp/><ref refid="structinput_1a0f460269218b558d9d228c89d6c307cc" kindref="member">link</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="structinput" kindref="compound">input</ref>-&gt;<ref refid="structinput_1a961613a2b0c06fc8b9009f9530fcbe97" kindref="member">seat_name</ref>);</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="334"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><ref refid="devices-test_8c_1ad279cc97b52a6d850f6e0a9f86d07896" kindref="member">TEST</ref>(seat_destroy_and_recreate)</highlight></codeline>
+<codeline lineno="337"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclient" kindref="compound">client</ref><sp/>*cl<sp/>=<sp/><ref refid="weston-test-client-helper_8c_1afaf75d0d97a6872840e248ca4e300190" kindref="member">create_client_and_test_surface</ref>(100,<sp/>100,<sp/>100,<sp/>100);</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_release(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;seat&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Roundtrip<sp/>to<sp/>receive<sp/>and<sp/>handle<sp/>the<sp/>seat<sp/>global<sp/>removal<sp/>event<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8h_1ab95988e6d0d010625831b6b8c92a4a9d" kindref="member">client_roundtrip</ref>(cl);</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(!cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>);</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_device_add(cl-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/></highlight><highlight class="stringliteral">&quot;seat&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>First<sp/>roundtrip<sp/>to<sp/>send<sp/>request<sp/>and<sp/>receive<sp/>new<sp/>seat<sp/>global<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8h_1ab95988e6d0d010625831b6b8c92a4a9d" kindref="member">client_roundtrip</ref>(cl);</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Second<sp/>roundtrip<sp/>to<sp/>handle<sp/>seat<sp/>events<sp/>and<sp/>set<sp/>up<sp/>input<sp/>devices<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8h_1ab95988e6d0d010625831b6b8c92a4a9d" kindref="member">client_roundtrip</ref>(cl);</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>);</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1abf5e47efd904369fce64cab252801b1f" kindref="member">pointer</ref>);</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1abc3887b3a98592fca0055bdb31597b90" kindref="member">keyboard</ref>);</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(cl-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1a9facf568420fea33baa039e0786f3e87" kindref="member">touch</ref>);</highlight></codeline>
+<codeline lineno="356"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/tests/devices-test.c"/>
+  </compounddef>
+</doxygen>

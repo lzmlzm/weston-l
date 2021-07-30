@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structsync__fence__info" kind="struct" language="C++" prot="public">
+    <compoundname>sync_fence_info</compoundname>
+    <includes refid="linux-sync-file-uapi_8h" local="no">linux-sync-file-uapi.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsync__fence__info_1ae73bedd36944db9e29790465478dfe4b" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char sync_fence_info::obj_name[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>obj_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/linux-sync-file-uapi.h" line="10" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/linux-sync-file-uapi.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsync__fence__info_1ae23d8d038befbb3ba49ec324de86d233" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char sync_fence_info::driver_name[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>driver_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/linux-sync-file-uapi.h" line="11" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/linux-sync-file-uapi.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsync__fence__info_1a0af1ce7ca8fc6d00588dff9de05a7fff" prot="public" static="no" mutable="no">
+        <type>__s32</type>
+        <definition>__s32 sync_fence_info::status</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/linux-sync-file-uapi.h" line="12" column="7" bodyfile="/home/lzm/Wayland/weston/libweston/linux-sync-file-uapi.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsync__fence__info_1a5d465613c4ce272e28942102aaaaf57b" prot="public" static="no" mutable="no">
+        <type>__u32</type>
+        <definition>__u32 sync_fence_info::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/linux-sync-file-uapi.h" line="13" column="7" bodyfile="/home/lzm/Wayland/weston/libweston/linux-sync-file-uapi.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsync__fence__info_1a0458fc806e2a904c2920186d86f5c3e3" prot="public" static="no" mutable="no">
+        <type>__u64</type>
+        <definition>__u64 sync_fence_info::timestamp_ns</definition>
+        <argsstring></argsstring>
+        <name>timestamp_ns</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/linux-sync-file-uapi.h" line="14" column="7" bodyfile="/home/lzm/Wayland/weston/libweston/linux-sync-file-uapi.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/linux-sync-file-uapi.h" line="9" column="22" bodyfile="/home/lzm/Wayland/weston/libweston/linux-sync-file-uapi.h" bodystart="9" bodyend="15"/>
+    <listofallmembers>
+      <member refid="structsync__fence__info_1ae23d8d038befbb3ba49ec324de86d233" prot="public" virt="non-virtual"><scope>sync_fence_info</scope><name>driver_name</name></member>
+      <member refid="structsync__fence__info_1a5d465613c4ce272e28942102aaaaf57b" prot="public" virt="non-virtual"><scope>sync_fence_info</scope><name>flags</name></member>
+      <member refid="structsync__fence__info_1ae73bedd36944db9e29790465478dfe4b" prot="public" virt="non-virtual"><scope>sync_fence_info</scope><name>obj_name</name></member>
+      <member refid="structsync__fence__info_1a0af1ce7ca8fc6d00588dff9de05a7fff" prot="public" virt="non-virtual"><scope>sync_fence_info</scope><name>status</name></member>
+      <member refid="structsync__fence__info_1a0458fc806e2a904c2920186d86f5c3e3" prot="public" virt="non-virtual"><scope>sync_fence_info</scope><name>timestamp_ns</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

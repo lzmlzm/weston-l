@@ -1,0 +1,577 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__log__scope" kind="struct" language="C++" prot="public">
+    <compoundname>weston_log_scope</compoundname>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structweston__log__scope_1aa459afbea55ca94648cbc9abed32ddf3" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* weston_log_scope_cb(struct weston_log_subscription *sub, void *user_data)</definition>
+        <argsstring>)(struct weston_log_subscription *sub, void *user_data)</argsstring>
+        <name>weston_log_scope_cb</name>
+        <briefdescription>
+<para><ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref> callback </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sub</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The subscription. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>user_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>user_data</computeroutput> argument given to <ref refid="structweston__log__scope_1aacf51678148a4c087e78a87816cc36f3" kindref="member">weston_log_ctx_add_log_scope()</ref> or <ref refid="structweston__compositor_1ae4682c6463d20cedae4215dff64d91c7" kindref="member">weston_compositor_add_log_scope()</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/weston-log.h" line="62" column="9" bodyfile="/home/lzm/Wayland/weston/include/libweston/weston-log.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__log__scope_1a3068b920ca319f7f4cd1aeabf0f9e589" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* weston_log_scope::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="83" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__log__scope_1aba6120d3554fa98bec011128c1b4ad05" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* weston_log_scope::desc</definition>
+        <argsstring></argsstring>
+        <name>desc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="84" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__log__scope_1aee55c61b9ca748336f1ea36b193a1d94" prot="public" static="no" mutable="no">
+        <type><ref refid="structweston__log__scope_1aa459afbea55ca94648cbc9abed32ddf3" kindref="member">weston_log_scope_cb</ref></type>
+        <definition>weston_log_scope_cb weston_log_scope::new_subscription</definition>
+        <argsstring></argsstring>
+        <name>new_subscription</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="85" column="21" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__log__scope_1a3ea6dd5038173e04cfb336c08b0b23e5" prot="public" static="no" mutable="no">
+        <type><ref refid="structweston__log__scope_1aa459afbea55ca94648cbc9abed32ddf3" kindref="member">weston_log_scope_cb</ref></type>
+        <definition>weston_log_scope_cb weston_log_scope::destroy_subscription</definition>
+        <argsstring></argsstring>
+        <name>destroy_subscription</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="86" column="21" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__log__scope_1ab8ff54c73d2058f7d6f692a5d65c3d00" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* weston_log_scope::user_data</definition>
+        <argsstring></argsstring>
+        <name>user_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="87" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__log__scope_1a2504128f5791644bcf001ca301b45ea1" prot="public" static="no" mutable="no">
+        <type>struct wl_list</type>
+        <definition>struct wl_list weston_log_scope::compositor_link</definition>
+        <argsstring></argsstring>
+        <name>compositor_link</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="87" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__log__scope_1afe6121c70d4e7f15371c5718dacd577e" prot="public" static="no" mutable="no">
+        <type>struct wl_list</type>
+        <definition>struct wl_list weston_log_scope::subscription_list</definition>
+        <argsstring></argsstring>
+        <name>subscription_list</name>
+        <briefdescription>
+<para><ref refid="structweston__log__subscription_1a60eb786d6717a7bbe840c1572bf22a9b" kindref="member">weston_log_subscription::source_link</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="87" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structweston__log__scope_1aacf51678148a4c087e78a87816cc36f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref> *</type>
+        <definition>struct weston_log_scope * weston_log_ctx_add_log_scope</definition>
+        <argsstring>(struct weston_log_context *log_ctx, const char *name, const char *description, weston_log_scope_cb new_subscription, weston_log_scope_cb destroy_subscription, void *user_data)</argsstring>
+        <name>weston_log_ctx_add_log_scope</name>
+        <param>
+          <type>struct <ref refid="structweston__log__context" kindref="compound">weston_log_context</ref> *</type>
+          <declname>log_ctx</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>description</declname>
+        </param>
+        <param>
+          <type><ref refid="structweston__log__scope_1aa459afbea55ca94648cbc9abed32ddf3" kindref="member">weston_log_scope_cb</ref></type>
+          <declname>new_subscription</declname>
+        </param>
+        <param>
+          <type><ref refid="structweston__log__scope_1aa459afbea55ca94648cbc9abed32ddf3" kindref="member">weston_log_scope_cb</ref></type>
+          <declname>destroy_subscription</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>user_data</declname>
+        </param>
+        <briefdescription>
+<para>Register a new stream name, creating a log scope. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>log_ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="structweston__log__context" kindref="compound">weston_log_context</ref> where to add. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The debug stream/scope name; must not be NULL. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>description</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The log scope description for humans; must not be NULL. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>new_subscription</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional callback when a client subscribes to this scope. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>destroy_subscription</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional callback when a client destroys the subscription. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>user_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional user data pointer for the callback. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A valid pointer on success, NULL on failure.</para>
+</simplesect>
+This function is used to create a log scope. All debug message printing happens for a scope, which allows clients to subscribe to the kind of debug messages they want by <computeroutput>name</computeroutput>. For the weston-debug protocol, subscription for the scope will happen automatically but for other types of streams, <ref refid="group__log_1ga18ab9265482af8547ed947e28804b6b8" kindref="member">weston_log_subscribe()</ref> should be called as to create a subscription and tie it to the scope created by this function.</para>
+<para><computeroutput>name</computeroutput> must be unique in the <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> instance. <computeroutput>name</computeroutput> and <computeroutput>description</computeroutput> must both be provided. In case of the weston-debug protocol, the description is printed when a client asks for a list of supported log scopes.</para>
+<para><computeroutput>new_subscription</computeroutput>, if not NULL, is called when a client subscribes to the log scope creating a debug stream. This is for log scopes that need to print messages as a response to a client appearing, e.g. printing a list of windows on demand or a static preamble. The argument <computeroutput>user_data</computeroutput> is passed in to the callback and is otherwise unused.</para>
+<para>For one-shot debug streams, <computeroutput>new_subscription</computeroutput> should finally call <ref refid="group__log_1gaff6911aac86ddf3ef624010d61630dea" kindref="member">weston_log_subscription_complete()</ref> to close the stream and tell the client the printing is complete. Otherwise the client expects more data to be written. The complete callback in <ref refid="structweston__log__subscriber" kindref="compound">weston_log_subscriber</ref> should be installed to trigger it and it is set-up automatically for the weston-debug protocol.</para>
+<para>As subscription can take place before creating the scope, any pending subscriptions to scope added by <ref refid="group__log_1ga18ab9265482af8547ed947e28804b6b8" kindref="member">weston_log_subscribe()</ref>, will be checked against the scope being created and if found will be added to the scope&apos;s subscription list.</para>
+<para>The log scope must be destroyed using <ref refid="structweston__log__scope_1a32ad399b7e203a9ad0a5a11cdd0711ce" kindref="member">weston_log_scope_destroy()</ref> before destroying the <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref>.</para>
+<para><simplesect kind="see"><para><ref refid="structweston__log__scope_1aa459afbea55ca94648cbc9abed32ddf3" kindref="member">weston_log_scope_cb</ref>, <ref refid="group__log_1ga18ab9265482af8547ed947e28804b6b8" kindref="member">weston_log_subscribe</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="575" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="575" bodyend="637"/>
+      </memberdef>
+      <memberdef kind="function" id="structweston__log__scope_1a32ad399b7e203a9ad0a5a11cdd0711ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_log_scope_destroy</definition>
+        <argsstring>(struct weston_log_scope *scope)</argsstring>
+        <name>weston_log_scope_destroy</name>
+        <param>
+          <type>struct <ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref> *</type>
+          <declname>scope</declname>
+        </param>
+        <briefdescription>
+<para>Destroy a log scope. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The log scope to destroy; may be NULL.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Destroys the log scope, calling each stream&apos;s destroy callback if one was installed/created. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="685" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="685" bodyend="699"/>
+      </memberdef>
+      <memberdef kind="function" id="structweston__log__scope_1aa2f05b02a0c471f5dbcf7d78816aa045" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool weston_log_scope_is_enabled</definition>
+        <argsstring>(struct weston_log_scope *scope)</argsstring>
+        <name>weston_log_scope_is_enabled</name>
+        <param>
+          <type>struct <ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref> *</type>
+          <declname>scope</declname>
+        </param>
+        <briefdescription>
+<para>Are there any active subscriptions to the scope? </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The log scope to check; may be NULL. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if any streams are open for this scope, false otherwise.</para>
+</simplesect>
+As printing some debugging messages may be relatively expensive, one can use this function to determine if there is a need to gather the debugging information at all. If this function returns false, all printing for this scope is dropped, so gathering the information is pointless.</para>
+<para>The return value of this function should not be stored, as new clients may subscribe to the debug scope later.</para>
+<para>If the given scope is NULL, this function will always return false, making it safe to use in teardown or destroy code, provided the scope is initialized to NULL before creation and set to NULL after destruction. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="723" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="723" bodyend="729"/>
+      </memberdef>
+      <memberdef kind="function" id="structweston__log__scope_1af7b1c182738e453d1c7acb7dcea35a8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_log_scope_complete</definition>
+        <argsstring>(struct weston_log_scope *scope)</argsstring>
+        <name>weston_log_scope_complete</name>
+        <param>
+          <type>struct <ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref> *</type>
+          <declname>scope</declname>
+        </param>
+        <briefdescription>
+<para>Close the log scope. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The log scope to complete; may be NULL.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Complete the log scope, calling each stream&apos;s complete callback if one was installed/created. This can be useful to signal the reading end that the data has been transmitted and should no longer expect that written over the stream. Particularly useful for the weston-debug protocol.</para>
+<para><simplesect kind="see"><para><ref refid="structweston__log__scope_1aacf51678148a4c087e78a87816cc36f3" kindref="member">weston_log_ctx_add_log_scope</ref>, <ref refid="structweston__compositor_1ae4682c6463d20cedae4215dff64d91c7" kindref="member">weston_compositor_add_log_scope</ref>, <ref refid="structweston__log__scope_1a32ad399b7e203a9ad0a5a11cdd0711ce" kindref="member">weston_log_scope_destroy</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="756" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="756" bodyend="765"/>
+      </memberdef>
+      <memberdef kind="function" id="structweston__log__scope_1a08df8a2d23964301c3d11b9aaf468911" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_log_scope_write</definition>
+        <argsstring>(struct weston_log_scope *scope, const char *data, size_t len)</argsstring>
+        <name>weston_log_scope_write</name>
+        <param>
+          <type>struct <ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref> *</type>
+          <declname>scope</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Write log data for a scope. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The debug scope to write for; may be NULL, in which case nothing will be written. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the data to write. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to write.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Writes the given data to all subscribed clients&apos; streams. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="779" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="779" bodyend="789"/>
+      </memberdef>
+      <memberdef kind="function" id="structweston__log__scope_1a543ea2886597eaaf68e4e36a773561dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int weston_log_scope_vprintf</definition>
+        <argsstring>(struct weston_log_scope *scope, const char *fmt, va_list ap)</argsstring>
+        <name>weston_log_scope_vprintf</name>
+        <param>
+          <type>struct <ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref> *</type>
+          <declname>scope</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>va_list</type>
+          <declname>ap</declname>
+        </param>
+        <briefdescription>
+<para>Write a formatted string for a scope (varargs) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The log scope to write for; may be NULL, in which case nothing will be written. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fmt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Printf-style format string. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Formatting arguments.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Writes to formatted string to all subscribed clients&apos; streams.</para>
+<para>The behavioral details for each stream are the same as for weston_debug_stream_write(). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="806" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="806" bodyend="825"/>
+      </memberdef>
+      <memberdef kind="function" id="structweston__log__scope_1ab8df80c01a6b256dee3d6a873b21ad05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int weston_log_scope_printf</definition>
+        <argsstring>(struct weston_log_scope *scope, const char *fmt,...)</argsstring>
+        <name>weston_log_scope_printf</name>
+        <param>
+          <type>struct <ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref> *</type>
+          <declname>scope</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+<para>Write a formatted string for a scope. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The log scope to write for; may be NULL, in which case nothing will be written. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fmt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Printf-style format string and arguments.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Writes to formatted string to all subscribed clients&apos; streams.</para>
+<para>The behavioral details for each stream are the same as for weston_debug_stream_write(). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="841" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="841" bodyend="852"/>
+      </memberdef>
+      <memberdef kind="function" id="structweston__log__scope_1aa752383fa9a80459da866ec7b71b98f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * weston_log_scope_timestamp</definition>
+        <argsstring>(struct weston_log_scope *scope, char *buf, size_t len)</argsstring>
+        <name>weston_log_scope_timestamp</name>
+        <param>
+          <type>struct <ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref> *</type>
+          <declname>scope</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Write debug scope name and current time into string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">scope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>debug scope; may be NULL </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer to store the string. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Available size in the buffer in bytes. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>buf</computeroutput> </para>
+</simplesect>
+Reads the current local wall-clock time and formats it into a string. and append the debug scope name to it, if a scope is available. The string is NUL-terminated, even if truncated. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="889" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="889" bodyend="914"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>weston-log message scope </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This is used for scoping logging/debugging messages. Clients can subscribe to only the scopes they are interested in. A scope is identified by its name (also referred to as debug stream name). </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>weston_log_subscriber</label>
+        <link refid="structweston__log__subscriber"/>
+      </node>
+      <node id="1">
+        <label>weston_log_scope</label>
+        <link refid="structweston__log__scope"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>destroy_subscription</edgelabel>
+          <edgelabel>new_subscription</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>weston_log_subscription</label>
+        <link refid="structweston__log__subscription"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>source</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>owner</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="82" column="23" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="82" bodyend="90"/>
+    <listofallmembers>
+      <member refid="structweston__log__scope_1a2504128f5791644bcf001ca301b45ea1" prot="public" virt="non-virtual"><scope>weston_log_scope</scope><name>compositor_link</name></member>
+      <member refid="structweston__log__scope_1aba6120d3554fa98bec011128c1b4ad05" prot="public" virt="non-virtual"><scope>weston_log_scope</scope><name>desc</name></member>
+      <member refid="structweston__log__scope_1a3ea6dd5038173e04cfb336c08b0b23e5" prot="public" virt="non-virtual"><scope>weston_log_scope</scope><name>destroy_subscription</name></member>
+      <member refid="structweston__log__scope_1a3068b920ca319f7f4cd1aeabf0f9e589" prot="public" virt="non-virtual"><scope>weston_log_scope</scope><name>name</name></member>
+      <member refid="structweston__log__scope_1aee55c61b9ca748336f1ea36b193a1d94" prot="public" virt="non-virtual"><scope>weston_log_scope</scope><name>new_subscription</name></member>
+      <member refid="structweston__log__scope_1afe6121c70d4e7f15371c5718dacd577e" prot="public" virt="non-virtual"><scope>weston_log_scope</scope><name>subscription_list</name></member>
+      <member refid="structweston__log__scope_1ab8ff54c73d2058f7d6f692a5d65c3d00" prot="public" virt="non-virtual"><scope>weston_log_scope</scope><name>user_data</name></member>
+      <member refid="structweston__log__scope_1aacf51678148a4c087e78a87816cc36f3" prot="public" virt="non-virtual"><scope>weston_log_scope</scope><name>weston_log_ctx_add_log_scope</name></member>
+      <member refid="structweston__log__scope_1aa459afbea55ca94648cbc9abed32ddf3" prot="public" virt="non-virtual"><scope>weston_log_scope</scope><name>weston_log_scope_cb</name></member>
+      <member refid="structweston__log__scope_1af7b1c182738e453d1c7acb7dcea35a8a" prot="public" virt="non-virtual"><scope>weston_log_scope</scope><name>weston_log_scope_complete</name></member>
+      <member refid="structweston__log__scope_1a32ad399b7e203a9ad0a5a11cdd0711ce" prot="public" virt="non-virtual"><scope>weston_log_scope</scope><name>weston_log_scope_destroy</name></member>
+      <member refid="structweston__log__scope_1aa2f05b02a0c471f5dbcf7d78816aa045" prot="public" virt="non-virtual"><scope>weston_log_scope</scope><name>weston_log_scope_is_enabled</name></member>
+      <member refid="structweston__log__scope_1ab8df80c01a6b256dee3d6a873b21ad05" prot="public" virt="non-virtual"><scope>weston_log_scope</scope><name>weston_log_scope_printf</name></member>
+      <member refid="structweston__log__scope_1aa752383fa9a80459da866ec7b71b98f5" prot="public" virt="non-virtual"><scope>weston_log_scope</scope><name>weston_log_scope_timestamp</name></member>
+      <member refid="structweston__log__scope_1a543ea2886597eaaf68e4e36a773561dc" prot="public" virt="non-virtual"><scope>weston_log_scope</scope><name>weston_log_scope_vprintf</name></member>
+      <member refid="structweston__log__scope_1a08df8a2d23964301c3d11b9aaf468911" prot="public" virt="non-virtual"><scope>weston_log_scope</scope><name>weston_log_scope_write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

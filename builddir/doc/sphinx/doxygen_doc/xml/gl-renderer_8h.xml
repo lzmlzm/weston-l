@@ -1,0 +1,468 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="gl-renderer_8h" kind="file" language="C++">
+    <compoundname>gl-renderer.h</compoundname>
+    <includes local="yes">config.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includes refid="libweston_8h" local="no">libweston/libweston.h</includes>
+    <includes refid="backend_8h" local="yes">backend.h</includes>
+    <includes refid="libweston-internal_8h" local="yes">libweston-internal.h</includes>
+    <includedby refid="drm-gbm_8c" local="yes">/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c</includedby>
+    <includedby refid="drm-virtual_8c" local="yes">/home/lzm/Wayland/weston/libweston/backend-drm/drm-virtual.c</includedby>
+    <includedby refid="headless_8c" local="yes">/home/lzm/Wayland/weston/libweston/backend-headless/headless.c</includedby>
+    <includedby refid="wayland_8c" local="yes">/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c</includedby>
+    <includedby refid="x11_8c" local="yes">/home/lzm/Wayland/weston/libweston/backend-x11/x11.c</includedby>
+    <includedby refid="egl-glue_8c" local="yes">/home/lzm/Wayland/weston/libweston/renderer-gl/egl-glue.c</includedby>
+    <includedby refid="gl-renderer_8c" local="yes">/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c</includedby>
+    <includedby refid="gl-shaders_8c" local="yes">/home/lzm/Wayland/weston/libweston/renderer-gl/gl-shaders.c</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>stdbool.h</label>
+      </node>
+      <node id="4">
+        <label>libweston/libweston.h</label>
+        <link refid="libweston_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdint.h</label>
+      </node>
+      <node id="12">
+        <label>stdlib.h</label>
+      </node>
+      <node id="9">
+        <label>wayland-server.h</label>
+      </node>
+      <node id="8">
+        <label>xkbcommon/xkbcommon.h</label>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h</label>
+        <link refid="gl-renderer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>libweston/zalloc.h</label>
+        <link refid="zalloc_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>time.h</label>
+      </node>
+      <node id="10">
+        <label>libweston/matrix.h</label>
+        <link refid="matrix_8h"/>
+      </node>
+      <node id="7">
+        <label>pixman.h</label>
+      </node>
+      <node id="14">
+        <label>libweston-internal.h</label>
+        <link refid="libweston-internal_8h"/>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+      </node>
+      <node id="13">
+        <label>backend.h</label>
+        <link refid="backend_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/drm-virtual.c</label>
+        <link refid="drm-virtual_8c"/>
+      </node>
+      <node id="2">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c</label>
+        <link refid="drm-gbm_8c"/>
+      </node>
+      <node id="4">
+        <label>/home/lzm/Wayland/weston/libweston/backend-headless/headless.c</label>
+        <link refid="headless_8c"/>
+      </node>
+      <node id="9">
+        <label>/home/lzm/Wayland/weston/libweston/renderer-gl/gl-shaders.c</label>
+        <link refid="gl-shaders_8c"/>
+      </node>
+      <node id="6">
+        <label>/home/lzm/Wayland/weston/libweston/backend-x11/x11.c</label>
+        <link refid="x11_8c"/>
+      </node>
+      <node id="7">
+        <label>/home/lzm/Wayland/weston/libweston/renderer-gl/egl-glue.c</label>
+        <link refid="egl-glue_8c"/>
+      </node>
+      <node id="8">
+        <label>/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c</label>
+        <link refid="gl-renderer_8c"/>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h</label>
+        <link refid="gl-renderer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c</label>
+        <link refid="wayland_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structgl__renderer__display__options" prot="public">gl_renderer_display_options</innerclass>
+    <innerclass refid="structgl__renderer__output__options" prot="public">gl_renderer_output_options</innerclass>
+    <innerclass refid="structgl__renderer__pbuffer__options" prot="public">gl_renderer_pbuffer_options</innerclass>
+    <innerclass refid="structgl__renderer__interface" prot="public">gl_renderer_interface</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="gl-renderer_8h_1a26a1926709daa561cedd150f1a6bbb23" prot="public" static="no">
+        <name>EGL_DEFAULT_DISPLAY</name>
+        <initializer>((<ref refid="gl-renderer_8h_1afac89107c87e5913ade2798a8dfa13c2" kindref="member">EGLNativeDisplayType</ref>)0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" line="48" column="9" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gl-renderer_8h_1ace4c8dbcd8e4e41ea1fe7b4b6c4c280e" prot="public" static="no">
+        <name>EGL_PBUFFER_BIT</name>
+        <initializer>0x0001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" line="49" column="9" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gl-renderer_8h_1a0afa78b0eede7a459e7df188ccd7a371" prot="public" static="no">
+        <name>EGL_WINDOW_BIT</name>
+        <initializer>0x0004</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" line="50" column="9" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="gl-renderer_8h_1a8e5f6eb1b1b7b25d13d58ed255c41403" prot="public" static="no" strong="no">
+        <type></type>
+        <name>gl_renderer_border_side</name>
+        <enumvalue id="gl-renderer_8h_1a8e5f6eb1b1b7b25d13d58ed255c41403adc1d72cde2a809c8e30952044600f1b4" prot="public">
+          <name>GL_RENDERER_BORDER_TOP</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gl-renderer_8h_1a8e5f6eb1b1b7b25d13d58ed255c41403a07748d90edb78d1e580311b4a37ce88e" prot="public">
+          <name>GL_RENDERER_BORDER_LEFT</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gl-renderer_8h_1a8e5f6eb1b1b7b25d13d58ed255c41403ae445009c67c155ec54f35959dfed248e" prot="public">
+          <name>GL_RENDERER_BORDER_RIGHT</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gl-renderer_8h_1a8e5f6eb1b1b7b25d13d58ed255c41403ac98acda6e70392db0c8b68fd8ca35917" prot="public">
+          <name>GL_RENDERER_BORDER_BOTTOM</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" line="54" column="29" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" bodystart="54" bodyend="59"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="gl-renderer_8h_1a97030274d045a36c550fc0d66d26f175" prot="public" static="no">
+        <type>int</type>
+        <definition>typedef int EGLint</definition>
+        <argsstring></argsstring>
+        <name>EGLint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" line="41" column="13" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="gl-renderer_8h_1a3403e7aa1af3a3a900c4fb0584d680a5" prot="public" static="no">
+        <type>int</type>
+        <definition>typedef int EGLenum</definition>
+        <argsstring></argsstring>
+        <name>EGLenum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" line="42" column="13" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="gl-renderer_8h_1a87d55554aa13accdcb0e10eab910c72e" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* EGLDisplay</definition>
+        <argsstring></argsstring>
+        <name>EGLDisplay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" line="43" column="14" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="gl-renderer_8h_1a1bd45435703af31ea10bc2f2229f337b" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* EGLSurface</definition>
+        <argsstring></argsstring>
+        <name>EGLSurface</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" line="44" column="14" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="gl-renderer_8h_1a691766e6d867e15207ec0a6d6e46253c" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* EGLConfig</definition>
+        <argsstring></argsstring>
+        <name>EGLConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" line="45" column="14" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="gl-renderer_8h_1afac89107c87e5913ade2798a8dfa13c2" prot="public" static="no">
+        <type>intptr_t</type>
+        <definition>typedef intptr_t EGLNativeDisplayType</definition>
+        <argsstring></argsstring>
+        <name>EGLNativeDisplayType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" line="46" column="18" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="gl-renderer_8h_1a4007ec919445bd39e1cdbf77c07fc090" prot="public" static="no">
+        <type>intptr_t</type>
+        <definition>typedef intptr_t EGLNativeWindowType</definition>
+        <argsstring></argsstring>
+        <name>EGLNativeWindowType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" line="47" column="18" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2012<sp/>John<sp/>Kåre<sp/>Alsaker</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>(including<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>next<sp/>paragraph)<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>NONINFRINGEMENT.<sp/><sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="libweston_8h" kindref="compound">libweston/libweston.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="backend_8h" kindref="compound">backend.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="libweston-internal_8h" kindref="compound">libweston-internal.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ENABLE_EGL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;EGL/egl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;EGL/eglext.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="gl-renderer_8h_1a97030274d045a36c550fc0d66d26f175" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="gl-renderer_8h_1a97030274d045a36c550fc0d66d26f175" kindref="member">EGLint</ref>;</highlight></codeline>
+<codeline lineno="42" refid="gl-renderer_8h_1a3403e7aa1af3a3a900c4fb0584d680a5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="gl-renderer_8h_1a3403e7aa1af3a3a900c4fb0584d680a5" kindref="member">EGLenum</ref>;</highlight></codeline>
+<codeline lineno="43" refid="gl-renderer_8h_1a87d55554aa13accdcb0e10eab910c72e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="gl-renderer_8h_1a87d55554aa13accdcb0e10eab910c72e" kindref="member">EGLDisplay</ref>;</highlight></codeline>
+<codeline lineno="44" refid="gl-renderer_8h_1a1bd45435703af31ea10bc2f2229f337b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="gl-renderer_8h_1a1bd45435703af31ea10bc2f2229f337b" kindref="member">EGLSurface</ref>;</highlight></codeline>
+<codeline lineno="45" refid="gl-renderer_8h_1a691766e6d867e15207ec0a6d6e46253c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="gl-renderer_8h_1a691766e6d867e15207ec0a6d6e46253c" kindref="member">EGLConfig</ref>;</highlight></codeline>
+<codeline lineno="46" refid="gl-renderer_8h_1afac89107c87e5913ade2798a8dfa13c2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>intptr_t<sp/><ref refid="gl-renderer_8h_1afac89107c87e5913ade2798a8dfa13c2" kindref="member">EGLNativeDisplayType</ref>;</highlight></codeline>
+<codeline lineno="47" refid="gl-renderer_8h_1a4007ec919445bd39e1cdbf77c07fc090" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>intptr_t<sp/><ref refid="gl-renderer_8h_1a4007ec919445bd39e1cdbf77c07fc090" kindref="member">EGLNativeWindowType</ref>;</highlight></codeline>
+<codeline lineno="48" refid="gl-renderer_8h_1a26a1926709daa561cedd150f1a6bbb23" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EGL_DEFAULT_DISPLAY<sp/>((EGLNativeDisplayType)0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="gl-renderer_8h_1ace4c8dbcd8e4e41ea1fe7b4b6c4c280e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EGL_PBUFFER_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0001</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="gl-renderer_8h_1a0afa78b0eede7a459e7df188ccd7a371" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EGL_WINDOW_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0004</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>ENABLE_EGL<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="gl-renderer_8h_1a8e5f6eb1b1b7b25d13d58ed255c41403" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="gl-renderer_8h_1a8e5f6eb1b1b7b25d13d58ed255c41403" kindref="member">gl_renderer_border_side</ref><sp/>{</highlight></codeline>
+<codeline lineno="55" refid="gl-renderer_8h_1a8e5f6eb1b1b7b25d13d58ed255c41403adc1d72cde2a809c8e30952044600f1b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gl-renderer_8h_1a8e5f6eb1b1b7b25d13d58ed255c41403adc1d72cde2a809c8e30952044600f1b4" kindref="member">GL_RENDERER_BORDER_TOP</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="56" refid="gl-renderer_8h_1a8e5f6eb1b1b7b25d13d58ed255c41403a07748d90edb78d1e580311b4a37ce88e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gl-renderer_8h_1a8e5f6eb1b1b7b25d13d58ed255c41403a07748d90edb78d1e580311b4a37ce88e" kindref="member">GL_RENDERER_BORDER_LEFT</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="57" refid="gl-renderer_8h_1a8e5f6eb1b1b7b25d13d58ed255c41403ae445009c67c155ec54f35959dfed248e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gl-renderer_8h_1a8e5f6eb1b1b7b25d13d58ed255c41403ae445009c67c155ec54f35959dfed248e" kindref="member">GL_RENDERER_BORDER_RIGHT</ref><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="58" refid="gl-renderer_8h_1a8e5f6eb1b1b7b25d13d58ed255c41403ac98acda6e70392db0c8b68fd8ca35917" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gl-renderer_8h_1a8e5f6eb1b1b7b25d13d58ed255c41403ac98acda6e70392db0c8b68fd8ca35917" kindref="member">GL_RENDERER_BORDER_BOTTOM</ref><sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="structgl__renderer__display__options" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structgl__renderer__display__options" kindref="compound">gl_renderer_display_options</ref><sp/>{</highlight></codeline>
+<codeline lineno="68" refid="structgl__renderer__display__options_1af7b55369e1f51f0a3f67a16c0301f6d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gl-renderer_8h_1a3403e7aa1af3a3a900c4fb0584d680a5" kindref="member">EGLenum</ref><sp/><ref refid="structgl__renderer__display__options_1af7b55369e1f51f0a3f67a16c0301f6d5" kindref="member">egl_platform</ref>;</highlight></codeline>
+<codeline lineno="70" refid="structgl__renderer__display__options_1a6a693604b69d3984cce8a6139d50dcb1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structgl__renderer__display__options_1a6a693604b69d3984cce8a6139d50dcb1" kindref="member">egl_native_display</ref>;</highlight></codeline>
+<codeline lineno="72" refid="structgl__renderer__display__options_1a18b0a47d9c26c392ebff6f2e755a6812" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gl-renderer_8h_1a97030274d045a36c550fc0d66d26f175" kindref="member">EGLint</ref><sp/><ref refid="structgl__renderer__display__options_1a18b0a47d9c26c392ebff6f2e755a6812" kindref="member">egl_surface_type</ref>;</highlight></codeline>
+<codeline lineno="74" refid="structgl__renderer__display__options_1a3c7f40c55bfef4ba47c355334fb226d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>*<ref refid="structgl__renderer__display__options_1a3c7f40c55bfef4ba47c355334fb226d4" kindref="member">drm_formats</ref>;</highlight></codeline>
+<codeline lineno="76" refid="structgl__renderer__display__options_1a1a8c93300796002b03508506b7139afc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structgl__renderer__display__options_1a1a8c93300796002b03508506b7139afc" kindref="member">drm_formats_count</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="structgl__renderer__output__options" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structgl__renderer__output__options" kindref="compound">gl_renderer_output_options</ref><sp/>{</highlight></codeline>
+<codeline lineno="81" refid="structgl__renderer__output__options_1a82e504499e5952cfb2f0308dcfed3fee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gl-renderer_8h_1a4007ec919445bd39e1cdbf77c07fc090" kindref="member">EGLNativeWindowType</ref><sp/><ref refid="structgl__renderer__output__options_1a82e504499e5952cfb2f0308dcfed3fee" kindref="member">window_for_legacy</ref>;</highlight></codeline>
+<codeline lineno="83" refid="structgl__renderer__output__options_1a4a41f1b90ab23ec044d3ee9f5dc18168" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structgl__renderer__output__options_1a4a41f1b90ab23ec044d3ee9f5dc18168" kindref="member">window_for_platform</ref>;</highlight></codeline>
+<codeline lineno="85" refid="structgl__renderer__output__options_1aef1d377ceb344ade2ebcedf02dbf6d53" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>*<ref refid="structgl__renderer__output__options_1aef1d377ceb344ade2ebcedf02dbf6d53" kindref="member">drm_formats</ref>;</highlight></codeline>
+<codeline lineno="87" refid="structgl__renderer__output__options_1ae575c80769bbd43947478c845e36bce3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structgl__renderer__output__options_1ae575c80769bbd43947478c845e36bce3" kindref="member">drm_formats_count</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="structgl__renderer__pbuffer__options" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structgl__renderer__pbuffer__options" kindref="compound">gl_renderer_pbuffer_options</ref><sp/>{</highlight></codeline>
+<codeline lineno="92" refid="structgl__renderer__pbuffer__options_1a5dc59cbda4b72ef570bd21a94b971f93" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structgl__renderer__pbuffer__options_1a5dc59cbda4b72ef570bd21a94b971f93" kindref="member">width</ref>;</highlight></codeline>
+<codeline lineno="94" refid="structgl__renderer__pbuffer__options_1ad14341136c3660b7188572c4fb0fdc79" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structgl__renderer__pbuffer__options_1ad14341136c3660b7188572c4fb0fdc79" kindref="member">height</ref>;</highlight></codeline>
+<codeline lineno="96" refid="structgl__renderer__pbuffer__options_1a0062c566a30acd685a0641df8c781369" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>*<ref refid="structgl__renderer__pbuffer__options_1a0062c566a30acd685a0641df8c781369" kindref="member">drm_formats</ref>;</highlight></codeline>
+<codeline lineno="98" refid="structgl__renderer__pbuffer__options_1a4590629e5a9e65477710f5dd8a684d92" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structgl__renderer__pbuffer__options_1a4590629e5a9e65477710f5dd8a684d92" kindref="member">drm_formats_count</ref>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="structgl__renderer__interface" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structgl__renderer__interface" kindref="compound">gl_renderer_interface</ref><sp/>{</highlight></codeline>
+<codeline lineno="132" refid="structgl__renderer__interface_1ae0141c11b0fe5d0749016b7904513230" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>(*<ref refid="structgl__renderer__interface_1ae0141c11b0fe5d0749016b7904513230" kindref="member">display_create</ref>)(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__compositor" kindref="compound">weston_compositor</ref><sp/>*ec,</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structgl__renderer__display__options" kindref="compound">gl_renderer_display_options</ref><sp/>*options);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157" refid="structgl__renderer__interface_1a3dc18976e80358558c6eef98afbaea90" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>(*<ref refid="structgl__renderer__interface_1a3dc18976e80358558c6eef98afbaea90" kindref="member">output_window_create</ref>)(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__output" kindref="compound">weston_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref>,</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structgl__renderer__output__options" kindref="compound">gl_renderer_output_options</ref><sp/>*options);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178" refid="structgl__renderer__interface_1a668eaa9b13399a91e3d84dc36de62f15" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>(*<ref refid="structgl__renderer__interface_1a668eaa9b13399a91e3d84dc36de62f15" kindref="member">output_pbuffer_create</ref>)(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__output" kindref="compound">weston_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref>,</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structgl__renderer__pbuffer__options" kindref="compound">gl_renderer_pbuffer_options</ref><sp/>*options);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181" refid="structgl__renderer__interface_1a8b5db07d1de90d0024b15596fa42e5b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="structgl__renderer__interface_1a8b5db07d1de90d0024b15596fa42e5b5" kindref="member">output_destroy</ref>)(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__output" kindref="compound">weston_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref>);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Sets<sp/>the<sp/>output<sp/>border.</highlight></codeline>
+<codeline lineno="184"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="185"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>side<sp/>specifies<sp/>the<sp/>side<sp/>for<sp/>which<sp/>we<sp/>are<sp/>setting<sp/>the<sp/>border.</highlight></codeline>
+<codeline lineno="186"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>width<sp/>and<sp/>height<sp/>are<sp/>the<sp/>width<sp/>and<sp/>height<sp/>of<sp/>the<sp/>border.</highlight></codeline>
+<codeline lineno="187"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>tex_width<sp/>patemeter<sp/>specifies<sp/>the<sp/>width<sp/>of<sp/>the<sp/>actual</highlight></codeline>
+<codeline lineno="188"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>texture;<sp/>this<sp/>may<sp/>be<sp/>larger<sp/>than<sp/>width<sp/>if<sp/>the<sp/>data<sp/>is<sp/>not</highlight></codeline>
+<codeline lineno="189"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>tightly<sp/>packed.</highlight></codeline>
+<codeline lineno="190"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="191"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>top<sp/>and<sp/>bottom<sp/>textures<sp/>will<sp/>extend<sp/>over<sp/>the<sp/>sides<sp/>to<sp/>the</highlight></codeline>
+<codeline lineno="192"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>full<sp/>width<sp/>of<sp/>the<sp/>bordered<sp/>window.<sp/><sp/>The<sp/>right<sp/>and<sp/>left<sp/>edges,</highlight></codeline>
+<codeline lineno="193"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>however,<sp/>will<sp/>extend<sp/>only<sp/>to<sp/>the<sp/>top<sp/>and<sp/>bottom<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="194"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>compositor<sp/>surface.<sp/><sp/>This<sp/>is<sp/>demonstrated<sp/>by<sp/>the<sp/>picture<sp/>below:</highlight></codeline>
+<codeline lineno="195"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="196"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>+-----------------------+</highlight></codeline>
+<codeline lineno="197"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TOP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline lineno="198"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>+-+-------------------+-+</highlight></codeline>
+<codeline lineno="199"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>|<sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>|</highlight></codeline>
+<codeline lineno="200"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>|L|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|R|</highlight></codeline>
+<codeline lineno="201"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>|E|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|I|</highlight></codeline>
+<codeline lineno="202"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>|F|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|G|</highlight></codeline>
+<codeline lineno="203"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>|T|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|H|</highlight></codeline>
+<codeline lineno="204"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>|<sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|T|</highlight></codeline>
+<codeline lineno="205"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>|<sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>|</highlight></codeline>
+<codeline lineno="206"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>+-+-------------------+-+</highlight></codeline>
+<codeline lineno="207"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BOTTOM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline lineno="208"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>+-----------------------+</highlight></codeline>
+<codeline lineno="209"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210" refid="structgl__renderer__interface_1a603c14b0b9e047c925a16a00fb01ff13" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="structgl__renderer__interface_1a603c14b0b9e047c925a16a00fb01ff13" kindref="member">output_set_border</ref>)(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__output" kindref="compound">weston_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref>,</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="gl-renderer_8h_1a8e5f6eb1b1b7b25d13d58ed255c41403" kindref="member">gl_renderer_border_side</ref><sp/>side,</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int32_t<sp/><ref refid="structweston__output_1afe369b7cd5025ff87f9b8ccfaa1b7a17" kindref="member">width</ref>,<sp/>int32_t<sp/><ref refid="structweston__output_1acf6ea57c32856e783332467242a966a2" kindref="member">height</ref>,</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int32_t<sp/>tex_width,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*data);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Create<sp/>fence<sp/>sync<sp/>FD<sp/>to<sp/>wait<sp/>for<sp/>GPU<sp/>rendering.</highlight></codeline>
+<codeline lineno="216"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="217"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Return<sp/>FD<sp/>on<sp/>success,<sp/>-1<sp/>on<sp/>failure<sp/>or<sp/>unsupported</highlight></codeline>
+<codeline lineno="218"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>EGL_ANDROID_native_fence_sync<sp/>extension.</highlight></codeline>
+<codeline lineno="219"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220" refid="structgl__renderer__interface_1a76f8683e8c0bcc4bbcc65243a2685f3f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>(*<ref refid="structgl__renderer__interface_1a76f8683e8c0bcc4bbcc65243a2685f3f" kindref="member">create_fence_fd</ref>)(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__output" kindref="compound">weston_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref>);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h"/>
+  </compounddef>
+</doxygen>

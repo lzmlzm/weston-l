@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structrectangle" kind="struct" language="C++" prot="public">
+    <compoundname>rectangle</compoundname>
+    <includes refid="weston-test-client-helper_8h" local="no">weston-test-client-helper.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structrectangle_1a03970481db05be5eb4e1b55eaba3b347" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int rectangle::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="177" column="5" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrectangle_1a2331724555ab2149f4ce4e2b57079e4d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int rectangle::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="178" column="5" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrectangle_1a57a9b24a714057d8d2ca9a06333560d3" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int rectangle::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="179" column="5" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrectangle_1af460193d9a375b8e2813bf1fe6216cce" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int rectangle::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="180" column="5" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="176" column="16" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="176" bodyend="181"/>
+    <listofallmembers>
+      <member refid="structrectangle_1af460193d9a375b8e2813bf1fe6216cce" prot="public" virt="non-virtual"><scope>rectangle</scope><name>height</name></member>
+      <member refid="structrectangle_1a57a9b24a714057d8d2ca9a06333560d3" prot="public" virt="non-virtual"><scope>rectangle</scope><name>width</name></member>
+      <member refid="structrectangle_1a03970481db05be5eb4e1b55eaba3b347" prot="public" virt="non-virtual"><scope>rectangle</scope><name>x</name></member>
+      <member refid="structrectangle_1a2331724555ab2149f4ce4e2b57079e4d" prot="public" virt="non-virtual"><scope>rectangle</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

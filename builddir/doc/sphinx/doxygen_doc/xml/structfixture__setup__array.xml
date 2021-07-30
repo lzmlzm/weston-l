@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structfixture__setup__array" kind="struct" language="C++" prot="public">
+    <compoundname>fixture_setup_array</compoundname>
+    <includes refid="weston-test-runner_8h" local="no">weston-test-runner.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structfixture__setup__array_1aee35175bb680c0a47025cf2502a96f7c" prot="public" static="no" mutable="no">
+        <type>const void *</type>
+        <definition>const void* fixture_setup_array::array</definition>
+        <argsstring></argsstring>
+        <name>array</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.h" line="171" column="12" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfixture__setup__array_1ac6e0ba03a3efb7fb349bdaae25cbafa0" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t fixture_setup_array::element_size</definition>
+        <argsstring></argsstring>
+        <name>element_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.h" line="172" column="8" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfixture__setup__array_1a6951fe80c14c9cd286965c3745d4d366" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int fixture_setup_array::n_elements</definition>
+        <argsstring></argsstring>
+        <name>n_elements</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.h" line="173" column="5" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfixture__setup__array_1a2606a50c547b715f247fd6fa1888c208" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t fixture_setup_array::meta_offset</definition>
+        <argsstring></argsstring>
+        <name>meta_offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.h" line="174" column="8" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Fixture setup array record. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Helper to store the attributes of the data array passed in to <ref refid="group__testharness_1ga274def1a210d74f64d216796dbec4b2b" kindref="member">DECLARE_FIXTURE_SETUP_WITH_ARG()</ref>. </para>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.h" line="170" column="26" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.h" bodystart="170" bodyend="175"/>
+    <listofallmembers>
+      <member refid="structfixture__setup__array_1aee35175bb680c0a47025cf2502a96f7c" prot="public" virt="non-virtual"><scope>fixture_setup_array</scope><name>array</name></member>
+      <member refid="structfixture__setup__array_1ac6e0ba03a3efb7fb349bdaae25cbafa0" prot="public" virt="non-virtual"><scope>fixture_setup_array</scope><name>element_size</name></member>
+      <member refid="structfixture__setup__array_1a2606a50c547b715f247fd6fa1888c208" prot="public" virt="non-virtual"><scope>fixture_setup_array</scope><name>meta_offset</name></member>
+      <member refid="structfixture__setup__array_1a6951fe80c14c9cd286965c3745d4d366" prot="public" virt="non-virtual"><scope>fixture_setup_array</scope><name>n_elements</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

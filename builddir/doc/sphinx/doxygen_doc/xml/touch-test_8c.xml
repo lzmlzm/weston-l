@@ -1,0 +1,500 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="touch-test_8c" kind="file" language="C++">
+    <compoundname>touch-test.c</compoundname>
+    <includes local="yes">config.h</includes>
+    <includes local="no">time.h</includes>
+    <includes refid="input-timestamps-helper_8h" local="yes">input-timestamps-helper.h</includes>
+    <includes local="yes">shared/timespec-util.h</includes>
+    <includes refid="weston-test-client-helper_8h" local="yes">weston-test-client-helper.h</includes>
+    <includes local="yes">wayland-server-protocol.h</includes>
+    <includes refid="weston-test-fixture-compositor_8h" local="yes">weston-test-fixture-compositor.h</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>stdbool.h</label>
+      </node>
+      <node id="25">
+        <label>viewporter-client-protocol.h</label>
+      </node>
+      <node id="17">
+        <label>libweston/libweston.h</label>
+        <link refid="libweston_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>weston-test-fixture-compositor.h</label>
+        <link refid="weston-test-fixture-compositor_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>input-timestamps-helper.h</label>
+        <link refid="input-timestamps-helper_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>assert.h</label>
+      </node>
+      <node id="24">
+        <label>weston-screenshooter-client-protocol.h</label>
+      </node>
+      <node id="23">
+        <label>weston-test-client-protocol.h</label>
+      </node>
+      <node id="9">
+        <label>stdint.h</label>
+      </node>
+      <node id="13">
+        <label>stdlib.h</label>
+      </node>
+      <node id="19">
+        <label>wayland-server.h</label>
+      </node>
+      <node id="18">
+        <label>xkbcommon/xkbcommon.h</label>
+      </node>
+      <node id="15">
+        <label>shared/helpers.h</label>
+      </node>
+      <node id="22">
+        <label>weston-testsuite-data.h</label>
+        <link refid="weston-testsuite-data_8h"/>
+      </node>
+      <node id="11">
+        <label>wayland-client-protocol.h</label>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/tests/touch-test.c</label>
+        <link refid="touch-test_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>wayland-server-protocol.h</label>
+      </node>
+      <node id="21">
+        <label>libweston/zalloc.h</label>
+        <link refid="zalloc_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>time.h</label>
+      </node>
+      <node id="20">
+        <label>libweston/matrix.h</label>
+        <link refid="matrix_8h"/>
+      </node>
+      <node id="10">
+        <label>pixman.h</label>
+      </node>
+      <node id="14">
+        <label>wayland-util.h</label>
+      </node>
+      <node id="12">
+        <label>weston-test-runner.h</label>
+        <link refid="weston-test-runner_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+      </node>
+      <node id="5">
+        <label>shared/timespec-util.h</label>
+      </node>
+      <node id="6">
+        <label>weston-test-client-helper.h</label>
+        <link refid="weston-test-client-helper_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="touch-test_8c_1a7a3096f0fc777dd3fac90553a5e4ebb9" prot="public" static="yes" mutable="no">
+        <type>const struct timespec</type>
+        <definition>const struct timespec t1</definition>
+        <argsstring></argsstring>
+        <name>t1</name>
+        <initializer>= { .tv_sec = 1, .tv_nsec = 1000001 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/touch-test.c" line="45" column="1" bodyfile="/home/lzm/Wayland/weston/tests/touch-test.c" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="touch-test_8c_1a51ca56bc6b16baaf4ef3b252fe2ca73f" prot="public" static="yes" mutable="no">
+        <type>const struct timespec</type>
+        <definition>const struct timespec t2</definition>
+        <argsstring></argsstring>
+        <name>t2</name>
+        <initializer>= { .tv_sec = 2, .tv_nsec = 2000001 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/touch-test.c" line="45" column="1" bodyfile="/home/lzm/Wayland/weston/tests/touch-test.c" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="touch-test_8c_1a5cab06c184ff266ddbcac54c06fd2b53" prot="public" static="yes" mutable="no">
+        <type>const struct timespec</type>
+        <definition>const struct timespec t3</definition>
+        <argsstring></argsstring>
+        <name>t3</name>
+        <initializer>= { .tv_sec = 3, .tv_nsec = 3000001 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/touch-test.c" line="45" column="1" bodyfile="/home/lzm/Wayland/weston/tests/touch-test.c" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="touch-test_8c_1a37b779d0c4ed0f9e909681b420a40063" prot="public" static="yes" mutable="no">
+        <type>const struct timespec</type>
+        <definition>const struct timespec t_other</definition>
+        <argsstring></argsstring>
+        <name>t_other</name>
+        <initializer>= { .tv_sec = 123, .tv_nsec = 456 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/touch-test.c" line="45" column="1" bodyfile="/home/lzm/Wayland/weston/tests/touch-test.c" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="touch-test_8c_1a94e9ff74226ccd29a26846ccb66d481f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></type>
+        <definition>static enum test_result_code fixture_setup</definition>
+        <argsstring>(struct weston_test_harness *harness)</argsstring>
+        <name>fixture_setup</name>
+        <param>
+          <type>struct <ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref> *</type>
+          <declname>harness</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/touch-test.c" line="1" column="0" bodyfile="/home/lzm/Wayland/weston/tests/touch-test.c" bodystart="37" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="touch-test_8c_1a1ac8add2dcb01a58f69f41ce2ad0ccfc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DECLARE_FIXTURE_SETUP</definition>
+        <argsstring>(fixture_setup)</argsstring>
+        <name>DECLARE_FIXTURE_SETUP</name>
+        <param>
+          <type><ref refid="yuv-buffer-test_8c_1a94e9ff74226ccd29a26846ccb66d481f" kindref="member">fixture_setup</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/touch-test.c" line="45" column="1" declfile="/home/lzm/Wayland/weston/tests/touch-test.c" declline="45" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="touch-test_8c_1a34a900788138a17dd258bcfa6a74e372" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structclient" kindref="compound">client</ref> *</type>
+        <definition>static struct client* create_touch_test_client</definition>
+        <argsstring>(void)</argsstring>
+        <name>create_touch_test_client</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/touch-test.c" line="53" column="1" bodyfile="/home/lzm/Wayland/weston/tests/touch-test.c" bodystart="53" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="touch-test_8c_1a3339de17e33b831136d272954110e137" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void send_touch</definition>
+        <argsstring>(struct client *client, const struct timespec *time, uint32_t touch_type)</argsstring>
+        <name>send_touch</name>
+        <param>
+          <type>struct <ref refid="structclient" kindref="compound">client</ref> *</type>
+          <declname>client</declname>
+        </param>
+        <param>
+          <type>const struct timespec *</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>touch_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/touch-test.c" line="61" column="1" bodyfile="/home/lzm/Wayland/weston/tests/touch-test.c" bodystart="61" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="touch-test_8c_1a4e4d8547a46916bed5ef61fc194a39fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(touch_events)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>touch_events</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/touch-test.c" line="72" column="1" bodyfile="/home/lzm/Wayland/weston/tests/touch-test.c" bodystart="72" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="touch-test_8c_1ae2b1bc141ec8c67ec2d648df77c50b30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(touch_timestamps_stop_after_input_timestamps_object_is_destroyed)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>touch_timestamps_stop_after_input_timestamps_object_is_destroyed</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/touch-test.c" line="94" column="1" bodyfile="/home/lzm/Wayland/weston/tests/touch-test.c" bodystart="94" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="touch-test_8c_1a50bfe0c5352c910abcbe73352ebf9f56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(touch_timestamps_stop_after_client_releases_wl_touch)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>touch_timestamps_stop_after_client_releases_wl_touch</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/touch-test.c" line="112" column="1" bodyfile="/home/lzm/Wayland/weston/tests/touch-test.c" bodystart="112" bodyend="135"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2017<sp/>Collabora,<sp/>Ltd.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>(including<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>next<sp/>paragraph)<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>NONINFRINGEMENT.<sp/><sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="input-timestamps-helper_8h" kindref="compound">input-timestamps-helper.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;shared/timespec-util.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="weston-test-client-helper_8h" kindref="compound">weston-test-client-helper.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;wayland-server-protocol.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="weston-test-fixture-compositor_8h" kindref="compound">weston-test-fixture-compositor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><ref refid="touch-test_8c_1a94e9ff74226ccd29a26846ccb66d481f" kindref="member">fixture_setup</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref><sp/>*harness)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structcompositor__setup" kindref="compound">compositor_setup</ref><sp/>setup;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__testharness_1ga6d93ba47ec578b140fa2cbd3efa1218c" kindref="member">compositor_setup_defaults</ref>(&amp;setup);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1gacd7b26a0f0f337781013b40d229cf262" kindref="member">weston_test_harness_execute_as_client</ref>(harness,<sp/>&amp;setup);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><ref refid="touch-test_8c_1a1ac8add2dcb01a58f69f41ce2ad0ccfc" kindref="member">DECLARE_FIXTURE_SETUP</ref>(<ref refid="touch-test_8c_1a94e9ff74226ccd29a26846ccb66d481f" kindref="member">fixture_setup</ref>);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timespec<sp/><ref refid="touch-test_8c_1a7a3096f0fc777dd3fac90553a5e4ebb9" kindref="member">t1</ref><sp/>=<sp/>{<sp/>.tv_sec<sp/>=<sp/>1,<sp/>.tv_nsec<sp/>=<sp/>1000001<sp/>};</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timespec<sp/><ref refid="touch-test_8c_1a51ca56bc6b16baaf4ef3b252fe2ca73f" kindref="member">t2</ref><sp/>=<sp/>{<sp/>.tv_sec<sp/>=<sp/>2,<sp/>.tv_nsec<sp/>=<sp/>2000001<sp/>};</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timespec<sp/><ref refid="touch-test_8c_1a5cab06c184ff266ddbcac54c06fd2b53" kindref="member">t3</ref><sp/>=<sp/>{<sp/>.tv_sec<sp/>=<sp/>3,<sp/>.tv_nsec<sp/>=<sp/>3000001<sp/>};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timespec<sp/><ref refid="touch-test_8c_1a37b779d0c4ed0f9e909681b420a40063" kindref="member">t_other</ref><sp/>=<sp/>{<sp/>.tv_sec<sp/>=<sp/>123,<sp/>.tv_nsec<sp/>=<sp/>456<sp/>};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclient" kindref="compound">client</ref><sp/>*</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><ref refid="touch-test_8c_1a34a900788138a17dd258bcfa6a74e372" kindref="member">create_touch_test_client</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclient" kindref="compound">client</ref><sp/>*cl<sp/>=<sp/><ref refid="weston-test-client-helper_8c_1afaf75d0d97a6872840e248ca4e300190" kindref="member">create_client_and_test_surface</ref>(0,<sp/>0,<sp/>100,<sp/>100);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(cl);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cl;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><ref refid="touch-test_8c_1a3339de17e33b831136d272954110e137" kindref="member">send_touch</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclient" kindref="compound">client</ref><sp/>*<ref refid="structclient" kindref="compound">client</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>timespec<sp/>*time,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>touch_type)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>tv_sec_hi,<sp/>tv_sec_lo,<sp/>tv_nsec;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timespec_to_proto(time,<sp/>&amp;tv_sec_hi,<sp/>&amp;tv_sec_lo,<sp/>&amp;tv_nsec);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_test_send_touch(<ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>-&gt;<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>,<sp/>tv_sec_hi,<sp/>tv_sec_lo,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tv_nsec,<sp/>1,<sp/>1,<sp/>1,<sp/>touch_type);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8h_1ab95988e6d0d010625831b6b8c92a4a9d" kindref="member">client_roundtrip</ref>(<ref refid="structclient" kindref="compound">client</ref>);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><ref refid="touch-test_8c_1a4e4d8547a46916bed5ef61fc194a39fe" kindref="member">TEST</ref>(touch_events)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclient" kindref="compound">client</ref><sp/>*<ref refid="structclient" kindref="compound">client</ref><sp/>=<sp/><ref refid="touch-test_8c_1a34a900788138a17dd258bcfa6a74e372" kindref="member">create_touch_test_client</ref>();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtouch" kindref="compound">touch</ref><sp/>*<ref refid="structtouch" kindref="compound">touch</ref><sp/>=<sp/><ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1a9facf568420fea33baa039e0786f3e87" kindref="member">touch</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structinput__timestamps" kindref="compound">input_timestamps</ref><sp/>*input_ts<sp/>=</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="input-timestamps-helper_8c_1ab10d340e73ca58f07dd00d58aa1df388" kindref="member">input_timestamps_create_for_touch</ref>(<ref refid="structclient" kindref="compound">client</ref>);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="touch-test_8c_1a3339de17e33b831136d272954110e137" kindref="member">send_touch</ref>(<ref refid="structclient" kindref="compound">client</ref>,<sp/>&amp;<ref refid="touch-test_8c_1a7a3096f0fc777dd3fac90553a5e4ebb9" kindref="member">t1</ref>,<sp/>WL_TOUCH_DOWN);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="structtouch" kindref="compound">touch</ref>-&gt;<ref refid="structtouch_1af945efcc26488980c4fa174893a53782" kindref="member">down_time_msec</ref><sp/>==<sp/>timespec_to_msec(&amp;<ref refid="touch-test_8c_1a7a3096f0fc777dd3fac90553a5e4ebb9" kindref="member">t1</ref>));</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(timespec_eq(&amp;<ref refid="structtouch" kindref="compound">touch</ref>-&gt;<ref refid="structtouch_1a138cc07e6d5dc14151f39b848759f12d" kindref="member">down_time_timespec</ref>,<sp/>&amp;<ref refid="touch-test_8c_1a7a3096f0fc777dd3fac90553a5e4ebb9" kindref="member">t1</ref>));</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="touch-test_8c_1a3339de17e33b831136d272954110e137" kindref="member">send_touch</ref>(<ref refid="structclient" kindref="compound">client</ref>,<sp/>&amp;<ref refid="touch-test_8c_1a51ca56bc6b16baaf4ef3b252fe2ca73f" kindref="member">t2</ref>,<sp/>WL_TOUCH_MOTION);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="structtouch" kindref="compound">touch</ref>-&gt;<ref refid="structtouch_1a685805860a13f7c7e551af84cc4162e7" kindref="member">motion_time_msec</ref><sp/>==<sp/>timespec_to_msec(&amp;<ref refid="touch-test_8c_1a51ca56bc6b16baaf4ef3b252fe2ca73f" kindref="member">t2</ref>));</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(timespec_eq(&amp;<ref refid="structtouch" kindref="compound">touch</ref>-&gt;<ref refid="structtouch_1a6e984ecc0d2600e8269fc9d60c900e8f" kindref="member">motion_time_timespec</ref>,<sp/>&amp;<ref refid="touch-test_8c_1a51ca56bc6b16baaf4ef3b252fe2ca73f" kindref="member">t2</ref>));</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="touch-test_8c_1a3339de17e33b831136d272954110e137" kindref="member">send_touch</ref>(<ref refid="structclient" kindref="compound">client</ref>,<sp/>&amp;<ref refid="touch-test_8c_1a5cab06c184ff266ddbcac54c06fd2b53" kindref="member">t3</ref>,<sp/>WL_TOUCH_UP);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="structtouch" kindref="compound">touch</ref>-&gt;<ref refid="structtouch_1ae0d4f4b04688d5f0bfe571ff768ab580" kindref="member">up_time_msec</ref><sp/>==<sp/>timespec_to_msec(&amp;<ref refid="touch-test_8c_1a5cab06c184ff266ddbcac54c06fd2b53" kindref="member">t3</ref>));</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(timespec_eq(&amp;<ref refid="structtouch" kindref="compound">touch</ref>-&gt;<ref refid="structtouch_1a5549af43259d299f13e6c50582740c55" kindref="member">up_time_timespec</ref>,<sp/>&amp;<ref refid="touch-test_8c_1a5cab06c184ff266ddbcac54c06fd2b53" kindref="member">t3</ref>));</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="input_8c_1ae64352d414f52517f87c7926691c35bf" kindref="member">input_timestamps_destroy</ref>(input_ts);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><ref refid="touch-test_8c_1a4e4d8547a46916bed5ef61fc194a39fe" kindref="member">TEST</ref>(touch_timestamps_stop_after_input_timestamps_object_is_destroyed)</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclient" kindref="compound">client</ref><sp/>*<ref refid="structclient" kindref="compound">client</ref><sp/>=<sp/><ref refid="touch-test_8c_1a34a900788138a17dd258bcfa6a74e372" kindref="member">create_touch_test_client</ref>();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtouch" kindref="compound">touch</ref><sp/>*<ref refid="structtouch" kindref="compound">touch</ref><sp/>=<sp/><ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1a9facf568420fea33baa039e0786f3e87" kindref="member">touch</ref>;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structinput__timestamps" kindref="compound">input_timestamps</ref><sp/>*input_ts<sp/>=</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="input-timestamps-helper_8c_1ab10d340e73ca58f07dd00d58aa1df388" kindref="member">input_timestamps_create_for_touch</ref>(<ref refid="structclient" kindref="compound">client</ref>);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="touch-test_8c_1a3339de17e33b831136d272954110e137" kindref="member">send_touch</ref>(<ref refid="structclient" kindref="compound">client</ref>,<sp/>&amp;<ref refid="touch-test_8c_1a7a3096f0fc777dd3fac90553a5e4ebb9" kindref="member">t1</ref>,<sp/>WL_TOUCH_DOWN);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="structtouch" kindref="compound">touch</ref>-&gt;<ref refid="structtouch_1af945efcc26488980c4fa174893a53782" kindref="member">down_time_msec</ref><sp/>==<sp/>timespec_to_msec(&amp;<ref refid="touch-test_8c_1a7a3096f0fc777dd3fac90553a5e4ebb9" kindref="member">t1</ref>));</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(timespec_eq(&amp;<ref refid="structtouch" kindref="compound">touch</ref>-&gt;<ref refid="structtouch_1a138cc07e6d5dc14151f39b848759f12d" kindref="member">down_time_timespec</ref>,<sp/>&amp;<ref refid="touch-test_8c_1a7a3096f0fc777dd3fac90553a5e4ebb9" kindref="member">t1</ref>));</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="input_8c_1ae64352d414f52517f87c7926691c35bf" kindref="member">input_timestamps_destroy</ref>(input_ts);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="touch-test_8c_1a3339de17e33b831136d272954110e137" kindref="member">send_touch</ref>(<ref refid="structclient" kindref="compound">client</ref>,<sp/>&amp;<ref refid="touch-test_8c_1a51ca56bc6b16baaf4ef3b252fe2ca73f" kindref="member">t2</ref>,<sp/>WL_TOUCH_UP);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="structtouch" kindref="compound">touch</ref>-&gt;<ref refid="structtouch_1ae0d4f4b04688d5f0bfe571ff768ab580" kindref="member">up_time_msec</ref><sp/>==<sp/>timespec_to_msec(&amp;<ref refid="touch-test_8c_1a51ca56bc6b16baaf4ef3b252fe2ca73f" kindref="member">t2</ref>));</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(timespec_is_zero(&amp;<ref refid="structtouch" kindref="compound">touch</ref>-&gt;<ref refid="structtouch_1a5549af43259d299f13e6c50582740c55" kindref="member">up_time_timespec</ref>));</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><ref refid="touch-test_8c_1a4e4d8547a46916bed5ef61fc194a39fe" kindref="member">TEST</ref>(touch_timestamps_stop_after_client_releases_wl_touch)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclient" kindref="compound">client</ref><sp/>*<ref refid="structclient" kindref="compound">client</ref><sp/>=<sp/><ref refid="touch-test_8c_1a34a900788138a17dd258bcfa6a74e372" kindref="member">create_touch_test_client</ref>();</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtouch" kindref="compound">touch</ref><sp/>*<ref refid="structtouch" kindref="compound">touch</ref><sp/>=<sp/><ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1a9facf568420fea33baa039e0786f3e87" kindref="member">touch</ref>;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structinput__timestamps" kindref="compound">input_timestamps</ref><sp/>*input_ts<sp/>=</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="input-timestamps-helper_8c_1ab10d340e73ca58f07dd00d58aa1df388" kindref="member">input_timestamps_create_for_touch</ref>(<ref refid="structclient" kindref="compound">client</ref>);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="touch-test_8c_1a3339de17e33b831136d272954110e137" kindref="member">send_touch</ref>(<ref refid="structclient" kindref="compound">client</ref>,<sp/>&amp;<ref refid="touch-test_8c_1a7a3096f0fc777dd3fac90553a5e4ebb9" kindref="member">t1</ref>,<sp/>WL_TOUCH_DOWN);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="structtouch" kindref="compound">touch</ref>-&gt;<ref refid="structtouch_1af945efcc26488980c4fa174893a53782" kindref="member">down_time_msec</ref><sp/>==<sp/>timespec_to_msec(&amp;<ref refid="touch-test_8c_1a7a3096f0fc777dd3fac90553a5e4ebb9" kindref="member">t1</ref>));</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(timespec_eq(&amp;<ref refid="structtouch" kindref="compound">touch</ref>-&gt;<ref refid="structtouch_1a138cc07e6d5dc14151f39b848759f12d" kindref="member">down_time_timespec</ref>,<sp/>&amp;<ref refid="touch-test_8c_1a7a3096f0fc777dd3fac90553a5e4ebb9" kindref="member">t1</ref>));</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_touch_release(<ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>-&gt;<ref refid="structinput_1a9facf568420fea33baa039e0786f3e87" kindref="member">touch</ref>-&gt;<ref refid="structtouch_1a022ca737a44369f0f2664935bfac14f1" kindref="member">wl_touch</ref>);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Set<sp/>input_timestamp<sp/>to<sp/>an<sp/>arbitrary<sp/>value<sp/>(different<sp/>from<sp/>t1,<sp/>t2</highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>and<sp/>0)<sp/>and<sp/>check<sp/>that<sp/>it<sp/>is<sp/>not<sp/>changed<sp/>by<sp/>sending<sp/>the<sp/>event.</highlight></codeline>
+<codeline lineno="127"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>This<sp/>is<sp/>preferred<sp/>over<sp/>just<sp/>checking<sp/>for<sp/>0,<sp/>since<sp/>0<sp/>is<sp/>used</highlight></codeline>
+<codeline lineno="128"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>internally<sp/>for<sp/>resetting<sp/>the<sp/>timestamp<sp/>after<sp/>handling<sp/>an<sp/>input</highlight></codeline>
+<codeline lineno="129"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>event<sp/>and<sp/>checking<sp/>for<sp/>it<sp/>here<sp/>may<sp/>lead<sp/>to<sp/>false<sp/>negatives.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtouch" kindref="compound">touch</ref>-&gt;<ref refid="structtouch_1a546fca2caba4460e23393111d2244c63" kindref="member">input_timestamp</ref><sp/>=<sp/><ref refid="touch-test_8c_1a37b779d0c4ed0f9e909681b420a40063" kindref="member">t_other</ref>;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="touch-test_8c_1a3339de17e33b831136d272954110e137" kindref="member">send_touch</ref>(<ref refid="structclient" kindref="compound">client</ref>,<sp/>&amp;<ref refid="touch-test_8c_1a51ca56bc6b16baaf4ef3b252fe2ca73f" kindref="member">t2</ref>,<sp/>WL_TOUCH_UP);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(timespec_eq(&amp;<ref refid="structtouch" kindref="compound">touch</ref>-&gt;<ref refid="structtouch_1a546fca2caba4460e23393111d2244c63" kindref="member">input_timestamp</ref>,<sp/>&amp;<ref refid="touch-test_8c_1a37b779d0c4ed0f9e909681b420a40063" kindref="member">t_other</ref>));</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="input_8c_1ae64352d414f52517f87c7926691c35bf" kindref="member">input_timestamps_destroy</ref>(input_ts);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/tests/touch-test.c"/>
+  </compounddef>
+</doxygen>

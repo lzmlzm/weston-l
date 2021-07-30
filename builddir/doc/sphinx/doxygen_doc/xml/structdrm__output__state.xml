@@ -1,0 +1,726 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structdrm__output__state" kind="struct" language="C++" prot="public">
+    <compoundname>drm_output_state</compoundname>
+    <includes refid="drm-internal_8h" local="no">drm-internal.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdrm__output__state_1aff9ca824fc317253fd8a3b3f0e999303" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structdrm__pending__state" kindref="compound">drm_pending_state</ref> *</type>
+        <definition>struct drm_pending_state* drm_output_state::pending_state</definition>
+        <argsstring></argsstring>
+        <name>pending_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" line="363" column="24" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" bodystart="363" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdrm__output__state_1a079380ed7811bcbf1aecf219f7209aac" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structdrm__output" kindref="compound">drm_output</ref> *</type>
+        <definition>struct drm_output* drm_output_state::output</definition>
+        <argsstring></argsstring>
+        <name>output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" line="364" column="17" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" bodystart="364" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdrm__output__state_1a4fd38e634854f64d47486ab839bd60a6" prot="public" static="no" mutable="no">
+        <type>struct wl_list</type>
+        <definition>struct wl_list drm_output_state::link</definition>
+        <argsstring></argsstring>
+        <name>link</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" line="364" column="17" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" bodystart="365" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdrm__output__state_1a706abaeae61311a859b046c52599821c" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="libweston_8h_1a745785f1c5cf40791e2b4c3ef11043c3" kindref="member">dpms_enum</ref></type>
+        <definition>enum dpms_enum drm_output_state::dpms</definition>
+        <argsstring></argsstring>
+        <name>dpms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" line="364" column="17" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" bodystart="366" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdrm__output__state_1a158f0d5e549532c6ba80f028de1d5d51" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="libweston_8h_1a883af45c9ba95a4ce9c18877cc420671" kindref="member">weston_hdcp_protection</ref></type>
+        <definition>enum weston_hdcp_protection drm_output_state::protection</definition>
+        <argsstring></argsstring>
+        <name>protection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" line="364" column="17" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" bodystart="367" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdrm__output__state_1aa72da8a13089f3841d1e77ecad154f18" prot="public" static="no" mutable="no">
+        <type>struct wl_list</type>
+        <definition>struct wl_list drm_output_state::plane_list</definition>
+        <argsstring></argsstring>
+        <name>plane_list</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" line="364" column="17" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" bodystart="368" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="53">
+        <label>drm_output</label>
+        <link refid="structdrm__output"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>cursor_view</edgelabel>
+        </childnode>
+        <childnode refid="54" relation="usage">
+          <edgelabel>crtc</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>base</edgelabel>
+          <edgelabel>virtual_submit_frame</edgelabel>
+        </childnode>
+        <childnode refid="57" relation="usage">
+          <edgelabel>scanout_plane</edgelabel>
+          <edgelabel>cursor_plane</edgelabel>
+        </childnode>
+        <childnode refid="61" relation="usage">
+          <edgelabel>recorder</edgelabel>
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>state_cur</edgelabel>
+          <edgelabel>state_last</edgelabel>
+        </childnode>
+        <childnode refid="59" relation="usage">
+          <edgelabel>dumb</edgelabel>
+          <edgelabel>gbm_cursor_fb</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>backend</edgelabel>
+        </childnode>
+      </node>
+      <node id="59">
+        <label>drm_fb</label>
+        <link refid="structdrm__fb"/>
+        <childnode refid="29" relation="usage">
+          <edgelabel>buffer_ref</edgelabel>
+        </childnode>
+        <childnode refid="60" relation="usage">
+          <edgelabel>format</edgelabel>
+        </childnode>
+        <childnode refid="27" relation="usage">
+          <edgelabel>buffer_release_ref</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>weston_testsuite_quirks</label>
+        <link refid="structweston__testsuite__quirks"/>
+      </node>
+      <node id="27">
+        <label>weston_buffer_release_reference</label>
+        <link refid="structweston__buffer__release__reference"/>
+        <childnode refid="28" relation="usage">
+          <edgelabel>buffer_release</edgelabel>
+        </childnode>
+      </node>
+      <node id="52">
+        <label>launcher_interface</label>
+        <link refid="structlauncher__interface"/>
+      </node>
+      <node id="48">
+        <label>weston_log_subscriber</label>
+        <link refid="structweston__log__subscriber"/>
+      </node>
+      <node id="30">
+        <label>weston_matrix</label>
+        <link refid="structweston__matrix"/>
+      </node>
+      <node id="58">
+        <label>drm_plane_state</label>
+        <link refid="structdrm__plane__state"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>ev</edgelabel>
+        </childnode>
+        <childnode refid="57" relation="usage">
+          <edgelabel>plane</edgelabel>
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>output_state</edgelabel>
+        </childnode>
+        <childnode refid="59" relation="usage">
+          <edgelabel>fb</edgelabel>
+        </childnode>
+        <childnode refid="53" relation="usage">
+          <edgelabel>output</edgelabel>
+        </childnode>
+      </node>
+      <node id="29">
+        <label>weston_buffer_reference</label>
+        <link refid="structweston__buffer__reference"/>
+        <childnode refid="26" relation="usage">
+          <edgelabel>buffer</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>weston_log_context</label>
+        <link refid="structweston__log__context"/>
+      </node>
+      <node id="10">
+        <label>weston_renderer</label>
+        <link refid="structweston__renderer"/>
+      </node>
+      <node id="60">
+        <label>pixel_format_info</label>
+        <link refid="structpixel__format__info"/>
+      </node>
+      <node id="12">
+        <label>weston_layer_entry</label>
+        <link refid="structweston__layer__entry"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>layer</edgelabel>
+        </childnode>
+      </node>
+      <node id="41">
+        <label>weston_transform</label>
+        <link refid="structweston__transform"/>
+        <childnode refid="30" relation="usage">
+          <edgelabel>matrix</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>weston_view</label>
+        <link refid="structweston__view"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>parent_view</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>output</edgelabel>
+        </childnode>
+        <childnode refid="41" relation="usage">
+          <edgelabel>position</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>layer_link</edgelabel>
+        </childnode>
+        <childnode refid="42" relation="usage">
+          <edgelabel>plane</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>matrix</edgelabel>
+          <edgelabel>inverse</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>surface</edgelabel>
+        </childnode>
+      </node>
+      <node id="34">
+        <label>weston_data_source</label>
+        <link refid="structweston__data__source"/>
+        <childnode refid="35" relation="usage">
+          <edgelabel>offer</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>seat</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>drm_backend</label>
+        <link refid="structdrm__backend"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>input</edgelabel>
+        </childnode>
+        <childnode refid="46" relation="usage">
+          <edgelabel>debug</edgelabel>
+        </childnode>
+        <childnode refid="50" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>compositor</edgelabel>
+        </childnode>
+      </node>
+      <node id="24">
+        <label>weston_buffer_viewport</label>
+        <link refid="structweston__buffer__viewport"/>
+      </node>
+      <node id="50">
+        <label>weston_backend</label>
+        <link refid="structweston__backend"/>
+        <childnode refid="15" relation="usage">
+          <edgelabel>create_output</edgelabel>
+        </childnode>
+      </node>
+      <node id="31">
+        <label>weston_pointer</label>
+        <link refid="structweston__pointer"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>focus</edgelabel>
+          <edgelabel>sprite</edgelabel>
+        </childnode>
+        <childnode refid="32" relation="usage">
+          <edgelabel>focus_client</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>seat</edgelabel>
+        </childnode>
+        <childnode refid="33" relation="usage">
+          <edgelabel>default_grab</edgelabel>
+          <edgelabel>grab</edgelabel>
+        </childnode>
+      </node>
+      <node id="57">
+        <label>drm_plane</label>
+        <link refid="structdrm__plane"/>
+        <childnode refid="55" relation="usage">
+          <edgelabel>props</edgelabel>
+        </childnode>
+        <childnode refid="58" relation="usage">
+          <edgelabel>state_cur</edgelabel>
+        </childnode>
+        <childnode refid="42" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>backend</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>weston_output</label>
+        <link refid="structweston__output"/>
+        <childnode refid="16" relation="usage">
+          <edgelabel>zoom</edgelabel>
+        </childnode>
+        <childnode refid="40" relation="usage">
+          <edgelabel>original_mode</edgelabel>
+          <edgelabel>current_mode</edgelabel>
+          <edgelabel>native_mode</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>matrix</edgelabel>
+          <edgelabel>inverse_matrix</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>compositor</edgelabel>
+        </childnode>
+      </node>
+      <node id="46">
+        <label>weston_log_scope</label>
+        <link refid="structweston__log__scope"/>
+        <childnode refid="47" relation="usage">
+          <edgelabel>destroy_subscription</edgelabel>
+          <edgelabel>new_subscription</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>weston_layer</label>
+        <link refid="structweston__layer"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>view_list</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>compositor</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>weston_compositor</label>
+        <link refid="structweston__compositor"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>weston_log_ctx</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>test_data</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>default_pointer_grab</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>renderer</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>calibrator_layer</edgelabel>
+          <edgelabel>fade_layer</edgelabel>
+          <edgelabel>cursor_layer</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>touch_calibrator</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>xkb_info</edgelabel>
+        </childnode>
+        <childnode refid="46" relation="usage">
+          <edgelabel>timeline</edgelabel>
+          <edgelabel>debug_scene</edgelabel>
+        </childnode>
+        <childnode refid="49" relation="usage">
+          <edgelabel>content_protection</edgelabel>
+        </childnode>
+        <childnode refid="50" relation="usage">
+          <edgelabel>backend</edgelabel>
+        </childnode>
+        <childnode refid="42" relation="usage">
+          <edgelabel>primary_plane</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>touch_calibration_save</edgelabel>
+        </childnode>
+        <childnode refid="51" relation="usage">
+          <edgelabel>launcher</edgelabel>
+        </childnode>
+      </node>
+      <node id="37">
+        <label>weston_touch_grab</label>
+        <link refid="structweston__touch__grab"/>
+        <childnode refid="38" relation="usage">
+          <edgelabel>interface</edgelabel>
+        </childnode>
+        <childnode refid="36" relation="usage">
+          <edgelabel>touch</edgelabel>
+        </childnode>
+      </node>
+      <node id="35">
+        <label>weston_data_offer</label>
+        <link refid="structweston__data__offer"/>
+        <childnode refid="34" relation="usage">
+          <edgelabel>source</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>drm_output_state</label>
+        <link refid="structdrm__output__state"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>pending_state</edgelabel>
+        </childnode>
+        <childnode refid="53" relation="usage">
+          <edgelabel>output</edgelabel>
+        </childnode>
+      </node>
+      <node id="21">
+        <label>weston_keyboard_grab</label>
+        <link refid="structweston__keyboard__grab"/>
+        <childnode refid="19" relation="usage">
+          <edgelabel>keyboard</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>interface</edgelabel>
+        </childnode>
+      </node>
+      <node id="43">
+        <label>weston_touch_device</label>
+        <link refid="structweston__touch__device"/>
+        <childnode refid="44" relation="usage">
+          <edgelabel>saved_calibration</edgelabel>
+        </childnode>
+        <childnode refid="45" relation="usage">
+          <edgelabel>ops</edgelabel>
+        </childnode>
+        <childnode refid="36" relation="usage">
+          <edgelabel>aggregate</edgelabel>
+        </childnode>
+      </node>
+      <node id="42">
+        <label>weston_plane</label>
+        <link refid="structweston__plane"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>compositor</edgelabel>
+        </childnode>
+      </node>
+      <node id="47">
+        <label>weston_log_subscription</label>
+        <link refid="structweston__log__subscription"/>
+        <childnode refid="46" relation="usage">
+          <edgelabel>source</edgelabel>
+        </childnode>
+        <childnode refid="48" relation="usage">
+          <edgelabel>owner</edgelabel>
+        </childnode>
+      </node>
+      <node id="18">
+        <label>weston_seat</label>
+        <link refid="structweston__seat"/>
+        <childnode refid="19" relation="usage">
+          <edgelabel>keyboard_state</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>output</edgelabel>
+        </childnode>
+        <childnode refid="31" relation="usage">
+          <edgelabel>pointer_state</edgelabel>
+        </childnode>
+        <childnode refid="34" relation="usage">
+          <edgelabel>selection_data_source</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>compositor</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>saved_kbd_focus</edgelabel>
+        </childnode>
+        <childnode refid="36" relation="usage">
+          <edgelabel>touch_state</edgelabel>
+        </childnode>
+      </node>
+      <node id="61">
+        <label>vaapi_recorder</label>
+        <link refid="structvaapi__recorder"/>
+      </node>
+      <node id="44">
+        <label>weston_touch_device_matrix</label>
+        <link refid="structweston__touch__device__matrix"/>
+      </node>
+      <node id="25">
+        <label>weston_surface_state</label>
+        <link refid="structweston__surface__state"/>
+        <childnode refid="26" relation="usage">
+          <edgelabel>buffer</edgelabel>
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>buffer_viewport</edgelabel>
+        </childnode>
+        <childnode refid="27" relation="usage">
+          <edgelabel>buffer_release_ref</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>udev_input</label>
+        <link refid="structudev__input"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>compositor</edgelabel>
+          <edgelabel>configure_device</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>weston_pointer_grab_interface</label>
+        <link refid="structweston__pointer__grab__interface"/>
+      </node>
+      <node id="17">
+        <label>weston_animation</label>
+        <link refid="structweston__animation"/>
+      </node>
+      <node id="22">
+        <label>weston_keyboard_grab_interface</label>
+        <link refid="structweston__keyboard__grab__interface"/>
+      </node>
+      <node id="56">
+        <label>drm_property_enum_info</label>
+        <link refid="structdrm__property__enum__info"/>
+      </node>
+      <node id="39">
+        <label>weston_spring</label>
+        <link refid="structweston__spring"/>
+      </node>
+      <node id="38">
+        <label>weston_touch_grab_interface</label>
+        <link refid="structweston__touch__grab__interface"/>
+      </node>
+      <node id="26">
+        <label>weston_buffer</label>
+        <link refid="structweston__buffer"/>
+      </node>
+      <node id="20">
+        <label>weston_xkb_info</label>
+        <link refid="structweston__xkb__info"/>
+      </node>
+      <node id="16">
+        <label>weston_output_zoom</label>
+        <link refid="structweston__output__zoom"/>
+        <childnode refid="17" relation="usage">
+          <edgelabel>animation_z</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>seat</edgelabel>
+        </childnode>
+        <childnode refid="39" relation="usage">
+          <edgelabel>spring_z</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>drm_pending_state</label>
+        <link refid="structdrm__pending__state"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>backend</edgelabel>
+        </childnode>
+      </node>
+      <node id="23">
+        <label>weston_surface</label>
+        <link refid="structweston__surface"/>
+        <childnode refid="15" relation="usage">
+          <edgelabel>output</edgelabel>
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>buffer_viewport</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>pending</edgelabel>
+        </childnode>
+        <childnode refid="29" relation="usage">
+          <edgelabel>buffer_ref</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>surface_to_buffer_matrix</edgelabel>
+          <edgelabel>buffer_to_surface_matrix</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>compositor</edgelabel>
+        </childnode>
+        <childnode refid="27" relation="usage">
+          <edgelabel>buffer_release_ref</edgelabel>
+        </childnode>
+      </node>
+      <node id="55">
+        <label>drm_property_info</label>
+        <link refid="structdrm__property__info"/>
+        <childnode refid="56" relation="usage">
+          <edgelabel>enum_values</edgelabel>
+        </childnode>
+      </node>
+      <node id="51">
+        <label>weston_launcher</label>
+        <link refid="structweston__launcher"/>
+        <childnode refid="52" relation="usage">
+          <edgelabel>iface</edgelabel>
+        </childnode>
+      </node>
+      <node id="40">
+        <label>weston_mode</label>
+        <link refid="structweston__mode"/>
+      </node>
+      <node id="28">
+        <label>weston_buffer_release</label>
+        <link refid="structweston__buffer__release"/>
+      </node>
+      <node id="7">
+        <label>weston_testsuite_data</label>
+        <link refid="structweston__testsuite__data"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>test_quirks</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>weston_touch_calibrator</label>
+        <link refid="structweston__touch__calibrator"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>view</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>output</edgelabel>
+        </childnode>
+        <childnode refid="43" relation="usage">
+          <edgelabel>device</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>compositor</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>surface</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>weston_keyboard</label>
+        <link refid="structweston__keyboard"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>xkb_info</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>seat</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>default_grab</edgelabel>
+          <edgelabel>input_method_grab</edgelabel>
+          <edgelabel>grab</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>focus</edgelabel>
+        </childnode>
+      </node>
+      <node id="36">
+        <label>weston_touch</label>
+        <link refid="structweston__touch"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>focus</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>seat</edgelabel>
+        </childnode>
+        <childnode refid="37" relation="usage">
+          <edgelabel>default_grab</edgelabel>
+          <edgelabel>grab</edgelabel>
+        </childnode>
+      </node>
+      <node id="54">
+        <label>drm_crtc</label>
+        <link refid="structdrm__crtc"/>
+        <childnode refid="55" relation="usage">
+          <edgelabel>props_crtc</edgelabel>
+        </childnode>
+        <childnode refid="53" relation="usage">
+          <edgelabel>output</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>backend</edgelabel>
+        </childnode>
+      </node>
+      <node id="32">
+        <label>weston_pointer_client</label>
+        <link refid="structweston__pointer__client"/>
+      </node>
+      <node id="33">
+        <label>weston_pointer_grab</label>
+        <link refid="structweston__pointer__grab"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>interface</edgelabel>
+        </childnode>
+        <childnode refid="31" relation="usage">
+          <edgelabel>pointer</edgelabel>
+        </childnode>
+      </node>
+      <node id="45">
+        <label>weston_touch_device_ops</label>
+        <link refid="structweston__touch__device__ops"/>
+        <childnode refid="15" relation="usage">
+          <edgelabel>get_output</edgelabel>
+        </childnode>
+      </node>
+      <node id="49">
+        <label>content_protection</label>
+        <link refid="structcontent__protection"/>
+        <childnode refid="46" relation="usage">
+          <edgelabel>debug</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>compositor</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" line="362" column="23" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h" bodystart="362" bodyend="369"/>
+    <listofallmembers>
+      <member refid="structdrm__output__state_1a706abaeae61311a859b046c52599821c" prot="public" virt="non-virtual"><scope>drm_output_state</scope><name>dpms</name></member>
+      <member refid="structdrm__output__state_1a4fd38e634854f64d47486ab839bd60a6" prot="public" virt="non-virtual"><scope>drm_output_state</scope><name>link</name></member>
+      <member refid="structdrm__output__state_1a079380ed7811bcbf1aecf219f7209aac" prot="public" virt="non-virtual"><scope>drm_output_state</scope><name>output</name></member>
+      <member refid="structdrm__output__state_1aff9ca824fc317253fd8a3b3f0e999303" prot="public" virt="non-virtual"><scope>drm_output_state</scope><name>pending_state</name></member>
+      <member refid="structdrm__output__state_1aa72da8a13089f3841d1e77ecad154f18" prot="public" virt="non-virtual"><scope>drm_output_state</scope><name>plane_list</name></member>
+      <member refid="structdrm__output__state_1a158f0d5e549532c6ba80f028de1d5d51" prot="public" virt="non-virtual"><scope>drm_output_state</scope><name>protection</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

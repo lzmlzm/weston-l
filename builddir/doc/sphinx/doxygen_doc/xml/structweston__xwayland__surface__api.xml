@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__xwayland__surface__api" kind="struct" language="C++" prot="public">
+    <compoundname>weston_xwayland_surface_api</compoundname>
+    <includes refid="xwayland-api_8h" local="no">xwayland-api.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__xwayland__surface__api_1a9b26764657854f439c60564ec29661fd" prot="public" static="no" mutable="no">
+        <type>bool(*</type>
+        <definition>bool(* weston_xwayland_surface_api::is_xwayland_surface) (struct weston_surface *surface)</definition>
+        <argsstring>)(struct weston_surface *surface)</argsstring>
+        <name>is_xwayland_surface</name>
+        <briefdescription>
+<para>Check if the surface is an Xwayland surface. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>surface</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The surface. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/xwayland-api.h" line="143" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/xwayland-api.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__xwayland__surface__api_1af4667a1bffc538807c9e3c6b8c5cb605" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_xwayland_surface_api::send_position) (struct weston_surface *surface, int32_t x, int32_t y)</definition>
+        <argsstring>)(struct weston_surface *surface, int32_t x, int32_t y)</argsstring>
+        <name>send_position</name>
+        <briefdescription>
+<para>Notify the Xwayland surface that its position changed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>surface</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Xwayland surface. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x-axis position. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y-axis position. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/xwayland-api.h" line="151" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/xwayland-api.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The libweston Xwayland surface API. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This API allows control of the Xwayland libweston module surfaces. The module must be loaded at runtime with <emphasis>weston_compositor_load_xwayland</emphasis>, after which the API can be retrieved by using <emphasis>weston_xwayland_surface_get_api</emphasis>. </para>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/include/libweston/xwayland-api.h" line="138" column="34" bodyfile="/home/lzm/Wayland/weston/include/libweston/xwayland-api.h" bodystart="138" bodyend="153"/>
+    <listofallmembers>
+      <member refid="structweston__xwayland__surface__api_1a9b26764657854f439c60564ec29661fd" prot="public" virt="non-virtual"><scope>weston_xwayland_surface_api</scope><name>is_xwayland_surface</name></member>
+      <member refid="structweston__xwayland__surface__api_1af4667a1bffc538807c9e3c6b8c5cb605" prot="public" virt="non-virtual"><scope>weston_xwayland_surface_api</scope><name>send_position</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__binding" kind="struct" language="C++" prot="public">
+    <compoundname>weston_binding</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__binding_1aa67a253d820fa0a859718dc7e56e5d37" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t weston_binding::key</definition>
+        <argsstring></argsstring>
+        <name>key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/bindings.c" line="38" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/bindings.c" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__binding_1ac78ed4fce87b812338bd455a7a210d7c" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t weston_binding::button</definition>
+        <argsstring></argsstring>
+        <name>button</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/bindings.c" line="39" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/bindings.c" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__binding_1a72c6b1f38cf003e1209835c564c160d0" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t weston_binding::axis</definition>
+        <argsstring></argsstring>
+        <name>axis</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/bindings.c" line="40" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/bindings.c" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__binding_1a2e195c996c9ff8dbdd01af0870dcf476" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t weston_binding::modifier</definition>
+        <argsstring></argsstring>
+        <name>modifier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/bindings.c" line="41" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/bindings.c" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__binding_1aadabc913f6a3e511ebce96653c1e330f" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* weston_binding::handler</definition>
+        <argsstring></argsstring>
+        <name>handler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/bindings.c" line="42" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/bindings.c" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__binding_1ac136658b15407d64d71c670fda280ba9" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* weston_binding::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/bindings.c" line="43" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/bindings.c" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__binding_1a24e4e481277b7d14f5e7bcabf9566a6a" prot="public" static="no" mutable="no">
+        <type>struct wl_list</type>
+        <definition>struct wl_list weston_binding::link</definition>
+        <argsstring></argsstring>
+        <name>link</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/bindings.c" line="43" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/bindings.c" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/bindings.c" line="37" column="21" bodyfile="/home/lzm/Wayland/weston/libweston/bindings.c" bodystart="37" bodyend="45"/>
+    <listofallmembers>
+      <member refid="structweston__binding_1a72c6b1f38cf003e1209835c564c160d0" prot="public" virt="non-virtual"><scope>weston_binding</scope><name>axis</name></member>
+      <member refid="structweston__binding_1ac78ed4fce87b812338bd455a7a210d7c" prot="public" virt="non-virtual"><scope>weston_binding</scope><name>button</name></member>
+      <member refid="structweston__binding_1ac136658b15407d64d71c670fda280ba9" prot="public" virt="non-virtual"><scope>weston_binding</scope><name>data</name></member>
+      <member refid="structweston__binding_1aadabc913f6a3e511ebce96653c1e330f" prot="public" virt="non-virtual"><scope>weston_binding</scope><name>handler</name></member>
+      <member refid="structweston__binding_1aa67a253d820fa0a859718dc7e56e5d37" prot="public" virt="non-virtual"><scope>weston_binding</scope><name>key</name></member>
+      <member refid="structweston__binding_1a24e4e481277b7d14f5e7bcabf9566a6a" prot="public" virt="non-virtual"><scope>weston_binding</scope><name>link</name></member>
+      <member refid="structweston__binding_1a2e195c996c9ff8dbdd01af0870dcf476" prot="public" virt="non-virtual"><scope>weston_binding</scope><name>modifier</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

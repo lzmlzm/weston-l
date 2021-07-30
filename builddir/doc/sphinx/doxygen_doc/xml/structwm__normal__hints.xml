@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structwm__normal__hints" kind="struct" language="C++" prot="public">
+    <compoundname>wm_normal_hints</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structwm__normal__hints_1ade652f49a1b4bd901cf924db7eaf8a48" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t wm_normal_hints::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-x11/x11.c" line="570" column="14" bodyfile="/home/lzm/Wayland/weston/libweston/backend-x11/x11.c" bodystart="570" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwm__normal__hints_1a532b941c926b3f0b402ed7598066b99f" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t wm_normal_hints::pad[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>pad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-x11/x11.c" line="571" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/backend-x11/x11.c" bodystart="571" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwm__normal__hints_1a05b4436ecfaf5763b2bdfa94ca26fd87" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t wm_normal_hints::min_width</definition>
+        <argsstring></argsstring>
+        <name>min_width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-x11/x11.c" line="572" column="9" bodyfile="/home/lzm/Wayland/weston/libweston/backend-x11/x11.c" bodystart="572" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwm__normal__hints_1abb62c97cebe07611806c66e71038d287" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t wm_normal_hints::min_height</definition>
+        <argsstring></argsstring>
+        <name>min_height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-x11/x11.c" line="572" column="19" bodyfile="/home/lzm/Wayland/weston/libweston/backend-x11/x11.c" bodystart="572" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwm__normal__hints_1a006b25d4014ae52268f354725ecdca71" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t wm_normal_hints::max_width</definition>
+        <argsstring></argsstring>
+        <name>max_width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-x11/x11.c" line="573" column="9" bodyfile="/home/lzm/Wayland/weston/libweston/backend-x11/x11.c" bodystart="573" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwm__normal__hints_1aeba8791b3ff51570c92b362af471c7a9" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t wm_normal_hints::max_height</definition>
+        <argsstring></argsstring>
+        <name>max_height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-x11/x11.c" line="573" column="19" bodyfile="/home/lzm/Wayland/weston/libweston/backend-x11/x11.c" bodystart="573" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwm__normal__hints_1a523a9576747d5f053918fe06715fdbe2" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t wm_normal_hints::width_inc</definition>
+        <argsstring></argsstring>
+        <name>width_inc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-x11/x11.c" line="574" column="13" bodyfile="/home/lzm/Wayland/weston/libweston/backend-x11/x11.c" bodystart="574" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwm__normal__hints_1a5ee35b69367af0531ea6bd5aa8d11acb" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t wm_normal_hints::height_inc</definition>
+        <argsstring></argsstring>
+        <name>height_inc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-x11/x11.c" line="574" column="23" bodyfile="/home/lzm/Wayland/weston/libweston/backend-x11/x11.c" bodystart="574" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwm__normal__hints_1aaf8317e7728e567d066e810c9ba78183" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t wm_normal_hints::min_aspect_x</definition>
+        <argsstring></argsstring>
+        <name>min_aspect_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-x11/x11.c" line="575" column="13" bodyfile="/home/lzm/Wayland/weston/libweston/backend-x11/x11.c" bodystart="575" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwm__normal__hints_1a9066ea9b055574b1de7aef027d6452d8" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t wm_normal_hints::min_aspect_y</definition>
+        <argsstring></argsstring>
+        <name>min_aspect_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-x11/x11.c" line="575" column="26" bodyfile="/home/lzm/Wayland/weston/libweston/backend-x11/x11.c" bodystart="575" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwm__normal__hints_1a24f5cd79dd7d344f0b8dec52097681d7" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t wm_normal_hints::max_aspect_x</definition>
+        <argsstring></argsstring>
+        <name>max_aspect_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-x11/x11.c" line="576" column="13" bodyfile="/home/lzm/Wayland/weston/libweston/backend-x11/x11.c" bodystart="576" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwm__normal__hints_1aeb785de9ee68ac722588f7d393a3e5fd" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t wm_normal_hints::max_aspect_y</definition>
+        <argsstring></argsstring>
+        <name>max_aspect_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-x11/x11.c" line="576" column="26" bodyfile="/home/lzm/Wayland/weston/libweston/backend-x11/x11.c" bodystart="576" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwm__normal__hints_1a7105cfa02683dc6046d9051d0ff6822c" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t wm_normal_hints::base_width</definition>
+        <argsstring></argsstring>
+        <name>base_width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-x11/x11.c" line="577" column="9" bodyfile="/home/lzm/Wayland/weston/libweston/backend-x11/x11.c" bodystart="577" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwm__normal__hints_1acb6a6eeae8100c423990767c5575b0d5" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t wm_normal_hints::base_height</definition>
+        <argsstring></argsstring>
+        <name>base_height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-x11/x11.c" line="577" column="20" bodyfile="/home/lzm/Wayland/weston/libweston/backend-x11/x11.c" bodystart="577" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwm__normal__hints_1a67596c2f810e1a0cd81fe99fad1e6a2b" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t wm_normal_hints::win_gravity</definition>
+        <argsstring></argsstring>
+        <name>win_gravity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-x11/x11.c" line="578" column="9" bodyfile="/home/lzm/Wayland/weston/libweston/backend-x11/x11.c" bodystart="578" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/backend-x11/x11.c" line="569" column="22" bodyfile="/home/lzm/Wayland/weston/libweston/backend-x11/x11.c" bodystart="569" bodyend="579"/>
+    <listofallmembers>
+      <member refid="structwm__normal__hints_1acb6a6eeae8100c423990767c5575b0d5" prot="public" virt="non-virtual"><scope>wm_normal_hints</scope><name>base_height</name></member>
+      <member refid="structwm__normal__hints_1a7105cfa02683dc6046d9051d0ff6822c" prot="public" virt="non-virtual"><scope>wm_normal_hints</scope><name>base_width</name></member>
+      <member refid="structwm__normal__hints_1ade652f49a1b4bd901cf924db7eaf8a48" prot="public" virt="non-virtual"><scope>wm_normal_hints</scope><name>flags</name></member>
+      <member refid="structwm__normal__hints_1a5ee35b69367af0531ea6bd5aa8d11acb" prot="public" virt="non-virtual"><scope>wm_normal_hints</scope><name>height_inc</name></member>
+      <member refid="structwm__normal__hints_1a24f5cd79dd7d344f0b8dec52097681d7" prot="public" virt="non-virtual"><scope>wm_normal_hints</scope><name>max_aspect_x</name></member>
+      <member refid="structwm__normal__hints_1aeb785de9ee68ac722588f7d393a3e5fd" prot="public" virt="non-virtual"><scope>wm_normal_hints</scope><name>max_aspect_y</name></member>
+      <member refid="structwm__normal__hints_1aeba8791b3ff51570c92b362af471c7a9" prot="public" virt="non-virtual"><scope>wm_normal_hints</scope><name>max_height</name></member>
+      <member refid="structwm__normal__hints_1a006b25d4014ae52268f354725ecdca71" prot="public" virt="non-virtual"><scope>wm_normal_hints</scope><name>max_width</name></member>
+      <member refid="structwm__normal__hints_1aaf8317e7728e567d066e810c9ba78183" prot="public" virt="non-virtual"><scope>wm_normal_hints</scope><name>min_aspect_x</name></member>
+      <member refid="structwm__normal__hints_1a9066ea9b055574b1de7aef027d6452d8" prot="public" virt="non-virtual"><scope>wm_normal_hints</scope><name>min_aspect_y</name></member>
+      <member refid="structwm__normal__hints_1abb62c97cebe07611806c66e71038d287" prot="public" virt="non-virtual"><scope>wm_normal_hints</scope><name>min_height</name></member>
+      <member refid="structwm__normal__hints_1a05b4436ecfaf5763b2bdfa94ca26fd87" prot="public" virt="non-virtual"><scope>wm_normal_hints</scope><name>min_width</name></member>
+      <member refid="structwm__normal__hints_1a532b941c926b3f0b402ed7598066b99f" prot="public" virt="non-virtual"><scope>wm_normal_hints</scope><name>pad</name></member>
+      <member refid="structwm__normal__hints_1a523a9576747d5f053918fe06715fdbe2" prot="public" virt="non-virtual"><scope>wm_normal_hints</scope><name>width_inc</name></member>
+      <member refid="structwm__normal__hints_1a67596c2f810e1a0cd81fe99fad1e6a2b" prot="public" virt="non-virtual"><scope>wm_normal_hints</scope><name>win_gravity</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

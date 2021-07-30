@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__buffer__release__reference" kind="struct" language="C++" prot="public">
+    <compoundname>weston_buffer_release_reference</compoundname>
+    <includes refid="libweston_8h" local="no">libweston.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__buffer__release__reference_1af56e0a7bde3736fa32cce5107e620d14" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structweston__buffer__release" kindref="compound">weston_buffer_release</ref> *</type>
+        <definition>struct weston_buffer_release* weston_buffer_release_reference::buffer_release</definition>
+        <argsstring></argsstring>
+        <name>buffer_release</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="1229" column="28" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="1229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__buffer__release__reference_1a4c77bd7f6c6a01bcf827ba3fb8dd6cec" prot="public" static="no" mutable="no">
+        <type>struct wl_listener</type>
+        <definition>struct wl_listener weston_buffer_release_reference::destroy_listener</definition>
+        <argsstring></argsstring>
+        <name>destroy_listener</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="1229" column="28" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="1232" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>weston_buffer_release_reference</label>
+        <link refid="structweston__buffer__release__reference"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>buffer_release</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>weston_buffer_release</label>
+        <link refid="structweston__buffer__release"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="1228" column="38" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="1228" bodyend="1233"/>
+    <listofallmembers>
+      <member refid="structweston__buffer__release__reference_1af56e0a7bde3736fa32cce5107e620d14" prot="public" virt="non-virtual"><scope>weston_buffer_release_reference</scope><name>buffer_release</name></member>
+      <member refid="structweston__buffer__release__reference_1a4c77bd7f6c6a01bcf827ba3fb8dd6cec" prot="public" virt="non-virtual"><scope>weston_buffer_release_reference</scope><name>destroy_listener</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

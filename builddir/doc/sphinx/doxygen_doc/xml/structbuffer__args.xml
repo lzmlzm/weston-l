@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structbuffer__args" kind="struct" language="C++" prot="public">
+    <compoundname>buffer_args</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structbuffer__args_1a5d01424e25d2a47f106c3034ff9c20c8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int buffer_args::scale</definition>
+        <argsstring></argsstring>
+        <name>scale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/buffer-transforms-test.c" line="89" column="5" bodyfile="/home/lzm/Wayland/weston/tests/buffer-transforms-test.c" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbuffer__args_1a41345cf9d249813fd2fe629288de9ba9" prot="public" static="no" mutable="no">
+        <type>enum wl_output_transform</type>
+        <definition>enum wl_output_transform buffer_args::transform</definition>
+        <argsstring></argsstring>
+        <name>transform</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/buffer-transforms-test.c" line="89" column="5" bodyfile="/home/lzm/Wayland/weston/tests/buffer-transforms-test.c" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbuffer__args_1aecd5418f9a6cb2f42b24285855bfcc08" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char * buffer_args::transform_name</definition>
+        <argsstring></argsstring>
+        <name>transform_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/buffer-transforms-test.c" line="91" column="12" bodyfile="/home/lzm/Wayland/weston/tests/buffer-transforms-test.c" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/tests/buffer-transforms-test.c" line="88" column="18" bodyfile="/home/lzm/Wayland/weston/tests/buffer-transforms-test.c" bodystart="88" bodyend="92"/>
+    <listofallmembers>
+      <member refid="structbuffer__args_1a5d01424e25d2a47f106c3034ff9c20c8" prot="public" virt="non-virtual"><scope>buffer_args</scope><name>scale</name></member>
+      <member refid="structbuffer__args_1a41345cf9d249813fd2fe629288de9ba9" prot="public" virt="non-virtual"><scope>buffer_args</scope><name>transform</name></member>
+      <member refid="structbuffer__args_1aecd5418f9a6cb2f42b24285855bfcc08" prot="public" virt="non-virtual"><scope>buffer_args</scope><name>transform_name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

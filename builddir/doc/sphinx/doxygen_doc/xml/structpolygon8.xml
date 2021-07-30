@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structpolygon8" kind="struct" language="C++" prot="public">
+    <compoundname>polygon8</compoundname>
+    <includes refid="vertex-clipping_8h" local="no">vertex-clipping.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpolygon8_1afa55ed76396a42e950e7ac6524985479" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float polygon8::x[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/vertex-clipping.h" line="29" column="7" bodyfile="/home/lzm/Wayland/weston/libweston/vertex-clipping.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpolygon8_1a978b26eb8f59cfc6a49665af7170fdc0" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float polygon8::y[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/vertex-clipping.h" line="30" column="7" bodyfile="/home/lzm/Wayland/weston/libweston/vertex-clipping.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpolygon8_1afd03a44a5ef1bcb84b9870194746df75" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int polygon8::n</definition>
+        <argsstring></argsstring>
+        <name>n</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/vertex-clipping.h" line="31" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/vertex-clipping.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/vertex-clipping.h" line="28" column="15" bodyfile="/home/lzm/Wayland/weston/libweston/vertex-clipping.h" bodystart="28" bodyend="32"/>
+    <listofallmembers>
+      <member refid="structpolygon8_1afd03a44a5ef1bcb84b9870194746df75" prot="public" virt="non-virtual"><scope>polygon8</scope><name>n</name></member>
+      <member refid="structpolygon8_1afa55ed76396a42e950e7ac6524985479" prot="public" virt="non-virtual"><scope>polygon8</scope><name>x</name></member>
+      <member refid="structpolygon8_1a978b26eb8f59cfc6a49665af7170fdc0" prot="public" virt="non-virtual"><scope>polygon8</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

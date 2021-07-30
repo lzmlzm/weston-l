@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__rdp__backend__config" kind="struct" language="C++" prot="public">
+    <compoundname>weston_rdp_backend_config</compoundname>
+    <includes refid="backend-rdp_8h" local="no">backend-rdp.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__rdp__backend__config_1a59a7c3f6d7d1ccfd39cc3c023d1fcf09" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structweston__backend__config" kindref="compound">weston_backend_config</ref></type>
+        <definition>struct weston_backend_config weston_rdp_backend_config::base</definition>
+        <argsstring></argsstring>
+        <name>base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-rdp.h" line="43" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-rdp.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__rdp__backend__config_1a8512c19bcb79c0329d23d45b0eaf1f88" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* weston_rdp_backend_config::bind_address</definition>
+        <argsstring></argsstring>
+        <name>bind_address</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-rdp.h" line="61" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-rdp.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__rdp__backend__config_1ac05683e4d731e5749fdd087f0567c46b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int weston_rdp_backend_config::port</definition>
+        <argsstring></argsstring>
+        <name>port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-rdp.h" line="62" column="5" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-rdp.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__rdp__backend__config_1aa5417e2b18865b397bb300a7ef57f319" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* weston_rdp_backend_config::rdp_key</definition>
+        <argsstring></argsstring>
+        <name>rdp_key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-rdp.h" line="63" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-rdp.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__rdp__backend__config_1a77d94efb9d7a978285e89d12e3cfe655" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* weston_rdp_backend_config::server_cert</definition>
+        <argsstring></argsstring>
+        <name>server_cert</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-rdp.h" line="64" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-rdp.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__rdp__backend__config_1a34b7da303d992e4e7cecb7b56dc47c5c" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* weston_rdp_backend_config::server_key</definition>
+        <argsstring></argsstring>
+        <name>server_key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-rdp.h" line="65" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-rdp.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__rdp__backend__config_1a5959bcb1f58d6f677e062690e00f2aa8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int weston_rdp_backend_config::env_socket</definition>
+        <argsstring></argsstring>
+        <name>env_socket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-rdp.h" line="66" column="5" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-rdp.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__rdp__backend__config_1a1cbff3fee6426530097e9ee69448a1e6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int weston_rdp_backend_config::no_clients_resize</definition>
+        <argsstring></argsstring>
+        <name>no_clients_resize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-rdp.h" line="67" column="5" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-rdp.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__rdp__backend__config_1aa4a982ccfa2494b044cb019efe66c41e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int weston_rdp_backend_config::force_no_compression</definition>
+        <argsstring></argsstring>
+        <name>force_no_compression</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-rdp.h" line="68" column="5" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-rdp.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>weston_backend_config</label>
+        <link refid="structweston__backend__config"/>
+      </node>
+      <node id="1">
+        <label>weston_rdp_backend_config</label>
+        <link refid="structweston__rdp__backend__config"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lzm/Wayland/weston/include/libweston/backend-rdp.h" line="59" column="32" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-rdp.h" bodystart="59" bodyend="69"/>
+    <listofallmembers>
+      <member refid="structweston__rdp__backend__config_1a59a7c3f6d7d1ccfd39cc3c023d1fcf09" prot="public" virt="non-virtual"><scope>weston_rdp_backend_config</scope><name>base</name></member>
+      <member refid="structweston__rdp__backend__config_1a8512c19bcb79c0329d23d45b0eaf1f88" prot="public" virt="non-virtual"><scope>weston_rdp_backend_config</scope><name>bind_address</name></member>
+      <member refid="structweston__rdp__backend__config_1a5959bcb1f58d6f677e062690e00f2aa8" prot="public" virt="non-virtual"><scope>weston_rdp_backend_config</scope><name>env_socket</name></member>
+      <member refid="structweston__rdp__backend__config_1aa4a982ccfa2494b044cb019efe66c41e" prot="public" virt="non-virtual"><scope>weston_rdp_backend_config</scope><name>force_no_compression</name></member>
+      <member refid="structweston__rdp__backend__config_1a1cbff3fee6426530097e9ee69448a1e6" prot="public" virt="non-virtual"><scope>weston_rdp_backend_config</scope><name>no_clients_resize</name></member>
+      <member refid="structweston__rdp__backend__config_1ac05683e4d731e5749fdd087f0567c46b" prot="public" virt="non-virtual"><scope>weston_rdp_backend_config</scope><name>port</name></member>
+      <member refid="structweston__rdp__backend__config_1aa5417e2b18865b397bb300a7ef57f319" prot="public" virt="non-virtual"><scope>weston_rdp_backend_config</scope><name>rdp_key</name></member>
+      <member refid="structweston__rdp__backend__config_1a77d94efb9d7a978285e89d12e3cfe655" prot="public" virt="non-virtual"><scope>weston_rdp_backend_config</scope><name>server_cert</name></member>
+      <member refid="structweston__rdp__backend__config_1a34b7da303d992e4e7cecb7b56dc47c5c" prot="public" virt="non-virtual"><scope>weston_rdp_backend_config</scope><name>server_key</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

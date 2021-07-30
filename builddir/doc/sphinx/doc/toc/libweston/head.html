@@ -1,0 +1,776 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Heads &mdash; weston 9.0.90 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Outputs" href="output.html" />
+    <link rel="prev" title="Output management" href="output-management.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> weston
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../running-weston.html">Running Weston</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../libweston.html">Libweston</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="compositor.html">Compositor</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="output-management.html">Output management</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Heads</a></li>
+<li class="toctree-l3"><a class="reference internal" href="output.html">Outputs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="log.html">Logging/Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libweston.html#further-work">Further work</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../test-suite.html">Weston test suite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kiosk-shell.html">Weston kiosk-shell</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">weston</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../libweston.html">Libweston</a> &raquo;</li>
+        
+          <li><a href="output-management.html">Output management</a> &raquo;</li>
+        
+      <li>Heads</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/toc/libweston/head.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="heads">
+<span id="libweston-head"></span><h1>Heads<a class="headerlink" href="#heads" title="Permalink to this headline">¶</a></h1>
+<p>A head is represented by a <a class="reference internal" href="#_CPPv411weston_head" title="weston_head"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">weston_head</span></code></a> object.</p>
+<p>A head refers to a monitor when driving hardware, but it can also be a window
+in another window system, or a virtual concept. Essentially a head is a place
+where you could present an image. The image will be produced by a weston_output
+where the head is attached to.</p>
+<p>In display hardware, a head represents a display connector in a computer
+system, not the actual monitor connected to the connector. A head carries
+monitor information, if present, like make and model, EDID and possible video
+modes. Other properties are DPMS mode and backlight control.</p>
+<p>In terms of Wayland protocol, a head corresponds to a wl_output. If one
+<a class="reference internal" href="output.html#_CPPv413weston_output" title="weston_output"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">weston_output</span></code></a> has several heads, meaning that the heads are cloned,
+each head is represented as a separate wl_output global in wl_registry. Only
+the heads of an enabled output are exposed as wl_outputs.</p>
+<p>Heads can appear and disappear dynamically, mainly because of DisplayPort
+Multi-Stream Transport where connecting a new monitor may expose new
+connectors. Window and virtual outputs are often dynamic as well.</p>
+<p>Heads are always owned by libweston which dictates their lifetimes. Some
+backends may offer specific API to create and destroy heads, but hardware
+backends like DRM-backend create and destroy heads on their own.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference internal" href="#_CPPv416weston_head_initP11weston_headPKc" title="weston_head_init"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">weston_head_init()</span></code></a> and <a class="reference internal" href="#_CPPv419weston_head_releaseP11weston_head" title="weston_head_release"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">weston_head_release()</span></code></a> belong to the
+private/internal backend API and should be moved accordingly once that
+section has been created. There are many other functions as well that are
+intended only for backends.</p>
+</div>
+<p>A <a class="reference internal" href="#_CPPv411weston_head" title="weston_head"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">weston_head</span></code></a> must be attached/detached from a <a class="reference internal" href="output.html#_CPPv413weston_output" title="weston_output"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">weston_output</span></code></a>.
+To that purpose you can use <a class="reference internal" href="output.html#_CPPv425weston_output_attach_headP13weston_outputP11weston_head" title="weston_output_attach_head"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">weston_output_attach_head()</span></code></a>, respectively
+<a class="reference internal" href="#_CPPv418weston_head_detachP11weston_head" title="weston_head_detach"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">weston_head_detach()</span></code></a>.</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv425weston_head_from_resourceP11wl_resource">
+<span id="_CPPv325weston_head_from_resourceP11wl_resource"></span><span id="_CPPv225weston_head_from_resourceP11wl_resource"></span><span id="weston_head_from_resource__wl_resourceP"></span><span class="target" id="group__head_1ga09a7ecebc209197f9691e09a4c8a3c8b"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv411weston_head" title="weston_head"><span class="n"><span class="pre">weston_head</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">weston_head_from_resource</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_resource</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">resource</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv425weston_head_from_resourceP11wl_resource" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the backing object of wl_output. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>resource</strong> – A wl_output protocol object. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The backing object (user data) of a wl_resource representing a wl_output protocol object. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv416weston_head_initP11weston_headPKc">
+<span id="_CPPv316weston_head_initP11weston_headPKc"></span><span id="_CPPv216weston_head_initP11weston_headPKc"></span><span id="weston_head_init__weston_headP.cCP"></span><span class="target" id="group__head_1gab458db3cc734c39f07222a72cfca7bfe"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_head_init</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv411weston_head" title="weston_head"><span class="n"><span class="pre">weston_head</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">head</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416weston_head_initP11weston_headPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Initialize a pre-allocated <a class="reference internal" href="#structweston__head"><span class="std std-ref">weston_head</span></a>. </p>
+<p>
+The head will be safe to attach, detach and release.</p>
+<p>The name is used in logs, and can be used by compositors as a configuration identifier. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>head</strong> – The head to initialize. </p></li>
+<li><p><strong>name</strong> – The head name, e.g. the connector name or equivalent.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv418weston_head_detachP11weston_head">
+<span id="_CPPv318weston_head_detachP11weston_head"></span><span id="_CPPv218weston_head_detachP11weston_head"></span><span id="weston_head_detach__weston_headP"></span><span class="target" id="group__head_1gac5cc5415250a9aa4f830af252b72a666"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_head_detach</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv411weston_head" title="weston_head"><span class="n"><span class="pre">weston_head</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">head</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418weston_head_detachP11weston_head" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Detach a head from its output. </p>
+<p>
+It is safe to detach a non-attached head.</p>
+<p>If the head is attached to an enabled output and the output will be left with no heads, the output will be disabled.</p>
+<p><dl class="simple">
+<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="output.html#group__output_1gad86b73873e740780e6a1b4b7ad7b7e2b"><span class="std std-ref">weston_output_disable</span></a> </p>
+</dd>
+</dl>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>head</strong> – The head to detach.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv419weston_head_releaseP11weston_head">
+<span id="_CPPv319weston_head_releaseP11weston_head"></span><span id="_CPPv219weston_head_releaseP11weston_head"></span><span id="weston_head_release__weston_headP"></span><span class="target" id="group__head_1ga620a43a89a9f4045689f5f7bddeaa533"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_head_release</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv411weston_head" title="weston_head"><span class="n"><span class="pre">weston_head</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">head</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419weston_head_releaseP11weston_head" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Destroy a head. </p>
+<p>
+Destroys the head. The caller is responsible for freeing the memory pointed to by <code class="docutils literal notranslate"><span class="pre">head</span></code>. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>head</strong> – The head to be released.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv431weston_head_set_monitor_stringsP11weston_headPKcPKcPKc">
+<span id="_CPPv331weston_head_set_monitor_stringsP11weston_headPKcPKcPKc"></span><span id="_CPPv231weston_head_set_monitor_stringsP11weston_headPKcPKcPKc"></span><span id="weston_head_set_monitor_strings__weston_headP.cCP.cCP.cCP"></span><span class="target" id="group__head_1gad1dbb9d1e8023b3c1587b2a15d1ee550"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_head_set_monitor_strings</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv411weston_head" title="weston_head"><span class="n"><span class="pre">weston_head</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">head</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">make</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">model</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">serialno</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv431weston_head_set_monitor_stringsP11weston_headPKcPKcPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Store monitor make, model and serial number. </p>
+<p>
+This may set the device_changed flag. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>head</strong> – The head to modify. </p></li>
+<li><p><strong>make</strong> – The monitor make. If EDID is available, the PNP ID. Otherwise any string, or NULL for none. </p></li>
+<li><p><strong>model</strong> – The monitor model or name, or a made-up string, or NULL for none. </p></li>
+<li><p><strong>serialno</strong> – The monitor serial number, a made-up string, or NULL for none.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv427weston_head_set_non_desktopP11weston_headb">
+<span id="_CPPv327weston_head_set_non_desktopP11weston_headb"></span><span id="_CPPv227weston_head_set_non_desktopP11weston_headb"></span><span id="weston_head_set_non_desktop__weston_headP.b"></span><span class="target" id="group__head_1ga0ec29ead0db5f04159e9b69a889713b9"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_head_set_non_desktop</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv411weston_head" title="weston_head"><span class="n"><span class="pre">weston_head</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">head</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">non_desktop</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv427weston_head_set_non_desktopP11weston_headb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Store display non-desktop status. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>head</strong> – The head to modify. </p></li>
+<li><p><strong>non_desktop</strong> – Whether the head connects to a non-desktop display. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv425weston_head_set_transformP11weston_head8uint32_t">
+<span id="_CPPv325weston_head_set_transformP11weston_head8uint32_t"></span><span id="_CPPv225weston_head_set_transformP11weston_head8uint32_t"></span><span id="weston_head_set_transform__weston_headP.uint32_t"></span><span class="target" id="group__head_1ga0af29bbbf4c6d09c82bbac58286c656a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_head_set_transform</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv411weston_head" title="weston_head"><span class="n"><span class="pre">weston_head</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">head</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">transform</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv425weston_head_set_transformP11weston_head8uint32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Store display transformation. </p>
+<p>
+This may set the device_changed flag. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>head</strong> – The head to modify. </p></li>
+<li><p><strong>transform</strong> – The transformation to apply for this head</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv429weston_head_set_physical_sizeP11weston_head7int32_t7int32_t">
+<span id="_CPPv329weston_head_set_physical_sizeP11weston_head7int32_t7int32_t"></span><span id="_CPPv229weston_head_set_physical_sizeP11weston_head7int32_t7int32_t"></span><span id="weston_head_set_physical_size__weston_headP.int32_t.int32_t"></span><span class="target" id="group__head_1ga453bc787c6868e53371866de3f4db622"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_head_set_physical_size</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv411weston_head" title="weston_head"><span class="n"><span class="pre">weston_head</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">head</span></span>, <span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">mm_width</span></span>, <span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">mm_height</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429weston_head_set_physical_sizeP11weston_head7int32_t7int32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Store physical image size. </p>
+<p>
+This may set the device_changed flag. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>head</strong> – The head to modify. </p></li>
+<li><p><strong>mm_width</strong> – Image area width in millimeters. </p></li>
+<li><p><strong>mm_height</strong> – Image area height in millimeters.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv424weston_head_set_subpixelP11weston_head18wl_output_subpixel">
+<span id="_CPPv324weston_head_set_subpixelP11weston_head18wl_output_subpixel"></span><span id="_CPPv224weston_head_set_subpixelP11weston_head18wl_output_subpixel"></span><span id="weston_head_set_subpixel__weston_headP.wl_output_subpixel"></span><span class="target" id="group__head_1gab4123b993477c318d4c87d782b6e4b51"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_head_set_subpixel</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv411weston_head" title="weston_head"><span class="n"><span class="pre">weston_head</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">head</span></span>, <span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="n"><span class="pre">wl_output_subpixel</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sp</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv424weston_head_set_subpixelP11weston_head18wl_output_subpixel" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Store monitor sub-pixel layout. </p>
+<p>
+This may set the device_changed flag. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>head</strong> – The head to modify. </p></li>
+<li><p><strong>sp</strong> – Sub-pixel layout. The possible values are:<ul>
+<li><p>WL_OUTPUT_SUBPIXEL_UNKNOWN,</p></li>
+<li><p>WL_OUTPUT_SUBPIXEL_NONE,</p></li>
+<li><p>WL_OUTPUT_SUBPIXEL_HORIZONTAL_RGB,</p></li>
+<li><p>WL_OUTPUT_SUBPIXEL_HORIZONTAL_BGR,</p></li>
+<li><p>WL_OUTPUT_SUBPIXEL_VERTICAL_RGB,</p></li>
+<li><p>WL_OUTPUT_SUBPIXEL_VERTICAL_BGR</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv424weston_head_set_internalP11weston_head">
+<span id="_CPPv324weston_head_set_internalP11weston_head"></span><span id="_CPPv224weston_head_set_internalP11weston_head"></span><span id="weston_head_set_internal__weston_headP"></span><span class="target" id="group__head_1ga4ece2c0a2966224ebece0b092a6a9883"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_head_set_internal</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv411weston_head" title="weston_head"><span class="n"><span class="pre">weston_head</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">head</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv424weston_head_set_internalP11weston_head" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Mark the monitor as internal. </p>
+<p>This is used for embedded screens, like laptop panels.</p>
+<p>
+By default a head is external. The type is often inferred from the physical connector type. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>head</strong> – The head to mark as internal.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv433weston_head_set_connection_statusP11weston_headb">
+<span id="_CPPv333weston_head_set_connection_statusP11weston_headb"></span><span id="_CPPv233weston_head_set_connection_statusP11weston_headb"></span><span id="weston_head_set_connection_status__weston_headP.b"></span><span class="target" id="group__head_1ga522efc0ba8ba4ce81c0ac4c1cf197f5a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_head_set_connection_status</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv411weston_head" title="weston_head"><span class="n"><span class="pre">weston_head</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">head</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">connected</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv433weston_head_set_connection_statusP11weston_headb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Store connector status. </p>
+<p>
+Connectors are created as disconnected. This function can be used to set the connector status.</p>
+<p>The status should be set to true when a physical connector is connected to a video sink device like a monitor and to false when the connector is disconnected. For nested backends, the connection status should reflect the connection to the parent display server.</p>
+<p>When the connection status changes, it schedules a call to the heads_changed hook and sets the device_changed flag.</p>
+<p><dl class="simple">
+<dt><strong>See</strong></dt><dd><p>weston_compositor_set_heads_changed_cb </p>
+</dd>
+</dl>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>head</strong> – The head to modify. </p></li>
+<li><p><strong>connected</strong> – Whether the head is connected.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv424weston_head_is_connectedP11weston_head">
+<span id="_CPPv324weston_head_is_connectedP11weston_head"></span><span id="_CPPv224weston_head_is_connectedP11weston_head"></span><span id="weston_head_is_connected__weston_headP"></span><span class="target" id="group__head_1gad0da27f9a2e98faf8aecf84704935440"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_head_is_connected</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv411weston_head" title="weston_head"><span class="n"><span class="pre">weston_head</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">head</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv424weston_head_is_connectedP11weston_head" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Is the head currently connected? </p>
+<p>
+Returns true if the head is physically connected to a monitor, or in case of a nested backend returns true when there is a connection to the parent display server.</p>
+<p>This is independent from the head being enabled.</p>
+<p><dl class="simple">
+<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="#group__head_1ga8d49a887b440265b363a5075fefff343"><span class="std std-ref">weston_head_is_enabled</span></a> </p>
+</dd>
+</dl>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>head</strong> – The head to query. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Connection status.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv422weston_head_is_enabledP11weston_head">
+<span id="_CPPv322weston_head_is_enabledP11weston_head"></span><span id="_CPPv222weston_head_is_enabledP11weston_head"></span><span id="weston_head_is_enabled__weston_headP"></span><span class="target" id="group__head_1ga8d49a887b440265b363a5075fefff343"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_head_is_enabled</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv411weston_head" title="weston_head"><span class="n"><span class="pre">weston_head</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">head</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422weston_head_is_enabledP11weston_head" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Is the head currently enabled? </p>
+<p>
+Returns true if the head is currently transmitting a video stream.</p>
+<p>This is independent of the head being connected.</p>
+<p><dl class="simple">
+<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="#group__head_1gad0da27f9a2e98faf8aecf84704935440"><span class="std std-ref">weston_head_is_connected</span></a> </p>
+</dd>
+</dl>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>head</strong> – The head to query. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Video status.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv429weston_head_is_device_changedP11weston_head">
+<span id="_CPPv329weston_head_is_device_changedP11weston_head"></span><span id="_CPPv229weston_head_is_device_changedP11weston_head"></span><span id="weston_head_is_device_changed__weston_headP"></span><span class="target" id="group__head_1ga8166b9178e0d63360ebe4bd1a3d9466b"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_head_is_device_changed</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv411weston_head" title="weston_head"><span class="n"><span class="pre">weston_head</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">head</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429weston_head_is_device_changedP11weston_head" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Has the device information changed? </p>
+<p>
+The information about the connected display device, e.g. a monitor, may change without being disconnected in between. Changing information causes a call to the heads_changed hook.</p>
+<p>The information includes make, model, serial number, physical size, and sub-pixel type. The connection status is also included.</p>
+<p><dl class="simple">
+<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="#group__head_1ga4f891068162ad3c11b7c971dcf7087d6"><span class="std std-ref">weston_head_reset_device_changed</span></a>, weston_compositor_set_heads_changed_cb </p>
+</dd>
+</dl>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>head</strong> – The head to query. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if the device information has changed since last reset.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv426weston_head_is_non_desktopP11weston_head">
+<span id="_CPPv326weston_head_is_non_desktopP11weston_head"></span><span id="_CPPv226weston_head_is_non_desktopP11weston_head"></span><span id="weston_head_is_non_desktop__weston_headP"></span><span class="target" id="group__head_1gaf349968c812aa4496e3afd9e2a550ce8"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_head_is_non_desktop</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv411weston_head" title="weston_head"><span class="n"><span class="pre">weston_head</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">head</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv426weston_head_is_non_desktopP11weston_head" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Does the head represent a non-desktop display? </p>
+<p>
+Non-desktop heads are not attached to outputs by default. This stops weston from extending the desktop onto head mounted displays. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>head</strong> – The head to query. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if the device is a non-desktop display.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv432weston_head_reset_device_changedP11weston_head">
+<span id="_CPPv332weston_head_reset_device_changedP11weston_head"></span><span id="_CPPv232weston_head_reset_device_changedP11weston_head"></span><span id="weston_head_reset_device_changed__weston_headP"></span><span class="target" id="group__head_1ga4f891068162ad3c11b7c971dcf7087d6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_head_reset_device_changed</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv411weston_head" title="weston_head"><span class="n"><span class="pre">weston_head</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">head</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv432weston_head_reset_device_changedP11weston_head" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Acknowledge device information change. </p>
+<p>
+Clears the device changed flag on this head. When a compositor has processed device information, it should call this to be able to notice further changes.</p>
+<p><dl class="simple">
+<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="#group__head_1ga8166b9178e0d63360ebe4bd1a3d9466b"><span class="std std-ref">weston_head_is_device_changed</span></a> </p>
+</dd>
+</dl>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>head</strong> – The head to acknowledge.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv420weston_head_get_nameP11weston_head">
+<span id="_CPPv320weston_head_get_nameP11weston_head"></span><span id="_CPPv220weston_head_get_nameP11weston_head"></span><span id="weston_head_get_name__weston_headP"></span><span class="target" id="group__head_1gadc2cacc63e1e08fa67962fd1379dd085"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">weston_head_get_name</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv411weston_head" title="weston_head"><span class="n"><span class="pre">weston_head</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">head</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420weston_head_get_nameP11weston_head" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the name of a head. </p>
+<p>
+The name depends on the backend. The DRM backend uses connector names, other backends may use hardcoded names or user-given names. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>head</strong> – The head to query. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The head’s name, not NULL.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv422weston_head_get_outputP11weston_head">
+<span id="_CPPv322weston_head_get_outputP11weston_head"></span><span id="_CPPv222weston_head_get_outputP11weston_head"></span><span id="weston_head_get_output__weston_headP"></span><span class="target" id="group__head_1gaa421449fe0fad20bece74a1359e9dea7"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="output.html#_CPPv413weston_output" title="weston_output"><span class="n"><span class="pre">weston_output</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">weston_head_get_output</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv411weston_head" title="weston_head"><span class="n"><span class="pre">weston_head</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">head</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422weston_head_get_outputP11weston_head" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the output the head is attached to. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>head</strong> – The head to query. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The output the head is attached to, or NULL if detached. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv425weston_head_get_transformP11weston_head">
+<span id="_CPPv325weston_head_get_transformP11weston_head"></span><span id="_CPPv225weston_head_get_transformP11weston_head"></span><span id="weston_head_get_transform__weston_headP"></span><span class="target" id="group__head_1ga2be199d2caef16d084aa4aa56434f0ef"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_head_get_transform</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv411weston_head" title="weston_head"><span class="n"><span class="pre">weston_head</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">head</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv425weston_head_get_transformP11weston_head" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the head’s native transformation. </p>
+<p>
+A <a class="reference internal" href="#structweston__head"><span class="std std-ref">weston_head</span></a> may have a ‘native’ transform provided by the backend. Examples include panels which are physically rotated, where the rotation is recorded and described as part of the system configuration. This call will return any known native transform for the head. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>head</strong> – The head to query. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The head’s native transform, as a WL_OUTPUT_TRANSFORM_* value</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv432weston_head_add_destroy_listenerP11weston_headP11wl_listener">
+<span id="_CPPv332weston_head_add_destroy_listenerP11weston_headP11wl_listener"></span><span id="_CPPv232weston_head_add_destroy_listenerP11weston_headP11wl_listener"></span><span id="weston_head_add_destroy_listener__weston_headP.wl_listenerP"></span><span class="target" id="group__head_1gacb1d8713745a3e871acad1bdb129d720"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_head_add_destroy_listener</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv411weston_head" title="weston_head"><span class="n"><span class="pre">weston_head</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">head</span></span>, <span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_listener</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">listener</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv432weston_head_add_destroy_listenerP11weston_headP11wl_listener" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Add destroy callback for a head. </p>
+<p>
+Heads may get destroyed for various reasons by the backends. If a head is attached to an output, the compositor should listen for head destruction and reconfigure or destroy the output if necessary.</p>
+<p>The destroy callbacks will be called on <a class="reference internal" href="#structweston__head"><span class="std std-ref">weston_head</span></a> destruction before any automatic detaching from an associated <a class="reference internal" href="output.html#structweston__output"><span class="std std-ref">weston_output</span></a> and before any <a class="reference internal" href="#structweston__head"><span class="std std-ref">weston_head</span></a> information is lost.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">data</span></code> argument to the notify callback is the <a class="reference internal" href="#structweston__head"><span class="std std-ref">weston_head</span></a> being destroyed. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>head</strong> – The head to watch for. </p></li>
+<li><p><strong>listener</strong> – The listener to add. The <code class="docutils literal notranslate"><span class="pre">notify</span></code> member must be set.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv432weston_head_get_destroy_listenerP11weston_head16wl_notify_func_t">
+<span id="_CPPv332weston_head_get_destroy_listenerP11weston_head16wl_notify_func_t"></span><span id="_CPPv232weston_head_get_destroy_listenerP11weston_head16wl_notify_func_t"></span><span id="weston_head_get_destroy_listener__weston_headP.wl_notify_func_t"></span><span class="target" id="group__head_1ga523c746a6ae0d5457e5696b903c1508d"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_listener</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">weston_head_get_destroy_listener</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv411weston_head" title="weston_head"><span class="n"><span class="pre">weston_head</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">head</span></span>, <span class="n"><span class="pre">wl_notify_func_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">notify</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv432weston_head_get_destroy_listenerP11weston_head16wl_notify_func_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Look up destroy listener for a head. </p>
+<p>
+This looks up the previously added destroy listener struct based on the notify function it has. The listener can be used to access user data through <code class="docutils literal notranslate"><span class="pre">container_of()</span></code>.</p>
+<p><dl class="simple">
+<dt><strong>See</strong></dt><dd><p>wl_signal_get() </p>
+</dd>
+</dl>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>head</strong> – The head to query. </p></li>
+<li><p><strong>notify</strong> – The notify function used used for the added destroy listener. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The listener, or NULL if not found.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv411weston_head">
+<span id="_CPPv311weston_head"></span><span id="_CPPv211weston_head"></span><span id="weston_head"></span><span class="target" id="structweston__head"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weston_head</span></span></span><a class="headerlink" href="#_CPPv411weston_head" title="Permalink to this definition">¶</a><br /></dt>
+<dd><em>#include &lt;libweston.h&gt;</em><p>Represents a head, usually a display connector. </p>
+<p><p><p>See <a class="reference internal" href="#libweston-head"><span class="std std-ref">Heads</span></a>.</p>
+</p>
+ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11weston_head10compositorE">
+<span id="_CPPv3N11weston_head10compositorE"></span><span id="_CPPv2N11weston_head10compositorE"></span><span id="weston_head::compositor__weston_compositorP"></span><span class="target" id="structweston__head_1a27f428b3fdd097e199d711e7ecd92269"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="compositor.html#_CPPv417weston_compositor" title="weston_compositor"><span class="n"><span class="pre">weston_compositor</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">compositor</span></span></span><a class="headerlink" href="#_CPPv4N11weston_head10compositorE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>owning compositor </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11weston_head15compositor_linkE">
+<span id="_CPPv3N11weston_head15compositor_linkE"></span><span id="_CPPv2N11weston_head15compositor_linkE"></span><span id="weston_head::compositor_link__wl_list"></span><span class="target" id="structweston__head_1a40c0e0bfe85b46ef2524d79eb83de814"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_list</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compositor_link</span></span></span><a class="headerlink" href="#_CPPv4N11weston_head15compositor_linkE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>in <a class="reference internal" href="compositor.html#structweston__compositor_1a154cc4c320f1d35ecb9886f2b68b6e27"><span class="std std-ref">weston_compositor::head_list</span></a> </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11weston_head14destroy_signalE">
+<span id="_CPPv3N11weston_head14destroy_signalE"></span><span id="_CPPv2N11weston_head14destroy_signalE"></span><span id="weston_head::destroy_signal__wl_signal"></span><span class="target" id="structweston__head_1a24f85e976741d62ea2ad01bb7d4e671b"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_signal</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">destroy_signal</span></span></span><a class="headerlink" href="#_CPPv4N11weston_head14destroy_signalE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>destroy callbacks </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11weston_head6outputE">
+<span id="_CPPv3N11weston_head6outputE"></span><span id="_CPPv2N11weston_head6outputE"></span><span id="weston_head::output__weston_outputP"></span><span class="target" id="structweston__head_1a3002c5effcf5bc308da21f7e0241449f"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="output.html#_CPPv413weston_output" title="weston_output"><span class="n"><span class="pre">weston_output</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">output</span></span></span><a class="headerlink" href="#_CPPv4N11weston_head6outputE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>the output driving this head </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11weston_head11output_linkE">
+<span id="_CPPv3N11weston_head11output_linkE"></span><span id="_CPPv2N11weston_head11output_linkE"></span><span id="weston_head::output_link__wl_list"></span><span class="target" id="structweston__head_1a21f63bcc97ea0592e94f94c6881a0ed3"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_list</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">output_link</span></span></span><a class="headerlink" href="#_CPPv4N11weston_head11output_linkE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>in <a class="reference internal" href="output.html#structweston__output_1aa320f80b827c124ff8906d24a69a136d"><span class="std std-ref">weston_output::head_list</span></a> </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11weston_head13resource_listE">
+<span id="_CPPv3N11weston_head13resource_listE"></span><span id="_CPPv2N11weston_head13resource_listE"></span><span id="weston_head::resource_list__wl_list"></span><span class="target" id="structweston__head_1ac912ed258c44087a6de1e427d456cff8"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_list</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">resource_list</span></span></span><a class="headerlink" href="#_CPPv4N11weston_head13resource_listE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>wl_output protocol objects </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11weston_head6globalE">
+<span id="_CPPv3N11weston_head6globalE"></span><span id="_CPPv2N11weston_head6globalE"></span><span id="weston_head::global__wl_globalP"></span><span class="target" id="structweston__head_1a9262a2db007977965902bd71329b844e"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_global</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">global</span></span></span><a class="headerlink" href="#_CPPv4N11weston_head6globalE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>wl_output global </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11weston_head24xdg_output_resource_listE">
+<span id="_CPPv3N11weston_head24xdg_output_resource_listE"></span><span id="_CPPv2N11weston_head24xdg_output_resource_listE"></span><span id="weston_head::xdg_output_resource_list__wl_list"></span><span class="target" id="structweston__head_1a89fb83812cd6a027bc71f0e8f942ae02"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">wl_list</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">xdg_output_resource_list</span></span></span><a class="headerlink" href="#_CPPv4N11weston_head24xdg_output_resource_listE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>xdg_output protocol objects </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11weston_head8mm_widthE">
+<span id="_CPPv3N11weston_head8mm_widthE"></span><span id="_CPPv2N11weston_head8mm_widthE"></span><span id="weston_head::mm_width__int32_t"></span><span class="target" id="structweston__head_1a53134128fbaec8ce32777943668231fa"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mm_width</span></span></span><a class="headerlink" href="#_CPPv4N11weston_head8mm_widthE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>physical image width in mm </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11weston_head9mm_heightE">
+<span id="_CPPv3N11weston_head9mm_heightE"></span><span id="_CPPv2N11weston_head9mm_heightE"></span><span id="weston_head::mm_height__int32_t"></span><span class="target" id="structweston__head_1a70fd6da38752dc11c9d9b81bd07629c1"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mm_height</span></span></span><a class="headerlink" href="#_CPPv4N11weston_head9mm_heightE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>physical image height in mm </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11weston_head9transformE">
+<span id="_CPPv3N11weston_head9transformE"></span><span id="_CPPv2N11weston_head9transformE"></span><span id="weston_head::transform__uint32_t"></span><span class="target" id="structweston__head_1affdfdef9ee39e39657bd65484d963e23"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">transform</span></span></span><a class="headerlink" href="#_CPPv4N11weston_head9transformE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>WL_OUTPUT_TRANSFORM enum to apply to match native orientation. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11weston_head4makeE">
+<span id="_CPPv3N11weston_head4makeE"></span><span id="_CPPv2N11weston_head4makeE"></span><span id="weston_head::make__cP"></span><span class="target" id="structweston__head_1aaa48b85942cc487d098dc5edac098d07"></span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">make</span></span></span><a class="headerlink" href="#_CPPv4N11weston_head4makeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>monitor manufacturer (PNP ID) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11weston_head5modelE">
+<span id="_CPPv3N11weston_head5modelE"></span><span id="_CPPv2N11weston_head5modelE"></span><span id="weston_head::model__cP"></span><span class="target" id="structweston__head_1a2263081a53cbe5d8b09345c30d8e2661"></span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">model</span></span></span><a class="headerlink" href="#_CPPv4N11weston_head5modelE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>monitor model </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11weston_head13serial_numberE">
+<span id="_CPPv3N11weston_head13serial_numberE"></span><span id="_CPPv2N11weston_head13serial_numberE"></span><span id="weston_head::serial_number__cP"></span><span class="target" id="structweston__head_1ac0caa1ebd8d85bf3a03fe4570ecbfc7f"></span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">serial_number</span></span></span><a class="headerlink" href="#_CPPv4N11weston_head13serial_numberE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>monitor serial </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11weston_head8subpixelE">
+<span id="_CPPv3N11weston_head8subpixelE"></span><span id="_CPPv2N11weston_head8subpixelE"></span><span id="weston_head::subpixel__uint32_t"></span><span class="target" id="structweston__head_1a563a35c7295b88be527aaaa9773e7d46"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">subpixel</span></span></span><a class="headerlink" href="#_CPPv4N11weston_head8subpixelE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>enum wl_output_subpixel </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11weston_head19connection_internalE">
+<span id="_CPPv3N11weston_head19connection_internalE"></span><span id="_CPPv2N11weston_head19connection_internalE"></span><span id="weston_head::connection_internal__b"></span><span class="target" id="structweston__head_1a11cd90ab6330f808b8950c8cfa53befc"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">connection_internal</span></span></span><a class="headerlink" href="#_CPPv4N11weston_head19connection_internalE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>embedded monitor (e.g. </p>
+<p>laptop) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11weston_head14device_changedE">
+<span id="_CPPv3N11weston_head14device_changedE"></span><span id="_CPPv2N11weston_head14device_changedE"></span><span id="weston_head::device_changed__b"></span><span class="target" id="structweston__head_1adc383408494e7e17f37d660c7ba6bcee"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">device_changed</span></span></span><a class="headerlink" href="#_CPPv4N11weston_head14device_changedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>monitor information has changed </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11weston_head4nameE">
+<span id="_CPPv3N11weston_head4nameE"></span><span id="_CPPv2N11weston_head4nameE"></span><span id="weston_head::name__cP"></span><span class="target" id="structweston__head_1a8539bd24d05dce91d80fa5e389f84db1"></span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">name</span></span></span><a class="headerlink" href="#_CPPv4N11weston_head4nameE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>head name, e.g. </p>
+<p>connector name </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11weston_head9connectedE">
+<span id="_CPPv3N11weston_head9connectedE"></span><span id="_CPPv2N11weston_head9connectedE"></span><span id="weston_head::connected__b"></span><span class="target" id="structweston__head_1a2cb7768507f3445476c99cefaac39a2a"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">connected</span></span></span><a class="headerlink" href="#_CPPv4N11weston_head9connectedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>is physically connected </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11weston_head11non_desktopE">
+<span id="_CPPv3N11weston_head11non_desktopE"></span><span id="_CPPv2N11weston_head11non_desktopE"></span><span id="weston_head::non_desktop__b"></span><span class="target" id="structweston__head_1a52f05b229e95b48234fc5529960ff9b3"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">non_desktop</span></span></span><a class="headerlink" href="#_CPPv4N11weston_head11non_desktopE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>non-desktop display, e.g. </p>
+<p>HMD </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11weston_head18current_protectionE">
+<span id="_CPPv3N11weston_head18current_protectionE"></span><span id="_CPPv2N11weston_head18current_protectionE"></span><span id="weston_head::current_protection__weston_hdcp_protection"></span><span class="target" id="structweston__head_1ac0b673f5c060a68425b275a8b96a17f7"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="n"><span class="pre">weston_hdcp_protection</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">current_protection</span></span></span><a class="headerlink" href="#_CPPv4N11weston_head18current_protectionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Current content protection status. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="output.html" class="btn btn-neutral float-right" title="Outputs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="output-management.html" class="btn btn-neutral float-left" title="Output management" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Weston community.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

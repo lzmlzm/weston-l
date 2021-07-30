@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__renderer" kind="struct" language="C++" prot="public">
+    <compoundname>weston_renderer</compoundname>
+    <includes refid="libweston_8h" local="no">libweston.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__renderer_1a3efd939e39ab8b4347efb4152e8a5a56" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* weston_renderer::read_pixels) (struct weston_output *output, pixman_format_code_t format, void *pixels, uint32_t x, uint32_t y, uint32_t width, uint32_t height)</definition>
+        <argsstring>)(struct weston_output *output, pixman_format_code_t format, void *pixels, uint32_t x, uint32_t y, uint32_t width, uint32_t height)</argsstring>
+        <name>read_pixels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="923" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="923" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__renderer_1a3d20edac64ed4e94abf90c3c83479f2e" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_renderer::repaint_output) (struct weston_output *output, pixman_region32_t *output_damage)</definition>
+        <argsstring>)(struct weston_output *output, pixman_region32_t *output_damage)</argsstring>
+        <name>repaint_output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="927" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="927" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__renderer_1ad8200fad4388d10fe23aedfb1ac12acc" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_renderer::flush_damage) (struct weston_surface *surface)</definition>
+        <argsstring>)(struct weston_surface *surface)</argsstring>
+        <name>flush_damage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="929" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="929" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__renderer_1a7ecf9b1c4c4deff1880e666fce7be112" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_renderer::attach) (struct weston_surface *es, struct weston_buffer *buffer)</definition>
+        <argsstring>)(struct weston_surface *es, struct weston_buffer *buffer)</argsstring>
+        <name>attach</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="930" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="930" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__renderer_1a43e96c783c72c2da5d11fb40a18fc6d9" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_renderer::surface_set_color) (struct weston_surface *surface, float red, float green, float blue, float alpha)</definition>
+        <argsstring>)(struct weston_surface *surface, float red, float green, float blue, float alpha)</argsstring>
+        <name>surface_set_color</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="931" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="931" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__renderer_1ae0cf2b9ed74efb4f619b4b5e2b84d9fd" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_renderer::destroy) (struct weston_compositor *ec)</definition>
+        <argsstring>)(struct weston_compositor *ec)</argsstring>
+        <name>destroy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="934" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="934" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__renderer_1a5354db09e69ed5743a59f7ed80fd6bc0" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_renderer::surface_get_content_size) (struct weston_surface *surface, int *width, int *height)</definition>
+        <argsstring>)(struct weston_surface *surface, int *width, int *height)</argsstring>
+        <name>surface_get_content_size</name>
+        <briefdescription>
+<para>See <ref refid="compositor_8c_1af05cf4ebc640cb40915253335538b4cb" kindref="member">weston_surface_get_content_size()</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="938" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="938" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__renderer_1afcc57b0d929767f57e20b9e5d68f9dee" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* weston_renderer::surface_copy_content) (struct weston_surface *surface, void *target, size_t size, int src_x, int src_y, int width, int height)</definition>
+        <argsstring>)(struct weston_surface *surface, void *target, size_t size, int src_x, int src_y, int width, int height)</argsstring>
+        <name>surface_copy_content</name>
+        <briefdescription>
+<para>See <ref refid="compositor_8c_1a353f17fe827e1c25b87e7e964e8d9892" kindref="member">weston_surface_copy_content()</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="942" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="942" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__renderer_1a5999bb29493d522ddcff40318e677e2d" prot="public" static="no" mutable="no">
+        <type>bool(*</type>
+        <definition>bool(* weston_renderer::import_dmabuf) (struct weston_compositor *ec, struct linux_dmabuf_buffer *buffer)</definition>
+        <argsstring>)(struct weston_compositor *ec, struct linux_dmabuf_buffer *buffer)</argsstring>
+        <name>import_dmabuf</name>
+        <briefdescription>
+<para>See <ref refid="group__compositor_1ga321e3fcf45c3aa5f8d5280691f6232c3" kindref="member">weston_compositor_import_dmabuf()</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="948" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="948" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__renderer_1a45313a51035c0cda9938cc53bc843dbe" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_renderer::query_dmabuf_formats) (struct weston_compositor *ec, int **formats, int *num_formats)</definition>
+        <argsstring>)(struct weston_compositor *ec, int **formats, int *num_formats)</argsstring>
+        <name>query_dmabuf_formats</name>
+        <briefdescription>
+<para>On error sets num_formats to zero. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="952" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="952" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__renderer_1a2df7097f45e9c4b14ec943033e974383" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_renderer::query_dmabuf_modifiers) (struct weston_compositor *ec, int format, uint64_t **modifiers, int *num_modifiers)</definition>
+        <argsstring>)(struct weston_compositor *ec, int format, uint64_t **modifiers, int *num_modifiers)</argsstring>
+        <name>query_dmabuf_modifiers</name>
+        <briefdescription>
+<para>On error sets num_modifiers to zero. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="956" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="956" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="922" column="22" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="922" bodyend="959"/>
+    <listofallmembers>
+      <member refid="structweston__renderer_1a7ecf9b1c4c4deff1880e666fce7be112" prot="public" virt="non-virtual"><scope>weston_renderer</scope><name>attach</name></member>
+      <member refid="structweston__renderer_1ae0cf2b9ed74efb4f619b4b5e2b84d9fd" prot="public" virt="non-virtual"><scope>weston_renderer</scope><name>destroy</name></member>
+      <member refid="structweston__renderer_1ad8200fad4388d10fe23aedfb1ac12acc" prot="public" virt="non-virtual"><scope>weston_renderer</scope><name>flush_damage</name></member>
+      <member refid="structweston__renderer_1a5999bb29493d522ddcff40318e677e2d" prot="public" virt="non-virtual"><scope>weston_renderer</scope><name>import_dmabuf</name></member>
+      <member refid="structweston__renderer_1a45313a51035c0cda9938cc53bc843dbe" prot="public" virt="non-virtual"><scope>weston_renderer</scope><name>query_dmabuf_formats</name></member>
+      <member refid="structweston__renderer_1a2df7097f45e9c4b14ec943033e974383" prot="public" virt="non-virtual"><scope>weston_renderer</scope><name>query_dmabuf_modifiers</name></member>
+      <member refid="structweston__renderer_1a3efd939e39ab8b4347efb4152e8a5a56" prot="public" virt="non-virtual"><scope>weston_renderer</scope><name>read_pixels</name></member>
+      <member refid="structweston__renderer_1a3d20edac64ed4e94abf90c3c83479f2e" prot="public" virt="non-virtual"><scope>weston_renderer</scope><name>repaint_output</name></member>
+      <member refid="structweston__renderer_1afcc57b0d929767f57e20b9e5d68f9dee" prot="public" virt="non-virtual"><scope>weston_renderer</scope><name>surface_copy_content</name></member>
+      <member refid="structweston__renderer_1a5354db09e69ed5743a59f7ed80fd6bc0" prot="public" virt="non-virtual"><scope>weston_renderer</scope><name>surface_get_content_size</name></member>
+      <member refid="structweston__renderer_1a43e96c783c72c2da5d11fb40a18fc6d9" prot="public" virt="non-virtual"><scope>weston_renderer</scope><name>surface_set_color</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,979 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="weston-test-runner_8h" kind="file" language="C++">
+    <compoundname>weston-test-runner.h</compoundname>
+    <includes local="yes">config.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">wayland-util.h</includes>
+    <includes local="yes">shared/helpers.h</includes>
+    <includes refid="weston-test-fixture-compositor_8h" local="yes">weston-test-fixture-compositor.h</includes>
+    <includes refid="weston-testsuite-data_8h" local="yes">weston-testsuite-data.h</includes>
+    <includedby refid="weston-test-client-helper_8h" local="yes">/home/lzm/Wayland/weston/tests/weston-test-client-helper.h</includedby>
+    <includedby refid="ivi-layout-internal-test_8c" local="yes">/home/lzm/Wayland/weston/tests/ivi-layout-internal-test.c</includedby>
+    <includedby refid="plugin-registry-test_8c" local="yes">/home/lzm/Wayland/weston/tests/plugin-registry-test.c</includedby>
+    <includedby refid="surface-global-test_8c" local="yes">/home/lzm/Wayland/weston/tests/surface-global-test.c</includedby>
+    <includedby refid="surface-test_8c" local="yes">/home/lzm/Wayland/weston/tests/surface-test.c</includedby>
+    <includedby refid="vertex-clip-test_8c" local="yes">/home/lzm/Wayland/weston/tests/vertex-clip-test.c</includedby>
+    <includedby refid="weston-test-runner_8c" local="yes">/home/lzm/Wayland/weston/tests/weston-test-runner.c</includedby>
+    <includedby refid="xwayland-test_8c" local="yes">/home/lzm/Wayland/weston/tests/xwayland-test.c</includedby>
+    <incdepgraph>
+      <node id="9">
+        <label>stdbool.h</label>
+      </node>
+      <node id="8">
+        <label>libweston/libweston.h</label>
+        <link refid="libweston_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>weston-test-fixture-compositor.h</label>
+        <link refid="weston-test-fixture-compositor_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>stdint.h</label>
+      </node>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="14">
+        <label>wayland-server.h</label>
+      </node>
+      <node id="13">
+        <label>xkbcommon/xkbcommon.h</label>
+      </node>
+      <node id="5">
+        <label>shared/helpers.h</label>
+      </node>
+      <node id="17">
+        <label>weston-testsuite-data.h</label>
+        <link refid="weston-testsuite-data_8h"/>
+      </node>
+      <node id="7">
+        <label>wayland-client-protocol.h</label>
+      </node>
+      <node id="16">
+        <label>libweston/zalloc.h</label>
+        <link refid="zalloc_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>time.h</label>
+      </node>
+      <node id="15">
+        <label>libweston/matrix.h</label>
+        <link refid="matrix_8h"/>
+      </node>
+      <node id="12">
+        <label>pixman.h</label>
+      </node>
+      <node id="4">
+        <label>wayland-util.h</label>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/tests/weston-test-runner.h</label>
+        <link refid="weston-test-runner_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="28">
+        <label>/home/lzm/Wayland/weston/tests/yuv-buffer-test.c</label>
+        <link refid="yuv-buffer-test_8c"/>
+      </node>
+      <node id="5">
+        <label>/home/lzm/Wayland/weston/tests/buffer-transforms-test.c</label>
+        <link refid="buffer-transforms-test_8c"/>
+      </node>
+      <node id="9">
+        <label>/home/lzm/Wayland/weston/tests/input-timestamps-helper.c</label>
+        <link refid="input-timestamps-helper_8c"/>
+      </node>
+      <node id="29">
+        <label>/home/lzm/Wayland/weston/tests/ivi-layout-internal-test.c</label>
+        <link refid="ivi-layout-internal-test_8c"/>
+      </node>
+      <node id="8">
+        <label>/home/lzm/Wayland/weston/tests/event-test.c</label>
+        <link refid="event-test_8c"/>
+      </node>
+      <node id="14">
+        <label>/home/lzm/Wayland/weston/tests/linux-explicit-synchronization-test.c</label>
+        <link refid="linux-explicit-synchronization-test_8c"/>
+      </node>
+      <node id="23">
+        <label>/home/lzm/Wayland/weston/tests/text-test.c</label>
+        <link refid="text-test_8c"/>
+      </node>
+      <node id="20">
+        <label>/home/lzm/Wayland/weston/tests/string-test.c</label>
+        <link refid="string-test_8c"/>
+      </node>
+      <node id="30">
+        <label>/home/lzm/Wayland/weston/tests/plugin-registry-test.c</label>
+        <link refid="plugin-registry-test_8c"/>
+      </node>
+      <node id="11">
+        <label>/home/lzm/Wayland/weston/tests/ivi-layout-test-client.c</label>
+        <link refid="ivi-layout-test-client_8c"/>
+      </node>
+      <node id="35">
+        <label>/home/lzm/Wayland/weston/tests/xwayland-test.c</label>
+        <link refid="xwayland-test_8c"/>
+      </node>
+      <node id="10">
+        <label>/home/lzm/Wayland/weston/tests/internal-screenshot-test.c</label>
+        <link refid="internal-screenshot-test_8c"/>
+      </node>
+      <node id="24">
+        <label>/home/lzm/Wayland/weston/tests/touch-test.c</label>
+        <link refid="touch-test_8c"/>
+      </node>
+      <node id="3">
+        <label>/home/lzm/Wayland/weston/tests/alpha-blending-test.c</label>
+        <link refid="alpha-blending-test_8c"/>
+      </node>
+      <node id="33">
+        <label>/home/lzm/Wayland/weston/tests/vertex-clip-test.c</label>
+        <link refid="vertex-clip-test_8c"/>
+      </node>
+      <node id="16">
+        <label>/home/lzm/Wayland/weston/tests/output-transforms-test.c</label>
+        <link refid="output-transforms-test_8c"/>
+      </node>
+      <node id="22">
+        <label>/home/lzm/Wayland/weston/tests/subsurface-test.c</label>
+        <link refid="subsurface-test_8c"/>
+      </node>
+      <node id="6">
+        <label>/home/lzm/Wayland/weston/tests/devices-test.c</label>
+        <link refid="devices-test_8c"/>
+      </node>
+      <node id="26">
+        <label>/home/lzm/Wayland/weston/tests/viewporter-test.c</label>
+        <link refid="viewporter-test_8c"/>
+      </node>
+      <node id="31">
+        <label>/home/lzm/Wayland/weston/tests/surface-global-test.c</label>
+        <link refid="surface-global-test_8c"/>
+      </node>
+      <node id="15">
+        <label>/home/lzm/Wayland/weston/tests/output-damage-test.c</label>
+        <link refid="output-damage-test_8c"/>
+      </node>
+      <node id="25">
+        <label>/home/lzm/Wayland/weston/tests/viewporter-shot-test.c</label>
+        <link refid="viewporter-shot-test_8c"/>
+      </node>
+      <node id="12">
+        <label>/home/lzm/Wayland/weston/tests/ivi-shell-app-test.c</label>
+        <link refid="ivi-shell-app-test_8c"/>
+      </node>
+      <node id="19">
+        <label>/home/lzm/Wayland/weston/tests/roles-test.c</label>
+        <link refid="roles-test_8c"/>
+      </node>
+      <node id="13">
+        <label>/home/lzm/Wayland/weston/tests/keyboard-test.c</label>
+        <link refid="keyboard-test_8c"/>
+      </node>
+      <node id="17">
+        <label>/home/lzm/Wayland/weston/tests/pointer-test.c</label>
+        <link refid="pointer-test_8c"/>
+      </node>
+      <node id="4">
+        <label>/home/lzm/Wayland/weston/tests/bad-buffer-test.c</label>
+        <link refid="bad-buffer-test_8c"/>
+      </node>
+      <node id="32">
+        <label>/home/lzm/Wayland/weston/tests/surface-test.c</label>
+        <link refid="surface-test_8c"/>
+      </node>
+      <node id="34">
+        <label>/home/lzm/Wayland/weston/tests/weston-test-runner.c</label>
+        <link refid="weston-test-runner_8c"/>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/tests/weston-test-runner.h</label>
+        <link refid="weston-test-runner_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>/home/lzm/Wayland/weston/tests/presentation-test.c</label>
+        <link refid="presentation-test_8c"/>
+      </node>
+      <node id="7">
+        <label>/home/lzm/Wayland/weston/tests/drm-smoke-test.c</label>
+        <link refid="drm-smoke-test_8c"/>
+      </node>
+      <node id="27">
+        <label>/home/lzm/Wayland/weston/tests/weston-test-client-helper.c</label>
+        <link refid="weston-test-client-helper_8c"/>
+      </node>
+      <node id="2">
+        <label>/home/lzm/Wayland/weston/tests/weston-test-client-helper.h</label>
+        <link refid="weston-test-client-helper_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>/home/lzm/Wayland/weston/tests/subsurface-shot-test.c</label>
+        <link refid="subsurface-shot-test_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structweston__test__entry" prot="public">weston_test_entry</innerclass>
+    <innerclass refid="structfixture__metadata" prot="public">fixture_metadata</innerclass>
+    <innerclass refid="structfixture__setup__array" prot="public">fixture_setup_array</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="weston-test-runner_8h_1acdfda3189229288adfb700abf1999b85" prot="public" static="no">
+        <name>TEST_BEGIN</name>
+        <param><defname>name</defname></param>
+        <param><defname>arg</defname></param>
+        <initializer>static void name(arg)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.h" line="60" column="9" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="weston-test-runner_8h_1ab2789f826b3e52ff70bb5ada6f9b3114" prot="public" static="no">
+        <name>TEST_COMMON</name>
+        <param><defname>func</defname></param>
+        <param><defname>name</defname></param>
+        <param><defname>data</defname></param>
+        <param><defname>size</defname></param>
+        <param><defname>n_elem</defname></param>
+        <initializer>	static void func(void *);					\
+									\
+	const struct <ref refid="structweston__test__entry" kindref="compound">weston_test_entry</ref> <ref refid="structtest" kindref="compound">test</ref>##name			\
+		__attribute__ ((used, section (&quot;test_section&quot;))) =	\
+	{								\
+		#name, func, data, size, n_elem				\
+	};</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.h" line="63" column="9" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="weston-test-runner_8h_1acbdb643c0a81a7c510e1629047af358c" prot="public" static="no">
+        <name>NO_ARG_TEST</name>
+        <param><defname>name</defname></param>
+        <initializer>	<ref refid="weston-test-runner_8h_1ab2789f826b3e52ff70bb5ada6f9b3114" kindref="member">TEST_COMMON</ref>(wrap##name, name, NULL, 0, 1)			\
+	static void name(void);						\
+	static void wrap##name(void *data)				\
+	{								\
+		(void) data;						\
+		name();							\
+	}								\
+									\
+	<ref refid="weston-test-runner_8h_1acdfda3189229288adfb700abf1999b85" kindref="member">TEST_BEGIN</ref>(name, void)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.h" line="72" column="9" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="weston-test-runner_8h_1a517e8063c2bcadc163d7ff27e6db40da" prot="public" static="no">
+        <name>ARG_TEST</name>
+        <param><defname>name</defname></param>
+        <param><defname>test_data</defname></param>
+        <initializer>	<ref refid="weston-test-runner_8h_1ab2789f826b3e52ff70bb5ada6f9b3114" kindref="member">TEST_COMMON</ref>(name, name, <ref refid="vertex-clip-test_8c_1a6115133101abda4c59ea992ce2982aeb" kindref="member">test_data</ref>,				\
+		    sizeof(<ref refid="vertex-clip-test_8c_1a6115133101abda4c59ea992ce2982aeb" kindref="member">test_data</ref>[0]),				\
+		    ARRAY_LENGTH(<ref refid="vertex-clip-test_8c_1a6115133101abda4c59ea992ce2982aeb" kindref="member">test_data</ref>))				\
+	<ref refid="weston-test-runner_8h_1acdfda3189229288adfb700abf1999b85" kindref="member">TEST_BEGIN</ref>(name, void *data)					\</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.h" line="83" column="9" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__testharness_1ga45feb1f37ce559e49baf8655d769ef85" prot="public" static="no">
+        <name>TEST</name>
+        <param><defname>name</defname></param>
+        <initializer><ref refid="weston-test-runner_8h_1acbdb643c0a81a7c510e1629047af358c" kindref="member">NO_ARG_TEST</ref>(name)</initializer>
+        <briefdescription>
+<para>Add a test with no parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This defines one test as a new function. Use this macro in place of the function signature and put the function body after this.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name for the test, must be a valid function name. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.h" line="98" column="9" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__testharness_1gaac6645411da307a1046bcaa84d46583f" prot="public" static="no">
+        <name>TEST_P</name>
+        <param><defname>name</defname></param>
+        <param><defname>data_array</defname></param>
+        <initializer><ref refid="weston-test-runner_8h_1a517e8063c2bcadc163d7ff27e6db40da" kindref="member">ARG_TEST</ref>(name, data_array)</initializer>
+        <briefdescription>
+<para>Add an array driven test with a parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This defines an array of tests as a new function. Use this macro in place of the function signature and put the function body after this. The function will be executed once for each element in <computeroutput>data_array</computeroutput>, passing the element as the argument <computeroutput>void *data</computeroutput> to the function.</para>
+<para>This macro is not usable if fixture setup is using <ref refid="group__testharness_1gabc3f5a45b58ee07331059eb120f7b2bb" kindref="member">weston_test_harness_execute_as_plugin()</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name for the test, must be a valid function name. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A static const array of any type. The length will be recorded automatically. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.h" line="116" column="9" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__testharness_1ga889ae2ce5ee27319a760457a33a2da1a" prot="public" static="no">
+        <name>PLUGIN_TEST</name>
+        <param><defname>name</defname></param>
+        <initializer>	<ref refid="weston-test-runner_8h_1ab2789f826b3e52ff70bb5ada6f9b3114" kindref="member">TEST_COMMON</ref>(wrap##name, name, NULL, 0, 1)			\
+	static void name(struct <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> *);			\
+	static void wrap##name(void *compositor)			\
+	{								\
+		name(compositor);					\
+	}								\
+	<ref refid="weston-test-runner_8h_1acdfda3189229288adfb700abf1999b85" kindref="member">TEST_BEGIN</ref>(name, struct <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> *compositor)</initializer>
+        <briefdescription>
+<para>Add a test with <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> argument. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This defines one test as a new function. Use this macro in place of the function signature and put the function body after this. The function will have one argument <computeroutput>struct <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> *compositor</computeroutput>.</para>
+<para>This macro is only usable if fixture setup is using <ref refid="group__testharness_1gabc3f5a45b58ee07331059eb120f7b2bb" kindref="member">weston_test_harness_execute_as_plugin()</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name for the test, must be a valid function name. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.h" line="131" column="9" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__testharness_1gadc7eda648944f75a48748e6456a0e735" prot="public" static="no">
+        <name>DECLARE_FIXTURE_SETUP</name>
+        <param><defname>func_</defname></param>
+        <initializer>	enum <ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref>						\
+	<ref refid="group__testharness_1ga46577b43cb4378b2289ebfb91f5c6010" kindref="member">fixture_setup_run_</ref>(struct <ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref> *harness,		\
+			   const void *arg_)				\
+	{								\
+		return func_(harness);					\
+	}</initializer>
+        <briefdescription>
+<para>Register a fixture setup function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This registers the given (preferably static) function to be used for setting up any fixtures you might need. The function must have the signature:</para>
+<para><programlisting><codeline><highlight class="normal">enum<sp/>test_result_code<sp/>func_(struct<sp/>weston_test_harness<sp/>*harness)</highlight></codeline>
+</programlisting></para>
+<para>The function must call one of <ref refid="group__testharness_1ga9f98c3e898eb09ad2bd86343199ff619" kindref="member">weston_test_harness_execute_standalone()</ref>, <ref refid="group__testharness_1gabc3f5a45b58ee07331059eb120f7b2bb" kindref="member">weston_test_harness_execute_as_plugin()</ref> or <ref refid="group__testharness_1gacd7b26a0f0f337781013b40d229cf262" kindref="member">weston_test_harness_execute_as_client()</ref> passing in the <computeroutput>harness</computeroutput> argument, and return the return value from that call. The function can also return a test_result_code on its own if it does not want to run the tests, e.g. RESULT_SKIP or RESULT_HARD_ERROR.</para>
+<para>The function will be called once to run all tests.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>func_</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function to be used as fixture setup. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.h" line="211" column="9" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.h" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__testharness_1ga274def1a210d74f64d216796dbec4b2b" prot="public" static="no">
+        <name>DECLARE_FIXTURE_SETUP_WITH_ARG</name>
+        <param><defname>func_</defname></param>
+        <param><defname>array_</defname></param>
+        <param><defname>meta_</defname></param>
+        <initializer>	const struct <ref refid="structfixture__setup__array" kindref="compound">fixture_setup_array</ref> *				\
+	<ref refid="group__testharness_1ga02d7b07ce89636ff14598286827d279d" kindref="member">fixture_setup_array_get_</ref>(void)					\
+	{								\
+		static const struct <ref refid="structfixture__setup__array" kindref="compound">fixture_setup_array</ref> arr = {		\
+			.array = array_,				\
+			.element_size = sizeof(array_[0]),		\
+			.n_elements = ARRAY_LENGTH(array_),		\
+			.meta_offset = offsetof(typeof(array_[0]), meta_),	\
+		};								\
+		TYPEVERIFY(const struct <ref refid="structfixture__metadata" kindref="compound">fixture_metadata</ref> *, &amp;array_[0].meta_);	\
+		return &amp;arr;						\
+	}								\
+									\
+	enum <ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref>						\
+	<ref refid="group__testharness_1ga46577b43cb4378b2289ebfb91f5c6010" kindref="member">fixture_setup_run_</ref>(struct <ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref> *harness,		\
+			   const void *arg_)				\
+	{								\
+		typeof(array_[0]) *arg = arg_;				\
+		return func_(harness, arg);				\
+	}</initializer>
+        <briefdescription>
+<para>Register a fixture setup function with a data array. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This registers the given (preferably static) function to be used for setting up any fixtures you might need. The function must have the signature:</para>
+<para><programlisting><codeline><highlight class="normal">enum<sp/>test_result_code<sp/>func_(struct<sp/>weston_test_harness<sp/>*harness,<sp/>typeof(array_[0])<sp/>*arg)</highlight></codeline>
+</programlisting></para>
+<para>The function must call one of <ref refid="group__testharness_1ga9f98c3e898eb09ad2bd86343199ff619" kindref="member">weston_test_harness_execute_standalone()</ref>, <ref refid="group__testharness_1gabc3f5a45b58ee07331059eb120f7b2bb" kindref="member">weston_test_harness_execute_as_plugin()</ref> or <ref refid="group__testharness_1gacd7b26a0f0f337781013b40d229cf262" kindref="member">weston_test_harness_execute_as_client()</ref> passing in the <computeroutput>harness</computeroutput> argument, and return the return value from that call. The function can also return a test_result_code on its own if it does not want to run the tests, e.g. RESULT_SKIP or RESULT_HARD_ERROR.</para>
+<para>The function will be called once with each element of the array pointed to by <computeroutput>arg</computeroutput>, so that all tests would be repeated for each element in turn.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>func_</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function to be used as fixture setup. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>array_</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A static const array of arbitrary type. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meta_</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the field with type struct <ref refid="structfixture__metadata" kindref="compound">fixture_metadata</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.h" line="244" column="9" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.h" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="weston-test-runner_8h_1a106c801c1faf24b9147536e95209f953" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void testlog</definition>
+        <argsstring>(const char *fmt,...) WL_PRINTF(1</argsstring>
+        <name>testlog</name>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.h" line="141" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__testharness_1gae81a0b16dc498f48d248e7fb7d819660" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void const char *</type>
+        <definition>void const char* get_test_name</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_test_name</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the test name string with counter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The test name with fixture number <computeroutput>-f%d</computeroutput> added. For an array driven test, e.g. defined with <ref refid="group__testharness_1gaac6645411da307a1046bcaa84d46583f" kindref="member">TEST_P()</ref>, the name has also a <computeroutput>-e%d</computeroutput> suffix to indicate the array element number.</para>
+</simplesect>
+This is only usable from code paths inside <ref refid="group__testharness_1ga45feb1f37ce559e49baf8655d769ef85" kindref="member">TEST()</ref>, <ref refid="group__testharness_1gaac6645411da307a1046bcaa84d46583f" kindref="member">TEST_P()</ref>, <ref refid="group__testharness_1ga889ae2ce5ee27319a760457a33a2da1a" kindref="member">PLUGIN_TEST()</ref> etc. defined functions. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.h" line="144" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="69" bodyend="72" declfile="/home/lzm/Wayland/weston/tests/weston-test-runner.h" declline="144" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__testharness_1gaa0dd40f331a900d10af1cbad1d4372aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int get_test_fixture_index</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_test_fixture_index</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the current fixture index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the current fixture index which can be used directly as an index into the array passed as an argument to <ref refid="group__testharness_1ga274def1a210d74f64d216796dbec4b2b" kindref="member">DECLARE_FIXTURE_SETUP_WITH_ARG()</ref>.</para>
+<para>This is only usable from code paths inside <ref refid="group__testharness_1ga45feb1f37ce559e49baf8655d769ef85" kindref="member">TEST()</ref>, <ref refid="group__testharness_1gaac6645411da307a1046bcaa84d46583f" kindref="member">TEST_P()</ref>, <ref refid="group__testharness_1ga889ae2ce5ee27319a760457a33a2da1a" kindref="member">PLUGIN_TEST()</ref> etc. defined functions. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.h" line="147" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="85" bodyend="88" declfile="/home/lzm/Wayland/weston/tests/weston-test-runner.h" declline="147" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__testharness_1ga02d7b07ce89636ff14598286827d279d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const struct <ref refid="structfixture__setup__array" kindref="compound">fixture_setup_array</ref> *</type>
+        <definition>const struct fixture_setup_array* fixture_setup_array_get_</definition>
+        <argsstring>(void)</argsstring>
+        <name>fixture_setup_array_get_</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Fixture data array getter method. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="group__testharness_1ga274def1a210d74f64d216796dbec4b2b" kindref="member">DECLARE_FIXTURE_SETUP_WITH_ARG()</ref> overrides this in test programs. The default implementation has no data and makes the tests run once. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.h" line="178" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="585" bodyend="596" declfile="/home/lzm/Wayland/weston/tests/weston-test-runner.h" declline="178" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__testharness_1ga46577b43cb4378b2289ebfb91f5c6010" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></type>
+        <definition>enum test_result_code fixture_setup_run_</definition>
+        <argsstring>(struct weston_test_harness *harness, const void *arg_)</argsstring>
+        <name>fixture_setup_run_</name>
+        <param>
+          <type>struct <ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref> *</type>
+          <declname>harness</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>arg_</declname>
+        </param>
+        <briefdescription>
+<para>Fixture setup function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="group__testharness_1gadc7eda648944f75a48748e6456a0e735" kindref="member">DECLARE_FIXTURE_SETUP()</ref> and <ref refid="group__testharness_1ga274def1a210d74f64d216796dbec4b2b" kindref="member">DECLARE_FIXTURE_SETUP_WITH_ARG()</ref> override this in test programs. The default implementation just calls <ref refid="group__testharness_1ga9f98c3e898eb09ad2bd86343199ff619" kindref="member">weston_test_harness_execute_standalone()</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.h" line="178" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="608" bodyend="611" declfile="/home/lzm/Wayland/weston/tests/weston-test-runner.h" declline="178" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__testharness_1gacd7b26a0f0f337781013b40d229cf262" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></type>
+        <definition>enum test_result_code weston_test_harness_execute_as_client</definition>
+        <argsstring>(struct weston_test_harness *harness, const struct compositor_setup *setup)</argsstring>
+        <name>weston_test_harness_execute_as_client</name>
+        <param>
+          <type>struct <ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref> *</type>
+          <declname>harness</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structcompositor__setup" kindref="compound">compositor_setup</ref> *</type>
+          <declname>setup</declname>
+        </param>
+        <briefdescription>
+<para>Execute all tests as client tests. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>harness</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The test harness context. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>setup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The compositor configuration.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Initializes the compositor with the given setup and executes the compositor. The compositor creates a new thread where all tests in the test program are serially executed. Once the thread finishes, the compositor returns from its event loop and cleans up.</para>
+<para>Returns RESULT_SKIP if the requested compositor features, e.g. GL-renderer, are not built.</para>
+<para><simplesect kind="see"><para><ref refid="group__testharness_1gadc7eda648944f75a48748e6456a0e735" kindref="member">DECLARE_FIXTURE_SETUP()</ref>, <ref refid="group__testharness_1ga274def1a210d74f64d216796dbec4b2b" kindref="member">DECLARE_FIXTURE_SETUP_WITH_ARG()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.h" line="178" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="522" bodyend="529" declfile="/home/lzm/Wayland/weston/tests/weston-test-runner.h" declline="178" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__testharness_1gabc3f5a45b58ee07331059eb120f7b2bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></type>
+        <definition>enum test_result_code weston_test_harness_execute_as_plugin</definition>
+        <argsstring>(struct weston_test_harness *harness, const struct compositor_setup *setup)</argsstring>
+        <name>weston_test_harness_execute_as_plugin</name>
+        <param>
+          <type>struct <ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref> *</type>
+          <declname>harness</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structcompositor__setup" kindref="compound">compositor_setup</ref> *</type>
+          <declname>setup</declname>
+        </param>
+        <briefdescription>
+<para>Execute all tests as plugin tests. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>harness</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The test harness context. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>setup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The compositor configuration.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Initializes the compositor with the given setup and executes the compositor. The compositor executes all tests in the test program serially from an idle handler, then returns from its event loop and cleans up.</para>
+<para>Returns RESULT_SKIP if the requested compositor features, e.g. GL-renderer, are not built.</para>
+<para><simplesect kind="see"><para><ref refid="group__testharness_1gadc7eda648944f75a48748e6456a0e735" kindref="member">DECLARE_FIXTURE_SETUP()</ref>, <ref refid="group__testharness_1ga274def1a210d74f64d216796dbec4b2b" kindref="member">DECLARE_FIXTURE_SETUP_WITH_ARG()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.h" line="178" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="547" bodyend="554" declfile="/home/lzm/Wayland/weston/tests/weston-test-runner.h" declline="178" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__testharness_1ga9f98c3e898eb09ad2bd86343199ff619" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></type>
+        <definition>enum test_result_code weston_test_harness_execute_standalone</definition>
+        <argsstring>(struct weston_test_harness *harness)</argsstring>
+        <name>weston_test_harness_execute_standalone</name>
+        <param>
+          <type>struct <ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref> *</type>
+          <declname>harness</declname>
+        </param>
+        <briefdescription>
+<para>Execute all tests as standalone tests. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>harness</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The test harness context.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Executes all tests in the test program serially without any further setup, particularly without any compositor instance created.</para>
+<para><simplesect kind="see"><para><ref refid="group__testharness_1gadc7eda648944f75a48748e6456a0e735" kindref="member">DECLARE_FIXTURE_SETUP()</ref>, <ref refid="group__testharness_1ga274def1a210d74f64d216796dbec4b2b" kindref="member">DECLARE_FIXTURE_SETUP_WITH_ARG()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.h" line="178" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="567" bodyend="575" declfile="/home/lzm/Wayland/weston/tests/weston-test-runner.h" declline="178" declcolumn="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2012<sp/>Intel<sp/>Corporation</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2013<sp/>Sam<sp/>Spilsbury<sp/>&lt;smspillaz@gmail.com&gt;</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>(including<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>next<sp/>paragraph)<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>NONINFRINGEMENT.<sp/><sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_WESTON_TEST_RUNNER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_WESTON_TEST_RUNNER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;wayland-util.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;shared/helpers.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="weston-test-fixture-compositor_8h" kindref="compound">weston-test-fixture-compositor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="weston-testsuite-data_8h" kindref="compound">weston-testsuite-data.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>NDEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>&quot;Tests<sp/>must<sp/>not<sp/>be<sp/>built<sp/>with<sp/>NDEBUG<sp/>defined,<sp/>they<sp/>rely<sp/>on<sp/>assert().&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="structweston__test__entry" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__test__entry" kindref="compound">weston_test_entry</ref><sp/>{</highlight></codeline>
+<codeline lineno="53" refid="structweston__test__entry_1aa2d340947469ae6e1e1d21154ada010c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structweston__test__entry_1aa2d340947469ae6e1e1d21154ada010c" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="54" refid="structweston__test__entry_1aabba374e8d72ab10531d89ec9fb04bf6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="structweston__test__entry_1aabba374e8d72ab10531d89ec9fb04bf6" kindref="member">run</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="55" refid="structweston__test__entry_1a77d2fd516c11498f754123e36e40ff00" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structweston__test__entry_1a77d2fd516c11498f754123e36e40ff00" kindref="member">table_data</ref>;</highlight></codeline>
+<codeline lineno="56" refid="structweston__test__entry_1a029f6a581698ea375429be890e46cdf8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="structweston__test__entry_1a029f6a581698ea375429be890e46cdf8" kindref="member">element_size</ref>;</highlight></codeline>
+<codeline lineno="57" refid="structweston__test__entry_1a12a79b4e5483c31ac942f7e2ad15cf28" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structweston__test__entry_1a12a79b4e5483c31ac942f7e2ad15cf28" kindref="member">n_elements</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}<sp/>__attribute__<sp/>((aligned<sp/>(32)));</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="weston-test-runner_8h_1acdfda3189229288adfb700abf1999b85" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TEST_BEGIN(name,<sp/>arg)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="61"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>static<sp/>void<sp/>name(arg)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="weston-test-runner_8h_1ab2789f826b3e52ff70bb5ada6f9b3114" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TEST_COMMON(func,<sp/>name,<sp/>data,<sp/>size,<sp/>n_elem)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="64"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>static<sp/>void<sp/>func(void<sp/>*);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="65"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="66"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>struct<sp/>weston_test_entry<sp/>test##name<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="67"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__<sp/>((used,<sp/>section<sp/>(&quot;test_section&quot;)))<sp/>=<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="68"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="69"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#name,<sp/>func,<sp/>data,<sp/>size,<sp/>n_elem<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="70"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="weston-test-runner_8h_1acbdb643c0a81a7c510e1629047af358c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NO_ARG_TEST(name)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="73"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TEST_COMMON(wrap##name,<sp/>name,<sp/>NULL,<sp/>0,<sp/>1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="74"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>static<sp/>void<sp/>name(void);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="75"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>static<sp/>void<sp/>wrap##name(void<sp/>*data)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="76"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="77"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(void)<sp/>data;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="78"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>name();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="79"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="80"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="81"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TEST_BEGIN(name,<sp/>void)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="weston-test-runner_8h_1a517e8063c2bcadc163d7ff27e6db40da" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ARG_TEST(name,<sp/>test_data)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="84"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TEST_COMMON(name,<sp/>name,<sp/>test_data,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="85"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizeof(test_data[0]),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="86"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ARRAY_LENGTH(test_data))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="87"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TEST_BEGIN(name,<sp/>void<sp/>*data)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="88"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="group__testharness_1ga45feb1f37ce559e49baf8655d769ef85" refkind="member"><highlight class="preprocessor">#define<sp/>TEST(name)<sp/>NO_ARG_TEST(name)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="group__testharness_1gaac6645411da307a1046bcaa84d46583f" refkind="member"><highlight class="preprocessor">#define<sp/>TEST_P(name,<sp/>data_array)<sp/>ARG_TEST(name,<sp/>data_array)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="group__testharness_1ga889ae2ce5ee27319a760457a33a2da1a" refkind="member"><highlight class="preprocessor">#define<sp/>PLUGIN_TEST(name)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="132"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TEST_COMMON(wrap##name,<sp/>name,<sp/>NULL,<sp/>0,<sp/>1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="133"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>static<sp/>void<sp/>name(struct<sp/>weston_compositor<sp/>*);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="134"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>static<sp/>void<sp/>wrap##name(void<sp/>*compositor)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="135"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="136"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>name(compositor);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="137"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="138"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TEST_BEGIN(name,<sp/>struct<sp/>weston_compositor<sp/>*compositor)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><ref refid="weston-test-runner_8h_1a106c801c1faf24b9147536e95209f953" kindref="member">testlog</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*fmt,<sp/>...)<sp/><ref refid="weston-log-wayland_8c_1a186cacbd77320fbf31528cec645f105f" kindref="member">WL_PRINTF</ref>(1,<sp/>2);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal">const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><ref refid="group__testharness_1gae81a0b16dc498f48d248e7fb7d819660" kindref="member">get_test_name</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><ref refid="group__testharness_1gaa0dd40f331a900d10af1cbad1d4372aa" kindref="member">get_test_fixture_index</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158" refid="structfixture__metadata" refkind="compound"><highlight class="normal">struct<sp/><ref refid="structfixture__metadata" kindref="compound">fixture_metadata</ref><sp/>{</highlight></codeline>
+<codeline lineno="160" refid="structfixture__metadata_1aaf01a2c28621f0b45e4d8bc669469279" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structfixture__metadata_1aaf01a2c28621f0b45e4d8bc669469279" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170" refid="structfixture__setup__array" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfixture__setup__array" kindref="compound">fixture_setup_array</ref><sp/>{</highlight></codeline>
+<codeline lineno="171" refid="structfixture__setup__array_1aee35175bb680c0a47025cf2502a96f7c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structfixture__setup__array_1aee35175bb680c0a47025cf2502a96f7c" kindref="member">array</ref>;</highlight></codeline>
+<codeline lineno="172" refid="structfixture__setup__array_1ac6e0ba03a3efb7fb349bdaae25cbafa0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="structfixture__setup__array_1ac6e0ba03a3efb7fb349bdaae25cbafa0" kindref="member">element_size</ref>;</highlight></codeline>
+<codeline lineno="173" refid="structfixture__setup__array_1a6951fe80c14c9cd286965c3745d4d366" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structfixture__setup__array_1a6951fe80c14c9cd286965c3745d4d366" kindref="member">n_elements</ref>;</highlight></codeline>
+<codeline lineno="174" refid="structfixture__setup__array_1a2606a50c547b715f247fd6fa1888c208" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="structfixture__setup__array_1a2606a50c547b715f247fd6fa1888c208" kindref="member">meta_offset</ref>;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfixture__setup__array" kindref="compound">fixture_setup_array</ref><sp/>*</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><ref refid="group__testharness_1ga02d7b07ce89636ff14598286827d279d" kindref="member">fixture_setup_array_get_</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref>;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><ref refid="group__testharness_1ga46577b43cb4378b2289ebfb91f5c6010" kindref="member">fixture_setup_run_</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref><sp/>*harness,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*arg_);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211" refid="group__testharness_1gadc7eda648944f75a48748e6456a0e735" refkind="member"><highlight class="preprocessor">#define<sp/>DECLARE_FIXTURE_SETUP(func_)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="212"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enum<sp/>test_result_code<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="213"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fixture_setup_run_(struct<sp/>weston_test_harness<sp/>*harness,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="214"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>void<sp/>*arg_)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="215"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="216"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>func_(harness);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="217"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244" refid="group__testharness_1ga274def1a210d74f64d216796dbec4b2b" refkind="member"><highlight class="preprocessor">#define<sp/>DECLARE_FIXTURE_SETUP_WITH_ARG(func_,<sp/>array_,<sp/>meta_)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="245"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>struct<sp/>fixture_setup_array<sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="246"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fixture_setup_array_get_(void)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="247"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="248"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>static<sp/>const<sp/>struct<sp/>fixture_setup_array<sp/>arr<sp/>=<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="249"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.array<sp/>=<sp/>array_,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="250"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.element_size<sp/>=<sp/>sizeof(array_[0]),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="251"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.n_elements<sp/>=<sp/>ARRAY_LENGTH(array_),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="252"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.meta_offset<sp/>=<sp/>offsetof(typeof(array_[0]),<sp/>meta_),<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="253"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="254"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TYPEVERIFY(const<sp/>struct<sp/>fixture_metadata<sp/>*,<sp/>&amp;array_[0].meta_);<sp/><sp/>\</highlight></codeline>
+<codeline lineno="255"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>&amp;arr;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="256"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="257"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="258"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enum<sp/>test_result_code<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="259"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fixture_setup_run_(struct<sp/>weston_test_harness<sp/>*harness,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="260"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>void<sp/>*arg_)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="261"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="262"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typeof(array_[0])<sp/>*arg<sp/>=<sp/>arg_;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="263"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>func_(harness,<sp/>arg);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="264"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><ref refid="group__testharness_1gacd7b26a0f0f337781013b40d229cf262" kindref="member">weston_test_harness_execute_as_client</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref><sp/>*harness,</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structcompositor__setup" kindref="compound">compositor_setup</ref><sp/>*setup);</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><ref refid="group__testharness_1gabc3f5a45b58ee07331059eb120f7b2bb" kindref="member">weston_test_harness_execute_as_plugin</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref><sp/>*harness,</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structcompositor__setup" kindref="compound">compositor_setup</ref><sp/>*setup);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><ref refid="group__testharness_1ga9f98c3e898eb09ad2bd86343199ff619" kindref="member">weston_test_harness_execute_standalone</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref><sp/>*harness);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.h"/>
+  </compounddef>
+</doxygen>

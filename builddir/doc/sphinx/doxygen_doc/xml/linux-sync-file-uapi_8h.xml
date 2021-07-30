@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="linux-sync-file-uapi_8h" kind="file" language="C++">
+    <compoundname>linux-sync-file-uapi.h</compoundname>
+    <includes local="no">linux/ioctl.h</includes>
+    <includes local="no">linux/types.h</includes>
+    <includedby refid="linux-sync-file_8c" local="yes">/home/lzm/Wayland/weston/libweston/linux-sync-file.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/libweston/linux-sync-file-uapi.h</label>
+        <link refid="linux-sync-file-uapi_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>linux/ioctl.h</label>
+      </node>
+      <node id="3">
+        <label>linux/types.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/lzm/Wayland/weston/libweston/linux-sync-file.c</label>
+        <link refid="linux-sync-file_8c"/>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/libweston/linux-sync-file-uapi.h</label>
+        <link refid="linux-sync-file-uapi_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structsync__fence__info" prot="public">sync_fence_info</innerclass>
+    <innerclass refid="structsync__file__info" prot="public">sync_file_info</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="linux-sync-file-uapi_8h_1af85850f7f2fe3592ef0f0da49296e218" prot="public" static="no">
+        <name>SYNC_IOC_MAGIC</name>
+        <initializer>&apos;&gt;&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/linux-sync-file-uapi.h" line="27" column="9" bodyfile="/home/lzm/Wayland/weston/libweston/linux-sync-file-uapi.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="linux-sync-file-uapi_8h_1a2103719b983fbb063f9651e6abf7d4e7" prot="public" static="no">
+        <name>SYNC_IOC_FILE_INFO</name>
+        <initializer>_IOWR(<ref refid="linux-sync-file-uapi_8h_1af85850f7f2fe3592ef0f0da49296e218" kindref="member">SYNC_IOC_MAGIC</ref>, 4, struct <ref refid="structsync__file__info" kindref="compound">sync_file_info</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/linux-sync-file-uapi.h" line="28" column="9" bodyfile="/home/lzm/Wayland/weston/libweston/linux-sync-file-uapi.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>Sync<sp/>file<sp/>Linux<sp/>kernel<sp/>UAPI<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>WESTON_LINUX_SYNC_FILE_UAPI_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WESTON_LINUX_SYNC_FILE_UAPI_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;linux/ioctl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;linux/types.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="structsync__fence__info" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsync__fence__info" kindref="compound">sync_fence_info</ref><sp/>{</highlight></codeline>
+<codeline lineno="10" refid="structsync__fence__info_1ae73bedd36944db9e29790465478dfe4b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structsync__fence__info_1ae73bedd36944db9e29790465478dfe4b" kindref="member">obj_name</ref>[32];</highlight></codeline>
+<codeline lineno="11" refid="structsync__fence__info_1ae23d8d038befbb3ba49ec324de86d233" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structsync__fence__info_1ae23d8d038befbb3ba49ec324de86d233" kindref="member">driver_name</ref>[32];</highlight></codeline>
+<codeline lineno="12" refid="structsync__fence__info_1a0af1ce7ca8fc6d00588dff9de05a7fff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__s32<sp/><ref refid="structsync__fence__info_1a0af1ce7ca8fc6d00588dff9de05a7fff" kindref="member">status</ref>;</highlight></codeline>
+<codeline lineno="13" refid="structsync__fence__info_1a5d465613c4ce272e28942102aaaaf57b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__u32<sp/><ref refid="structsync__fence__info_1a5d465613c4ce272e28942102aaaaf57b" kindref="member">flags</ref>;</highlight></codeline>
+<codeline lineno="14" refid="structsync__fence__info_1a0458fc806e2a904c2920186d86f5c3e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__u64<sp/><ref refid="structsync__fence__info_1a0458fc806e2a904c2920186d86f5c3e3" kindref="member">timestamp_ns</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="structsync__file__info" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsync__file__info" kindref="compound">sync_file_info</ref><sp/>{</highlight></codeline>
+<codeline lineno="18" refid="structsync__file__info_1a82e8656559723ca035eb866b2a4174e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structsync__file__info_1a82e8656559723ca035eb866b2a4174e2" kindref="member">name</ref>[32];</highlight></codeline>
+<codeline lineno="19" refid="structsync__file__info_1aadc02a85afc145c58e6e00cf33fbdc27" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__s32<sp/><ref refid="structsync__file__info_1aadc02a85afc145c58e6e00cf33fbdc27" kindref="member">status</ref>;</highlight></codeline>
+<codeline lineno="20" refid="structsync__file__info_1a08e53c0844313774277451461ddb2c48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__u32<sp/><ref refid="structsync__file__info_1a08e53c0844313774277451461ddb2c48" kindref="member">flags</ref>;</highlight></codeline>
+<codeline lineno="21" refid="structsync__file__info_1a6b147a603aaaf2bb19d109728f30d234" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__u32<sp/><ref refid="structsync__file__info_1a6b147a603aaaf2bb19d109728f30d234" kindref="member">num_fences</ref>;</highlight></codeline>
+<codeline lineno="22" refid="structsync__file__info_1abe6568d0b31c6897c22cb1bbc38efe1c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__u32<sp/><ref refid="structsync__file__info_1abe6568d0b31c6897c22cb1bbc38efe1c" kindref="member">pad</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="structsync__file__info_1a090f1f4f934bbbafbe098ebe6228ae4b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__u64<sp/><ref refid="structsync__file__info_1a090f1f4f934bbbafbe098ebe6228ae4b" kindref="member">sync_fence_info</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="linux-sync-file-uapi_8h_1af85850f7f2fe3592ef0f0da49296e218" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SYNC_IOC_MAGIC<sp/>&apos;&gt;&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="linux-sync-file-uapi_8h_1a2103719b983fbb063f9651e6abf7d4e7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SYNC_IOC_FILE_INFO<sp/>_IOWR(SYNC_IOC_MAGIC,<sp/>4,<sp/>struct<sp/>sync_file_info)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>WESTON_LINUX_SYNC_FILE_UAPI_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/libweston/linux-sync-file-uapi.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structdmabuf__format" kind="struct" language="C++" prot="public">
+    <compoundname>dmabuf_format</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdmabuf__format_1a45e2291242764288376990de7982cb49" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t dmabuf_format::format</definition>
+        <argsstring></argsstring>
+        <name>format</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" line="139" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdmabuf__format_1a64b4aea734a37f158aa49116dec40c51" prot="public" static="no" mutable="no">
+        <type>struct wl_list</type>
+        <definition>struct wl_list dmabuf_format::link</definition>
+        <argsstring></argsstring>
+        <name>link</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" line="139" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdmabuf__format_1ae6f4aa342e960f7bd1617208318a349b" prot="public" static="no" mutable="no">
+        <type>uint64_t *</type>
+        <definition>uint64_t* dmabuf_format::modifiers</definition>
+        <argsstring></argsstring>
+        <name>modifiers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" line="142" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdmabuf__format_1a9324580bebc2667dc12aa9b9fc61ee73" prot="public" static="no" mutable="no">
+        <type>unsigned *</type>
+        <definition>unsigned* dmabuf_format::external_only</definition>
+        <argsstring></argsstring>
+        <name>external_only</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" line="143" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdmabuf__format_1ab8913459d2300031bff051718e386f2c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int dmabuf_format::num_modifiers</definition>
+        <argsstring></argsstring>
+        <name>num_modifiers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" line="144" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" line="138" column="20" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c" bodystart="138" bodyend="145"/>
+    <listofallmembers>
+      <member refid="structdmabuf__format_1a9324580bebc2667dc12aa9b9fc61ee73" prot="public" virt="non-virtual"><scope>dmabuf_format</scope><name>external_only</name></member>
+      <member refid="structdmabuf__format_1a45e2291242764288376990de7982cb49" prot="public" virt="non-virtual"><scope>dmabuf_format</scope><name>format</name></member>
+      <member refid="structdmabuf__format_1a64b4aea734a37f158aa49116dec40c51" prot="public" virt="non-virtual"><scope>dmabuf_format</scope><name>link</name></member>
+      <member refid="structdmabuf__format_1ae6f4aa342e960f7bd1617208318a349b" prot="public" virt="non-virtual"><scope>dmabuf_format</scope><name>modifiers</name></member>
+      <member refid="structdmabuf__format_1ab8913459d2300031bff051718e386f2c" prot="public" virt="non-virtual"><scope>dmabuf_format</scope><name>num_modifiers</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

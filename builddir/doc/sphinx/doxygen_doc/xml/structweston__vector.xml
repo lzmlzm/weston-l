@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__vector" kind="struct" language="C++" prot="public">
+    <compoundname>weston_vector</compoundname>
+    <includes refid="matrix_8h" local="no">matrix.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__vector_1af55e9e0affe6cdee57a6ae499424fede" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float weston_vector::f[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/matrix.h" line="47" column="7" bodyfile="/home/lzm/Wayland/weston/include/libweston/matrix.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/include/libweston/matrix.h" line="46" column="20" bodyfile="/home/lzm/Wayland/weston/include/libweston/matrix.h" bodystart="46" bodyend="48"/>
+    <listofallmembers>
+      <member refid="structweston__vector_1af55e9e0affe6cdee57a6ae499424fede" prot="public" virt="non-virtual"><scope>weston_vector</scope><name>f</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

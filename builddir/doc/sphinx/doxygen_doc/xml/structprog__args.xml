@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structprog__args" kind="struct" language="C++" prot="public">
+    <compoundname>prog_args</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structprog__args_1aa0c07a3143b17184a9f7f2c8372af9f5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int prog_args::argc</definition>
+        <argsstring></argsstring>
+        <name>argc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.c" line="49" column="5" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.c" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprog__args_1ad07d53dcf09debcd906a8523fec1e2f5" prot="public" static="no" mutable="no">
+        <type>char **</type>
+        <definition>char** prog_args::argv</definition>
+        <argsstring></argsstring>
+        <name>argv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.c" line="50" column="6" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.c" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprog__args_1ac04dc7f5447d2073e1cf7e0220313a07" prot="public" static="no" mutable="no">
+        <type>char **</type>
+        <definition>char** prog_args::saved</definition>
+        <argsstring></argsstring>
+        <name>saved</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.c" line="51" column="6" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.c" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structprog__args_1afe0ae457edcea1ca90fd2890db159c97" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int prog_args::alloc</definition>
+        <argsstring></argsstring>
+        <name>alloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.c" line="52" column="5" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.c" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.c" line="48" column="16" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.c" bodystart="48" bodyend="53"/>
+    <listofallmembers>
+      <member refid="structprog__args_1afe0ae457edcea1ca90fd2890db159c97" prot="public" virt="non-virtual"><scope>prog_args</scope><name>alloc</name></member>
+      <member refid="structprog__args_1aa0c07a3143b17184a9f7f2c8372af9f5" prot="public" virt="non-virtual"><scope>prog_args</scope><name>argc</name></member>
+      <member refid="structprog__args_1ad07d53dcf09debcd906a8523fec1e2f5" prot="public" virt="non-virtual"><scope>prog_args</scope><name>argv</name></member>
+      <member refid="structprog__args_1ac04dc7f5447d2073e1cf7e0220313a07" prot="public" virt="non-virtual"><scope>prog_args</scope><name>saved</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

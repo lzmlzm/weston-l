@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structrdp__to__xkb__keyboard__layout" kind="struct" language="C++" prot="public">
+    <compoundname>rdp_to_xkb_keyboard_layout</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structrdp__to__xkb__keyboard__layout_1afef6c7c9022be25c11a3d6df06d57ffd" prot="public" static="no" mutable="no">
+        <type>UINT32</type>
+        <definition>UINT32 rdp_to_xkb_keyboard_layout::rdpLayoutCode</definition>
+        <argsstring></argsstring>
+        <name>rdpLayoutCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-rdp/rdp.c" line="753" column="8" bodyfile="/home/lzm/Wayland/weston/libweston/backend-rdp/rdp.c" bodystart="753" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrdp__to__xkb__keyboard__layout_1a005b131f3b79dd26270c0b887524d5de" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* rdp_to_xkb_keyboard_layout::xkbLayout</definition>
+        <argsstring></argsstring>
+        <name>xkbLayout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-rdp/rdp.c" line="754" column="12" bodyfile="/home/lzm/Wayland/weston/libweston/backend-rdp/rdp.c" bodystart="754" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrdp__to__xkb__keyboard__layout_1a4c46d8d8e12efe93b1349362aab0f50d" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* rdp_to_xkb_keyboard_layout::xkbVariant</definition>
+        <argsstring></argsstring>
+        <name>xkbVariant</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-rdp/rdp.c" line="755" column="12" bodyfile="/home/lzm/Wayland/weston/libweston/backend-rdp/rdp.c" bodystart="755" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/backend-rdp/rdp.c" line="752" column="33" bodyfile="/home/lzm/Wayland/weston/libweston/backend-rdp/rdp.c" bodystart="752" bodyend="756"/>
+    <listofallmembers>
+      <member refid="structrdp__to__xkb__keyboard__layout_1afef6c7c9022be25c11a3d6df06d57ffd" prot="public" virt="non-virtual"><scope>rdp_to_xkb_keyboard_layout</scope><name>rdpLayoutCode</name></member>
+      <member refid="structrdp__to__xkb__keyboard__layout_1a005b131f3b79dd26270c0b887524d5de" prot="public" virt="non-virtual"><scope>rdp_to_xkb_keyboard_layout</scope><name>xkbLayout</name></member>
+      <member refid="structrdp__to__xkb__keyboard__layout_1a4c46d8d8e12efe93b1349362aab0f50d" prot="public" virt="non-virtual"><scope>rdp_to_xkb_keyboard_layout</scope><name>xkbVariant</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

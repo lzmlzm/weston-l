@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structgl__renderer__interface" kind="struct" language="C++" prot="public">
+    <compoundname>gl_renderer_interface</compoundname>
+    <includes refid="gl-renderer_8h" local="no">gl-renderer.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgl__renderer__interface_1ae0141c11b0fe5d0749016b7904513230" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* gl_renderer_interface::display_create) (struct weston_compositor *ec, const struct gl_renderer_display_options *options)</definition>
+        <argsstring>)(struct weston_compositor *ec, const struct gl_renderer_display_options *options)</argsstring>
+        <name>display_create</name>
+        <briefdescription>
+<para>Initialize GL-renderer with the given EGL platform and native display. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> where to initialize. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The options struct describing display configuration </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success, -1 on failure.</para>
+</simplesect>
+This function creates an EGLDisplay and initializes it. It also creates the GL ES context and sets it up. It attempts GL ES 3.0 and falls back to GL ES 2.0 if 3.0 is not supported.</para>
+<para>If <computeroutput>platform</computeroutput> is zero or EGL_EXT_platform_base is not supported, choosing the platform is left for the EGL implementation. Otherwise the given platform is used explicitly if the EGL implementation advertises it. Without the advertisement this function fails.</para>
+<para>If neither EGL_KHR_no_config_context or EGL_MESA_configless_context are supported, the arguments egl_surface_type, drm_formats, and drm_formats_count are used to find a so called base EGLConfig. The GL context is created with the base EGLConfig, and outputs will be required to use the same config as well. If one or both of the extensions are supported, these arguments are unused, and each output can use a different EGLConfig (pixel format).</para>
+<para>The first format in drm_formats that matches any EGLConfig determines which EGLConfig is chosen. On EGL GBM platform, the pixel format must match exactly. On other platforms, it is enough that each R, G, B, A channel has the same number of bits as in the DRM format. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" line="132" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer__interface_1a3dc18976e80358558c6eef98afbaea90" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* gl_renderer_interface::output_window_create) (struct weston_output *output, const struct gl_renderer_output_options *options)</definition>
+        <argsstring>)(struct weston_output *output, const struct gl_renderer_output_options *options)</argsstring>
+        <name>output_window_create</name>
+        <briefdescription>
+<para>Attach GL-renderer to the output with a native window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output to create a rendering surface for. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The options struct describing output configuration </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success, -1 on failure.</para>
+</simplesect>
+This function creates the renderer data structures needed to repaint the output. The repaint results will be directed to the given native window.</para>
+<para>If EGL_EXT_platform_base is supported then <computeroutput>window_for_platform</computeroutput> is used, otherwise <computeroutput>window_for_legacy</computeroutput> is used. This is because the handle on X11 platform is different between the two.</para>
+<para>The first format in drm_formats that matches any EGLConfig determines which EGLConfig is chosen. See <computeroutput>display_create</computeroutput> about how the matching works and the possible limitations.</para>
+<para>This function should be used only if <computeroutput>display_create</computeroutput> was called with <computeroutput>EGL_WINDOW_BIT</computeroutput> in <computeroutput>egl_surface_type</computeroutput>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" line="157" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer__interface_1a668eaa9b13399a91e3d84dc36de62f15" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* gl_renderer_interface::output_pbuffer_create) (struct weston_output *output, const struct gl_renderer_pbuffer_options *options)</definition>
+        <argsstring>)(struct weston_output *output, const struct gl_renderer_pbuffer_options *options)</argsstring>
+        <name>output_pbuffer_create</name>
+        <briefdescription>
+<para>Attach GL-renderer to the output with internal pixel storage. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output to create a rendering surface for. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The options struct describing the pbuffer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success, -1 on failure.</para>
+</simplesect>
+This function creates the renderer data structures needed to repaint the output. The repaint results will be kept internal and can only be accessed through e.g. screen capture.</para>
+<para>The first format in drm_formats that matches any EGLConfig determines which EGLConfig is chosen. See <computeroutput>display_create</computeroutput> about how the matching works and the possible limitations.</para>
+<para>This function should be used only if <computeroutput>display_create</computeroutput> was called with <computeroutput>EGL_PBUFFER_BIT</computeroutput> in <computeroutput>egl_surface_type</computeroutput>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" line="178" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer__interface_1a8b5db07d1de90d0024b15596fa42e5b5" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gl_renderer_interface::output_destroy) (struct weston_output *output)</definition>
+        <argsstring>)(struct weston_output *output)</argsstring>
+        <name>output_destroy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" line="181" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer__interface_1a603c14b0b9e047c925a16a00fb01ff13" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gl_renderer_interface::output_set_border) (struct weston_output *output, enum gl_renderer_border_side side, int32_t width, int32_t height, int32_t tex_width, unsigned char *data)</definition>
+        <argsstring>)(struct weston_output *output, enum gl_renderer_border_side side, int32_t width, int32_t height, int32_t tex_width, unsigned char *data)</argsstring>
+        <name>output_set_border</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" line="210" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer__interface_1a76f8683e8c0bcc4bbcc65243a2685f3f" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* gl_renderer_interface::create_fence_fd) (struct weston_output *output)</definition>
+        <argsstring>)(struct weston_output *output)</argsstring>
+        <name>create_fence_fd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" line="220" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" line="101" column="28" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" bodystart="101" bodyend="221"/>
+    <listofallmembers>
+      <member refid="structgl__renderer__interface_1a76f8683e8c0bcc4bbcc65243a2685f3f" prot="public" virt="non-virtual"><scope>gl_renderer_interface</scope><name>create_fence_fd</name></member>
+      <member refid="structgl__renderer__interface_1ae0141c11b0fe5d0749016b7904513230" prot="public" virt="non-virtual"><scope>gl_renderer_interface</scope><name>display_create</name></member>
+      <member refid="structgl__renderer__interface_1a8b5db07d1de90d0024b15596fa42e5b5" prot="public" virt="non-virtual"><scope>gl_renderer_interface</scope><name>output_destroy</name></member>
+      <member refid="structgl__renderer__interface_1a668eaa9b13399a91e3d84dc36de62f15" prot="public" virt="non-virtual"><scope>gl_renderer_interface</scope><name>output_pbuffer_create</name></member>
+      <member refid="structgl__renderer__interface_1a603c14b0b9e047c925a16a00fb01ff13" prot="public" virt="non-virtual"><scope>gl_renderer_interface</scope><name>output_set_border</name></member>
+      <member refid="structgl__renderer__interface_1a3dc18976e80358558c6eef98afbaea90" prot="public" virt="non-virtual"><scope>gl_renderer_interface</scope><name>output_window_create</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__drm__backend__config" kind="struct" language="C++" prot="public">
+    <compoundname>weston_drm_backend_config</compoundname>
+    <includes refid="backend-drm_8h" local="no">backend-drm.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__drm__backend__config_1a54b6229420c8d641bb0d9d15e78ea7b7" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structweston__backend__config" kindref="compound">weston_backend_config</ref></type>
+        <definition>struct weston_backend_config weston_drm_backend_config::base</definition>
+        <argsstring></argsstring>
+        <name>base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-drm.h" line="151" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-drm.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__drm__backend__config_1a9f234f5374bbfac553bb7a3b4c990ab0" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int weston_drm_backend_config::tty</definition>
+        <argsstring></argsstring>
+        <name>tty</name>
+        <briefdescription>
+<para>The tty to be used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set to 0 to use the current tty. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-drm.h" line="175" column="5" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-drm.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__drm__backend__config_1a0743f5c707c8c18889dbc7519b7e6dc2" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool weston_drm_backend_config::use_pixman</definition>
+        <argsstring></argsstring>
+        <name>use_pixman</name>
+        <briefdescription>
+<para>Whether to use the pixman renderer instead of the OpenGL ES renderer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-drm.h" line="178" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-drm.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__drm__backend__config_1a8ab55418e5270a7e0da4e064f2db727d" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* weston_drm_backend_config::seat_id</definition>
+        <argsstring></argsstring>
+        <name>seat_id</name>
+        <briefdescription>
+<para>The seat to be used for input and output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If seat_id is NULL, the seat is taken from XDG_SEAT environment variable. If neither is set, &quot;seat0&quot; is used. The backend will take ownership of the seat_id pointer and will free it on backend destruction. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-drm.h" line="187" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-drm.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__drm__backend__config_1ad70f91035bd0ab876b2be427d36bb214" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* weston_drm_backend_config::gbm_format</definition>
+        <argsstring></argsstring>
+        <name>gbm_format</name>
+        <briefdescription>
+<para>The pixel format of the framebuffer to be used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Valid values are:<itemizedlist>
+<listitem><para>NULL - The default format (&quot;xrgb8888&quot;) will be used;</para>
+</listitem><listitem><para>&quot;xrgb8888&quot;;</para>
+</listitem><listitem><para>&quot;rgb565&quot;</para>
+</listitem><listitem><para>&quot;xrgb2101010&quot; The backend will take ownership of the format pointer and will free it on backend destruction. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-drm.h" line="199" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-drm.h" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__drm__backend__config_1a7062f2c99b79c43bfc6725ffad79a592" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_drm_backend_config::configure_device) (struct weston_compositor *compositor, struct libinput_device *device)</definition>
+        <argsstring>)(struct weston_compositor *compositor, struct libinput_device *device)</argsstring>
+        <name>configure_device</name>
+        <briefdescription>
+<para>Callback used to configure input devices. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function will be called by the backend when a new input device needs to be configured. If NULL the device will use the default configuration. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-drm.h" line="207" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-drm.h" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__drm__backend__config_1acc460f04f88ac203126f494765750daa" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t weston_drm_backend_config::pageflip_timeout</definition>
+        <argsstring></argsstring>
+        <name>pageflip_timeout</name>
+        <briefdescription>
+<para>Maximum duration for a pageflip event to arrive, after which the compositor will consider the DRM driver crashed and will try to exit cleanly. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>It is exprimed in milliseconds, 0 means disabled. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-drm.h" line="215" column="10" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-drm.h" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__drm__backend__config_1aeea70c58d98236e15c3de603373f7535" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* weston_drm_backend_config::specific_device</definition>
+        <argsstring></argsstring>
+        <name>specific_device</name>
+        <briefdescription>
+<para>Specific DRM device to open. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>A DRM device name, like &quot;card0&quot;, to open. If NULL, use heuristics based on seat names and boot_vga to find the right device. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-drm.h" line="222" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-drm.h" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__drm__backend__config_1adcce8ff5c79fd26f03d1437a2031e6fd" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool weston_drm_backend_config::use_pixman_shadow</definition>
+        <argsstring></argsstring>
+        <name>use_pixman_shadow</name>
+        <briefdescription>
+<para>Use shadow buffer if using Pixman-renderer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-drm.h" line="225" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-drm.h" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The backend configuration struct. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="structweston__drm__backend__config" kindref="compound">weston_drm_backend_config</ref> contains the configuration used by a DRM backend. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>weston_drm_backend_config</label>
+        <link refid="structweston__drm__backend__config"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>weston_backend_config</label>
+        <link refid="structweston__backend__config"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lzm/Wayland/weston/include/libweston/backend-drm.h" line="171" column="32" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-drm.h" bodystart="171" bodyend="226"/>
+    <listofallmembers>
+      <member refid="structweston__drm__backend__config_1a54b6229420c8d641bb0d9d15e78ea7b7" prot="public" virt="non-virtual"><scope>weston_drm_backend_config</scope><name>base</name></member>
+      <member refid="structweston__drm__backend__config_1a7062f2c99b79c43bfc6725ffad79a592" prot="public" virt="non-virtual"><scope>weston_drm_backend_config</scope><name>configure_device</name></member>
+      <member refid="structweston__drm__backend__config_1ad70f91035bd0ab876b2be427d36bb214" prot="public" virt="non-virtual"><scope>weston_drm_backend_config</scope><name>gbm_format</name></member>
+      <member refid="structweston__drm__backend__config_1acc460f04f88ac203126f494765750daa" prot="public" virt="non-virtual"><scope>weston_drm_backend_config</scope><name>pageflip_timeout</name></member>
+      <member refid="structweston__drm__backend__config_1a8ab55418e5270a7e0da4e064f2db727d" prot="public" virt="non-virtual"><scope>weston_drm_backend_config</scope><name>seat_id</name></member>
+      <member refid="structweston__drm__backend__config_1aeea70c58d98236e15c3de603373f7535" prot="public" virt="non-virtual"><scope>weston_drm_backend_config</scope><name>specific_device</name></member>
+      <member refid="structweston__drm__backend__config_1a9f234f5374bbfac553bb7a3b4c990ab0" prot="public" virt="non-virtual"><scope>weston_drm_backend_config</scope><name>tty</name></member>
+      <member refid="structweston__drm__backend__config_1a0743f5c707c8c18889dbc7519b7e6dc2" prot="public" virt="non-virtual"><scope>weston_drm_backend_config</scope><name>use_pixman</name></member>
+      <member refid="structweston__drm__backend__config_1adcce8ff5c79fd26f03d1437a2031e6fd" prot="public" virt="non-virtual"><scope>weston_drm_backend_config</scope><name>use_pixman_shadow</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

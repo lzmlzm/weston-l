@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__plugin__api" kind="struct" language="C++" prot="public">
+    <compoundname>weston_plugin_api</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__plugin__api_1ae1c61b7312bece279fd0d6ff170be7e3" prot="public" static="no" mutable="no">
+        <type>struct wl_list</type>
+        <definition>struct wl_list weston_plugin_api::link</definition>
+        <argsstring></argsstring>
+        <name>link</name>
+        <briefdescription>
+<para>in <ref refid="structweston__compositor_1a971594f6ff5050e72c298a17fb88f177" kindref="member">weston_compositor::plugin_api_list</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/plugin-registry.c" line="135" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/plugin-registry.c" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__plugin__api_1a863165bf8f77b2f155e3f686aa338a37" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* weston_plugin_api::api_name</definition>
+        <argsstring></argsstring>
+        <name>api_name</name>
+        <briefdescription>
+<para>The search key. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/plugin-registry.c" line="38" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/plugin-registry.c" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__plugin__api_1a91a9bc2b63700a079ba86e92a2459350" prot="public" static="no" mutable="no">
+        <type>const void *</type>
+        <definition>const void* weston_plugin_api::vtable</definition>
+        <argsstring></argsstring>
+        <name>vtable</name>
+        <briefdescription>
+<para>The function table. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/plugin-registry.c" line="39" column="12" bodyfile="/home/lzm/Wayland/weston/libweston/plugin-registry.c" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__plugin__api_1ade9a3019fb5abf7986171ee64607939e" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t weston_plugin_api::vtable_size</definition>
+        <argsstring></argsstring>
+        <name>vtable_size</name>
+        <briefdescription>
+<para>Size of the function table in bytes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/plugin-registry.c" line="40" column="8" bodyfile="/home/lzm/Wayland/weston/libweston/plugin-registry.c" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/plugin-registry.c" line="35" column="24" bodyfile="/home/lzm/Wayland/weston/libweston/plugin-registry.c" bodystart="35" bodyend="41"/>
+    <listofallmembers>
+      <member refid="structweston__plugin__api_1a863165bf8f77b2f155e3f686aa338a37" prot="public" virt="non-virtual"><scope>weston_plugin_api</scope><name>api_name</name></member>
+      <member refid="structweston__plugin__api_1ae1c61b7312bece279fd0d6ff170be7e3" prot="public" virt="non-virtual"><scope>weston_plugin_api</scope><name>link</name></member>
+      <member refid="structweston__plugin__api_1a91a9bc2b63700a079ba86e92a2459350" prot="public" virt="non-virtual"><scope>weston_plugin_api</scope><name>vtable</name></member>
+      <member refid="structweston__plugin__api_1ade9a3019fb5abf7986171ee64607939e" prot="public" virt="non-virtual"><scope>weston_plugin_api</scope><name>vtable_size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

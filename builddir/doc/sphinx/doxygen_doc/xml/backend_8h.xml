@@ -1,0 +1,1599 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="backend_8h" kind="file" language="C++">
+    <compoundname>backend.h</compoundname>
+    <includedby refid="drm-internal_8h" local="yes">/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h</includedby>
+    <includedby refid="compositor_8c" local="yes">/home/lzm/Wayland/weston/libweston/compositor.c</includedby>
+    <includedby refid="input_8c" local="yes">/home/lzm/Wayland/weston/libweston/input.c</includedby>
+    <includedby refid="launcher-libseat_8c" local="yes">/home/lzm/Wayland/weston/libweston/launcher-libseat.c</includedby>
+    <includedby refid="launcher-logind_8c" local="yes">/home/lzm/Wayland/weston/libweston/launcher-logind.c</includedby>
+    <includedby refid="libinput-device_8c" local="yes">/home/lzm/Wayland/weston/libweston/libinput-device.c</includedby>
+    <includedby refid="libinput-seat_8c" local="yes">/home/lzm/Wayland/weston/libweston/libinput-seat.c</includedby>
+    <includedby refid="pixman-renderer_8h" local="yes">/home/lzm/Wayland/weston/libweston/pixman-renderer.h</includedby>
+    <includedby refid="gl-renderer_8h" local="yes">/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h</includedby>
+    <includedby refid="screenshooter_8c" local="yes">/home/lzm/Wayland/weston/libweston/screenshooter.c</includedby>
+    <includedby refid="touch-calibration_8c" local="yes">/home/lzm/Wayland/weston/libweston/touch-calibration.c</includedby>
+    <includedby refid="zoom_8c" local="yes">/home/lzm/Wayland/weston/libweston/zoom.c</includedby>
+    <includedby refid="weston-test_8c" local="yes">/home/lzm/Wayland/weston/tests/weston-test.c</includedby>
+    <invincdepgraph>
+      <node id="4">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/drm-virtual.c</label>
+        <link refid="drm-virtual_8c"/>
+      </node>
+      <node id="5">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/drm.c</label>
+        <link refid="drm_8c"/>
+      </node>
+      <node id="13">
+        <label>/home/lzm/Wayland/weston/libweston/launcher-libseat.c</label>
+        <link refid="launcher-libseat_8c"/>
+      </node>
+      <node id="12">
+        <label>/home/lzm/Wayland/weston/libweston/input.c</label>
+        <link refid="input_8c"/>
+      </node>
+      <node id="3">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c</label>
+        <link refid="drm-gbm_8c"/>
+      </node>
+      <node id="19">
+        <label>/home/lzm/Wayland/weston/libweston/backend-headless/headless.c</label>
+        <link refid="headless_8c"/>
+      </node>
+      <node id="20">
+        <label>/home/lzm/Wayland/weston/libweston/backend-rdp/rdp.c</label>
+        <link refid="rdp_8c"/>
+      </node>
+      <node id="2">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h</label>
+        <link refid="drm-internal_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>/home/lzm/Wayland/weston/libweston/renderer-gl/gl-shaders.c</label>
+        <link refid="gl-shaders_8c"/>
+      </node>
+      <node id="22">
+        <label>/home/lzm/Wayland/weston/libweston/backend-x11/x11.c</label>
+        <link refid="x11_8c"/>
+      </node>
+      <node id="18">
+        <label>/home/lzm/Wayland/weston/libweston/backend-fbdev/fbdev.c</label>
+        <link refid="fbdev_8c"/>
+      </node>
+      <node id="14">
+        <label>/home/lzm/Wayland/weston/libweston/launcher-logind.c</label>
+        <link refid="launcher-logind_8c"/>
+      </node>
+      <node id="10">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/state-propose.c</label>
+        <link refid="state-propose_8c"/>
+      </node>
+      <node id="25">
+        <label>/home/lzm/Wayland/weston/libweston/renderer-gl/egl-glue.c</label>
+        <link refid="egl-glue_8c"/>
+      </node>
+      <node id="9">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/state-helpers.c</label>
+        <link refid="state-helpers_8c"/>
+      </node>
+      <node id="23">
+        <label>/home/lzm/Wayland/weston/libweston/pixman-renderer.c</label>
+        <link refid="pixman-renderer_8c"/>
+      </node>
+      <node id="17">
+        <label>/home/lzm/Wayland/weston/libweston/pixman-renderer.h</label>
+        <link refid="pixman-renderer_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>/home/lzm/Wayland/weston/libweston/screenshooter.c</label>
+        <link refid="screenshooter_8c"/>
+      </node>
+      <node id="26">
+        <label>/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c</label>
+        <link refid="gl-renderer_8c"/>
+      </node>
+      <node id="24">
+        <label>/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h</label>
+        <link refid="gl-renderer_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/kms.c</label>
+        <link refid="kms_8c"/>
+      </node>
+      <node id="30">
+        <label>/home/lzm/Wayland/weston/libweston/zoom.c</label>
+        <link refid="zoom_8c"/>
+      </node>
+      <node id="15">
+        <label>/home/lzm/Wayland/weston/libweston/libinput-device.c</label>
+        <link refid="libinput-device_8c"/>
+      </node>
+      <node id="21">
+        <label>/home/lzm/Wayland/weston/libweston/backend-wayland/wayland.c</label>
+        <link refid="wayland_8c"/>
+      </node>
+      <node id="6">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/fb.c</label>
+        <link refid="fb_8c"/>
+      </node>
+      <node id="29">
+        <label>/home/lzm/Wayland/weston/libweston/touch-calibration.c</label>
+        <link refid="touch-calibration_8c"/>
+      </node>
+      <node id="11">
+        <label>/home/lzm/Wayland/weston/libweston/compositor.c</label>
+        <link refid="compositor_8c"/>
+      </node>
+      <node id="16">
+        <label>/home/lzm/Wayland/weston/libweston/libinput-seat.c</label>
+        <link refid="libinput-seat_8c"/>
+      </node>
+      <node id="31">
+        <label>/home/lzm/Wayland/weston/tests/weston-test.c</label>
+        <link refid="weston-test_8c"/>
+      </node>
+      <node id="8">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/modes.c</label>
+        <link refid="modes_8c"/>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/libweston/backend.h</label>
+        <link refid="backend_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structweston__backend" prot="public">weston_backend</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__head_1gab458db3cc734c39f07222a72cfca7bfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_head_init</definition>
+        <argsstring>(struct weston_head *head, const char *name)</argsstring>
+        <name>weston_head_init</name>
+        <param>
+          <type>struct <ref refid="structweston__head" kindref="compound">weston_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Initialize a pre-allocated <ref refid="structweston__head" kindref="compound">weston_head</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The head to initialize. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The head name, e.g. the connector name or equivalent.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The head will be safe to attach, detach and release.</para>
+<para>The name is used in logs, and can be used by compositors as a configuration identifier. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend.h" line="115" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="5064" bodyend="5078" declfile="/home/lzm/Wayland/weston/libweston/backend.h" declline="115" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__head_1ga620a43a89a9f4045689f5f7bddeaa533" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_head_release</definition>
+        <argsstring>(struct weston_head *head)</argsstring>
+        <name>weston_head_release</name>
+        <param>
+          <type>struct <ref refid="structweston__head" kindref="compound">weston_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <briefdescription>
+<para>Destroy a head. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The head to be released.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Destroys the head. The caller is responsible for freeing the memory pointed to by <computeroutput>head</computeroutput>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend.h" line="118" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="5386" bodyend="5398" declfile="/home/lzm/Wayland/weston/libweston/backend.h" declline="118" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__head_1ga522efc0ba8ba4ce81c0ac4c1cf197f5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_head_set_connection_status</definition>
+        <argsstring>(struct weston_head *head, bool connected)</argsstring>
+        <name>weston_head_set_connection_status</name>
+        <param>
+          <type>struct <ref refid="structweston__head" kindref="compound">weston_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>connected</declname>
+        </param>
+        <briefdescription>
+<para>Store connector status. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The head to modify. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>connected</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether the head is connected.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Connectors are created as disconnected. This function can be used to set the connector status.</para>
+<para>The status should be set to true when a physical connector is connected to a video sink device like a monitor and to false when the connector is disconnected. For nested backends, the connection status should reflect the connection to the parent display server.</para>
+<para>When the connection status changes, it schedules a call to the heads_changed hook and sets the device_changed flag.</para>
+<para><simplesect kind="see"><para>weston_compositor_set_heads_changed_cb </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend.h" line="121" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="5592" bodyend="5600" declfile="/home/lzm/Wayland/weston/libweston/backend.h" declline="121" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__head_1ga4ece2c0a2966224ebece0b092a6a9883" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_head_set_internal</definition>
+        <argsstring>(struct weston_head *head)</argsstring>
+        <name>weston_head_set_internal</name>
+        <param>
+          <type>struct <ref refid="structweston__head" kindref="compound">weston_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <briefdescription>
+<para>Mark the monitor as internal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is used for embedded screens, like laptop panels.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The head to mark as internal.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+By default a head is external. The type is often inferred from the physical connector type. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend.h" line="124" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="5566" bodyend="5569" declfile="/home/lzm/Wayland/weston/libweston/backend.h" declline="124" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__head_1gad1dbb9d1e8023b3c1587b2a15d1ee550" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_head_set_monitor_strings</definition>
+        <argsstring>(struct weston_head *head, const char *make, const char *model, const char *serialno)</argsstring>
+        <name>weston_head_set_monitor_strings</name>
+        <param>
+          <type>struct <ref refid="structweston__head" kindref="compound">weston_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>make</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>model</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>serialno</declname>
+        </param>
+        <briefdescription>
+<para>Store monitor make, model and serial number. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The head to modify. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>make</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The monitor make. If EDID is available, the PNP ID. Otherwise any string, or NULL for none. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>model</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The monitor model or name, or a made-up string, or NULL for none. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>serialno</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The monitor serial number, a made-up string, or NULL for none.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This may set the device_changed flag. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend.h" line="127" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="5438" bodyend="5457" declfile="/home/lzm/Wayland/weston/libweston/backend.h" declline="127" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__head_1ga0ec29ead0db5f04159e9b69a889713b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_head_set_non_desktop</definition>
+        <argsstring>(struct weston_head *head, bool non_desktop)</argsstring>
+        <name>weston_head_set_non_desktop</name>
+        <param>
+          <type>struct <ref refid="structweston__head" kindref="compound">weston_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>non_desktop</declname>
+        </param>
+        <briefdescription>
+<para>Store display non-desktop status. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The head to modify. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>non_desktop</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether the head connects to a non-desktop display. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend.h" line="132" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="5468" bodyend="5476" declfile="/home/lzm/Wayland/weston/libweston/backend.h" declline="132" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__head_1ga453bc787c6868e53371866de3f4db622" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_head_set_physical_size</definition>
+        <argsstring>(struct weston_head *head, int32_t mm_width, int32_t mm_height)</argsstring>
+        <name>weston_head_set_physical_size</name>
+        <param>
+          <type>struct <ref refid="structweston__head" kindref="compound">weston_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>mm_width</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>mm_height</declname>
+        </param>
+        <briefdescription>
+<para>Store physical image size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The head to modify. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mm_width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Image area width in millimeters. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mm_height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Image area height in millimeters.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This may set the device_changed flag. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend.h" line="135" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="5512" bodyend="5523" declfile="/home/lzm/Wayland/weston/libweston/backend.h" declline="135" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__head_1gab4123b993477c318d4c87d782b6e4b51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_head_set_subpixel</definition>
+        <argsstring>(struct weston_head *head, enum wl_output_subpixel sp)</argsstring>
+        <name>weston_head_set_subpixel</name>
+        <param>
+          <type>struct <ref refid="structweston__head" kindref="compound">weston_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <param>
+          <type>enum wl_output_subpixel</type>
+          <declname>sp</declname>
+        </param>
+        <briefdescription>
+<para>Store monitor sub-pixel layout. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The head to modify. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sub-pixel layout. The possible values are:<itemizedlist>
+<listitem><para>WL_OUTPUT_SUBPIXEL_UNKNOWN,</para>
+</listitem><listitem><para>WL_OUTPUT_SUBPIXEL_NONE,</para>
+</listitem><listitem><para>WL_OUTPUT_SUBPIXEL_HORIZONTAL_RGB,</para>
+</listitem><listitem><para>WL_OUTPUT_SUBPIXEL_HORIZONTAL_BGR,</para>
+</listitem><listitem><para>WL_OUTPUT_SUBPIXEL_VERTICAL_RGB,</para>
+</listitem><listitem><para>WL_OUTPUT_SUBPIXEL_VERTICAL_BGR</para>
+</listitem></itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This may set the device_changed flag. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend.h" line="139" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="5542" bodyend="5551" declfile="/home/lzm/Wayland/weston/libweston/backend.h" declline="139" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__head_1ga0af29bbbf4c6d09c82bbac58286c656a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_head_set_transform</definition>
+        <argsstring>(struct weston_head *head, uint32_t transform)</argsstring>
+        <name>weston_head_set_transform</name>
+        <param>
+          <type>struct <ref refid="structweston__head" kindref="compound">weston_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>transform</declname>
+        </param>
+        <briefdescription>
+<para>Store display transformation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The head to modify. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>transform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The transformation to apply for this head</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This may set the device_changed flag. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend.h" line="143" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="5489" bodyend="5497" declfile="/home/lzm/Wayland/weston/libweston/backend.h" declline="143" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gaeb6468e3cabf74cba4030400f1907799" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_output_init</definition>
+        <argsstring>(struct weston_output *output, struct weston_compositor *compositor, const char *name)</argsstring>
+        <name>weston_output_init</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> *</type>
+          <declname>compositor</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a <ref refid="structweston__output" kindref="compound">weston_output</ref> object with enough data so an output can be configured. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="structweston__output" kindref="compound">weston_output</ref> object to initialize </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>compositor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The compositor instance. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name for the output (the string is copied).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Sets initial values for fields that are expected to be configured either by compositors or backends.</para>
+<para>The name is used in logs, and can be used by compositors as a configuration identifier. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend.h" line="148" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="6308" bodyend="6332" declfile="/home/lzm/Wayland/weston/libweston/backend.h" declline="148" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gab45be972c9a7bf6c86c6ca8db03034f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_output_damage</definition>
+        <argsstring>(struct weston_output *output)</argsstring>
+        <name>weston_output_damage</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend.h" line="152" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="2453" bodyend="2461" declfile="/home/lzm/Wayland/weston/libweston/backend.h" declline="152" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga4f2b78dfe24872b341fccb812d1e9473" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_output_release</definition>
+        <argsstring>(struct weston_output *output)</argsstring>
+        <name>weston_output_release</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>Uninitialize an output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes the output from the list of enabled outputs if necessary, but does not call the backend&apos;s output disable function. The output will no longer be in the list of pending outputs either.</para>
+<para>All fields of <ref refid="structweston__output" kindref="compound">weston_output</ref> become uninitialized, i.e. should not be used anymore. The caller can free the memory after this. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend.h" line="155" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="6626" bodyend="6647" declfile="/home/lzm/Wayland/weston/libweston/backend.h" declline="155" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="backend_8h_1a470be4b2527eb40684c830312131a1a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_output_init_zoom</definition>
+        <argsstring>(struct weston_output *output)</argsstring>
+        <name>weston_output_init_zoom</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend.h" line="158" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/zoom.c" bodystart="170" bodyend="184" declfile="/home/lzm/Wayland/weston/libweston/backend.h" declline="158" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga0f26c6ea66cf6683814ed60baf2a04c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_output_finish_frame</definition>
+        <argsstring>(struct weston_output *output, const struct timespec *stamp, uint32_t presented_flags)</argsstring>
+        <name>weston_output_finish_frame</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>const struct timespec *</type>
+          <declname>stamp</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>presented_flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend.h" line="161" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="2995" bodyend="3064" declfile="/home/lzm/Wayland/weston/libweston/backend.h" declline="161" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga5b6b26af26f582ad5627ea7ae6129a89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int weston_output_mode_set_native</definition>
+        <argsstring>(struct weston_output *output, struct weston_mode *mode, int32_t scale)</argsstring>
+        <name>weston_output_mode_set_native</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structweston__mode" kindref="compound">weston_mode</ref> *</type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend.h" line="165" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="207" bodyend="241" declfile="/home/lzm/Wayland/weston/libweston/backend.h" declline="165" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gaa6ff5fff6210e59ee443c89fd4941082" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_output_transform_coordinate</definition>
+        <argsstring>(struct weston_output *output, double device_x, double device_y, double *x, double *y)</argsstring>
+        <name>weston_output_transform_coordinate</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>device_x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>device_y</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Transform device coordinates into global coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="structweston__output" kindref="compound">weston_output</ref> object </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">device_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X coordinate in device units. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">device_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y coordinate in device units. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X coordinate in the global space. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y coordinate in the global space.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Transforms coordinates from the device coordinate space (physical pixel units) to the global coordinate space (logical pixel units). This takes into account output transform and scale. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend.h" line="169" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="6075" bodyend="6089" declfile="/home/lzm/Wayland/weston/libweston/backend.h" declline="169" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="backend_8h_1a8d4a3039ba1a23bfe713131cf3b7cd5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_output_region_from_global</definition>
+        <argsstring>(struct weston_output *output, pixman_region32_t *region)</argsstring>
+        <name>weston_output_region_from_global</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>pixman_region32_t *</type>
+          <declname>region</declname>
+        </param>
+        <briefdescription>
+<para>Transform a region in-place from global to output coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output that defines the transformation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>region</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The region to be transformed in-place.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This takes a region in the global coordinate system, and takes into account output position, transform and scale, and the zoom, and converts the region into output pixel coordinates in the framebuffer.</para>
+<para>Uses floating-point operations if zoom is active, which may round to expand the region. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend.h" line="174" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="5864" bodyend="5876" declfile="/home/lzm/Wayland/weston/libweston/backend.h" declline="174" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="backend_8h_1a46f42be4885b59c6a4395201f9acb9dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void notify_axis</definition>
+        <argsstring>(struct weston_seat *seat, const struct timespec *time, struct weston_pointer_axis_event *event)</argsstring>
+        <name>notify_axis</name>
+        <param>
+          <type>struct <ref refid="structweston__seat" kindref="compound">weston_seat</ref> *</type>
+          <declname>seat</declname>
+        </param>
+        <param>
+          <type>const struct timespec *</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structweston__pointer__axis__event" kindref="compound">weston_pointer_axis_event</ref> *</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend.h" line="180" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/input.c" bodystart="1910" bodyend="1923" declfile="/home/lzm/Wayland/weston/libweston/backend.h" declline="180" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="backend_8h_1a740a3ad0ea196742af5da58be3a77572" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void notify_axis_source</definition>
+        <argsstring>(struct weston_seat *seat, uint32_t source)</argsstring>
+        <name>notify_axis_source</name>
+        <param>
+          <type>struct <ref refid="structweston__seat" kindref="compound">weston_seat</ref> *</type>
+          <declname>seat</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend.h" line="183" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/input.c" bodystart="1926" bodyend="1934" declfile="/home/lzm/Wayland/weston/libweston/backend.h" declline="183" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="backend_8h_1a341d3b175076e06fad2e432288b0bb7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void notify_button</definition>
+        <argsstring>(struct weston_seat *seat, const struct timespec *time, int32_t button, enum wl_pointer_button_state state)</argsstring>
+        <name>notify_button</name>
+        <param>
+          <type>struct <ref refid="structweston__seat" kindref="compound">weston_seat</ref> *</type>
+          <declname>seat</declname>
+        </param>
+        <param>
+          <type>const struct timespec *</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>button</declname>
+        </param>
+        <param>
+          <type>enum wl_pointer_button_state</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend.h" line="186" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/input.c" bodystart="1879" bodyend="1907" declfile="/home/lzm/Wayland/weston/libweston/backend.h" declline="186" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="backend_8h_1aef2cf9bf595febf9a1e448096797f937" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void notify_key</definition>
+        <argsstring>(struct weston_seat *seat, const struct timespec *time, uint32_t key, enum wl_keyboard_key_state state, enum weston_key_state_update update_state)</argsstring>
+        <name>notify_key</name>
+        <param>
+          <type>struct <ref refid="structweston__seat" kindref="compound">weston_seat</ref> *</type>
+          <declname>seat</declname>
+        </param>
+        <param>
+          <type>const struct timespec *</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>enum wl_keyboard_key_state</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="libweston_8h_1afff20b83d542a98eccc1fee1314dde51" kindref="member">weston_key_state_update</ref></type>
+          <declname>update_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend.h" line="190" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/input.c" bodystart="2188" bodyend="2243" declfile="/home/lzm/Wayland/weston/libweston/backend.h" declline="190" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="backend_8h_1a3c6bf42d3db7275d5d21e7c471fb66b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void notify_keyboard_focus_in</definition>
+        <argsstring>(struct weston_seat *seat, struct wl_array *keys, enum weston_key_state_update update_state)</argsstring>
+        <name>notify_keyboard_focus_in</name>
+        <param>
+          <type>struct <ref refid="structweston__seat" kindref="compound">weston_seat</ref> *</type>
+          <declname>seat</declname>
+        </param>
+        <param>
+          <type>struct wl_array *</type>
+          <declname>keys</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="libweston_8h_1afff20b83d542a98eccc1fee1314dde51" kindref="member">weston_key_state_update</ref></type>
+          <declname>update_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend.h" line="194" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/input.c" bodystart="2273" bodyend="2294" declfile="/home/lzm/Wayland/weston/libweston/backend.h" declline="194" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="backend_8h_1af129a8798b5e9e4c417ea356d086761f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void notify_keyboard_focus_out</definition>
+        <argsstring>(struct weston_seat *seat)</argsstring>
+        <name>notify_keyboard_focus_out</name>
+        <param>
+          <type>struct <ref refid="structweston__seat" kindref="compound">weston_seat</ref> *</type>
+          <declname>seat</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend.h" line="197" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/input.c" bodystart="2297" bodyend="2326" declfile="/home/lzm/Wayland/weston/libweston/backend.h" declline="197" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="backend_8h_1a035ebbdf329d3837736d585ae77eb2ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void notify_motion</definition>
+        <argsstring>(struct weston_seat *seat, const struct timespec *time, struct weston_pointer_motion_event *event)</argsstring>
+        <name>notify_motion</name>
+        <param>
+          <type>struct <ref refid="structweston__seat" kindref="compound">weston_seat</ref> *</type>
+          <declname>seat</declname>
+        </param>
+        <param>
+          <type>const struct timespec *</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structweston__pointer__motion__event" kindref="compound">weston_pointer_motion_event</ref> *</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend.h" line="200" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/input.c" bodystart="1783" bodyend="1792" declfile="/home/lzm/Wayland/weston/libweston/backend.h" declline="200" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="backend_8h_1ac4e9ced5099c0e1a1b776b7e245b8128" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void notify_motion_absolute</definition>
+        <argsstring>(struct weston_seat *seat, const struct timespec *time, double x, double y)</argsstring>
+        <name>notify_motion_absolute</name>
+        <param>
+          <type>struct <ref refid="structweston__seat" kindref="compound">weston_seat</ref> *</type>
+          <declname>seat</declname>
+        </param>
+        <param>
+          <type>const struct timespec *</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend.h" line="203" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/input.c" bodystart="1831" bodyend="1847" declfile="/home/lzm/Wayland/weston/libweston/backend.h" declline="203" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="backend_8h_1aae75251c5c98be717a0513bed342264c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void notify_modifiers</definition>
+        <argsstring>(struct weston_seat *seat, uint32_t serial)</argsstring>
+        <name>notify_modifiers</name>
+        <param>
+          <type>struct <ref refid="structweston__seat" kindref="compound">weston_seat</ref> *</type>
+          <declname>seat</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>serial</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend.h" line="206" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/input.c" bodystart="1996" bodyend="2064" declfile="/home/lzm/Wayland/weston/libweston/backend.h" declline="206" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="backend_8h_1a58338cc09053bfbc6635127cd9e1b3bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void notify_pointer_frame</definition>
+        <argsstring>(struct weston_seat *seat)</argsstring>
+        <name>notify_pointer_frame</name>
+        <param>
+          <type>struct <ref refid="structweston__seat" kindref="compound">weston_seat</ref> *</type>
+          <declname>seat</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend.h" line="209" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/input.c" bodystart="1937" bodyend="1945" declfile="/home/lzm/Wayland/weston/libweston/backend.h" declline="209" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="backend_8h_1a4d4a279d6db370615901cc52452b545f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void notify_pointer_focus</definition>
+        <argsstring>(struct weston_seat *seat, struct weston_output *output, double x, double y)</argsstring>
+        <name>notify_pointer_focus</name>
+        <param>
+          <type>struct <ref refid="structweston__seat" kindref="compound">weston_seat</ref> *</type>
+          <declname>seat</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend.h" line="212" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/input.c" bodystart="2246" bodyend="2259" declfile="/home/lzm/Wayland/weston/libweston/backend.h" declline="212" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="backend_8h_1a9664bca52bbe38ccd9ae24b1cba4a04a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void notify_touch_normalized</definition>
+        <argsstring>(struct weston_touch_device *device, const struct timespec *time, int touch_id, double x, double y, const struct weston_point2d_device_normalized *norm, int touch_type)</argsstring>
+        <name>notify_touch_normalized</name>
+        <param>
+          <type>struct <ref refid="structweston__touch__device" kindref="compound">weston_touch_device</ref> *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>const struct timespec *</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>touch_id</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structweston__point2d__device__normalized" kindref="compound">weston_point2d_device_normalized</ref> *</type>
+          <declname>norm</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>touch_type</declname>
+        </param>
+        <briefdescription>
+<para>Feed in touch down, motion, and up events, calibratable device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>It assumes always the correct cycle sequence until it gets here: touch_down → touch_update → ... → touch_update → touch_end. The driver is responsible for sending along such order.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The physical device that generated the event. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event timestamp. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>touch_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID for the touch point of this event (multi-touch). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X coordinate in compositor global space. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y coordinate in compositor global space. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>norm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Normalized device X, Y coordinates in calibration space, or NULL. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>touch_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Either WL_TOUCH_DOWN, WL_TOUCH_UP, or WL_TOUCH_MOTION.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Coordinates double_x and double_y are used for normal operation.</para>
+<para>Coordinates norm are only used for touch device calibration. If and only if the <ref refid="structweston__touch__device" kindref="compound">weston_touch_device</ref> does not support calibrating, norm must be NULL.</para>
+<para>The calibration space is the normalized coordinate space [0.0, 1.0]×[0.0, 1.0] of the <ref refid="structweston__touch__device" kindref="compound">weston_touch_device</ref>. This is assumed to map to the similar normalized coordinate space of the associated <ref refid="structweston__output" kindref="compound">weston_output</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend.h" line="218" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/input.c" bodystart="2559" bodyend="2613" declfile="/home/lzm/Wayland/weston/libweston/backend.h" declline="218" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="backend_8h_1a061cdbcbb528666a0b948270055c661d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void notify_touch</definition>
+        <argsstring>(struct weston_touch_device *device, const struct timespec *time, int touch_id, double x, double y, int touch_type)</argsstring>
+        <name>notify_touch</name>
+        <param>
+          <type>struct <ref refid="structweston__touch__device" kindref="compound">weston_touch_device</ref> *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>const struct timespec *</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>touch_id</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>touch_type</declname>
+        </param>
+        <briefdescription>
+<para>Feed in touch down, motion, and up events, non-calibratable device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>notify_touch_cal </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend.h" line="230" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/backend.h" bodystart="230" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="backend_8h_1a446dcf07765cfcd5a4202532caa33a7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void notify_touch_frame</definition>
+        <argsstring>(struct weston_touch_device *device)</argsstring>
+        <name>notify_touch_frame</name>
+        <param>
+          <type>struct <ref refid="structweston__touch__device" kindref="compound">weston_touch_device</ref> *</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend.h" line="237" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/input.c" bodystart="2616" bodyend="2633" declfile="/home/lzm/Wayland/weston/libweston/backend.h" declline="237" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="backend_8h_1a66bfa64e68570bd446d75208fa8f31b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void notify_touch_cancel</definition>
+        <argsstring>(struct weston_touch_device *device)</argsstring>
+        <name>notify_touch_cancel</name>
+        <param>
+          <type>struct <ref refid="structweston__touch__device" kindref="compound">weston_touch_device</ref> *</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend.h" line="240" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/input.c" bodystart="2636" bodyend="2653" declfile="/home/lzm/Wayland/weston/libweston/backend.h" declline="240" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="backend_8h_1acd3bb3ef61eea217fd90ef58a9f9ee11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void notify_touch_calibrator</definition>
+        <argsstring>(struct weston_touch_device *device, const struct timespec *time, int32_t slot, const struct weston_point2d_device_normalized *norm, int touch_type)</argsstring>
+        <name>notify_touch_calibrator</name>
+        <param>
+          <type>struct <ref refid="structweston__touch__device" kindref="compound">weston_touch_device</ref> *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>const struct timespec *</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>slot</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structweston__point2d__device__normalized" kindref="compound">weston_point2d_device_normalized</ref> *</type>
+          <declname>norm</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>touch_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend.h" line="243" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/touch-calibration.c" bodystart="89" bodyend="153" declfile="/home/lzm/Wayland/weston/libweston/backend.h" declline="243" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="backend_8h_1a3d913f6ce7333d06f408e10fbc5e0446" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void notify_touch_calibrator_cancel</definition>
+        <argsstring>(struct weston_touch_device *device)</argsstring>
+        <name>notify_touch_calibrator_cancel</name>
+        <param>
+          <type>struct <ref refid="structweston__touch__device" kindref="compound">weston_touch_device</ref> *</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend.h" line="248" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/touch-calibration.c" bodystart="168" bodyend="177" declfile="/home/lzm/Wayland/weston/libweston/backend.h" declline="248" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="backend_8h_1a6b115f5667ce6e498d841c3cfb10f777" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void notify_touch_calibrator_frame</definition>
+        <argsstring>(struct weston_touch_device *device)</argsstring>
+        <name>notify_touch_calibrator_frame</name>
+        <param>
+          <type>struct <ref refid="structweston__touch__device" kindref="compound">weston_touch_device</ref> *</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend.h" line="250" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/touch-calibration.c" bodystart="156" bodyend="165" declfile="/home/lzm/Wayland/weston/libweston/backend.h" declline="250" declcolumn="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2008-2011<sp/>Kristian<sp/>Høgsberg</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2017,<sp/>2018<sp/>General<sp/>Electric<sp/>Company</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2012,<sp/>2017-2019<sp/>Collabora,<sp/>Ltd.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>(including<sp/>the</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>next<sp/>paragraph)<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>NONINFRINGEMENT.<sp/><sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/>This<sp/>header<sp/>contains<sp/>the<sp/>libweston<sp/>ABI<sp/>exported<sp/>only<sp/>for<sp/>internal<sp/>backends.</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LIBWESTON_BACKEND_INTERNAL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LIBWESTON_BACKEND_INTERNAL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="structweston__backend" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__backend" kindref="compound">weston_backend</ref><sp/>{</highlight></codeline>
+<codeline lineno="36" refid="structweston__backend_1ab02a21b1de2672ebac93c9ba509d6ee9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="structweston__backend_1ab02a21b1de2672ebac93c9ba509d6ee9" kindref="member">destroy</ref>)(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__compositor" kindref="compound">weston_compositor</ref><sp/>*compositor);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="structweston__backend_1ad0f91de4f685058cd13c886eb46b8f8d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>(*repaint_begin)(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__compositor" kindref="compound">weston_compositor</ref><sp/>*compositor);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="structweston__backend_1a35f2c4c71714d56861ebc7b8486f6287" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="structweston__backend_1a35f2c4c71714d56861ebc7b8486f6287" kindref="member">repaint_cancel</ref>)(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__compositor" kindref="compound">weston_compositor</ref><sp/>*compositor,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*repaint_data);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="structweston__backend_1ad776a53eef26b638742e2f64457d2e46" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>(*<ref refid="structweston__backend_1ad776a53eef26b638742e2f64457d2e46" kindref="member">repaint_flush</ref>)(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__compositor" kindref="compound">weston_compositor</ref><sp/>*compositor,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*repaint_data);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__output" kindref="compound">weston_output</ref><sp/>*</highlight></codeline>
+<codeline lineno="83" refid="structweston__backend_1a970510821a8f44ac83e8af147b2dbccb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*create_output)(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__compositor" kindref="compound">weston_compositor</ref><sp/>*compositor,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="structweston__backend_1a194d647465807693728cba840f6ddc16" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="structweston__backend_1a194d647465807693728cba840f6ddc16" kindref="member">device_changed</ref>)(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__compositor" kindref="compound">weston_compositor</ref><sp/>*compositor,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dev_t<sp/>device,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>added);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="structweston__backend_1a4b5d8d7d9af46a393c24510e6423e8e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bool<sp/>(*<ref refid="structweston__backend_1a4b5d8d7d9af46a393c24510e6423e8e3" kindref="member">can_scanout_dmabuf</ref>)(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__compositor" kindref="compound">weston_compositor</ref><sp/>*compositor,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlinux__dmabuf__buffer" kindref="compound">linux_dmabuf_buffer</ref><sp/>*<ref refid="structbuffer" kindref="compound">buffer</ref>);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>weston_head<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><ref refid="group__head_1gab458db3cc734c39f07222a72cfca7bfe" kindref="member">weston_head_init</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__head" kindref="compound">weston_head</ref><sp/>*head,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><ref refid="group__head_1ga620a43a89a9f4045689f5f7bddeaa533" kindref="member">weston_head_release</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__head" kindref="compound">weston_head</ref><sp/>*head);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><ref refid="group__head_1ga522efc0ba8ba4ce81c0ac4c1cf197f5a" kindref="member">weston_head_set_connection_status</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__head" kindref="compound">weston_head</ref><sp/>*head,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>connected);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><ref refid="group__head_1ga4ece2c0a2966224ebece0b092a6a9883" kindref="member">weston_head_set_internal</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__head" kindref="compound">weston_head</ref><sp/>*head);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><ref refid="group__head_1gad1dbb9d1e8023b3c1587b2a15d1ee550" kindref="member">weston_head_set_monitor_strings</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__head" kindref="compound">weston_head</ref><sp/>*head,</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*make,</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*model,</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*serialno);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><ref refid="group__head_1ga0ec29ead0db5f04159e9b69a889713b9" kindref="member">weston_head_set_non_desktop</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__head" kindref="compound">weston_head</ref><sp/>*head,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>non_desktop);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><ref refid="group__head_1ga453bc787c6868e53371866de3f4db622" kindref="member">weston_head_set_physical_size</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__head" kindref="compound">weston_head</ref><sp/>*head,</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int32_t<sp/>mm_width,<sp/>int32_t<sp/>mm_height);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><ref refid="group__head_1gab4123b993477c318d4c87d782b6e4b51" kindref="member">weston_head_set_subpixel</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__head" kindref="compound">weston_head</ref><sp/>*head,</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>wl_output_subpixel<sp/>sp);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><ref refid="group__head_1ga0af29bbbf4c6d09c82bbac58286c656a" kindref="member">weston_head_set_transform</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__head" kindref="compound">weston_head</ref><sp/>*head,<sp/>uint32_t<sp/>transform);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>weston_output<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><ref refid="group__output_1gaeb6468e3cabf74cba4030400f1907799" kindref="member">weston_output_init</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__output" kindref="compound">weston_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref>,</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__compositor" kindref="compound">weston_compositor</ref><sp/>*<ref refid="structlinux__dmabuf__buffer_1a8587fed4c04c1fdf31d30f7a9083b3b7" kindref="member">compositor</ref>,</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><ref refid="group__output_1gab45be972c9a7bf6c86c6ca8db03034f2" kindref="member">weston_output_damage</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__output" kindref="compound">weston_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref>);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><ref refid="group__output_1ga4f2b78dfe24872b341fccb812d1e9473" kindref="member">weston_output_release</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__output" kindref="compound">weston_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref>);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><ref refid="backend_8h_1a470be4b2527eb40684c830312131a1a7" kindref="member">weston_output_init_zoom</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__output" kindref="compound">weston_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref>);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><ref refid="group__output_1ga0f26c6ea66cf6683814ed60baf2a04c9" kindref="member">weston_output_finish_frame</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__output" kindref="compound">weston_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref>,</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>timespec<sp/>*stamp,</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>presented_flags);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><ref refid="group__output_1ga5b6b26af26f582ad5627ea7ae6129a89" kindref="member">weston_output_mode_set_native</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__output" kindref="compound">weston_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref>,</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__mode" kindref="compound">weston_mode</ref><sp/>*mode,</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int32_t<sp/>scale);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><ref refid="group__output_1gaa6ff5fff6210e59ee443c89fd4941082" kindref="member">weston_output_transform_coordinate</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__output" kindref="compound">weston_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref>,</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>device_x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>device_y,</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*y);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><ref refid="backend_8h_1a8d4a3039ba1a23bfe713131cf3b7cd5a" kindref="member">weston_output_region_from_global</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__output" kindref="compound">weston_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref>,</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pixman_region32_t<sp/>*region);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>weston_seat<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><ref refid="backend_8h_1a46f42be4885b59c6a4395201f9acb9dc" kindref="member">notify_axis</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__seat" kindref="compound">weston_seat</ref><sp/>*seat,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>timespec<sp/>*time,</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__pointer__axis__event" kindref="compound">weston_pointer_axis_event</ref><sp/>*event);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><ref refid="backend_8h_1a740a3ad0ea196742af5da58be3a77572" kindref="member">notify_axis_source</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__seat" kindref="compound">weston_seat</ref><sp/>*seat,<sp/>uint32_t<sp/>source);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><ref refid="backend_8h_1a341d3b175076e06fad2e432288b0bb7b" kindref="member">notify_button</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__seat" kindref="compound">weston_seat</ref><sp/>*seat,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>timespec<sp/>*time,</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int32_t<sp/>button,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>wl_pointer_button_state<sp/>state);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><ref refid="backend_8h_1aef2cf9bf595febf9a1e448096797f937" kindref="member">notify_key</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__seat" kindref="compound">weston_seat</ref><sp/>*seat,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>timespec<sp/>*time,<sp/>uint32_t<sp/>key,</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>wl_keyboard_key_state<sp/>state,</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="libweston_8h_1afff20b83d542a98eccc1fee1314dde51" kindref="member">weston_key_state_update</ref><sp/>update_state);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><ref refid="backend_8h_1a3c6bf42d3db7275d5d21e7c471fb66b2" kindref="member">notify_keyboard_focus_in</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__seat" kindref="compound">weston_seat</ref><sp/>*seat,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>wl_array<sp/>*keys,</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="libweston_8h_1afff20b83d542a98eccc1fee1314dde51" kindref="member">weston_key_state_update</ref><sp/>update_state);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><ref refid="backend_8h_1af129a8798b5e9e4c417ea356d086761f" kindref="member">notify_keyboard_focus_out</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__seat" kindref="compound">weston_seat</ref><sp/>*seat);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><ref refid="backend_8h_1a035ebbdf329d3837736d585ae77eb2ed" kindref="member">notify_motion</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__seat" kindref="compound">weston_seat</ref><sp/>*seat,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>timespec<sp/>*time,</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__pointer__motion__event" kindref="compound">weston_pointer_motion_event</ref><sp/>*event);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><ref refid="backend_8h_1ac4e9ced5099c0e1a1b776b7e245b8128" kindref="member">notify_motion_absolute</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__seat" kindref="compound">weston_seat</ref><sp/>*seat,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>timespec<sp/>*time,</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><ref refid="backend_8h_1aae75251c5c98be717a0513bed342264c" kindref="member">notify_modifiers</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__seat" kindref="compound">weston_seat</ref><sp/>*seat,<sp/>uint32_t<sp/>serial);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><ref refid="backend_8h_1a58338cc09053bfbc6635127cd9e1b3bd" kindref="member">notify_pointer_frame</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__seat" kindref="compound">weston_seat</ref><sp/>*seat);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><ref refid="backend_8h_1a4d4a279d6db370615901cc52452b545f" kindref="member">notify_pointer_focus</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__seat" kindref="compound">weston_seat</ref><sp/>*seat,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__output" kindref="compound">weston_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref>,</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>weston_touch_device<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><ref refid="backend_8h_1a9664bca52bbe38ccd9ae24b1cba4a04a" kindref="member">notify_touch_normalized</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__touch__device" kindref="compound">weston_touch_device</ref><sp/>*device,</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>timespec<sp/>*time,</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>touch_id,</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y,</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__point2d__device__normalized" kindref="compound">weston_point2d_device_normalized</ref><sp/>*norm,</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>touch_type);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230" refid="backend_8h_1a061cdbcbb528666a0b948270055c661d" refkind="member"><highlight class="normal"><ref refid="backend_8h_1a061cdbcbb528666a0b948270055c661d" kindref="member">notify_touch</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__touch__device" kindref="compound">weston_touch_device</ref><sp/>*device,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>timespec<sp/>*time,</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>touch_id,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>touch_type)</highlight></codeline>
+<codeline lineno="232"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="backend_8h_1a9664bca52bbe38ccd9ae24b1cba4a04a" kindref="member">notify_touch_normalized</ref>(device,<sp/>time,<sp/>touch_id,<sp/>x,<sp/>y,<sp/>NULL,<sp/>touch_type);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><ref refid="backend_8h_1a446dcf07765cfcd5a4202532caa33a7c" kindref="member">notify_touch_frame</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__touch__device" kindref="compound">weston_touch_device</ref><sp/>*device);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><ref refid="backend_8h_1a66bfa64e68570bd446d75208fa8f31b3" kindref="member">notify_touch_cancel</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__touch__device" kindref="compound">weston_touch_device</ref><sp/>*device);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><ref refid="backend_8h_1acd3bb3ef61eea217fd90ef58a9f9ee11" kindref="member">notify_touch_calibrator</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__touch__device" kindref="compound">weston_touch_device</ref><sp/>*device,</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>timespec<sp/>*time,<sp/>int32_t<sp/>slot,</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__point2d__device__normalized" kindref="compound">weston_point2d_device_normalized</ref><sp/>*norm,</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>touch_type);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><ref refid="backend_8h_1a3d913f6ce7333d06f408e10fbc5e0446" kindref="member">notify_touch_calibrator_cancel</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__touch__device" kindref="compound">weston_touch_device</ref><sp/>*device);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><ref refid="backend_8h_1a6b115f5667ce6e498d841c3cfb10f777" kindref="member">notify_touch_calibrator_frame</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__touch__device" kindref="compound">weston_touch_device</ref><sp/>*device);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/libweston/backend.h"/>
+  </compounddef>
+</doxygen>

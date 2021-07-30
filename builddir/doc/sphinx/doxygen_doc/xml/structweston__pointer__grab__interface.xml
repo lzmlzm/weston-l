@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__pointer__grab__interface" kind="struct" language="C++" prot="public">
+    <compoundname>weston_pointer_grab_interface</compoundname>
+    <includes refid="libweston_8h" local="no">libweston.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__pointer__grab__interface_1ae5e701221cb6f3fc5b9e447440a89016" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_pointer_grab_interface::focus) (struct weston_pointer_grab *grab)</definition>
+        <argsstring>)(struct weston_pointer_grab *grab)</argsstring>
+        <name>focus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="425" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="425" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__pointer__grab__interface_1a8d8140967d2e5acada6461d3d935c7c8" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_pointer_grab_interface::motion) (struct weston_pointer_grab *grab, const struct timespec *time, struct weston_pointer_motion_event *event)</definition>
+        <argsstring>)(struct weston_pointer_grab *grab, const struct timespec *time, struct weston_pointer_motion_event *event)</argsstring>
+        <name>motion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="426" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="426" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__pointer__grab__interface_1a9a32e9a60be9a0f0ccf11e3693281f05" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_pointer_grab_interface::button) (struct weston_pointer_grab *grab, const struct timespec *time, uint32_t button, uint32_t state)</definition>
+        <argsstring>)(struct weston_pointer_grab *grab, const struct timespec *time, uint32_t button, uint32_t state)</argsstring>
+        <name>button</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="429" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="429" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__pointer__grab__interface_1a36343d4c78ead9b326390889b09028c6" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_pointer_grab_interface::axis) (struct weston_pointer_grab *grab, const struct timespec *time, struct weston_pointer_axis_event *event)</definition>
+        <argsstring>)(struct weston_pointer_grab *grab, const struct timespec *time, struct weston_pointer_axis_event *event)</argsstring>
+        <name>axis</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="432" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="432" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__pointer__grab__interface_1aa88ccafb16227411850c6b92f71028ed" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_pointer_grab_interface::axis_source) (struct weston_pointer_grab *grab, uint32_t source)</definition>
+        <argsstring>)(struct weston_pointer_grab *grab, uint32_t source)</argsstring>
+        <name>axis_source</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="435" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="435" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__pointer__grab__interface_1a21ebb1d0a573d4d15015b068ecb718c8" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_pointer_grab_interface::frame) (struct weston_pointer_grab *grab)</definition>
+        <argsstring>)(struct weston_pointer_grab *grab)</argsstring>
+        <name>frame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="436" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="436" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__pointer__grab__interface_1ac9ce42c25c51bba7d6a8b98bcc549ef8" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_pointer_grab_interface::cancel) (struct weston_pointer_grab *grab)</definition>
+        <argsstring>)(struct weston_pointer_grab *grab)</argsstring>
+        <name>cancel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="437" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="437" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="424" column="36" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="424" bodyend="438"/>
+    <listofallmembers>
+      <member refid="structweston__pointer__grab__interface_1a36343d4c78ead9b326390889b09028c6" prot="public" virt="non-virtual"><scope>weston_pointer_grab_interface</scope><name>axis</name></member>
+      <member refid="structweston__pointer__grab__interface_1aa88ccafb16227411850c6b92f71028ed" prot="public" virt="non-virtual"><scope>weston_pointer_grab_interface</scope><name>axis_source</name></member>
+      <member refid="structweston__pointer__grab__interface_1a9a32e9a60be9a0f0ccf11e3693281f05" prot="public" virt="non-virtual"><scope>weston_pointer_grab_interface</scope><name>button</name></member>
+      <member refid="structweston__pointer__grab__interface_1ac9ce42c25c51bba7d6a8b98bcc549ef8" prot="public" virt="non-virtual"><scope>weston_pointer_grab_interface</scope><name>cancel</name></member>
+      <member refid="structweston__pointer__grab__interface_1ae5e701221cb6f3fc5b9e447440a89016" prot="public" virt="non-virtual"><scope>weston_pointer_grab_interface</scope><name>focus</name></member>
+      <member refid="structweston__pointer__grab__interface_1a21ebb1d0a573d4d15015b068ecb718c8" prot="public" virt="non-virtual"><scope>weston_pointer_grab_interface</scope><name>frame</name></member>
+      <member refid="structweston__pointer__grab__interface_1a8d8140967d2e5acada6461d3d935c7c8" prot="public" virt="non-virtual"><scope>weston_pointer_grab_interface</scope><name>motion</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

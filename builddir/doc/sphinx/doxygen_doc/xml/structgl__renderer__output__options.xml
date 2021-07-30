@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structgl__renderer__output__options" kind="struct" language="C++" prot="public">
+    <compoundname>gl_renderer_output_options</compoundname>
+    <includes refid="gl-renderer_8h" local="no">gl-renderer.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgl__renderer__output__options_1a82e504499e5952cfb2f0308dcfed3fee" prot="public" static="no" mutable="no">
+        <type><ref refid="gl-renderer_8h_1a4007ec919445bd39e1cdbf77c07fc090" kindref="member">EGLNativeWindowType</ref></type>
+        <definition>EGLNativeWindowType gl_renderer_output_options::window_for_legacy</definition>
+        <argsstring></argsstring>
+        <name>window_for_legacy</name>
+        <briefdescription>
+<para>Native window handle for <computeroutput>eglCreateWindowSurface</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" line="81" column="21" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer__output__options_1a4a41f1b90ab23ec044d3ee9f5dc18168" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* gl_renderer_output_options::window_for_platform</definition>
+        <argsstring></argsstring>
+        <name>window_for_platform</name>
+        <briefdescription>
+<para>Native window handle for <computeroutput>eglCreatePlatformWindowSurface</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" line="83" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer__output__options_1aef1d377ceb344ade2ebcedf02dbf6d53" prot="public" static="no" mutable="no">
+        <type>const uint32_t *</type>
+        <definition>const uint32_t* gl_renderer_output_options::drm_formats</definition>
+        <argsstring></argsstring>
+        <name>drm_formats</name>
+        <briefdescription>
+<para>Array of DRM pixel formats acceptable for the window. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" line="85" column="16" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer__output__options_1ae575c80769bbd43947478c845e36bce3" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned gl_renderer_output_options::drm_formats_count</definition>
+        <argsstring></argsstring>
+        <name>drm_formats_count</name>
+        <briefdescription>
+<para>The <computeroutput>drm_formats</computeroutput> array length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" line="87" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" line="79" column="33" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" bodystart="79" bodyend="88"/>
+    <listofallmembers>
+      <member refid="structgl__renderer__output__options_1aef1d377ceb344ade2ebcedf02dbf6d53" prot="public" virt="non-virtual"><scope>gl_renderer_output_options</scope><name>drm_formats</name></member>
+      <member refid="structgl__renderer__output__options_1ae575c80769bbd43947478c845e36bce3" prot="public" virt="non-virtual"><scope>gl_renderer_output_options</scope><name>drm_formats_count</name></member>
+      <member refid="structgl__renderer__output__options_1a82e504499e5952cfb2f0308dcfed3fee" prot="public" virt="non-virtual"><scope>gl_renderer_output_options</scope><name>window_for_legacy</name></member>
+      <member refid="structgl__renderer__output__options_1a4a41f1b90ab23ec044d3ee9f5dc18168" prot="public" virt="non-virtual"><scope>gl_renderer_output_options</scope><name>window_for_platform</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structbuffer" kind="struct" language="C++" prot="public">
+    <compoundname>buffer</compoundname>
+    <includes refid="weston-test-client-helper_8h" local="no">weston-test-client-helper.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structbuffer_1a47f5f09576d179641e98d1d6730067dc" prot="public" static="no" mutable="no">
+        <type>struct wl_buffer *</type>
+        <definition>struct wl_buffer* buffer::proxy</definition>
+        <argsstring></argsstring>
+        <name>proxy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="161" column="16" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbuffer_1a2966e19c7a1355df268a743450746f8e" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t buffer::len</definition>
+        <argsstring></argsstring>
+        <name>len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="162" column="8" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbuffer_1a6f57d8719ac323d52c3b1fd816dedf76" prot="public" static="no" mutable="no">
+        <type>pixman_image_t *</type>
+        <definition>pixman_image_t* buffer::image</definition>
+        <argsstring></argsstring>
+        <name>image</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="163" column="16" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="160" column="13" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="160" bodyend="164"/>
+    <listofallmembers>
+      <member refid="structbuffer_1a6f57d8719ac323d52c3b1fd816dedf76" prot="public" virt="non-virtual"><scope>buffer</scope><name>image</name></member>
+      <member refid="structbuffer_1a2966e19c7a1355df268a743450746f8e" prot="public" virt="non-virtual"><scope>buffer</scope><name>len</name></member>
+      <member refid="structbuffer_1a47f5f09576d179641e98d1d6730067dc" prot="public" virt="non-virtual"><scope>buffer</scope><name>proxy</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

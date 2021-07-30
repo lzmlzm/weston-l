@@ -1,0 +1,581 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="output-damage-test_8c" kind="file" language="C++">
+    <compoundname>output-damage-test.c</compoundname>
+    <includes local="yes">config.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">sys/mman.h</includes>
+    <includes refid="weston-test-client-helper_8h" local="yes">weston-test-client-helper.h</includes>
+    <includes refid="weston-test-fixture-compositor_8h" local="yes">weston-test-fixture-compositor.h</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>stdbool.h</label>
+      </node>
+      <node id="26">
+        <label>viewporter-client-protocol.h</label>
+      </node>
+      <node id="18">
+        <label>libweston/libweston.h</label>
+        <link refid="libweston_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>weston-test-fixture-compositor.h</label>
+        <link refid="weston-test-fixture-compositor_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>assert.h</label>
+      </node>
+      <node id="25">
+        <label>weston-screenshooter-client-protocol.h</label>
+      </node>
+      <node id="24">
+        <label>weston-test-client-protocol.h</label>
+      </node>
+      <node id="9">
+        <label>stdint.h</label>
+      </node>
+      <node id="14">
+        <label>stdlib.h</label>
+      </node>
+      <node id="5">
+        <label>sys/mman.h</label>
+      </node>
+      <node id="20">
+        <label>wayland-server.h</label>
+      </node>
+      <node id="19">
+        <label>xkbcommon/xkbcommon.h</label>
+      </node>
+      <node id="16">
+        <label>shared/helpers.h</label>
+      </node>
+      <node id="23">
+        <label>weston-testsuite-data.h</label>
+        <link refid="weston-testsuite-data_8h"/>
+      </node>
+      <node id="12">
+        <label>wayland-client-protocol.h</label>
+      </node>
+      <node id="4">
+        <label>string.h</label>
+      </node>
+      <node id="22">
+        <label>libweston/zalloc.h</label>
+        <link refid="zalloc_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/tests/output-damage-test.c</label>
+        <link refid="output-damage-test_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>time.h</label>
+      </node>
+      <node id="21">
+        <label>libweston/matrix.h</label>
+        <link refid="matrix_8h"/>
+      </node>
+      <node id="11">
+        <label>pixman.h</label>
+      </node>
+      <node id="15">
+        <label>wayland-util.h</label>
+      </node>
+      <node id="13">
+        <label>weston-test-runner.h</label>
+        <link refid="weston-test-runner_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+      <node id="6">
+        <label>weston-test-client-helper.h</label>
+        <link refid="weston-test-client-helper_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structsetup__args" prot="public">setup_args</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="output-damage-test_8c_1ac2d31244b53626afa2996269dc26a926" prot="public" static="no">
+        <name>RENDERERS</name>
+        <param><defname>s</defname></param>
+        <param><defname>t</defname></param>
+        <initializer>	{								\
+		.renderer = <ref refid="group__testharness_1gga3f584343987d08b8aa9abf1e9c371a90a7c4539f6251acc274b33a085a1c520d7" kindref="member">RENDERER_PIXMAN</ref>,				\
+		.scale = s,						\
+		.transform = WL_OUTPUT_TRANSFORM_ ## t,			\
+		.transform_name = #t,					\
+		.gl_shadow_fb = false,					\
+		.meta.name = &quot;pixman &quot; #s &quot; &quot; #t,			\
+	},								\
+	{								\
+		.renderer = <ref refid="group__testharness_1gga3f584343987d08b8aa9abf1e9c371a90ae5e927b4a68fbbf849f68aed0de9e34a" kindref="member">RENDERER_GL</ref>,				\
+		.scale = s,						\
+		.transform = WL_OUTPUT_TRANSFORM_ ## t,			\
+		.transform_name = #t,					\
+		.gl_shadow_fb = false,					\
+		.meta.name = &quot;GL no-shadow &quot; #s &quot; &quot; #t,			\
+	},								\
+	{								\
+		.renderer = <ref refid="group__testharness_1gga3f584343987d08b8aa9abf1e9c371a90ae5e927b4a68fbbf849f68aed0de9e34a" kindref="member">RENDERER_GL</ref>,				\
+		.scale = s,						\
+		.transform = WL_OUTPUT_TRANSFORM_ ## t,			\
+		.transform_name = #t,					\
+		.gl_shadow_fb = true,					\
+		.meta.name = &quot;GL shadow &quot; #s &quot; &quot; #t,			\
+	}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/output-damage-test.c" line="35" column="9" bodyfile="/home/lzm/Wayland/weston/tests/output-damage-test.c" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="output-damage-test_8c_1a4fe014ac2e86c9c5836912f1229f2d2d" prot="public" static="no">
+        <name>COUNT_BUFS</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/output-damage-test.c" line="178" column="9"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="output-damage-test_8c_1aabfb997aab1717c1f56f38b8a2ca6c3d" prot="public" static="yes" mutable="no">
+        <type>const struct <ref refid="structsetup__args" kindref="compound">setup_args</ref></type>
+        <definition>const struct setup_args my_setup_args[]</definition>
+        <argsstring>[]</argsstring>
+        <name>my_setup_args</name>
+        <initializer>= {
+	<ref refid="output-transforms-test_8c_1ac2d31244b53626afa2996269dc26a926" kindref="member">RENDERERS</ref>(1, NORMAL),
+	<ref refid="output-transforms-test_8c_1ac2d31244b53626afa2996269dc26a926" kindref="member">RENDERERS</ref>(1, 90),
+	<ref refid="output-transforms-test_8c_1ac2d31244b53626afa2996269dc26a926" kindref="member">RENDERERS</ref>(1, 180),
+	<ref refid="output-transforms-test_8c_1ac2d31244b53626afa2996269dc26a926" kindref="member">RENDERERS</ref>(1, 270),
+	<ref refid="output-transforms-test_8c_1ac2d31244b53626afa2996269dc26a926" kindref="member">RENDERERS</ref>(1, FLIPPED),
+	<ref refid="output-transforms-test_8c_1ac2d31244b53626afa2996269dc26a926" kindref="member">RENDERERS</ref>(1, FLIPPED_90),
+	<ref refid="output-transforms-test_8c_1ac2d31244b53626afa2996269dc26a926" kindref="member">RENDERERS</ref>(1, FLIPPED_180),
+	<ref refid="output-transforms-test_8c_1ac2d31244b53626afa2996269dc26a926" kindref="member">RENDERERS</ref>(1, FLIPPED_270),
+	<ref refid="output-transforms-test_8c_1ac2d31244b53626afa2996269dc26a926" kindref="member">RENDERERS</ref>(2, NORMAL),
+	<ref refid="output-transforms-test_8c_1ac2d31244b53626afa2996269dc26a926" kindref="member">RENDERERS</ref>(3, NORMAL),
+	<ref refid="output-transforms-test_8c_1ac2d31244b53626afa2996269dc26a926" kindref="member">RENDERERS</ref>(2, 90),
+	<ref refid="output-transforms-test_8c_1ac2d31244b53626afa2996269dc26a926" kindref="member">RENDERERS</ref>(2, 180),
+	<ref refid="output-transforms-test_8c_1ac2d31244b53626afa2996269dc26a926" kindref="member">RENDERERS</ref>(2, FLIPPED),
+	<ref refid="output-transforms-test_8c_1ac2d31244b53626afa2996269dc26a926" kindref="member">RENDERERS</ref>(3, FLIPPED_270),
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/output-damage-test.c" line="1" column="0" bodyfile="/home/lzm/Wayland/weston/tests/output-damage-test.c" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="output-damage-test_8c_1ae622300b946206b8452fb1fe0b5ece05" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></type>
+        <definition>static enum test_result_code fixture_setup</definition>
+        <argsstring>(struct weston_test_harness *harness, const struct setup_args *arg)</argsstring>
+        <name>fixture_setup</name>
+        <param>
+          <type>struct <ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref> *</type>
+          <declname>harness</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structsetup__args" kindref="compound">setup_args</ref> *</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/output-damage-test.c" line="1" column="0" bodyfile="/home/lzm/Wayland/weston/tests/output-damage-test.c" bodystart="88" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="output-damage-test_8c_1a87369f50a65ebd39e3f69d096b0dbc78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DECLARE_FIXTURE_SETUP_WITH_ARG</definition>
+        <argsstring>(fixture_setup, my_setup_args, meta)</argsstring>
+        <name>DECLARE_FIXTURE_SETUP_WITH_ARG</name>
+        <param>
+          <type><ref refid="yuv-buffer-test_8c_1a94e9ff74226ccd29a26846ccb66d481f" kindref="member">fixture_setup</ref></type>
+        </param>
+        <param>
+          <type><ref refid="viewporter-shot-test_8c_1aabfb997aab1717c1f56f38b8a2ca6c3d" kindref="member">my_setup_args</ref></type>
+        </param>
+        <param>
+          <type>meta</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/output-damage-test.c" line="156" column="1" declfile="/home/lzm/Wayland/weston/tests/output-damage-test.c" declline="156" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="output-damage-test_8c_1a7d6e38e56b693fa3bb28e5f32eb29c9e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void commit_buffer_with_damage</definition>
+        <argsstring>(struct surface *surface, struct buffer *buffer, struct rectangle damage)</argsstring>
+        <name>commit_buffer_with_damage</name>
+        <param>
+          <type>struct <ref refid="structsurface" kindref="compound">surface</ref> *</type>
+          <declname>surface</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structbuffer" kindref="compound">buffer</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structrectangle" kindref="compound">rectangle</ref></type>
+          <declname>damage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/output-damage-test.c" line="159" column="1" bodyfile="/home/lzm/Wayland/weston/tests/output-damage-test.c" bodystart="159" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="output-damage-test_8c_1a88f89568fc687e7c282500cb8fc6d9ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(output_damage)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>output_damage</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/output-damage-test.c" line="176" column="1" bodyfile="/home/lzm/Wayland/weston/tests/output-damage-test.c" bodystart="176" bodyend="237"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2020<sp/>Collabora,<sp/>Ltd.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>(including<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>next<sp/>paragraph)<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>NONINFRINGEMENT.<sp/><sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/mman.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="weston-test-client-helper_8h" kindref="compound">weston-test-client-helper.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="weston-test-fixture-compositor_8h" kindref="compound">weston-test-fixture-compositor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RENDERERS(s,<sp/>t)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="36"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="37"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.renderer<sp/>=<sp/>RENDERER_PIXMAN,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="38"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.scale<sp/>=<sp/>s,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="39"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.transform<sp/>=<sp/>WL_OUTPUT_TRANSFORM_<sp/>##<sp/>t,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.transform_name<sp/>=<sp/>#t,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.gl_shadow_fb<sp/>=<sp/>false,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.meta.name<sp/>=<sp/>&quot;pixman<sp/>&quot;<sp/>#s<sp/>&quot;<sp/>&quot;<sp/>#t,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.renderer<sp/>=<sp/>RENDERER_GL,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.scale<sp/>=<sp/>s,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.transform<sp/>=<sp/>WL_OUTPUT_TRANSFORM_<sp/>##<sp/>t,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.transform_name<sp/>=<sp/>#t,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.gl_shadow_fb<sp/>=<sp/>false,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="50"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.meta.name<sp/>=<sp/>&quot;GL<sp/>no-shadow<sp/>&quot;<sp/>#s<sp/>&quot;<sp/>&quot;<sp/>#t,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.renderer<sp/>=<sp/>RENDERER_GL,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.scale<sp/>=<sp/>s,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.transform<sp/>=<sp/>WL_OUTPUT_TRANSFORM_<sp/>##<sp/>t,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.transform_name<sp/>=<sp/>#t,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="57"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.gl_shadow_fb<sp/>=<sp/>true,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="58"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.meta.name<sp/>=<sp/>&quot;GL<sp/>shadow<sp/>&quot;<sp/>#s<sp/>&quot;<sp/>&quot;<sp/>#t,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="59"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsetup__args" kindref="compound">setup_args</ref><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfixture__metadata" kindref="compound">fixture_metadata</ref><sp/><ref refid="structsetup__args_1a90e5b9a62a0b9b494f1068c6127f27eb" kindref="member">meta</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1ga3f584343987d08b8aa9abf1e9c371a90" kindref="member">renderer_type</ref><sp/><ref refid="structsetup__args_1a0fd5bb4903719c36beb60f057c9fab96" kindref="member">renderer</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsetup__args_1aceca7131bc026e67f37581158928d4c4" kindref="member">scale</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>wl_output_transform<sp/><ref refid="structsetup__args_1aef0d11f87910b23f6823fa754f4beca1" kindref="member">transform</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structsetup__args_1a3c76ca160f8fedfdf1810a13a8103c81" kindref="member">transform_name</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structsetup__args_1a26fcee94dcfe0dc08abf0b075c9ffeb4" kindref="member">gl_shadow_fb</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsetup__args" kindref="compound">setup_args</ref><sp/><ref refid="output-damage-test_8c_1aabfb997aab1717c1f56f38b8a2ca6c3d" kindref="member">my_setup_args</ref>[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="output-damage-test_8c_1ac2d31244b53626afa2996269dc26a926" kindref="member">RENDERERS</ref>(1,<sp/>NORMAL),</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="output-damage-test_8c_1ac2d31244b53626afa2996269dc26a926" kindref="member">RENDERERS</ref>(1,<sp/>90),</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="output-damage-test_8c_1ac2d31244b53626afa2996269dc26a926" kindref="member">RENDERERS</ref>(1,<sp/>180),</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="output-damage-test_8c_1ac2d31244b53626afa2996269dc26a926" kindref="member">RENDERERS</ref>(1,<sp/>270),</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="output-damage-test_8c_1ac2d31244b53626afa2996269dc26a926" kindref="member">RENDERERS</ref>(1,<sp/>FLIPPED),</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="output-damage-test_8c_1ac2d31244b53626afa2996269dc26a926" kindref="member">RENDERERS</ref>(1,<sp/>FLIPPED_90),</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="output-damage-test_8c_1ac2d31244b53626afa2996269dc26a926" kindref="member">RENDERERS</ref>(1,<sp/>FLIPPED_180),</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="output-damage-test_8c_1ac2d31244b53626afa2996269dc26a926" kindref="member">RENDERERS</ref>(1,<sp/>FLIPPED_270),</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="output-damage-test_8c_1ac2d31244b53626afa2996269dc26a926" kindref="member">RENDERERS</ref>(2,<sp/>NORMAL),</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="output-damage-test_8c_1ac2d31244b53626afa2996269dc26a926" kindref="member">RENDERERS</ref>(3,<sp/>NORMAL),</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="output-damage-test_8c_1ac2d31244b53626afa2996269dc26a926" kindref="member">RENDERERS</ref>(2,<sp/>90),</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="output-damage-test_8c_1ac2d31244b53626afa2996269dc26a926" kindref="member">RENDERERS</ref>(2,<sp/>180),</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="output-damage-test_8c_1ac2d31244b53626afa2996269dc26a926" kindref="member">RENDERERS</ref>(2,<sp/>FLIPPED),</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="output-damage-test_8c_1ac2d31244b53626afa2996269dc26a926" kindref="member">RENDERERS</ref>(3,<sp/>FLIPPED_270),</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><ref refid="output-damage-test_8c_1ae622300b946206b8452fb1fe0b5ece05" kindref="member">fixture_setup</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref><sp/>*harness,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structsetup__args" kindref="compound">setup_args</ref><sp/>*arg)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structcompositor__setup" kindref="compound">compositor_setup</ref><sp/>setup;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="93"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>width<sp/>and<sp/>height<sp/>are<sp/>chosen<sp/>to<sp/>produce<sp/>324x240<sp/>framebuffer,<sp/>to</highlight></codeline>
+<codeline lineno="94"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>emulate<sp/>keeping<sp/>the<sp/>video<sp/>mode<sp/>constant.</highlight></codeline>
+<codeline lineno="95"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>This<sp/>resolution<sp/>is<sp/>divisible<sp/>by<sp/>2<sp/>and<sp/>3.</highlight></codeline>
+<codeline lineno="96"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Headless<sp/>multiplies<sp/>the<sp/>given<sp/>size<sp/>by<sp/>scale.</highlight></codeline>
+<codeline lineno="97"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__testharness_1ga6d93ba47ec578b140fa2cbd3efa1218c" kindref="member">compositor_setup_defaults</ref>(&amp;setup);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setup.renderer<sp/>=<sp/>arg-&gt;<ref refid="structsetup__args_1a0fd5bb4903719c36beb60f057c9fab96" kindref="member">renderer</ref>;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setup.width<sp/>=<sp/>324<sp/>/<sp/>arg-&gt;<ref refid="structsetup__args_1aceca7131bc026e67f37581158928d4c4" kindref="member">scale</ref>;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setup.height<sp/>=<sp/>240<sp/>/<sp/>arg-&gt;<ref refid="structsetup__args_1aceca7131bc026e67f37581158928d4c4" kindref="member">scale</ref>;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setup.scale<sp/>=<sp/>arg-&gt;<ref refid="structsetup__args_1aceca7131bc026e67f37581158928d4c4" kindref="member">scale</ref>;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setup.transform<sp/>=<sp/>arg-&gt;<ref refid="structsetup__args_1aef0d11f87910b23f6823fa754f4beca1" kindref="member">transform</ref>;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setup.shell<sp/>=<sp/><ref refid="group__testharness_1gga0ad980f813d1f7469e9b9ff20f73fce9a788b50d23ce49ed189c3f49fc6030d85" kindref="member">SHELL_TEST_DESKTOP</ref>;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="108"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>test<sp/>here<sp/>works<sp/>by<sp/>swapping<sp/>the<sp/>whole<sp/>wl_surface<sp/>into<sp/>a</highlight></codeline>
+<codeline lineno="109"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>different<sp/>color<sp/>but<sp/>lying<sp/>that<sp/>there<sp/>is<sp/>only<sp/>a<sp/>small<sp/>damage<sp/>area.</highlight></codeline>
+<codeline lineno="110"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Then<sp/>the<sp/>test<sp/>checks<sp/>that<sp/>only<sp/>the<sp/>damage<sp/>area<sp/>gets<sp/>the<sp/>new<sp/>color</highlight></codeline>
+<codeline lineno="111"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>on<sp/>screen.</highlight></codeline>
+<codeline lineno="112"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="113"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>following<sp/>quirk<sp/>forces<sp/>GL-renderer<sp/>to<sp/>update<sp/>the<sp/>whole<sp/>texture</highlight></codeline>
+<codeline lineno="114"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>even<sp/>for<sp/>partial<sp/>damage.<sp/>Otherwise,<sp/>GL-renderer<sp/>would<sp/>only<sp/>copy<sp/>the</highlight></codeline>
+<codeline lineno="115"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>damaged<sp/>area<sp/>from<sp/>the<sp/>wl_shm<sp/>buffer<sp/>into<sp/>a<sp/>GL<sp/>texture.</highlight></codeline>
+<codeline lineno="116"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="117"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Those<sp/>output_damage<sp/>tests<sp/>where<sp/>the<sp/>surface<sp/>is<sp/>scaled<sp/>up<sp/>by<sp/>the</highlight></codeline>
+<codeline lineno="118"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>compositor<sp/>will<sp/>use<sp/>bilinear<sp/>texture<sp/>sampling<sp/>due<sp/>to<sp/>the<sp/>policy</highlight></codeline>
+<codeline lineno="119"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>in<sp/>the<sp/>renderers.</highlight></codeline>
+<codeline lineno="120"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="121"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Pixman<sp/>renderer<sp/>never<sp/>makes<sp/>copies<sp/>of<sp/>wl_shm<sp/>buffers,<sp/>so<sp/>bilinear</highlight></codeline>
+<codeline lineno="122"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>sampling<sp/>there<sp/>will<sp/>always<sp/>produce<sp/>the<sp/>expected<sp/>result.<sp/>However,</highlight></codeline>
+<codeline lineno="123"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>with<sp/>GL-renderer<sp/>if<sp/>the<sp/>texture<sp/>is<sp/>not<sp/>updated<sp/>beyond<sp/>the<sp/>strict</highlight></codeline>
+<codeline lineno="124"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>damage<sp/>region,<sp/>bilinear<sp/>sampling<sp/>will<sp/>result<sp/>in<sp/>a<sp/>blend<sp/>of<sp/>the<sp/>old</highlight></codeline>
+<codeline lineno="125"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>and<sp/>new<sp/>colors<sp/>at<sp/>the<sp/>edges<sp/>of<sp/>the<sp/>damage<sp/>rectangles.<sp/>This<sp/>blend</highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>would<sp/>be<sp/>detrimental<sp/>to<sp/>testing<sp/>the<sp/>damage<sp/>regions<sp/>and<sp/>would<sp/>cause</highlight></codeline>
+<codeline lineno="127"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>test<sp/>failures<sp/>due<sp/>to<sp/>reference<sp/>image<sp/>mismatch.<sp/>What<sp/>we<sp/>actually</highlight></codeline>
+<codeline lineno="128"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>want<sp/>to<sp/>see<sp/>is<sp/>the<sp/>crisp<sp/>outline<sp/>of<sp/>the<sp/>damage<sp/>rectangles.</highlight></codeline>
+<codeline lineno="129"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setup.test_quirks.gl_force_full_upload<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(arg-&gt;<ref refid="structsetup__args_1a26fcee94dcfe0dc08abf0b075c9ffeb4" kindref="member">gl_shadow_fb</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="134"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>A<sp/>second<sp/>case<sp/>for<sp/>GL-renderer:<sp/>the<sp/>shadow<sp/>framebuffer</highlight></codeline>
+<codeline lineno="135"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="136"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>This<sp/>tests<sp/>blit_shadow_to_output()<sp/>specifically.<sp/>The<sp/>quirk</highlight></codeline>
+<codeline lineno="137"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>forces<sp/>the<sp/>shadow<sp/>framebuffer<sp/>to<sp/>be<sp/>redrawn<sp/>completely,<sp/>which</highlight></codeline>
+<codeline lineno="138"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>means<sp/>the<sp/>test<sp/>surface<sp/>will<sp/>be<sp/>completely<sp/>filled<sp/>with<sp/>a<sp/>new</highlight></codeline>
+<codeline lineno="139"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>color<sp/>regardless<sp/>of<sp/>damage.<sp/>The<sp/>blit<sp/>uses<sp/>damage<sp/>too,<sp/>and</highlight></codeline>
+<codeline lineno="140"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>the<sp/>damage<sp/>pattern<sp/>that<sp/>is<sp/>tested<sp/>for<sp/>needs<sp/>to<sp/>appear<sp/>in</highlight></codeline>
+<codeline lineno="141"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>that<sp/>step.</highlight></codeline>
+<codeline lineno="142"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setup.test_quirks.gl_force_full_redraw_of_shadow_fb<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>To<sp/>skip<sp/>instead<sp/>of<sp/>fail<sp/>the<sp/>test<sp/>if<sp/>shadow<sp/>not<sp/>available<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setup.test_quirks.required_capabilities<sp/>=<sp/><ref refid="libweston_8h_1a4d5e112f3ecc541323c729709ea9ee2da1b1e29ae46171ce404f460103204ce98" kindref="member">WESTON_CAP_COLOR_OPS</ref>;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-fixture-compositor_8h_1aac73c9ae82be39289e01acd3e038b4da" kindref="member">weston_ini_setup</ref>(&amp;setup,</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-fixture-compositor_8c_1aa4dcc2eb01029f6d9ecd8fe2e780aec0" kindref="member">cfgln</ref>(</highlight><highlight class="stringliteral">&quot;[output]&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-fixture-compositor_8c_1aa4dcc2eb01029f6d9ecd8fe2e780aec0" kindref="member">cfgln</ref>(</highlight><highlight class="stringliteral">&quot;name=headless&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-fixture-compositor_8c_1aa4dcc2eb01029f6d9ecd8fe2e780aec0" kindref="member">cfgln</ref>(</highlight><highlight class="stringliteral">&quot;use-renderer-shadow=true&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1gacd7b26a0f0f337781013b40d229cf262" kindref="member">weston_test_harness_execute_as_client</ref>(harness,<sp/>&amp;setup);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><ref refid="output-damage-test_8c_1a87369f50a65ebd39e3f69d096b0dbc78" kindref="member">DECLARE_FIXTURE_SETUP_WITH_ARG</ref>(<ref refid="output-damage-test_8c_1ae622300b946206b8452fb1fe0b5ece05" kindref="member">fixture_setup</ref>,<sp/><ref refid="output-damage-test_8c_1aabfb997aab1717c1f56f38b8a2ca6c3d" kindref="member">my_setup_args</ref>,<sp/>meta);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><ref refid="output-damage-test_8c_1a7d6e38e56b693fa3bb28e5f32eb29c9e" kindref="member">commit_buffer_with_damage</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structsurface" kindref="compound">surface</ref><sp/>*<ref refid="structsurface" kindref="compound">surface</ref>,</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbuffer" kindref="compound">buffer</ref><sp/>*<ref refid="structbuffer" kindref="compound">buffer</ref>,</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structrectangle" kindref="compound">rectangle</ref><sp/>damage)</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_surface_attach(<ref refid="structsurface" kindref="compound">surface</ref>-&gt;<ref refid="structsurface_1a4910a1070e78b84c00c8ab27a508b4da" kindref="member">wl_surface</ref>,<sp/><ref refid="structbuffer" kindref="compound">buffer</ref>-&gt;<ref refid="structbuffer_1a47f5f09576d179641e98d1d6730067dc" kindref="member">proxy</ref>,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_surface_damage(<ref refid="structsurface" kindref="compound">surface</ref>-&gt;<ref refid="structsurface_1a4910a1070e78b84c00c8ab27a508b4da" kindref="member">wl_surface</ref>,<sp/>damage.<ref refid="structrectangle_1a03970481db05be5eb4e1b55eaba3b347" kindref="member">x</ref>,<sp/>damage.<ref refid="structrectangle_1a2331724555ab2149f4ce4e2b57079e4d" kindref="member">y</ref>,</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>damage.<ref refid="structrectangle_1a57a9b24a714057d8d2ca9a06333560d3" kindref="member">width</ref>,<sp/>damage.<ref refid="structrectangle_1af460193d9a375b8e2813bf1fe6216cce" kindref="member">height</ref>);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wl_surface_commit(<ref refid="structsurface" kindref="compound">surface</ref>-&gt;<ref refid="structsurface_1a4910a1070e78b84c00c8ab27a508b4da" kindref="member">wl_surface</ref>);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="170"><highlight class="comment"><sp/>*<sp/>Test<sp/>that<sp/>Weston<sp/>repaints<sp/>exactly<sp/>the<sp/>damage<sp/>a<sp/>client<sp/>sends<sp/>to<sp/>it.</highlight></codeline>
+<codeline lineno="171"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="172"><highlight class="comment"><sp/>*<sp/>NOTE:<sp/>This<sp/>relies<sp/>on<sp/>the<sp/>Weston<sp/>implementation<sp/>detail<sp/>that<sp/>Weston<sp/>actually</highlight></codeline>
+<codeline lineno="173"><highlight class="comment"><sp/>*<sp/>will<sp/>repaint<sp/>exactly<sp/>the<sp/>client&apos;s<sp/>damage<sp/>and<sp/>nothing<sp/>more.<sp/>This<sp/>is<sp/>not</highlight></codeline>
+<codeline lineno="174"><highlight class="comment"><sp/>*<sp/>generally<sp/>true<sp/>of<sp/>Wayland<sp/>compositors.</highlight></codeline>
+<codeline lineno="175"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><ref refid="output-damage-test_8c_1a88f89568fc687e7c282500cb8fc6d9ce" kindref="member">TEST</ref>(output_damage)</highlight></codeline>
+<codeline lineno="177"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>COUNT_BUFS<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsetup__args" kindref="compound">setup_args</ref><sp/>*oargs;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclient" kindref="compound">client</ref><sp/>*<ref refid="structclient" kindref="compound">client</ref>;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>match<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*refname;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbuffer" kindref="compound">buffer</ref><sp/>*buf[<ref refid="output-damage-test_8c_1a4fe014ac2e86c9c5836912f1229f2d2d" kindref="member">COUNT_BUFS</ref>];</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pixman_color_t<sp/>colors[<ref refid="output-damage-test_8c_1a4fe014ac2e86c9c5836912f1229f2d2d" kindref="member">COUNT_BUFS</ref>];</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structrectangle" kindref="compound">rectangle</ref><sp/>damages[<ref refid="output-damage-test_8c_1a4fe014ac2e86c9c5836912f1229f2d2d" kindref="member">COUNT_BUFS</ref>]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>0<sp/></highlight><highlight class="comment">/*<sp/>full<sp/>damage<sp/>*/</highlight><highlight class="normal"><sp/>},</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>.<ref refid="structrectangle_1a03970481db05be5eb4e1b55eaba3b347" kindref="member">x</ref><sp/>=<sp/>10,<sp/>.y<sp/>=<sp/>10,<sp/>.width<sp/>=<sp/>20,<sp/>.height<sp/>=<sp/>10<sp/>},</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>.x<sp/>=<sp/>43,<sp/>.y<sp/>=<sp/>47,<sp/>.width<sp/>=<sp/>5,<sp/>.height<sp/>=<sp/>50<sp/>},</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structrectangle_1a57a9b24a714057d8d2ca9a06333560d3" kindref="member">width</ref><sp/>=<sp/>140;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structrectangle_1af460193d9a375b8e2813bf1fe6216cce" kindref="member">height</ref><sp/>=<sp/>110;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8c_1a6c2ea066953a045e2e4e887361ef1dd1" kindref="member">color_rgb888</ref>(&amp;colors[0],<sp/>100,<sp/>100,<sp/>100);<sp/></highlight><highlight class="comment">/*<sp/>grey<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8c_1a6c2ea066953a045e2e4e887361ef1dd1" kindref="member">color_rgb888</ref>(&amp;colors[1],<sp/><sp/><sp/>0,<sp/>255,<sp/>255);<sp/></highlight><highlight class="comment">/*<sp/>cyan<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8c_1a6c2ea066953a045e2e4e887361ef1dd1" kindref="member">color_rgb888</ref>(&amp;colors[2],<sp/><sp/><sp/>0,<sp/>255,<sp/><sp/><sp/>0);<sp/></highlight><highlight class="comment">/*<sp/>green<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>oargs<sp/>=<sp/>&amp;<ref refid="output-damage-test_8c_1aabfb997aab1717c1f56f38b8a2ca6c3d" kindref="member">my_setup_args</ref>[<ref refid="group__testharness_1gaa0dd40f331a900d10af1cbad1d4372aa" kindref="member">get_test_fixture_index</ref>()];</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>asprintf(&amp;refname,<sp/></highlight><highlight class="stringliteral">&quot;output-damage_%d-%s&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>oargs-&gt;<ref refid="structsetup__args_1aceca7131bc026e67f37581158928d4c4" kindref="member">scale</ref>,<sp/>oargs-&gt;<ref refid="structsetup__args_1a3c76ca160f8fedfdf1810a13a8103c81" kindref="member">transform_name</ref>);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(ret);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__testharness_1gaa1538dfd4262a1feafd60cd1f09d9878" kindref="member">testlog</ref>(</highlight><highlight class="stringliteral">&quot;%s:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="group__testharness_1gae81a0b16dc498f48d248e7fb7d819660" kindref="member">get_test_name</ref>(),<sp/>refname);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structclient" kindref="compound">client</ref><sp/>=<sp/><ref refid="weston-test-client-helper_8c_1af73e5cb173ce63199265176e2b0e90dd" kindref="member">create_client</ref>();</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1ab08863485e285fef208584804ca7480a" kindref="member">surface</ref><sp/>=<sp/><ref refid="weston-test-client-helper_8c_1a48b9e7f0e76b1c88869a2f8666d8026e" kindref="member">create_test_surface</ref>(<ref refid="structclient" kindref="compound">client</ref>);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1ab08863485e285fef208584804ca7480a" kindref="member">surface</ref>-&gt;<ref refid="structsurface_1ad441498d73778f515b36e669b478b04f" kindref="member">width</ref><sp/>=<sp/><ref refid="structrectangle_1a57a9b24a714057d8d2ca9a06333560d3" kindref="member">width</ref>;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1ab08863485e285fef208584804ca7480a" kindref="member">surface</ref>-&gt;<ref refid="structsurface_1a973cb10ddcf4f6f6def6a745fc8ca880" kindref="member">height</ref><sp/>=<sp/><ref refid="structrectangle_1af460193d9a375b8e2813bf1fe6216cce" kindref="member">height</ref>;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="output-damage-test_8c_1a4fe014ac2e86c9c5836912f1229f2d2d" kindref="member">COUNT_BUFS</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buf[i]<sp/>=<sp/><ref refid="weston-test-client-helper_8c_1a1eecc92b5b5e115112d67cbc7f538e8d" kindref="member">create_shm_buffer_a8r8g8b8</ref>(<ref refid="structclient" kindref="compound">client</ref>,<sp/><ref refid="structrectangle_1a57a9b24a714057d8d2ca9a06333560d3" kindref="member">width</ref>,<sp/><ref refid="structrectangle_1af460193d9a375b8e2813bf1fe6216cce" kindref="member">height</ref>);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8c_1a19461415389d3c87d20bf1151e460f41" kindref="member">fill_image_with_color</ref>(buf[i]-&gt;image,<sp/>&amp;colors[i]);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1ab08863485e285fef208584804ca7480a" kindref="member">surface</ref>-&gt;<ref refid="structsurface_1a6380eb64761a852c50514a0ad1b8a37c" kindref="member">buffer</ref><sp/>=<sp/>buf[0];</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8c_1a37328a264739e2481da21489c1964335" kindref="member">move_client</ref>(<ref refid="structclient" kindref="compound">client</ref>,<sp/>19,<sp/>19);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="221"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Each<sp/>time<sp/>we<sp/>commit<sp/>a<sp/>buffer<sp/>with<sp/>a<sp/>different<sp/>color,<sp/>the<sp/>damage<sp/>box</highlight></codeline>
+<codeline lineno="222"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>should<sp/>color<sp/>just<sp/>the<sp/>box<sp/>on<sp/>the<sp/>output.</highlight></codeline>
+<codeline lineno="223"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/><ref refid="output-damage-test_8c_1a4fe014ac2e86c9c5836912f1229f2d2d" kindref="member">COUNT_BUFS</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="output-damage-test_8c_1a7d6e38e56b693fa3bb28e5f32eb29c9e" kindref="member">commit_buffer_with_damage</ref>(<ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1ab08863485e285fef208584804ca7480a" kindref="member">surface</ref>,<sp/>buf[i],<sp/>damages[i]);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="weston-test-client-helper_8c_1ac924fe13101f7a8c258314a16bb8dc41" kindref="member">verify_screen_content</ref>(<ref refid="structclient" kindref="compound">client</ref>,<sp/>refname,<sp/>i,<sp/>NULL,<sp/>i))</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>match<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(match);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="output-damage-test_8c_1a4fe014ac2e86c9c5836912f1229f2d2d" kindref="member">COUNT_BUFS</ref>;<sp/>i++)</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8c_1a014665bba4cce883927372cc5348216f" kindref="member">buffer_destroy</ref>(buf[i]);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structclient" kindref="compound">client</ref>-&gt;<ref refid="structclient_1ab08863485e285fef208584804ca7480a" kindref="member">surface</ref>-&gt;<ref refid="structsurface_1a6380eb64761a852c50514a0ad1b8a37c" kindref="member">buffer</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-test-client-helper_8c_1a9d6289c37c3b56c85f4cc40a7cf71513" kindref="member">client_destroy</ref>(<ref refid="structclient" kindref="compound">client</ref>);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/tests/output-damage-test.c"/>
+  </compounddef>
+</doxygen>

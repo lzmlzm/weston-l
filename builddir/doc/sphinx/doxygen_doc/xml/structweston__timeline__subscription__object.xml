@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__timeline__subscription__object" kind="struct" language="C++" prot="public">
+    <compoundname>weston_timeline_subscription_object</compoundname>
+    <includes refid="timeline_8h" local="no">timeline.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__timeline__subscription__object_1a607b471a6e5d936d93fa207f513a4f2c" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* weston_timeline_subscription_object::object</definition>
+        <argsstring></argsstring>
+        <name>object</name>
+        <briefdescription>
+<para>points to the object </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/timeline.h" line="65" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/timeline.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__timeline__subscription__object_1af6302bc6cf14ef84961eaf66ccbf9b47" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int weston_timeline_subscription_object::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/timeline.h" line="66" column="14" bodyfile="/home/lzm/Wayland/weston/libweston/timeline.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__timeline__subscription__object_1a2e698a60abee7372d547f856141a5be4" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool weston_timeline_subscription_object::force_refresh</definition>
+        <argsstring></argsstring>
+        <name>force_refresh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/timeline.h" line="67" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/timeline.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__timeline__subscription__object_1a5ca3b851aab252c1b903a9e41c3028a5" prot="public" static="no" mutable="no">
+        <type>struct wl_list</type>
+        <definition>struct wl_list weston_timeline_subscription_object::subscription_link</definition>
+        <argsstring></argsstring>
+        <name>subscription_link</name>
+        <briefdescription>
+<para><ref refid="structweston__timeline__subscription_1a3b2578d45d9a2e99cb8c06d2f7c28dab" kindref="member">weston_timeline_subscription::objects</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/timeline.h" line="67" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/timeline.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__timeline__subscription__object_1a0b7e9795218732f87970c00b7a73c6d1" prot="public" static="no" mutable="no">
+        <type>struct wl_listener</type>
+        <definition>struct wl_listener weston_timeline_subscription_object::destroy_listener</definition>
+        <argsstring></argsstring>
+        <name>destroy_listener</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/timeline.h" line="67" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/timeline.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Created when object is first seen for a particular timeline subscription Destroyed when the subscription got destroyed or object was destroyed. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/timeline.h" line="64" column="42" bodyfile="/home/lzm/Wayland/weston/libweston/timeline.h" bodystart="64" bodyend="70"/>
+    <listofallmembers>
+      <member refid="structweston__timeline__subscription__object_1a0b7e9795218732f87970c00b7a73c6d1" prot="public" virt="non-virtual"><scope>weston_timeline_subscription_object</scope><name>destroy_listener</name></member>
+      <member refid="structweston__timeline__subscription__object_1a2e698a60abee7372d547f856141a5be4" prot="public" virt="non-virtual"><scope>weston_timeline_subscription_object</scope><name>force_refresh</name></member>
+      <member refid="structweston__timeline__subscription__object_1af6302bc6cf14ef84961eaf66ccbf9b47" prot="public" virt="non-virtual"><scope>weston_timeline_subscription_object</scope><name>id</name></member>
+      <member refid="structweston__timeline__subscription__object_1a607b471a6e5d936d93fa207f513a4f2c" prot="public" virt="non-virtual"><scope>weston_timeline_subscription_object</scope><name>object</name></member>
+      <member refid="structweston__timeline__subscription__object_1a5ca3b851aab252c1b903a9e41c3028a5" prot="public" virt="non-virtual"><scope>weston_timeline_subscription_object</scope><name>subscription_link</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

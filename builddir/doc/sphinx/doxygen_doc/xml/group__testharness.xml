@@ -1,0 +1,611 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="group__testharness" kind="group">
+    <compoundname>testharness</compoundname>
+    <title>Test harness</title>
+    <innerclass refid="structweston__testsuite__quirks" prot="public">weston_testsuite_quirks</innerclass>
+    <innerclass refid="structweston__testsuite__data" prot="public">weston_testsuite_data</innerclass>
+    <innerclass refid="structcompositor__setup" prot="public">compositor_setup</innerclass>
+    <innerclass refid="structfixture__metadata" prot="public">fixture_metadata</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__testharness_1ga3f584343987d08b8aa9abf1e9c371a90" prot="public" static="no" strong="no">
+        <type></type>
+        <name>renderer_type</name>
+        <enumvalue id="group__testharness_1gga3f584343987d08b8aa9abf1e9c371a90aaf94b7875b1ffa9fc28e99db995f19d1" prot="public">
+          <name>RENDERER_NOOP</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Dummy renderer that does nothing. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__testharness_1gga3f584343987d08b8aa9abf1e9c371a90a7c4539f6251acc274b33a085a1c520d7" prot="public">
+          <name>RENDERER_PIXMAN</name>
+          <briefdescription>
+<para>Pixman-renderer. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__testharness_1gga3f584343987d08b8aa9abf1e9c371a90ae5e927b4a68fbbf849f68aed0de9e34a" prot="public">
+          <name>RENDERER_GL</name>
+          <briefdescription>
+<para>GL-renderer. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Weston renderer type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="structcompositor__setup" kindref="compound">compositor_setup</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" line="39" column="19" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" bodystart="39" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__testharness_1ga0ad980f813d1f7469e9b9ff20f73fce9" prot="public" static="no" strong="no">
+        <type></type>
+        <name>shell_type</name>
+        <enumvalue id="group__testharness_1gga0ad980f813d1f7469e9b9ff20f73fce9a788b50d23ce49ed189c3f49fc6030d85" prot="public">
+          <name>SHELL_TEST_DESKTOP</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Desktop test-shell with predictable window placement and no helper clients. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__testharness_1gga0ad980f813d1f7469e9b9ff20f73fce9aaaca4c884866e17214dc71e0638b47bf" prot="public">
+          <name>SHELL_DESKTOP</name>
+          <briefdescription>
+<para>The full desktop shell. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__testharness_1gga0ad980f813d1f7469e9b9ff20f73fce9a6cdbedc13f80e112abaedcaa86adb0b7" prot="public">
+          <name>SHELL_IVI</name>
+          <briefdescription>
+<para>The ivi-shell. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__testharness_1gga0ad980f813d1f7469e9b9ff20f73fce9a04ec11b3eb9a976e678b87e61064afc9" prot="public">
+          <name>SHELL_FULLSCREEN</name>
+          <briefdescription>
+<para>The fullscreen-shell. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Weston shell plugin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="structcompositor__setup" kindref="compound">compositor_setup</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" line="53" column="16" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" bodystart="53" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" prot="public" static="no" strong="no">
+        <type></type>
+        <name>test_result_code</name>
+        <enumvalue id="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a818c541216b4ca0e29b7885495a46ad2" prot="public">
+          <name>RESULT_OK</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a4afc80cf43bd4cdf7cbcbfefcb5bf5ae" prot="public">
+          <name>RESULT_SKIP</name>
+          <initializer>= 77</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103adbaa15b6c3bcc0196b4b314fac50e36c" prot="public">
+          <name>RESULT_FAIL</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a1a9437b5f7317085e7fc0358a47d32f3" prot="public">
+          <name>RESULT_HARD_ERROR</name>
+          <initializer>= 99</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Standard return codes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Both Autotools and Meson use these codes as test program exit codes to denote the test result for the whole process. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-testsuite-data.h" line="36" column="22" bodyfile="/home/lzm/Wayland/weston/tests/weston-testsuite-data.h" bodystart="36" bodyend="41"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__testharness_1gae81a0b16dc498f48d248e7fb7d819660" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* get_test_name</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_test_name</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the test name string with counter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The test name with fixture number <computeroutput>-f%d</computeroutput> added. For an array driven test, e.g. defined with <ref refid="group__testharness_1gaac6645411da307a1046bcaa84d46583f" kindref="member">TEST_P()</ref>, the name has also a <computeroutput>-e%d</computeroutput> suffix to indicate the array element number.</para>
+</simplesect>
+This is only usable from code paths inside <ref refid="group__testharness_1ga45feb1f37ce559e49baf8655d769ef85" kindref="member">TEST()</ref>, <ref refid="group__testharness_1gaac6645411da307a1046bcaa84d46583f" kindref="member">TEST_P()</ref>, <ref refid="group__testharness_1ga889ae2ce5ee27319a760457a33a2da1a" kindref="member">PLUGIN_TEST()</ref> etc. defined functions. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="69" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="69" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="group__testharness_1gaa0dd40f331a900d10af1cbad1d4372aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int get_test_fixture_index</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_test_fixture_index</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the current fixture index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the current fixture index which can be used directly as an index into the array passed as an argument to <ref refid="group__testharness_1ga274def1a210d74f64d216796dbec4b2b" kindref="member">DECLARE_FIXTURE_SETUP_WITH_ARG()</ref>.</para>
+<para>This is only usable from code paths inside <ref refid="group__testharness_1ga45feb1f37ce559e49baf8655d769ef85" kindref="member">TEST()</ref>, <ref refid="group__testharness_1gaac6645411da307a1046bcaa84d46583f" kindref="member">TEST_P()</ref>, <ref refid="group__testharness_1ga889ae2ce5ee27319a760457a33a2da1a" kindref="member">PLUGIN_TEST()</ref> etc. defined functions. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="85" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="85" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="group__testharness_1gaa1538dfd4262a1feafd60cd1f09d9878" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void testlog</definition>
+        <argsstring>(const char *fmt,...)</argsstring>
+        <name>testlog</name>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+<para>Print into test log. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is exactly like printf() except the output goes to the test log, which is at stderr.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fmt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>printf format string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="100" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="100" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="group__testharness_1gacd7b26a0f0f337781013b40d229cf262" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></type>
+        <definition>enum test_result_code weston_test_harness_execute_as_client</definition>
+        <argsstring>(struct weston_test_harness *harness, const struct compositor_setup *setup)</argsstring>
+        <name>weston_test_harness_execute_as_client</name>
+        <param>
+          <type>struct <ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref> *</type>
+          <declname>harness</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structcompositor__setup" kindref="compound">compositor_setup</ref> *</type>
+          <declname>setup</declname>
+        </param>
+        <briefdescription>
+<para>Execute all tests as client tests. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>harness</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The test harness context. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>setup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The compositor configuration.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Initializes the compositor with the given setup and executes the compositor. The compositor creates a new thread where all tests in the test program are serially executed. Once the thread finishes, the compositor returns from its event loop and cleans up.</para>
+<para>Returns RESULT_SKIP if the requested compositor features, e.g. GL-renderer, are not built.</para>
+<para><simplesect kind="see"><para><ref refid="group__testharness_1gadc7eda648944f75a48748e6456a0e735" kindref="member">DECLARE_FIXTURE_SETUP()</ref>, <ref refid="group__testharness_1ga274def1a210d74f64d216796dbec4b2b" kindref="member">DECLARE_FIXTURE_SETUP_WITH_ARG()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="486" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="522" bodyend="529"/>
+      </memberdef>
+      <memberdef kind="function" id="group__testharness_1gabc3f5a45b58ee07331059eb120f7b2bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></type>
+        <definition>enum test_result_code weston_test_harness_execute_as_plugin</definition>
+        <argsstring>(struct weston_test_harness *harness, const struct compositor_setup *setup)</argsstring>
+        <name>weston_test_harness_execute_as_plugin</name>
+        <param>
+          <type>struct <ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref> *</type>
+          <declname>harness</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structcompositor__setup" kindref="compound">compositor_setup</ref> *</type>
+          <declname>setup</declname>
+        </param>
+        <briefdescription>
+<para>Execute all tests as plugin tests. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>harness</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The test harness context. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>setup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The compositor configuration.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Initializes the compositor with the given setup and executes the compositor. The compositor executes all tests in the test program serially from an idle handler, then returns from its event loop and cleans up.</para>
+<para>Returns RESULT_SKIP if the requested compositor features, e.g. GL-renderer, are not built.</para>
+<para><simplesect kind="see"><para><ref refid="group__testharness_1gadc7eda648944f75a48748e6456a0e735" kindref="member">DECLARE_FIXTURE_SETUP()</ref>, <ref refid="group__testharness_1ga274def1a210d74f64d216796dbec4b2b" kindref="member">DECLARE_FIXTURE_SETUP_WITH_ARG()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="486" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="547" bodyend="554"/>
+      </memberdef>
+      <memberdef kind="function" id="group__testharness_1ga9f98c3e898eb09ad2bd86343199ff619" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></type>
+        <definition>enum test_result_code weston_test_harness_execute_standalone</definition>
+        <argsstring>(struct weston_test_harness *harness)</argsstring>
+        <name>weston_test_harness_execute_standalone</name>
+        <param>
+          <type>struct <ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref> *</type>
+          <declname>harness</declname>
+        </param>
+        <briefdescription>
+<para>Execute all tests as standalone tests. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>harness</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The test harness context.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Executes all tests in the test program serially without any further setup, particularly without any compositor instance created.</para>
+<para><simplesect kind="see"><para><ref refid="group__testharness_1gadc7eda648944f75a48748e6456a0e735" kindref="member">DECLARE_FIXTURE_SETUP()</ref>, <ref refid="group__testharness_1ga274def1a210d74f64d216796dbec4b2b" kindref="member">DECLARE_FIXTURE_SETUP_WITH_ARG()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="486" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="567" bodyend="575"/>
+      </memberdef>
+      <memberdef kind="function" id="group__testharness_1ga02d7b07ce89636ff14598286827d279d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const struct <ref refid="structfixture__setup__array" kindref="compound">fixture_setup_array</ref> *</type>
+        <definition>const struct fixture_setup_array* fixture_setup_array_get_</definition>
+        <argsstring>(void)</argsstring>
+        <name>fixture_setup_array_get_</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Fixture data array getter method. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="group__testharness_1ga274def1a210d74f64d216796dbec4b2b" kindref="member">DECLARE_FIXTURE_SETUP_WITH_ARG()</ref> overrides this in test programs. The default implementation has no data and makes the tests run once. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="585" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="585" bodyend="596"/>
+      </memberdef>
+      <memberdef kind="function" id="group__testharness_1ga46577b43cb4378b2289ebfb91f5c6010" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref></type>
+        <definition>enum test_result_code fixture_setup_run_</definition>
+        <argsstring>(struct weston_test_harness *harness, const void *arg_)</argsstring>
+        <name>fixture_setup_run_</name>
+        <param>
+          <type>struct <ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref> *</type>
+          <declname>harness</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>arg_</declname>
+        </param>
+        <briefdescription>
+<para>Fixture setup function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="group__testharness_1gadc7eda648944f75a48748e6456a0e735" kindref="member">DECLARE_FIXTURE_SETUP()</ref> and <ref refid="group__testharness_1ga274def1a210d74f64d216796dbec4b2b" kindref="member">DECLARE_FIXTURE_SETUP_WITH_ARG()</ref> override this in test programs. The default implementation just calls <ref refid="group__testharness_1ga9f98c3e898eb09ad2bd86343199ff619" kindref="member">weston_test_harness_execute_standalone()</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="585" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="608" bodyend="611"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__testharness_1ga6d93ba47ec578b140fa2cbd3efa1218c" prot="public" static="no">
+        <name>compositor_setup_defaults</name>
+        <param><defname>s</defname></param>
+        <initializer>	do {\
+	<ref refid="group__testharness__private_1ga9c3679c70b98a4b2e87d18f7cceaf4a8" kindref="member">compositor_setup_defaults_</ref>(s, THIS_TEST_NAME); \
+} while (0)</initializer>
+        <briefdescription>
+<para>Initialize compositor setup to defaults. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The variable to initialize.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The defaults are:<itemizedlist>
+<listitem><para>backend: headless</para>
+</listitem><listitem><para>renderer: noop</para>
+</listitem><listitem><para>shell: desktop shell</para>
+</listitem><listitem><para>xwayland: no</para>
+</listitem><listitem><para>width: 320</para>
+</listitem><listitem><para>height: 240</para>
+</listitem><listitem><para>scale: 1</para>
+</listitem><listitem><para>transform: WL_OUTPUT_TRANSFORM_NORMAL</para>
+</listitem><listitem><para>config_file: none</para>
+</listitem><listitem><para>extra_module: none</para>
+</listitem><listitem><para>logging_scopes: compositor defaults</para>
+</listitem><listitem><para>testset_name: the test name from meson.build </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" line="129" column="9" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__testharness_1ga45feb1f37ce559e49baf8655d769ef85" prot="public" static="no">
+        <name>TEST</name>
+        <param><defname>name</defname></param>
+        <initializer><ref refid="weston-test-runner_8h_1acbdb643c0a81a7c510e1629047af358c" kindref="member">NO_ARG_TEST</ref>(name)</initializer>
+        <briefdescription>
+<para>Add a test with no parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This defines one test as a new function. Use this macro in place of the function signature and put the function body after this.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name for the test, must be a valid function name. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.h" line="98" column="9" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__testharness_1gaac6645411da307a1046bcaa84d46583f" prot="public" static="no">
+        <name>TEST_P</name>
+        <param><defname>name</defname></param>
+        <param><defname>data_array</defname></param>
+        <initializer><ref refid="weston-test-runner_8h_1a517e8063c2bcadc163d7ff27e6db40da" kindref="member">ARG_TEST</ref>(name, data_array)</initializer>
+        <briefdescription>
+<para>Add an array driven test with a parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This defines an array of tests as a new function. Use this macro in place of the function signature and put the function body after this. The function will be executed once for each element in <computeroutput>data_array</computeroutput>, passing the element as the argument <computeroutput>void *data</computeroutput> to the function.</para>
+<para>This macro is not usable if fixture setup is using <ref refid="group__testharness_1gabc3f5a45b58ee07331059eb120f7b2bb" kindref="member">weston_test_harness_execute_as_plugin()</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name for the test, must be a valid function name. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A static const array of any type. The length will be recorded automatically. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.h" line="116" column="9" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__testharness_1ga889ae2ce5ee27319a760457a33a2da1a" prot="public" static="no">
+        <name>PLUGIN_TEST</name>
+        <param><defname>name</defname></param>
+        <initializer>	<ref refid="weston-test-runner_8h_1ab2789f826b3e52ff70bb5ada6f9b3114" kindref="member">TEST_COMMON</ref>(wrap##name, name, NULL, 0, 1)			\
+	static void name(struct <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> *);			\
+	static void wrap##name(void *compositor)			\
+	{								\
+		name(compositor);					\
+	}								\
+	<ref refid="weston-test-runner_8h_1acdfda3189229288adfb700abf1999b85" kindref="member">TEST_BEGIN</ref>(name, struct <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> *compositor)</initializer>
+        <briefdescription>
+<para>Add a test with <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> argument. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This defines one test as a new function. Use this macro in place of the function signature and put the function body after this. The function will have one argument <computeroutput>struct <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> *compositor</computeroutput>.</para>
+<para>This macro is only usable if fixture setup is using <ref refid="group__testharness_1gabc3f5a45b58ee07331059eb120f7b2bb" kindref="member">weston_test_harness_execute_as_plugin()</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name for the test, must be a valid function name. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.h" line="131" column="9" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__testharness_1gadc7eda648944f75a48748e6456a0e735" prot="public" static="no">
+        <name>DECLARE_FIXTURE_SETUP</name>
+        <param><defname>func_</defname></param>
+        <initializer>	enum <ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref>						\
+	<ref refid="group__testharness_1ga46577b43cb4378b2289ebfb91f5c6010" kindref="member">fixture_setup_run_</ref>(struct <ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref> *harness,		\
+			   const void *arg_)				\
+	{								\
+		return func_(harness);					\
+	}</initializer>
+        <briefdescription>
+<para>Register a fixture setup function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This registers the given (preferably static) function to be used for setting up any fixtures you might need. The function must have the signature:</para>
+<para><programlisting><codeline><highlight class="normal">enum<sp/>test_result_code<sp/>func_(struct<sp/>weston_test_harness<sp/>*harness)</highlight></codeline>
+</programlisting></para>
+<para>The function must call one of <ref refid="group__testharness_1ga9f98c3e898eb09ad2bd86343199ff619" kindref="member">weston_test_harness_execute_standalone()</ref>, <ref refid="group__testharness_1gabc3f5a45b58ee07331059eb120f7b2bb" kindref="member">weston_test_harness_execute_as_plugin()</ref> or <ref refid="group__testharness_1gacd7b26a0f0f337781013b40d229cf262" kindref="member">weston_test_harness_execute_as_client()</ref> passing in the <computeroutput>harness</computeroutput> argument, and return the return value from that call. The function can also return a test_result_code on its own if it does not want to run the tests, e.g. RESULT_SKIP or RESULT_HARD_ERROR.</para>
+<para>The function will be called once to run all tests.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>func_</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function to be used as fixture setup. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.h" line="211" column="9" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.h" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__testharness_1ga274def1a210d74f64d216796dbec4b2b" prot="public" static="no">
+        <name>DECLARE_FIXTURE_SETUP_WITH_ARG</name>
+        <param><defname>func_</defname></param>
+        <param><defname>array_</defname></param>
+        <param><defname>meta_</defname></param>
+        <initializer>	const struct <ref refid="structfixture__setup__array" kindref="compound">fixture_setup_array</ref> *				\
+	<ref refid="group__testharness_1ga02d7b07ce89636ff14598286827d279d" kindref="member">fixture_setup_array_get_</ref>(void)					\
+	{								\
+		static const struct <ref refid="structfixture__setup__array" kindref="compound">fixture_setup_array</ref> arr = {		\
+			.array = array_,				\
+			.element_size = sizeof(array_[0]),		\
+			.n_elements = ARRAY_LENGTH(array_),		\
+			.meta_offset = offsetof(typeof(array_[0]), meta_),	\
+		};								\
+		TYPEVERIFY(const struct <ref refid="structfixture__metadata" kindref="compound">fixture_metadata</ref> *, &amp;array_[0].meta_);	\
+		return &amp;arr;						\
+	}								\
+									\
+	enum <ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref>						\
+	<ref refid="group__testharness_1ga46577b43cb4378b2289ebfb91f5c6010" kindref="member">fixture_setup_run_</ref>(struct <ref refid="structweston__test__harness" kindref="compound">weston_test_harness</ref> *harness,		\
+			   const void *arg_)				\
+	{								\
+		typeof(array_[0]) *arg = arg_;				\
+		return func_(harness, arg);				\
+	}</initializer>
+        <briefdescription>
+<para>Register a fixture setup function with a data array. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This registers the given (preferably static) function to be used for setting up any fixtures you might need. The function must have the signature:</para>
+<para><programlisting><codeline><highlight class="normal">enum<sp/>test_result_code<sp/>func_(struct<sp/>weston_test_harness<sp/>*harness,<sp/>typeof(array_[0])<sp/>*arg)</highlight></codeline>
+</programlisting></para>
+<para>The function must call one of <ref refid="group__testharness_1ga9f98c3e898eb09ad2bd86343199ff619" kindref="member">weston_test_harness_execute_standalone()</ref>, <ref refid="group__testharness_1gabc3f5a45b58ee07331059eb120f7b2bb" kindref="member">weston_test_harness_execute_as_plugin()</ref> or <ref refid="group__testharness_1gacd7b26a0f0f337781013b40d229cf262" kindref="member">weston_test_harness_execute_as_client()</ref> passing in the <computeroutput>harness</computeroutput> argument, and return the return value from that call. The function can also return a test_result_code on its own if it does not want to run the tests, e.g. RESULT_SKIP or RESULT_HARD_ERROR.</para>
+<para>The function will be called once with each element of the array pointed to by <computeroutput>arg</computeroutput>, so that all tests would be repeated for each element in turn.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>func_</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function to be used as fixture setup. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>array_</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A static const array of arbitrary type. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meta_</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the field with type struct <ref refid="structfixture__metadata" kindref="compound">fixture_metadata</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.h" line="244" column="9" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.h" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

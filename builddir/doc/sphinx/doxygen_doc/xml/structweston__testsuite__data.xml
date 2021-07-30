@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__testsuite__data" kind="struct" language="C++" prot="public">
+    <compoundname>weston_testsuite_data</compoundname>
+    <includes refid="libweston_8h" local="no">libweston.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__testsuite__data_1a066dac74ee89927f8cd00628c892bc87" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structweston__testsuite__quirks" kindref="compound">weston_testsuite_quirks</ref></type>
+        <definition>struct weston_testsuite_quirks weston_testsuite_data::test_quirks</definition>
+        <argsstring></argsstring>
+        <name>test_quirks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="202" column="10" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__testsuite__data_1a3e98fc4477e2625ad566232842b54621" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* weston_testsuite_data::test_private_data</definition>
+        <argsstring></argsstring>
+        <name>test_private_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="220" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Weston test suite data that is given to compositor. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>It contains two members:</para>
+<para><orderedlist>
+<listitem><para>The struct <ref refid="structweston__testsuite__quirks" kindref="compound">weston_testsuite_quirks</ref>, which can be used by the tests to change certain behavior of Weston when running these tests.</para>
+</listitem><listitem><para>The void *test_private_data member which can be used by the testsuite of projects that uses libweston in order to give arbitrary test data to the compositor. Its type should be defined by the testsuite of the project.</para>
+</listitem></orderedlist>
+</para>
+<para><simplesect kind="see"><para><ref refid="structcompositor__setup" kindref="compound">compositor_setup</ref> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>weston_testsuite_quirks</label>
+        <link refid="structweston__testsuite__quirks"/>
+      </node>
+      <node id="1">
+        <label>weston_testsuite_data</label>
+        <link refid="structweston__testsuite__data"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>test_quirks</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="218" column="28" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="218" bodyend="221"/>
+    <listofallmembers>
+      <member refid="structweston__testsuite__data_1a3e98fc4477e2625ad566232842b54621" prot="public" virt="non-virtual"><scope>weston_testsuite_data</scope><name>test_private_data</name></member>
+      <member refid="structweston__testsuite__data_1a066dac74ee89927f8cd00628c892bc87" prot="public" virt="non-virtual"><scope>weston_testsuite_data</scope><name>test_quirks</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

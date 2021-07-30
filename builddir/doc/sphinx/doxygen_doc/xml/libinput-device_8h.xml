@@ -1,0 +1,396 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="libinput-device_8h" kind="file" language="C++">
+    <compoundname>libinput-device.h</compoundname>
+    <includes local="yes">config.h</includes>
+    <includes local="no">linux/input.h</includes>
+    <includes local="no">wayland-util.h</includes>
+    <includes local="no">libinput.h</includes>
+    <includes local="no">stdbool.h</includes>
+    <includes refid="libweston_8h" local="no">libweston/libweston.h</includes>
+    <includedby refid="libinput-device_8c" local="yes">/home/lzm/Wayland/weston/libweston/libinput-device.c</includedby>
+    <includedby refid="libinput-seat_8c" local="yes">/home/lzm/Wayland/weston/libweston/libinput-seat.c</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>stdbool.h</label>
+      </node>
+      <node id="7">
+        <label>libweston/libweston.h</label>
+        <link refid="libweston_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>linux/input.h</label>
+      </node>
+      <node id="8">
+        <label>stdint.h</label>
+      </node>
+      <node id="15">
+        <label>stdlib.h</label>
+      </node>
+      <node id="12">
+        <label>wayland-server.h</label>
+      </node>
+      <node id="11">
+        <label>xkbcommon/xkbcommon.h</label>
+      </node>
+      <node id="14">
+        <label>libweston/zalloc.h</label>
+        <link refid="zalloc_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>libinput.h</label>
+      </node>
+      <node id="9">
+        <label>time.h</label>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/libweston/libinput-device.h</label>
+        <link refid="libinput-device_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>libweston/matrix.h</label>
+        <link refid="matrix_8h"/>
+      </node>
+      <node id="10">
+        <label>pixman.h</label>
+      </node>
+      <node id="4">
+        <label>wayland-util.h</label>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/lzm/Wayland/weston/libweston/libinput-device.c</label>
+        <link refid="libinput-device_8c"/>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/libweston/libinput-device.h</label>
+        <link refid="libinput-device_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/lzm/Wayland/weston/libweston/libinput-seat.c</label>
+        <link refid="libinput-seat_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structevdev__device" prot="public">evdev_device</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="libinput-device_8h_1ac398e3dc09a0c9254fefb421b847fdfe" prot="public" static="no" strong="no">
+        <type></type>
+        <name>evdev_device_seat_capability</name>
+        <enumvalue id="libinput-device_8h_1ac398e3dc09a0c9254fefb421b847fdfea4ce34db66d723bcd54a8b0f08971b4e2" prot="public">
+          <name>EVDEV_SEAT_POINTER</name>
+          <initializer>= (1 &lt;&lt; 0)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libinput-device_8h_1ac398e3dc09a0c9254fefb421b847fdfeac6fb9055f77fff38440fab734f77a8ac" prot="public">
+          <name>EVDEV_SEAT_KEYBOARD</name>
+          <initializer>= (1 &lt;&lt; 1)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libinput-device_8h_1ac398e3dc09a0c9254fefb421b847fdfea796d532a36c9ba4d99c6474a76ea43f6" prot="public">
+          <name>EVDEV_SEAT_TOUCH</name>
+          <initializer>= (1 &lt;&lt; 2)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/libinput-device.h" line="38" column="34" bodyfile="/home/lzm/Wayland/weston/libweston/libinput-device.h" bodystart="38" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="libinput-device_8h_1ae0792eac23389bdbd0e5a75b7729073f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evdev_led_update</definition>
+        <argsstring>(struct evdev_device *device, enum weston_led leds)</argsstring>
+        <name>evdev_led_update</name>
+        <param>
+          <type>struct <ref refid="structevdev__device" kindref="compound">evdev_device</ref> *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="libweston_8h_1a77b80adb37abff82ab61240d8c45b6b0" kindref="member">weston_led</ref></type>
+          <declname>leds</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/libinput-device.h" line="58" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/libinput-device.c" bodystart="49" bodyend="61" declfile="/home/lzm/Wayland/weston/libweston/libinput-device.h" declline="58" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="libinput-device_8h_1a87d3841f3df0eaceadec7cd936f94f40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structevdev__device" kindref="compound">evdev_device</ref> *</type>
+        <definition>struct evdev_device* evdev_device_create</definition>
+        <argsstring>(struct libinput_device *libinput_device, struct weston_seat *seat)</argsstring>
+        <name>evdev_device_create</name>
+        <param>
+          <type>struct libinput_device *</type>
+          <declname>libinput_device</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structweston__seat" kindref="compound">weston_seat</ref> *</type>
+          <declname>seat</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/libinput-device.h" line="61" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/libinput-device.c" bodystart="716" bodyend="746" declfile="/home/lzm/Wayland/weston/libweston/libinput-device.h" declline="61" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="libinput-device_8h_1abae46347361224dcf1544166c1d32f93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int evdev_device_process_event</definition>
+        <argsstring>(struct libinput_event *event)</argsstring>
+        <name>evdev_device_process_event</name>
+        <param>
+          <type>struct libinput_event *</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/libinput-device.h" line="65" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/libinput-device.c" bodystart="517" bodyend="575" declfile="/home/lzm/Wayland/weston/libweston/libinput-device.h" declline="65" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="libinput-device_8h_1a30ff1400c6fbeea4089113829b05d44f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evdev_device_set_output</definition>
+        <argsstring>(struct evdev_device *device, struct weston_output *output)</argsstring>
+        <name>evdev_device_set_output</name>
+        <param>
+          <type>struct <ref refid="structevdev__device" kindref="compound">evdev_device</ref> *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/libinput-device.h" line="68" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/libinput-device.c" bodystart="683" bodyend="713" declfile="/home/lzm/Wayland/weston/libweston/libinput-device.h" declline="68" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="libinput-device_8h_1a66bf44d807a0d306ddab1f0ad9e01936" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evdev_device_destroy</definition>
+        <argsstring>(struct evdev_device *device)</argsstring>
+        <name>evdev_device_destroy</name>
+        <param>
+          <type>struct <ref refid="structevdev__device" kindref="compound">evdev_device</ref> *</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/libinput-device.h" line="71" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/libinput-device.c" bodystart="749" bodyend="766" declfile="/home/lzm/Wayland/weston/libweston/libinput-device.h" declline="71" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="libinput-device_8h_1a035ede67f232ea813c18cc1c1ef128c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evdev_notify_keyboard_focus</definition>
+        <argsstring>(struct weston_seat *seat, struct wl_list *evdev_devices)</argsstring>
+        <name>evdev_notify_keyboard_focus</name>
+        <param>
+          <type>struct <ref refid="structweston__seat" kindref="compound">weston_seat</ref> *</type>
+          <declname>seat</declname>
+        </param>
+        <param>
+          <type>struct wl_list *</type>
+          <declname>evdev_devices</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/libinput-device.h" line="74" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/libinput-device.c" bodystart="769" bodyend="780" declfile="/home/lzm/Wayland/weston/libweston/libinput-device.h" declline="74" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="libinput-device_8h_1a109e08d769c02449eb04756c6831258c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evdev_device_set_calibration</definition>
+        <argsstring>(struct evdev_device *device)</argsstring>
+        <name>evdev_device_set_calibration</name>
+        <param>
+          <type>struct <ref refid="structevdev__device" kindref="compound">evdev_device</ref> *</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+<para>The WL_CALIBRATION property requires a pixel-specific matrix to be applied after scaling device coordinates to screen coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>libinput can&apos;t do that, so we need to convert the calibration to the normalized format libinput expects. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/libinput-device.h" line="77" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/libinput-device.c" bodystart="594" bodyend="680" declfile="/home/lzm/Wayland/weston/libweston/libinput-device.h" declline="77" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="libinput-device_8h_1ace59343e837e6fca926dccd01e536720" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int dispatch_libinput</definition>
+        <argsstring>(struct libinput *libinput)</argsstring>
+        <name>dispatch_libinput</name>
+        <param>
+          <type>struct libinput *</type>
+          <declname>libinput</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/libinput-device.h" line="80" column="1" declfile="/home/lzm/Wayland/weston/libweston/libinput-device.h" declline="80" declcolumn="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2011,<sp/>2012<sp/>Intel<sp/>Corporation</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>(including<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>next<sp/>paragraph)<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>NONINFRINGEMENT.<sp/><sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_LIBINPUT_DEVICE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_LIBINPUT_DEVICE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;linux/input.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;wayland-util.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;libinput.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="libweston_8h" kindref="compound">libweston/libweston.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="libinput-device_8h_1ac398e3dc09a0c9254fefb421b847fdfe" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="libinput-device_8h_1ac398e3dc09a0c9254fefb421b847fdfe" kindref="member">evdev_device_seat_capability</ref><sp/>{</highlight></codeline>
+<codeline lineno="39" refid="libinput-device_8h_1ac398e3dc09a0c9254fefb421b847fdfea4ce34db66d723bcd54a8b0f08971b4e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libinput-device_8h_1ac398e3dc09a0c9254fefb421b847fdfea4ce34db66d723bcd54a8b0f08971b4e2" kindref="member">EVDEV_SEAT_POINTER</ref><sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>0),</highlight></codeline>
+<codeline lineno="40" refid="libinput-device_8h_1ac398e3dc09a0c9254fefb421b847fdfeac6fb9055f77fff38440fab734f77a8ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libinput-device_8h_1ac398e3dc09a0c9254fefb421b847fdfeac6fb9055f77fff38440fab734f77a8ac" kindref="member">EVDEV_SEAT_KEYBOARD</ref><sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>1),</highlight></codeline>
+<codeline lineno="41" refid="libinput-device_8h_1ac398e3dc09a0c9254fefb421b847fdfea796d532a36c9ba4d99c6474a76ea43f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="libinput-device_8h_1ac398e3dc09a0c9254fefb421b847fdfea796d532a36c9ba4d99c6474a76ea43f6" kindref="member">EVDEV_SEAT_TOUCH</ref><sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>2)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="structevdev__device" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structevdev__device" kindref="compound">evdev_device</ref><sp/>{</highlight></codeline>
+<codeline lineno="45" refid="structevdev__device_1a65cfa36cc611ee2a16936c155707b015" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__seat" kindref="compound">weston_seat</ref><sp/>*<ref refid="structevdev__device_1a65cfa36cc611ee2a16936c155707b015" kindref="member">seat</ref>;</highlight></codeline>
+<codeline lineno="46" refid="structevdev__device_1a5f5e886378ee4e3ded2abc7c6db01165" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="libinput-device_8h_1ac398e3dc09a0c9254fefb421b847fdfe" kindref="member">evdev_device_seat_capability</ref><sp/><ref refid="structevdev__device_1a5f5e886378ee4e3ded2abc7c6db01165" kindref="member">seat_caps</ref>;</highlight></codeline>
+<codeline lineno="47" refid="structevdev__device_1a477473758cc328aa23adb1c0bcd0fd57" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">libinput_device<sp/>*<ref refid="structevdev__device_1a477473758cc328aa23adb1c0bcd0fd57" kindref="member">device</ref>;</highlight></codeline>
+<codeline lineno="48" refid="structevdev__device_1a74474637d08dc3a60584c89468c45775" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__touch__device" kindref="compound">weston_touch_device</ref><sp/>*<ref refid="structevdev__device_1a74474637d08dc3a60584c89468c45775" kindref="member">touch_device</ref>;</highlight></codeline>
+<codeline lineno="49" refid="structevdev__device_1a6da80cf7fdaf9f26b8a662635088aa0b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_list<sp/><ref refid="structevdev__device_1a6da80cf7fdaf9f26b8a662635088aa0b" kindref="member">link</ref>;</highlight></codeline>
+<codeline lineno="50" refid="structevdev__device_1a91ffd77f6504d2dabc748c2177dbe43c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__output" kindref="compound">weston_output</ref><sp/>*<ref refid="structevdev__device_1a91ffd77f6504d2dabc748c2177dbe43c" kindref="member">output</ref>;</highlight></codeline>
+<codeline lineno="51" refid="structevdev__device_1a999c45afae7ca38e218607d82e4f9b87" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_listener<sp/><ref refid="structevdev__device_1a999c45afae7ca38e218607d82e4f9b87" kindref="member">output_destroy_listener</ref>;</highlight></codeline>
+<codeline lineno="52" refid="structevdev__device_1a379db69ffcee29e6dda2472d3f71e294" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structevdev__device_1a379db69ffcee29e6dda2472d3f71e294" kindref="member">output_name</ref>;</highlight></codeline>
+<codeline lineno="53" refid="structevdev__device_1a0a3ca2f56249d9a5f7035f39daa9efc0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structevdev__device_1a0a3ca2f56249d9a5f7035f39daa9efc0" kindref="member">fd</ref>;</highlight></codeline>
+<codeline lineno="54" refid="structevdev__device_1a18d310722e53419e6f2e06afa6f36284" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structevdev__device_1a18d310722e53419e6f2e06afa6f36284" kindref="member">override_wl_calibration</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><ref refid="libinput-device_8h_1ae0792eac23389bdbd0e5a75b7729073f" kindref="member">evdev_led_update</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structevdev__device" kindref="compound">evdev_device</ref><sp/>*device,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="libweston_8h_1a77b80adb37abff82ab61240d8c45b6b0" kindref="member">weston_led</ref><sp/>leds);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structevdev__device" kindref="compound">evdev_device</ref><sp/>*</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><ref refid="libinput-device_8h_1a87d3841f3df0eaceadec7cd936f94f40" kindref="member">evdev_device_create</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>libinput_device<sp/>*libinput_device,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__seat" kindref="compound">weston_seat</ref><sp/>*<ref refid="structevdev__device_1a65cfa36cc611ee2a16936c155707b015" kindref="member">seat</ref>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><ref refid="libinput-device_8h_1abae46347361224dcf1544166c1d32f93" kindref="member">evdev_device_process_event</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>libinput_event<sp/>*event);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><ref refid="libinput-device_8h_1a30ff1400c6fbeea4089113829b05d44f" kindref="member">evdev_device_set_output</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structevdev__device" kindref="compound">evdev_device</ref><sp/>*<ref refid="structevdev__device_1a477473758cc328aa23adb1c0bcd0fd57" kindref="member">device</ref>,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__output" kindref="compound">weston_output</ref><sp/>*<ref refid="structoutput" kindref="compound">output</ref>);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><ref refid="libinput-device_8h_1a66bf44d807a0d306ddab1f0ad9e01936" kindref="member">evdev_device_destroy</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structevdev__device" kindref="compound">evdev_device</ref><sp/>*<ref refid="structevdev__device_1a477473758cc328aa23adb1c0bcd0fd57" kindref="member">device</ref>);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><ref refid="libinput-device_8h_1a035ede67f232ea813c18cc1c1ef128c7" kindref="member">evdev_notify_keyboard_focus</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__seat" kindref="compound">weston_seat</ref><sp/>*<ref refid="structevdev__device_1a65cfa36cc611ee2a16936c155707b015" kindref="member">seat</ref>,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>wl_list<sp/>*evdev_devices);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><ref refid="libinput-device_8h_1a109e08d769c02449eb04756c6831258c" kindref="member">evdev_device_set_calibration</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structevdev__device" kindref="compound">evdev_device</ref><sp/>*<ref refid="structevdev__device_1a477473758cc328aa23adb1c0bcd0fd57" kindref="member">device</ref>);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><ref refid="libinput-device_8h_1ace59343e837e6fca926dccd01e536720" kindref="member">dispatch_libinput</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>libinput<sp/>*libinput);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_LIBINPUT_DEVICE_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/libweston/libinput-device.h"/>
+  </compounddef>
+</doxygen>

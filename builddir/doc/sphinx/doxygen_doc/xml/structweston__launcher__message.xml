@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__launcher__message" kind="struct" language="C++" prot="public">
+    <compoundname>weston_launcher_message</compoundname>
+    <includes refid="weston-launch_8h" local="no">weston-launch.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__launcher__message_1a7f94b94cd0db99ae848c0553f2237390" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int weston_launcher_message::opcode</definition>
+        <argsstring></argsstring>
+        <name>opcode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-launch.h" line="43" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/weston-launch.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/weston-launch.h" line="42" column="30" bodyfile="/home/lzm/Wayland/weston/libweston/weston-launch.h" bodystart="42" bodyend="44"/>
+    <listofallmembers>
+      <member refid="structweston__launcher__message_1a7f94b94cd0db99ae848c0553f2237390" prot="public" virt="non-virtual"><scope>weston_launcher_message</scope><name>opcode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

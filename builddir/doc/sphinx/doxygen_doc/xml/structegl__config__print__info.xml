@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structegl__config__print__info" kind="struct" language="C++" prot="public">
+    <compoundname>egl_config_print_info</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structegl__config__print__info_1a68a8352ac669c298da3dcafc9ffde2f1" prot="public" static="no" mutable="no">
+        <type>const <ref refid="gl-renderer_8h_1a97030274d045a36c550fc0d66d26f175" kindref="member">EGLint</ref> *</type>
+        <definition>const EGLint* egl_config_print_info::attrs</definition>
+        <argsstring></argsstring>
+        <name>attrs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/egl-glue.c" line="43" column="14" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/egl-glue.c" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structegl__config__print__info_1a545732e778b36f93bae1233bd8153d2b" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned egl_config_print_info::attrs_count</definition>
+        <argsstring></argsstring>
+        <name>attrs_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/egl-glue.c" line="44" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/egl-glue.c" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structegl__config__print__info_1ad29bced567723082b8e3a11cf9614e52" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* egl_config_print_info::prefix</definition>
+        <argsstring></argsstring>
+        <name>prefix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/egl-glue.c" line="45" column="12" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/egl-glue.c" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structegl__config__print__info_1a5871e18f5d342a6eb56437e72fcf4594" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* egl_config_print_info::separator</definition>
+        <argsstring></argsstring>
+        <name>separator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/egl-glue.c" line="46" column="12" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/egl-glue.c" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structegl__config__print__info_1a59e628df2e213a4aec5de1259b1b8d26" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int egl_config_print_info::field_width</definition>
+        <argsstring></argsstring>
+        <name>field_width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/egl-glue.c" line="47" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/egl-glue.c" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/egl-glue.c" line="42" column="28" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/egl-glue.c" bodystart="42" bodyend="48"/>
+    <listofallmembers>
+      <member refid="structegl__config__print__info_1a68a8352ac669c298da3dcafc9ffde2f1" prot="public" virt="non-virtual"><scope>egl_config_print_info</scope><name>attrs</name></member>
+      <member refid="structegl__config__print__info_1a545732e778b36f93bae1233bd8153d2b" prot="public" virt="non-virtual"><scope>egl_config_print_info</scope><name>attrs_count</name></member>
+      <member refid="structegl__config__print__info_1a59e628df2e213a4aec5de1259b1b8d26" prot="public" virt="non-virtual"><scope>egl_config_print_info</scope><name>field_width</name></member>
+      <member refid="structegl__config__print__info_1ad29bced567723082b8e3a11cf9614e52" prot="public" virt="non-virtual"><scope>egl_config_print_info</scope><name>prefix</name></member>
+      <member refid="structegl__config__print__info_1a5871e18f5d342a6eb56437e72fcf4594" prot="public" virt="non-virtual"><scope>egl_config_print_info</scope><name>separator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

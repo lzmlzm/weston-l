@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structvec2d" kind="struct" language="C++" prot="public">
+    <compoundname>vec2d</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structvec2d_1a9a5047bd83eb9df966feaa0d4fc9bd80" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double vec2d::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/input.c" line="65" column="8" bodyfile="/home/lzm/Wayland/weston/libweston/input.c" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvec2d_1a6e4cfba9ce4bece3c6a9fb215dbff935" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double vec2d::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/input.c" line="65" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/input.c" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/input.c" line="64" column="12" bodyfile="/home/lzm/Wayland/weston/libweston/input.c" bodystart="64" bodyend="66"/>
+    <listofallmembers>
+      <member refid="structvec2d_1a9a5047bd83eb9df966feaa0d4fc9bd80" prot="public" virt="non-virtual"><scope>vec2d</scope><name>x</name></member>
+      <member refid="structvec2d_1a6e4cfba9ce4bece3c6a9fb215dbff935" prot="public" virt="non-virtual"><scope>vec2d</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

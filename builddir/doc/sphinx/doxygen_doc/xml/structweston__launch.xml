@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__launch" kind="struct" language="C++" prot="public">
+    <compoundname>weston_launch</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__launch_1a36d5d4093862d9fb2cb200cb1714dac3" prot="public" static="no" mutable="no">
+        <type>struct pam_conv</type>
+        <definition>struct pam_conv weston_launch::pc</definition>
+        <argsstring></argsstring>
+        <name>pc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-launch.c" line="802" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-launch.c" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__launch_1a6cdc83c56742efa2b41584d5c0630b5d" prot="public" static="no" mutable="no">
+        <type>pam_handle_t *</type>
+        <definition>pam_handle_t* weston_launch::ph</definition>
+        <argsstring></argsstring>
+        <name>ph</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-launch.c" line="104" column="14" bodyfile="/home/lzm/Wayland/weston/libweston/weston-launch.c" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__launch_1ae6761923902e346e42c17e9ae0f49caf" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int weston_launch::tty</definition>
+        <argsstring></argsstring>
+        <name>tty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-launch.c" line="105" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/weston-launch.c" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__launch_1ae86d22404626abdbbf946c39ab5534ec" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int weston_launch::ttynr</definition>
+        <argsstring></argsstring>
+        <name>ttynr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-launch.c" line="106" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/weston-launch.c" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__launch_1a8f568117e9e782af0a03a10c85e7a54c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int weston_launch::sock[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>sock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-launch.c" line="107" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/weston-launch.c" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__launch_1a5ea4f8d58bd438597cf66827692e2142" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int weston_launch::drm_fd</definition>
+        <argsstring></argsstring>
+        <name>drm_fd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-launch.c" line="108" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/weston-launch.c" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__launch_1afb48c672cdc2a2a4f72c9aaf96e05579" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int weston_launch::last_input_fd</definition>
+        <argsstring></argsstring>
+        <name>last_input_fd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-launch.c" line="109" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/weston-launch.c" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__launch_1afc465759549fa376c73f765b10c6124f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int weston_launch::kb_mode</definition>
+        <argsstring></argsstring>
+        <name>kb_mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-launch.c" line="110" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/weston-launch.c" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__launch_1abe059b9b61f539e850874f076774f7c4" prot="public" static="no" mutable="no">
+        <type>struct passwd *</type>
+        <definition>struct passwd* weston_launch::pw</definition>
+        <argsstring></argsstring>
+        <name>pw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-launch.c" line="111" column="13" bodyfile="/home/lzm/Wayland/weston/libweston/weston-launch.c" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__launch_1a62beca54089044bad3ef4df028eac6e4" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int weston_launch::signalfd</definition>
+        <argsstring></argsstring>
+        <name>signalfd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-launch.c" line="113" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/weston-launch.c" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__launch_1a6466025e2dfcbc8c2c037b129e063d6a" prot="public" static="no" mutable="no">
+        <type>pid_t</type>
+        <definition>pid_t weston_launch::child</definition>
+        <argsstring></argsstring>
+        <name>child</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-launch.c" line="115" column="7" bodyfile="/home/lzm/Wayland/weston/libweston/weston-launch.c" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__launch_1acd23bf8d9bfda72dd16fbca279547882" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int weston_launch::verbose</definition>
+        <argsstring></argsstring>
+        <name>verbose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-launch.c" line="116" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/weston-launch.c" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__launch_1aa5dcb6ea541acc76b6a1608eb9c6853e" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* weston_launch::new_user</definition>
+        <argsstring></argsstring>
+        <name>new_user</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-launch.c" line="117" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/weston-launch.c" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/weston-launch.c" line="102" column="20" bodyfile="/home/lzm/Wayland/weston/libweston/weston-launch.c" bodystart="102" bodyend="118"/>
+    <listofallmembers>
+      <member refid="structweston__launch_1a6466025e2dfcbc8c2c037b129e063d6a" prot="public" virt="non-virtual"><scope>weston_launch</scope><name>child</name></member>
+      <member refid="structweston__launch_1a5ea4f8d58bd438597cf66827692e2142" prot="public" virt="non-virtual"><scope>weston_launch</scope><name>drm_fd</name></member>
+      <member refid="structweston__launch_1afc465759549fa376c73f765b10c6124f" prot="public" virt="non-virtual"><scope>weston_launch</scope><name>kb_mode</name></member>
+      <member refid="structweston__launch_1afb48c672cdc2a2a4f72c9aaf96e05579" prot="public" virt="non-virtual"><scope>weston_launch</scope><name>last_input_fd</name></member>
+      <member refid="structweston__launch_1aa5dcb6ea541acc76b6a1608eb9c6853e" prot="public" virt="non-virtual"><scope>weston_launch</scope><name>new_user</name></member>
+      <member refid="structweston__launch_1a36d5d4093862d9fb2cb200cb1714dac3" prot="public" virt="non-virtual"><scope>weston_launch</scope><name>pc</name></member>
+      <member refid="structweston__launch_1a6cdc83c56742efa2b41584d5c0630b5d" prot="public" virt="non-virtual"><scope>weston_launch</scope><name>ph</name></member>
+      <member refid="structweston__launch_1abe059b9b61f539e850874f076774f7c4" prot="public" virt="non-virtual"><scope>weston_launch</scope><name>pw</name></member>
+      <member refid="structweston__launch_1a62beca54089044bad3ef4df028eac6e4" prot="public" virt="non-virtual"><scope>weston_launch</scope><name>signalfd</name></member>
+      <member refid="structweston__launch_1a8f568117e9e782af0a03a10c85e7a54c" prot="public" virt="non-virtual"><scope>weston_launch</scope><name>sock</name></member>
+      <member refid="structweston__launch_1ae6761923902e346e42c17e9ae0f49caf" prot="public" virt="non-virtual"><scope>weston_launch</scope><name>tty</name></member>
+      <member refid="structweston__launch_1ae86d22404626abdbbf946c39ab5534ec" prot="public" virt="non-virtual"><scope>weston_launch</scope><name>ttynr</name></member>
+      <member refid="structweston__launch_1acd23bf8d9bfda72dd16fbca279547882" prot="public" virt="non-virtual"><scope>weston_launch</scope><name>verbose</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

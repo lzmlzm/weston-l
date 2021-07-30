@@ -1,0 +1,6 @@
+prefix=/home/lzm/Wayland/weston/builddir
+srcdir=/home/lzm/Wayland/weston
+
+Name: libWeston Protocols
+Description: libWeston protocol files
+Version: 9.0.90

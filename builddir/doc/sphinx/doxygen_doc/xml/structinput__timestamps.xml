@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structinput__timestamps" kind="struct" language="C++" prot="public">
+    <compoundname>input_timestamps</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structinput__timestamps_1a8716ac09005c8042a4bec8d83a80513e" prot="public" static="no" mutable="no">
+        <type>struct zwp_input_timestamps_v1 *</type>
+        <definition>struct zwp_input_timestamps_v1* input_timestamps::proxy</definition>
+        <argsstring></argsstring>
+        <name>proxy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/input-timestamps-helper.c" line="40" column="30" bodyfile="/home/lzm/Wayland/weston/tests/input-timestamps-helper.c" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/tests/input-timestamps-helper.c" line="39" column="23" bodyfile="/home/lzm/Wayland/weston/tests/input-timestamps-helper.c" bodystart="39" bodyend="41"/>
+    <listofallmembers>
+      <member refid="structinput__timestamps_1a8716ac09005c8042a4bec8d83a80513e" prot="public" virt="non-virtual"><scope>input_timestamps</scope><name>proxy</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

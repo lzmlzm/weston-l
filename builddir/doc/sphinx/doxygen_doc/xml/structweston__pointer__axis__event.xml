@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__pointer__axis__event" kind="struct" language="C++" prot="public">
+    <compoundname>weston_pointer_axis_event</compoundname>
+    <includes refid="libweston_8h" local="no">libweston.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__pointer__axis__event_1a921166b269c22fd0b3ec989397f5d88a" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t weston_pointer_axis_event::axis</definition>
+        <argsstring></argsstring>
+        <name>axis</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="417" column="10" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="417" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__pointer__axis__event_1a758413a513d73685c127fb41181e4320" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double weston_pointer_axis_event::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="418" column="8" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="418" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__pointer__axis__event_1ac924f23da18ad3fc1276a5570ead8a04" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool weston_pointer_axis_event::has_discrete</definition>
+        <argsstring></argsstring>
+        <name>has_discrete</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="419" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="419" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__pointer__axis__event_1a535dfb7b1258d768f7e104996d8705b1" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t weston_pointer_axis_event::discrete</definition>
+        <argsstring></argsstring>
+        <name>discrete</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="420" column="9" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="420" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="416" column="32" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="416" bodyend="421"/>
+    <listofallmembers>
+      <member refid="structweston__pointer__axis__event_1a921166b269c22fd0b3ec989397f5d88a" prot="public" virt="non-virtual"><scope>weston_pointer_axis_event</scope><name>axis</name></member>
+      <member refid="structweston__pointer__axis__event_1a535dfb7b1258d768f7e104996d8705b1" prot="public" virt="non-virtual"><scope>weston_pointer_axis_event</scope><name>discrete</name></member>
+      <member refid="structweston__pointer__axis__event_1ac924f23da18ad3fc1276a5570ead8a04" prot="public" virt="non-virtual"><scope>weston_pointer_axis_event</scope><name>has_discrete</name></member>
+      <member refid="structweston__pointer__axis__event_1a758413a513d73685c127fb41181e4320" prot="public" virt="non-virtual"><scope>weston_pointer_axis_event</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

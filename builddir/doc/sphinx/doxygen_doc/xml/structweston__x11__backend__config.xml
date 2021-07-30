@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__x11__backend__config" kind="struct" language="C++" prot="public">
+    <compoundname>weston_x11_backend_config</compoundname>
+    <includes refid="backend-x11_8h" local="no">backend-x11.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__x11__backend__config_1af7b6c6cc304830c77cd7f45103a5321e" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structweston__backend__config" kindref="compound">weston_backend_config</ref></type>
+        <definition>struct weston_backend_config weston_x11_backend_config::base</definition>
+        <argsstring></argsstring>
+        <name>base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-x11.h" line="1" column="0" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-x11.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__x11__backend__config_1afa4cffc2812832ad1749f3d31b45e71b" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool weston_x11_backend_config::fullscreen</definition>
+        <argsstring></argsstring>
+        <name>fullscreen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-x11.h" line="42" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-x11.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__x11__backend__config_1abfd250101c40038d521b9352a8a2ae49" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool weston_x11_backend_config::no_input</definition>
+        <argsstring></argsstring>
+        <name>no_input</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-x11.h" line="43" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-x11.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__x11__backend__config_1aa6344686febe243735812a8a56a70c79" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool weston_x11_backend_config::use_pixman</definition>
+        <argsstring></argsstring>
+        <name>use_pixman</name>
+        <briefdescription>
+<para>Whether to use the pixman renderer instead of the OpenGL ES renderer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-x11.h" line="46" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-x11.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>weston_x11_backend_config</label>
+        <link refid="structweston__x11__backend__config"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>weston_backend_config</label>
+        <link refid="structweston__backend__config"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lzm/Wayland/weston/include/libweston/backend-x11.h" line="39" column="32" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-x11.h" bodystart="39" bodyend="47"/>
+    <listofallmembers>
+      <member refid="structweston__x11__backend__config_1af7b6c6cc304830c77cd7f45103a5321e" prot="public" virt="non-virtual"><scope>weston_x11_backend_config</scope><name>base</name></member>
+      <member refid="structweston__x11__backend__config_1afa4cffc2812832ad1749f3d31b45e71b" prot="public" virt="non-virtual"><scope>weston_x11_backend_config</scope><name>fullscreen</name></member>
+      <member refid="structweston__x11__backend__config_1abfd250101c40038d521b9352a8a2ae49" prot="public" virt="non-virtual"><scope>weston_x11_backend_config</scope><name>no_input</name></member>
+      <member refid="structweston__x11__backend__config_1aa6344686febe243735812a8a56a70c79" prot="public" virt="non-virtual"><scope>weston_x11_backend_config</scope><name>use_pixman</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

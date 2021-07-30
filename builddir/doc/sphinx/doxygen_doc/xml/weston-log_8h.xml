@@ -1,0 +1,906 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="weston-log_8h" kind="file" language="C++">
+    <compoundname>weston-log.h</compoundname>
+    <includes local="no">stdbool.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">stdarg.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includedby refid="drm-internal_8h" local="no">/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h</includedby>
+    <includedby refid="drm_8c" local="no">/home/lzm/Wayland/weston/libweston/backend-drm/drm.c</includedby>
+    <includedby refid="timeline_8h" local="no">/home/lzm/Wayland/weston/libweston/timeline.h</includedby>
+    <includedby refid="compositor_8c" local="no">/home/lzm/Wayland/weston/libweston/compositor.c</includedby>
+    <includedby refid="content-protection_8c" local="no">/home/lzm/Wayland/weston/libweston/content-protection.c</includedby>
+    <includedby refid="gl-shaders_8c" local="no">/home/lzm/Wayland/weston/libweston/renderer-gl/gl-shaders.c</includedby>
+    <includedby refid="timeline_8c" local="no">/home/lzm/Wayland/weston/libweston/timeline.c</includedby>
+    <includedby refid="weston-log-file_8c" local="no">/home/lzm/Wayland/weston/libweston/weston-log-file.c</includedby>
+    <includedby refid="weston-log-flight-rec_8c" local="no">/home/lzm/Wayland/weston/libweston/weston-log-flight-rec.c</includedby>
+    <includedby refid="weston-log-wayland_8c" local="no">/home/lzm/Wayland/weston/libweston/weston-log-wayland.c</includedby>
+    <includedby refid="weston-log_8c" local="no">/home/lzm/Wayland/weston/libweston/weston-log.c</includedby>
+    <includedby refid="weston-test_8c" local="no">/home/lzm/Wayland/weston/tests/weston-test.c</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>stdbool.h</label>
+      </node>
+      <node id="4">
+        <label>stdarg.h</label>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/include/libweston/weston-log.h</label>
+        <link refid="weston-log_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/drm-virtual.c</label>
+        <link refid="drm-virtual_8c"/>
+      </node>
+      <node id="15">
+        <label>/home/lzm/Wayland/weston/libweston/content-protection.c</label>
+        <link refid="content-protection_8c"/>
+      </node>
+      <node id="5">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/drm.c</label>
+        <link refid="drm_8c"/>
+      </node>
+      <node id="3">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c</label>
+        <link refid="drm-gbm_8c"/>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/include/libweston/weston-log.h</label>
+        <link refid="weston-log_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>/home/lzm/Wayland/weston/libweston/weston-log-flight-rec.c</label>
+        <link refid="weston-log-flight-rec_8c"/>
+      </node>
+      <node id="2">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/drm-internal.h</label>
+        <link refid="drm-internal_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>/home/lzm/Wayland/weston/libweston/renderer-gl/gl-shaders.c</label>
+        <link refid="gl-shaders_8c"/>
+      </node>
+      <node id="19">
+        <label>/home/lzm/Wayland/weston/libweston/weston-log-wayland.c</label>
+        <link refid="weston-log-wayland_8c"/>
+      </node>
+      <node id="17">
+        <label>/home/lzm/Wayland/weston/libweston/weston-log-file.c</label>
+        <link refid="weston-log-file_8c"/>
+      </node>
+      <node id="10">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/state-propose.c</label>
+        <link refid="state-propose_8c"/>
+      </node>
+      <node id="9">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/state-helpers.c</label>
+        <link refid="state-helpers_8c"/>
+      </node>
+      <node id="14">
+        <label>/home/lzm/Wayland/weston/libweston/timeline.c</label>
+        <link refid="timeline_8c"/>
+      </node>
+      <node id="11">
+        <label>/home/lzm/Wayland/weston/libweston/timeline.h</label>
+        <link refid="timeline_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c</label>
+        <link refid="gl-renderer_8c"/>
+      </node>
+      <node id="7">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/kms.c</label>
+        <link refid="kms_8c"/>
+      </node>
+      <node id="6">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/fb.c</label>
+        <link refid="fb_8c"/>
+      </node>
+      <node id="20">
+        <label>/home/lzm/Wayland/weston/libweston/weston-log.c</label>
+        <link refid="weston-log_8c"/>
+      </node>
+      <node id="12">
+        <label>/home/lzm/Wayland/weston/libweston/compositor.c</label>
+        <link refid="compositor_8c"/>
+      </node>
+      <node id="21">
+        <label>/home/lzm/Wayland/weston/tests/weston-test.c</label>
+        <link refid="weston-test_8c"/>
+      </node>
+      <node id="8">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/modes.c</label>
+        <link refid="modes_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__debug-protocol_1gab89f0b036a3978ae09bebaf853e91abc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_compositor_enable_debug_protocol</definition>
+        <argsstring>(struct weston_compositor *)</argsstring>
+        <name>weston_compositor_enable_debug_protocol</name>
+        <param>
+          <type>struct <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> *</type>
+          <defname>compositor</defname>
+        </param>
+        <briefdescription>
+<para>Enable weston-debug protocol extension. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>compositor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The libweston compositor where to enable.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This enables the weston_debug_v1 Wayland protocol extension which any client can use to get debug messages from the compositor.</para>
+<para>WARNING: This feature should not be used in production. If a client provides a file descriptor that blocks writes, it will block the whole compositor indefinitely.</para>
+<para>There is no control on which client is allowed to subscribe to debug messages. Any and all clients are allowed.</para>
+<para>The debug extension is disabled by default, and once enabled, cannot be disabled again. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/weston-log.h" line="46" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="493" bodyend="512" declfile="/home/lzm/Wayland/weston/include/libweston/weston-log.h" declline="46" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__debug-protocol_1gafb6cfdb4e8668dfcc25815a291394036" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool weston_compositor_is_debug_protocol_enabled</definition>
+        <argsstring>(struct weston_compositor *)</argsstring>
+        <name>weston_compositor_is_debug_protocol_enabled</name>
+        <param>
+          <type>struct <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> *</type>
+          <defname>wc</defname>
+        </param>
+        <briefdescription>
+<para>Determine if the debug protocol has been enabled. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>wc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The libweston compositor to verify if debug protocol has been enabled </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/weston-log.h" line="49" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="522" bodyend="525" declfile="/home/lzm/Wayland/weston/include/libweston/weston-log.h" declline="49" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-log_8h_1ad7f487a33714855d0399265bf04bb3c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref> *</type>
+        <definition>struct weston_log_scope* weston_log_ctx_add_log_scope</definition>
+        <argsstring>(struct weston_log_context *log_ctx, const char *name, const char *description, weston_log_scope_cb new_subscription, weston_log_scope_cb destroy_subscription, void *user_data)</argsstring>
+        <name>weston_log_ctx_add_log_scope</name>
+        <param>
+          <type>struct <ref refid="structweston__log__context" kindref="compound">weston_log_context</ref> *</type>
+          <declname>log_ctx</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>description</declname>
+        </param>
+        <param>
+          <type><ref refid="structweston__log__scope_1aa459afbea55ca94648cbc9abed32ddf3" kindref="member">weston_log_scope_cb</ref></type>
+          <declname>new_subscription</declname>
+        </param>
+        <param>
+          <type><ref refid="structweston__log__scope_1aa459afbea55ca94648cbc9abed32ddf3" kindref="member">weston_log_scope_cb</ref></type>
+          <declname>destroy_subscription</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>user_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/weston-log.h" line="66" column="1" declfile="/home/lzm/Wayland/weston/include/libweston/weston-log.h" declline="66" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-log_8h_1a38f2d7290d9820b4cafc50e0734875cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref> *</type>
+        <definition>struct weston_log_scope* weston_compositor_add_log_scope</definition>
+        <argsstring>(struct weston_compositor *compositor, const char *name, const char *description, weston_log_scope_cb new_subscription, weston_log_scope_cb destroy_subscription, void *user_data)</argsstring>
+        <name>weston_compositor_add_log_scope</name>
+        <param>
+          <type>struct <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> *</type>
+          <declname>compositor</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>description</declname>
+        </param>
+        <param>
+          <type><ref refid="structweston__log__scope_1aa459afbea55ca94648cbc9abed32ddf3" kindref="member">weston_log_scope_cb</ref></type>
+          <declname>new_subscription</declname>
+        </param>
+        <param>
+          <type><ref refid="structweston__log__scope_1aa459afbea55ca94648cbc9abed32ddf3" kindref="member">weston_log_scope_cb</ref></type>
+          <declname>destroy_subscription</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>user_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/weston-log.h" line="74" column="1" declfile="/home/lzm/Wayland/weston/include/libweston/weston-log.h" declline="74" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-log_8h_1a32ad399b7e203a9ad0a5a11cdd0711ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_log_scope_destroy</definition>
+        <argsstring>(struct weston_log_scope *scope)</argsstring>
+        <name>weston_log_scope_destroy</name>
+        <param>
+          <type>struct <ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref> *</type>
+          <declname>scope</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/weston-log.h" line="82" column="1" declfile="/home/lzm/Wayland/weston/include/libweston/weston-log.h" declline="82" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-log_8h_1aa2f05b02a0c471f5dbcf7d78816aa045" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool weston_log_scope_is_enabled</definition>
+        <argsstring>(struct weston_log_scope *scope)</argsstring>
+        <name>weston_log_scope_is_enabled</name>
+        <param>
+          <type>struct <ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref> *</type>
+          <declname>scope</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/weston-log.h" line="85" column="1" declfile="/home/lzm/Wayland/weston/include/libweston/weston-log.h" declline="85" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-log_8h_1a08df8a2d23964301c3d11b9aaf468911" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_log_scope_write</definition>
+        <argsstring>(struct weston_log_scope *scope, const char *data, size_t len)</argsstring>
+        <name>weston_log_scope_write</name>
+        <param>
+          <type>struct <ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref> *</type>
+          <declname>scope</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/weston-log.h" line="88" column="1" declfile="/home/lzm/Wayland/weston/include/libweston/weston-log.h" declline="88" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-log_8h_1a543ea2886597eaaf68e4e36a773561dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int weston_log_scope_vprintf</definition>
+        <argsstring>(struct weston_log_scope *scope, const char *fmt, va_list ap)</argsstring>
+        <name>weston_log_scope_vprintf</name>
+        <param>
+          <type>struct <ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref> *</type>
+          <declname>scope</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>va_list</type>
+          <declname>ap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/weston-log.h" line="92" column="1" declfile="/home/lzm/Wayland/weston/include/libweston/weston-log.h" declline="92" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-log_8h_1ab8df80c01a6b256dee3d6a873b21ad05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int weston_log_scope_printf</definition>
+        <argsstring>(struct weston_log_scope *scope, const char *fmt,...)</argsstring>
+        <name>weston_log_scope_printf</name>
+        <param>
+          <type>struct <ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref> *</type>
+          <declname>scope</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/weston-log.h" line="96" column="1" declfile="/home/lzm/Wayland/weston/include/libweston/weston-log.h" declline="96" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__log_1gabefb2ce138700919fa8e07e848939ee1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_log_subscription_printf</definition>
+        <argsstring>(struct weston_log_subscription *sub, const char *fmt,...)</argsstring>
+        <name>weston_log_subscription_printf</name>
+        <param>
+          <type>struct <ref refid="structweston__log__subscription" kindref="compound">weston_log_subscription</ref> *</type>
+          <declname>sub</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+<para>Write a formatted string for a subscription. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sub</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The subscription to write for; may be NULL, in which case nothing will be written. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fmt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Printf-style format string and arguments.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Writes to formatted string to the stream that created the subscription. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/weston-log.h" line="100" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="865" bodyend="873" declfile="/home/lzm/Wayland/weston/include/libweston/weston-log.h" declline="100" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-log_8h_1af7b1c182738e453d1c7acb7dcea35a8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_log_scope_complete</definition>
+        <argsstring>(struct weston_log_scope *scope)</argsstring>
+        <name>weston_log_scope_complete</name>
+        <param>
+          <type>struct <ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref> *</type>
+          <declname>scope</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/weston-log.h" line="104" column="1" declfile="/home/lzm/Wayland/weston/include/libweston/weston-log.h" declline="104" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__log_1gaff6911aac86ddf3ef624010d61630dea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_log_subscription_complete</definition>
+        <argsstring>(struct weston_log_subscription *sub)</argsstring>
+        <name>weston_log_subscription_complete</name>
+        <param>
+          <type>struct <ref refid="structweston__log__subscription" kindref="compound">weston_log_subscription</ref> *</type>
+          <declname>sub</declname>
+        </param>
+        <briefdescription>
+<para>Close the stream&apos;s complete callback if one was installed/created. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/weston-log.h" line="107" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="736" bodyend="740" declfile="/home/lzm/Wayland/weston/include/libweston/weston-log.h" declline="107" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-log_8h_1a98bd53ebbbd22521fa2fcb887d5af28d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* weston_log_scope_timestamp</definition>
+        <argsstring>(struct weston_log_scope *scope, char *buf, size_t len)</argsstring>
+        <name>weston_log_scope_timestamp</name>
+        <param>
+          <type>struct <ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref> *</type>
+          <declname>scope</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/weston-log.h" line="110" column="1" declfile="/home/lzm/Wayland/weston/include/libweston/weston-log.h" declline="110" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__log_1gab8f8e5728af2f0511f6fedb96828d210" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_log_subscriber_destroy</definition>
+        <argsstring>(struct weston_log_subscriber *subscriber)</argsstring>
+        <name>weston_log_subscriber_destroy</name>
+        <param>
+          <type>struct <ref refid="structweston__log__subscriber" kindref="compound">weston_log_subscriber</ref> *</type>
+          <declname>subscriber</declname>
+        </param>
+        <briefdescription>
+<para>Destroy a file type or a flight-rec type subscriber. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>They are created, respectively, with <ref refid="weston-log-file_8c_1a18475df75dfcd2f871e2266895749dfe" kindref="member">weston_log_subscriber_create_log()</ref> and <ref refid="weston-log-flight-rec_8c_1af811784d3fab3826e18189a3d2824082" kindref="member">weston_log_subscriber_create_flight_rec()</ref></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>subscriber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="structweston__log__subscriber" kindref="compound">weston_log_subscriber</ref> object to destroy </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/weston-log.h" line="114" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="935" bodyend="938" declfile="/home/lzm/Wayland/weston/include/libweston/weston-log.h" declline="114" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__log_1ga18ab9265482af8547ed947e28804b6b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_log_subscribe</definition>
+        <argsstring>(struct weston_log_context *log_ctx, struct weston_log_subscriber *subscriber, const char *scope_name)</argsstring>
+        <name>weston_log_subscribe</name>
+        <param>
+          <type>struct <ref refid="structweston__log__context" kindref="compound">weston_log_context</ref> *</type>
+          <declname>log_ctx</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structweston__log__subscriber" kindref="compound">weston_log_subscriber</ref> *</type>
+          <declname>subscriber</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>scope_name</declname>
+        </param>
+        <briefdescription>
+<para>Subscribe to a scope. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a subscription which is used to subscribe the <computeroutput>subscriber</computeroutput> to the scope <computeroutput>scope_name</computeroutput>.</para>
+<para>If <computeroutput>scope_name</computeroutput> has already been created (using weston_log_ctx_add_log_scope or weston_compositor_add_log_scope) the subscription will take place immediately, otherwise we store the subscription into a pending list. See also <ref refid="structweston__log__scope_1aacf51678148a4c087e78a87816cc36f3" kindref="member">weston_log_ctx_add_log_scope()</ref> and <ref refid="structweston__compositor_1ae4682c6463d20cedae4215dff64d91c7" kindref="member">weston_compositor_add_log_scope()</ref></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>log_ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the log context, used for accessing pending list </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>subscriber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the subscriber, which has to be created before </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>scope_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the scope name. In case the scope is not created we temporarily store the subscription in the pending list. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/weston-log.h" line="117" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="959" bodyend="978" declfile="/home/lzm/Wayland/weston/include/libweston/weston-log.h" declline="117" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-log_8h_1a18475df75dfcd2f871e2266895749dfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structweston__log__subscriber" kindref="compound">weston_log_subscriber</ref> *</type>
+        <definition>struct weston_log_subscriber* weston_log_subscriber_create_log</definition>
+        <argsstring>(FILE *dump_to)</argsstring>
+        <name>weston_log_subscriber_create_log</name>
+        <param>
+          <type>FILE *</type>
+          <declname>dump_to</declname>
+        </param>
+        <briefdescription>
+<para>Creates a file type of subscriber. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Should be destroyed using <ref refid="group__log_1gab8f8e5728af2f0511f6fedb96828d210" kindref="member">weston_log_subscriber_destroy()</ref></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dump_to</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if specified, used for writing data to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a <ref refid="structweston__log__subscriber" kindref="compound">weston_log_subscriber</ref> object or NULL in case of failure</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="group__log_1gab8f8e5728af2f0511f6fedb96828d210" kindref="member">weston_log_subscriber_destroy</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/weston-log.h" line="122" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log-file.c" bodystart="77" bodyend="98" declfile="/home/lzm/Wayland/weston/include/libweston/weston-log.h" declline="122" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-log_8h_1af811784d3fab3826e18189a3d2824082" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structweston__log__subscriber" kindref="compound">weston_log_subscriber</ref> *</type>
+        <definition>struct weston_log_subscriber* weston_log_subscriber_create_flight_rec</definition>
+        <argsstring>(size_t size)</argsstring>
+        <name>weston_log_subscriber_create_flight_rec</name>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Create a flight recorder type of subscriber. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Allocates both the flight recorder and the underlying ring buffer. Use <ref refid="group__log_1gab8f8e5728af2f0511f6fedb96828d210" kindref="member">weston_log_subscriber_destroy()</ref> to clean-up.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>specify the maximum size (in bytes) of the backing storage for the flight recorder </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a <ref refid="structweston__log__subscriber" kindref="compound">weston_log_subscriber</ref> object or NULL in case of failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/weston-log.h" line="125" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log-flight-rec.c" bodystart="246" bodyend="277" declfile="/home/lzm/Wayland/weston/include/libweston/weston-log.h" declline="125" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-log_8h_1add2d1e0ac7270b9e7ee61ab494fc6aff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_log_subscriber_display_flight_rec</definition>
+        <argsstring>(struct weston_log_subscriber *sub)</argsstring>
+        <name>weston_log_subscriber_display_flight_rec</name>
+        <param>
+          <type>struct <ref refid="structweston__log__subscriber" kindref="compound">weston_log_subscriber</ref> *</type>
+          <declname>sub</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/weston-log.h" line="128" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log-flight-rec.c" bodystart="212" bodyend="219" declfile="/home/lzm/Wayland/weston/include/libweston/weston-log.h" declline="128" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-log_8h_1a47cf92dc4bab99ac687fd0d8f5be2915" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structweston__log__subscription" kindref="compound">weston_log_subscription</ref> *</type>
+        <definition>struct weston_log_subscription* weston_log_subscription_iterate</definition>
+        <argsstring>(struct weston_log_scope *scope, struct weston_log_subscription *sub_iter)</argsstring>
+        <name>weston_log_subscription_iterate</name>
+        <param>
+          <type>struct <ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref> *</type>
+          <declname>scope</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structweston__log__subscription" kindref="compound">weston_log_subscription</ref> *</type>
+          <declname>sub_iter</declname>
+        </param>
+        <briefdescription>
+<para>Iterate over all subscriptions in a scope. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the scope for which you want to iterate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sub_iter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the iterator, use NULL to start from the &apos;head&apos; </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the next subscription from the log scope</para>
+</simplesect>
+This is (quite) useful when &apos;log_scope&apos; and &apos;log_subscription&apos; are opaque. Do note that <computeroutput>sub_iter</computeroutput> needs to be NULL-initialized before calling this function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/weston-log.h" line="131" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="991" bodyend="1011" declfile="/home/lzm/Wayland/weston/include/libweston/weston-log.h" declline="131" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-log_8h_1ac0df7878a8f457396b190494f0966133" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_log_flight_recorder_display_buffer</definition>
+        <argsstring>(FILE *file)</argsstring>
+        <name>weston_log_flight_recorder_display_buffer</name>
+        <param>
+          <type>FILE *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve flight recorder ring buffer contents, could be useful when implementing an assert()-like wrapper. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a FILE type already opened. Can also pass stderr/stdout under gdb if the program is loaded into memory.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Uses the global exposed weston_primary_flight_recorder_ring_buffer. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/weston-log.h" line="135" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log-flight-rec.c" bodystart="289" bodyend="296" declfile="/home/lzm/Wayland/weston/include/libweston/weston-log.h" declline="135" declcolumn="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2017<sp/>Pekka<sp/>Paalanen<sp/>&lt;pq@iki.fi&gt;</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>(including<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>next<sp/>paragraph)<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>NONINFRINGEMENT.<sp/><sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>WESTON_LOG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WESTON_LOG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdarg.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/><sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__compositor" kindref="compound">weston_compositor</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__log__context" kindref="compound">weston_log_context</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_display;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__log__subscriber" kindref="compound">weston_log_subscriber</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__log__subscription" kindref="compound">weston_log_subscription</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><ref refid="group__debug-protocol_1gab89f0b036a3978ae09bebaf853e91abc" kindref="member">weston_compositor_enable_debug_protocol</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__compositor" kindref="compound">weston_compositor</ref><sp/>*);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><ref refid="group__debug-protocol_1gafb6cfdb4e8668dfcc25815a291394036" kindref="member">weston_compositor_is_debug_protocol_enabled</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__compositor" kindref="compound">weston_compositor</ref><sp/>*);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">weston_debug_stream;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="structweston__log__scope_1aa459afbea55ca94648cbc9abed32ddf3" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="structweston__log__scope_1aa459afbea55ca94648cbc9abed32ddf3" kindref="member">weston_log_scope_cb</ref>)(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__log__subscription" kindref="compound">weston_log_subscription</ref><sp/>*sub,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*user_data);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref><sp/>*</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><ref refid="structweston__log__scope_1aacf51678148a4c087e78a87816cc36f3" kindref="member">weston_log_ctx_add_log_scope</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__log__context" kindref="compound">weston_log_context</ref><sp/>*log_ctx,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structweston__log__scope_1a3068b920ca319f7f4cd1aeabf0f9e589" kindref="member">name</ref>,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*description,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structweston__log__scope_1aa459afbea55ca94648cbc9abed32ddf3" kindref="member">weston_log_scope_cb</ref><sp/><ref refid="structweston__log__scope_1aee55c61b9ca748336f1ea36b193a1d94" kindref="member">new_subscription</ref>,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structweston__log__scope_1aa459afbea55ca94648cbc9abed32ddf3" kindref="member">weston_log_scope_cb</ref><sp/><ref refid="structweston__log__scope_1a3ea6dd5038173e04cfb336c08b0b23e5" kindref="member">destroy_subscription</ref>,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structweston__log__scope_1ab8ff54c73d2058f7d6f692a5d65c3d00" kindref="member">user_data</ref>);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref><sp/>*</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><ref refid="structweston__compositor_1ae4682c6463d20cedae4215dff64d91c7" kindref="member">weston_compositor_add_log_scope</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__compositor" kindref="compound">weston_compositor</ref><sp/>*compositor,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structweston__log__scope_1a3068b920ca319f7f4cd1aeabf0f9e589" kindref="member">name</ref>,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*description,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structweston__log__scope_1aa459afbea55ca94648cbc9abed32ddf3" kindref="member">weston_log_scope_cb</ref><sp/><ref refid="structweston__log__scope_1aee55c61b9ca748336f1ea36b193a1d94" kindref="member">new_subscription</ref>,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structweston__log__scope_1aa459afbea55ca94648cbc9abed32ddf3" kindref="member">weston_log_scope_cb</ref><sp/><ref refid="structweston__log__scope_1a3ea6dd5038173e04cfb336c08b0b23e5" kindref="member">destroy_subscription</ref>,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structweston__log__scope_1ab8ff54c73d2058f7d6f692a5d65c3d00" kindref="member">user_data</ref>);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><ref refid="structweston__log__scope_1a32ad399b7e203a9ad0a5a11cdd0711ce" kindref="member">weston_log_scope_destroy</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref><sp/>*scope);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><ref refid="structweston__log__scope_1aa2f05b02a0c471f5dbcf7d78816aa045" kindref="member">weston_log_scope_is_enabled</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref><sp/>*scope);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><ref refid="structweston__log__scope_1a08df8a2d23964301c3d11b9aaf468911" kindref="member">weston_log_scope_write</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref><sp/>*scope,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><ref refid="structweston__log__scope_1a543ea2886597eaaf68e4e36a773561dc" kindref="member">weston_log_scope_vprintf</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref><sp/>*scope,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*fmt,<sp/>va_list<sp/>ap);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><ref refid="structweston__log__scope_1ab8df80c01a6b256dee3d6a873b21ad05" kindref="member">weston_log_scope_printf</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref><sp/>*scope,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*fmt,<sp/>...)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__<sp/>((format<sp/>(printf,<sp/>2,<sp/>3)));</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><ref refid="group__log_1gabefb2ce138700919fa8e07e848939ee1" kindref="member">weston_log_subscription_printf</ref>(struct<sp/><ref refid="structweston__log__subscription" kindref="compound">weston_log_subscription</ref><sp/>*sub,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*fmt,<sp/>...)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__attribute__<sp/>((format<sp/>(printf,<sp/>2,<sp/>3)));</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><ref refid="structweston__log__scope_1af7b1c182738e453d1c7acb7dcea35a8a" kindref="member">weston_log_scope_complete</ref>(struct<sp/><ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref><sp/>*scope);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><ref refid="group__log_1gaff6911aac86ddf3ef624010d61630dea" kindref="member">weston_log_subscription_complete</ref>(struct<sp/><ref refid="structweston__log__subscription" kindref="compound">weston_log_subscription</ref><sp/>*sub);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><ref refid="structweston__log__scope_1aa752383fa9a80459da866ec7b71b98f5" kindref="member">weston_log_scope_timestamp</ref>(struct<sp/><ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref><sp/>*scope,</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><ref refid="group__log_1gab8f8e5728af2f0511f6fedb96828d210" kindref="member">weston_log_subscriber_destroy</ref>(struct<sp/><ref refid="structweston__log__subscriber" kindref="compound">weston_log_subscriber</ref><sp/>*subscriber);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><ref refid="group__log_1ga18ab9265482af8547ed947e28804b6b8" kindref="member">weston_log_subscribe</ref>(struct<sp/><ref refid="structweston__log__context" kindref="compound">weston_log_context</ref><sp/>*log_ctx,</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>struct<sp/><ref refid="structweston__log__subscriber" kindref="compound">weston_log_subscriber</ref><sp/>*subscriber,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*scope_name);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal">struct<sp/><ref refid="structweston__log__subscriber" kindref="compound">weston_log_subscriber</ref><sp/>*</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><ref refid="weston-log_8h_1a18475df75dfcd2f871e2266895749dfe" kindref="member">weston_log_subscriber_create_log</ref>(FILE<sp/>*dump_to);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal">struct<sp/><ref refid="structweston__log__subscriber" kindref="compound">weston_log_subscriber</ref><sp/>*</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><ref refid="weston-log_8h_1af811784d3fab3826e18189a3d2824082" kindref="member">weston_log_subscriber_create_flight_rec</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><ref refid="weston-log_8h_1add2d1e0ac7270b9e7ee61ab494fc6aff" kindref="member">weston_log_subscriber_display_flight_rec</ref>(struct<sp/><ref refid="structweston__log__subscriber" kindref="compound">weston_log_subscriber</ref><sp/>*sub);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal">struct<sp/><ref refid="structweston__log__subscription" kindref="compound">weston_log_subscription</ref><sp/>*</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><ref refid="weston-log_8h_1a47cf92dc4bab99ac687fd0d8f5be2915" kindref="member">weston_log_subscription_iterate</ref>(struct<sp/><ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref><sp/>*scope,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>struct<sp/><ref refid="structweston__log__subscription" kindref="compound">weston_log_subscription</ref><sp/>*sub_iter);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><ref refid="weston-log_8h_1ac0df7878a8f457396b190494f0966133" kindref="member">weston_log_flight_recorder_display_buffer</ref>(FILE<sp/>*file);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/><sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>WESTON_LOG_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/include/libweston/weston-log.h"/>
+  </compounddef>
+</doxygen>

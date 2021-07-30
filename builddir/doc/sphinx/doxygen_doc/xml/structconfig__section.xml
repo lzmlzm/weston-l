@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structconfig__section" kind="struct" language="C++" prot="public">
+    <compoundname>config_section</compoundname>
+    <includes refid="config-parser_8h" local="no">config-parser.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structconfig__section_1a86a196878d503f6a4fe3d19b97f749a6" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* config_section::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/config-parser.h" line="52" column="12" bodyfile="/home/lzm/Wayland/weston/include/libweston/config-parser.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structconfig__section_1ad5d66208b9e71fc7a4fbac8f9cfe4557" prot="public" static="no" mutable="no">
+        <type>const struct <ref refid="structconfig__key" kindref="compound">config_key</ref> *</type>
+        <definition>const struct config_key* config_section::keys</definition>
+        <argsstring></argsstring>
+        <name>keys</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/config-parser.h" line="53" column="23" bodyfile="/home/lzm/Wayland/weston/include/libweston/config-parser.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structconfig__section_1aafdd536608b846c3af0cb6781c43d41e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int config_section::num_keys</definition>
+        <argsstring></argsstring>
+        <name>num_keys</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/config-parser.h" line="54" column="5" bodyfile="/home/lzm/Wayland/weston/include/libweston/config-parser.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structconfig__section_1aaa7dbcae217222c639ea8c1c1f931f6b" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* config_section::done) (void *data)</definition>
+        <argsstring>)(void *data)</argsstring>
+        <name>done</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/config-parser.h" line="55" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/config-parser.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>config_section</label>
+        <link refid="structconfig__section"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>keys</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config_key</label>
+        <link refid="structconfig__key"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lzm/Wayland/weston/include/libweston/config-parser.h" line="51" column="21" bodyfile="/home/lzm/Wayland/weston/include/libweston/config-parser.h" bodystart="51" bodyend="56"/>
+    <listofallmembers>
+      <member refid="structconfig__section_1aaa7dbcae217222c639ea8c1c1f931f6b" prot="public" virt="non-virtual"><scope>config_section</scope><name>done</name></member>
+      <member refid="structconfig__section_1ad5d66208b9e71fc7a4fbac8f9cfe4557" prot="public" virt="non-virtual"><scope>config_section</scope><name>keys</name></member>
+      <member refid="structconfig__section_1a86a196878d503f6a4fe3d19b97f749a6" prot="public" virt="non-virtual"><scope>config_section</scope><name>name</name></member>
+      <member refid="structconfig__section_1aafdd536608b846c3af0cb6781c43d41e" prot="public" virt="non-virtual"><scope>config_section</scope><name>num_keys</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

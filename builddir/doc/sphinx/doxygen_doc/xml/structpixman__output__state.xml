@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structpixman__output__state" kind="struct" language="C++" prot="public">
+    <compoundname>pixman_output_state</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpixman__output__state_1a94863f7f1192a9030a89526cfdd37601" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* pixman_output_state::shadow_buffer</definition>
+        <argsstring></argsstring>
+        <name>shadow_buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixman-renderer.c" line="41" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/pixman-renderer.c" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpixman__output__state_1a677c055cd0281d7bd23875991f0f2892" prot="public" static="no" mutable="no">
+        <type>pixman_image_t *</type>
+        <definition>pixman_image_t* pixman_output_state::shadow_image</definition>
+        <argsstring></argsstring>
+        <name>shadow_image</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixman-renderer.c" line="42" column="16" bodyfile="/home/lzm/Wayland/weston/libweston/pixman-renderer.c" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpixman__output__state_1a8080625b924d1e59f35703d47ad18a96" prot="public" static="no" mutable="no">
+        <type>pixman_image_t *</type>
+        <definition>pixman_image_t* pixman_output_state::hw_buffer</definition>
+        <argsstring></argsstring>
+        <name>hw_buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixman-renderer.c" line="43" column="16" bodyfile="/home/lzm/Wayland/weston/libweston/pixman-renderer.c" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpixman__output__state_1aae7b74d883d8b2c7771cdbaf220c6e22" prot="public" static="no" mutable="no">
+        <type>pixman_region32_t *</type>
+        <definition>pixman_region32_t* pixman_output_state::hw_extra_damage</definition>
+        <argsstring></argsstring>
+        <name>hw_extra_damage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixman-renderer.c" line="44" column="19" bodyfile="/home/lzm/Wayland/weston/libweston/pixman-renderer.c" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/pixman-renderer.c" line="40" column="26" bodyfile="/home/lzm/Wayland/weston/libweston/pixman-renderer.c" bodystart="40" bodyend="45"/>
+    <listofallmembers>
+      <member refid="structpixman__output__state_1a8080625b924d1e59f35703d47ad18a96" prot="public" virt="non-virtual"><scope>pixman_output_state</scope><name>hw_buffer</name></member>
+      <member refid="structpixman__output__state_1aae7b74d883d8b2c7771cdbaf220c6e22" prot="public" virt="non-virtual"><scope>pixman_output_state</scope><name>hw_extra_damage</name></member>
+      <member refid="structpixman__output__state_1a94863f7f1192a9030a89526cfdd37601" prot="public" virt="non-virtual"><scope>pixman_output_state</scope><name>shadow_buffer</name></member>
+      <member refid="structpixman__output__state_1a677c055cd0281d7bd23875991f0f2892" prot="public" virt="non-virtual"><scope>pixman_output_state</scope><name>shadow_image</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structformat__map__entry" kind="struct" language="C++" prot="public">
+    <compoundname>format_map_entry</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structformat__map__entry_1a5e0c3efb9c503dc907efce4bcbdf6eea" prot="public" static="no" mutable="no">
+        <type>cairo_format_t</type>
+        <definition>cairo_format_t format_map_entry::cairo</definition>
+        <argsstring></argsstring>
+        <name>cairo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" line="1140" column="16" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" bodystart="1140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structformat__map__entry_1a272a7be1e83d7274fd532cd9ec6cdd17" prot="public" static="no" mutable="no">
+        <type>pixman_format_code_t</type>
+        <definition>pixman_format_code_t format_map_entry::pixman</definition>
+        <argsstring></argsstring>
+        <name>pixman</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" line="1141" column="22" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" bodystart="1141" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" line="1139" column="23" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" bodystart="1139" bodyend="1142"/>
+    <listofallmembers>
+      <member refid="structformat__map__entry_1a5e0c3efb9c503dc907efce4bcbdf6eea" prot="public" virt="non-virtual"><scope>format_map_entry</scope><name>cairo</name></member>
+      <member refid="structformat__map__entry_1a272a7be1e83d7274fd532cd9ec6cdd17" prot="public" virt="non-virtual"><scope>format_map_entry</scope><name>pixman</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

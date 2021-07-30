@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_c738ea7b663998f48e40f2e57c5eb969" kind="dir">
+    <compoundname>/home/lzm/Wayland/weston/libweston/backend-x11</compoundname>
+    <innerfile refid="x11_8c">x11.c</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/backend-x11/"/>
+  </compounddef>
+</doxygen>

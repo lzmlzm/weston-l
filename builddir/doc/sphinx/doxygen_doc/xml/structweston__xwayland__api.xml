@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__xwayland__api" kind="struct" language="C++" prot="public">
+    <compoundname>weston_xwayland_api</compoundname>
+    <includes refid="xwayland-api_8h" local="no">xwayland-api.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__xwayland__api_1a6cb41868a18ac338b1f92e10478380d8" prot="public" static="no" mutable="no">
+        <type>struct weston_xwayland *(*</type>
+        <definition>struct weston_xwayland*(* weston_xwayland_api::get) (struct weston_compositor *compositor)</definition>
+        <argsstring>)(struct weston_compositor *compositor)</argsstring>
+        <name>get</name>
+        <briefdescription>
+<para>Retrieve the Xwayland context object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Note that this function does not create a new object, but always returns the same object per compositor instance. This function cannot fail while this API object is valid.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>compositor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The compositor instance. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/xwayland-api.h" line="163" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/xwayland-api.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__xwayland__api_1aab2891c876e0156a51a0bb1c50ba8cbc" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* weston_xwayland_api::listen) (struct weston_xwayland *xwayland, void *user_data, weston_xwayland_spawn_xserver_func_t spawn_func)</definition>
+        <argsstring>)(struct weston_xwayland *xwayland, void *user_data, weston_xwayland_spawn_xserver_func_t spawn_func)</argsstring>
+        <name>listen</name>
+        <briefdescription>
+<para>Listen for X connections. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function tells the Xwayland module to begin creating an X socket and start listening for client connections. When one such connection is detected the given <emphasis>spawn_func</emphasis> callback will be called to start the Xwayland process.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xwayland</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Xwayland context object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>user_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The user data pointer to be passed to <emphasis>spawn_func</emphasis>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spawn_func</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The callback function called to start the Xwayland server process.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success, a negative number otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/xwayland-api.h" line="79" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/xwayland-api.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__xwayland__api_1a5961ed5816fb521bf9bec499a0ea5da7" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_xwayland_api::xserver_loaded) (struct weston_xwayland *xwayland, struct wl_client *client, int wm_fd)</definition>
+        <argsstring>)(struct weston_xwayland *xwayland, struct wl_client *client, int wm_fd)</argsstring>
+        <name>xserver_loaded</name>
+        <briefdescription>
+<para>Notify the Xwayland module that the Xwayland server is loaded. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>After the Xwayland server process has been spawned it will notify the parent that is has finished the initialization by sending a SIGUSR1 signal. The caller should listen for that signal and call this function when it is received.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xwayland</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Xwayland context object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>client</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The wl_client object representing the connection of the Xwayland server process. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wm_fd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The file descriptor for the wm. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/xwayland-api.h" line="96" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/xwayland-api.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__xwayland__api_1a8242fabaa5d921dbba34e7a4a8892324" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_xwayland_api::xserver_exited) (struct weston_xwayland *xwayland, int exit_status)</definition>
+        <argsstring>)(struct weston_xwayland *xwayland, int exit_status)</argsstring>
+        <name>xserver_exited</name>
+        <briefdescription>
+<para>Notify the Xwayland module that the Xwayland server has exited. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Whenever the Xwayland server process quits this function should be called. The Xwayland module will keep listening for X connections on the socket, and may call the spawn function again.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xwayland</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Xwayland context object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>exit_status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The exit status of the Xwayland server process. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/xwayland-api.h" line="110" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/xwayland-api.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The libweston Xwayland API. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This API allows control of the Xwayland libweston module. The module must be loaded at runtime with <emphasis>weston_compositor_load_xwayland</emphasis>, after which the API can be retrieved by using <emphasis>weston_xwayland_get_api</emphasis>. </para>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/include/libweston/xwayland-api.h" line="53" column="26" bodyfile="/home/lzm/Wayland/weston/include/libweston/xwayland-api.h" bodystart="53" bodyend="112"/>
+    <listofallmembers>
+      <member refid="structweston__xwayland__api_1a6cb41868a18ac338b1f92e10478380d8" prot="public" virt="non-virtual"><scope>weston_xwayland_api</scope><name>get</name></member>
+      <member refid="structweston__xwayland__api_1aab2891c876e0156a51a0bb1c50ba8cbc" prot="public" virt="non-virtual"><scope>weston_xwayland_api</scope><name>listen</name></member>
+      <member refid="structweston__xwayland__api_1a8242fabaa5d921dbba34e7a4a8892324" prot="public" virt="non-virtual"><scope>weston_xwayland_api</scope><name>xserver_exited</name></member>
+      <member refid="structweston__xwayland__api_1a5961ed5816fb521bf9bec499a0ea5da7" prot="public" virt="non-virtual"><scope>weston_xwayland_api</scope><name>xserver_loaded</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

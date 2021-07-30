@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structnonint__destination__args" kind="struct" language="C++" prot="public">
+    <compoundname>nonint_destination_args</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structnonint__destination__args_1aa017bb00dfc2bf1d6cad51eb86725836" prot="public" static="no" mutable="no">
+        <type>wl_fixed_t</type>
+        <definition>wl_fixed_t nonint_destination_args::w</definition>
+        <argsstring></argsstring>
+        <name>w</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/viewporter-test.c" line="165" column="12" bodyfile="/home/lzm/Wayland/weston/tests/viewporter-test.c" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structnonint__destination__args_1ada7807e2643061020d7e975b4035e964" prot="public" static="no" mutable="no">
+        <type>wl_fixed_t</type>
+        <definition>wl_fixed_t nonint_destination_args::h</definition>
+        <argsstring></argsstring>
+        <name>h</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/viewporter-test.c" line="165" column="14" bodyfile="/home/lzm/Wayland/weston/tests/viewporter-test.c" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/tests/viewporter-test.c" line="164" column="30" bodyfile="/home/lzm/Wayland/weston/tests/viewporter-test.c" bodystart="164" bodyend="166"/>
+    <listofallmembers>
+      <member refid="structnonint__destination__args_1ada7807e2643061020d7e975b4035e964" prot="public" virt="non-virtual"><scope>nonint_destination_args</scope><name>h</name></member>
+      <member refid="structnonint__destination__args_1aa017bb00dfc2bf1d6cad51eb86725836" prot="public" virt="non-virtual"><scope>nonint_destination_args</scope><name>w</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

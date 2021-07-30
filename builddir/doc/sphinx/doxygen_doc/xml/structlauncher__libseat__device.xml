@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structlauncher__libseat__device" kind="struct" language="C++" prot="public">
+    <compoundname>launcher_libseat_device</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlauncher__libseat__device_1a1f66a87f786e1644087a8fe088dda0ef" prot="public" static="no" mutable="no">
+        <type>struct wl_list</type>
+        <definition>struct wl_list launcher_libseat_device::link</definition>
+        <argsstring></argsstring>
+        <name>link</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/launcher-libseat.c" line="242" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/launcher-libseat.c" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlauncher__libseat__device_1ace7d80639c27756f62057dd92735ebba" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int launcher_libseat_device::fd</definition>
+        <argsstring></argsstring>
+        <name>fd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/launcher-libseat.c" line="49" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/launcher-libseat.c" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlauncher__libseat__device_1a7bd2c77c5851511656ca1dc0f1ec0bfe" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int launcher_libseat_device::device_id</definition>
+        <argsstring></argsstring>
+        <name>device_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/launcher-libseat.c" line="50" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/launcher-libseat.c" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlauncher__libseat__device_1a0a74ddc77b0191aff1df615e8f5d04ec" prot="public" static="no" mutable="no">
+        <type>dev_t</type>
+        <definition>dev_t launcher_libseat_device::fsdev</definition>
+        <argsstring></argsstring>
+        <name>fsdev</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/launcher-libseat.c" line="51" column="7" bodyfile="/home/lzm/Wayland/weston/libweston/launcher-libseat.c" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/launcher-libseat.c" line="47" column="30" bodyfile="/home/lzm/Wayland/weston/libweston/launcher-libseat.c" bodystart="47" bodyend="52"/>
+    <listofallmembers>
+      <member refid="structlauncher__libseat__device_1a7bd2c77c5851511656ca1dc0f1ec0bfe" prot="public" virt="non-virtual"><scope>launcher_libseat_device</scope><name>device_id</name></member>
+      <member refid="structlauncher__libseat__device_1ace7d80639c27756f62057dd92735ebba" prot="public" virt="non-virtual"><scope>launcher_libseat_device</scope><name>fd</name></member>
+      <member refid="structlauncher__libseat__device_1a0a74ddc77b0191aff1df615e8f5d04ec" prot="public" virt="non-virtual"><scope>launcher_libseat_device</scope><name>fsdev</name></member>
+      <member refid="structlauncher__libseat__device_1a1f66a87f786e1644087a8fe088dda0ef" prot="public" virt="non-virtual"><scope>launcher_libseat_device</scope><name>link</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

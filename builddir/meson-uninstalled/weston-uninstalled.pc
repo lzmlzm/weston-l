@@ -1,0 +1,7 @@
+prefix=/home/lzm/Wayland/weston/builddir
+srcdir=/home/lzm/Wayland/weston
+
+Name: Weston Plugin API
+Description: Header files for Weston plugin development
+Version: 9.0.90
+Requires.private: libweston-10

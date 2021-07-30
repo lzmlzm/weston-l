@@ -1,0 +1,1422 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__output" kind="struct" language="C++" prot="public">
+    <compoundname>weston_output</compoundname>
+    <includes refid="libweston_8h" local="no">libweston.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="structweston__output_1acb9d3b2a8f71f9087d318d86bcd74d61" prot="public" static="no" strong="no">
+        <type></type>
+        <name>@25</name>
+        <enumvalue id="structweston__output_1acb9d3b2a8f71f9087d318d86bcd74d61a0acff3a4bf6464c9c7d9cb60e6f044b3" prot="public">
+          <name>REPAINT_NOT_SCHEDULED</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>idle; no repaint will occur </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structweston__output_1acb9d3b2a8f71f9087d318d86bcd74d61a3650939da1d9263a0feb674509245a6b" prot="public">
+          <name>REPAINT_BEGIN_FROM_IDLE</name>
+          <briefdescription>
+<para>start_repaint_loop scheduled </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structweston__output_1acb9d3b2a8f71f9087d318d86bcd74d61a0de68514c7d7cf88336cb15dbe694571" prot="public">
+          <name>REPAINT_SCHEDULED</name>
+          <briefdescription>
+<para>repaint is scheduled to occur </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structweston__output_1acb9d3b2a8f71f9087d318d86bcd74d61a8b90d343f622f9496714a9c77a0cf052" prot="public">
+          <name>REPAINT_AWAITING_COMPLETION</name>
+          <briefdescription>
+<para>last repaint not yet finished </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>State of the repaint loop. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="302" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="302" bodyend="307"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__output_1ad8e8d31d5eee1e5c87e575dfb4500ac4" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t weston_output::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="272" column="10" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="272" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1ab65dff659f1d2d38bc253ca1de2b6c04" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* weston_output::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="273" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="273" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1afca201a4f73571f4bed4b4785c943e9e" prot="public" static="no" mutable="no">
+        <type>struct wl_signal</type>
+        <definition>struct wl_signal weston_output::user_destroy_signal</definition>
+        <argsstring></argsstring>
+        <name>user_destroy_signal</name>
+        <briefdescription>
+<para>Matches the lifetime from the user perspective. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="273" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="276" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1a1e358b2a5b19785563a66d42d3edbe24" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* weston_output::renderer_state</definition>
+        <argsstring></argsstring>
+        <name>renderer_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="278" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="278" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1ac8d0528e465546f7c9074c8319215986" prot="public" static="no" mutable="no">
+        <type>struct wl_list</type>
+        <definition>struct wl_list weston_output::link</definition>
+        <argsstring></argsstring>
+        <name>link</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="278" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="280" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1ab4b884d4d420d4254723d12f7650e878" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> *</type>
+        <definition>struct weston_compositor* weston_output::compositor</definition>
+        <argsstring></argsstring>
+        <name>compositor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="281" column="24" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="281" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1acea6a9d4a753b4d98ac3fbe490d2fe40" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structweston__matrix" kindref="compound">weston_matrix</ref></type>
+        <definition>struct weston_matrix weston_output::matrix</definition>
+        <argsstring></argsstring>
+        <name>matrix</name>
+        <briefdescription>
+<para>From global to output buffer coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="281" column="24" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="284" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1a89411db9af0f147882101ec93d83b3d9" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structweston__matrix" kindref="compound">weston_matrix</ref></type>
+        <definition>struct weston_matrix weston_output::inverse_matrix</definition>
+        <argsstring></argsstring>
+        <name>inverse_matrix</name>
+        <briefdescription>
+<para>From output buffer to global coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="281" column="24" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1ae30506bd81d42f2933171705b06cfa06" prot="public" static="no" mutable="no">
+        <type>struct wl_list</type>
+        <definition>struct wl_list weston_output::animation_list</definition>
+        <argsstring></argsstring>
+        <name>animation_list</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="281" column="24" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="288" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1a6828152ad2d2b5c9260b542e6de748e7" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t weston_output::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="289" column="9" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="289" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1a146521cad558d810fb343a471bb529ea" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t weston_output::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="289" column="11" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="289" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1afe369b7cd5025ff87f9b8ccfaa1b7a17" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t weston_output::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="289" column="13" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="289" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1acf6ea57c32856e783332467242a966a2" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t weston_output::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="289" column="19" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="289" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1add429bc3b54e446ab000811f998127d6" prot="public" static="no" mutable="no">
+        <type>pixman_region32_t</type>
+        <definition>pixman_region32_t weston_output::region</definition>
+        <argsstring></argsstring>
+        <name>region</name>
+        <briefdescription>
+<para>Output area in global coordinates, simple rect. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="292" column="19" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="292" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1ada314197892b3a0545bceee307b9d071" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool weston_output::repaint_needed</definition>
+        <argsstring></argsstring>
+        <name>repaint_needed</name>
+        <briefdescription>
+<para>True if damage has occurred since the last repaint for this output; if set, a repaint will eventually occur. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="296" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="296" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1a67353acd3c7cc96549a6d0202a23ff39" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool weston_output::repainted</definition>
+        <argsstring></argsstring>
+        <name>repainted</name>
+        <briefdescription>
+<para>Used only between repaint_begin and repaint_cancel. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="299" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="299" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1ae42ba2d08f24f221619784ed84ae2a4a" prot="public" static="no" mutable="no">
+        <type>enum weston_output::@25</type>
+        <definition>enum weston_output::@25 weston_output::repaint_status</definition>
+        <argsstring></argsstring>
+        <name>repaint_status</name>
+        <briefdescription>
+<para>State of the repaint loop. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="307" column="16"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1a41351b8e6c0a9151b4a5565dbe094d2c" prot="public" static="no" mutable="no">
+        <type>struct timespec</type>
+        <definition>struct timespec weston_output::next_repaint</definition>
+        <argsstring></argsstring>
+        <name>next_repaint</name>
+        <briefdescription>
+<para>If repaint_status is REPAINT_SCHEDULED, contains the time the next repaint should be run. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="299" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="311" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1a1dbfe596eeeae4f629494dd69d50a2ce" prot="public" static="no" mutable="no">
+        <type>struct wl_event_source *</type>
+        <definition>struct wl_event_source* weston_output::idle_repaint_source</definition>
+        <argsstring></argsstring>
+        <name>idle_repaint_source</name>
+        <briefdescription>
+<para>For cancelling the idle_repaint callback on output destruction. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="314" column="22" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="314" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1a5ecda0aa0033b4c78e983c71f7254a50" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structweston__output__zoom" kindref="compound">weston_output_zoom</ref></type>
+        <definition>struct weston_output_zoom weston_output::zoom</definition>
+        <argsstring></argsstring>
+        <name>zoom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="314" column="22" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="316" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1a0108041f2dfaf363894e5c316c3a477a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int weston_output::dirty</definition>
+        <argsstring></argsstring>
+        <name>dirty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="317" column="5" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="317" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1a3fc0cfea239ba4d26dbbd889e62afd2c" prot="public" static="no" mutable="no">
+        <type>struct wl_signal</type>
+        <definition>struct wl_signal weston_output::frame_signal</definition>
+        <argsstring></argsstring>
+        <name>frame_signal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="317" column="5" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="318" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1a3da9a65d3fda52f421e6de253c519a40" prot="public" static="no" mutable="no">
+        <type>struct wl_signal</type>
+        <definition>struct wl_signal weston_output::destroy_signal</definition>
+        <argsstring></argsstring>
+        <name>destroy_signal</name>
+        <briefdescription>
+<para>sent when disabled </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="317" column="5" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="319" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1a32fb4821d9062cbb00b15b25fcb6aaab" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int weston_output::move_x</definition>
+        <argsstring></argsstring>
+        <name>move_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="320" column="5" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="320" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1af6ac8466b35e4f97d36eff065411368c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int weston_output::move_y</definition>
+        <argsstring></argsstring>
+        <name>move_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="320" column="12" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="320" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1a296a2035e42eaf7be01e97bf5f537f5f" prot="public" static="no" mutable="no">
+        <type>struct timespec</type>
+        <definition>struct timespec weston_output::frame_time</definition>
+        <argsstring></argsstring>
+        <name>frame_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="320" column="12" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="321" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1a8647b48f5e639dba32ee46df2f4d8871" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t weston_output::msc</definition>
+        <argsstring></argsstring>
+        <name>msc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="322" column="10" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="322" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1a008bbaafcf0d0c81f74a0aad9ff50138" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int weston_output::disable_planes</definition>
+        <argsstring></argsstring>
+        <name>disable_planes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="323" column="5" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="323" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1ae0f5f078de8a071c8113297f18e3daaa" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int weston_output::destroying</definition>
+        <argsstring></argsstring>
+        <name>destroying</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="324" column="5" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="324" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1a07203f4d46cbd3acc20f22a9b6c9b045" prot="public" static="no" mutable="no">
+        <type>struct wl_list</type>
+        <definition>struct wl_list weston_output::feedback_list</definition>
+        <argsstring></argsstring>
+        <name>feedback_list</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="324" column="5" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="325" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1ab92c885dbfd2781d4ada5dbc568140f8" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t weston_output::transform</definition>
+        <argsstring></argsstring>
+        <name>transform</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="327" column="10" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="327" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1a420099d90f2e0eeec1c5b7c7a0420f44" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t weston_output::native_scale</definition>
+        <argsstring></argsstring>
+        <name>native_scale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="328" column="9" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="328" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1a4d26b4de084a8c72721f3fb3b0f10458" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t weston_output::current_scale</definition>
+        <argsstring></argsstring>
+        <name>current_scale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="329" column="9" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="329" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1ad87ad7855bf9a680f6f5cc95af00c1f9" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t weston_output::original_scale</definition>
+        <argsstring></argsstring>
+        <name>original_scale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="330" column="9" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="330" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1a93b96e348f0d31f5b1f53b9fc3cabda9" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structweston__mode" kindref="compound">weston_mode</ref> *</type>
+        <definition>struct weston_mode* weston_output::native_mode</definition>
+        <argsstring></argsstring>
+        <name>native_mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="332" column="18" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="332" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1a5cba830878798becf5f1f560bf4622a0" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structweston__mode" kindref="compound">weston_mode</ref> *</type>
+        <definition>struct weston_mode* weston_output::current_mode</definition>
+        <argsstring></argsstring>
+        <name>current_mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="333" column="18" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="333" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1a59b5d9ec2467f5dbf426f80cfdc3d348" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structweston__mode" kindref="compound">weston_mode</ref> *</type>
+        <definition>struct weston_mode* weston_output::original_mode</definition>
+        <argsstring></argsstring>
+        <name>original_mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="334" column="18" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="334" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1a9755ea3ab6a71e19204bc5d93cc4302e" prot="public" static="no" mutable="no">
+        <type>struct wl_list</type>
+        <definition>struct wl_list weston_output::mode_list</definition>
+        <argsstring></argsstring>
+        <name>mode_list</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="334" column="18" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="335" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1aa320f80b827c124ff8906d24a69a136d" prot="public" static="no" mutable="no">
+        <type>struct wl_list</type>
+        <definition>struct wl_list weston_output::head_list</definition>
+        <argsstring></argsstring>
+        <name>head_list</name>
+        <briefdescription>
+<para>List of driven weston_heads. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="334" column="18" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="337" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1a7c58197731c83165bd582ffdf82f37ee" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="libweston_8h_1a883af45c9ba95a4ce9c18877cc420671" kindref="member">weston_hdcp_protection</ref></type>
+        <definition>enum weston_hdcp_protection weston_output::desired_protection</definition>
+        <argsstring></argsstring>
+        <name>desired_protection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="334" column="18" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="339" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1a6bf7de5473b1148e36edac2528fab08c" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="libweston_8h_1a883af45c9ba95a4ce9c18877cc420671" kindref="member">weston_hdcp_protection</ref></type>
+        <definition>enum weston_hdcp_protection weston_output::current_protection</definition>
+        <argsstring></argsstring>
+        <name>current_protection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="334" column="18" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="340" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1af3619fc9841c5cbd0e9effd959611a2a" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool weston_output::allow_protection</definition>
+        <argsstring></argsstring>
+        <name>allow_protection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="341" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="341" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1abb453bd4dcd3ec08055b912f25ad0d51" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* weston_output::start_repaint_loop) (struct weston_output *output)</definition>
+        <argsstring>)(struct weston_output *output)</argsstring>
+        <name>start_repaint_loop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="343" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="343" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1aefef32db410babf8a514e897b5ea8baa" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* weston_output::repaint) (struct weston_output *output, pixman_region32_t *damage, void *repaint_data)</definition>
+        <argsstring>)(struct weston_output *output, pixman_region32_t *damage, void *repaint_data)</argsstring>
+        <name>repaint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="344" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="344" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1ae606b4ccdfc6d9e8c024b7d7647e0ae8" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_output::destroy) (struct weston_output *output)</definition>
+        <argsstring>)(struct weston_output *output)</argsstring>
+        <name>destroy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="347" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="347" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1a7e75820dff95ffd653c1ff4cf705492c" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_output::assign_planes) (struct weston_output *output, void *repaint_data)</definition>
+        <argsstring>)(struct weston_output *output, void *repaint_data)</argsstring>
+        <name>assign_planes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="348" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="348" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1af7a22e01f22bc626bfbf92cf162bef25" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* weston_output::switch_mode) (struct weston_output *output, struct weston_mode *mode)</definition>
+        <argsstring>)(struct weston_output *output, struct weston_mode *mode)</argsstring>
+        <name>switch_mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="349" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="349" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1a469ec8fb066107f4b30cba88236ed55c" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t weston_output::backlight_current</definition>
+        <argsstring></argsstring>
+        <name>backlight_current</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="352" column="9" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="352" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1a9933301b01eebe540db079fff3c77a22" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_output::set_backlight) (struct weston_output *output, uint32_t value)</definition>
+        <argsstring>)(struct weston_output *output, uint32_t value)</argsstring>
+        <name>set_backlight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="353" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="353" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1af3b1e6e6b05bb78c661cf49125ae8c4a" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_output::set_dpms) (struct weston_output *output, enum dpms_enum level)</definition>
+        <argsstring>)(struct weston_output *output, enum dpms_enum level)</argsstring>
+        <name>set_dpms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="354" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="354" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1ad772cabc2f4931aef823815cb7fd69bf" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t weston_output::gamma_size</definition>
+        <argsstring></argsstring>
+        <name>gamma_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="356" column="10" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="356" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1ade06ffaacd17a65441234d720739431c" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_output::set_gamma) (struct weston_output *output, uint16_t size, uint16_t *r, uint16_t *g, uint16_t *b)</definition>
+        <argsstring>)(struct weston_output *output, uint16_t size, uint16_t *r, uint16_t *g, uint16_t *b)</argsstring>
+        <name>set_gamma</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="357" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="357" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1ac5845e364925e00ffec20d517d4371ed" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool weston_output::enabled</definition>
+        <argsstring></argsstring>
+        <name>enabled</name>
+        <briefdescription>
+<para>is in the output_list, not pending list </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="363" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="363" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1a081b529f1e5f884677bde123cc7a9de3" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int weston_output::scale</definition>
+        <argsstring></argsstring>
+        <name>scale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="364" column="5" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="364" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1aa1aa27549630f07151fcb44256a236c7" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool weston_output::use_renderer_shadow_buffer</definition>
+        <argsstring></argsstring>
+        <name>use_renderer_shadow_buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="366" column="6" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="366" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1a0950ed99a1da7eeb14cb1b8895cd0cc9" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* weston_output::enable) (struct weston_output *output)</definition>
+        <argsstring>)(struct weston_output *output)</argsstring>
+        <name>enable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="368" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="368" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1a7a906dc361664e6c588a4b9ce7dec543" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* weston_output::disable) (struct weston_output *output)</definition>
+        <argsstring>)(struct weston_output *output)</argsstring>
+        <name>disable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="369" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="369" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1a5f7e8acdaa963970d5904e5ec2a07225" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* weston_output::attach_head) (struct weston_output *output, struct weston_head *head)</definition>
+        <argsstring>)(struct weston_output *output, struct weston_head *head)</argsstring>
+        <name>attach_head</name>
+        <briefdescription>
+<para>Attach a head in the backend. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output to attach to. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The head to attach. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success, -1 on failure.</para>
+</simplesect>
+Do anything necessary to account for a new head being attached to the output, and check any conditions possible. On failure, both the head and the output must be left as before the call.</para>
+<para>Libweston core will add the head to the head_list after a successful call. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="384" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="384" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__output_1ad90821c281b75d416377eba546fe22f1" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* weston_output::detach_head) (struct weston_output *output, struct weston_head *head)</definition>
+        <argsstring>)(struct weston_output *output, struct weston_head *head)</argsstring>
+        <name>detach_head</name>
+        <briefdescription>
+<para>Detach a head in the backend. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output to detach from. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The head to detach.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Do any clean-up necessary to detach this head from the output. The head has already been removed from the output&apos;s head_list. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="395" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="395" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Content producer for heads. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>embed:rst
+See :ref:`libweston-output`. </verbatim> </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="20">
+        <label>weston_testsuite_quirks</label>
+        <link refid="structweston__testsuite__quirks"/>
+      </node>
+      <node id="13">
+        <label>weston_buffer_release_reference</label>
+        <link refid="structweston__buffer__release__reference"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>buffer_release</edgelabel>
+        </childnode>
+      </node>
+      <node id="41">
+        <label>launcher_interface</label>
+        <link refid="structlauncher__interface"/>
+      </node>
+      <node id="37">
+        <label>weston_log_subscriber</label>
+        <link refid="structweston__log__subscriber"/>
+      </node>
+      <node id="16">
+        <label>weston_matrix</label>
+        <link refid="structweston__matrix"/>
+      </node>
+      <node id="15">
+        <label>weston_buffer_reference</label>
+        <link refid="structweston__buffer__reference"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>buffer</edgelabel>
+        </childnode>
+      </node>
+      <node id="18">
+        <label>weston_log_context</label>
+        <link refid="structweston__log__context"/>
+      </node>
+      <node id="22">
+        <label>weston_renderer</label>
+        <link refid="structweston__renderer"/>
+      </node>
+      <node id="24">
+        <label>weston_layer_entry</label>
+        <link refid="structweston__layer__entry"/>
+        <childnode refid="23" relation="usage">
+          <edgelabel>layer</edgelabel>
+        </childnode>
+      </node>
+      <node id="27">
+        <label>weston_transform</label>
+        <link refid="structweston__transform"/>
+        <childnode refid="16" relation="usage">
+          <edgelabel>matrix</edgelabel>
+        </childnode>
+      </node>
+      <node id="26">
+        <label>weston_view</label>
+        <link refid="structweston__view"/>
+        <childnode refid="26" relation="usage">
+          <edgelabel>parent_view</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>output</edgelabel>
+        </childnode>
+        <childnode refid="27" relation="usage">
+          <edgelabel>position</edgelabel>
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>layer_link</edgelabel>
+        </childnode>
+        <childnode refid="28" relation="usage">
+          <edgelabel>plane</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>matrix</edgelabel>
+          <edgelabel>inverse</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>surface</edgelabel>
+        </childnode>
+      </node>
+      <node id="45">
+        <label>weston_data_source</label>
+        <link refid="structweston__data__source"/>
+        <childnode refid="46" relation="usage">
+          <edgelabel>offer</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>seat</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>weston_buffer_viewport</label>
+        <link refid="structweston__buffer__viewport"/>
+      </node>
+      <node id="39">
+        <label>weston_backend</label>
+        <link refid="structweston__backend"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>create_output</edgelabel>
+        </childnode>
+      </node>
+      <node id="42">
+        <label>weston_pointer</label>
+        <link refid="structweston__pointer"/>
+        <childnode refid="26" relation="usage">
+          <edgelabel>focus</edgelabel>
+          <edgelabel>sprite</edgelabel>
+        </childnode>
+        <childnode refid="43" relation="usage">
+          <edgelabel>focus_client</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>seat</edgelabel>
+        </childnode>
+        <childnode refid="44" relation="usage">
+          <edgelabel>default_grab</edgelabel>
+          <edgelabel>grab</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>weston_output</label>
+        <link refid="structweston__output"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>zoom</edgelabel>
+        </childnode>
+        <childnode refid="48" relation="usage">
+          <edgelabel>original_mode</edgelabel>
+          <edgelabel>current_mode</edgelabel>
+          <edgelabel>native_mode</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>matrix</edgelabel>
+          <edgelabel>inverse_matrix</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>compositor</edgelabel>
+        </childnode>
+      </node>
+      <node id="35">
+        <label>weston_log_scope</label>
+        <link refid="structweston__log__scope"/>
+        <childnode refid="36" relation="usage">
+          <edgelabel>destroy_subscription</edgelabel>
+          <edgelabel>new_subscription</edgelabel>
+        </childnode>
+      </node>
+      <node id="23">
+        <label>weston_layer</label>
+        <link refid="structweston__layer"/>
+        <childnode refid="24" relation="usage">
+          <edgelabel>view_list</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>compositor</edgelabel>
+        </childnode>
+      </node>
+      <node id="17">
+        <label>weston_compositor</label>
+        <link refid="structweston__compositor"/>
+        <childnode refid="18" relation="usage">
+          <edgelabel>weston_log_ctx</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>test_data</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>default_pointer_grab</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>renderer</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>calibrator_layer</edgelabel>
+          <edgelabel>fade_layer</edgelabel>
+          <edgelabel>cursor_layer</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>touch_calibrator</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>xkb_info</edgelabel>
+        </childnode>
+        <childnode refid="35" relation="usage">
+          <edgelabel>timeline</edgelabel>
+          <edgelabel>debug_scene</edgelabel>
+        </childnode>
+        <childnode refid="38" relation="usage">
+          <edgelabel>content_protection</edgelabel>
+        </childnode>
+        <childnode refid="39" relation="usage">
+          <edgelabel>backend</edgelabel>
+        </childnode>
+        <childnode refid="28" relation="usage">
+          <edgelabel>primary_plane</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>touch_calibration_save</edgelabel>
+        </childnode>
+        <childnode refid="40" relation="usage">
+          <edgelabel>launcher</edgelabel>
+        </childnode>
+      </node>
+      <node id="33">
+        <label>weston_touch_grab</label>
+        <link refid="structweston__touch__grab"/>
+        <childnode refid="34" relation="usage">
+          <edgelabel>interface</edgelabel>
+        </childnode>
+        <childnode refid="32" relation="usage">
+          <edgelabel>touch</edgelabel>
+        </childnode>
+      </node>
+      <node id="46">
+        <label>weston_data_offer</label>
+        <link refid="structweston__data__offer"/>
+        <childnode refid="45" relation="usage">
+          <edgelabel>source</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>weston_keyboard_grab</label>
+        <link refid="structweston__keyboard__grab"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>keyboard</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>interface</edgelabel>
+        </childnode>
+      </node>
+      <node id="29">
+        <label>weston_touch_device</label>
+        <link refid="structweston__touch__device"/>
+        <childnode refid="30" relation="usage">
+          <edgelabel>saved_calibration</edgelabel>
+        </childnode>
+        <childnode refid="31" relation="usage">
+          <edgelabel>ops</edgelabel>
+        </childnode>
+        <childnode refid="32" relation="usage">
+          <edgelabel>aggregate</edgelabel>
+        </childnode>
+      </node>
+      <node id="28">
+        <label>weston_plane</label>
+        <link refid="structweston__plane"/>
+        <childnode refid="17" relation="usage">
+          <edgelabel>compositor</edgelabel>
+        </childnode>
+      </node>
+      <node id="36">
+        <label>weston_log_subscription</label>
+        <link refid="structweston__log__subscription"/>
+        <childnode refid="35" relation="usage">
+          <edgelabel>source</edgelabel>
+        </childnode>
+        <childnode refid="37" relation="usage">
+          <edgelabel>owner</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>weston_seat</label>
+        <link refid="structweston__seat"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>keyboard_state</edgelabel>
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>output</edgelabel>
+        </childnode>
+        <childnode refid="42" relation="usage">
+          <edgelabel>pointer_state</edgelabel>
+        </childnode>
+        <childnode refid="45" relation="usage">
+          <edgelabel>selection_data_source</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>compositor</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>saved_kbd_focus</edgelabel>
+        </childnode>
+        <childnode refid="32" relation="usage">
+          <edgelabel>touch_state</edgelabel>
+        </childnode>
+      </node>
+      <node id="30">
+        <label>weston_touch_device_matrix</label>
+        <link refid="structweston__touch__device__matrix"/>
+      </node>
+      <node id="11">
+        <label>weston_surface_state</label>
+        <link refid="structweston__surface__state"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>buffer</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>buffer_viewport</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>buffer_release_ref</edgelabel>
+        </childnode>
+      </node>
+      <node id="21">
+        <label>weston_pointer_grab_interface</label>
+        <link refid="structweston__pointer__grab__interface"/>
+      </node>
+      <node id="3">
+        <label>weston_animation</label>
+        <link refid="structweston__animation"/>
+      </node>
+      <node id="8">
+        <label>weston_keyboard_grab_interface</label>
+        <link refid="structweston__keyboard__grab__interface"/>
+      </node>
+      <node id="47">
+        <label>weston_spring</label>
+        <link refid="structweston__spring"/>
+      </node>
+      <node id="34">
+        <label>weston_touch_grab_interface</label>
+        <link refid="structweston__touch__grab__interface"/>
+      </node>
+      <node id="12">
+        <label>weston_buffer</label>
+        <link refid="structweston__buffer"/>
+      </node>
+      <node id="6">
+        <label>weston_xkb_info</label>
+        <link refid="structweston__xkb__info"/>
+      </node>
+      <node id="2">
+        <label>weston_output_zoom</label>
+        <link refid="structweston__output__zoom"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>animation_z</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>seat</edgelabel>
+        </childnode>
+        <childnode refid="47" relation="usage">
+          <edgelabel>spring_z</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>weston_surface</label>
+        <link refid="structweston__surface"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>output</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>buffer_viewport</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>pending</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>buffer_ref</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>surface_to_buffer_matrix</edgelabel>
+          <edgelabel>buffer_to_surface_matrix</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>compositor</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>buffer_release_ref</edgelabel>
+        </childnode>
+      </node>
+      <node id="40">
+        <label>weston_launcher</label>
+        <link refid="structweston__launcher"/>
+        <childnode refid="41" relation="usage">
+          <edgelabel>iface</edgelabel>
+        </childnode>
+      </node>
+      <node id="48">
+        <label>weston_mode</label>
+        <link refid="structweston__mode"/>
+      </node>
+      <node id="19">
+        <label>weston_testsuite_data</label>
+        <link refid="structweston__testsuite__data"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>test_quirks</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>weston_buffer_release</label>
+        <link refid="structweston__buffer__release"/>
+      </node>
+      <node id="25">
+        <label>weston_touch_calibrator</label>
+        <link refid="structweston__touch__calibrator"/>
+        <childnode refid="26" relation="usage">
+          <edgelabel>view</edgelabel>
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>output</edgelabel>
+        </childnode>
+        <childnode refid="29" relation="usage">
+          <edgelabel>device</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>compositor</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>surface</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>weston_keyboard</label>
+        <link refid="structweston__keyboard"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>xkb_info</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>seat</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>default_grab</edgelabel>
+          <edgelabel>input_method_grab</edgelabel>
+          <edgelabel>grab</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>focus</edgelabel>
+        </childnode>
+      </node>
+      <node id="32">
+        <label>weston_touch</label>
+        <link refid="structweston__touch"/>
+        <childnode refid="26" relation="usage">
+          <edgelabel>focus</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>seat</edgelabel>
+        </childnode>
+        <childnode refid="33" relation="usage">
+          <edgelabel>default_grab</edgelabel>
+          <edgelabel>grab</edgelabel>
+        </childnode>
+      </node>
+      <node id="43">
+        <label>weston_pointer_client</label>
+        <link refid="structweston__pointer__client"/>
+      </node>
+      <node id="44">
+        <label>weston_pointer_grab</label>
+        <link refid="structweston__pointer__grab"/>
+        <childnode refid="21" relation="usage">
+          <edgelabel>interface</edgelabel>
+        </childnode>
+        <childnode refid="42" relation="usage">
+          <edgelabel>pointer</edgelabel>
+        </childnode>
+      </node>
+      <node id="31">
+        <label>weston_touch_device_ops</label>
+        <link refid="structweston__touch__device__ops"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>get_output</edgelabel>
+        </childnode>
+      </node>
+      <node id="38">
+        <label>content_protection</label>
+        <link refid="structcontent__protection"/>
+        <childnode refid="35" relation="usage">
+          <edgelabel>debug</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>compositor</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="271" column="20" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="271" bodyend="397"/>
+    <listofallmembers>
+      <member refid="structweston__output_1af3619fc9841c5cbd0e9effd959611a2a" prot="public" virt="non-virtual"><scope>weston_output</scope><name>allow_protection</name></member>
+      <member refid="structweston__output_1ae30506bd81d42f2933171705b06cfa06" prot="public" virt="non-virtual"><scope>weston_output</scope><name>animation_list</name></member>
+      <member refid="structweston__output_1a7e75820dff95ffd653c1ff4cf705492c" prot="public" virt="non-virtual"><scope>weston_output</scope><name>assign_planes</name></member>
+      <member refid="structweston__output_1a5f7e8acdaa963970d5904e5ec2a07225" prot="public" virt="non-virtual"><scope>weston_output</scope><name>attach_head</name></member>
+      <member refid="structweston__output_1a469ec8fb066107f4b30cba88236ed55c" prot="public" virt="non-virtual"><scope>weston_output</scope><name>backlight_current</name></member>
+      <member refid="structweston__output_1ab4b884d4d420d4254723d12f7650e878" prot="public" virt="non-virtual"><scope>weston_output</scope><name>compositor</name></member>
+      <member refid="structweston__output_1a5cba830878798becf5f1f560bf4622a0" prot="public" virt="non-virtual"><scope>weston_output</scope><name>current_mode</name></member>
+      <member refid="structweston__output_1a6bf7de5473b1148e36edac2528fab08c" prot="public" virt="non-virtual"><scope>weston_output</scope><name>current_protection</name></member>
+      <member refid="structweston__output_1a4d26b4de084a8c72721f3fb3b0f10458" prot="public" virt="non-virtual"><scope>weston_output</scope><name>current_scale</name></member>
+      <member refid="structweston__output_1a7c58197731c83165bd582ffdf82f37ee" prot="public" virt="non-virtual"><scope>weston_output</scope><name>desired_protection</name></member>
+      <member refid="structweston__output_1ae606b4ccdfc6d9e8c024b7d7647e0ae8" prot="public" virt="non-virtual"><scope>weston_output</scope><name>destroy</name></member>
+      <member refid="structweston__output_1a3da9a65d3fda52f421e6de253c519a40" prot="public" virt="non-virtual"><scope>weston_output</scope><name>destroy_signal</name></member>
+      <member refid="structweston__output_1ae0f5f078de8a071c8113297f18e3daaa" prot="public" virt="non-virtual"><scope>weston_output</scope><name>destroying</name></member>
+      <member refid="structweston__output_1ad90821c281b75d416377eba546fe22f1" prot="public" virt="non-virtual"><scope>weston_output</scope><name>detach_head</name></member>
+      <member refid="structweston__output_1a0108041f2dfaf363894e5c316c3a477a" prot="public" virt="non-virtual"><scope>weston_output</scope><name>dirty</name></member>
+      <member refid="structweston__output_1a7a906dc361664e6c588a4b9ce7dec543" prot="public" virt="non-virtual"><scope>weston_output</scope><name>disable</name></member>
+      <member refid="structweston__output_1a008bbaafcf0d0c81f74a0aad9ff50138" prot="public" virt="non-virtual"><scope>weston_output</scope><name>disable_planes</name></member>
+      <member refid="structweston__output_1a0950ed99a1da7eeb14cb1b8895cd0cc9" prot="public" virt="non-virtual"><scope>weston_output</scope><name>enable</name></member>
+      <member refid="structweston__output_1ac5845e364925e00ffec20d517d4371ed" prot="public" virt="non-virtual"><scope>weston_output</scope><name>enabled</name></member>
+      <member refid="structweston__output_1a07203f4d46cbd3acc20f22a9b6c9b045" prot="public" virt="non-virtual"><scope>weston_output</scope><name>feedback_list</name></member>
+      <member refid="structweston__output_1a3fc0cfea239ba4d26dbbd889e62afd2c" prot="public" virt="non-virtual"><scope>weston_output</scope><name>frame_signal</name></member>
+      <member refid="structweston__output_1a296a2035e42eaf7be01e97bf5f537f5f" prot="public" virt="non-virtual"><scope>weston_output</scope><name>frame_time</name></member>
+      <member refid="structweston__output_1ad772cabc2f4931aef823815cb7fd69bf" prot="public" virt="non-virtual"><scope>weston_output</scope><name>gamma_size</name></member>
+      <member refid="structweston__output_1aa320f80b827c124ff8906d24a69a136d" prot="public" virt="non-virtual"><scope>weston_output</scope><name>head_list</name></member>
+      <member refid="structweston__output_1acf6ea57c32856e783332467242a966a2" prot="public" virt="non-virtual"><scope>weston_output</scope><name>height</name></member>
+      <member refid="structweston__output_1ad8e8d31d5eee1e5c87e575dfb4500ac4" prot="public" virt="non-virtual"><scope>weston_output</scope><name>id</name></member>
+      <member refid="structweston__output_1a1dbfe596eeeae4f629494dd69d50a2ce" prot="public" virt="non-virtual"><scope>weston_output</scope><name>idle_repaint_source</name></member>
+      <member refid="structweston__output_1a89411db9af0f147882101ec93d83b3d9" prot="public" virt="non-virtual"><scope>weston_output</scope><name>inverse_matrix</name></member>
+      <member refid="structweston__output_1ac8d0528e465546f7c9074c8319215986" prot="public" virt="non-virtual"><scope>weston_output</scope><name>link</name></member>
+      <member refid="structweston__output_1acea6a9d4a753b4d98ac3fbe490d2fe40" prot="public" virt="non-virtual"><scope>weston_output</scope><name>matrix</name></member>
+      <member refid="structweston__output_1a9755ea3ab6a71e19204bc5d93cc4302e" prot="public" virt="non-virtual"><scope>weston_output</scope><name>mode_list</name></member>
+      <member refid="structweston__output_1a32fb4821d9062cbb00b15b25fcb6aaab" prot="public" virt="non-virtual"><scope>weston_output</scope><name>move_x</name></member>
+      <member refid="structweston__output_1af6ac8466b35e4f97d36eff065411368c" prot="public" virt="non-virtual"><scope>weston_output</scope><name>move_y</name></member>
+      <member refid="structweston__output_1a8647b48f5e639dba32ee46df2f4d8871" prot="public" virt="non-virtual"><scope>weston_output</scope><name>msc</name></member>
+      <member refid="structweston__output_1ab65dff659f1d2d38bc253ca1de2b6c04" prot="public" virt="non-virtual"><scope>weston_output</scope><name>name</name></member>
+      <member refid="structweston__output_1a93b96e348f0d31f5b1f53b9fc3cabda9" prot="public" virt="non-virtual"><scope>weston_output</scope><name>native_mode</name></member>
+      <member refid="structweston__output_1a420099d90f2e0eeec1c5b7c7a0420f44" prot="public" virt="non-virtual"><scope>weston_output</scope><name>native_scale</name></member>
+      <member refid="structweston__output_1a41351b8e6c0a9151b4a5565dbe094d2c" prot="public" virt="non-virtual"><scope>weston_output</scope><name>next_repaint</name></member>
+      <member refid="structweston__output_1a59b5d9ec2467f5dbf426f80cfdc3d348" prot="public" virt="non-virtual"><scope>weston_output</scope><name>original_mode</name></member>
+      <member refid="structweston__output_1ad87ad7855bf9a680f6f5cc95af00c1f9" prot="public" virt="non-virtual"><scope>weston_output</scope><name>original_scale</name></member>
+      <member refid="structweston__output_1add429bc3b54e446ab000811f998127d6" prot="public" virt="non-virtual"><scope>weston_output</scope><name>region</name></member>
+      <member refid="structweston__output_1a1e358b2a5b19785563a66d42d3edbe24" prot="public" virt="non-virtual"><scope>weston_output</scope><name>renderer_state</name></member>
+      <member refid="structweston__output_1aefef32db410babf8a514e897b5ea8baa" prot="public" virt="non-virtual"><scope>weston_output</scope><name>repaint</name></member>
+      <member refid="structweston__output_1acb9d3b2a8f71f9087d318d86bcd74d61a8b90d343f622f9496714a9c77a0cf052" prot="public" virt="non-virtual"><scope>weston_output</scope><name>REPAINT_AWAITING_COMPLETION</name></member>
+      <member refid="structweston__output_1acb9d3b2a8f71f9087d318d86bcd74d61a3650939da1d9263a0feb674509245a6b" prot="public" virt="non-virtual"><scope>weston_output</scope><name>REPAINT_BEGIN_FROM_IDLE</name></member>
+      <member refid="structweston__output_1ada314197892b3a0545bceee307b9d071" prot="public" virt="non-virtual"><scope>weston_output</scope><name>repaint_needed</name></member>
+      <member refid="structweston__output_1acb9d3b2a8f71f9087d318d86bcd74d61a0acff3a4bf6464c9c7d9cb60e6f044b3" prot="public" virt="non-virtual"><scope>weston_output</scope><name>REPAINT_NOT_SCHEDULED</name></member>
+      <member refid="structweston__output_1acb9d3b2a8f71f9087d318d86bcd74d61a0de68514c7d7cf88336cb15dbe694571" prot="public" virt="non-virtual"><scope>weston_output</scope><name>REPAINT_SCHEDULED</name></member>
+      <member refid="structweston__output_1ae42ba2d08f24f221619784ed84ae2a4a" prot="public" virt="non-virtual"><scope>weston_output</scope><name>repaint_status</name></member>
+      <member refid="structweston__output_1a67353acd3c7cc96549a6d0202a23ff39" prot="public" virt="non-virtual"><scope>weston_output</scope><name>repainted</name></member>
+      <member refid="structweston__output_1a081b529f1e5f884677bde123cc7a9de3" prot="public" virt="non-virtual"><scope>weston_output</scope><name>scale</name></member>
+      <member refid="structweston__output_1a9933301b01eebe540db079fff3c77a22" prot="public" virt="non-virtual"><scope>weston_output</scope><name>set_backlight</name></member>
+      <member refid="structweston__output_1af3b1e6e6b05bb78c661cf49125ae8c4a" prot="public" virt="non-virtual"><scope>weston_output</scope><name>set_dpms</name></member>
+      <member refid="structweston__output_1ade06ffaacd17a65441234d720739431c" prot="public" virt="non-virtual"><scope>weston_output</scope><name>set_gamma</name></member>
+      <member refid="structweston__output_1abb453bd4dcd3ec08055b912f25ad0d51" prot="public" virt="non-virtual"><scope>weston_output</scope><name>start_repaint_loop</name></member>
+      <member refid="structweston__output_1af7a22e01f22bc626bfbf92cf162bef25" prot="public" virt="non-virtual"><scope>weston_output</scope><name>switch_mode</name></member>
+      <member refid="structweston__output_1ab92c885dbfd2781d4ada5dbc568140f8" prot="public" virt="non-virtual"><scope>weston_output</scope><name>transform</name></member>
+      <member refid="structweston__output_1aa1aa27549630f07151fcb44256a236c7" prot="public" virt="non-virtual"><scope>weston_output</scope><name>use_renderer_shadow_buffer</name></member>
+      <member refid="structweston__output_1afca201a4f73571f4bed4b4785c943e9e" prot="public" virt="non-virtual"><scope>weston_output</scope><name>user_destroy_signal</name></member>
+      <member refid="structweston__output_1afe369b7cd5025ff87f9b8ccfaa1b7a17" prot="public" virt="non-virtual"><scope>weston_output</scope><name>width</name></member>
+      <member refid="structweston__output_1a6828152ad2d2b5c9260b542e6de748e7" prot="public" virt="non-virtual"><scope>weston_output</scope><name>x</name></member>
+      <member refid="structweston__output_1a146521cad558d810fb343a471bb529ea" prot="public" virt="non-virtual"><scope>weston_output</scope><name>y</name></member>
+      <member refid="structweston__output_1a5ecda0aa0033b4c78e983c71f7254a50" prot="public" virt="non-virtual"><scope>weston_output</scope><name>zoom</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

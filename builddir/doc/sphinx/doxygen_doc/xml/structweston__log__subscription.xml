@@ -1,0 +1,395 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__log__subscription" kind="struct" language="C++" prot="public">
+    <compoundname>weston_log_subscription</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__log__subscription_1a22b159f9d3e823d40ff8f301af72e73c" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structweston__log__subscriber" kindref="compound">weston_log_subscriber</ref> *</type>
+        <definition>struct weston_log_subscriber* weston_log_subscription::owner</definition>
+        <argsstring></argsstring>
+        <name>owner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="110" column="28" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__log__subscription_1a9e3247e622bbe58e3068276e495658bc" prot="public" static="no" mutable="no">
+        <type>struct wl_list</type>
+        <definition>struct wl_list weston_log_subscription::owner_link</definition>
+        <argsstring></argsstring>
+        <name>owner_link</name>
+        <briefdescription>
+<para><ref refid="structweston__log__subscriber_1afb01b98baeb194aa7cf353cd6d8cd22c" kindref="member">weston_log_subscriber::subscription_list</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="110" column="28" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__log__subscription_1a1c9c254d7ac6afa67ca474a968a7668f" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* weston_log_subscription::scope_name</definition>
+        <argsstring></argsstring>
+        <name>scope_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="113" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__log__subscription_1a1a1e4d9a5bdda40238c3e8eed23ebadc" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref> *</type>
+        <definition>struct weston_log_scope* weston_log_subscription::source</definition>
+        <argsstring></argsstring>
+        <name>source</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="114" column="23" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__log__subscription_1a60eb786d6717a7bbe840c1572bf22a9b" prot="public" static="no" mutable="no">
+        <type>struct wl_list</type>
+        <definition>struct wl_list weston_log_subscription::source_link</definition>
+        <argsstring></argsstring>
+        <name>source_link</name>
+        <briefdescription>
+<para><ref refid="structweston__log__scope_1afe6121c70d4e7f15371c5718dacd577e" kindref="member">weston_log_scope::subscription_list</ref> or <ref refid="structweston__log__context_1af1f7edc42fab73bdbfd3baaeb1632127" kindref="member">weston_log_context::pending_subscription_list</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="114" column="23" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__log__subscription_1a232f3aa82d1577b7759b47c32b0ebe4f" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* weston_log_subscription::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="118" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structweston__log__subscription_1a1384f76a99f909eee35abf5cd73f8bd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void weston_log_subscription_create_pending</definition>
+        <argsstring>(struct weston_log_subscriber *owner, const char *scope_name, struct weston_log_context *log_ctx)</argsstring>
+        <name>weston_log_subscription_create_pending</name>
+        <param>
+          <type>struct <ref refid="structweston__log__subscriber" kindref="compound">weston_log_subscriber</ref> *</type>
+          <declname>owner</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>scope_name</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structweston__log__context" kindref="compound">weston_log_context</ref> *</type>
+          <declname>log_ctx</declname>
+        </param>
+        <briefdescription>
+<para>Create a pending subscription and add it the list of pending subscriptions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>owner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a subscriber represented by <ref refid="structweston__log__subscriber" kindref="compound">weston_log_subscriber</ref> object </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>scope_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the scope (which we don&apos;t have in the list of scopes) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>log_ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the logging context used to add the pending subscription </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="143" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="143" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="structweston__log__subscription_1af95e45789a81b5426076d20648d0d6e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void weston_log_subscription_destroy_pending</definition>
+        <argsstring>(struct weston_log_subscription *sub)</argsstring>
+        <name>weston_log_subscription_destroy_pending</name>
+        <param>
+          <type>struct <ref refid="structweston__log__subscription" kindref="compound">weston_log_subscription</ref> *</type>
+          <declname>sub</declname>
+        </param>
+        <briefdescription>
+<para>Destroys the pending subscription created previously with <ref refid="structweston__log__subscription_1a1384f76a99f909eee35abf5cd73f8bd4" kindref="member">weston_log_subscription_create_pending()</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sub</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="structweston__log__subscription" kindref="compound">weston_log_subscription</ref> object to remove from the list of subscriptions and to destroy the subscription </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="169" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="169" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="structweston__log__subscription_1a0f5cd20fdbb25fb01bd0b5dfe2f91946" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void weston_log_subscription_write</definition>
+        <argsstring>(struct weston_log_subscription *sub, const char *data, size_t len)</argsstring>
+        <name>weston_log_subscription_write</name>
+        <param>
+          <type>struct <ref refid="structweston__log__subscription" kindref="compound">weston_log_subscription</ref> *</type>
+          <declname>sub</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Write to the stream&apos;s subscription. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="183" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="183" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="structweston__log__subscription_1a0f85dfccef3e82a8be68eaf6cda2e4c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void weston_log_subscription_vprintf</definition>
+        <argsstring>(struct weston_log_subscription *sub, const char *fmt, va_list ap)</argsstring>
+        <name>weston_log_subscription_vprintf</name>
+        <param>
+          <type>struct <ref refid="structweston__log__subscription" kindref="compound">weston_log_subscription</ref> *</type>
+          <declname>sub</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>va_list</type>
+          <declname>ap</declname>
+        </param>
+        <briefdescription>
+<para>Write a formatted string to the stream&apos;s subscription. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="195" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="195" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="structweston__log__subscription_1a67f2f56cb833e93b6cf989969145a65a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_log_subscription_create</definition>
+        <argsstring>(struct weston_log_subscriber *owner, struct weston_log_scope *scope)</argsstring>
+        <name>weston_log_subscription_create</name>
+        <param>
+          <type>struct <ref refid="structweston__log__subscriber" kindref="compound">weston_log_subscriber</ref> *</type>
+          <declname>owner</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref> *</type>
+          <declname>scope</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new subscription using the subscriber by <computeroutput>owner</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The subscription created is added to the <computeroutput>owner</computeroutput> subscription list. Destroying the subscription using <ref refid="structweston__log__subscription_1aa849cadbd5df8d355e8018cc69120962" kindref="member">weston_log_subscription_destroy()</ref> will remove the link from the subscription list and free storage alloc&apos;ed.</para>
+<para>Note that this adds the subscription to the scope&apos;s subscription list hence the <computeroutput>scope</computeroutput> required argument.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>owner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the subscriber owner, must be created before creating a subscription </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>scope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the scope in order to add the subscription to the scope&apos;s subscription list </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a <ref refid="structweston__log__subscription" kindref="compound">weston_log_subscription</ref> object in case of success, or NULL otherwise</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="structweston__log__subscription_1aa849cadbd5df8d355e8018cc69120962" kindref="member">weston_log_subscription_destroy</ref>, <ref refid="structweston__log__subscription_1afbcb799b4461d0197321608b8e3aa7e9" kindref="member">weston_log_subscription_remove</ref>, <ref refid="structweston__log__subscription_1ae69bb5084749d138f7fc613621c30f74" kindref="member">weston_log_subscription_add</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="249" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="249" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="structweston__log__subscription_1aa849cadbd5df8d355e8018cc69120962" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_log_subscription_destroy</definition>
+        <argsstring>(struct weston_log_subscription *sub)</argsstring>
+        <name>weston_log_subscription_destroy</name>
+        <param>
+          <type>struct <ref refid="structweston__log__subscription" kindref="compound">weston_log_subscription</ref> *</type>
+          <declname>sub</declname>
+        </param>
+        <briefdescription>
+<para>Destroys the subscription. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes the subscription from the scopes subscription list and from subscriber&apos;s subscription list. It destroys the subscription afterwads. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="278" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="278" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="function" id="structweston__log__subscription_1ae69bb5084749d138f7fc613621c30f74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_log_subscription_add</definition>
+        <argsstring>(struct weston_log_scope *scope, struct weston_log_subscription *sub)</argsstring>
+        <name>weston_log_subscription_add</name>
+        <param>
+          <type>struct <ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref> *</type>
+          <declname>scope</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structweston__log__subscription" kindref="compound">weston_log_subscription</ref> *</type>
+          <declname>sub</declname>
+        </param>
+        <briefdescription>
+<para>Adds the subscription <computeroutput>sub</computeroutput> to the subscription list of the scope. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This should used when the scope has been created, and the subscription <computeroutput>sub</computeroutput> has be created before calling this function.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the scope </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sub</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the subscription, it must be created before, see <ref refid="structweston__log__subscription_1a67f2f56cb833e93b6cf989969145a65a" kindref="member">weston_log_subscription_create()</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="309" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="309" bodyend="319"/>
+      </memberdef>
+      <memberdef kind="function" id="structweston__log__subscription_1afbcb799b4461d0197321608b8e3aa7e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_log_subscription_remove</definition>
+        <argsstring>(struct weston_log_subscription *sub)</argsstring>
+        <name>weston_log_subscription_remove</name>
+        <param>
+          <type>struct <ref refid="structweston__log__subscription" kindref="compound">weston_log_subscription</ref> *</type>
+          <declname>sub</declname>
+        </param>
+        <briefdescription>
+<para>Removes the subscription from the scope&apos;s subscription list. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="326" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="326" bodyend="332"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Ties a subscriber to a scope. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>A subscription is created each time we&apos;d want to subscribe to a scope. From the stream type we can retrieve the subscriber and from the subscriber we reach each of the streams callbacks. See also <ref refid="structweston__log__subscriber" kindref="compound">weston_log_subscriber</ref> object.</para>
+<para>When a subscription has been created we store it in the scope&apos;s subscription list and in the subscriber&apos;s subscription list. The subscription might be a pending subscription until the scope for which there&apos;s was a subscribe has been created. The scope creation will take of looking through the pending subscription list.</para>
+<para>A subscription can reached from a subscriber subscription list by using the streams base class. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>weston_log_subscriber</label>
+        <link refid="structweston__log__subscriber"/>
+      </node>
+      <node id="2">
+        <label>weston_log_scope</label>
+        <link refid="structweston__log__scope"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>destroy_subscription</edgelabel>
+          <edgelabel>new_subscription</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>weston_log_subscription</label>
+        <link refid="structweston__log__subscription"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>source</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>owner</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="109" column="30" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="109" bodyend="119"/>
+    <listofallmembers>
+      <member refid="structweston__log__subscription_1a232f3aa82d1577b7759b47c32b0ebe4f" prot="public" virt="non-virtual"><scope>weston_log_subscription</scope><name>data</name></member>
+      <member refid="structweston__log__subscription_1a22b159f9d3e823d40ff8f301af72e73c" prot="public" virt="non-virtual"><scope>weston_log_subscription</scope><name>owner</name></member>
+      <member refid="structweston__log__subscription_1a9e3247e622bbe58e3068276e495658bc" prot="public" virt="non-virtual"><scope>weston_log_subscription</scope><name>owner_link</name></member>
+      <member refid="structweston__log__subscription_1a1c9c254d7ac6afa67ca474a968a7668f" prot="public" virt="non-virtual"><scope>weston_log_subscription</scope><name>scope_name</name></member>
+      <member refid="structweston__log__subscription_1a1a1e4d9a5bdda40238c3e8eed23ebadc" prot="public" virt="non-virtual"><scope>weston_log_subscription</scope><name>source</name></member>
+      <member refid="structweston__log__subscription_1a60eb786d6717a7bbe840c1572bf22a9b" prot="public" virt="non-virtual"><scope>weston_log_subscription</scope><name>source_link</name></member>
+      <member refid="structweston__log__subscription_1ae69bb5084749d138f7fc613621c30f74" prot="public" virt="non-virtual"><scope>weston_log_subscription</scope><name>weston_log_subscription_add</name></member>
+      <member refid="structweston__log__subscription_1a67f2f56cb833e93b6cf989969145a65a" prot="public" virt="non-virtual"><scope>weston_log_subscription</scope><name>weston_log_subscription_create</name></member>
+      <member refid="structweston__log__subscription_1a1384f76a99f909eee35abf5cd73f8bd4" prot="public" virt="non-virtual"><scope>weston_log_subscription</scope><name>weston_log_subscription_create_pending</name></member>
+      <member refid="structweston__log__subscription_1aa849cadbd5df8d355e8018cc69120962" prot="public" virt="non-virtual"><scope>weston_log_subscription</scope><name>weston_log_subscription_destroy</name></member>
+      <member refid="structweston__log__subscription_1af95e45789a81b5426076d20648d0d6e6" prot="public" virt="non-virtual"><scope>weston_log_subscription</scope><name>weston_log_subscription_destroy_pending</name></member>
+      <member refid="structweston__log__subscription_1afbcb799b4461d0197321608b8e3aa7e9" prot="public" virt="non-virtual"><scope>weston_log_subscription</scope><name>weston_log_subscription_remove</name></member>
+      <member refid="structweston__log__subscription_1a0f85dfccef3e82a8be68eaf6cda2e4c1" prot="public" virt="non-virtual"><scope>weston_log_subscription</scope><name>weston_log_subscription_vprintf</name></member>
+      <member refid="structweston__log__subscription_1a0f5cd20fdbb25fb01bd0b5dfe2f91946" prot="public" virt="non-virtual"><scope>weston_log_subscription</scope><name>weston_log_subscription_write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

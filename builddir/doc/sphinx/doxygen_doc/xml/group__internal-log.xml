@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="group__internal-log" kind="group">
+    <compoundname>internal-log</compoundname>
+    <title>Private/Internal Logging/Debugging API</title>
+    <innerclass refid="structtimeline__emit__context" prot="public">timeline_emit_context</innerclass>
+    <innerclass refid="structweston__timeline__subscription" prot="public">weston_timeline_subscription</innerclass>
+    <innerclass refid="structweston__timeline__subscription__object" prot="public">weston_timeline_subscription_object</innerclass>
+    <innerclass refid="structweston__log__subscriber" prot="public">weston_log_subscriber</innerclass>
+    <innerclass refid="structweston__log__context" prot="public">weston_log_context</innerclass>
+    <innerclass refid="structweston__log__subscription" prot="public">weston_log_subscription</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__internal-log_1gaf645b896b2c3a18fb2b1ffb060d46551" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_timeline_create_subscription</definition>
+        <argsstring>(struct weston_log_subscription *sub, void *user_data)</argsstring>
+        <name>weston_timeline_create_subscription</name>
+        <param>
+          <type>struct <ref refid="structweston__log__subscription" kindref="compound">weston_log_subscription</ref> *</type>
+          <declname>sub</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>user_data</declname>
+        </param>
+        <briefdescription>
+<para>Create a timeline subscription and hang it off the subscription. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Called when the subscription is created. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/timeline.c" line="85" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/timeline.c" bodystart="85" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="group__internal-log_1ga250932e6f6394c2de70b3ecb209e04b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_timeline_destroy_subscription</definition>
+        <argsstring>(struct weston_log_subscription *sub, void *user_data)</argsstring>
+        <name>weston_timeline_destroy_subscription</name>
+        <param>
+          <type>struct <ref refid="structweston__log__subscription" kindref="compound">weston_log_subscription</ref> *</type>
+          <declname>sub</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>user_data</declname>
+        </param>
+        <briefdescription>
+<para>Destroy the timeline subscription and all timeline subscription objects associated with it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Called when (before) the subscription is destroyed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/timeline.c" line="117" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/timeline.c" bodystart="117" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="group__internal-log_1gaeb074aac2aa63f0108fe29330bee24d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref> *</type>
+        <definition>struct weston_log_scope* weston_log_get_scope</definition>
+        <argsstring>(struct weston_log_context *log_ctx, const char *name)</argsstring>
+        <name>weston_log_get_scope</name>
+        <param>
+          <type>struct <ref refid="structweston__log__context" kindref="compound">weston_log_context</ref> *</type>
+          <declname>log_ctx</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Look-up the scope from the scope list stored in the log context, by matching against the <computeroutput>name</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>log_ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the scope name, see <ref refid="structweston__log__scope_1aacf51678148a4c087e78a87816cc36f3" kindref="member">weston_log_ctx_add_log_scope()</ref> and <ref refid="structweston__compositor_1ae4682c6463d20cedae4215dff64d91c7" kindref="member">weston_compositor_add_log_scope()</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>NULL if none found, or a pointer to a <ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="345" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="345" bodyend="352"/>
+      </memberdef>
+      <memberdef kind="function" id="group__internal-log_1gaca722e7819b8b02f71620d240c32d633" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_log_run_cb_new_subscription</definition>
+        <argsstring>(struct weston_log_subscription *sub)</argsstring>
+        <name>weston_log_run_cb_new_subscription</name>
+        <param>
+          <type>struct <ref refid="structweston__log__subscription" kindref="compound">weston_log_subscription</ref> *</type>
+          <declname>sub</declname>
+        </param>
+        <briefdescription>
+<para>Wrapper to invoke the weston_log_scope_cb. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Allows to call the cb new_subscription of a log scope. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="360" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="360" bodyend="364"/>
+      </memberdef>
+      <memberdef kind="function" id="group__internal-log_1ga86bcfce4ad81cf4072f25fb8cdee9ff9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_debug_protocol_advertise_scopes</definition>
+        <argsstring>(struct weston_log_context *log_ctx, struct wl_resource *res)</argsstring>
+        <name>weston_debug_protocol_advertise_scopes</name>
+        <param>
+          <type>struct <ref refid="structweston__log__context" kindref="compound">weston_log_context</ref> *</type>
+          <declname>log_ctx</declname>
+        </param>
+        <param>
+          <type>struct wl_resource *</type>
+          <declname>res</declname>
+        </param>
+        <briefdescription>
+<para>Advertise the log scope name and the log scope description. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is only used by the weston-debug protocol! </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="373" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="373" bodyend="379"/>
+      </memberdef>
+      <memberdef kind="function" id="group__internal-log_1ga98472934b52a36c43c53e05a4f087861" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void weston_log_ctx_disable_debug_protocol</definition>
+        <argsstring>(struct weston_log_context *log_ctx)</argsstring>
+        <name>weston_log_ctx_disable_debug_protocol</name>
+        <param>
+          <type>struct <ref refid="structweston__log__context" kindref="compound">weston_log_context</ref> *</type>
+          <declname>log_ctx</declname>
+        </param>
+        <briefdescription>
+<para>Disable debug-protocol. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>log_ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The log context where the debug-protocol is linked </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log.c" line="388" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log.c" bodystart="388" bodyend="395"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,465 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="weston-testsuite-data_8h" kind="file" language="C++">
+    <compoundname>weston-testsuite-data.h</compoundname>
+    <includedby refid="weston-test-fixture-compositor_8h" local="yes">/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h</includedby>
+    <includedby refid="weston-test-runner_8h" local="yes">/home/lzm/Wayland/weston/tests/weston-test-runner.h</includedby>
+    <includedby refid="weston-test-runner_8c" local="yes">/home/lzm/Wayland/weston/tests/weston-test-runner.c</includedby>
+    <includedby refid="weston-test_8c" local="yes">/home/lzm/Wayland/weston/tests/weston-test.c</includedby>
+    <invincdepgraph>
+      <node id="30">
+        <label>/home/lzm/Wayland/weston/tests/yuv-buffer-test.c</label>
+        <link refid="yuv-buffer-test_8c"/>
+      </node>
+      <node id="38">
+        <label>/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.c</label>
+        <link refid="weston-test-fixture-compositor_8c"/>
+      </node>
+      <node id="7">
+        <label>/home/lzm/Wayland/weston/tests/buffer-transforms-test.c</label>
+        <link refid="buffer-transforms-test_8c"/>
+      </node>
+      <node id="11">
+        <label>/home/lzm/Wayland/weston/tests/input-timestamps-helper.c</label>
+        <link refid="input-timestamps-helper_8c"/>
+      </node>
+      <node id="2">
+        <label>/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.h</label>
+        <link refid="weston-test-fixture-compositor_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>/home/lzm/Wayland/weston/tests/ivi-layout-internal-test.c</label>
+        <link refid="ivi-layout-internal-test_8c"/>
+      </node>
+      <node id="10">
+        <label>/home/lzm/Wayland/weston/tests/event-test.c</label>
+        <link refid="event-test_8c"/>
+      </node>
+      <node id="16">
+        <label>/home/lzm/Wayland/weston/tests/linux-explicit-synchronization-test.c</label>
+        <link refid="linux-explicit-synchronization-test_8c"/>
+      </node>
+      <node id="25">
+        <label>/home/lzm/Wayland/weston/tests/text-test.c</label>
+        <link refid="text-test_8c"/>
+      </node>
+      <node id="22">
+        <label>/home/lzm/Wayland/weston/tests/string-test.c</label>
+        <link refid="string-test_8c"/>
+      </node>
+      <node id="32">
+        <label>/home/lzm/Wayland/weston/tests/plugin-registry-test.c</label>
+        <link refid="plugin-registry-test_8c"/>
+      </node>
+      <node id="13">
+        <label>/home/lzm/Wayland/weston/tests/ivi-layout-test-client.c</label>
+        <link refid="ivi-layout-test-client_8c"/>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/tests/weston-testsuite-data.h</label>
+        <link refid="weston-testsuite-data_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>/home/lzm/Wayland/weston/tests/xwayland-test.c</label>
+        <link refid="xwayland-test_8c"/>
+      </node>
+      <node id="12">
+        <label>/home/lzm/Wayland/weston/tests/internal-screenshot-test.c</label>
+        <link refid="internal-screenshot-test_8c"/>
+      </node>
+      <node id="26">
+        <label>/home/lzm/Wayland/weston/tests/touch-test.c</label>
+        <link refid="touch-test_8c"/>
+      </node>
+      <node id="5">
+        <label>/home/lzm/Wayland/weston/tests/alpha-blending-test.c</label>
+        <link refid="alpha-blending-test_8c"/>
+      </node>
+      <node id="35">
+        <label>/home/lzm/Wayland/weston/tests/vertex-clip-test.c</label>
+        <link refid="vertex-clip-test_8c"/>
+      </node>
+      <node id="18">
+        <label>/home/lzm/Wayland/weston/tests/output-transforms-test.c</label>
+        <link refid="output-transforms-test_8c"/>
+      </node>
+      <node id="24">
+        <label>/home/lzm/Wayland/weston/tests/subsurface-test.c</label>
+        <link refid="subsurface-test_8c"/>
+      </node>
+      <node id="8">
+        <label>/home/lzm/Wayland/weston/tests/devices-test.c</label>
+        <link refid="devices-test_8c"/>
+      </node>
+      <node id="28">
+        <label>/home/lzm/Wayland/weston/tests/viewporter-test.c</label>
+        <link refid="viewporter-test_8c"/>
+      </node>
+      <node id="33">
+        <label>/home/lzm/Wayland/weston/tests/surface-global-test.c</label>
+        <link refid="surface-global-test_8c"/>
+      </node>
+      <node id="17">
+        <label>/home/lzm/Wayland/weston/tests/output-damage-test.c</label>
+        <link refid="output-damage-test_8c"/>
+      </node>
+      <node id="27">
+        <label>/home/lzm/Wayland/weston/tests/viewporter-shot-test.c</label>
+        <link refid="viewporter-shot-test_8c"/>
+      </node>
+      <node id="14">
+        <label>/home/lzm/Wayland/weston/tests/ivi-shell-app-test.c</label>
+        <link refid="ivi-shell-app-test_8c"/>
+      </node>
+      <node id="21">
+        <label>/home/lzm/Wayland/weston/tests/roles-test.c</label>
+        <link refid="roles-test_8c"/>
+      </node>
+      <node id="15">
+        <label>/home/lzm/Wayland/weston/tests/keyboard-test.c</label>
+        <link refid="keyboard-test_8c"/>
+      </node>
+      <node id="19">
+        <label>/home/lzm/Wayland/weston/tests/pointer-test.c</label>
+        <link refid="pointer-test_8c"/>
+      </node>
+      <node id="6">
+        <label>/home/lzm/Wayland/weston/tests/bad-buffer-test.c</label>
+        <link refid="bad-buffer-test_8c"/>
+      </node>
+      <node id="34">
+        <label>/home/lzm/Wayland/weston/tests/surface-test.c</label>
+        <link refid="surface-test_8c"/>
+      </node>
+      <node id="36">
+        <label>/home/lzm/Wayland/weston/tests/weston-test-runner.c</label>
+        <link refid="weston-test-runner_8c"/>
+      </node>
+      <node id="3">
+        <label>/home/lzm/Wayland/weston/tests/weston-test-runner.h</label>
+        <link refid="weston-test-runner_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>/home/lzm/Wayland/weston/tests/weston-test.c</label>
+        <link refid="weston-test_8c"/>
+      </node>
+      <node id="20">
+        <label>/home/lzm/Wayland/weston/tests/presentation-test.c</label>
+        <link refid="presentation-test_8c"/>
+      </node>
+      <node id="9">
+        <label>/home/lzm/Wayland/weston/tests/drm-smoke-test.c</label>
+        <link refid="drm-smoke-test_8c"/>
+      </node>
+      <node id="29">
+        <label>/home/lzm/Wayland/weston/tests/weston-test-client-helper.c</label>
+        <link refid="weston-test-client-helper_8c"/>
+      </node>
+      <node id="4">
+        <label>/home/lzm/Wayland/weston/tests/weston-test-client-helper.h</label>
+        <link refid="weston-test-client-helper_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>/home/lzm/Wayland/weston/tests/subsurface-shot-test.c</label>
+        <link refid="subsurface-shot-test_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structwet__testsuite__data" prot="public">wet_testsuite_data</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" prot="public" static="no" strong="no">
+        <type></type>
+        <name>test_result_code</name>
+        <enumvalue id="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a818c541216b4ca0e29b7885495a46ad2" prot="public">
+          <name>RESULT_OK</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a4afc80cf43bd4cdf7cbcbfefcb5bf5ae" prot="public">
+          <name>RESULT_SKIP</name>
+          <initializer>= 77</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103adbaa15b6c3bcc0196b4b314fac50e36c" prot="public">
+          <name>RESULT_FAIL</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a1a9437b5f7317085e7fc0358a47d32f3" prot="public">
+          <name>RESULT_HARD_ERROR</name>
+          <initializer>= 99</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Standard return codes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Both Autotools and Meson use these codes as test program exit codes to denote the test result for the whole process. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-testsuite-data.h" line="36" column="22" bodyfile="/home/lzm/Wayland/weston/tests/weston-testsuite-data.h" bodystart="36" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__testharness__private_1gaac4452a7487c189982bfeaca04a1326f" prot="public" static="no" strong="no">
+        <type></type>
+        <name>test_type</name>
+        <enumvalue id="group__testharness__private_1ggaac4452a7487c189982bfeaca04a1326fafa838cea02f9c1b9df0c3cc3dbd1dc85" prot="public">
+          <name>TEST_TYPE_STANDALONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__testharness__private_1ggaac4452a7487c189982bfeaca04a1326fa3120f83ea36457050043776ca058fda2" prot="public">
+          <name>TEST_TYPE_PLUGIN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__testharness__private_1ggaac4452a7487c189982bfeaca04a1326fa29e6ee8780af534f3ec9f60fa1c24763" prot="public">
+          <name>TEST_TYPE_CLIENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Weston test types. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__testharness_1ga9f98c3e898eb09ad2bd86343199ff619" kindref="member">weston_test_harness_execute_standalone</ref> <ref refid="group__testharness_1gabc3f5a45b58ee07331059eb120f7b2bb" kindref="member">weston_test_harness_execute_as_plugin</ref> <ref refid="group__testharness_1gacd7b26a0f0f337781013b40d229cf262" kindref="member">weston_test_harness_execute_as_client</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-testsuite-data.h" line="54" column="15" bodyfile="/home/lzm/Wayland/weston/tests/weston-testsuite-data.h" bodystart="54" bodyend="58"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2019<sp/>Collabora,<sp/>Ltd.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>(including<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>next<sp/>paragraph)<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>NONINFRINGEMENT.<sp/><sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>WESTON_TESTSUITE_DATA_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WESTON_TESTSUITE_DATA_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__testharness_1gaf45a885e3df7d3e0204f0beb2036a103" kindref="member">test_result_code</ref><sp/>{</highlight></codeline>
+<codeline lineno="37" refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a818c541216b4ca0e29b7885495a46ad2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a818c541216b4ca0e29b7885495a46ad2" kindref="member">RESULT_OK</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="38" refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a4afc80cf43bd4cdf7cbcbfefcb5bf5ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a4afc80cf43bd4cdf7cbcbfefcb5bf5ae" kindref="member">RESULT_SKIP</ref><sp/>=<sp/>77,</highlight></codeline>
+<codeline lineno="39" refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103adbaa15b6c3bcc0196b4b314fac50e36c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103adbaa15b6c3bcc0196b4b314fac50e36c" kindref="member">RESULT_FAIL</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="40" refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a1a9437b5f7317085e7fc0358a47d32f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__testharness_1ggaf45a885e3df7d3e0204f0beb2036a103a1a9437b5f7317085e7fc0358a47d32f3" kindref="member">RESULT_HARD_ERROR</ref><sp/>=<sp/>99,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__test" kindref="compound">weston_test</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__compositor" kindref="compound">weston_compositor</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="group__testharness__private_1gaac4452a7487c189982bfeaca04a1326f" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__testharness__private_1gaac4452a7487c189982bfeaca04a1326f" kindref="member">test_type</ref><sp/>{</highlight></codeline>
+<codeline lineno="55" refid="group__testharness__private_1ggaac4452a7487c189982bfeaca04a1326fafa838cea02f9c1b9df0c3cc3dbd1dc85" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__testharness__private_1ggaac4452a7487c189982bfeaca04a1326fafa838cea02f9c1b9df0c3cc3dbd1dc85" kindref="member">TEST_TYPE_STANDALONE</ref>,</highlight></codeline>
+<codeline lineno="56" refid="group__testharness__private_1ggaac4452a7487c189982bfeaca04a1326fa3120f83ea36457050043776ca058fda2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__testharness__private_1ggaac4452a7487c189982bfeaca04a1326fa3120f83ea36457050043776ca058fda2" kindref="member">TEST_TYPE_PLUGIN</ref>,</highlight></codeline>
+<codeline lineno="57" refid="group__testharness__private_1ggaac4452a7487c189982bfeaca04a1326fa29e6ee8780af534f3ec9f60fa1c24763" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__testharness__private_1ggaac4452a7487c189982bfeaca04a1326fa29e6ee8780af534f3ec9f60fa1c24763" kindref="member">TEST_TYPE_CLIENT</ref>,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="structwet__testsuite__data" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structwet__testsuite__data" kindref="compound">wet_testsuite_data</ref><sp/>{</highlight></codeline>
+<codeline lineno="65" refid="structwet__testsuite__data_1aa778aef8c2990ddf1367f24d5af3b23b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="structwet__testsuite__data_1aa778aef8c2990ddf1367f24d5af3b23b" kindref="member">run</ref>)(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structwet__testsuite__data" kindref="compound">wet_testsuite_data</ref><sp/>*);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>test<sp/>definitions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="structwet__testsuite__data_1a029a517bc21ee17737e87cf5e6d94aa0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__test__entry" kindref="compound">weston_test_entry</ref><sp/>*<ref refid="structwet__testsuite__data_1a029a517bc21ee17737e87cf5e6d94aa0" kindref="member">tests</ref>;</highlight></codeline>
+<codeline lineno="69" refid="structwet__testsuite__data_1a4b4c9647bf38610bc13bd09a24d6d80c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structwet__testsuite__data_1a4b4c9647bf38610bc13bd09a24d6d80c" kindref="member">tests_count</ref>;</highlight></codeline>
+<codeline lineno="70" refid="structwet__testsuite__data_1aab2f9cb5578501e4e4d001f786584a4c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structwet__testsuite__data_1aab2f9cb5578501e4e4d001f786584a4c" kindref="member">case_index</ref>;</highlight></codeline>
+<codeline lineno="71" refid="structwet__testsuite__data_1a9058a6cc8cca95a80c3c4417aa2707db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__testharness__private_1gaac4452a7487c189982bfeaca04a1326f" kindref="member">test_type</ref><sp/><ref refid="structwet__testsuite__data_1a9058a6cc8cca95a80c3c4417aa2707db" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="72" refid="structwet__testsuite__data_1a51825d253002fb20aa5f45d8baa4661a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__compositor" kindref="compound">weston_compositor</ref><sp/>*<ref refid="structwet__testsuite__data_1a51825d253002fb20aa5f45d8baa4661a" kindref="member">compositor</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>client<sp/>thread<sp/>control<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="structwet__testsuite__data_1ad35c2293edf76a9e5e63e8bb005122ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structwet__testsuite__data_1ad35c2293edf76a9e5e63e8bb005122ae" kindref="member">thread_event_pipe</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>informational<sp/>run<sp/>state<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="structwet__testsuite__data_1a73c16d413050a5d633e8b1d6866f6b95" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structwet__testsuite__data_1a73c16d413050a5d633e8b1d6866f6b95" kindref="member">fixture_iteration</ref>;</highlight></codeline>
+<codeline lineno="79" refid="structwet__testsuite__data_1a22b5ac1fc15302e5f27ba4fdbd99449f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structwet__testsuite__data_1a22b5ac1fc15302e5f27ba4fdbd99449f" kindref="member">fixture_name</ref>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>test<sp/>counts<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="structwet__testsuite__data_1a3bf92117893e3145dfa182e76ddd6c0f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structwet__testsuite__data_1a3bf92117893e3145dfa182e76ddd6c0f" kindref="member">counter</ref>;</highlight></codeline>
+<codeline lineno="83" refid="structwet__testsuite__data_1a9c820aa6adadc2fb909cb17df263aa53" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structwet__testsuite__data_1a9c820aa6adadc2fb909cb17df263aa53" kindref="member">passed</ref>;</highlight></codeline>
+<codeline lineno="84" refid="structwet__testsuite__data_1ad4d0227ba15118e44ebfdf4562c46987" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structwet__testsuite__data_1ad4d0227ba15118e44ebfdf4562c46987" kindref="member">skipped</ref>;</highlight></codeline>
+<codeline lineno="85" refid="structwet__testsuite__data_1a33b872ae5e946dc2b3c94745db4b05c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structwet__testsuite__data_1a33b872ae5e946dc2b3c94745db4b05c0" kindref="member">failed</ref>;</highlight></codeline>
+<codeline lineno="86" refid="structwet__testsuite__data_1aead1a6f7b2d234e6ceca9decd3f27d39" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structwet__testsuite__data_1aead1a6f7b2d234e6ceca9decd3f27d39" kindref="member">total</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>WESTON_TESTSUITE_DATA_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/tests/weston-testsuite-data.h"/>
+  </compounddef>
+</doxygen>

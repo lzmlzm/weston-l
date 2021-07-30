@@ -1,0 +1,27 @@
+ 0x000000000000000e (SONAME)             Library soname: [libexec_weston.so.0]
+screenshooter_create T
+text_backend_destroy T
+text_backend_init T
+weston_client_launch T
+weston_client_start T
+weston_config_destroy T
+weston_config_get_full_path T
+weston_config_get_name_from_env T
+weston_config_get_section T
+weston_config_next_section T
+weston_config_parse T
+weston_config_section_get_bool T
+weston_config_section_get_color T
+weston_config_section_get_double T
+weston_config_section_get_int T
+weston_config_section_get_string T
+weston_config_section_get_uint T
+weston_parse_transform T
+weston_transform_to_string T
+weston_watch_process T
+wet_get_bindir_path T
+wet_get_config T
+wet_get_libexec_path T
+wet_load_module T
+wet_load_module_entrypoint T
+wet_main T

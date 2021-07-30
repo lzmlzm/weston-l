@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__size" kind="struct" language="C++" prot="public">
+    <compoundname>weston_size</compoundname>
+    <includes refid="libweston_8h" local="no">libweston.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__size_1a8391a5e0bcc37a97d1e9900cf5ffdb16" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t weston_size::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="57" column="9" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__size_1aa391e1b586b3f3ad2e63fbcd9a4cc868" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t weston_size::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="57" column="15" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="56" column="18" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="56" bodyend="58"/>
+    <listofallmembers>
+      <member refid="structweston__size_1aa391e1b586b3f3ad2e63fbcd9a4cc868" prot="public" virt="non-virtual"><scope>weston_size</scope><name>height</name></member>
+      <member refid="structweston__size_1a8391a5e0bcc37a97d1e9900cf5ffdb16" prot="public" virt="non-virtual"><scope>weston_size</scope><name>width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

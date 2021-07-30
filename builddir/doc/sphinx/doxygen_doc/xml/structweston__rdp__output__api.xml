@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__rdp__output__api" kind="struct" language="C++" prot="public">
+    <compoundname>weston_rdp_output_api</compoundname>
+    <includes refid="backend-rdp_8h" local="no">backend-rdp.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__rdp__output__api_1ac65e01ba14a0977c58479d14d6262805" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* weston_rdp_output_api::output_set_size) (struct weston_output *output, int width, int height)</definition>
+        <argsstring>)(struct weston_output *output, int width, int height)</argsstring>
+        <name>output_set_size</name>
+        <briefdescription>
+<para>Initialize a RDP output with specified width and height. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns 0 on success, -1 on failure. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/backend-rdp.h" line="43" column="1" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-rdp.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/include/libweston/backend-rdp.h" line="38" column="28" bodyfile="/home/lzm/Wayland/weston/include/libweston/backend-rdp.h" bodystart="38" bodyend="45"/>
+    <listofallmembers>
+      <member refid="structweston__rdp__output__api_1ac65e01ba14a0977c58479d14d6262805" prot="public" virt="non-virtual"><scope>weston_rdp_output_api</scope><name>output_set_size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

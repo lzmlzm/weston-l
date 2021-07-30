@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="group__wlog" kind="group">
+    <compoundname>wlog</compoundname>
+    <title>weston-logging</title>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__wlog_1ga7f6de92f37121c82cae44dce48df4611" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* log_func_t) (const char *fmt, va_list ap)</definition>
+        <argsstring>)(const char *fmt, va_list ap)</argsstring>
+        <name>log_func_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="1873" column="9" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="1873" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__wlog_1ga1af9e91eb3e0c3be04d9219966247db8" prot="public" static="yes" mutable="no">
+        <type><ref refid="group__wlog_1ga7f6de92f37121c82cae44dce48df4611" kindref="member">log_func_t</ref></type>
+        <definition>log_func_t log_handler</definition>
+        <argsstring></argsstring>
+        <name>log_handler</name>
+        <initializer>= <ref refid="group__wlog_1ga61ef301bb57d863af5bcdb2d1a3942cb" kindref="member">default_log_handler</ref></initializer>
+        <briefdescription>
+<para>Needs to be set, defaults to default_log_handler. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/log.c" line="51" column="19" bodyfile="/home/lzm/Wayland/weston/libweston/log.c" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__wlog_1ga3e3d1e661b185ed76d1fb1c004bdbff7" prot="public" static="yes" mutable="no">
+        <type><ref refid="group__wlog_1ga7f6de92f37121c82cae44dce48df4611" kindref="member">log_func_t</ref></type>
+        <definition>log_func_t log_continue_handler</definition>
+        <argsstring></argsstring>
+        <name>log_continue_handler</name>
+        <initializer>= <ref refid="group__wlog_1ga61ef301bb57d863af5bcdb2d1a3942cb" kindref="member">default_log_handler</ref></initializer>
+        <briefdescription>
+<para>Needs to be set, defaults to default_log_handler. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/log.c" line="57" column="19" bodyfile="/home/lzm/Wayland/weston/libweston/log.c" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__wlog_1ga61ef301bb57d863af5bcdb2d1a3942cb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int default_log_handler</definition>
+        <argsstring>(const char *fmt, va_list ap)</argsstring>
+        <name>default_log_handler</name>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>va_list</type>
+          <declname>ap</declname>
+        </param>
+        <briefdescription>
+<para>Sentinel log message handler. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is used as the default handler for log messages. It exists only to issue a noisy reminder to the user that a real handler must be installed prior to issuing logging calls. The process is immediately aborted after the reminder is printed.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fmt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The format string. Ignored. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The variadic argument list. Ignored. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/log.c" line="72" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/log.c" bodystart="72" bodyend="76" declfile="/home/lzm/Wayland/weston/libweston/log.c" declline="45" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__wlog_1gaae64561b04016b5b060befc9b5f5fb85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_log_set_handler</definition>
+        <argsstring>(log_func_t log, log_func_t cont)</argsstring>
+        <name>weston_log_set_handler</name>
+        <param>
+          <type><ref refid="group__wlog_1ga7f6de92f37121c82cae44dce48df4611" kindref="member">log_func_t</ref></type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type><ref refid="group__wlog_1ga7f6de92f37121c82cae44dce48df4611" kindref="member">log_func_t</ref></type>
+          <declname>cont</declname>
+        </param>
+        <briefdescription>
+<para>Install the log handler. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The given functions will be called to output text as passed to the <emphasis>weston_log</emphasis> and <emphasis>weston_log_continue</emphasis> functions.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>log</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The log function. This function will be called when <emphasis>weston_log</emphasis> is called, and should begin a new line, with user defined line headers, if any. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cont</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The continue log function. This function will be called when <emphasis>weston_log_continue</emphasis> is called, and should append its output to the current line, without any header or other content in between. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/log.c" line="94" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/log.c" bodystart="94" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="group__wlog_1gab61770ae7ae15976b04e88681b1d1c4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int weston_vlog</definition>
+        <argsstring>(const char *fmt, va_list ap)</argsstring>
+        <name>weston_vlog</name>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>va_list</type>
+          <declname>ap</declname>
+        </param>
+        <briefdescription>
+<para>weston_vlog calls log_handler </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/log.c" line="104" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/log.c" bodystart="104" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="group__wlog_1ga6a7cc2161ce1dad600859022b30162c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int weston_log</definition>
+        <argsstring>(const char *fmt,...)</argsstring>
+        <name>weston_log</name>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+<para>printf() equivalent in weston compositor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>embed:rst:leading-asterisk
+*       .. note::
+*
+*               Needs :var:`log_handler` to be set-up!
+* </verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/log.c" line="120" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/log.c" bodystart="120" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="group__wlog_1gaae8b11650848785c5367ee698d2e0f3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int weston_vlog_continue</definition>
+        <argsstring>(const char *fmt, va_list argp)</argsstring>
+        <name>weston_vlog_continue</name>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>va_list</type>
+          <declname>argp</declname>
+        </param>
+        <briefdescription>
+<para>weston_vlog_continue calls log_continue_handler </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/log.c" line="137" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/log.c" bodystart="137" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="group__wlog_1gaa0016cb4379eb39a57ac3be92f19ffa9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int weston_log_continue</definition>
+        <argsstring>(const char *fmt,...)</argsstring>
+        <name>weston_log_continue</name>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+<para>weston_log_continue </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/log.c" line="147" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/log.c" bodystart="147" bodyend="157"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

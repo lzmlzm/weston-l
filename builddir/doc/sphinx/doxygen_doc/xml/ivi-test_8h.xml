@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="ivi-test_8h" kind="file" language="C++">
+    <compoundname>ivi-test.h</compoundname>
+    <includedby refid="ivi-layout-internal-test_8c" local="yes">/home/lzm/Wayland/weston/tests/ivi-layout-internal-test.c</includedby>
+    <includedby refid="ivi-layout-test-client_8c" local="yes">/home/lzm/Wayland/weston/tests/ivi-layout-test-client.c</includedby>
+    <includedby refid="ivi-layout-test-plugin_8c" local="yes">/home/lzm/Wayland/weston/tests/ivi-layout-test-plugin.c</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/lzm/Wayland/weston/tests/ivi-layout-internal-test.c</label>
+        <link refid="ivi-layout-internal-test_8c"/>
+      </node>
+      <node id="3">
+        <label>/home/lzm/Wayland/weston/tests/ivi-layout-test-client.c</label>
+        <link refid="ivi-layout-test-client_8c"/>
+      </node>
+      <node id="4">
+        <label>/home/lzm/Wayland/weston/tests/ivi-layout-test-plugin.c</label>
+        <link refid="ivi-layout-test-plugin_8c"/>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/tests/ivi-test.h</label>
+        <link refid="ivi-test_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ivi-test_8h_1a7d28340022bf67b1adeed218e9473662" prot="public" static="no">
+        <name>IVI_TEST_SURFACE_ID_BASE</name>
+        <initializer>0xffc01200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/ivi-test.h" line="34" column="9" bodyfile="/home/lzm/Wayland/weston/tests/ivi-test.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ivi-test_8h_1a8a0a3e0d07a6c078aad232b5ff4aa31a" prot="public" static="no">
+        <name>IVI_TEST_SURFACE_ID</name>
+        <param><defname>i</defname></param>
+        <initializer>(<ref refid="ivi-test_8h_1a7d28340022bf67b1adeed218e9473662" kindref="member">IVI_TEST_SURFACE_ID_BASE</ref> + i)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/ivi-test.h" line="35" column="9" bodyfile="/home/lzm/Wayland/weston/tests/ivi-test.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ivi-test_8h_1a9df5ef6e33c300e066c326270c0c0a05" prot="public" static="no">
+        <name>IVI_TEST_LAYER_ID_BASE</name>
+        <initializer>0xeef01200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/ivi-test.h" line="36" column="9" bodyfile="/home/lzm/Wayland/weston/tests/ivi-test.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ivi-test_8h_1a44afefd4873d5cd8bba68e0be47affd6" prot="public" static="no">
+        <name>IVI_TEST_LAYER_ID</name>
+        <param><defname>i</defname></param>
+        <initializer>(<ref refid="ivi-test_8h_1a9df5ef6e33c300e066c326270c0c0a05" kindref="member">IVI_TEST_LAYER_ID_BASE</ref> + i)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/ivi-test.h" line="37" column="9" bodyfile="/home/lzm/Wayland/weston/tests/ivi-test.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ivi-test_8h_1a81725dde177d1838478e178007156120" prot="public" static="no">
+        <name>IVI_TEST_SURFACE_COUNT</name>
+        <initializer>(3)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/ivi-test.h" line="39" column="9" bodyfile="/home/lzm/Wayland/weston/tests/ivi-test.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ivi-test_8h_1ac454ac09c38ac8a522fde5b77bccdd04" prot="public" static="no">
+        <name>IVI_TEST_LAYER_COUNT</name>
+        <initializer>(3)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/ivi-test.h" line="40" column="9" bodyfile="/home/lzm/Wayland/weston/tests/ivi-test.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2015<sp/>Collabora,<sp/>Ltd.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>(including<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>next<sp/>paragraph)<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>NONINFRINGEMENT.<sp/><sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>IVI_TEST_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IVI_TEST_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/>IVI_TEST_SURFACE_ID_BASE<sp/>is<sp/>an<sp/>arbitrary<sp/>number<sp/>picked<sp/>for<sp/>the</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/>IVI<sp/>tests.<sp/>The<sp/>only<sp/>requirement<sp/>is<sp/>that<sp/>it<sp/>does<sp/>not<sp/>clash<sp/>with</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*<sp/>any<sp/>other<sp/>ivi-id<sp/>range<sp/>used<sp/>in<sp/>Weston.</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="ivi-test_8h_1a7d28340022bf67b1adeed218e9473662" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IVI_TEST_SURFACE_ID_BASE<sp/>0xffc01200</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="ivi-test_8h_1a8a0a3e0d07a6c078aad232b5ff4aa31a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IVI_TEST_SURFACE_ID(i)<sp/>(IVI_TEST_SURFACE_ID_BASE<sp/>+<sp/>i)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="ivi-test_8h_1a9df5ef6e33c300e066c326270c0c0a05" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IVI_TEST_LAYER_ID_BASE<sp/>0xeef01200</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="ivi-test_8h_1a44afefd4873d5cd8bba68e0be47affd6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IVI_TEST_LAYER_ID(i)<sp/>(IVI_TEST_LAYER_ID_BASE<sp/>+<sp/>i)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="ivi-test_8h_1a81725dde177d1838478e178007156120" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IVI_TEST_SURFACE_COUNT<sp/>(3)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="ivi-test_8h_1ac454ac09c38ac8a522fde5b77bccdd04" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IVI_TEST_LAYER_COUNT<sp/>(3)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>IVI_TEST_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/tests/ivi-test.h"/>
+  </compounddef>
+</doxygen>

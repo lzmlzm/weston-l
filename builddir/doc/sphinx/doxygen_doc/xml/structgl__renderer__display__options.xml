@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structgl__renderer__display__options" kind="struct" language="C++" prot="public">
+    <compoundname>gl_renderer_display_options</compoundname>
+    <includes refid="gl-renderer_8h" local="no">gl-renderer.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgl__renderer__display__options_1af7b55369e1f51f0a3f67a16c0301f6d5" prot="public" static="no" mutable="no">
+        <type><ref refid="gl-renderer_8h_1a3403e7aa1af3a3a900c4fb0584d680a5" kindref="member">EGLenum</ref></type>
+        <definition>EGLenum gl_renderer_display_options::egl_platform</definition>
+        <argsstring></argsstring>
+        <name>egl_platform</name>
+        <briefdescription>
+<para>The EGL platform identifier. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" line="68" column="9" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer__display__options_1a6a693604b69d3984cce8a6139d50dcb1" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* gl_renderer_display_options::egl_native_display</definition>
+        <argsstring></argsstring>
+        <name>egl_native_display</name>
+        <briefdescription>
+<para>The native display corresponding to the given EGL platform. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" line="70" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer__display__options_1a18b0a47d9c26c392ebff6f2e755a6812" prot="public" static="no" mutable="no">
+        <type><ref refid="gl-renderer_8h_1a97030274d045a36c550fc0d66d26f175" kindref="member">EGLint</ref></type>
+        <definition>EGLint gl_renderer_display_options::egl_surface_type</definition>
+        <argsstring></argsstring>
+        <name>egl_surface_type</name>
+        <briefdescription>
+<para>EGL_SURFACE_TYPE bits for the base EGLConfig. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" line="72" column="8" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer__display__options_1a3c7f40c55bfef4ba47c355334fb226d4" prot="public" static="no" mutable="no">
+        <type>const uint32_t *</type>
+        <definition>const uint32_t* gl_renderer_display_options::drm_formats</definition>
+        <argsstring></argsstring>
+        <name>drm_formats</name>
+        <briefdescription>
+<para>Array of DRM pixel formats acceptable for the base EGLConfig. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" line="74" column="16" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer__display__options_1a1a8c93300796002b03508506b7139afc" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned gl_renderer_display_options::drm_formats_count</definition>
+        <argsstring></argsstring>
+        <name>drm_formats_count</name>
+        <briefdescription>
+<para>The <computeroutput>drm_formats</computeroutput> array length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" line="76" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Options passed to the <computeroutput>display_create</computeroutput> method of the GL renderer interface. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="see"><para>struct <ref refid="structgl__renderer__interface" kindref="compound">gl_renderer_interface</ref> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" line="66" column="34" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" bodystart="66" bodyend="77"/>
+    <listofallmembers>
+      <member refid="structgl__renderer__display__options_1a3c7f40c55bfef4ba47c355334fb226d4" prot="public" virt="non-virtual"><scope>gl_renderer_display_options</scope><name>drm_formats</name></member>
+      <member refid="structgl__renderer__display__options_1a1a8c93300796002b03508506b7139afc" prot="public" virt="non-virtual"><scope>gl_renderer_display_options</scope><name>drm_formats_count</name></member>
+      <member refid="structgl__renderer__display__options_1a6a693604b69d3984cce8a6139d50dcb1" prot="public" virt="non-virtual"><scope>gl_renderer_display_options</scope><name>egl_native_display</name></member>
+      <member refid="structgl__renderer__display__options_1af7b55369e1f51f0a3f67a16c0301f6d5" prot="public" virt="non-virtual"><scope>gl_renderer_display_options</scope><name>egl_platform</name></member>
+      <member refid="structgl__renderer__display__options_1a18b0a47d9c26c392ebff6f2e755a6812" prot="public" virt="non-virtual"><scope>gl_renderer_display_options</scope><name>egl_surface_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

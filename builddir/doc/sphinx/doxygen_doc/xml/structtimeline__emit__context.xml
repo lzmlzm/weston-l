@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structtimeline__emit__context" kind="struct" language="C++" prot="public">
+    <compoundname>timeline_emit_context</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structtimeline__emit__context_1a24e717269c8f193209536941715a91fd" prot="public" static="no" mutable="no">
+        <type>FILE *</type>
+        <definition>FILE* timeline_emit_context::cur</definition>
+        <argsstring></argsstring>
+        <name>cur</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/timeline.c" line="74" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/timeline.c" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtimeline__emit__context_1ae7d73e2e8700f467af9ea98576d0e898" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structweston__log__subscription" kindref="compound">weston_log_subscription</ref> *</type>
+        <definition>struct weston_log_subscription* timeline_emit_context::subscription</definition>
+        <argsstring></argsstring>
+        <name>subscription</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/timeline.c" line="75" column="30" bodyfile="/home/lzm/Wayland/weston/libweston/timeline.c" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Timeline itself is not a subscriber but a scope (a producer of data), and it re-routes the data it produces to all the subscriptions (and implicitly to the subscribers) using a subscription iteration to go through all of them. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Public API:<itemizedlist>
+<listitem><para><ref refid="group__log_1gabfcf8e012be0cc478dd901ca59ad3721" kindref="member">weston_timeline_refresh_subscription_objects()</ref> - allows outside parts of libweston notify/signal timeline code about the fact that underlying object has suffered some modifications and needs to re-emit the object ID.</para>
+</listitem><listitem><para>weston_log_timeline_point() - which will disseminate data to all subscriptions</para>
+</listitem></itemizedlist>
+</para>
+<para>Do note that only <ref refid="group__log_1gabfcf8e012be0cc478dd901ca59ad3721" kindref="member">weston_timeline_refresh_subscription_objects()</ref> is exported in libweston.</para>
+<para>Destruction of the objects assigned to each underlying objects happens in two places: one in the logging framework callback of the log scope (&apos;destroy_subscription&apos;), and secondly, when the object itself gets destroyed.</para>
+<para><ref refid="structtimeline__emit__context" kindref="compound">timeline_emit_context</ref> - For each subscription this object will be created to store a buffer when the object itself will be written and a subscription, which will be used to force the object ID if there is a need to do so (the underlying object has been refreshed, or better said has suffered some modification). Data written to a subscription will be flushed before the data written to the FILE *.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a FILE * </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>subscription</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a pointer to an already created subscription</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__log_1ga805835e5bfd0c13d0283e7b7e39022d2" kindref="member">weston_timeline_point</ref> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>weston_log_subscriber</label>
+        <link refid="structweston__log__subscriber"/>
+      </node>
+      <node id="3">
+        <label>weston_log_scope</label>
+        <link refid="structweston__log__scope"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>destroy_subscription</edgelabel>
+          <edgelabel>new_subscription</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>weston_log_subscription</label>
+        <link refid="structweston__log__subscription"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>source</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>owner</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>timeline_emit_context</label>
+        <link refid="structtimeline__emit__context"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>subscription</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lzm/Wayland/weston/libweston/timeline.c" line="73" column="28" bodyfile="/home/lzm/Wayland/weston/libweston/timeline.c" bodystart="73" bodyend="76"/>
+    <listofallmembers>
+      <member refid="structtimeline__emit__context_1a24e717269c8f193209536941715a91fd" prot="public" virt="non-virtual"><scope>timeline_emit_context</scope><name>cur</name></member>
+      <member refid="structtimeline__emit__context_1ae7d73e2e8700f467af9ea98576d0e898" prot="public" virt="non-virtual"><scope>timeline_emit_context</scope><name>subscription</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

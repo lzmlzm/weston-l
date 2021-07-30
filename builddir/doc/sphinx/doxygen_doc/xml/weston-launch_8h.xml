@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="weston-launch_8h" kind="file" language="C++">
+    <compoundname>weston-launch.h</compoundname>
+    <includedby refid="launcher-weston-launch_8c" local="yes">/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c</includedby>
+    <includedby refid="weston-launch_8c" local="yes">/home/lzm/Wayland/weston/libweston/weston-launch.c</includedby>
+    <invincdepgraph>
+      <node id="3">
+        <label>/home/lzm/Wayland/weston/libweston/weston-launch.c</label>
+        <link refid="weston-launch_8c"/>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/libweston/weston-launch.h</label>
+        <link refid="weston-launch_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c</label>
+        <link refid="launcher-weston-launch_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structweston__launcher__message" prot="public">weston_launcher_message</innerclass>
+    <innerclass refid="structweston__launcher__open" prot="public">weston_launcher_open</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="weston-launch_8h_1a0f286a1db081ef48150a577544bf44a4" prot="public" static="no" strong="no">
+        <type></type>
+        <name>weston_launcher_opcode</name>
+        <enumvalue id="weston-launch_8h_1a0f286a1db081ef48150a577544bf44a4ac9c978f6a47b0205d7a9ffbdd775c408" prot="public">
+          <name>WESTON_LAUNCHER_OPEN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-launch.h" line="29" column="28" bodyfile="/home/lzm/Wayland/weston/libweston/weston-launch.h" bodystart="29" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="enum" id="weston-launch_8h_1a6c50dae74876604cd9429610f91aa820" prot="public" static="no" strong="no">
+        <type></type>
+        <name>weston_launcher_event</name>
+        <enumvalue id="weston-launch_8h_1a6c50dae74876604cd9429610f91aa820aa98d9248aaa993348d7f55e01126d4f0" prot="public">
+          <name>WESTON_LAUNCHER_SUCCESS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="weston-launch_8h_1a6c50dae74876604cd9429610f91aa820a820b2c586a25a47b7509ef9be4f7bc33" prot="public">
+          <name>WESTON_LAUNCHER_ACTIVATE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="weston-launch_8h_1a6c50dae74876604cd9429610f91aa820a34b62754fd4801470eed19771cbb3d68" prot="public">
+          <name>WESTON_LAUNCHER_DEACTIVATE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="weston-launch_8h_1a6c50dae74876604cd9429610f91aa820aa583c2cc280e44923059d1c4e4274f3a" prot="public">
+          <name>WESTON_LAUNCHER_DEACTIVATE_DONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="weston-launch_8h_1a6c50dae74876604cd9429610f91aa820ac3916549ca0e89916176556ec576f5bb" prot="public">
+          <name>WESTON_LAUNCHER_OPEN_REPLY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-launch.h" line="33" column="27" bodyfile="/home/lzm/Wayland/weston/libweston/weston-launch.h" bodystart="33" bodyend="40"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2012<sp/>Benjamin<sp/>Franzke</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>(including<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>next<sp/>paragraph)<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>NONINFRINGEMENT.<sp/><sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_WESTON_LAUNCH_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_WESTON_LAUNCH_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="weston-launch_8h_1a0f286a1db081ef48150a577544bf44a4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="weston-launch_8h_1a0f286a1db081ef48150a577544bf44a4" kindref="member">weston_launcher_opcode</ref><sp/>{</highlight></codeline>
+<codeline lineno="30" refid="weston-launch_8h_1a0f286a1db081ef48150a577544bf44a4ac9c978f6a47b0205d7a9ffbdd775c408" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-launch_8h_1a0f286a1db081ef48150a577544bf44a4ac9c978f6a47b0205d7a9ffbdd775c408" kindref="member">WESTON_LAUNCHER_OPEN</ref>,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="weston-launch_8h_1a6c50dae74876604cd9429610f91aa820" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="weston-launch_8h_1a6c50dae74876604cd9429610f91aa820" kindref="member">weston_launcher_event</ref><sp/>{</highlight></codeline>
+<codeline lineno="34" refid="weston-launch_8h_1a6c50dae74876604cd9429610f91aa820aa98d9248aaa993348d7f55e01126d4f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-launch_8h_1a6c50dae74876604cd9429610f91aa820aa98d9248aaa993348d7f55e01126d4f0" kindref="member">WESTON_LAUNCHER_SUCCESS</ref>,</highlight></codeline>
+<codeline lineno="35" refid="weston-launch_8h_1a6c50dae74876604cd9429610f91aa820a820b2c586a25a47b7509ef9be4f7bc33" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-launch_8h_1a6c50dae74876604cd9429610f91aa820a820b2c586a25a47b7509ef9be4f7bc33" kindref="member">WESTON_LAUNCHER_ACTIVATE</ref>,</highlight></codeline>
+<codeline lineno="36" refid="weston-launch_8h_1a6c50dae74876604cd9429610f91aa820a34b62754fd4801470eed19771cbb3d68" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-launch_8h_1a6c50dae74876604cd9429610f91aa820a34b62754fd4801470eed19771cbb3d68" kindref="member">WESTON_LAUNCHER_DEACTIVATE</ref>,</highlight></codeline>
+<codeline lineno="37" refid="weston-launch_8h_1a6c50dae74876604cd9429610f91aa820aa583c2cc280e44923059d1c4e4274f3a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-launch_8h_1a6c50dae74876604cd9429610f91aa820aa583c2cc280e44923059d1c4e4274f3a" kindref="member">WESTON_LAUNCHER_DEACTIVATE_DONE</ref>,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>event<sp/>is<sp/>followed<sp/>by<sp/>an<sp/>fd<sp/>handle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="weston-launch_8h_1a6c50dae74876604cd9429610f91aa820ac3916549ca0e89916176556ec576f5bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="weston-launch_8h_1a6c50dae74876604cd9429610f91aa820ac3916549ca0e89916176556ec576f5bb" kindref="member">WESTON_LAUNCHER_OPEN_REPLY</ref>,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="structweston__launcher__message" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__launcher__message" kindref="compound">weston_launcher_message</ref><sp/>{</highlight></codeline>
+<codeline lineno="43" refid="structweston__launcher__message_1a7f94b94cd0db99ae848c0553f2237390" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structweston__launcher__message_1a7f94b94cd0db99ae848c0553f2237390" kindref="member">opcode</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="structweston__launcher__open" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__launcher__open" kindref="compound">weston_launcher_open</ref><sp/>{</highlight></codeline>
+<codeline lineno="47" refid="structweston__launcher__open_1a7ef74c0ac93f109aa3ec2090e2e4cfb0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__launcher__message" kindref="compound">weston_launcher_message</ref><sp/><ref refid="structweston__launcher__open_1a7ef74c0ac93f109aa3ec2090e2e4cfb0" kindref="member">header</ref>;</highlight></codeline>
+<codeline lineno="48" refid="structweston__launcher__open_1abc54199ae6533d6e915a8bd3b27d71e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structweston__launcher__open_1abc54199ae6533d6e915a8bd3b27d71e7" kindref="member">flags</ref>;</highlight></codeline>
+<codeline lineno="49" refid="structweston__launcher__open_1a7aa601c40b255ba6b0f4f0fd01169737" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structweston__launcher__open_1a7aa601c40b255ba6b0f4f0fd01169737" kindref="member">path</ref>[0];</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/libweston/weston-launch.h"/>
+  </compounddef>
+</doxygen>

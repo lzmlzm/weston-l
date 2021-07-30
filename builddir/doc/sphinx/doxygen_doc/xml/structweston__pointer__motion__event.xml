@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__pointer__motion__event" kind="struct" language="C++" prot="public">
+    <compoundname>weston_pointer_motion_event</compoundname>
+    <includes refid="libweston_8h" local="no">libweston.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__pointer__motion__event_1a446ab3f5307682f668b624899374458c" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t weston_pointer_motion_event::mask</definition>
+        <argsstring></argsstring>
+        <name>mask</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="406" column="10" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="406" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__pointer__motion__event_1a08ad4be38330bfda16deaeab8a8c1b52" prot="public" static="no" mutable="no">
+        <type>struct timespec</type>
+        <definition>struct timespec weston_pointer_motion_event::time</definition>
+        <argsstring></argsstring>
+        <name>time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="406" column="10" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="407" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__pointer__motion__event_1a23d2c4c1ecface14929b695adaf627f8" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double weston_pointer_motion_event::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="408" column="8" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="408" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__pointer__motion__event_1a32457056c8b02f30fd4d60f95aa93f96" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double weston_pointer_motion_event::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="409" column="8" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="409" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__pointer__motion__event_1a7ddfe78bd877f534fafb524c956c1d72" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double weston_pointer_motion_event::dx</definition>
+        <argsstring></argsstring>
+        <name>dx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="410" column="8" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="410" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__pointer__motion__event_1a97e8ba0b48f6d7a408c2f1399a95aa99" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double weston_pointer_motion_event::dy</definition>
+        <argsstring></argsstring>
+        <name>dy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="411" column="8" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="411" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__pointer__motion__event_1aa134bf41d6992de2ce98fc6b48f8e6ee" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double weston_pointer_motion_event::dx_unaccel</definition>
+        <argsstring></argsstring>
+        <name>dx_unaccel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="412" column="8" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="412" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__pointer__motion__event_1add43b7b0b234e508c854ef77a2d89888" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double weston_pointer_motion_event::dy_unaccel</definition>
+        <argsstring></argsstring>
+        <name>dy_unaccel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="413" column="8" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="413" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/include/libweston/libweston.h" line="405" column="34" bodyfile="/home/lzm/Wayland/weston/include/libweston/libweston.h" bodystart="405" bodyend="414"/>
+    <listofallmembers>
+      <member refid="structweston__pointer__motion__event_1a7ddfe78bd877f534fafb524c956c1d72" prot="public" virt="non-virtual"><scope>weston_pointer_motion_event</scope><name>dx</name></member>
+      <member refid="structweston__pointer__motion__event_1aa134bf41d6992de2ce98fc6b48f8e6ee" prot="public" virt="non-virtual"><scope>weston_pointer_motion_event</scope><name>dx_unaccel</name></member>
+      <member refid="structweston__pointer__motion__event_1a97e8ba0b48f6d7a408c2f1399a95aa99" prot="public" virt="non-virtual"><scope>weston_pointer_motion_event</scope><name>dy</name></member>
+      <member refid="structweston__pointer__motion__event_1add43b7b0b234e508c854ef77a2d89888" prot="public" virt="non-virtual"><scope>weston_pointer_motion_event</scope><name>dy_unaccel</name></member>
+      <member refid="structweston__pointer__motion__event_1a446ab3f5307682f668b624899374458c" prot="public" virt="non-virtual"><scope>weston_pointer_motion_event</scope><name>mask</name></member>
+      <member refid="structweston__pointer__motion__event_1a08ad4be38330bfda16deaeab8a8c1b52" prot="public" virt="non-virtual"><scope>weston_pointer_motion_event</scope><name>time</name></member>
+      <member refid="structweston__pointer__motion__event_1a23d2c4c1ecface14929b695adaf627f8" prot="public" virt="non-virtual"><scope>weston_pointer_motion_event</scope><name>x</name></member>
+      <member refid="structweston__pointer__motion__event_1a32457056c8b02f30fd4d60f95aa93f96" prot="public" virt="non-virtual"><scope>weston_pointer_motion_event</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

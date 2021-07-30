@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structgl__renderer__pbuffer__options" kind="struct" language="C++" prot="public">
+    <compoundname>gl_renderer_pbuffer_options</compoundname>
+    <includes refid="gl-renderer_8h" local="no">gl-renderer.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgl__renderer__pbuffer__options_1a5dc59cbda4b72ef570bd21a94b971f93" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gl_renderer_pbuffer_options::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription>
+<para>Width of the rendering surface in pixels. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" line="92" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer__pbuffer__options_1ad14341136c3660b7188572c4fb0fdc79" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gl_renderer_pbuffer_options::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+<para>Height of the rendering surface in pixels. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" line="94" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer__pbuffer__options_1a0062c566a30acd685a0641df8c781369" prot="public" static="no" mutable="no">
+        <type>const uint32_t *</type>
+        <definition>const uint32_t* gl_renderer_pbuffer_options::drm_formats</definition>
+        <argsstring></argsstring>
+        <name>drm_formats</name>
+        <briefdescription>
+<para>Array of DRM pixel formats acceptable for the pbuffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" line="96" column="16" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__renderer__pbuffer__options_1a4590629e5a9e65477710f5dd8a684d92" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned gl_renderer_pbuffer_options::drm_formats_count</definition>
+        <argsstring></argsstring>
+        <name>drm_formats_count</name>
+        <briefdescription>
+<para>The <computeroutput>drm_formats</computeroutput> array length. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" line="98" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" line="90" column="34" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.h" bodystart="90" bodyend="99"/>
+    <listofallmembers>
+      <member refid="structgl__renderer__pbuffer__options_1a0062c566a30acd685a0641df8c781369" prot="public" virt="non-virtual"><scope>gl_renderer_pbuffer_options</scope><name>drm_formats</name></member>
+      <member refid="structgl__renderer__pbuffer__options_1a4590629e5a9e65477710f5dd8a684d92" prot="public" virt="non-virtual"><scope>gl_renderer_pbuffer_options</scope><name>drm_formats_count</name></member>
+      <member refid="structgl__renderer__pbuffer__options_1ad14341136c3660b7188572c4fb0fdc79" prot="public" virt="non-virtual"><scope>gl_renderer_pbuffer_options</scope><name>height</name></member>
+      <member refid="structgl__renderer__pbuffer__options_1a5dc59cbda4b72ef570bd21a94b971f93" prot="public" virt="non-virtual"><scope>gl_renderer_pbuffer_options</scope><name>width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

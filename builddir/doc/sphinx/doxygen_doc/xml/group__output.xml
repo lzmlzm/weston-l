@@ -1,0 +1,785 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="group__output" kind="group">
+    <compoundname>output</compoundname>
+    <title>Output</title>
+    <innerclass refid="structweston__output" prot="public">weston_output</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__output_1ga5b6b26af26f582ad5627ea7ae6129a89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int weston_output_mode_set_native</definition>
+        <argsstring>(struct weston_output *output, struct weston_mode *mode, int32_t scale)</argsstring>
+        <name>weston_output_mode_set_native</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structweston__mode" kindref="compound">weston_mode</ref> *</type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="207" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="207" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga71e8b4c2d4a15c8d153b85f178d1006d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int weston_output_mode_switch_to_native</definition>
+        <argsstring>(struct weston_output *output)</argsstring>
+        <name>weston_output_mode_switch_to_native</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="247" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="247" bodyend="278"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga3cae00e20c6451270741932f1330e64d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int weston_output_mode_switch_to_temporary</definition>
+        <argsstring>(struct weston_output *output, struct weston_mode *mode, int32_t scale)</argsstring>
+        <name>weston_output_mode_switch_to_temporary</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structweston__mode" kindref="compound">weston_mode</ref> *</type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="284" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="284" bodyend="309"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gab45be972c9a7bf6c86c6ca8db03034f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_output_damage</definition>
+        <argsstring>(struct weston_output *output)</argsstring>
+        <name>weston_output_damage</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="2453" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="2453" bodyend="2461"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga0f26c6ea66cf6683814ed60baf2a04c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_output_finish_frame</definition>
+        <argsstring>(struct weston_output *output, const struct timespec *stamp, uint32_t presented_flags)</argsstring>
+        <name>weston_output_finish_frame</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>const struct timespec *</type>
+          <declname>stamp</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>presented_flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="2995" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="2995" bodyend="3064"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga0464b27eac6a50ce14d0db08958e9489" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_output_schedule_repaint</definition>
+        <argsstring>(struct weston_output *output)</argsstring>
+        <name>weston_output_schedule_repaint</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="3198" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="3198" bodyend="3225"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gac664a86e8af03efbb0bcdd7795941826" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void weston_output_emit_heads_changed</definition>
+        <argsstring>(struct weston_output *output)</argsstring>
+        <name>weston_output_emit_heads_changed</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>Send output heads changed signal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output that changed.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Notify that the enabled output gained and/or lost heads, or that the associated heads may have changed their connection status. This does not include cases where the output becomes enabled or disabled. The registered callbacks are called after the change has successfully happened.</para>
+<para>If connection status change causes the compositor to attach or detach a head to an enabled output, the registered callbacks may be called multiple times. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="5095" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="5095" bodyend="5099"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gaabbac16a3b4715c19d3f69b521e89750" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structweston__head" kindref="compound">weston_head</ref> *</type>
+        <definition>struct weston_head* weston_output_iterate_heads</definition>
+        <argsstring>(struct weston_output *output, struct weston_head *iter)</argsstring>
+        <name>weston_output_iterate_heads</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structweston__head" kindref="compound">weston_head</ref> *</type>
+          <declname>iter</declname>
+        </param>
+        <briefdescription>
+<para>Iterate over attached heads. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output whose heads to iterate. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The iterator, or NULL for start. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The next attached head in the list.</para>
+</simplesect>
+Returns all heads currently attached to the output.</para>
+<para>You can iterate over all heads as follows: <programlisting><codeline><highlight class="normal">struct<sp/>weston_head<sp/>*head<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">while<sp/>((head<sp/>=<sp/>weston_output_iterate_heads(output,<sp/>head)))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para>
+<para>If you cause <computeroutput>iter</computeroutput> to be removed from the list, you cannot use it to continue iterating. Removing any other item is safe. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="5253" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="5253" bodyend="5274"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga4e31a4f40995c5c80cca21775d15a15a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int weston_output_attach_head</definition>
+        <argsstring>(struct weston_output *output, struct weston_head *head)</argsstring>
+        <name>weston_output_attach_head</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structweston__head" kindref="compound">weston_head</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <briefdescription>
+<para>Attach a head to an output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output to attach to. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The head that is not yet attached. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success, -1 on failure.</para>
+</simplesect>
+Attaches the given head to the output. All heads of an output are clones and share the resolution and timings.</para>
+<para>Cloning heads this way uses less resources than creating an output for each head, but is not always possible due to environment, driver and hardware limitations.</para>
+<para>On failure, the head remains unattached. Success of this function does not guarantee the output configuration is actually valid. The final checks are made on <ref refid="group__output_1ga80c54aa6f93b50afc216bb6ab9c97575" kindref="member">weston_output_enable()</ref> unless the output was already enabled. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="5296" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="5296" bodyend="5327"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga1e29336a58385636b0d2c213eaddbac1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_output_move</definition>
+        <argsstring>(struct weston_output *output, int x, int y)</argsstring>
+        <name>weston_output_move</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="5967" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="5967" bodyend="6011"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gaa6ff5fff6210e59ee443c89fd4941082" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_output_transform_coordinate</definition>
+        <argsstring>(struct weston_output *output, double device_x, double device_y, double *x, double *y)</argsstring>
+        <name>weston_output_transform_coordinate</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>device_x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>device_y</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Transform device coordinates into global coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="structweston__output" kindref="compound">weston_output</ref> object </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">device_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X coordinate in device units. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">device_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y coordinate in device units. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X coordinate in the global space. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y coordinate in the global space.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Transforms coordinates from the device coordinate space (physical pixel units) to the global coordinate space (logical pixel units). This takes into account output transform and scale. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="6075" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="6075" bodyend="6089"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gaf55cb7ce87a56e9284c9860ed8e56cb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_output_set_scale</definition>
+        <argsstring>(struct weston_output *output, int32_t scale)</argsstring>
+        <name>weston_output_set_scale</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+<para>Sets the output scale for a given output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="structweston__output" kindref="compound">weston_output</ref> object that the scale is set for. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Scale factor for the given output.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+It only supports setting scale for an output that is not enabled and it can only be ran once. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="6162" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="6162" bodyend="6172"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga11bebd6791c64fbf449251f74e3254bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_output_set_transform</definition>
+        <argsstring>(struct weston_output *output, uint32_t transform)</argsstring>
+        <name>weston_output_set_transform</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>transform</declname>
+        </param>
+        <briefdescription>
+<para>Sets the output transform for a given output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="structweston__output" kindref="compound">weston_output</ref> object that the transform is set for. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>transform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Transform value for the given output.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Refer to wl_output::transform section located at <ulink url="https://wayland.freedesktop.org/docs/html/apa.html#protocol-spec-wl_output">https://wayland.freedesktop.org/docs/html/apa.html#protocol-spec-wl_output</ulink> for list of values that can be passed to this function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="6186" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="6186" bodyend="6256"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga524b14e04e1478ab2ebe168b97cda322" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool weston_output_set_renderer_shadow_buffer</definition>
+        <argsstring>(struct weston_output *output)</argsstring>
+        <name>weston_output_set_renderer_shadow_buffer</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>Make the output use renderer shadow buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="structweston__output" kindref="compound">weston_output</ref> object to modify. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True on success, false if unsupported.</para>
+</simplesect>
+This can only be set on a disabled output object.</para>
+<para>This is a temporary API to demonstrate WESTON_CAP_COLOR_OPS and allow testing related features. This will be superseded with color management API.</para>
+<para>By default, a renderer is not using a shadow buffer of its own. Enabling a shadow buffer may enable other color related features.</para>
+<para>Support depends on the chosen renderer and the graphics driver stack in use. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="6277" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="6277" bodyend="6289"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gaeb6468e3cabf74cba4030400f1907799" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_output_init</definition>
+        <argsstring>(struct weston_output *output, struct weston_compositor *compositor, const char *name)</argsstring>
+        <name>weston_output_init</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> *</type>
+          <declname>compositor</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a <ref refid="structweston__output" kindref="compound">weston_output</ref> object with enough data so an output can be configured. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="structweston__output" kindref="compound">weston_output</ref> object to initialize </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>compositor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The compositor instance. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name for the output (the string is copied).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Sets initial values for fields that are expected to be configured either by compositors or backends.</para>
+<para>The name is used in logs, and can be used by compositors as a configuration identifier. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="6308" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="6308" bodyend="6332"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga42eb945978c9fc4207fab33dd5e46be1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>static char * weston_output_create_heads_string</definition>
+        <argsstring>(struct weston_output *output)</argsstring>
+        <name>weston_output_create_heads_string</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>Create a string with the attached heads&apos; names. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The string must be free()&apos;d. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="6362" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="6362" bodyend="6381" declfile="/home/lzm/Wayland/weston/libweston/compositor.c" declline="99" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga80c54aa6f93b50afc216bb6ab9c97575" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int weston_output_enable</definition>
+        <argsstring>(struct weston_output *output)</argsstring>
+        <name>weston_output_enable</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a <ref refid="structweston__output" kindref="compound">weston_output</ref> object that can be used by the compositor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="structweston__output" kindref="compound">weston_output</ref> object that needs to be enabled. Must not be enabled already. Must have at least one head attached.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Output coordinates are calculated and each new output is by default assigned to the right of previous one.</para>
+<para>Sets up the transformation, zoom, and geometry of the output using the properties that need to be configured by the compositor.</para>
+<para>Establishes a repaint timer for the output with the relevant display object&apos;s event loop. See <ref refid="compositor_8c_1acc76702d769aa1e1bffb35feded7fdd4" kindref="member">output_repaint_timer_handler()</ref>.</para>
+<para>The output is assigned an ID. Weston can support up to 32 distinct outputs, with IDs numbered from 0-31; the compositor&apos;s output_id_pool is referred to and used to find the first available ID number, and then this ID is marked as used in output_id_pool.</para>
+<para>The output is also assigned a Wayland global with the wl_output external interface.</para>
+<para>Backend specific function is called to set up the output output.</para>
+<para>Output is added to the compositor&apos;s output list</para>
+<para>If the backend specific function fails, the <ref refid="structweston__output" kindref="compound">weston_output</ref> object is returned to a state it was before calling this function and is added to the compositor&apos;s pending_output_list in case it needs to be reconfigured or just so it can be destroyed at shutdown.</para>
+<para>0 is returned on success, -1 on failure. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="6419" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="6419" bodyend="6496"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gad86b73873e740780e6a1b4b7ad7b7e2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_output_disable</definition>
+        <argsstring>(struct weston_output *output)</argsstring>
+        <name>weston_output_disable</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>Converts a <ref refid="structweston__output" kindref="compound">weston_output</ref> object to a pending output state, so it can be configured again or destroyed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="structweston__output" kindref="compound">weston_output</ref> object that needs to be disabled.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Calls a backend specific function to disable an output, in case such function exists.</para>
+<para>The backend specific disable function may choose to postpone the disabling by returning a negative value, in which case this function returns early. In that case the backend will guarantee the output will be disabled soon by the backend calling this function again. One must not attempt to re-enable the output until that happens.</para>
+<para>Otherwise, if the output is being used by the compositor, it is removed from weston&apos;s output_list (see <ref refid="group__compositor_1ga794fc39a73df6dca432c753825ef2a1b" kindref="member">weston_compositor_remove_output()</ref>) and is returned to a state it was before <ref refid="group__output_1ga80c54aa6f93b50afc216bb6ab9c97575" kindref="member">weston_output_enable()</ref> was ran (see weston_output_enable_undo()).</para>
+<para>See <ref refid="group__output_1gaeb6468e3cabf74cba4030400f1907799" kindref="member">weston_output_init()</ref> for more information on the state output is returned to.</para>
+<para>If the output has never been enabled yet, this function can still be called to ensure that the output is actually turned off rather than left in the state it was discovered in. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="6527" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="6527" bodyend="6547"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga76ab2121852bb7a085ac23abaac35bdd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_output_add_destroy_listener</definition>
+        <argsstring>(struct weston_output *output, struct wl_listener *listener)</argsstring>
+        <name>weston_output_add_destroy_listener</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>struct wl_listener *</type>
+          <declname>listener</declname>
+        </param>
+        <briefdescription>
+<para>Add destroy callback for an output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output to watch. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>listener</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The listener to add. The <computeroutput>notify</computeroutput> member must be set.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The listener callback will be called when user destroys an output. This may be delayed by a backend in some cases. The main purpose of the listener is to allow hooking up custom data to the output. The custom data can be fetched via <ref refid="group__output_1ga0678ba130cd10a2c92720a2decfe7aeb" kindref="member">weston_output_get_destroy_listener()</ref> followed by container_of().</para>
+<para>The <computeroutput>data</computeroutput> argument to the notify callback is the <ref refid="structweston__output" kindref="compound">weston_output</ref> being destroyed.</para>
+<para><simplesect kind="note"><para>This is for the final destruction of an output, not when it gets disabled. If you want to keep track of enabled outputs, this is not it. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="6587" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="6587" bodyend="6591"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga0678ba130cd10a2c92720a2decfe7aeb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct wl_listener *</type>
+        <definition>struct wl_listener* weston_output_get_destroy_listener</definition>
+        <argsstring>(struct weston_output *output, wl_notify_func_t notify)</argsstring>
+        <name>weston_output_get_destroy_listener</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>wl_notify_func_t</type>
+          <declname>notify</declname>
+        </param>
+        <briefdescription>
+<para>Look up destroy listener for an output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output to query. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>notify</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The notify function used used for the added destroy listener. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The listener, or NULL if not found.</para>
+</simplesect>
+This looks up the previously added destroy listener struct based on the notify function it has. The listener can be used to access user data through <computeroutput>container_of()</computeroutput>.</para>
+<para><simplesect kind="see"><para>wl_signal_get() <ref refid="group__output_1ga76ab2121852bb7a085ac23abaac35bdd" kindref="member">weston_output_add_destroy_listener()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="6607" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="6607" bodyend="6611"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga4f2b78dfe24872b341fccb812d1e9473" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_output_release</definition>
+        <argsstring>(struct weston_output *output)</argsstring>
+        <name>weston_output_release</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>Uninitialize an output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes the output from the list of enabled outputs if necessary, but does not call the backend&apos;s output disable function. The output will no longer be in the list of pending outputs either.</para>
+<para>All fields of <ref refid="structweston__output" kindref="compound">weston_output</ref> become uninitialized, i.e. should not be used anymore. The caller can free the memory after this. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="6626" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="6626" bodyend="6647"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1ga44dae09ae8bbdb6e8b6574e2bd407c5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_output_destroy</definition>
+        <argsstring>(struct weston_output *output)</argsstring>
+        <name>weston_output_destroy</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>Destroy an output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output to destroy.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The heads attached to the given output are detached and become unused again.</para>
+<para>It is not necessary to explicitly destroy all outputs at compositor exit. <ref refid="group__compositor_1ga4f29f61ed5f73015798a14bdabb73dcc" kindref="member">weston_compositor_destroy()</ref> will automatically destroy any remaining outputs. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="6747" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="6747" bodyend="6750"/>
+      </memberdef>
+      <memberdef kind="function" id="group__output_1gaf0756dca4563d0814c75d534c51a7ecc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structweston__head" kindref="compound">weston_head</ref> *</type>
+        <definition>struct weston_head* weston_output_get_first_head</definition>
+        <argsstring>(struct weston_output *output)</argsstring>
+        <name>weston_output_get_first_head</name>
+        <param>
+          <type>struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>When you need a head... </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is a hack, used until all code has been converted to become multi-head aware.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="structweston__output" kindref="compound">weston_output</ref> whose head to get. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The first head in the output&apos;s list. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/compositor.c" line="6763" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/compositor.c" bodystart="6763" bodyend="6770"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__test__run__info" kind="struct" language="C++" prot="public">
+    <compoundname>weston_test_run_info</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__test__run__info_1ad85b5b68131ad88c597b65b78b618be5" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char weston_test_run_info::name[512]</definition>
+        <argsstring>[512]</argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="51" column="6" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__test__run__info_1a57f742607757b0daafd076aa134788ae" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int weston_test_run_info::fixture_nr</definition>
+        <argsstring></argsstring>
+        <name>fixture_nr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="52" column="5" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/tests/weston-test-runner.c" line="50" column="27" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-runner.c" bodystart="50" bodyend="53"/>
+    <listofallmembers>
+      <member refid="structweston__test__run__info_1a57f742607757b0daafd076aa134788ae" prot="public" virt="non-virtual"><scope>weston_test_run_info</scope><name>fixture_nr</name></member>
+      <member refid="structweston__test__run__info_1ad85b5b68131ad88c597b65b78b618be5" prot="public" virt="non-virtual"><scope>weston_test_run_info</scope><name>name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

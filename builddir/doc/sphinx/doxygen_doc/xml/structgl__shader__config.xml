@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structgl__shader__config" kind="struct" language="C++" prot="public">
+    <compoundname>gl_shader_config</compoundname>
+    <includes refid="gl-renderer-internal_8h" local="no">gl-renderer-internal.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgl__shader__config_1a151154134265ce84e0e98d150fbe26a8" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structgl__shader__requirements" kindref="compound">gl_shader_requirements</ref></type>
+        <definition>struct gl_shader_requirements gl_shader_config::req</definition>
+        <argsstring></argsstring>
+        <name>req</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="71" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__shader__config_1ae3a3e566fc6c7f458b4b39c90cc1a0a5" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structweston__matrix" kindref="compound">weston_matrix</ref></type>
+        <definition>struct weston_matrix gl_shader_config::projection</definition>
+        <argsstring></argsstring>
+        <name>projection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="71" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__shader__config_1a00edad21954dc7fc7d95a035d0a1c0d5" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gl_shader_config::view_alpha</definition>
+        <argsstring></argsstring>
+        <name>view_alpha</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="84" column="7" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__shader__config_1a9b6405eaf7f61aebc4002af123e40703" prot="public" static="no" mutable="no">
+        <type>GLfloat</type>
+        <definition>GLfloat gl_shader_config::unicolor[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>unicolor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="85" column="9" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__shader__config_1a7ffff590825dc85ecb343036ba9869ab" prot="public" static="no" mutable="no">
+        <type>GLint</type>
+        <definition>GLint gl_shader_config::input_tex_filter</definition>
+        <argsstring></argsstring>
+        <name>input_tex_filter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="86" column="7" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgl__shader__config_1ac4f8f92cc81a08ce6775e305ec6c6e7e" prot="public" static="no" mutable="no">
+        <type>GLuint</type>
+        <definition>GLuint gl_shader_config::input_tex[GL_SHADER_INPUT_TEX_MAX]</definition>
+        <argsstring>[GL_SHADER_INPUT_TEX_MAX]</argsstring>
+        <name>input_tex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="87" column="8" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>gl_shader_config</label>
+        <link refid="structgl__shader__config"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>req</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>projection</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>weston_matrix</label>
+        <link refid="structweston__matrix"/>
+      </node>
+      <node id="2">
+        <label>gl_shader_requirements</label>
+        <link refid="structgl__shader__requirements"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" line="80" column="23" bodyfile="/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer-internal.h" bodystart="80" bodyend="88"/>
+    <listofallmembers>
+      <member refid="structgl__shader__config_1ac4f8f92cc81a08ce6775e305ec6c6e7e" prot="public" virt="non-virtual"><scope>gl_shader_config</scope><name>input_tex</name></member>
+      <member refid="structgl__shader__config_1a7ffff590825dc85ecb343036ba9869ab" prot="public" virt="non-virtual"><scope>gl_shader_config</scope><name>input_tex_filter</name></member>
+      <member refid="structgl__shader__config_1ae3a3e566fc6c7f458b4b39c90cc1a0a5" prot="public" virt="non-virtual"><scope>gl_shader_config</scope><name>projection</name></member>
+      <member refid="structgl__shader__config_1a151154134265ce84e0e98d150fbe26a8" prot="public" virt="non-virtual"><scope>gl_shader_config</scope><name>req</name></member>
+      <member refid="structgl__shader__config_1a9b6405eaf7f61aebc4002af123e40703" prot="public" virt="non-virtual"><scope>gl_shader_config</scope><name>unicolor</name></member>
+      <member refid="structgl__shader__config_1a00edad21954dc7fc7d95a035d0a1c0d5" prot="public" virt="non-virtual"><scope>gl_shader_config</scope><name>view_alpha</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

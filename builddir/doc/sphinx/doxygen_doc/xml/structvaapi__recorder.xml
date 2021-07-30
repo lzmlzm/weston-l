@@ -1,0 +1,421 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structvaapi__recorder" kind="struct" language="C++" prot="public">
+    <compoundname>vaapi_recorder</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structvaapi__recorder_1a84696c7b499060f217422f68d18549c2" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int vaapi_recorder::drm_fd</definition>
+        <argsstring></argsstring>
+        <name>drm_fd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" line="74" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvaapi__recorder_1a08f5dcac4ccf59eafebcd90b40963460" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int vaapi_recorder::output_fd</definition>
+        <argsstring></argsstring>
+        <name>output_fd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" line="74" column="12" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvaapi__recorder_1a3f841d2ec7ef6a5f1556c4f752192722" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int vaapi_recorder::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" line="75" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvaapi__recorder_1a98f91288471b15d25a6d94eb7491e02b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int vaapi_recorder::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" line="75" column="11" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvaapi__recorder_1a729545e7e92c6132ccc815814e2d1e71" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int vaapi_recorder::frame_count</definition>
+        <argsstring></argsstring>
+        <name>frame_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" line="76" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvaapi__recorder_1a82e819b340578ab344c6ebd0f2288ffe" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int vaapi_recorder::error</definition>
+        <argsstring></argsstring>
+        <name>error</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" line="78" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvaapi__recorder_1af3d569587fd9f027fe16ddeac98ce2c4" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int vaapi_recorder::destroying</definition>
+        <argsstring></argsstring>
+        <name>destroying</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" line="79" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvaapi__recorder_1adaa0be6b6b4aeb4e87b1728080f2f73e" prot="public" static="no" mutable="no">
+        <type>pthread_t</type>
+        <definition>pthread_t vaapi_recorder::worker_thread</definition>
+        <argsstring></argsstring>
+        <name>worker_thread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" line="80" column="11" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvaapi__recorder_1a9ab14de15a7554583517cf7c93c209a2" prot="public" static="no" mutable="no">
+        <type>pthread_mutex_t</type>
+        <definition>pthread_mutex_t vaapi_recorder::mutex</definition>
+        <argsstring></argsstring>
+        <name>mutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" line="81" column="17" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvaapi__recorder_1a6ec4843b34609a4dfca8c06ece42b149" prot="public" static="no" mutable="no">
+        <type>pthread_cond_t</type>
+        <definition>pthread_cond_t vaapi_recorder::input_cond</definition>
+        <argsstring></argsstring>
+        <name>input_cond</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" line="82" column="16" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvaapi__recorder_1a12082b81a548b144af02942a57b2c2ca" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int vaapi_recorder::valid</definition>
+        <argsstring></argsstring>
+        <name>valid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" line="85" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvaapi__recorder_1af0012c308d7037c9858c3872b8f561a8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int vaapi_recorder::prime_fd</definition>
+        <argsstring></argsstring>
+        <name>prime_fd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" line="86" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvaapi__recorder_1a77c37ef7d58fe2f70c5117a5f7623edb" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int vaapi_recorder::stride</definition>
+        <argsstring></argsstring>
+        <name>stride</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" line="86" column="14" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvaapi__recorder_1a1bbe8f8eb9032547b894ce08749ed393" prot="public" static="no" mutable="no">
+        <type>struct vaapi_recorder::@2</type>
+        <definition>struct vaapi_recorder::@2 vaapi_recorder::input</definition>
+        <argsstring></argsstring>
+        <name>input</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" line="87" column="7"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvaapi__recorder_1a61d305ec087b35602bbd9cb7bc6ff046" prot="public" static="no" mutable="no">
+        <type>VADisplay</type>
+        <definition>VADisplay vaapi_recorder::va_dpy</definition>
+        <argsstring></argsstring>
+        <name>va_dpy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" line="89" column="11" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvaapi__recorder_1abf9e203326d80f5be2e8bfacca896da3" prot="public" static="no" mutable="no">
+        <type>VAConfigID</type>
+        <definition>VAConfigID vaapi_recorder::cfg</definition>
+        <argsstring></argsstring>
+        <name>cfg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" line="93" column="12" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvaapi__recorder_1a7bf109bb35915b07f47aafa1da201605" prot="public" static="no" mutable="no">
+        <type>VAContextID</type>
+        <definition>VAContextID vaapi_recorder::ctx</definition>
+        <argsstring></argsstring>
+        <name>ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" line="94" column="13" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvaapi__recorder_1a19c629821e4248df913693cce24e1306" prot="public" static="no" mutable="no">
+        <type>VABufferID</type>
+        <definition>VABufferID vaapi_recorder::pipeline_buf</definition>
+        <argsstring></argsstring>
+        <name>pipeline_buf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" line="95" column="12" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvaapi__recorder_1a410566b93e233695e08cba1784f68b0a" prot="public" static="no" mutable="no">
+        <type>VASurfaceID</type>
+        <definition>VASurfaceID vaapi_recorder::output</definition>
+        <argsstring></argsstring>
+        <name>output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" line="96" column="13" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvaapi__recorder_1a93fd7b043f7408311b32a0982f0e0a0e" prot="public" static="no" mutable="no">
+        <type>struct vaapi_recorder::@3</type>
+        <definition>struct vaapi_recorder::@3 vaapi_recorder::vpp</definition>
+        <argsstring></argsstring>
+        <name>vpp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" line="97" column="5"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvaapi__recorder_1aaab938c61cf673c2c00f53a345637f4d" prot="public" static="no" mutable="no">
+        <type>VASurfaceID</type>
+        <definition>VASurfaceID vaapi_recorder::reference_picture[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>reference_picture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" line="102" column="13" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvaapi__recorder_1ae68e2b0c38284d6c43cc8f7000104e27" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int vaapi_recorder::intra_period</definition>
+        <argsstring></argsstring>
+        <name>intra_period</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" line="104" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvaapi__recorder_1a67434b43d5a5329000b285f0684c597d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int vaapi_recorder::output_size</definition>
+        <argsstring></argsstring>
+        <name>output_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" line="105" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvaapi__recorder_1a6c15210d7375eff614be19709f6d4445" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int vaapi_recorder::constraint_set_flag</definition>
+        <argsstring></argsstring>
+        <name>constraint_set_flag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" line="106" column="5" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvaapi__recorder_1abf684d9b2b0dc9a542366d442b323df0" prot="public" static="no" mutable="no">
+        <type>VAEncSequenceParameterBufferH264</type>
+        <definition>VAEncSequenceParameterBufferH264 vaapi_recorder::seq</definition>
+        <argsstring></argsstring>
+        <name>seq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" line="109" column="34" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvaapi__recorder_1ac28b42278aa91938b53c67f9c0b6415e" prot="public" static="no" mutable="no">
+        <type>VAEncPictureParameterBufferH264</type>
+        <definition>VAEncPictureParameterBufferH264 vaapi_recorder::pic</definition>
+        <argsstring></argsstring>
+        <name>pic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" line="110" column="33" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvaapi__recorder_1a1b715f3ab704b6d31d8b5334df934f63" prot="public" static="no" mutable="no">
+        <type>VAEncSliceParameterBufferH264</type>
+        <definition>VAEncSliceParameterBufferH264 vaapi_recorder::slice</definition>
+        <argsstring></argsstring>
+        <name>slice</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" line="111" column="31" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvaapi__recorder_1aa8b6083e1434063df957b7cb348ba37d" prot="public" static="no" mutable="no">
+        <type>struct vaapi_recorder::@4::@5</type>
+        <definition>struct vaapi_recorder::@4::@5 vaapi_recorder::param</definition>
+        <argsstring></argsstring>
+        <name>param</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" line="112" column="7"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvaapi__recorder_1a815293dd25e7645b4c4b7636675b90c2" prot="public" static="no" mutable="no">
+        <type>struct vaapi_recorder::@4</type>
+        <definition>struct vaapi_recorder::@4 vaapi_recorder::encoder</definition>
+        <argsstring></argsstring>
+        <name>encoder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" line="113" column="9"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" line="73" column="21" bodyfile="/home/lzm/Wayland/weston/libweston/backend-drm/vaapi-recorder.c" bodystart="73" bodyend="114"/>
+    <listofallmembers>
+      <member refid="structvaapi__recorder_1abf9e203326d80f5be2e8bfacca896da3" prot="public" virt="non-virtual"><scope>vaapi_recorder</scope><name>cfg</name></member>
+      <member refid="structvaapi__recorder_1a6c15210d7375eff614be19709f6d4445" prot="public" virt="non-virtual"><scope>vaapi_recorder</scope><name>constraint_set_flag</name></member>
+      <member refid="structvaapi__recorder_1a7bf109bb35915b07f47aafa1da201605" prot="public" virt="non-virtual"><scope>vaapi_recorder</scope><name>ctx</name></member>
+      <member refid="structvaapi__recorder_1af3d569587fd9f027fe16ddeac98ce2c4" prot="public" virt="non-virtual"><scope>vaapi_recorder</scope><name>destroying</name></member>
+      <member refid="structvaapi__recorder_1a84696c7b499060f217422f68d18549c2" prot="public" virt="non-virtual"><scope>vaapi_recorder</scope><name>drm_fd</name></member>
+      <member refid="structvaapi__recorder_1a815293dd25e7645b4c4b7636675b90c2" prot="public" virt="non-virtual"><scope>vaapi_recorder</scope><name>encoder</name></member>
+      <member refid="structvaapi__recorder_1a82e819b340578ab344c6ebd0f2288ffe" prot="public" virt="non-virtual"><scope>vaapi_recorder</scope><name>error</name></member>
+      <member refid="structvaapi__recorder_1a729545e7e92c6132ccc815814e2d1e71" prot="public" virt="non-virtual"><scope>vaapi_recorder</scope><name>frame_count</name></member>
+      <member refid="structvaapi__recorder_1a98f91288471b15d25a6d94eb7491e02b" prot="public" virt="non-virtual"><scope>vaapi_recorder</scope><name>height</name></member>
+      <member refid="structvaapi__recorder_1a1bbe8f8eb9032547b894ce08749ed393" prot="public" virt="non-virtual"><scope>vaapi_recorder</scope><name>input</name></member>
+      <member refid="structvaapi__recorder_1a6ec4843b34609a4dfca8c06ece42b149" prot="public" virt="non-virtual"><scope>vaapi_recorder</scope><name>input_cond</name></member>
+      <member refid="structvaapi__recorder_1ae68e2b0c38284d6c43cc8f7000104e27" prot="public" virt="non-virtual"><scope>vaapi_recorder</scope><name>intra_period</name></member>
+      <member refid="structvaapi__recorder_1a9ab14de15a7554583517cf7c93c209a2" prot="public" virt="non-virtual"><scope>vaapi_recorder</scope><name>mutex</name></member>
+      <member refid="structvaapi__recorder_1a410566b93e233695e08cba1784f68b0a" prot="public" virt="non-virtual"><scope>vaapi_recorder</scope><name>output</name></member>
+      <member refid="structvaapi__recorder_1a08f5dcac4ccf59eafebcd90b40963460" prot="public" virt="non-virtual"><scope>vaapi_recorder</scope><name>output_fd</name></member>
+      <member refid="structvaapi__recorder_1a67434b43d5a5329000b285f0684c597d" prot="public" virt="non-virtual"><scope>vaapi_recorder</scope><name>output_size</name></member>
+      <member refid="structvaapi__recorder_1aa8b6083e1434063df957b7cb348ba37d" prot="public" virt="non-virtual"><scope>vaapi_recorder</scope><name>param</name></member>
+      <member refid="structvaapi__recorder_1ac28b42278aa91938b53c67f9c0b6415e" prot="public" virt="non-virtual"><scope>vaapi_recorder</scope><name>pic</name></member>
+      <member refid="structvaapi__recorder_1a19c629821e4248df913693cce24e1306" prot="public" virt="non-virtual"><scope>vaapi_recorder</scope><name>pipeline_buf</name></member>
+      <member refid="structvaapi__recorder_1af0012c308d7037c9858c3872b8f561a8" prot="public" virt="non-virtual"><scope>vaapi_recorder</scope><name>prime_fd</name></member>
+      <member refid="structvaapi__recorder_1aaab938c61cf673c2c00f53a345637f4d" prot="public" virt="non-virtual"><scope>vaapi_recorder</scope><name>reference_picture</name></member>
+      <member refid="structvaapi__recorder_1abf684d9b2b0dc9a542366d442b323df0" prot="public" virt="non-virtual"><scope>vaapi_recorder</scope><name>seq</name></member>
+      <member refid="structvaapi__recorder_1a1b715f3ab704b6d31d8b5334df934f63" prot="public" virt="non-virtual"><scope>vaapi_recorder</scope><name>slice</name></member>
+      <member refid="structvaapi__recorder_1a77c37ef7d58fe2f70c5117a5f7623edb" prot="public" virt="non-virtual"><scope>vaapi_recorder</scope><name>stride</name></member>
+      <member refid="structvaapi__recorder_1a61d305ec087b35602bbd9cb7bc6ff046" prot="public" virt="non-virtual"><scope>vaapi_recorder</scope><name>va_dpy</name></member>
+      <member refid="structvaapi__recorder_1a12082b81a548b144af02942a57b2c2ca" prot="public" virt="non-virtual"><scope>vaapi_recorder</scope><name>valid</name></member>
+      <member refid="structvaapi__recorder_1a93fd7b043f7408311b32a0982f0e0a0e" prot="public" virt="non-virtual"><scope>vaapi_recorder</scope><name>vpp</name></member>
+      <member refid="structvaapi__recorder_1a3f841d2ec7ef6a5f1556c4f752192722" prot="public" virt="non-virtual"><scope>vaapi_recorder</scope><name>width</name></member>
+      <member refid="structvaapi__recorder_1adaa0be6b6b4aeb4e87b1728080f2f73e" prot="public" virt="non-virtual"><scope>vaapi_recorder</scope><name>worker_thread</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

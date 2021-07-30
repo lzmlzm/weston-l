@@ -1,0 +1,359 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="timeline_8h" kind="file" language="C++">
+    <compoundname>timeline.h</compoundname>
+    <includes local="no">wayland-util.h</includes>
+    <includes local="no">stdbool.h</includes>
+    <includes refid="weston-log_8h" local="no">libweston/weston-log.h</includes>
+    <includes local="no">wayland-server-core.h</includes>
+    <includes local="yes">shared/helpers.h</includes>
+    <includedby refid="compositor_8c" local="yes">/home/lzm/Wayland/weston/libweston/compositor.c</includedby>
+    <includedby refid="gl-renderer_8c" local="yes">/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c</includedby>
+    <includedby refid="timeline_8c" local="yes">/home/lzm/Wayland/weston/libweston/timeline.c</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>stdbool.h</label>
+      </node>
+      <node id="6">
+        <label>stdarg.h</label>
+      </node>
+      <node id="7">
+        <label>stdint.h</label>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="4">
+        <label>libweston/weston-log.h</label>
+        <link refid="weston-log_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>shared/helpers.h</label>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/libweston/timeline.h</label>
+        <link refid="timeline_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>wayland-util.h</label>
+      </node>
+      <node id="9">
+        <label>wayland-server-core.h</label>
+      </node>
+      <node id="8">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>/home/lzm/Wayland/weston/libweston/timeline.c</label>
+        <link refid="timeline_8c"/>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/libweston/timeline.h</label>
+        <link refid="timeline_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c</label>
+        <link refid="gl-renderer_8c"/>
+      </node>
+      <node id="2">
+        <label>/home/lzm/Wayland/weston/libweston/compositor.c</label>
+        <link refid="compositor_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structweston__timeline__subscription" prot="public">weston_timeline_subscription</innerclass>
+    <innerclass refid="structweston__timeline__subscription__object" prot="public">weston_timeline_subscription_object</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__log_1ga54b3c5c32cc5f3527c9a3d11e0d9f54d" prot="public" static="no">
+        <name>TLP_END</name>
+        <initializer><ref refid="timeline_8h_1a008a1fa903f225ad9d217273f3cc5ce8a9ffa135a8f9b2a461691e6f092e00106" kindref="member">TLT_END</ref>, NULL</initializer>
+        <briefdescription>
+<para>Should be used as the last argument when using TL_POINT macro. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/timeline.h" line="77" column="9" bodyfile="/home/lzm/Wayland/weston/libweston/timeline.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="timeline_8h_1a11f747612f1496b3fa2464323c77d153" prot="public" static="no">
+        <name>TLP_OUTPUT</name>
+        <param><defname>o</defname></param>
+        <initializer><ref refid="timeline_8h_1a008a1fa903f225ad9d217273f3cc5ce8ab28ea90660fa0f1f32a7ec3b810fe8e1" kindref="member">TLT_OUTPUT</ref>, TYPEVERIFY(struct <ref refid="structweston__output" kindref="compound">weston_output</ref> *, (o))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/timeline.h" line="79" column="9" bodyfile="/home/lzm/Wayland/weston/libweston/timeline.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="timeline_8h_1a6ed6b1dd7d330e7627d96d9f5ba67510" prot="public" static="no">
+        <name>TLP_SURFACE</name>
+        <param><defname>s</defname></param>
+        <initializer><ref refid="timeline_8h_1a008a1fa903f225ad9d217273f3cc5ce8a4d80c5a60309814140cd8d2901fba6f2" kindref="member">TLT_SURFACE</ref>, TYPEVERIFY(struct <ref refid="structweston__surface" kindref="compound">weston_surface</ref> *, (s))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/timeline.h" line="80" column="9" bodyfile="/home/lzm/Wayland/weston/libweston/timeline.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="timeline_8h_1a03182ad6a1638c52490302369b5c448e" prot="public" static="no">
+        <name>TLP_VBLANK</name>
+        <param><defname>t</defname></param>
+        <initializer><ref refid="timeline_8h_1a008a1fa903f225ad9d217273f3cc5ce8abb72ef87f9613a8fa1eca5e4485c3ed0" kindref="member">TLT_VBLANK</ref>, TYPEVERIFY(const struct timespec *, (t))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/timeline.h" line="81" column="9" bodyfile="/home/lzm/Wayland/weston/libweston/timeline.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="timeline_8h_1a24fad23a0781aab216ac9a6c845c7740" prot="public" static="no">
+        <name>TLP_GPU</name>
+        <param><defname>t</defname></param>
+        <initializer><ref refid="timeline_8h_1a008a1fa903f225ad9d217273f3cc5ce8a06be1a72098a639b3f0fb91c595e8062" kindref="member">TLT_GPU</ref>, TYPEVERIFY(const struct timespec *, (t))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/timeline.h" line="82" column="9" bodyfile="/home/lzm/Wayland/weston/libweston/timeline.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__log_1ga3d4fa53ee35cc16bfc3e78fb964bcdd1" prot="public" static="no">
+        <name>TL_POINT</name>
+        <param><defname>ec</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>	do { \
+	<ref refid="group__log_1ga805835e5bfd0c13d0283e7b7e39022d2" kindref="member">weston_timeline_point</ref>(ec-&gt;timeline, __VA_ARGS__); \
+} while (0)</initializer>
+        <briefdescription>
+<para>This macro is used to add timeline points. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Use TLP_END when done for the vargs.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/timeline.h" line="92" column="9" bodyfile="/home/lzm/Wayland/weston/libweston/timeline.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="timeline_8h_1a008a1fa903f225ad9d217273f3cc5ce8" prot="public" static="no" strong="no">
+        <type></type>
+        <name>timeline_type</name>
+        <enumvalue id="timeline_8h_1a008a1fa903f225ad9d217273f3cc5ce8a9ffa135a8f9b2a461691e6f092e00106" prot="public">
+          <name>TLT_END</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="timeline_8h_1a008a1fa903f225ad9d217273f3cc5ce8ab28ea90660fa0f1f32a7ec3b810fe8e1" prot="public">
+          <name>TLT_OUTPUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="timeline_8h_1a008a1fa903f225ad9d217273f3cc5ce8a4d80c5a60309814140cd8d2901fba6f2" prot="public">
+          <name>TLT_SURFACE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="timeline_8h_1a008a1fa903f225ad9d217273f3cc5ce8abb72ef87f9613a8fa1eca5e4485c3ed0" prot="public">
+          <name>TLT_VBLANK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="timeline_8h_1a008a1fa903f225ad9d217273f3cc5ce8a06be1a72098a639b3f0fb91c595e8062" prot="public">
+          <name>TLT_GPU</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/timeline.h" line="38" column="19" bodyfile="/home/lzm/Wayland/weston/libweston/timeline.h" bodystart="38" bodyend="44"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__log_1ga805835e5bfd0c13d0283e7b7e39022d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void weston_timeline_point</definition>
+        <argsstring>(struct weston_log_scope *timeline_scope, const char *name,...)</argsstring>
+        <name>weston_timeline_point</name>
+        <param>
+          <type>struct <ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref> *</type>
+          <declname>timeline_scope</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+<para>Disseminates the message to all subscriptions of the scope <computeroutput>timeline_scope</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The <ref refid="group__log_1ga3d4fa53ee35cc16bfc3e78fb964bcdd1" kindref="member">TL_POINT()</ref> is a wrapper over this function, but it uses the <ref refid="structweston__compositor" kindref="compound">weston_compositor</ref> instance to pass the timeline scope.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timeline_scope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the timeline scope </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the timeline point. Interpretable by the tool reading the output (wesgr). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/timeline.h" line="97" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/timeline.c" bodystart="406" bodyend="461" declfile="/home/lzm/Wayland/weston/libweston/timeline.h" declline="97" declcolumn="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2014<sp/>Pekka<sp/>Paalanen<sp/>&lt;pq@iki.fi&gt;</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2014,<sp/>2019<sp/>Collabora,<sp/>Ltd.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>(including<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>next<sp/>paragraph)<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>NONINFRINGEMENT.<sp/><sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>WESTON_TIMELINE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WESTON_TIMELINE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;wayland-util.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="weston-log_8h" kindref="compound">libweston/weston-log.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;wayland-server-core.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;shared/helpers.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="timeline_8h_1a008a1fa903f225ad9d217273f3cc5ce8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="timeline_8h_1a008a1fa903f225ad9d217273f3cc5ce8" kindref="member">timeline_type</ref><sp/>{</highlight></codeline>
+<codeline lineno="39" refid="timeline_8h_1a008a1fa903f225ad9d217273f3cc5ce8a9ffa135a8f9b2a461691e6f092e00106" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="timeline_8h_1a008a1fa903f225ad9d217273f3cc5ce8a9ffa135a8f9b2a461691e6f092e00106" kindref="member">TLT_END</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="40" refid="timeline_8h_1a008a1fa903f225ad9d217273f3cc5ce8ab28ea90660fa0f1f32a7ec3b810fe8e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="timeline_8h_1a008a1fa903f225ad9d217273f3cc5ce8ab28ea90660fa0f1f32a7ec3b810fe8e1" kindref="member">TLT_OUTPUT</ref>,</highlight></codeline>
+<codeline lineno="41" refid="timeline_8h_1a008a1fa903f225ad9d217273f3cc5ce8a4d80c5a60309814140cd8d2901fba6f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="timeline_8h_1a008a1fa903f225ad9d217273f3cc5ce8a4d80c5a60309814140cd8d2901fba6f2" kindref="member">TLT_SURFACE</ref>,</highlight></codeline>
+<codeline lineno="42" refid="timeline_8h_1a008a1fa903f225ad9d217273f3cc5ce8abb72ef87f9613a8fa1eca5e4485c3ed0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="timeline_8h_1a008a1fa903f225ad9d217273f3cc5ce8abb72ef87f9613a8fa1eca5e4485c3ed0" kindref="member">TLT_VBLANK</ref>,</highlight></codeline>
+<codeline lineno="43" refid="timeline_8h_1a008a1fa903f225ad9d217273f3cc5ce8a06be1a72098a639b3f0fb91c595e8062" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="timeline_8h_1a008a1fa903f225ad9d217273f3cc5ce8a06be1a72098a639b3f0fb91c595e8062" kindref="member">TLT_GPU</ref>,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="structweston__timeline__subscription" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__timeline__subscription" kindref="compound">weston_timeline_subscription</ref><sp/>{</highlight></codeline>
+<codeline lineno="54" refid="structweston__timeline__subscription_1aa9199d17a4610435159171a929784ac6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structweston__timeline__subscription_1aa9199d17a4610435159171a929784ac6" kindref="member">next_id</ref>;</highlight></codeline>
+<codeline lineno="55" refid="structweston__timeline__subscription_1a3b2578d45d9a2e99cb8c06d2f7c28dab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_list<sp/><ref refid="structweston__timeline__subscription_1a3b2578d45d9a2e99cb8c06d2f7c28dab" kindref="member">objects</ref>;<sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="structweston__timeline__subscription__object" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__timeline__subscription__object" kindref="compound">weston_timeline_subscription_object</ref><sp/>{</highlight></codeline>
+<codeline lineno="65" refid="structweston__timeline__subscription__object_1a607b471a6e5d936d93fa207f513a4f2c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structweston__timeline__subscription__object_1a607b471a6e5d936d93fa207f513a4f2c" kindref="member">object</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66" refid="structweston__timeline__subscription__object_1af6302bc6cf14ef84961eaf66ccbf9b47" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structweston__timeline__subscription__object_1af6302bc6cf14ef84961eaf66ccbf9b47" kindref="member">id</ref>;</highlight></codeline>
+<codeline lineno="67" refid="structweston__timeline__subscription__object_1a2e698a60abee7372d547f856141a5be4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structweston__timeline__subscription__object_1a2e698a60abee7372d547f856141a5be4" kindref="member">force_refresh</ref>;</highlight></codeline>
+<codeline lineno="68" refid="structweston__timeline__subscription__object_1a5ca3b851aab252c1b903a9e41c3028a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_list<sp/><ref refid="structweston__timeline__subscription__object_1a5ca3b851aab252c1b903a9e41c3028a5" kindref="member">subscription_link</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69" refid="structweston__timeline__subscription__object_1a0b7e9795218732f87970c00b7a73c6d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_listener<sp/><ref refid="structweston__timeline__subscription__object_1a0b7e9795218732f87970c00b7a73c6d1" kindref="member">destroy_listener</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="group__log_1ga54b3c5c32cc5f3527c9a3d11e0d9f54d" refkind="member"><highlight class="preprocessor">#define<sp/>TLP_END<sp/>TLT_END,<sp/>NULL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="timeline_8h_1a11f747612f1496b3fa2464323c77d153" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TLP_OUTPUT(o)<sp/>TLT_OUTPUT,<sp/>TYPEVERIFY(struct<sp/>weston_output<sp/>*,<sp/>(o))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="timeline_8h_1a6ed6b1dd7d330e7627d96d9f5ba67510" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TLP_SURFACE(s)<sp/>TLT_SURFACE,<sp/>TYPEVERIFY(struct<sp/>weston_surface<sp/>*,<sp/>(s))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="timeline_8h_1a03182ad6a1638c52490302369b5c448e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TLP_VBLANK(t)<sp/>TLT_VBLANK,<sp/>TYPEVERIFY(const<sp/>struct<sp/>timespec<sp/>*,<sp/>(t))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="timeline_8h_1a24fad23a0781aab216ac9a6c845c7740" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TLP_GPU(t)<sp/>TLT_GPU,<sp/>TYPEVERIFY(const<sp/>struct<sp/>timespec<sp/>*,<sp/>(t))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="group__log_1ga3d4fa53ee35cc16bfc3e78fb964bcdd1" refkind="member"><highlight class="preprocessor">#define<sp/>TL_POINT(ec,<sp/>...)<sp/>do<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="93"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weston_timeline_point(ec-&gt;timeline,<sp/>__VA_ARGS__);<sp/>\</highlight></codeline>
+<codeline lineno="94"><highlight class="preprocessor">}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><ref refid="group__log_1ga805835e5bfd0c13d0283e7b7e39022d2" kindref="member">weston_timeline_point</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structweston__log__scope" kindref="compound">weston_log_scope</ref><sp/>*timeline_scope,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name,<sp/>...);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>WESTON_TIMELINE_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/libweston/timeline.h"/>
+  </compounddef>
+</doxygen>

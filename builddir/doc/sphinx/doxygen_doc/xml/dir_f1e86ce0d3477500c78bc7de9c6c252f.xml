@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_f1e86ce0d3477500c78bc7de9c6c252f" kind="dir">
+    <compoundname>/home/lzm/Wayland/weston/libweston</compoundname>
+    <innerdir refid="dir_f264b7a649e4dd1d0aa9d46fd38b1e64">/home/lzm/Wayland/weston/libweston/backend-drm</innerdir>
+    <innerdir refid="dir_a93b6f93c91bd2d92e7708ce2e79cab4">/home/lzm/Wayland/weston/libweston/backend-fbdev</innerdir>
+    <innerdir refid="dir_ed59fe52c8e7cc149045eee511b8a6dd">/home/lzm/Wayland/weston/libweston/backend-headless</innerdir>
+    <innerdir refid="dir_137d590ab95f26ee3fc50d28cbf8936f">/home/lzm/Wayland/weston/libweston/backend-rdp</innerdir>
+    <innerdir refid="dir_fa7df2dbf9bd0289b67747b286ff546b">/home/lzm/Wayland/weston/libweston/backend-wayland</innerdir>
+    <innerdir refid="dir_c738ea7b663998f48e40f2e57c5eb969">/home/lzm/Wayland/weston/libweston/backend-x11</innerdir>
+    <innerdir refid="dir_57a0571639feb4c32737dc64f43bf1ee">/home/lzm/Wayland/weston/libweston/renderer-gl</innerdir>
+    <innerfile refid="animation_8c">animation.c</innerfile>
+    <innerfile refid="backend_8h">backend.h</innerfile>
+    <innerfile refid="bindings_8c">bindings.c</innerfile>
+    <innerfile refid="clipboard_8c">clipboard.c</innerfile>
+    <innerfile refid="compositor_8c">compositor.c</innerfile>
+    <innerfile refid="content-protection_8c">content-protection.c</innerfile>
+    <innerfile refid="data-device_8c">data-device.c</innerfile>
+    <innerfile refid="dbus_8c">dbus.c</innerfile>
+    <innerfile refid="dbus_8h">dbus.h</innerfile>
+    <innerfile refid="input_8c">input.c</innerfile>
+    <innerfile refid="launcher-direct_8c">launcher-direct.c</innerfile>
+    <innerfile refid="launcher-impl_8h">launcher-impl.h</innerfile>
+    <innerfile refid="launcher-libseat_8c">launcher-libseat.c</innerfile>
+    <innerfile refid="launcher-logind_8c">launcher-logind.c</innerfile>
+    <innerfile refid="launcher-util_8c">launcher-util.c</innerfile>
+    <innerfile refid="launcher-util_8h">launcher-util.h</innerfile>
+    <innerfile refid="launcher-weston-launch_8c">launcher-weston-launch.c</innerfile>
+    <innerfile refid="libinput-device_8c">libinput-device.c</innerfile>
+    <innerfile refid="libinput-device_8h">libinput-device.h</innerfile>
+    <innerfile refid="libinput-seat_8c">libinput-seat.c</innerfile>
+    <innerfile refid="libinput-seat_8h">libinput-seat.h</innerfile>
+    <innerfile refid="libweston-internal_8h">libweston-internal.h</innerfile>
+    <innerfile refid="linux-dmabuf_8c">linux-dmabuf.c</innerfile>
+    <innerfile refid="linux-dmabuf_8h">linux-dmabuf.h</innerfile>
+    <innerfile refid="linux-explicit-synchronization_8c">linux-explicit-synchronization.c</innerfile>
+    <innerfile refid="linux-explicit-synchronization_8h">linux-explicit-synchronization.h</innerfile>
+    <innerfile refid="linux-sync-file-uapi_8h">linux-sync-file-uapi.h</innerfile>
+    <innerfile refid="linux-sync-file_8c">linux-sync-file.c</innerfile>
+    <innerfile refid="linux-sync-file_8h">linux-sync-file.h</innerfile>
+    <innerfile refid="log_8c">log.c</innerfile>
+    <innerfile refid="noop-renderer_8c">noop-renderer.c</innerfile>
+    <innerfile refid="pixel-formats_8c">pixel-formats.c</innerfile>
+    <innerfile refid="pixel-formats_8h">pixel-formats.h</innerfile>
+    <innerfile refid="pixman-renderer_8c">pixman-renderer.c</innerfile>
+    <innerfile refid="pixman-renderer_8h">pixman-renderer.h</innerfile>
+    <innerfile refid="plugin-registry_8c">plugin-registry.c</innerfile>
+    <innerfile refid="screenshooter_8c">screenshooter.c</innerfile>
+    <innerfile refid="spring-tool_8c">spring-tool.c</innerfile>
+    <innerfile refid="timeline_8c">timeline.c</innerfile>
+    <innerfile refid="timeline_8h">timeline.h</innerfile>
+    <innerfile refid="touch-calibration_8c">touch-calibration.c</innerfile>
+    <innerfile refid="vertex-clipping_8c">vertex-clipping.c</innerfile>
+    <innerfile refid="vertex-clipping_8h">vertex-clipping.h</innerfile>
+    <innerfile refid="weston-direct-display_8c">weston-direct-display.c</innerfile>
+    <innerfile refid="weston-launch_8c">weston-launch.c</innerfile>
+    <innerfile refid="weston-launch_8h">weston-launch.h</innerfile>
+    <innerfile refid="weston-log-file_8c">weston-log-file.c</innerfile>
+    <innerfile refid="weston-log-flight-rec_8c">weston-log-flight-rec.c</innerfile>
+    <innerfile refid="weston-log-internal_8h">weston-log-internal.h</innerfile>
+    <innerfile refid="weston-log-wayland_8c">weston-log-wayland.c</innerfile>
+    <innerfile refid="weston-log_8c">weston-log.c</innerfile>
+    <innerfile refid="zoom_8c">zoom.c</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/"/>
+  </compounddef>
+</doxygen>

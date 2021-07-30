@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structpixel__diff__stat_1_1pixel__diff__stat__channel" kind="struct" language="C++" prot="public">
+    <compoundname>pixel_diff_stat::pixel_diff_stat_channel</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpixel__diff__stat_1_1pixel__diff__stat__channel_1a97b59a72e21cb063ab491c4dfcd55ef3" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pixel_diff_stat::pixel_diff_stat_channel::min_diff</definition>
+        <argsstring></argsstring>
+        <name>min_diff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" line="1275" column="5" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" bodystart="1275" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpixel__diff__stat_1_1pixel__diff__stat__channel_1a85bd2a55413c88cf956a62a15433ee2c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pixel_diff_stat::pixel_diff_stat_channel::max_diff</definition>
+        <argsstring></argsstring>
+        <name>max_diff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" line="1276" column="5" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" bodystart="1276" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" line="1274" column="30" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" bodystart="1274" bodyend="1277"/>
+    <listofallmembers>
+      <member refid="structpixel__diff__stat_1_1pixel__diff__stat__channel_1a85bd2a55413c88cf956a62a15433ee2c" prot="public" virt="non-virtual"><scope>pixel_diff_stat::pixel_diff_stat_channel</scope><name>max_diff</name></member>
+      <member refid="structpixel__diff__stat_1_1pixel__diff__stat__channel_1a97b59a72e21cb063ab491c4dfcd55ef3" prot="public" virt="non-virtual"><scope>pixel_diff_stat::pixel_diff_stat_channel</scope><name>min_diff</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

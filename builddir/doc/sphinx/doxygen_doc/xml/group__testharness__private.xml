@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="group__testharness__private" kind="group">
+    <compoundname>testharness_private</compoundname>
+    <title>Test harness private</title>
+    <innerclass refid="structweston__test__entry" prot="public">weston_test_entry</innerclass>
+    <innerclass refid="structfixture__setup__array" prot="public">fixture_setup_array</innerclass>
+    <innerclass refid="structwet__testsuite__data" prot="public">wet_testsuite_data</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__testharness__private_1gaac4452a7487c189982bfeaca04a1326f" prot="public" static="no" strong="no">
+        <type></type>
+        <name>test_type</name>
+        <enumvalue id="group__testharness__private_1ggaac4452a7487c189982bfeaca04a1326fafa838cea02f9c1b9df0c3cc3dbd1dc85" prot="public">
+          <name>TEST_TYPE_STANDALONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__testharness__private_1ggaac4452a7487c189982bfeaca04a1326fa3120f83ea36457050043776ca058fda2" prot="public">
+          <name>TEST_TYPE_PLUGIN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__testharness__private_1ggaac4452a7487c189982bfeaca04a1326fa29e6ee8780af534f3ec9f60fa1c24763" prot="public">
+          <name>TEST_TYPE_CLIENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Weston test types. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="group__testharness_1ga9f98c3e898eb09ad2bd86343199ff619" kindref="member">weston_test_harness_execute_standalone</ref> <ref refid="group__testharness_1gabc3f5a45b58ee07331059eb120f7b2bb" kindref="member">weston_test_harness_execute_as_plugin</ref> <ref refid="group__testharness_1gacd7b26a0f0f337781013b40d229cf262" kindref="member">weston_test_harness_execute_as_client</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-testsuite-data.h" line="54" column="15" bodyfile="/home/lzm/Wayland/weston/tests/weston-testsuite-data.h" bodystart="54" bodyend="58"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__testharness__private_1ga9c3679c70b98a4b2e87d18f7cceaf4a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void compositor_setup_defaults_</definition>
+        <argsstring>(struct compositor_setup *setup, const char *testset_name)</argsstring>
+        <name>compositor_setup_defaults_</name>
+        <param>
+          <type>struct <ref refid="structcompositor__setup" kindref="compound">compositor_setup</ref> *</type>
+          <declname>setup</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>testset_name</declname>
+        </param>
+        <briefdescription>
+<para>Initialize part of compositor setup. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>setup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The variable to initialize. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>testset_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value for testset_name member. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.c" line="177" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.c" bodystart="177" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="group__testharness__private_1gad9955329c6b705ef5be29d881347b5b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int execute_compositor</definition>
+        <argsstring>(const struct compositor_setup *setup, struct wet_testsuite_data *data)</argsstring>
+        <name>execute_compositor</name>
+        <param>
+          <type>const struct <ref refid="structcompositor__setup" kindref="compound">compositor_setup</ref> *</type>
+          <declname>setup</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structwet__testsuite__data" kindref="compound">wet_testsuite_data</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Execute compositor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Manufactures the compositor command line and calls wet_main().</para>
+<para>Returns RESULT_SKIP if the given setup contains features that were disabled in the build, e.g. GL-renderer or DRM-backend. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.c" line="280" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-fixture-compositor.c" bodystart="280" bodyend="442"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

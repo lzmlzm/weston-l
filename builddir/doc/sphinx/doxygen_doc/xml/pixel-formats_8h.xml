@@ -1,0 +1,543 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="pixel-formats_8h" kind="file" language="C++">
+    <compoundname>pixel-formats.h</compoundname>
+    <includes local="no">inttypes.h</includes>
+    <includes local="no">stdbool.h</includes>
+    <includedby refid="drm-gbm_8c" local="yes">/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c</includedby>
+    <includedby refid="drm_8c" local="yes">/home/lzm/Wayland/weston/libweston/backend-drm/drm.c</includedby>
+    <includedby refid="fb_8c" local="no">/home/lzm/Wayland/weston/libweston/backend-drm/fb.c</includedby>
+    <includedby refid="kms_8c" local="yes">/home/lzm/Wayland/weston/libweston/backend-drm/kms.c</includedby>
+    <includedby refid="state-propose_8c" local="no">/home/lzm/Wayland/weston/libweston/backend-drm/state-propose.c</includedby>
+    <includedby refid="compositor_8c" local="yes">/home/lzm/Wayland/weston/libweston/compositor.c</includedby>
+    <includedby refid="pixel-formats_8c" local="yes">/home/lzm/Wayland/weston/libweston/pixel-formats.c</includedby>
+    <includedby refid="egl-glue_8c" local="yes">/home/lzm/Wayland/weston/libweston/renderer-gl/egl-glue.c</includedby>
+    <includedby refid="gl-renderer_8c" local="yes">/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>stdbool.h</label>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/libweston/pixel-formats.h</label>
+        <link refid="pixel-formats_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/drm.c</label>
+        <link refid="drm_8c"/>
+      </node>
+      <node id="8">
+        <label>/home/lzm/Wayland/weston/libweston/pixel-formats.c</label>
+        <link refid="pixel-formats_8c"/>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/libweston/pixel-formats.h</label>
+        <link refid="pixel-formats_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/drm-gbm.c</label>
+        <link refid="drm-gbm_8c"/>
+      </node>
+      <node id="6">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/state-propose.c</label>
+        <link refid="state-propose_8c"/>
+      </node>
+      <node id="9">
+        <label>/home/lzm/Wayland/weston/libweston/renderer-gl/egl-glue.c</label>
+        <link refid="egl-glue_8c"/>
+      </node>
+      <node id="10">
+        <label>/home/lzm/Wayland/weston/libweston/renderer-gl/gl-renderer.c</label>
+        <link refid="gl-renderer_8c"/>
+      </node>
+      <node id="5">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/kms.c</label>
+        <link refid="kms_8c"/>
+      </node>
+      <node id="4">
+        <label>/home/lzm/Wayland/weston/libweston/backend-drm/fb.c</label>
+        <link refid="fb_8c"/>
+      </node>
+      <node id="7">
+        <label>/home/lzm/Wayland/weston/libweston/compositor.c</label>
+        <link refid="compositor_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structpixel__format__info" prot="public">pixel_format_info</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="pixel-formats_8h_1a0cce9d576c08deb3593d8059f7796059" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const struct <ref refid="structpixel__format__info" kindref="compound">pixel_format_info</ref> *</type>
+        <definition>const struct pixel_format_info* pixel_format_get_info</definition>
+        <argsstring>(uint32_t format)</argsstring>
+        <name>pixel_format_get_info</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>format</declname>
+        </param>
+        <briefdescription>
+<para>Get pixel format information for a DRM format code. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Given a DRM format code, return a pixel format info structure describing the properties of that format.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DRM format code to get info for </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pixel format structure (must not be freed), or NULL if the format could not be found </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixel-formats.h" line="130" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/pixel-formats.c" bodystart="433" bodyend="443" declfile="/home/lzm/Wayland/weston/libweston/pixel-formats.h" declline="130" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pixel-formats_8h_1a00dfcd50a33b42c87fe2958fcc70ecaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const struct <ref refid="structpixel__format__info" kindref="compound">pixel_format_info</ref> *</type>
+        <definition>const struct pixel_format_info* pixel_format_get_info_shm</definition>
+        <argsstring>(uint32_t format)</argsstring>
+        <name>pixel_format_get_info_shm</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>format</declname>
+        </param>
+        <briefdescription>
+<para>Get pixel format information for a SHM format code. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Given a SHM format code, return a DRM pixel format info structure describing the properties of that format.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SHM format code to get info for. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pixel format structure (must not be freed), or NULL if the format could not be found. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixel-formats.h" line="143" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/pixel-formats.c" bodystart="422" bodyend="430" declfile="/home/lzm/Wayland/weston/libweston/pixel-formats.h" declline="143" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pixel-formats_8h_1abf04b24bd43721e22d8549b5ff62a488" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const struct <ref refid="structpixel__format__info" kindref="compound">pixel_format_info</ref> *</type>
+        <definition>const struct pixel_format_info* pixel_format_get_info_by_drm_name</definition>
+        <argsstring>(const char *drm_format_name)</argsstring>
+        <name>pixel_format_get_info_by_drm_name</name>
+        <param>
+          <type>const char *</type>
+          <declname>drm_format_name</declname>
+        </param>
+        <briefdescription>
+<para>Get pixel format information for a named DRM format. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Given a DRM format name, return a pixel format info structure describing the properties of that format.</para>
+<para>The DRM format name is the preprocessor token name from drm_fourcc.h without the DRM_FORMAT_ prefix. The search is also case-insensitive. Both &quot;xrgb8888&quot; and &quot;XRGB8888&quot; searches will find DRM_FORMAT_XRGB8888 for example.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>drm_format_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DRM format name to get info for (not NULL) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pixel format structure (must not be freed), or NULL if the name could not be found </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixel-formats.h" line="161" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/pixel-formats.c" bodystart="446" bodyend="458" declfile="/home/lzm/Wayland/weston/libweston/pixel-formats.h" declline="161" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pixel-formats_8h_1a7693e954cf19a486e6828ac20f6e536e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int pixel_format_get_plane_count</definition>
+        <argsstring>(const struct pixel_format_info *format)</argsstring>
+        <name>pixel_format_get_plane_count</name>
+        <param>
+          <type>const struct <ref refid="structpixel__format__info" kindref="compound">pixel_format_info</ref> *</type>
+          <declname>format</declname>
+        </param>
+        <briefdescription>
+<para>Get number of planes used by a pixel format. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Given a pixel format info structure, return the number of planes required for a buffer. Note that this is not necessarily identical to the number of samplers required to be bound, as two views into a single plane are sometimes required.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pixel format info structure </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Number of planes required for the format </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixel-formats.h" line="175" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/pixel-formats.c" bodystart="461" bodyend="464" declfile="/home/lzm/Wayland/weston/libweston/pixel-formats.h" declline="175" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pixel-formats_8h_1a2af6864c6b5195a45ce86313ad92894a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool pixel_format_is_opaque</definition>
+        <argsstring>(const struct pixel_format_info *format)</argsstring>
+        <name>pixel_format_is_opaque</name>
+        <param>
+          <type>const struct <ref refid="structpixel__format__info" kindref="compound">pixel_format_info</ref> *</type>
+          <declname>format</declname>
+        </param>
+        <briefdescription>
+<para>Determine if a pixel format is opaque or contains alpha. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns whether or not the pixel format is opaque, or contains a significant alpha channel. Note that the suggested EGL sampler type may still sample undefined data into the alpha channel; users must consider alpha as 1.0 if the format is opaque, and not rely on the sampler to return this when sampling from the alpha channel.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pixel format info structure </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the format is opaque, or false if it has significant alpha </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixel-formats.h" line="190" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/pixel-formats.c" bodystart="467" bodyend="470" declfile="/home/lzm/Wayland/weston/libweston/pixel-formats.h" declline="190" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pixel-formats_8h_1a230b2c29b1a1e244ef5c24417544a6ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const struct <ref refid="structpixel__format__info" kindref="compound">pixel_format_info</ref> *</type>
+        <definition>const struct pixel_format_info* pixel_format_get_opaque_substitute</definition>
+        <argsstring>(const struct pixel_format_info *format)</argsstring>
+        <name>pixel_format_get_opaque_substitute</name>
+        <param>
+          <type>const struct <ref refid="structpixel__format__info" kindref="compound">pixel_format_info</ref> *</type>
+          <declname>format</declname>
+        </param>
+        <briefdescription>
+<para>Get compatible opaque equivalent for a format. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Given a pixel format info structure, return a format which is wholly compatible with the input format, but opaque, ignoring the alpha channel. If an alpha format is provided, but the content is known to all be opaque, then this can be used as a substitute to avoid blending.</para>
+<para>If the input format is opaque, this function will return the input format.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pixel format info structure </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pixel format info structure for the compatible opaque substitute </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixel-formats.h" line="206" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/pixel-formats.c" bodystart="473" bodyend="479" declfile="/home/lzm/Wayland/weston/libweston/pixel-formats.h" declline="206" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pixel-formats_8h_1a5a87679d713686c9ec969a5fabe2165e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const struct <ref refid="structpixel__format__info" kindref="compound">pixel_format_info</ref> *</type>
+        <definition>const struct pixel_format_info* pixel_format_get_info_by_opaque_substitute</definition>
+        <argsstring>(uint32_t format)</argsstring>
+        <name>pixel_format_get_info_by_opaque_substitute</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>format</declname>
+        </param>
+        <briefdescription>
+<para>For an opaque format, get the equivalent format with alpha instead of an ignored channel. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is the opposite lookup from <ref refid="pixel-formats_8h_1a230b2c29b1a1e244ef5c24417544a6ab" kindref="member">pixel_format_get_opaque_substitute()</ref>. Finds the format whose opaque substitute is the given format.</para>
+<para>If the input format is not opaque or does not have ignored (X) bits, then the search cannot find a match.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DRM format code to search for </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pixel format info structure for the pixel format whose opaque substitute is the argument, or NULL if no match. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixel-formats.h" line="223" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/pixel-formats.c" bodystart="482" bodyend="492" declfile="/home/lzm/Wayland/weston/libweston/pixel-formats.h" declline="223" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pixel-formats_8h_1a632f9bd49b469d3959a770b9aee8d30a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int pixel_format_width_for_plane</definition>
+        <argsstring>(const struct pixel_format_info *format, unsigned int plane, unsigned int width)</argsstring>
+        <name>pixel_format_width_for_plane</name>
+        <param>
+          <type>const struct <ref refid="structpixel__format__info" kindref="compound">pixel_format_info</ref> *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>plane</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+<para>Return the effective sampling width for a given plane. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>When horizontal subsampling is effective, a sampler bound to a secondary plane must bind the sampler with a smaller effective width. This function returns the effective width to use for the sampler, i.e. dividing by hsub.</para>
+<para>If horizontal subsampling is not in effect, this will be equal to the width.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pixel format info structure </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plane</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Zero-indexed plane number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Width of the buffer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Effective width for sampling </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixel-formats.h" line="241" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/pixel-formats.c" bodystart="495" bodyend="504" declfile="/home/lzm/Wayland/weston/libweston/pixel-formats.h" declline="241" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pixel-formats_8h_1a6ad8f47e700342a182235d658cce6dfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int pixel_format_height_for_plane</definition>
+        <argsstring>(const struct pixel_format_info *format, unsigned int plane, unsigned int height)</argsstring>
+        <name>pixel_format_height_for_plane</name>
+        <param>
+          <type>const struct <ref refid="structpixel__format__info" kindref="compound">pixel_format_info</ref> *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>plane</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>Return the effective sampling height for a given plane. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>When vertical subsampling is in effect, a sampler bound to a secondary plane must bind the sampler with a smaller effective height. This function returns the effective height to use for the sampler, i.e. dividing by vsub.</para>
+<para>If vertical subsampling is not in effect, this will be equal to the height.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pixel format info structure </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plane</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Zero-indexed plane number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Height of the buffer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Effective width for sampling </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/pixel-formats.h" line="260" column="1" bodyfile="/home/lzm/Wayland/weston/libweston/pixel-formats.c" bodystart="507" bodyend="516" declfile="/home/lzm/Wayland/weston/libweston/pixel-formats.h" declline="260" declcolumn="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2016,<sp/>2019<sp/>Collabora,<sp/>Ltd.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2018<sp/>DisplayLink<sp/>(UK)<sp/>Ltd.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>(including<sp/>the<sp/>next</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>paragraph)<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/><sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>DEALINGS<sp/>IN<sp/>THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>Author:<sp/>Daniel<sp/>Stone<sp/>&lt;daniels@collabora.com&gt;</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;inttypes.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="structpixel__format__info" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpixel__format__info" kindref="compound">pixel_format_info</ref><sp/>{</highlight></codeline>
+<codeline lineno="39" refid="structpixel__format__info_1a3844ff33eebe78a056668815ee200b58" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structpixel__format__info_1a3844ff33eebe78a056668815ee200b58" kindref="member">format</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="structpixel__format__info_1a3324befd6757b555dbb5954467fb4cc6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structpixel__format__info_1a3324befd6757b555dbb5954467fb4cc6" kindref="member">drm_format_name</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="structpixel__format__info_1a906f4f09b3e20008bd89c7de8f3b3777" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpixel__format__info_1a906f4f09b3e20008bd89c7de8f3b3777" kindref="member">num_planes</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="structpixel__format__info_1a079cdc813054edfcb0ba206d0556d271" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structpixel__format__info_1a079cdc813054edfcb0ba206d0556d271" kindref="member">opaque_substitute</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="structpixel__format__info_1aba79addab011c1decb32279a47f49787" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structpixel__format__info_1aba79addab011c1decb32279a47f49787" kindref="member">sampler_type</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="structpixel__format__info_1a0e82e2cb3508e7dcbf9092c6b90fee34" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpixel__format__info_1a0e82e2cb3508e7dcbf9092c6b90fee34" kindref="member">gl_format</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="structpixel__format__info_1a930cfa401ec615657babfd57f9ea1eae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpixel__format__info_1a930cfa401ec615657babfd57f9ea1eae" kindref="member">gl_type</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="structpixel__format__info_1af3601d2bd7f1ccfb79b7be991e12408e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpixel__format__info_1af3601d2bd7f1ccfb79b7be991e12408e" kindref="member">depth</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="structpixel__format__info_1a8e976bbe9bf81dffc68d6194cd38fa8d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpixel__format__info_1a8e976bbe9bf81dffc68d6194cd38fa8d" kindref="member">bpp</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="structpixel__format__info_1aa9dd919f06866a3a6ed5e53a5210c4df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpixel__format__info_1aa9dd919f06866a3a6ed5e53a5210c4df" kindref="member">hsub</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="structpixel__format__info_1a74acf31bbe30da40d48f7c74bb9a8ec7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpixel__format__info_1a74acf31bbe30da40d48f7c74bb9a8ec7" kindref="member">vsub</ref>;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Ordering<sp/>of<sp/>chroma<sp/>components.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="93" refid="structpixel__format__info_1ace9530abf7b61678b69650dc89937bacadd05608ade5aaf7408a19c95690e2707" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpixel__format__info_1ace9530abf7b61678b69650dc89937bacadd05608ade5aaf7408a19c95690e2707" kindref="member">ORDER_UV</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="94" refid="structpixel__format__info_1ace9530abf7b61678b69650dc89937baca5fc351bb9983b8a079abe657acf05cef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpixel__format__info_1ace9530abf7b61678b69650dc89937baca5fc351bb9983b8a079abe657acf05cef" kindref="member">ORDER_VU</ref>,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><ref refid="structpixel__format__info_1a4297142ce3e592cb45e65bd4b1d5fa80" kindref="member">chroma_order</ref>;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>If<sp/>packed<sp/>YUV<sp/>(num_planes<sp/>==<sp/>1),<sp/>ordering<sp/>of<sp/>luma/chroma</highlight></codeline>
+<codeline lineno="98"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>components.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="100" refid="structpixel__format__info_1ac04ac5675ae08ff1b8f0474aa9c6f1afad6746bd7eefd1b7747b05076bcf157ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpixel__format__info_1ac04ac5675ae08ff1b8f0474aa9c6f1afad6746bd7eefd1b7747b05076bcf157ff" kindref="member">ORDER_LUMA_CHROMA</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="101" refid="structpixel__format__info_1ac04ac5675ae08ff1b8f0474aa9c6f1afa049e72cd94be7c78e133604c7add912b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpixel__format__info_1ac04ac5675ae08ff1b8f0474aa9c6f1afa049e72cd94be7c78e133604c7add912b" kindref="member">ORDER_CHROMA_LUMA</ref>,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><ref refid="structpixel__format__info_1ac4395602e25eb0d335fa1d66c0f7acf9" kindref="member">luma_chroma_order</ref>;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="106" refid="structpixel__format__info_1adab7998986019ff7fff26349dd861625" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpixel__format__info_1adab7998986019ff7fff26349dd861625" kindref="member">r</ref>;</highlight></codeline>
+<codeline lineno="107" refid="structpixel__format__info_1a14ec8ce143f1cf69dbd5a5156623a5ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpixel__format__info_1a14ec8ce143f1cf69dbd5a5156623a5ef" kindref="member">g</ref>;</highlight></codeline>
+<codeline lineno="108" refid="structpixel__format__info_1a1c07cd11c9e5560254766b802a2de9df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpixel__format__info_1a1c07cd11c9e5560254766b802a2de9df" kindref="member">b</ref>;</highlight></codeline>
+<codeline lineno="109" refid="structpixel__format__info_1a0006be2200d8213774580975742a346f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpixel__format__info_1a0006be2200d8213774580975742a346f" kindref="member">a</ref>;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><ref refid="structpixel__format__info_1a70a22530968762973b4e01583b8325ff" kindref="member">bits</ref>;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="114" refid="structpixel__format__info_1a43a90989c50271ce43eb278ef685484fa62a1c5b884665b8357de20f4da9cb25c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpixel__format__info_1a43a90989c50271ce43eb278ef685484fa62a1c5b884665b8357de20f4da9cb25c" kindref="member">PIXEL_COMPONENT_TYPE_FIXED</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="115" refid="structpixel__format__info_1a43a90989c50271ce43eb278ef685484fa91ad2518c8b190f32045b34cd75a891e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpixel__format__info_1a43a90989c50271ce43eb278ef685484fa91ad2518c8b190f32045b34cd75a891e" kindref="member">PIXEL_COMPONENT_TYPE_FLOAT</ref>,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><ref refid="structpixel__format__info_1a1555da5d7ca4b577eb37a55bba1722c1" kindref="member">component_type</ref>;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpixel__format__info" kindref="compound">pixel_format_info</ref><sp/>*</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><ref refid="pixel-formats_8h_1a0cce9d576c08deb3593d8059f7796059" kindref="member">pixel_format_get_info</ref>(uint32_t<sp/><ref refid="structpixel__format__info_1a3844ff33eebe78a056668815ee200b58" kindref="member">format</ref>);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpixel__format__info" kindref="compound">pixel_format_info</ref><sp/>*</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><ref refid="pixel-formats_8h_1a00dfcd50a33b42c87fe2958fcc70ecaf" kindref="member">pixel_format_get_info_shm</ref>(uint32_t<sp/><ref refid="structpixel__format__info_1a3844ff33eebe78a056668815ee200b58" kindref="member">format</ref>);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpixel__format__info" kindref="compound">pixel_format_info</ref><sp/>*</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><ref refid="pixel-formats_8h_1abf04b24bd43721e22d8549b5ff62a488" kindref="member">pixel_format_get_info_by_drm_name</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structpixel__format__info_1a3324befd6757b555dbb5954467fb4cc6" kindref="member">drm_format_name</ref>);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><ref refid="pixel-formats_8h_1a7693e954cf19a486e6828ac20f6e536e" kindref="member">pixel_format_get_plane_count</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpixel__format__info" kindref="compound">pixel_format_info</ref><sp/>*<ref refid="structpixel__format__info_1a3844ff33eebe78a056668815ee200b58" kindref="member">format</ref>);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><ref refid="pixel-formats_8h_1a2af6864c6b5195a45ce86313ad92894a" kindref="member">pixel_format_is_opaque</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpixel__format__info" kindref="compound">pixel_format_info</ref><sp/>*<ref refid="structpixel__format__info_1a3844ff33eebe78a056668815ee200b58" kindref="member">format</ref>);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpixel__format__info" kindref="compound">pixel_format_info</ref><sp/>*</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><ref refid="pixel-formats_8h_1a230b2c29b1a1e244ef5c24417544a6ab" kindref="member">pixel_format_get_opaque_substitute</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpixel__format__info" kindref="compound">pixel_format_info</ref><sp/>*<ref refid="structpixel__format__info_1a3844ff33eebe78a056668815ee200b58" kindref="member">format</ref>);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpixel__format__info" kindref="compound">pixel_format_info</ref><sp/>*</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><ref refid="pixel-formats_8h_1a5a87679d713686c9ec969a5fabe2165e" kindref="member">pixel_format_get_info_by_opaque_substitute</ref>(uint32_t<sp/><ref refid="structpixel__format__info_1a3844ff33eebe78a056668815ee200b58" kindref="member">format</ref>);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><ref refid="pixel-formats_8h_1a632f9bd49b469d3959a770b9aee8d30a" kindref="member">pixel_format_width_for_plane</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpixel__format__info" kindref="compound">pixel_format_info</ref><sp/>*<ref refid="structpixel__format__info_1a3844ff33eebe78a056668815ee200b58" kindref="member">format</ref>,</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>plane,</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><ref refid="pixel-formats_8h_1a6ad8f47e700342a182235d658cce6dfa" kindref="member">pixel_format_height_for_plane</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structpixel__format__info" kindref="compound">pixel_format_info</ref><sp/>*<ref refid="structpixel__format__info_1a3844ff33eebe78a056668815ee200b58" kindref="member">format</ref>,</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>plane,</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height);</highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/libweston/pixel-formats.h"/>
+  </compounddef>
+</doxygen>

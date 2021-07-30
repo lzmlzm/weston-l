@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structweston__ring__buffer" kind="struct" language="C++" prot="public">
+    <compoundname>weston_ring_buffer</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structweston__ring__buffer_1a716a262d0ba19559117c91387a47dec4" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t weston_ring_buffer::append_pos</definition>
+        <argsstring></argsstring>
+        <name>append_pos</name>
+        <briefdescription>
+<para>where in the buffer we are </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log-flight-rec.c" line="42" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log-flight-rec.c" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__ring__buffer_1ab1ec10d975543b252779d40f4917e2fe" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t weston_ring_buffer::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+<para>max length of the ring buffer </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log-flight-rec.c" line="43" column="10" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log-flight-rec.c" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__ring__buffer_1ae3eca07223c1e111ff8f637be5f924ac" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* weston_ring_buffer::buf</definition>
+        <argsstring></argsstring>
+        <name>buf</name>
+        <briefdescription>
+<para>the buffer itself </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log-flight-rec.c" line="44" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log-flight-rec.c" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__ring__buffer_1aa48eb76e0d7a16ba1a123934d1ed2acc" prot="public" static="no" mutable="no">
+        <type>FILE *</type>
+        <definition>FILE* weston_ring_buffer::file</definition>
+        <argsstring></argsstring>
+        <name>file</name>
+        <briefdescription>
+<para>where to write in case we need to dump the buf </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log-flight-rec.c" line="45" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log-flight-rec.c" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structweston__ring__buffer_1a76496f37ab5771d8a2b6c18457d1cef8" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool weston_ring_buffer::overlap</definition>
+        <argsstring></argsstring>
+        <name>overlap</name>
+        <briefdescription>
+<para>in case buff overlaps, hint from where to print buf contents </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/weston-log-flight-rec.c" line="46" column="6" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log-flight-rec.c" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/weston-log-flight-rec.c" line="41" column="25" bodyfile="/home/lzm/Wayland/weston/libweston/weston-log-flight-rec.c" bodystart="41" bodyend="47"/>
+    <listofallmembers>
+      <member refid="structweston__ring__buffer_1a716a262d0ba19559117c91387a47dec4" prot="public" virt="non-virtual"><scope>weston_ring_buffer</scope><name>append_pos</name></member>
+      <member refid="structweston__ring__buffer_1ae3eca07223c1e111ff8f637be5f924ac" prot="public" virt="non-virtual"><scope>weston_ring_buffer</scope><name>buf</name></member>
+      <member refid="structweston__ring__buffer_1aa48eb76e0d7a16ba1a123934d1ed2acc" prot="public" virt="non-virtual"><scope>weston_ring_buffer</scope><name>file</name></member>
+      <member refid="structweston__ring__buffer_1a76496f37ab5771d8a2b6c18457d1cef8" prot="public" virt="non-virtual"><scope>weston_ring_buffer</scope><name>overlap</name></member>
+      <member refid="structweston__ring__buffer_1ab1ec10d975543b252779d40f4917e2fe" prot="public" virt="non-virtual"><scope>weston_ring_buffer</scope><name>size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

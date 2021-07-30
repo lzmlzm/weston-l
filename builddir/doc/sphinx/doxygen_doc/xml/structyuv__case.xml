@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structyuv__case" kind="struct" language="C++" prot="public">
+    <compoundname>yuv_case</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structyuv__case_1a3675368fbe35b9dae19c78b21ee532de" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t yuv_case::drm_format</definition>
+        <argsstring></argsstring>
+        <name>drm_format</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/yuv-buffer-test.c" line="65" column="10" bodyfile="/home/lzm/Wayland/weston/tests/yuv-buffer-test.c" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structyuv__case_1addad3cb9a78ab54a1b36ee59c06003ff" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* yuv_case::drm_format_name</definition>
+        <argsstring></argsstring>
+        <name>drm_format_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/yuv-buffer-test.c" line="66" column="12" bodyfile="/home/lzm/Wayland/weston/tests/yuv-buffer-test.c" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structyuv__case_1aa18ec15f2dc3aa97282d4027b193468e" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structyuv__buffer" kindref="compound">yuv_buffer</ref> *(*</type>
+        <definition>struct yuv_buffer*(* yuv_case::create_buffer) (struct client *client, uint32_t drm_format, pixman_image_t *rgb_image)</definition>
+        <argsstring>)(struct client *client, uint32_t drm_format, pixman_image_t *rgb_image)</argsstring>
+        <name>create_buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/yuv-buffer-test.c" line="66" column="12" bodyfile="/home/lzm/Wayland/weston/tests/yuv-buffer-test.c" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>yuv_buffer</label>
+        <link refid="structyuv__buffer"/>
+      </node>
+      <node id="1">
+        <label>yuv_case</label>
+        <link refid="structyuv__case"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>create_buffer</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lzm/Wayland/weston/tests/yuv-buffer-test.c" line="64" column="15" bodyfile="/home/lzm/Wayland/weston/tests/yuv-buffer-test.c" bodystart="64" bodyend="70"/>
+    <listofallmembers>
+      <member refid="structyuv__case_1aa18ec15f2dc3aa97282d4027b193468e" prot="public" virt="non-virtual"><scope>yuv_case</scope><name>create_buffer</name></member>
+      <member refid="structyuv__case_1a3675368fbe35b9dae19c78b21ee532de" prot="public" virt="non-virtual"><scope>yuv_case</scope><name>drm_format</name></member>
+      <member refid="structyuv__case_1addad3cb9a78ab54a1b36ee59c06003ff" prot="public" virt="non-virtual"><scope>yuv_case</scope><name>drm_format_name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

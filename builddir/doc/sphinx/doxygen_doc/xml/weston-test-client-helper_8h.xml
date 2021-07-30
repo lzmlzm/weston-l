@@ -1,0 +1,1648 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="weston-test-client-helper_8h" kind="file" language="C++">
+    <compoundname>weston-test-client-helper.h</compoundname>
+    <includes local="yes">config.h</includes>
+    <includes local="no">assert.h</includes>
+    <includes local="no">stdbool.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">time.h</includes>
+    <includes local="no">pixman.h</includes>
+    <includes local="no">wayland-client-protocol.h</includes>
+    <includes refid="weston-test-runner_8h" local="yes">weston-test-runner.h</includes>
+    <includes local="yes">weston-test-client-protocol.h</includes>
+    <includes local="yes">weston-screenshooter-client-protocol.h</includes>
+    <includes local="yes">viewporter-client-protocol.h</includes>
+    <includedby refid="alpha-blending-test_8c" local="yes">/home/lzm/Wayland/weston/tests/alpha-blending-test.c</includedby>
+    <includedby refid="bad-buffer-test_8c" local="yes">/home/lzm/Wayland/weston/tests/bad-buffer-test.c</includedby>
+    <includedby refid="buffer-transforms-test_8c" local="yes">/home/lzm/Wayland/weston/tests/buffer-transforms-test.c</includedby>
+    <includedby refid="devices-test_8c" local="yes">/home/lzm/Wayland/weston/tests/devices-test.c</includedby>
+    <includedby refid="drm-smoke-test_8c" local="yes">/home/lzm/Wayland/weston/tests/drm-smoke-test.c</includedby>
+    <includedby refid="event-test_8c" local="yes">/home/lzm/Wayland/weston/tests/event-test.c</includedby>
+    <includedby refid="input-timestamps-helper_8c" local="yes">/home/lzm/Wayland/weston/tests/input-timestamps-helper.c</includedby>
+    <includedby refid="internal-screenshot-test_8c" local="yes">/home/lzm/Wayland/weston/tests/internal-screenshot-test.c</includedby>
+    <includedby refid="ivi-layout-test-client_8c" local="yes">/home/lzm/Wayland/weston/tests/ivi-layout-test-client.c</includedby>
+    <includedby refid="ivi-shell-app-test_8c" local="yes">/home/lzm/Wayland/weston/tests/ivi-shell-app-test.c</includedby>
+    <includedby refid="keyboard-test_8c" local="yes">/home/lzm/Wayland/weston/tests/keyboard-test.c</includedby>
+    <includedby refid="linux-explicit-synchronization-test_8c" local="yes">/home/lzm/Wayland/weston/tests/linux-explicit-synchronization-test.c</includedby>
+    <includedby refid="output-damage-test_8c" local="yes">/home/lzm/Wayland/weston/tests/output-damage-test.c</includedby>
+    <includedby refid="output-transforms-test_8c" local="yes">/home/lzm/Wayland/weston/tests/output-transforms-test.c</includedby>
+    <includedby refid="pointer-test_8c" local="yes">/home/lzm/Wayland/weston/tests/pointer-test.c</includedby>
+    <includedby refid="presentation-test_8c" local="yes">/home/lzm/Wayland/weston/tests/presentation-test.c</includedby>
+    <includedby refid="roles-test_8c" local="yes">/home/lzm/Wayland/weston/tests/roles-test.c</includedby>
+    <includedby refid="string-test_8c" local="yes">/home/lzm/Wayland/weston/tests/string-test.c</includedby>
+    <includedby refid="subsurface-shot-test_8c" local="yes">/home/lzm/Wayland/weston/tests/subsurface-shot-test.c</includedby>
+    <includedby refid="subsurface-test_8c" local="yes">/home/lzm/Wayland/weston/tests/subsurface-test.c</includedby>
+    <includedby refid="text-test_8c" local="yes">/home/lzm/Wayland/weston/tests/text-test.c</includedby>
+    <includedby refid="touch-test_8c" local="yes">/home/lzm/Wayland/weston/tests/touch-test.c</includedby>
+    <includedby refid="viewporter-shot-test_8c" local="yes">/home/lzm/Wayland/weston/tests/viewporter-shot-test.c</includedby>
+    <includedby refid="viewporter-test_8c" local="yes">/home/lzm/Wayland/weston/tests/viewporter-test.c</includedby>
+    <includedby refid="weston-test-client-helper_8c" local="yes">/home/lzm/Wayland/weston/tests/weston-test-client-helper.c</includedby>
+    <includedby refid="yuv-buffer-test_8c" local="yes">/home/lzm/Wayland/weston/tests/yuv-buffer-test.c</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="22">
+        <label>viewporter-client-protocol.h</label>
+      </node>
+      <node id="14">
+        <label>libweston/libweston.h</label>
+        <link refid="libweston_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>weston-test-fixture-compositor.h</label>
+        <link refid="weston-test-fixture-compositor_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>assert.h</label>
+      </node>
+      <node id="21">
+        <label>weston-screenshooter-client-protocol.h</label>
+      </node>
+      <node id="20">
+        <label>weston-test-client-protocol.h</label>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="10">
+        <label>stdlib.h</label>
+      </node>
+      <node id="16">
+        <label>wayland-server.h</label>
+      </node>
+      <node id="15">
+        <label>xkbcommon/xkbcommon.h</label>
+      </node>
+      <node id="12">
+        <label>shared/helpers.h</label>
+      </node>
+      <node id="19">
+        <label>weston-testsuite-data.h</label>
+        <link refid="weston-testsuite-data_8h"/>
+      </node>
+      <node id="8">
+        <label>wayland-client-protocol.h</label>
+      </node>
+      <node id="18">
+        <label>libweston/zalloc.h</label>
+        <link refid="zalloc_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>time.h</label>
+      </node>
+      <node id="17">
+        <label>libweston/matrix.h</label>
+        <link refid="matrix_8h"/>
+      </node>
+      <node id="7">
+        <label>pixman.h</label>
+      </node>
+      <node id="11">
+        <label>wayland-util.h</label>
+      </node>
+      <node id="9">
+        <label>weston-test-runner.h</label>
+        <link refid="weston-test-runner_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>config.h</label>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/tests/weston-test-client-helper.h</label>
+        <link refid="weston-test-client-helper_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="27">
+        <label>/home/lzm/Wayland/weston/tests/yuv-buffer-test.c</label>
+        <link refid="yuv-buffer-test_8c"/>
+      </node>
+      <node id="4">
+        <label>/home/lzm/Wayland/weston/tests/buffer-transforms-test.c</label>
+        <link refid="buffer-transforms-test_8c"/>
+      </node>
+      <node id="8">
+        <label>/home/lzm/Wayland/weston/tests/input-timestamps-helper.c</label>
+        <link refid="input-timestamps-helper_8c"/>
+      </node>
+      <node id="7">
+        <label>/home/lzm/Wayland/weston/tests/event-test.c</label>
+        <link refid="event-test_8c"/>
+      </node>
+      <node id="13">
+        <label>/home/lzm/Wayland/weston/tests/linux-explicit-synchronization-test.c</label>
+        <link refid="linux-explicit-synchronization-test_8c"/>
+      </node>
+      <node id="22">
+        <label>/home/lzm/Wayland/weston/tests/text-test.c</label>
+        <link refid="text-test_8c"/>
+      </node>
+      <node id="19">
+        <label>/home/lzm/Wayland/weston/tests/string-test.c</label>
+        <link refid="string-test_8c"/>
+      </node>
+      <node id="10">
+        <label>/home/lzm/Wayland/weston/tests/ivi-layout-test-client.c</label>
+        <link refid="ivi-layout-test-client_8c"/>
+      </node>
+      <node id="9">
+        <label>/home/lzm/Wayland/weston/tests/internal-screenshot-test.c</label>
+        <link refid="internal-screenshot-test_8c"/>
+      </node>
+      <node id="23">
+        <label>/home/lzm/Wayland/weston/tests/touch-test.c</label>
+        <link refid="touch-test_8c"/>
+      </node>
+      <node id="2">
+        <label>/home/lzm/Wayland/weston/tests/alpha-blending-test.c</label>
+        <link refid="alpha-blending-test_8c"/>
+      </node>
+      <node id="15">
+        <label>/home/lzm/Wayland/weston/tests/output-transforms-test.c</label>
+        <link refid="output-transforms-test_8c"/>
+      </node>
+      <node id="21">
+        <label>/home/lzm/Wayland/weston/tests/subsurface-test.c</label>
+        <link refid="subsurface-test_8c"/>
+      </node>
+      <node id="5">
+        <label>/home/lzm/Wayland/weston/tests/devices-test.c</label>
+        <link refid="devices-test_8c"/>
+      </node>
+      <node id="25">
+        <label>/home/lzm/Wayland/weston/tests/viewporter-test.c</label>
+        <link refid="viewporter-test_8c"/>
+      </node>
+      <node id="14">
+        <label>/home/lzm/Wayland/weston/tests/output-damage-test.c</label>
+        <link refid="output-damage-test_8c"/>
+      </node>
+      <node id="24">
+        <label>/home/lzm/Wayland/weston/tests/viewporter-shot-test.c</label>
+        <link refid="viewporter-shot-test_8c"/>
+      </node>
+      <node id="11">
+        <label>/home/lzm/Wayland/weston/tests/ivi-shell-app-test.c</label>
+        <link refid="ivi-shell-app-test_8c"/>
+      </node>
+      <node id="18">
+        <label>/home/lzm/Wayland/weston/tests/roles-test.c</label>
+        <link refid="roles-test_8c"/>
+      </node>
+      <node id="12">
+        <label>/home/lzm/Wayland/weston/tests/keyboard-test.c</label>
+        <link refid="keyboard-test_8c"/>
+      </node>
+      <node id="16">
+        <label>/home/lzm/Wayland/weston/tests/pointer-test.c</label>
+        <link refid="pointer-test_8c"/>
+      </node>
+      <node id="3">
+        <label>/home/lzm/Wayland/weston/tests/bad-buffer-test.c</label>
+        <link refid="bad-buffer-test_8c"/>
+      </node>
+      <node id="17">
+        <label>/home/lzm/Wayland/weston/tests/presentation-test.c</label>
+        <link refid="presentation-test_8c"/>
+      </node>
+      <node id="6">
+        <label>/home/lzm/Wayland/weston/tests/drm-smoke-test.c</label>
+        <link refid="drm-smoke-test_8c"/>
+      </node>
+      <node id="26">
+        <label>/home/lzm/Wayland/weston/tests/weston-test-client-helper.c</label>
+        <link refid="weston-test-client-helper_8c"/>
+      </node>
+      <node id="1">
+        <label>/home/lzm/Wayland/weston/tests/weston-test-client-helper.h</label>
+        <link refid="weston-test-client-helper_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>/home/lzm/Wayland/weston/tests/subsurface-shot-test.c</label>
+        <link refid="subsurface-shot-test_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structclient" prot="public">client</innerclass>
+    <innerclass refid="structglobal" prot="public">global</innerclass>
+    <innerclass refid="structtest" prot="public">test</innerclass>
+    <innerclass refid="structinput" prot="public">input</innerclass>
+    <innerclass refid="structpointer" prot="public">pointer</innerclass>
+    <innerclass refid="structkeyboard" prot="public">keyboard</innerclass>
+    <innerclass refid="structtouch" prot="public">touch</innerclass>
+    <innerclass refid="structoutput" prot="public">output</innerclass>
+    <innerclass refid="structbuffer" prot="public">buffer</innerclass>
+    <innerclass refid="structsurface" prot="public">surface</innerclass>
+    <innerclass refid="structrectangle" prot="public">rectangle</innerclass>
+    <innerclass refid="structrange" prot="public">range</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="weston-test-client-helper_8h_1ab95988e6d0d010625831b6b8c92a4a9d" prot="public" static="no">
+        <name>client_roundtrip</name>
+        <param><defname>c</defname></param>
+        <initializer>	do { \
+	assert(wl_display_roundtrip((c)-&gt;wl_display) &gt;= 0); \
+} while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="215" column="9" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="weston-test-client-helper_8h_1a37f23eba3475e8976a9f8fee224b0d6a" prot="public" static="no">
+        <name>frame_callback_wait</name>
+        <param><defname>c</defname></param>
+        <param><defname>d</defname></param>
+        <initializer>assert(<ref refid="weston-test-client-helper_8h_1aa2ffb776c995e9f7ef754d6a990eb6d0" kindref="member">frame_callback_wait_nofail</ref>((c), (d)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="225" column="9" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="weston-test-client-helper_8h_1af73e5cb173ce63199265176e2b0e90dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structclient" kindref="compound">client</ref> *</type>
+        <definition>struct client* create_client</definition>
+        <argsstring>(void)</argsstring>
+        <name>create_client</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="189" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" bodystart="940" bodyend="981" declfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" declline="189" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-client-helper_8h_1a9d6289c37c3b56c85f4cc40a7cf71513" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void client_destroy</definition>
+        <argsstring>(struct client *client)</argsstring>
+        <name>client_destroy</name>
+        <param>
+          <type>struct <ref refid="structclient" kindref="compound">client</ref> *</type>
+          <declname>client</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="192" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" bodystart="1047" bodyend="1084" declfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" declline="192" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-client-helper_8h_1a48b9e7f0e76b1c88869a2f8666d8026e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structsurface" kindref="compound">surface</ref> *</type>
+        <definition>struct surface* create_test_surface</definition>
+        <argsstring>(struct client *client)</argsstring>
+        <name>create_test_surface</name>
+        <param>
+          <type>struct <ref refid="structclient" kindref="compound">client</ref> *</type>
+          <declname>client</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="195" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" bodystart="984" bodyend="1000" declfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" declline="195" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-client-helper_8h_1a2c686f203eab16492d51ed7262aa479c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void surface_destroy</definition>
+        <argsstring>(struct surface *surface)</argsstring>
+        <name>surface_destroy</name>
+        <param>
+          <type>struct <ref refid="structsurface" kindref="compound">surface</ref> *</type>
+          <declname>surface</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="198" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" bodystart="1003" bodyend="1010" declfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" declline="198" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-client-helper_8h_1afaf75d0d97a6872840e248ca4e300190" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structclient" kindref="compound">client</ref> *</type>
+        <definition>struct client* create_client_and_test_surface</definition>
+        <argsstring>(int x, int y, int width, int height)</argsstring>
+        <name>create_client_and_test_surface</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="201" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" bodystart="1013" bodyend="1044" declfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" declline="201" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-client-helper_8h_1a1eecc92b5b5e115112d67cbc7f538e8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structbuffer" kindref="compound">buffer</ref> *</type>
+        <definition>struct buffer* create_shm_buffer_a8r8g8b8</definition>
+        <argsstring>(struct client *client, int width, int height)</argsstring>
+        <name>create_shm_buffer_a8r8g8b8</name>
+        <param>
+          <type>struct <ref refid="structclient" kindref="compound">client</ref> *</type>
+          <declname>client</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="204" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" bodystart="492" bodyend="498" declfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" declline="204" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-client-helper_8h_1a014665bba4cce883927372cc5348216f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void buffer_destroy</definition>
+        <argsstring>(struct buffer *buf)</argsstring>
+        <name>buffer_destroy</name>
+        <param>
+          <type>struct <ref refid="structbuffer" kindref="compound">buffer</ref> *</type>
+          <declname>buf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="207" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" bodystart="501" bodyend="515" declfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" declline="207" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-client-helper_8h_1a591d20df97aa31980eb34bcca197bf0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int surface_contains</definition>
+        <argsstring>(struct surface *surface, int x, int y)</argsstring>
+        <name>surface_contains</name>
+        <param>
+          <type>struct <ref refid="structsurface" kindref="compound">surface</ref> *</type>
+          <declname>surface</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="210" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" bodystart="50" bodyend="58" declfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" declline="210" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-client-helper_8h_1a37328a264739e2481da21489c1964335" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void move_client</definition>
+        <argsstring>(struct client *client, int x, int y)</argsstring>
+        <name>move_client</name>
+        <param>
+          <type>struct <ref refid="structclient" kindref="compound">client</ref> *</type>
+          <declname>client</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="213" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" bodystart="98" bodyend="119" declfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" declline="213" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-client-helper_8h_1adb6105ea2e8be1aa9823fda8c44ea704" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct wl_callback *</type>
+        <definition>struct wl_callback* frame_callback_set</definition>
+        <argsstring>(struct wl_surface *surface, int *done)</argsstring>
+        <name>frame_callback_set</name>
+        <param>
+          <type>struct wl_surface *</type>
+          <declname>surface</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>done</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="220" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" bodystart="75" bodyend="84" declfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" declline="220" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-client-helper_8h_1aa2ffb776c995e9f7ef754d6a990eb6d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int frame_callback_wait_nofail</definition>
+        <argsstring>(struct client *client, int *done)</argsstring>
+        <name>frame_callback_wait_nofail</name>
+        <param>
+          <type>struct <ref refid="structclient" kindref="compound">client</ref> *</type>
+          <declname>client</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>done</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="223" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" bodystart="87" bodyend="95" declfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" declline="223" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-client-helper_8h_1a70a6740f5702a0a4d532a927658d028f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void skip</definition>
+        <argsstring>(const char *fmt,...)</argsstring>
+        <name>skip</name>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="228" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" bodystart="871" bodyend="884" declfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" declline="228" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-client-helper_8h_1a3a9a023a48a87193c1a6fc6bbbd8c6ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void expect_protocol_error</definition>
+        <argsstring>(struct client *client, const struct wl_interface *intf, uint32_t code)</argsstring>
+        <name>expect_protocol_error</name>
+        <param>
+          <type>struct <ref refid="structclient" kindref="compound">client</ref> *</type>
+          <declname>client</declname>
+        </param>
+        <param>
+          <type>const struct wl_interface *</type>
+          <declname>intf</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>code</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="231" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" bodystart="887" bodyend="930" declfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" declline="231" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-client-helper_8h_1ae60561096f469244eb55140459df230a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* screenshot_output_filename</definition>
+        <argsstring>(const char *basename, uint32_t seq)</argsstring>
+        <name>screenshot_output_filename</name>
+        <param>
+          <type>const char *</type>
+          <declname>basename</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>seq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="235" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" bodystart="1098" bodyend="1106" declfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" declline="235" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-client-helper_8h_1ac48baacfb41665edc58ab4f3e65fe95c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* screenshot_reference_filename</definition>
+        <argsstring>(const char *basename, uint32_t seq)</argsstring>
+        <name>screenshot_reference_filename</name>
+        <param>
+          <type>const char *</type>
+          <declname>basename</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>seq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="238" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" bodystart="1119" bodyend="1127" declfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" declline="238" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-client-helper_8h_1a739aad515ceacc99cfbde6c4c2cf87af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* image_filename</definition>
+        <argsstring>(const char *basename)</argsstring>
+        <name>image_filename</name>
+        <param>
+          <type>const char *</type>
+          <declname>basename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="241" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" bodystart="1130" bodyend="1137" declfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" declline="241" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-client-helper_8h_1a0bd4d546b3a3aab967fc8eda96a62066" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool check_images_match</definition>
+        <argsstring>(pixman_image_t *img_a, pixman_image_t *img_b, const struct rectangle *clip, const struct range *prec)</argsstring>
+        <name>check_images_match</name>
+        <param>
+          <type>pixman_image_t *</type>
+          <declname>img_a</declname>
+        </param>
+        <param>
+          <type>pixman_image_t *</type>
+          <declname>img_b</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structrectangle" kindref="compound">rectangle</ref> *</type>
+          <declname>clip</declname>
+          <defname>clip_rect</defname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structrange" kindref="compound">range</ref> *</type>
+          <declname>prec</declname>
+        </param>
+        <briefdescription>
+<para>Test if a given region within two images are pixel-identical. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns true if the two images pixel-wise identical, and false otherwise.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>img_a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First image. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>img_b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second image. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>clip_rect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The region of interest, or NULL for comparing the whole images. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>prec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Per-channel allowed difference, or NULL for identical match required.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+This function hard-fails if clip_rect is not inside both images. If clip_rect is given, the images do not have to match in size, otherwise size mismatch will be a hard failure.</para>
+<para>The per-pixel, per-channel difference is computed as img_b - img_a which is required to be in the range [prec-&gt;a, prec-&gt;b] inclusive. The difference is signed. All four channels are compared the same way, without any special meaning on alpha channel. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="244" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" bodystart="1338" bodyend="1370" declfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" declline="244" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-client-helper_8h_1a3ad420bb5f1f58c26b8160716b2d839b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pixman_image_t *</type>
+        <definition>pixman_image_t* visualize_image_difference</definition>
+        <argsstring>(pixman_image_t *img_a, pixman_image_t *img_b, const struct rectangle *clip_rect, const struct range *prec)</argsstring>
+        <name>visualize_image_difference</name>
+        <param>
+          <type>pixman_image_t *</type>
+          <declname>img_a</declname>
+        </param>
+        <param>
+          <type>pixman_image_t *</type>
+          <declname>img_b</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structrectangle" kindref="compound">rectangle</ref> *</type>
+          <declname>clip_rect</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structrange" kindref="compound">range</ref> *</type>
+          <declname>prec</declname>
+        </param>
+        <briefdescription>
+<para>Create a visualization of image differences. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>img_a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First image, which is used as the basis for the output. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>img_b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second image. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>clip_rect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The region of interest, or NULL for comparing the whole images. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>prec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Per-channel allowed difference, or NULL for identical match required. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new image with the differences highlighted.</para>
+</simplesect>
+Regions outside of the region of interest are shaded with black, matching pixels are shaded with green, and differing pixels are shaded with bright red.</para>
+<para>This function hard-fails if clip_rect is not inside both images. If clip_rect is given, the images do not have to match in size, otherwise size mismatch will be a hard failure.</para>
+<para>The per-pixel, per-channel difference is computed as img_b - img_a which is required to be in the range [prec-&gt;a, prec-&gt;b] inclusive. The difference is signed. All four channels are compared the same way, without any special meaning on alpha channel. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="249" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" bodystart="1419" bodyend="1482" declfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" declline="249" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-client-helper_8h_1ae254076694f843e36140c726a0e00005" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool write_image_as_png</definition>
+        <argsstring>(pixman_image_t *image, const char *fname)</argsstring>
+        <name>write_image_as_png</name>
+        <param>
+          <type>pixman_image_t *</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fname</declname>
+        </param>
+        <briefdescription>
+<para>Write an image into a PNG file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>image</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The image. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name and path for the file.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if successfully saved file; false otherwise.</para>
+</simplesect>
+<simplesect kind="note"><para>Only image formats directly supported by Cairo are accepted, not all Pixman formats. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="254" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" bodystart="1496" bodyend="1522" declfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" declline="254" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-client-helper_8h_1ad159fed4fdbc577de29b965501c9d0c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pixman_image_t *</type>
+        <definition>pixman_image_t* load_image_from_png</definition>
+        <argsstring>(const char *fname)</argsstring>
+        <name>load_image_from_png</name>
+        <param>
+          <type>const char *</type>
+          <declname>fname</declname>
+        </param>
+        <briefdescription>
+<para>Load an image from a PNG file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Reads a PNG image from disk using the given filename (and path) and returns as a Pixman image. Use pixman_image_unref() to free it.</para>
+<para>The returned image is always in PIXMAN_a8r8g8b8 format.</para>
+<para><simplesect kind="return"><para>Pixman image, or NULL in case of error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="257" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" bodystart="1566" bodyend="1609" declfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" declline="257" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-client-helper_8h_1a43cb7562bb853f9838e8d7cd4852734b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structbuffer" kindref="compound">buffer</ref> *</type>
+        <definition>struct buffer* capture_screenshot_of_output</definition>
+        <argsstring>(struct client *client)</argsstring>
+        <name>capture_screenshot_of_output</name>
+        <param>
+          <type>struct <ref refid="structclient" kindref="compound">client</ref> *</type>
+          <declname>client</declname>
+        </param>
+        <briefdescription>
+<para>Take screenshot of a single output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Requests a screenshot from the server of the output that the client appears on. This implies that the compositor goes through an output repaint to provide the screenshot before this function returns. This function is therefore both a server roundtrip and a wait for a repaint.</para>
+<para><simplesect kind="return"><para>A new buffer object, that should be freed with <ref refid="weston-test-client-helper_8c_1a014665bba4cce883927372cc5348216f" kindref="member">buffer_destroy()</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="260" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" bodystart="1622" bodyend="1646" declfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" declline="260" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-client-helper_8h_1a1449fafdd0df847d4e4708a03635ddec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool verify_image</definition>
+        <argsstring>(struct buffer *shot, const char *ref_image, int ref_seq_no, const struct rectangle *clip, int seq_no)</argsstring>
+        <name>verify_image</name>
+        <param>
+          <type>struct <ref refid="structbuffer" kindref="compound">buffer</ref> *</type>
+          <declname>shot</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>ref_image</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ref_seq_no</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structrectangle" kindref="compound">rectangle</ref> *</type>
+          <declname>clip</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>seq_no</declname>
+        </param>
+        <briefdescription>
+<para>Verify image contents. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Compares the contents of the given shot to the given reference image over the given clip rectangle, reports whether they match to the test log, and if they do not match writes a visual diff into a PNG file and the screenshot into another PNG file named with <ref refid="group__testharness_1gae81a0b16dc498f48d248e7fb7d819660" kindref="member">get_test_name()</ref> and seq_no.</para>
+<para>The shot image size and the reference image size must both contain the clip rectangle.</para>
+<para>This function uses the pixel value allowed fuzz appropriate for GL-renderer with 8 bits per channel data.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>shot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The image to be verified, usually a screenshot. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ref_image</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reference image file basename, without sequence number and .png suffix. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ref_seq_no</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reference image sequence number. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>clip</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The region of interest, or NULL for comparing the whole images. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>seq_no</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Test sequence number, for writing output files. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the shot matches the reference image, false otherwise.</para>
+</simplesect>
+For bootstrapping, ref_image can be NULL or the file can be missing. In that case the screenshot file is written but no comparison is performed, and false is returned.</para>
+<para><simplesect kind="see"><para><ref refid="weston-test-client-helper_8c_1ac924fe13101f7a8c258314a16bb8dc41" kindref="member">verify_screen_content</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="263" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" bodystart="1704" bodyend="1746" declfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" declline="263" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-client-helper_8h_1ac924fe13101f7a8c258314a16bb8dc41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool verify_screen_content</definition>
+        <argsstring>(struct client *client, const char *ref_image, int ref_seq_no, const struct rectangle *clip, int seq_no)</argsstring>
+        <name>verify_screen_content</name>
+        <param>
+          <type>struct <ref refid="structclient" kindref="compound">client</ref> *</type>
+          <declname>client</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>ref_image</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ref_seq_no</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structrectangle" kindref="compound">rectangle</ref> *</type>
+          <declname>clip</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>seq_no</declname>
+        </param>
+        <briefdescription>
+<para>Take a screenshot and verify its contents. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Takes a screenshot and calls <ref refid="weston-test-client-helper_8c_1a1449fafdd0df847d4e4708a03635ddec" kindref="member">verify_image()</ref> with it.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>client</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The client, for connecting to the compositor. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ref_image</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>See <ref refid="weston-test-client-helper_8c_1a1449fafdd0df847d4e4708a03635ddec" kindref="member">verify_image()</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ref_seq_no</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>See <ref refid="weston-test-client-helper_8c_1a1449fafdd0df847d4e4708a03635ddec" kindref="member">verify_image()</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>clip</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>See <ref refid="weston-test-client-helper_8c_1a1449fafdd0df847d4e4708a03635ddec" kindref="member">verify_image()</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>seq_no</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>See <ref refid="weston-test-client-helper_8c_1a1449fafdd0df847d4e4708a03635ddec" kindref="member">verify_image()</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the screen contents matches the reference image, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="270" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" bodystart="1762" bodyend="1777" declfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" declline="270" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-client-helper_8h_1a21b461fa04a876060467d4c6771d2ddf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structbuffer" kindref="compound">buffer</ref> *</type>
+        <definition>struct buffer* client_buffer_from_image_file</definition>
+        <argsstring>(struct client *client, const char *basename, int scale)</argsstring>
+        <name>client_buffer_from_image_file</name>
+        <param>
+          <type>struct <ref refid="structclient" kindref="compound">client</ref> *</type>
+          <declname>client</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>basename</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+<para>Create a wl_buffer from a PNG file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Loads the named PNG file from the directory of reference images, creates a wl_buffer with scale times the image dimensions in pixels, and copies the image content into the buffer using nearest-neighbor filter.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>client</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The client, for the Wayland connection. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>basename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The PNG file name without .png suffix. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Upscaling factor &gt;= 1. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="277" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" bodystart="1791" bodyend="1829" declfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" declline="277" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-client-helper_8h_1aed27dc43b7c4076e6c8af4c51b19f13d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* bind_to_singleton_global</definition>
+        <argsstring>(struct client *client, const struct wl_interface *iface, int version)</argsstring>
+        <name>bind_to_singleton_global</name>
+        <param>
+          <type>struct <ref refid="structclient" kindref="compound">client</ref> *</type>
+          <declname>client</declname>
+        </param>
+        <param>
+          <type>const struct wl_interface *</type>
+          <declname>iface</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>version</declname>
+        </param>
+        <briefdescription>
+<para>Bind to a singleton global in wl_registry. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>client</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Client whose registry and globals to use. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iface</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Wayland interface to look for. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>version</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The version to bind the interface with. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A struct wl_proxy, which you need to cast to the proper type.</para>
+</simplesect>
+Asserts that the global being searched for is a singleton and is found.</para>
+<para>Binds with the exact version given, does not take compositor interface version into account. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="282" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" bodystart="1845" bodyend="1867" declfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" declline="282" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-client-helper_8h_1a81901fe0b38e9590e62ce88680fcc0ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct wp_viewport *</type>
+        <definition>struct wp_viewport* client_create_viewport</definition>
+        <argsstring>(struct client *client)</argsstring>
+        <name>client_create_viewport</name>
+        <param>
+          <type>struct <ref refid="structclient" kindref="compound">client</ref> *</type>
+          <declname>client</declname>
+        </param>
+        <briefdescription>
+<para>Create a wp_viewport for the client surface. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>client</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The client-&gt;surface to use. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A fresh viewport object. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="287" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" bodystart="1876" bodyend="1889" declfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" declline="287" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-client-helper_8h_1a19461415389d3c87d20bf1151e460f41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fill_image_with_color</definition>
+        <argsstring>(pixman_image_t *image, const pixman_color_t *color)</argsstring>
+        <name>fill_image_with_color</name>
+        <param>
+          <type>pixman_image_t *</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>const pixman_color_t *</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+<para>Fill the image with the given color. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>image</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The image to write to. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The color to use. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="290" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" bodystart="1898" bodyend="1917" declfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" declline="290" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="weston-test-client-helper_8h_1a6c2ea066953a045e2e4e887361ef1dd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pixman_color_t *</type>
+        <definition>pixman_color_t* color_rgb888</definition>
+        <argsstring>(pixman_color_t *tmp, uint8_t r, uint8_t g, uint8_t b)</argsstring>
+        <name>color_rgb888</name>
+        <param>
+          <type>pixman_color_t *</type>
+          <declname>tmp</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Convert 8-bit RGB to opaque Pixman color. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pixman color struct to fill in. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Red value, 0 - 255. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>g</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Green value, 0 - 255. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Blue value, 0 - 255. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>tmp </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" line="293" column="1" bodyfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.c" bodystart="1929" bodyend="1937" declfile="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h" declline="293" declcolumn="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>©<sp/>2012<sp/>Intel<sp/>Corporation</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>(including<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>next<sp/>paragraph)<sp/>shall<sp/>be<sp/>included<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>EXPRESS<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>NONINFRINGEMENT.<sp/><sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_WESTON_TEST_CLIENT_HELPER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_WESTON_TEST_CLIENT_HELPER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;pixman.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;wayland-client-protocol.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="weston-test-runner_8h" kindref="compound">weston-test-runner.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;weston-test-client-protocol.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;weston-screenshooter-client-protocol.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;viewporter-client-protocol.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="structclient" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclient" kindref="compound">client</ref><sp/>{</highlight></codeline>
+<codeline lineno="44" refid="structclient_1a352435d858382f9c925c9f248f12d1ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclient_1a352435d858382f9c925c9f248f12d1ce" kindref="member">wl_display</ref><sp/>*<ref refid="structclient_1a352435d858382f9c925c9f248f12d1ce" kindref="member">wl_display</ref>;</highlight></codeline>
+<codeline lineno="45" refid="structclient_1a9d3ffb64375ce782e18ab3a3bc29fd4b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclient_1a9d3ffb64375ce782e18ab3a3bc29fd4b" kindref="member">wl_registry</ref><sp/>*<ref refid="structclient_1a9d3ffb64375ce782e18ab3a3bc29fd4b" kindref="member">wl_registry</ref>;</highlight></codeline>
+<codeline lineno="46" refid="structclient_1aa5c4464bb82b07c4e4383465307a2d8d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclient_1aa5c4464bb82b07c4e4383465307a2d8d" kindref="member">wl_compositor</ref><sp/>*<ref refid="structclient_1aa5c4464bb82b07c4e4383465307a2d8d" kindref="member">wl_compositor</ref>;</highlight></codeline>
+<codeline lineno="47" refid="structclient_1a84969eaf7f9e7dd6896e7b6b8c5ddca4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclient_1a84969eaf7f9e7dd6896e7b6b8c5ddca4" kindref="member">wl_shm</ref><sp/>*<ref refid="structclient_1a84969eaf7f9e7dd6896e7b6b8c5ddca4" kindref="member">wl_shm</ref>;</highlight></codeline>
+<codeline lineno="48" refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtest" kindref="compound">test</ref><sp/>*<ref refid="structclient_1aa5e3d8c23b08a5795428b5b0bfcd3b8e" kindref="member">test</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>the<sp/>seat<sp/>that<sp/>is<sp/>actually<sp/>used<sp/>for<sp/>input<sp/>events<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structinput" kindref="compound">input</ref><sp/>*<ref refid="structclient_1ae1814ee58540f083f1ba2ce1f0084722" kindref="member">input</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>server<sp/>can<sp/>have<sp/>more<sp/>wl_seats.<sp/>We<sp/>need<sp/>keep<sp/>them<sp/>all<sp/>until<sp/>we</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>find<sp/>the<sp/>one<sp/>that<sp/>we<sp/>need.<sp/>After<sp/>that,<sp/>the<sp/>others</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>will<sp/>be<sp/>destroyed,<sp/>so<sp/>this<sp/>list<sp/>will<sp/>have<sp/>the<sp/>length<sp/>of<sp/>1.</highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>If<sp/>some<sp/>day<sp/>in<sp/>the<sp/>future<sp/>we<sp/>will<sp/>need<sp/>the<sp/>other<sp/>seats,</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>we<sp/>can<sp/>just<sp/>keep<sp/>them<sp/>here.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="structclient_1af00846258eadd39a5b83837d16124762" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_list<sp/><ref refid="structclient_1af00846258eadd39a5b83837d16124762" kindref="member">inputs</ref>;</highlight></codeline>
+<codeline lineno="57" refid="structclient_1a33cd2943396c33cdd874a15ed2f52473" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structoutput" kindref="compound">output</ref><sp/>*<ref refid="structclient_1a33cd2943396c33cdd874a15ed2f52473" kindref="member">output</ref>;</highlight></codeline>
+<codeline lineno="58" refid="structclient_1ab08863485e285fef208584804ca7480a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsurface" kindref="compound">surface</ref><sp/>*<ref refid="structclient_1ab08863485e285fef208584804ca7480a" kindref="member">surface</ref>;</highlight></codeline>
+<codeline lineno="59" refid="structclient_1a8b7c48ff09447daaa5d91d71eafb82bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structclient_1a8b7c48ff09447daaa5d91d71eafb82bb" kindref="member">has_argb</ref>;</highlight></codeline>
+<codeline lineno="60" refid="structclient_1a7c5841d081e771cd4216f7c8572feed2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_list<sp/><ref refid="structclient_1a7c5841d081e771cd4216f7c8572feed2" kindref="member">global_list</ref>;</highlight></codeline>
+<codeline lineno="61" refid="structclient_1aaf7878e687c2487156da8cd97dfb4310" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_list<sp/><ref refid="structclient_1aaf7878e687c2487156da8cd97dfb4310" kindref="member">output_list</ref>;<sp/></highlight><highlight class="comment">/*<sp/>struct<sp/>output::link<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="structclient_1adcb29238763484fbcff4f7ac3ecb4d3a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">weston_screenshooter<sp/>*<ref refid="structclient_1adcb29238763484fbcff4f7ac3ecb4d3a" kindref="member">screenshooter</ref>;</highlight></codeline>
+<codeline lineno="63" refid="structclient_1abb9fdd8290a061c3a77cb0fd7fb9f2ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structclient_1abb9fdd8290a061c3a77cb0fd7fb9f2ed" kindref="member">buffer_copy_done</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="structglobal" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structglobal" kindref="compound">global</ref><sp/>{</highlight></codeline>
+<codeline lineno="67" refid="structglobal_1a7894ae4e045450c7792493e63353ef65" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structglobal_1a7894ae4e045450c7792493e63353ef65" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="68" refid="structglobal_1addc85d2e981c005a33f32104134e1bc8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structglobal_1addc85d2e981c005a33f32104134e1bc8" kindref="member">interface</ref>;</highlight></codeline>
+<codeline lineno="69" refid="structglobal_1a7ebca62067549b259f367c73df87c064" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structglobal_1a7ebca62067549b259f367c73df87c064" kindref="member">version</ref>;</highlight></codeline>
+<codeline lineno="70" refid="structglobal_1aa9abdbaf3ea14a5477f3297648b81978" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_list<sp/><ref refid="structglobal_1aa9abdbaf3ea14a5477f3297648b81978" kindref="member">link</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="structtest" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtest" kindref="compound">test</ref><sp/>{</highlight></codeline>
+<codeline lineno="74" refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structweston__test" kindref="compound">weston_test</ref><sp/>*<ref refid="structtest_1ac67f68f85cec23036bebedc63443bdcd" kindref="member">weston_test</ref>;</highlight></codeline>
+<codeline lineno="75" refid="structtest_1ab0ac9dfb03681b033abfa63aa49e59d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structtest_1ab0ac9dfb03681b033abfa63aa49e59d8" kindref="member">pointer_x</ref>;</highlight></codeline>
+<codeline lineno="76" refid="structtest_1a1787f521a086ce060f5d9f6f17fe6fdb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structtest_1a1787f521a086ce060f5d9f6f17fe6fdb" kindref="member">pointer_y</ref>;</highlight></codeline>
+<codeline lineno="77" refid="structtest_1a0356806bfae79d47252608ef22e4ff8d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structtest_1a0356806bfae79d47252608ef22e4ff8d" kindref="member">n_egl_buffers</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="structinput" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structinput" kindref="compound">input</ref><sp/>{</highlight></codeline>
+<codeline lineno="81" refid="structinput_1ae82b973783001ca5654d5fda7c22c958" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclient" kindref="compound">client</ref><sp/>*<ref refid="structinput_1ae82b973783001ca5654d5fda7c22c958" kindref="member">client</ref>;</highlight></codeline>
+<codeline lineno="82" refid="structinput_1af6a3db5cc930608b78644a1bbcce4d70" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structinput_1af6a3db5cc930608b78644a1bbcce4d70" kindref="member">global_name</ref>;</highlight></codeline>
+<codeline lineno="83" refid="structinput_1af45f5a0b505dce542ea33fe3da08a85d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structinput_1af45f5a0b505dce542ea33fe3da08a85d" kindref="member">wl_seat</ref><sp/>*<ref refid="structinput_1af45f5a0b505dce542ea33fe3da08a85d" kindref="member">wl_seat</ref>;</highlight></codeline>
+<codeline lineno="84" refid="structinput_1abf5e47efd904369fce64cab252801b1f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpointer" kindref="compound">pointer</ref><sp/>*<ref refid="structinput_1abf5e47efd904369fce64cab252801b1f" kindref="member">pointer</ref>;</highlight></codeline>
+<codeline lineno="85" refid="structinput_1abc3887b3a98592fca0055bdb31597b90" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structkeyboard" kindref="compound">keyboard</ref><sp/>*<ref refid="structinput_1abc3887b3a98592fca0055bdb31597b90" kindref="member">keyboard</ref>;</highlight></codeline>
+<codeline lineno="86" refid="structinput_1a9facf568420fea33baa039e0786f3e87" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtouch" kindref="compound">touch</ref><sp/>*<ref refid="structinput_1a9facf568420fea33baa039e0786f3e87" kindref="member">touch</ref>;</highlight></codeline>
+<codeline lineno="87" refid="structinput_1a961613a2b0c06fc8b9009f9530fcbe97" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structinput_1a961613a2b0c06fc8b9009f9530fcbe97" kindref="member">seat_name</ref>;</highlight></codeline>
+<codeline lineno="88" refid="structinput_1ac680907260db3ec09cd3eba48b342124" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>wl_seat_capability<sp/><ref refid="structinput_1ac680907260db3ec09cd3eba48b342124" kindref="member">caps</ref>;</highlight></codeline>
+<codeline lineno="89" refid="structinput_1a0f460269218b558d9d228c89d6c307cc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_list<sp/><ref refid="structinput_1a0f460269218b558d9d228c89d6c307cc" kindref="member">link</ref>;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="structpointer" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpointer" kindref="compound">pointer</ref><sp/>{</highlight></codeline>
+<codeline lineno="93" refid="structpointer_1a49b5af0a96f7491f839d46f8d7bac969" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpointer_1a49b5af0a96f7491f839d46f8d7bac969" kindref="member">wl_pointer</ref><sp/>*<ref refid="structpointer_1a49b5af0a96f7491f839d46f8d7bac969" kindref="member">wl_pointer</ref>;</highlight></codeline>
+<codeline lineno="94" refid="structpointer_1abdf4324f7f4ee4a46dced5080f8ee645" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsurface" kindref="compound">surface</ref><sp/>*<ref refid="structpointer_1abdf4324f7f4ee4a46dced5080f8ee645" kindref="member">focus</ref>;</highlight></codeline>
+<codeline lineno="95" refid="structpointer_1a609c4c6ee72b53ff2245f6e0b438ba32" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpointer_1a609c4c6ee72b53ff2245f6e0b438ba32" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="96" refid="structpointer_1a5fde39991e2687831fadf1f101653810" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpointer_1a5fde39991e2687831fadf1f101653810" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="97" refid="structpointer_1a9fc6f37d552aad4189cf13065df9d3ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structpointer_1a9fc6f37d552aad4189cf13065df9d3ef" kindref="member">button</ref>;</highlight></codeline>
+<codeline lineno="98" refid="structpointer_1aa88404eba7d0a0326e6b0503e6f27e30" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structpointer_1aa88404eba7d0a0326e6b0503e6f27e30" kindref="member">state</ref>;</highlight></codeline>
+<codeline lineno="99" refid="structpointer_1a3a7a32e7eb81d8407ac5c8e9054e8055" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structpointer_1a3a7a32e7eb81d8407ac5c8e9054e8055" kindref="member">axis</ref>;</highlight></codeline>
+<codeline lineno="100" refid="structpointer_1a3ca0be969d952b7997ef459f9e97bc96" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structpointer_1a3ca0be969d952b7997ef459f9e97bc96" kindref="member">axis_value</ref>;</highlight></codeline>
+<codeline lineno="101" refid="structpointer_1af1b3141005e068606b7f882162ea5f5c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structpointer_1af1b3141005e068606b7f882162ea5f5c" kindref="member">motion_time_msec</ref>;</highlight></codeline>
+<codeline lineno="102" refid="structpointer_1abf3f61a5d18bfd2adef4a7e157ff1a0c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structpointer_1abf3f61a5d18bfd2adef4a7e157ff1a0c" kindref="member">button_time_msec</ref>;</highlight></codeline>
+<codeline lineno="103" refid="structpointer_1a2ea12ae16a952f2df2cb0fc180ecb923" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structpointer_1a2ea12ae16a952f2df2cb0fc180ecb923" kindref="member">axis_time_msec</ref>;</highlight></codeline>
+<codeline lineno="104" refid="structpointer_1a87a5178b7991cd1475e4fdff74908011" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structpointer_1a87a5178b7991cd1475e4fdff74908011" kindref="member">axis_stop_time_msec</ref>;</highlight></codeline>
+<codeline lineno="105" refid="structpointer_1a570835d4302069281420dae3c2d575c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timespec<sp/><ref refid="structpointer_1a570835d4302069281420dae3c2d575c1" kindref="member">input_timestamp</ref>;</highlight></codeline>
+<codeline lineno="106" refid="structpointer_1a7c152fc968ca70ab4bcd970ce740a86f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timespec<sp/><ref refid="structpointer_1a7c152fc968ca70ab4bcd970ce740a86f" kindref="member">motion_time_timespec</ref>;</highlight></codeline>
+<codeline lineno="107" refid="structpointer_1a32d4d9f3c83b45be06dfdce222779420" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timespec<sp/><ref refid="structpointer_1a32d4d9f3c83b45be06dfdce222779420" kindref="member">button_time_timespec</ref>;</highlight></codeline>
+<codeline lineno="108" refid="structpointer_1a775dd330288d2c615cd08b9d4f652f1d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timespec<sp/><ref refid="structpointer_1a775dd330288d2c615cd08b9d4f652f1d" kindref="member">axis_time_timespec</ref>;</highlight></codeline>
+<codeline lineno="109" refid="structpointer_1af80c76ce0a2911ee5cffcbf1aef8add6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timespec<sp/><ref refid="structpointer_1af80c76ce0a2911ee5cffcbf1aef8add6" kindref="member">axis_stop_time_timespec</ref>;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="structkeyboard" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structkeyboard" kindref="compound">keyboard</ref><sp/>{</highlight></codeline>
+<codeline lineno="113" refid="structkeyboard_1af83de2f2964ebd01c9017622785bbc3d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structkeyboard_1af83de2f2964ebd01c9017622785bbc3d" kindref="member">wl_keyboard</ref><sp/>*<ref refid="structkeyboard_1af83de2f2964ebd01c9017622785bbc3d" kindref="member">wl_keyboard</ref>;</highlight></codeline>
+<codeline lineno="114" refid="structkeyboard_1a06aad4b35ab08a52de3e894e107f7f81" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsurface" kindref="compound">surface</ref><sp/>*<ref refid="structkeyboard_1a06aad4b35ab08a52de3e894e107f7f81" kindref="member">focus</ref>;</highlight></codeline>
+<codeline lineno="115" refid="structkeyboard_1a321b7e51d52f6353dd1a79db007ce680" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structkeyboard_1a321b7e51d52f6353dd1a79db007ce680" kindref="member">key</ref>;</highlight></codeline>
+<codeline lineno="116" refid="structkeyboard_1ad91e5a995bc6d923ea08bee05aac51b6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structkeyboard_1ad91e5a995bc6d923ea08bee05aac51b6" kindref="member">state</ref>;</highlight></codeline>
+<codeline lineno="117" refid="structkeyboard_1a2ad72b676536692317410757f96d8c27" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structkeyboard_1a2ad72b676536692317410757f96d8c27" kindref="member">mods_depressed</ref>;</highlight></codeline>
+<codeline lineno="118" refid="structkeyboard_1a8bb44ac8e8fceb671ab93f263ccb9617" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structkeyboard_1a8bb44ac8e8fceb671ab93f263ccb9617" kindref="member">mods_latched</ref>;</highlight></codeline>
+<codeline lineno="119" refid="structkeyboard_1a2012e8f062eb115b64e39dfdd94373fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structkeyboard_1a2012e8f062eb115b64e39dfdd94373fb" kindref="member">mods_locked</ref>;</highlight></codeline>
+<codeline lineno="120" refid="structkeyboard_1adb62149681606abc035f3bb35b72aa8d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structkeyboard_1adb62149681606abc035f3bb35b72aa8d" kindref="member">group</ref>;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="122" refid="structkeyboard_1a52c32ae3ad36dead362d3c8fc56c066b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structkeyboard_1a52c32ae3ad36dead362d3c8fc56c066b" kindref="member">rate</ref>;</highlight></codeline>
+<codeline lineno="123" refid="structkeyboard_1a1dfa4ae22ac86834b68c62ae66e760fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structkeyboard_1a1dfa4ae22ac86834b68c62ae66e760fc" kindref="member">delay</ref>;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><ref refid="structkeyboard_1aed056de28ae574695b75ead3b76d42cb" kindref="member">repeat_info</ref>;</highlight></codeline>
+<codeline lineno="125" refid="structkeyboard_1a08428791734bc0760f8c623566a6f69b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structkeyboard_1a08428791734bc0760f8c623566a6f69b" kindref="member">key_time_msec</ref>;</highlight></codeline>
+<codeline lineno="126" refid="structkeyboard_1a876fcf976238714c258bb31c1feccd8d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timespec<sp/><ref refid="structkeyboard_1a876fcf976238714c258bb31c1feccd8d" kindref="member">input_timestamp</ref>;</highlight></codeline>
+<codeline lineno="127" refid="structkeyboard_1ae90d178a3ebc2361a9e48134f370d48c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timespec<sp/><ref refid="structkeyboard_1ae90d178a3ebc2361a9e48134f370d48c" kindref="member">key_time_timespec</ref>;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="structtouch" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtouch" kindref="compound">touch</ref><sp/>{</highlight></codeline>
+<codeline lineno="131" refid="structtouch_1a022ca737a44369f0f2664935bfac14f1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtouch_1a022ca737a44369f0f2664935bfac14f1" kindref="member">wl_touch</ref><sp/>*<ref refid="structtouch_1a022ca737a44369f0f2664935bfac14f1" kindref="member">wl_touch</ref>;</highlight></codeline>
+<codeline lineno="132" refid="structtouch_1aeeda9b8c0a035bdf44c0e24e927fdb91" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structtouch_1aeeda9b8c0a035bdf44c0e24e927fdb91" kindref="member">down_x</ref>;</highlight></codeline>
+<codeline lineno="133" refid="structtouch_1a82b13de54c8ddea0e657c87c6ea244bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structtouch_1a82b13de54c8ddea0e657c87c6ea244bb" kindref="member">down_y</ref>;</highlight></codeline>
+<codeline lineno="134" refid="structtouch_1a1975e8ffbf49234f45b9bf38f1720e30" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structtouch_1a1975e8ffbf49234f45b9bf38f1720e30" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="135" refid="structtouch_1a84b525cac8d1c9b4404eebda5941db55" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structtouch_1a84b525cac8d1c9b4404eebda5941db55" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="136" refid="structtouch_1a10c8641178262cec2e33b47e44bd6454" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structtouch_1a10c8641178262cec2e33b47e44bd6454" kindref="member">id</ref>;</highlight></codeline>
+<codeline lineno="137" refid="structtouch_1a34722ffde1389ecf28701b5da87df488" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structtouch_1a34722ffde1389ecf28701b5da87df488" kindref="member">up_id</ref>;<sp/></highlight><highlight class="comment">/*<sp/>id<sp/>of<sp/>last<sp/>wl_touch.up<sp/>event<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="structtouch_1a15138db97603c8a013e2e5db64009fed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structtouch_1a15138db97603c8a013e2e5db64009fed" kindref="member">frame_no</ref>;</highlight></codeline>
+<codeline lineno="139" refid="structtouch_1a0876c6a76b91e405e281ad53e76331bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structtouch_1a0876c6a76b91e405e281ad53e76331bb" kindref="member">cancel_no</ref>;</highlight></codeline>
+<codeline lineno="140" refid="structtouch_1af945efcc26488980c4fa174893a53782" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structtouch_1af945efcc26488980c4fa174893a53782" kindref="member">down_time_msec</ref>;</highlight></codeline>
+<codeline lineno="141" refid="structtouch_1ae0d4f4b04688d5f0bfe571ff768ab580" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structtouch_1ae0d4f4b04688d5f0bfe571ff768ab580" kindref="member">up_time_msec</ref>;</highlight></codeline>
+<codeline lineno="142" refid="structtouch_1a685805860a13f7c7e551af84cc4162e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structtouch_1a685805860a13f7c7e551af84cc4162e7" kindref="member">motion_time_msec</ref>;</highlight></codeline>
+<codeline lineno="143" refid="structtouch_1a546fca2caba4460e23393111d2244c63" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timespec<sp/><ref refid="structtouch_1a546fca2caba4460e23393111d2244c63" kindref="member">input_timestamp</ref>;</highlight></codeline>
+<codeline lineno="144" refid="structtouch_1a138cc07e6d5dc14151f39b848759f12d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timespec<sp/><ref refid="structtouch_1a138cc07e6d5dc14151f39b848759f12d" kindref="member">down_time_timespec</ref>;</highlight></codeline>
+<codeline lineno="145" refid="structtouch_1a5549af43259d299f13e6c50582740c55" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timespec<sp/><ref refid="structtouch_1a5549af43259d299f13e6c50582740c55" kindref="member">up_time_timespec</ref>;</highlight></codeline>
+<codeline lineno="146" refid="structtouch_1a6e984ecc0d2600e8269fc9d60c900e8f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timespec<sp/><ref refid="structtouch_1a6e984ecc0d2600e8269fc9d60c900e8f" kindref="member">motion_time_timespec</ref>;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="structoutput" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structoutput" kindref="compound">output</ref><sp/>{</highlight></codeline>
+<codeline lineno="150" refid="structoutput_1ab3714f202a35ed8ad64ec34ec33e7c41" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structoutput_1ab3714f202a35ed8ad64ec34ec33e7c41" kindref="member">wl_output</ref><sp/>*<ref refid="structoutput_1ab3714f202a35ed8ad64ec34ec33e7c41" kindref="member">wl_output</ref>;</highlight></codeline>
+<codeline lineno="151" refid="structoutput_1a3b73765192267573e6a570e88c1a27d0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_list<sp/><ref refid="structoutput_1a3b73765192267573e6a570e88c1a27d0" kindref="member">link</ref>;<sp/></highlight><highlight class="comment">/*<sp/>struct<sp/>client::output_list<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152" refid="structoutput_1acaa160777547223ba734d78e4690c24b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structoutput_1acaa160777547223ba734d78e4690c24b" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="153" refid="structoutput_1ac2c2a13096bd351fda95e72cb6f5a254" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structoutput_1ac2c2a13096bd351fda95e72cb6f5a254" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="154" refid="structoutput_1a8d0ce045e764bc53e9cb70b1c5830acb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structoutput_1a8d0ce045e764bc53e9cb70b1c5830acb" kindref="member">width</ref>;</highlight></codeline>
+<codeline lineno="155" refid="structoutput_1ab82f03b52728ed0bdc7471851c0411ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structoutput_1ab82f03b52728ed0bdc7471851c0411ef" kindref="member">height</ref>;</highlight></codeline>
+<codeline lineno="156" refid="structoutput_1aa7a572455f77dc2d50ff14cda028cde2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structoutput_1aa7a572455f77dc2d50ff14cda028cde2" kindref="member">scale</ref>;</highlight></codeline>
+<codeline lineno="157" refid="structoutput_1af5d772347c11941b20b7e83b952d42bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structoutput_1af5d772347c11941b20b7e83b952d42bd" kindref="member">initialized</ref>;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160" refid="structbuffer" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbuffer" kindref="compound">buffer</ref><sp/>{</highlight></codeline>
+<codeline lineno="161" refid="structbuffer_1a47f5f09576d179641e98d1d6730067dc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_buffer<sp/>*<ref refid="structbuffer_1a47f5f09576d179641e98d1d6730067dc" kindref="member">proxy</ref>;</highlight></codeline>
+<codeline lineno="162" refid="structbuffer_1a2966e19c7a1355df268a743450746f8e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="structbuffer_1a2966e19c7a1355df268a743450746f8e" kindref="member">len</ref>;</highlight></codeline>
+<codeline lineno="163" refid="structbuffer_1a6f57d8719ac323d52c3b1fd816dedf76" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pixman_image_t<sp/>*<ref refid="structbuffer_1a6f57d8719ac323d52c3b1fd816dedf76" kindref="member">image</ref>;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166" refid="structsurface" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsurface" kindref="compound">surface</ref><sp/>{</highlight></codeline>
+<codeline lineno="167" refid="structsurface_1a4910a1070e78b84c00c8ab27a508b4da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsurface_1a4910a1070e78b84c00c8ab27a508b4da" kindref="member">wl_surface</ref><sp/>*<ref refid="structsurface_1a4910a1070e78b84c00c8ab27a508b4da" kindref="member">wl_surface</ref>;</highlight></codeline>
+<codeline lineno="168" refid="structsurface_1a37142b17569064055bedc351a7d7dd25" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structoutput" kindref="compound">output</ref><sp/>*<ref refid="structsurface_1a37142b17569064055bedc351a7d7dd25" kindref="member">output</ref>;<sp/></highlight><highlight class="comment">/*<sp/>not<sp/>owned<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169" refid="structsurface_1a104eceda8bfeae5e85ba9feafae1fd74" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsurface_1a104eceda8bfeae5e85ba9feafae1fd74" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="170" refid="structsurface_1a23fe8671b6964ab56aa08c8d211ad4d3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsurface_1a23fe8671b6964ab56aa08c8d211ad4d3" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="171" refid="structsurface_1ad441498d73778f515b36e669b478b04f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsurface_1ad441498d73778f515b36e669b478b04f" kindref="member">width</ref>;</highlight></codeline>
+<codeline lineno="172" refid="structsurface_1a973cb10ddcf4f6f6def6a745fc8ca880" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsurface_1a973cb10ddcf4f6f6def6a745fc8ca880" kindref="member">height</ref>;</highlight></codeline>
+<codeline lineno="173" refid="structsurface_1a6380eb64761a852c50514a0ad1b8a37c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbuffer" kindref="compound">buffer</ref><sp/>*<ref refid="structsurface_1a6380eb64761a852c50514a0ad1b8a37c" kindref="member">buffer</ref>;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176" refid="structrectangle" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structrectangle" kindref="compound">rectangle</ref><sp/>{</highlight></codeline>
+<codeline lineno="177" refid="structrectangle_1a03970481db05be5eb4e1b55eaba3b347" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structrectangle_1a03970481db05be5eb4e1b55eaba3b347" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="178" refid="structrectangle_1a2331724555ab2149f4ce4e2b57079e4d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structrectangle_1a2331724555ab2149f4ce4e2b57079e4d" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="179" refid="structrectangle_1a57a9b24a714057d8d2ca9a06333560d3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structrectangle_1a57a9b24a714057d8d2ca9a06333560d3" kindref="member">width</ref>;</highlight></codeline>
+<codeline lineno="180" refid="structrectangle_1af460193d9a375b8e2813bf1fe6216cce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structrectangle_1af460193d9a375b8e2813bf1fe6216cce" kindref="member">height</ref>;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183" refid="structrange" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structrange" kindref="compound">range</ref><sp/>{</highlight></codeline>
+<codeline lineno="184" refid="structrange_1ad3753c3f7834d8a8e292b098732bed45" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structrange_1ad3753c3f7834d8a8e292b098732bed45" kindref="member">a</ref>;</highlight></codeline>
+<codeline lineno="185" refid="structrange_1ad82038b126576d13756f64833a360042" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structrange_1ad82038b126576d13756f64833a360042" kindref="member">b</ref>;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclient" kindref="compound">client</ref><sp/>*</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><ref refid="weston-test-client-helper_8h_1af73e5cb173ce63199265176e2b0e90dd" kindref="member">create_client</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><ref refid="weston-test-client-helper_8h_1a9d6289c37c3b56c85f4cc40a7cf71513" kindref="member">client_destroy</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclient" kindref="compound">client</ref><sp/>*<ref refid="structclient" kindref="compound">client</ref>);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsurface" kindref="compound">surface</ref><sp/>*</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><ref refid="weston-test-client-helper_8h_1a48b9e7f0e76b1c88869a2f8666d8026e" kindref="member">create_test_surface</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclient" kindref="compound">client</ref><sp/>*<ref refid="structclient" kindref="compound">client</ref>);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><ref refid="weston-test-client-helper_8h_1a2c686f203eab16492d51ed7262aa479c" kindref="member">surface_destroy</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structsurface" kindref="compound">surface</ref><sp/>*<ref refid="structsurface" kindref="compound">surface</ref>);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structclient" kindref="compound">client</ref><sp/>*</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><ref refid="weston-test-client-helper_8h_1afaf75d0d97a6872840e248ca4e300190" kindref="member">create_client_and_test_surface</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbuffer" kindref="compound">buffer</ref><sp/>*</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><ref refid="weston-test-client-helper_8h_1a1eecc92b5b5e115112d67cbc7f538e8d" kindref="member">create_shm_buffer_a8r8g8b8</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclient" kindref="compound">client</ref><sp/>*<ref refid="structclient" kindref="compound">client</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><ref refid="weston-test-client-helper_8h_1a014665bba4cce883927372cc5348216f" kindref="member">buffer_destroy</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbuffer" kindref="compound">buffer</ref><sp/>*buf);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><ref refid="weston-test-client-helper_8h_1a591d20df97aa31980eb34bcca197bf0d" kindref="member">surface_contains</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structsurface" kindref="compound">surface</ref><sp/>*<ref refid="structsurface" kindref="compound">surface</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><ref refid="weston-test-client-helper_8h_1a37328a264739e2481da21489c1964335" kindref="member">move_client</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclient" kindref="compound">client</ref><sp/>*<ref refid="structclient" kindref="compound">client</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215" refid="weston-test-client-helper_8h_1ab95988e6d0d010625831b6b8c92a4a9d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>client_roundtrip(c)<sp/>do<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="216"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(wl_display_roundtrip((c)-&gt;wl_display)<sp/>&gt;=<sp/>0);<sp/>\</highlight></codeline>
+<codeline lineno="217"><highlight class="preprocessor">}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wl_callback<sp/>*</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><ref refid="weston-test-client-helper_8h_1adb6105ea2e8be1aa9823fda8c44ea704" kindref="member">frame_callback_set</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>wl_surface<sp/>*<ref refid="structsurface" kindref="compound">surface</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*done);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><ref refid="weston-test-client-helper_8h_1aa2ffb776c995e9f7ef754d6a990eb6d0" kindref="member">frame_callback_wait_nofail</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclient" kindref="compound">client</ref><sp/>*<ref refid="structclient" kindref="compound">client</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*done);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225" refid="weston-test-client-helper_8h_1a37f23eba3475e8976a9f8fee224b0d6a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>frame_callback_wait(c,<sp/>d)<sp/>assert(frame_callback_wait_nofail((c),<sp/>(d)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><ref refid="weston-test-client-helper_8h_1a70a6740f5702a0a4d532a927658d028f" kindref="member">skip</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*fmt,<sp/>...);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><ref refid="weston-test-client-helper_8h_1a3a9a023a48a87193c1a6fc6bbbd8c6ed" kindref="member">expect_protocol_error</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclient" kindref="compound">client</ref><sp/>*<ref refid="structclient" kindref="compound">client</ref>,</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>wl_interface<sp/>*intf,<sp/>uint32_t<sp/>code);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><ref refid="weston-test-client-helper_8h_1ae60561096f469244eb55140459df230a" kindref="member">screenshot_output_filename</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*basename,<sp/>uint32_t<sp/>seq);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><ref refid="weston-test-client-helper_8h_1ac48baacfb41665edc58ab4f3e65fe95c" kindref="member">screenshot_reference_filename</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*basename,<sp/>uint32_t<sp/>seq);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><ref refid="weston-test-client-helper_8h_1a739aad515ceacc99cfbde6c4c2cf87af" kindref="member">image_filename</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*basename);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><ref refid="weston-test-client-helper_8h_1a0bd4d546b3a3aab967fc8eda96a62066" kindref="member">check_images_match</ref>(pixman_image_t<sp/>*img_a,<sp/>pixman_image_t<sp/>*img_b,</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structrectangle" kindref="compound">rectangle</ref><sp/>*<ref refid="vertex-clipping_8c_1ade0ac16de71f1b411f933a8b2cd513bc" kindref="member">clip</ref>,</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structrange" kindref="compound">range</ref><sp/>*prec);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal">pixman_image_t<sp/>*</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><ref refid="weston-test-client-helper_8h_1a3ad420bb5f1f58c26b8160716b2d839b" kindref="member">visualize_image_difference</ref>(pixman_image_t<sp/>*img_a,<sp/>pixman_image_t<sp/>*img_b,</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structrectangle" kindref="compound">rectangle</ref><sp/>*clip_rect,</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structrange" kindref="compound">range</ref><sp/>*prec);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><ref refid="weston-test-client-helper_8h_1ae254076694f843e36140c726a0e00005" kindref="member">write_image_as_png</ref>(pixman_image_t<sp/>*image,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*fname);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal">pixman_image_t<sp/>*</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><ref refid="weston-test-client-helper_8h_1ad159fed4fdbc577de29b965501c9d0c3" kindref="member">load_image_from_png</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*fname);</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbuffer" kindref="compound">buffer</ref><sp/>*</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><ref refid="weston-test-client-helper_8h_1a43cb7562bb853f9838e8d7cd4852734b" kindref="member">capture_screenshot_of_output</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclient" kindref="compound">client</ref><sp/>*<ref refid="structclient" kindref="compound">client</ref>);</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><ref refid="weston-test-client-helper_8h_1a1449fafdd0df847d4e4708a03635ddec" kindref="member">verify_image</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbuffer" kindref="compound">buffer</ref><sp/>*shot,</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*ref_image,</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ref_seq_no,</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structrectangle" kindref="compound">rectangle</ref><sp/>*<ref refid="vertex-clipping_8c_1ade0ac16de71f1b411f933a8b2cd513bc" kindref="member">clip</ref>,</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>seq_no);</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><ref refid="weston-test-client-helper_8h_1ac924fe13101f7a8c258314a16bb8dc41" kindref="member">verify_screen_content</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclient" kindref="compound">client</ref><sp/>*<ref refid="structclient" kindref="compound">client</ref>,</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*ref_image,</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ref_seq_no,</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structrectangle" kindref="compound">rectangle</ref><sp/>*<ref refid="vertex-clipping_8c_1ade0ac16de71f1b411f933a8b2cd513bc" kindref="member">clip</ref>,</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>seq_no);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbuffer" kindref="compound">buffer</ref><sp/>*</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><ref refid="weston-test-client-helper_8h_1a21b461fa04a876060467d4c6771d2ddf" kindref="member">client_buffer_from_image_file</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclient" kindref="compound">client</ref><sp/>*<ref refid="structclient" kindref="compound">client</ref>,</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*basename,</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>scale);</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><ref refid="weston-test-client-helper_8h_1aed27dc43b7c4076e6c8af4c51b19f13d" kindref="member">bind_to_singleton_global</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclient" kindref="compound">client</ref><sp/>*<ref refid="structclient" kindref="compound">client</ref>,</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>wl_interface<sp/>*iface,</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>version);</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">wp_viewport<sp/>*</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><ref refid="weston-test-client-helper_8h_1a81901fe0b38e9590e62ce88680fcc0ee" kindref="member">client_create_viewport</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structclient" kindref="compound">client</ref><sp/>*<ref refid="structclient" kindref="compound">client</ref>);</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><ref refid="weston-test-client-helper_8h_1a19461415389d3c87d20bf1151e460f41" kindref="member">fill_image_with_color</ref>(pixman_image_t<sp/>*image,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>pixman_color_t<sp/>*color);</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal">pixman_color_t<sp/>*</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><ref refid="weston-test-client-helper_8h_1a6c2ea066953a045e2e4e887361ef1dd1" kindref="member">color_rgb888</ref>(pixman_color_t<sp/>*tmp,<sp/>uint8_t<sp/>r,<sp/>uint8_t<sp/>g,<sp/>uint8_t<sp/>b);</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/lzm/Wayland/weston/tests/weston-test-client-helper.h"/>
+  </compounddef>
+</doxygen>

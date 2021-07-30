@@ -1,0 +1,279 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Libweston &mdash; weston 9.0.90 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Compositor" href="libweston/compositor.html" />
+    <link rel="prev" title="Running Weston" href="running-weston.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> weston
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="running-weston.html">Running Weston</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Libweston</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="libweston/compositor.html">Compositor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libweston/output-management.html">Output management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libweston/log.html">Logging/Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#further-work">Further work</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="test-suite.html">Weston test suite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kiosk-shell.html">Weston kiosk-shell</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">weston</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Libweston</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/toc/libweston.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="libweston">
+<h1>Libweston<a class="headerlink" href="#libweston" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="libweston/compositor.html">Compositor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="libweston/compositor.html#compositor-api">Compositor API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="libweston/output-management.html">Output management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="libweston/head.html">Heads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libweston/output.html">Outputs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="libweston/log.html">Logging/Debugging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="libweston/log.html#weston-s-printf">Weston’s printf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libweston/log.html#logging-context">Logging context</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libweston/log.html#log-scopes">Log scopes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libweston/log.html#subscribers">Subscribers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libweston/log.html#timeline-points">Timeline points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libweston/log.html#debug-protocol-api">Debug protocol API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libweston/log.html#weston-log-api">Weston Log API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libweston/log.html#logging-api">Logging API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libweston/log.html#internal-logging-api">Internal logging API</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p><cite>Libweston</cite> is an effort to separate the re-usable parts of Weston into a
+library. <cite>Libweston</cite> provides most of the boring and tedious bits of correctly
+implementing core Wayland protocols and interfacing with input and output
+systems, so that people who just want to write a new “Wayland window manager”
+(WM) or a small desktop environment (DE) can focus on the WM part.</p>
+<p>Libweston was first introduced in Weston 1.12, and is expected to continue
+evolving through many Weston releases before it achieves a stable API and
+feature completeness.</p>
+<p><cite>Libweston</cite>’s primary purpose is exporting an API for creating Wayland
+compositors. Libweston’s secondary purpose is to export the weston_config API
+so that third party plugins and helper programs can read <code class="file docutils literal notranslate"><span class="pre">weston.ini</span></code> if
+they want to. However, these two scopes are orthogonal and independent. At no
+point will the compositor functionality use or depend on the weston_config
+functionality.</p>
+<div class="section" id="further-work">
+<h2>Further work<a class="headerlink" href="#further-work" title="Permalink to this headline">¶</a></h2>
+<p>In current form, <cite>libweston</cite> is an amalgam of various APIs mashed together and
+currently it needs a large clean-up and re-organization and possibly, a split
+into class-specific files. The documentation only provide the public
+API and not the private API used inside <cite>libweston</cite> or other functionality
+required in the core internals of the library.</p>
+<p>With that in mind we see the following steps needed to achieve that:</p>
+<ul class="simple">
+<li><p>migrate everything that should not reside in the public API (for instance,
+the doxygen <strong>\internal</strong> command is a clear indication that that symbol
+should not be present in the public API) to private headers.</p></li>
+<li><p>if needed be, create class-specific files, like <strong>input</strong> and <strong>output</strong>
+which should tackle specific functionality, and allows to write the
+documentation parts much easier, and provides clarity for <cite>libweston</cite>
+users when they’d read it.</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="libweston/compositor.html" class="btn btn-neutral float-right" title="Compositor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="running-weston.html" class="btn btn-neutral float-left" title="Running Weston" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Weston community.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

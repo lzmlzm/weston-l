@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="unioncmsg__data" kind="union" language="C++" prot="public">
+    <compoundname>cmsg_data</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="unioncmsg__data_1af7d5e4d4da53387675dccdd0bcac927d" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char cmsg_data::b</definition>
+        <argsstring>[4]</argsstring>
+        <name>b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" line="86" column="30" bodyfile="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unioncmsg__data_1a397c85ac7fb2ed9360ea22a2c22ed68a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cmsg_data::fd</definition>
+        <argsstring></argsstring>
+        <name>fd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" line="86" column="36" bodyfile="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" line="86" column="16" bodyfile="/home/lzm/Wayland/weston/libweston/launcher-weston-launch.c" bodystart="86" bodyend="86"/>
+    <listofallmembers>
+      <member refid="unioncmsg__data_1af7d5e4d4da53387675dccdd0bcac927d" prot="public" virt="non-virtual"><scope>cmsg_data</scope><name>b</name></member>
+      <member refid="unioncmsg__data_1a397c85ac7fb2ed9360ea22a2c22ed68a" prot="public" virt="non-virtual"><scope>cmsg_data</scope><name>fd</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

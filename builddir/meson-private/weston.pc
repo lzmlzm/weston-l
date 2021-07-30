@@ -1,0 +1,12 @@
+prefix=/home/lzm/Wayland/install
+libdir=${prefix}/lib/x86_64-linux-gnu
+includedir=${prefix}/include
+
+libexecdir=${prefix}/libexec
+pkglibexecdir=${libexecdir}/weston
+
+Name: Weston Plugin API
+Description: Header files for Weston plugin development
+Version: 9.0.90
+Requires.private: libweston-10
+Cflags: -I${includedir}/weston
