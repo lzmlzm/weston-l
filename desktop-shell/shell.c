@@ -5199,23 +5199,25 @@ wet_shell_init(struct weston_compositor *ec,
 		pws = wl_array_add(&shell->workspaces.array, sizeof *pws);
 		if (pws == NULL)
 			return -1;
-
+		//创建num个workspace
 		*pws = workspace_create(shell);
 		if (*pws == NULL)
 			return -1;
 	}
+	//激活workspace
 	activate_workspace(shell, 0);
 
 	weston_layer_init(&shell->minimized_layer, ec);
 
 	wl_list_init(&shell->workspaces.anim_sticky_list);
 	wl_list_init(&shell->workspaces.animation.link);
+	//workspace切换的动画帧
 	shell->workspaces.animation.frame = animate_workspace_change_frame;
-
+	//设置destop的api
 	shell->desktop = weston_desktop_create(ec, &shell_desktop_api, shell);
 	if (!shell->desktop)
 		return -1;
-
+	//创建全局对象
 	if (wl_global_create(ec->wl_display,
 			     &weston_desktop_shell_interface, 1,
 			     shell, bind_desktop_shell) == NULL)
@@ -5224,26 +5226,28 @@ wet_shell_init(struct weston_compositor *ec,
 	weston_compositor_get_time(&shell->child.deathstamp);
 
 	shell->panel_position = WESTON_DESKTOP_SHELL_PANEL_POSITION_TOP;
-
+	//设置销毁处理函数
 	setup_output_destroy_handler(ec, shell);
-
+	//获得当前显示的loop event句柄
 	loop = wl_display_get_event_loop(ec->wl_display);
+	//launch_desktop_shell_process负责启动桌面上的其他client，如terminal
 	wl_event_loop_add_idle(loop, launch_desktop_shell_process, shell);
 
+	//创建seats
 	wl_list_for_each(seat, &ec->seat_list, link)
 		handle_seat_created(NULL, seat);
 	shell->seat_create_listener.notify = handle_seat_created;
 	wl_signal_add(&ec->seat_created_signal, &shell->seat_create_listener);
-
+	//界面resize处理函数
 	shell->resized_listener.notify = handle_output_resized;
 	wl_signal_add(&ec->output_resized_signal, &shell->resized_listener);
-
+	//创建截图工具
 	screenshooter_create(ec);
-
+	//绑定
 	shell_add_bindings(ec, shell);
-
+	//fade动画初始化
 	shell_fade_init(shell);
-
+	//记录时钟
 	clock_gettime(CLOCK_MONOTONIC, &shell->startup_time);
 
 	return 0;
