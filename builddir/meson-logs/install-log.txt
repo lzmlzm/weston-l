@@ -222,17 +222,3 @@
 /home/lzm/Wayland/install/share/man/man1/weston-debug.1
 /home/lzm/Wayland/install/share/man/man5/weston.ini.5
 /home/lzm/Wayland/install/share/man/man7/weston-drm.7
-/home/lzm/Wayland/install/share/doc/weston/_static/fonts/Lato
-/home/lzm/Wayland/install/share/doc/weston/_static/fonts/RobotoSlab
-/home/lzm/Wayland/install/share/doc/weston/_static/css/fonts
-/home/lzm/Wayland/install/share/doc/weston/_static/fonts
-/home/lzm/Wayland/install/share/doc/weston/_static/css
-/home/lzm/Wayland/install/share/doc/weston/_static/js
-/home/lzm/Wayland/install/share/doc/weston/toc/libweston
-/home/lzm/Wayland/install/share/doc/weston/_sources/toc/libweston
-/home/lzm/Wayland/install/share/doc/weston/_sources/toc
-/home/lzm/Wayland/install/share/doc/weston/_static
-/home/lzm/Wayland/install/share/doc/weston/_images
-/home/lzm/Wayland/install/share/doc/weston/toc
-/home/lzm/Wayland/install/share/doc/weston/_sources
-/home/lzm/Wayland/install/share/doc/weston

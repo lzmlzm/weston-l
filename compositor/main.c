@@ -593,6 +593,7 @@ static const char xdg_detail_message[] =
 static void
 verify_xdg_runtime_dir(void)
 {
+	setenv("XDG_RUNTIME_DIR", "/run/user/1000", 0);
 	char *dir = getenv("XDG_RUNTIME_DIR");
 	struct stat s;
 
