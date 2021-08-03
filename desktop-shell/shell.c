@@ -5166,11 +5166,15 @@ wet_shell_init(struct weston_compositor *ec,
 	wl_signal_add(&ec->wake_signal, &shell->wake_listener);
 	shell->transform_listener.notify = transform_handler;
 	wl_signal_add(&ec->transform_signal, &shell->transform_listener);
-
+	//底层画布，全屏
 	weston_layer_init(&shell->fullscreen_layer, ec);
+	//上方任务栏画布
 	weston_layer_init(&shell->panel_layer, ec);
+	//背景画布
 	weston_layer_init(&shell->background_layer, ec);
+	//屏幕锁定画布
 	weston_layer_init(&shell->lock_layer, ec);
+	//输入层画布
 	weston_layer_init(&shell->input_panel_layer, ec);
 
 	weston_layer_set_position(&shell->fullscreen_layer,
