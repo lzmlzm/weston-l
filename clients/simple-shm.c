@@ -103,7 +103,7 @@ create_shm_buffer(struct display *display, struct buffer *buffer,
 			size, strerror(errno));
 		return -1;
 	}
-
+	//映射共享内存
 	data = mmap(NULL, size, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
 	if (data == MAP_FAILED) {
 		fprintf(stderr, "mmap failed: %s\n", strerror(errno));
@@ -228,7 +228,7 @@ window_next_buffer(struct window *window)
 {
 	struct buffer *buffer;
 	int ret = 0;
-
+	//双buffer机制
 	if (!window->buffers[0].busy)
 		buffer = &window->buffers[0];
 	else if (!window->buffers[1].busy)
@@ -237,6 +237,7 @@ window_next_buffer(struct window *window)
 		return NULL;
 
 	if (!buffer->buffer) {
+		//创建共享内存
 		ret = create_shm_buffer(window->display, buffer,
 					window->width, window->height,
 					WL_SHM_FORMAT_XRGB8888);
@@ -245,13 +246,14 @@ window_next_buffer(struct window *window)
 			return NULL;
 
 		/* paint the padding */
+		//填充黑色的数据，后面进行修改
 		memset(buffer->shm_data, 0xff,
 		       window->width * window->height * 4);
 	}
 
 	return buffer;
 }
-
+//绘制像素
 static void
 paint_pixels(void *image, int padding, int width, int height, uint32_t time)
 {
@@ -305,7 +307,7 @@ redraw(void *data, struct wl_callback *callback, uint32_t time)
 {
 	struct window *window = data;
 	struct buffer *buffer;
-
+	//创建下一个buffer
 	buffer = window_next_buffer(window);
 	if (!buffer) {
 		fprintf(stderr,
@@ -313,7 +315,7 @@ redraw(void *data, struct wl_callback *callback, uint32_t time)
 			"Both buffers busy at redraw(). Server bug?\n");
 		abort();
 	}
-
+	//绘制像素
 	paint_pixels(buffer->shm_data, 20, window->width, window->height, time);
 
 	wl_surface_attach(window->surface, buffer->buffer, 0, 0);
@@ -322,7 +324,7 @@ redraw(void *data, struct wl_callback *callback, uint32_t time)
 
 	if (callback)
 		wl_callback_destroy(callback);
-
+	//添加回调监听为redraw，像素绘制完就可以提交渲染
 	window->callback = wl_surface_frame(window->surface);
 	wl_callback_add_listener(window->callback, &frame_listener, window);
 	wl_surface_commit(window->surface);
@@ -361,7 +363,7 @@ registry_handle_global(void *data, struct wl_registry *registry,
 		       uint32_t id, const char *interface, uint32_t version)
 {
 	struct display *d = data;
-
+	//绑定registry到各个接口
 	if (strcmp(interface, "wl_compositor") == 0) {
 		d->compositor =
 			wl_registry_bind(registry,
@@ -415,46 +417,6 @@ create_display(void)
 	}
 
 	wl_display_roundtrip(display->display);
-
-	/*
-	 * Why do we need two roundtrips here?
-	 *
-	 * wl_display_get_registry() sends a request to the server, to which
-	 * the server replies by emitting the wl_registry.global events.
-	 * The first wl_display_roundtrip() sends wl_display.sync. The server
-	 * first processes the wl_display.get_registry which includes sending
-	 * the global events, and then processes the sync. Therefore when the
-	 * sync (roundtrip) returns, we are guaranteed to have received and
-	 * processed all the global events.
-	 *
-	 * While we are inside the first wl_display_roundtrip(), incoming
-	 * events are dispatched, which causes registry_handle_global() to
-	 * be called for each global. One of these globals is wl_shm.
-	 * registry_handle_global() sends wl_registry.bind request for the
-	 * wl_shm global. However, wl_registry.bind request is sent after
-	 * the first wl_display.sync, so the reply to the sync comes before
-	 * the initial events of the wl_shm object.
-	 *
-	 * The initial events that get sent as a reply to binding to wl_shm
-	 * include wl_shm.format. These tell us which pixel formats are
-	 * supported, and we need them before we can create buffers. They
-	 * don't change at runtime, so we receive them as part of init.
-	 *
-	 * When the reply to the first sync comes, the server may or may not
-	 * have sent the initial wl_shm events. Therefore we need the second
-	 * wl_display_roundtrip() call here.
-	 *
-	 * The server processes the wl_registry.bind for wl_shm first, and
-	 * the second wl_display.sync next. During our second call to
-	 * wl_display_roundtrip() the initial wl_shm events are received and
-	 * processed. Finally, when the reply to the second wl_display.sync
-	 * arrives, it guarantees we have processed all wl_shm initial events.
-	 *
-	 * This sequence contains two examples on how wl_display_roundtrip()
-	 * can be used to guarantee, that all reply events to a request
-	 * have been received and processed. This is a general Wayland
-	 * technique.
-	 */
 
 	if (!display->has_xrgb) {
 		fprintf(stderr, "WL_SHM_FORMAT_XRGB32 not available\n");
@@ -512,7 +474,7 @@ main(int argc, char **argv)
 	/* Initialise damage to full surface, so the padding gets painted */
 	wl_surface_damage(window->surface, 0, 0,
 			  window->width, window->height);
-
+	//第一次进入绘制函数
 	if (!window->wait_for_configure)
 		redraw(window, NULL, 0);
 
