@@ -610,19 +610,23 @@ panel_create(struct desktop *desktop, struct output *output)
 
 	window_set_title(panel->window, "panel");
 	window_set_user_data(panel->window, panel);
-
+	//cairo绘制任务栏
 	widget_set_redraw_handler(panel->widget, panel_redraw_handler);
+
+	//resize处理
 	widget_set_resize_handler(panel->widget, panel_resize_handler);
 
 	panel->panel_position = desktop->panel_position;
 	panel->clock_format = desktop->clock_format;
 	if (panel->clock_format != CLOCK_FORMAT_NONE)
+	//添加时间显示
 		panel_add_clock(panel);
 
 	s = weston_config_get_section(desktop->config, "shell", NULL, NULL);
+	//读取上方任务栏的颜色
 	weston_config_section_get_color(s, "panel-color",
 					&panel->color, 0xaa000000);
-
+	//添加应用icon和应用入口
 	panel_add_launchers(panel, desktop);
 
 	return panel;
@@ -1528,6 +1532,8 @@ int main(int argc, char *argv[])
 	weston_config_section_get_bool(s, "locking", &desktop.locking, true);
 	parse_panel_position(&desktop, s);
 	parse_clock_format(&desktop, s);
+
+	printf("lzm: init desktop-shell\n");
 
 	desktop.display = display_create(&argc, argv);
 	if (desktop.display == NULL) {

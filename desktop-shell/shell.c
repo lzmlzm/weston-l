@@ -3185,6 +3185,7 @@ desktop_shell_set_panel(struct wl_client *client,
 						    surface_resource,
 						    0, 0);
 	} else {
+		//设置任务栏的宽高
 		weston_desktop_shell_send_configure(resource, 0,
 						    surface_resource,
 						    surface->output->width,
@@ -4422,7 +4423,7 @@ static void
 launch_desktop_shell_process(void *data)
 {
 	struct desktop_shell *shell = data;
-
+	//加载shell的client程序
 	shell->child.client = weston_client_start(shell->compositor,
 						  shell->client);
 
@@ -5234,7 +5235,7 @@ wet_shell_init(struct weston_compositor *ec,
 	setup_output_destroy_handler(ec, shell);
 	//获得当前显示的loop event句柄
 	loop = wl_display_get_event_loop(ec->wl_display);
-	//launch_desktop_shell_process负责启动桌面上的其他client，如terminal
+	//launch_desktop_shell_process负责启动桌面client和其他client，如weston-desktop-shell/weston-keyboard
 	wl_event_loop_add_idle(loop, launch_desktop_shell_process, shell);
 
 	//创建seats

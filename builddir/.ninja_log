@@ -691,3 +691,15 @@
 3761	3815	1627908579351297936	tests/test-ivi-shell-app	e9333815228ab43f
 3765	3825	1627908579359297968	tests/test-timespec	27eb2d94f3c74849
 3825	4320	0	meson-install	9bd7faa9472bf40f
+221	404	1627992537646578903	git-version.h	57bc8bba3bcf44
+221	1367	1627992538626604763	clients/weston-desktop-shell.p/desktop-shell.c.o	4e59059b8d8da3ad
+405	1398	1627992538658605608	compositor/libexec_weston.so.0.0.0.p/main.c.o	5a1dbde3b44ff50a
+221	1449	1627992538710606980	desktop-shell/desktop-shell.so.p/shell.c.o	e4cfcfb7d423b814
+404	1503	1627992538762608351	libweston/libweston-10.so.0.0.0.p/compositor.c.o	4a74bfbd86148c64
+1504	1883	1627992539142618378	libweston/libweston-10.so.0.0.0	ef3b2d342482b117
+1883	2189	1627992539142618378	libweston/libweston-10.so.0.0.0.p/libweston-10.so.0.0.0.symbols	59a319ab98fdead
+2189	2405	1627992539666632208	compositor/libexec_weston.so.0.0.0	41ec4b871327c9cb
+2405	2542	1627992539666632208	compositor/libexec_weston.so.0.0.0.p/libexec_weston.so.0.0.0.symbols	dc5a85793205c2bd
+2542	2564	1627992539826636429	desktop-shell/desktop-shell.so	95c4d802b9fe32c2
+1367	2679	1627992539938639386	clients/weston-desktop-shell	835d88e0ab7840e1
+2679	3262	0	meson-install	9bd7faa9472bf40f
