@@ -5460,7 +5460,7 @@ static const struct xdg_popup_listener xdg_popup_listener = {
 	xdg_popup_handle_configure,
 	xdg_popup_handle_popup_done,
 };
-
+//创建菜单栏
 static struct menu *
 create_menu(struct display *display,
 	    struct input *input, uint32_t time,
@@ -5541,7 +5541,7 @@ window_show_menu(struct display *display,
 	int32_t ix, iy;
 	struct rectangle parent_geometry;
 	struct xdg_positioner *positioner;
-
+	
 	menu = create_menu(display, input, time, func, entries, count, parent);
 
 	if (menu == NULL)
@@ -6278,7 +6278,7 @@ display_create(int *argc, char *argv[])
 #endif
 
 	create_cursors(d);
-
+	//创建窗口的主题
 	d->theme = theme_create();
 
 	wl_list_init(&d->window_list);

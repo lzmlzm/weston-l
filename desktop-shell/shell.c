@@ -3120,6 +3120,7 @@ panel_committed(struct weston_surface *es, int32_t sx, int32_t sy)
 	view = container_of(es->views.next, struct weston_view, surface_link);
 
 	get_panel_size(shell, view, &width, &height);
+	weston_log("lzm: width:%d, height:%d\n", width, height);
 	switch (shell->panel_position) {
 	case WESTON_DESKTOP_SHELL_PANEL_POSITION_TOP:
 		break;

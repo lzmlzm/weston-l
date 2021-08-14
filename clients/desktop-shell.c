@@ -610,7 +610,7 @@ panel_create(struct desktop *desktop, struct output *output)
 
 	window_set_title(panel->window, "panel");
 	window_set_user_data(panel->window, panel);
-	//cairo绘制任务栏
+	//cai ro绘制任务栏
 	widget_set_redraw_handler(panel->widget, panel_redraw_handler);
 
 	//resize处理
