@@ -358,6 +358,7 @@ get_output_work_area(struct desktop_shell *shell,
 	case WESTON_DESKTOP_SHELL_PANEL_POSITION_TOP:
 	default:
 		area->y += panel_height;
+		printf("lzm:shell get panel size: %d\n",panel_height);
 		/* fallthrough */
 	case WESTON_DESKTOP_SHELL_PANEL_POSITION_BOTTOM:
 		area->width = output->width;
@@ -1484,6 +1485,7 @@ constrain_position(struct weston_move_grab *move, int *cx, int *cy)
 
 	if (shsurf->shell->panel_position ==
 	    WESTON_DESKTOP_SHELL_PANEL_POSITION_TOP) {
+			printf("lzm:surface constrain_position\n");
 		get_output_work_area(shsurf->shell, surface->output, &area);
 		geometry =
 			weston_desktop_surface_get_geometry(shsurf->desktop_surface);
@@ -3335,7 +3337,7 @@ desktop_shell_set_panel_position(struct wl_client *client,
 				       "bad position argument");
 		return;
 	}
-
+	printf("lzm: position is %d\n", position);
 	shell->panel_position = position;
 }
 

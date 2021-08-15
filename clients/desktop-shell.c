@@ -189,7 +189,7 @@ is_desktop_painted(struct desktop *desktop)
 
 	return 1;
 }
-
+//检查是否准备好
 static void
 check_desktop_ready(struct window *window)
 {
@@ -205,7 +205,7 @@ check_desktop_ready(struct window *window)
 		weston_desktop_shell_desktop_ready(desktop->shell);
 	}
 }
-
+//launcher 中的app启动函数
 static void
 panel_launcher_activate(struct panel_launcher *widget)
 {
@@ -379,7 +379,7 @@ clock_func(struct toytimer *tt)
 
 	widget_schedule_redraw(clock->widget);
 }
-
+//时钟重绘制，更新时间显示
 static void
 panel_clock_redraw_handler(struct widget *widget, void *data)
 {
@@ -417,7 +417,7 @@ panel_clock_redraw_handler(struct widget *widget, void *data)
 	cairo_show_text(cr, string);
 	cairo_destroy(cr);
 }
-
+//时钟定时器重置
 static int
 clock_timer_reset(struct panel_clock *clock)
 {
@@ -445,7 +445,7 @@ panel_destroy_clock(struct panel_clock *clock)
 	toytimer_fini(&clock->timer);
 	free(clock);
 }
-
+//添加时间显示
 static void
 panel_add_clock(struct panel *panel)
 {
@@ -517,7 +517,7 @@ panel_resize_handler(struct widget *widget,
 
 static void
 panel_destroy(struct panel *panel);
-
+//配置panel的大小
 static void
 panel_configure(void *data,
 		struct weston_desktop_shell *desktop_shell,
@@ -541,12 +541,14 @@ panel_configure(void *data,
 	case WESTON_DESKTOP_SHELL_PANEL_POSITION_TOP:
 	case WESTON_DESKTOP_SHELL_PANEL_POSITION_BOTTOM:
 		height = 32;
+		printf("lzm:1\n");
 		break;
 	case WESTON_DESKTOP_SHELL_PANEL_POSITION_LEFT:
 	case WESTON_DESKTOP_SHELL_PANEL_POSITION_RIGHT:
 		switch (desktop->clock_format) {
 		case CLOCK_FORMAT_NONE:
 			width = 32;
+			printf("lzm:2\n");
 			break;
 		case CLOCK_FORMAT_MINUTES:
 			width = 150;
@@ -557,6 +559,7 @@ panel_configure(void *data,
 		}
 		break;
 	}
+	printf("lzm: window size is %d,%d\n",width, height);
 	window_schedule_resize(panel->window, width, height);
 }
 
@@ -593,7 +596,7 @@ panel_destroy(struct panel *panel)
 
 	free(panel);
 }
-
+//创建panel
 static struct panel *
 panel_create(struct desktop *desktop, struct output *output)
 {
@@ -603,20 +606,25 @@ panel_create(struct desktop *desktop, struct output *output)
 	panel = xzalloc(sizeof *panel);
 
 	panel->owner = output;
+	//配置panel的大小
 	panel->base.configure = panel_configure;
+	//创建window
 	panel->window = window_create_custom(desktop->display);
+	//创建widget组件
 	panel->widget = window_add_widget(panel->window, panel);
+	//初始化launcher列表
 	wl_list_init(&panel->launcher_list);
 
 	window_set_title(panel->window, "panel");
 	window_set_user_data(panel->window, panel);
-	//cai ro绘制任务栏
+	//cairo绘制任务栏
 	widget_set_redraw_handler(panel->widget, panel_redraw_handler);
 
 	//resize处理
 	widget_set_resize_handler(panel->widget, panel_resize_handler);
-
+	//设置panel的位置
 	panel->panel_position = desktop->panel_position;
+	//设置时间显示格式
 	panel->clock_format = desktop->clock_format;
 	if (panel->clock_format != CLOCK_FORMAT_NONE)
 	//添加时间显示
@@ -631,7 +639,7 @@ panel_create(struct desktop *desktop, struct output *output)
 
 	return panel;
 }
-
+//绘制launcher的icon图标
 static cairo_surface_t *
 load_icon_or_fallback(const char *icon)
 {
@@ -668,7 +676,7 @@ load_icon_or_fallback(const char *icon)
 
 	return surface;
 }
-
+//添加launcher
 static void
 panel_add_launcher(struct panel *panel, const char *icon, const char *path)
 {
@@ -749,7 +757,7 @@ enum {
 	BACKGROUND_TILE,
 	BACKGROUND_CENTERED
 };
-
+//绘制背景图标/颜色
 static void
 background_draw(struct widget *widget, void *data)
 {
@@ -841,7 +849,7 @@ background_draw(struct widget *widget, void *data)
 
 static void
 background_destroy(struct background *background);
-
+//配置背景的大小
 static void
 background_configure(void *data,
 		     struct weston_desktop_shell *desktop_shell,
@@ -868,7 +876,7 @@ background_configure(void *data,
 
 	widget_schedule_resize(background->widget, width, height);
 }
-
+//解锁后重绘制处理函数
 static void
 unlock_dialog_redraw_handler(struct widget *widget, void *data)
 {
@@ -915,7 +923,7 @@ unlock_dialog_redraw_handler(struct widget *widget, void *data)
 	surface = window_get_surface(dialog->window);
 	cairo_surface_destroy(surface);
 }
-
+//解锁按钮的处理函数
 static void
 unlock_dialog_button_handler(struct widget *widget,
 			     struct input *input, uint32_t time,
@@ -965,7 +973,7 @@ unlock_dialog_keyboard_focus_handler(struct window *window,
 {
 	window_schedule_redraw(window);
 }
-
+//鼠标进入时捕获button信号
 static int
 unlock_dialog_widget_enter_handler(struct widget *widget,
 				   struct input *input,
@@ -988,7 +996,7 @@ unlock_dialog_widget_leave_handler(struct widget *widget,
 	dialog->button_focused = 0;
 	widget_schedule_redraw(widget);
 }
-
+//创建解锁界面
 static struct unlock_dialog *
 unlock_dialog_create(struct desktop *desktop)
 {
@@ -1044,7 +1052,7 @@ unlock_dialog_finish(struct task *task, uint32_t events)
 	unlock_dialog_destroy(desktop->unlock_dialog);
 	desktop->unlock_dialog = NULL;
 }
-
+//配置shell
 static void
 desktop_shell_configure(void *data,
 			struct weston_desktop_shell *desktop_shell,
@@ -1057,7 +1065,7 @@ desktop_shell_configure(void *data,
 
 	s->configure(data, desktop_shell, edges, window, width, height);
 }
-
+//桌面锁定
 static void
 desktop_shell_prepare_lock_surface(void *data,
 				   struct weston_desktop_shell *desktop_shell)
@@ -1074,7 +1082,7 @@ desktop_shell_prepare_lock_surface(void *data,
 		desktop->unlock_dialog->desktop = desktop;
 	}
 }
-
+//指针
 static void
 desktop_shell_grab_cursor(void *data,
 			  struct weston_desktop_shell *desktop_shell,
@@ -1137,7 +1145,7 @@ background_destroy(struct background *background)
 	free(background->image);
 	free(background);
 }
-
+//创建背景
 static struct background *
 background_create(struct desktop *desktop, struct output *output)
 {
@@ -1185,7 +1193,7 @@ background_create(struct desktop *desktop, struct output *output)
 
 	return background;
 }
-
+//鼠标进入的捕获
 static int
 grab_surface_enter_handler(struct widget *widget, struct input *input,
 			   float x, float y, void *data)
@@ -1201,7 +1209,7 @@ grab_surface_destroy(struct desktop *desktop)
 	widget_destroy(desktop->grab_widget);
 	window_destroy(desktop->grab_window);
 }
-
+//创建grab surface
 static void
 grab_surface_create(struct desktop *desktop)
 {
@@ -1245,7 +1253,7 @@ desktop_destroy_outputs(struct desktop *desktop)
 	wl_list_for_each_safe(output, tmp, &desktop->outputs, link)
 		output_destroy(output);
 }
-
+//计算里程
 static void
 output_handle_geometry(void *data,
                        struct wl_output *wl_output,
@@ -1296,14 +1304,14 @@ output_handle_scale(void *data,
 	if (output->background)
 		window_set_buffer_scale(output->background->window, scale);
 }
-
+//output listener
 static const struct wl_output_listener output_listener = {
 	output_handle_geometry,
 	output_handle_mode,
 	output_handle_done,
 	output_handle_scale
 };
-
+//设置panel/background
 static void
 output_init(struct output *output, struct desktop *desktop)
 {
@@ -1321,7 +1329,7 @@ output_init(struct output *output, struct desktop *desktop)
 	weston_desktop_shell_set_background(desktop->shell,
 					    output->output, surface);
 }
-
+//创建output
 static void
 create_output(struct desktop *desktop, uint32_t id)
 {
@@ -1398,7 +1406,7 @@ output_remove(struct desktop *desktop, struct output *output)
 
 	output_destroy(output);
 }
-
+//注册全局对象的回调
 static void
 global_handler(struct display *display, uint32_t id,
 	       const char *interface, uint32_t version, void *data)
@@ -1415,6 +1423,7 @@ global_handler(struct display *display, uint32_t id,
 						  desktop);
 	} else if (!strcmp(interface, "wl_output")) {
 		create_output(desktop, id);
+		printf("create_output\n");
 	}
 }
 
@@ -1434,7 +1443,7 @@ global_handler_remove(struct display *display, uint32_t id,
 		}
 	}
 }
-
+//批量添加launcher的icons
 static void
 panel_add_launchers(struct panel *panel, struct desktop *desktop)
 {
@@ -1473,7 +1482,7 @@ panel_add_launchers(struct panel *panel, struct desktop *desktop)
 		free(name);
 	}
 }
-
+//解析任务栏的位置
 static void
 parse_panel_position(struct desktop *desktop, struct weston_config_section *s)
 {
@@ -1484,6 +1493,7 @@ parse_panel_position(struct desktop *desktop, struct weston_config_section *s)
 	weston_config_section_get_string(s, "panel-position", &position, "top");
 	if (strcmp(position, "top") == 0) {
 		desktop->panel_position = WESTON_DESKTOP_SHELL_PANEL_POSITION_TOP;
+		printf("Panel position:top\n");
 	} else if (strcmp(position, "bottom") == 0) {
 		desktop->panel_position = WESTON_DESKTOP_SHELL_PANEL_POSITION_BOTTOM;
 	} else if (strcmp(position, "left") == 0) {
@@ -1498,7 +1508,7 @@ parse_panel_position(struct desktop *desktop, struct weston_config_section *s)
 	}
 	free(position);
 }
-
+//解析时间显示格式
 static void
 parse_clock_format(struct desktop *desktop, struct weston_config_section *s)
 {
@@ -1522,15 +1532,17 @@ int main(int argc, char *argv[])
 	struct output *output;
 	struct weston_config_section *s;
 	const char *config_file;
-
+	//解锁事件
 	desktop.unlock_task.run = unlock_dialog_finish;
 	wl_list_init(&desktop.outputs);
-
+	//解析配置
 	config_file = weston_config_get_name_from_env();
 	desktop.config = weston_config_parse(config_file);
 	s = weston_config_get_section(desktop.config, "shell", NULL, NULL);
 	weston_config_section_get_bool(s, "locking", &desktop.locking, true);
+	//解析shell的位置
 	parse_panel_position(&desktop, s);
+	//解析clock的格式
 	parse_clock_format(&desktop, s);
 
 	printf("lzm: init desktop-shell\n");
