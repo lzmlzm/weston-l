@@ -3000,14 +3000,14 @@ drm_backend_create(struct weston_compositor *compositor,
 	const char *session_seat;
 	drmModeRes *res;
 	int ret;
-
+	//get env
 	session_seat = getenv("XDG_SEAT");
 	if (session_seat)
 		seat_id = session_seat;
 
 	if (config->seat_id)
 		seat_id = config->seat_id;
-
+	//
 	weston_log("initializing drm backend\n");
 
 	b = zalloc(sizeof *b);
@@ -3046,11 +3046,12 @@ drm_backend_create(struct weston_compositor *compositor,
 		weston_log("failed to initialize udev context\n");
 		goto err_launcher;
 	}
-
+	//会话监听器
 	b->session_listener.notify = session_notify;
 	wl_signal_add(&compositor->session_signal, &b->session_listener);
 
 	if (config->specific_device)
+	//打开drm设备
 		drm_device = open_specific_drm_device(b, config->specific_device);
 	else
 		drm_device = find_primary_gpu(b, seat_id);
@@ -3058,24 +3059,26 @@ drm_backend_create(struct weston_compositor *compositor,
 		weston_log("no drm device found\n");
 		goto err_udev;
 	}
-
+	//初始化kms
 	if (init_kms_caps(b) < 0) {
 		weston_log("failed to initialize kms\n");
 		goto err_udev_dev;
 	}
 
 	if (b->use_pixman) {
+		//初始化pixman
 		if (init_pixman(b) < 0) {
 			weston_log("failed to initialize pixman renderer\n");
 			goto err_udev_dev;
 		}
 	} else {
+		//初始化egl
 		if (init_egl(b) < 0) {
 			weston_log("failed to initialize egl\n");
 			goto err_udev_dev;
 		}
 	}
-
+	//绑定drm后端的一系列功能函数
 	b->base.destroy = drm_destroy;
 	b->base.repaint_begin = drm_repaint_begin;
 	b->base.repaint_flush = drm_repaint_flush;
@@ -3085,7 +3088,7 @@ drm_backend_create(struct weston_compositor *compositor,
 	b->base.can_scanout_dmabuf = drm_can_scanout_dmabuf;
 
 	weston_setup_vt_switch_bindings(compositor);
-
+	//获取drmmode资源
 	res = drmModeGetResources(b->drm.fd);
 	if (!res) {
 		weston_log("Failed to get drmModeRes\n");
@@ -3093,6 +3096,7 @@ drm_backend_create(struct weston_compositor *compositor,
 	}
 
 	wl_list_init(&b->crtc_list);
+	//创建crc的列表
 	if (drm_backend_create_crtc_list(b, res) == -1) {
 		weston_log("Failed to create CRTC list for DRM-backend\n");
 		goto err_create_crtc_list;
@@ -3100,7 +3104,7 @@ drm_backend_create(struct weston_compositor *compositor,
 
 	wl_list_init(&b->plane_list);
 	create_sprites(b);
-
+	//udev input初始化
 	if (udev_input_init(&b->input,
 			    compositor, b->udev, seat_id,
 			    config->configure_device) < 0) {
@@ -3109,6 +3113,7 @@ drm_backend_create(struct weston_compositor *compositor,
 	}
 
 	wl_list_init(&b->writeback_connector_list);
+	//找到connectors
 	if (drm_backend_discover_connectors(b, drm_device, res) < 0) {
 		weston_log("Failed to create heads for %s\n", b->drm.filename);
 		goto err_udev_input;
@@ -3125,10 +3130,11 @@ drm_backend_create(struct weston_compositor *compositor,
 		compositor->capabilities |= WESTON_CAP_CURSOR_PLANE;
 
 	loop = wl_display_get_event_loop(compositor->wl_display);
+	//将drm fd资源添加进drm backend
 	b->drm_source =
 		wl_event_loop_add_fd(loop, b->drm.fd,
 				     WL_EVENT_READABLE, on_drm_input, b);
-
+	//udev的监视器
 	b->udev_monitor = udev_monitor_new_from_netlink(b->udev, "udev");
 	if (b->udev_monitor == NULL) {
 		weston_log("failed to initialize udev monitor\n");
@@ -3136,6 +3142,7 @@ drm_backend_create(struct weston_compositor *compositor,
 	}
 	udev_monitor_filter_add_match_subsystem_devtype(b->udev_monitor,
 							"drm", NULL);
+	//将udev_monitor资源添加进drm backend
 	b->udev_drm_source =
 		wl_event_loop_add_fd(loop,
 				     udev_monitor_get_fd(b->udev_monitor),
@@ -3147,7 +3154,7 @@ drm_backend_create(struct weston_compositor *compositor,
 	}
 
 	udev_device_unref(drm_device);
-
+	//debug按键绑定
 	weston_compositor_add_debug_binding(compositor, KEY_O,
 					    planes_binding, b);
 	weston_compositor_add_debug_binding(compositor, KEY_C,
@@ -3160,25 +3167,29 @@ drm_backend_create(struct weston_compositor *compositor,
 					    renderer_switch_binding, b);
 
 	if (compositor->renderer->import_dmabuf) {
+		//dmabuf设置
 		if (linux_dmabuf_setup(compositor) < 0)
 			weston_log("Error: initializing dmabuf "
 				   "support failed.\n");
+		//direct-display设置
 		if (weston_direct_display_setup(compositor) < 0)
 			weston_log("Error: initializing direct-display "
 				   "support failed.\n");
 	}
 
 	if (compositor->capabilities & WESTON_CAP_EXPLICIT_SYNC) {
+		//explicit_synchronization设置
 		if (linux_explicit_synchronization_setup(compositor) < 0)
 			weston_log("Error: initializing explicit "
 				   " synchronization support failed.\n");
 	}
 
 	if (b->atomic_modeset)
+	//content_protection设置
 		if (weston_compositor_enable_content_protection(compositor) < 0)
 			weston_log("Error: initializing content-protection "
 				   "support failed.\n");
-
+	//Register an implementation of an API
 	ret = weston_plugin_api_register(compositor, WESTON_DRM_OUTPUT_API_NAME,
 					 &api, sizeof(api));
 
@@ -3186,13 +3197,13 @@ drm_backend_create(struct weston_compositor *compositor,
 		weston_log("Failed to register output API.\n");
 		goto err_udev_monitor;
 	}
-
+	//virtual_output_api初始化
 	ret = drm_backend_init_virtual_output_api(compositor);
 	if (ret < 0) {
 		weston_log("Failed to register virtual output API.\n");
 		goto err_udev_monitor;
 	}
-
+	//返回设置好的drm_backend对象
 	return b;
 
 err_udev_monitor:

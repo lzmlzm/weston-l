@@ -1311,7 +1311,7 @@ static const struct wl_output_listener output_listener = {
 	output_handle_done,
 	output_handle_scale
 };
-//设置panel/background
+//设置ouput界面
 static void
 output_init(struct output *output, struct desktop *desktop)
 {
